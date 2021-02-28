@@ -11,6 +11,7 @@ canvas {
 
 	<script>
 		var turn = 0;
+		var previous_squares = [];
 		
 window.onload = function() {
 	var canvas = document.getElementById("drawingCanvas");
@@ -66,6 +67,15 @@ function canvasClick(e) {
 			square = 8
 		}
 	}
+	
+	for (previous_square_index = 0; previous_square_index < previous_squares.length; previous_square_index++) {
+		if (square == previous_squares[previous_square_index]) {
+			console.log("Oh noes, a duplicates")
+			return
+		}
+	}
+	previous_squares.push(square)
+	console.log(previous_squares)
 	
 	middleX = 55 + (square % 3) * 90
 	middleY = 55 + Math.floor(square / 3) * 90
