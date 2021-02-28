@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tic Tac Toe</title>
+	<style>
+canvas {
+	border: 1px dashed black;
+}
+	</style>
+
+	<script>
+		var turn = 0;
+		
+window.onload = function() {
+	var canvas = document.getElementById("drawingCanvas");
+	var context = canvas.getContext("2d");
+
+	canvas.onmouseup = canvasClick;
+	
+	context.lineWidth = 4;
+	context.strokeStyle = "rgb(60,60,60)";
+	context.moveTo(100,10)
+	context.lineTo(100,280)
+	context.stroke();
+	context.moveTo(190,10)
+	context.lineTo(190,280)
+	context.stroke();
+	context.moveTo(10,100)
+	context.lineTo(280,100)
+	context.stroke();
+	context.moveTo(10,190)
+	context.lineTo(280,190)
+	context.stroke();
+};
+
+function canvasClick(e) {
+	var canvas = document.getElementById("drawingCanvas");
+	var context = canvas.getContext("2d");
+  var clickX = e.pageX - canvas.offsetLeft;
+  var clickY = e.pageY - canvas.offsetTop;
+	console.log("canvasClick " + clickX + "," + clickY)
+	var square = -1
+	if (clickX < 100) {
+		if (clickY < 100) {
+			square = 0
+		} else if (clickY < 190) {
+			square = 3
+		} else {
+			square = 6
+		}
+	} else if (clickX < 190) {
+		if (clickY < 100) {
+			square = 1
+		} else if (clickY < 190) {
+			square = 4
+		} else {
+			square = 7
+		}
+	} else {
+		if (clickY < 100) {
+			square = 2
+		} else if (clickY < 190) {
+			square = 5
+		} else {
+			square = 8
+		}
+	}
+	
+	middleX = 55 + (square % 3) * 90
+	middleY = 55 + Math.floor(square / 3) * 90
+	context.beginPath();
+	if (turn == 0) {
+		context.strokeStyle = "rgb(200,60,60)";
+		context.moveTo(middleX - 30, middleY - 30)
+		context.lineTo(middleX + 30, middleY + 30)
+		context.stroke();
+		context.moveTo(middleX + 30, middleY - 30)
+		context.lineTo(middleX - 30, middleY + 30)
+		context.stroke();
+	} else {
+		context.strokeStyle = "rgb(60,60,200)";
+		context.moveTo(middleX+35,middleY)
+		context.arc(middleX,middleY,35,0,2*Math.PI);
+		context.stroke();
+	}
+	
+	turn = 1 - turn
+};
+	</script>
+</head>
+
+<body>
+	<canvas id="drawingCanvas" width="290"
+	 height="290"></canvas>
+</body>
+</html>
