@@ -11,7 +11,7 @@ canvas {
 
 	<script>
 		var turn = 0;
-		var previous_squares = [];
+		var previous_squares = {};
 		
 window.onload = function() {
 	var canvas = document.getElementById("drawingCanvas");
@@ -68,13 +68,12 @@ function canvasClick(e) {
 		}
 	}
 	
-	for (previous_square_index = 0; previous_square_index < previous_squares.length; previous_square_index++) {
-		if (square == previous_squares[previous_square_index]) {
-			console.log("Oh noes, a duplicates")
-			return
-		}
+	if (square in previous_squares) {
+		console.log("Oh noes, a duplicates")
+		return
 	}
-	previous_squares.push(square)
+	
+	previous_squares[square] = turn
 	console.log(previous_squares)
 	
 	middleX = 55 + (square % 3) * 90
@@ -87,12 +86,64 @@ function canvasClick(e) {
 		context.stroke();
 		context.moveTo(middleX + 30, middleY - 30)
 		context.lineTo(middleX - 30, middleY + 30)
-		context.stroke();
+		context.stroke()
 	} else {
 		context.strokeStyle = "rgb(60,60,200)";
 		context.moveTo(middleX+35,middleY)
 		context.arc(middleX,middleY,35,0,2*Math.PI);
-		context.stroke();
+		context.stroke()
+	}
+	
+	context.beginPath();
+	context.strokeStyle = "rgb(0,0,0)"
+	for (possible_winner = 0; possible_winner < 2; possible_winner++) {
+		// horizontal
+		for (row = 0; row < 3; row++) {
+			if (
+				(previous_squares[3*row] == possible_winner) &&
+			  (previous_squares[3*row+1] == possible_winner) &&
+				(previous_squares[3*row+2] == possible_winner)) {
+					console.log(possible_winner + " won!")
+					context.moveTo(10,55+90*row)
+					context.lineTo(280,55+90*row)
+					context.stroke()
+				}
+		}
+		
+		// vertical
+		for (col = 0; col < 3; col++) {
+			if (
+				(previous_squares[col] == possible_winner) &&
+			  (previous_squares[col+3] == possible_winner) &&
+				(previous_squares[col+6] == possible_winner)) {
+					console.log(possible_winner + " won!")
+					context.moveTo(55+90*col,10)
+					context.lineTo(55+90*col,280)
+					context.stroke()
+				}
+		}
+		
+		// diagonal down
+		if (
+			(previous_squares[0] == possible_winner) &&
+		  (previous_squares[4] == possible_winner) &&
+			(previous_squares[8] == possible_winner)) {
+				console.log(possible_winner + " won!")
+					context.moveTo(10,10)
+					context.lineTo(280,280)
+					context.stroke()
+			}
+		
+		// diagonal up
+			if (
+				(previous_squares[2] == possible_winner) &&
+			  (previous_squares[4] == possible_winner) &&
+				(previous_squares[6] == possible_winner)) {
+					console.log(possible_winner + " won!")
+					context.moveTo(280,10)
+					context.lineTo(10,280)
+					context.stroke()
+				}
 	}
 	
 	turn = 1 - turn
