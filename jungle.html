@@ -9,50 +9,37 @@ canvas {
 }
 	</style>
 	<script>
-		
+
 window.onload = function() {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	
 	canvas.onmouseup = canvasClick;
 	
+	context.fillStyle = "blue";
+	context.fillRect(100, 300, 200, 300);
+	context.fillRect(400, 300, 200, 300);
 	context.lineWidth = 4;
 	context.strokeStyle = "rgb(60,60,60)";
-	for (y=0; y<901; y++, y+=100)
-		for (x=100; x<801; x++, x+=100) {
-			context.moveTo(x+10,y+10)
-			context.lineTo(x-90,y+10)
+	for (row=0; row<8; row++) {
+		for (column=0; column<10; column++) {
+			x = row*100
+			y = column*100
+			context.moveTo(x,y)
+			context.lineTo(x+100,y)
 			context.stroke();
-			context.moveTo(x+10,y+10)
-			context.lineTo(x+10,y+10+100)
+			context.moveTo(x,y)
+			context.lineTo(x,y+100)
 			context.stroke();
-			context.moveTo(x-90,y+10)
-			context.lineTo(x-90,y+10+100)
+			context.moveTo(x+100,y)
+			context.lineTo(x+100,y+100)
 			context.stroke();
-			context.moveTo(x+10,y+10+100)
-			context.lineTo(x-90,y+10+100)
+			context.moveTo(x,y+100)
+			context.lineTo(x+100,y+100)
 			context.stroke();
-	context.fillStyle = "blue";
-	context.fillRect(110, 310, 205, 305);
-	context.fillRect(410, 310, 205, 305)
-	for (y=0; y<901; y++, y+=100)
-		for (x=100; x<801; x++, x+=100) {
-			context.moveTo(x+10,y+10)
-			context.lineTo(x-90,y+10)
-			context.stroke();
-			context.moveTo(x+10,y+10)
-			context.lineTo(x+10,y+10+100)
-			context.stroke();
-			context.moveTo(x-90,y+10)
-			context.lineTo(x-90,y+10+100)
-			context.stroke();
-			context.moveTo(x+10,y+10+100)
-			context.lineTo(x-90,y+10+100)
-			context.stroke();
-		};
-	};
-};
-
+		}
+	}
+}
 function canvasClick(e) {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
@@ -64,7 +51,7 @@ function canvasClick(e) {
 </head>
 
 <body>
-	<canvas id="drawingCanvas" width="730"
-	 height="930"></canvas>
+	<canvas id="drawingCanvas" width="700"
+	 height="900"></canvas>
 </body>
 </html>
