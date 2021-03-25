@@ -9,12 +9,17 @@ canvas {
 	</style>
 	<script>
 
+img = new Image()
+img.src = 'a8.png'
+
 window.onload = function() {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	
 	canvas.onmouseup = canvasClick;
 	
+  context.drawImage(img, 0, 0, 100, 100);
+		
 	water = [[3,1],[4,1],[5,1],[3,2],[4,2],[5,2],[3,4],[4,4],[5,4],[3,5],[4,5],[5,5]]
 	traps = [[7,3],[8,2],[8,4],[0,2],[1,3],[0,4]]
 	den = [[0,3],[8,3]]
@@ -38,19 +43,20 @@ window.onload = function() {
 	 		}
 			for (t_i = 0; t_i < traps.length; t_i++) {
 				if ((traps[t_i][0] == row) && (traps[t_i][1] == col)) {
-					context.fillStyle = "gray";
+					context.fillStyle = "red";
 					context.fillRect(x,y,100,100)
 				}
 			}
 			for (d_i = 0; d_i < den.length; d_i++) {
 				if ((den[d_i][0] == row) && (den[d_i][1] == col)) {
-					context.fillStyle = "red";
+					context.fillStyle = "gray";
 					context.fillRect(x,y,100,100)
 				}
 			}
 		}
 	}
 }
+
 function canvasClick(e) {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
