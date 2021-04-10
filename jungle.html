@@ -9,17 +9,44 @@ canvas {
 	</style>
 	<script>
 
-img = new Image()
-img.src = 'a8.png'
+animals_0 = {}
+for (a_i=1; a_i<9; a_i++) {
+	console.log(a_i)
+	img = new Image()
+	img.src = 'a' + a_i + '.png'
+	animals_0[a_i] = img
+}
+animals_1 = {}
+for (b_i=1; b_i<9; b_i++) {
+	console.log(b_i)
+	img_1 = new Image()
+	img_1.src = "b" + b_i + '.png'
+	animals_1[b_i] = img_1
+}
+
+pieces = {"0_0" : {"player" : 0, "animal" : 7},
+					"0_6" : {"player" : 0, "animal" : 6},
+					"1_1" : {"player" : 0, "animal" : 4},
+					"1_5" : {"player" : 0, "animal" : 2},
+					"2_0" : {"player" : 0, "animal" : 1},
+					"2_2" : {"player" : 0, "animal" : 5},
+					"2_4" : {"player" : 0, "animal" : 3},
+					"2_6" : {"player" : 0, "animal" : 8},
+					"8_6" : {"player" : 1, "animal" : 7},
+					"8_0" : {"player" : 1, "animal" : 6},
+					"7_5" : {"player" : 1, "animal" : 4},
+					"7_1" : {"player" : 1, "animal" : 2},
+					"6_6" : {"player" : 1, "animal" : 1},
+					"6_4" : {"player" : 1, "animal" : 5},
+					"6_2" : {"player" : 1, "animal" : 3},
+					"6_0" : {"player" : 1, "animal" : 8}};
 
 window.onload = function() {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	
 	canvas.onmouseup = canvasClick;
-	
-  context.drawImage(img, 0, 0, 100, 100);
-		
+
 	water = [[3,1],[4,1],[5,1],[3,2],[4,2],[5,2],[3,4],[4,4],[5,4],[3,5],[4,5],[5,5]]
 	traps = [[7,3],[8,2],[8,4],[0,2],[1,3],[0,4]]
 	den = [[0,3],[8,3]]
@@ -53,6 +80,21 @@ window.onload = function() {
 					context.fillRect(x,y,100,100)
 				}
 			}
+			console.log("pieces.length = " + Object.keys(pieces).length)
+			for (p_i = 0; p_i < Object.keys(pieces).length; p_i++) {
+				key = row + "_" + col
+				console.log(key)
+				if (key in pieces) {
+					player = pieces[key]["player"]
+					animal = pieces[key]["animal"]
+					if (player == 0) {
+						context.drawImage(animals_0[animal], x, y, 100, 100);
+					}
+					if (player == 1) {
+						context.drawImage(animals_1[animal], x, y, 100, 100);
+					}
+				}
+			}
 		}
 	}
 }
@@ -61,7 +103,10 @@ function canvasClick(e) {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	var clickX = e.pageX - canvas.offsetLeft;
-	var clickY = e.pageY = canvas.offsetTop;
+	var clickY = e.pageY - canvas.offsetTop;
+	var column = Math.floor(clickX/100)
+	var row = Math.floor(clickY/100)
+	console.log("column: " + column + ", row: " + row) 
 };
 
 	</script>
