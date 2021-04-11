@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Do Shou Qi</title>
+	<title>Dou Shou Qi</title>
 	<style>
 canvas {
 }
@@ -132,8 +132,8 @@ canvas {
 		  context = canvas.getContext("2d");
 		  clickX = e.pageX - canvas.offsetLeft;
 		  clickY = e.pageY - canvas.offsetTop;
-		  column = Math.floor(clickX / 100)
-		  row = Math.floor(clickY / 100)
+		  row = Math.floor(clickX / 100)
+		  column = Math.floor(clickY / 100)
 		  click_key = column + "_" + row
 		  if (is_first_click == true) {
 		    console.log("first_click true")
@@ -156,6 +156,7 @@ canvas {
 		    console.log("moving_piece " + moving_piece)
 		    console.log("second_click_key " + second_click_key)
 		    delete pieces[first_click_key]
+				context.clearRect(clickX, clickY, clickX+100,clickY+100)
 		    console.log("pieces [after deletion] " + JSON.stringify(pieces))
 		    console.log("will replace pieces")
 		    pieces[click_key] = moving_piece;
@@ -166,12 +167,13 @@ canvas {
 		};
 		
 		function drawBoard() {
+			context.clearRect(0, 0, 700, 900)
       for (w_i = 0; w_i < water.length; w_i++) {
          context.fillStyle = "blue";
          context.fillRect(water[w_i][1]*100, water[w_i][0]*100, 100, 100);
       }
       for (t_i = 0; t_i < traps.length; t_i++) {
-          context.fillStyle = "red";
+				context.fillStyle = "red";
           context.fillRect(traps[t_i][1]*100, traps[t_i][0]*100, 100, 100);
       }
       for (d_i = 0; d_i < den.length; d_i++) {
