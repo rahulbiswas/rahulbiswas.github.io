@@ -22,79 +22,81 @@ canvas {
 		  img_1.src = "b" + b_i + '.png'
 		  animals_1[b_i] = img_1
 		}
-
-		pieces = {
-		  "0_0": {
-		    "player": 0,
-		    "animal": 7
-		  },
-		  "0_6": {
-		    "player": 0,
-		    "animal": 6
-		  },
-		  "1_1": {
-		    "player": 0,
-		    "animal": 4
-		  },
-		  "1_5": {
-		    "player": 0,
-		    "animal": 2
-		  },
-		  "2_0": {
-		    "player": 0,
-		    "animal": 1
-		  },
-		  "2_2": {
-		    "player": 0,
-		    "animal": 5
-		  },
-		  "2_4": {
-		    "player": 0,
-		    "animal": 3
-		  },
-		  "2_6": {
-		    "player": 0,
-		    "animal": 8
-		  },
-		  "8_6": {
-		    "player": 1,
-		    "animal": 7
-		  },
-		  "8_0": {
-		    "player": 1,
-		    "animal": 6
-		  },
-		  "7_5": {
-		    "player": 1,
-		    "animal": 4
-		  },
-		  "7_1": {
-		    "player": 1,
-		    "animal": 2
-		  },
-		  "6_6": {
-		    "player": 1,
-		    "animal": 1
-		  },
-		  "6_4": {
-		    "player": 1,
-		    "animal": 5
-		  },
-		  "6_2": {
-		    "player": 1,
-		    "animal": 3
-		  },
-		  "6_0": {
-		    "player": 1,
-		    "animal": 8
-		  }
-		};
-
+		
 		window.onload = function() {
 		  var canvas = document.getElementById("drawingCanvas");
 		  var context = canvas.getContext("2d");
 
 		  canvas.onmouseup = canvasClick;
+
+			is_first_click = true
+
+			pieces = {
+			  "0_0": {
+			    "player": 0,
+			    "animal": 7
+			  },
+			  "0_6": {
+			    "player": 0,
+			    "animal": 6
+			  },
+			  "1_1": {
+			    "player": 0,
+			    "animal": 4
+			  },
+			  "1_5": {
+			    "player": 0,
+			    "animal": 2
+			  },
+			  "2_0": {
+			    "player": 0,
+			    "animal": 1
+			  },
+			  "2_2": {
+			    "player": 0,
+			    "animal": 5
+			  },
+			  "2_4": {
+			    "player": 0,
+			    "animal": 3
+			  },
+			  "2_6": {
+			    "player": 0,
+			    "animal": 8
+			  },
+			  "8_6": {
+			    "player": 1,
+			    "animal": 7
+			  },
+			  "8_0": {
+			    "player": 1,
+			    "animal": 6
+			  },
+			  "7_5": {
+			    "player": 1,
+			    "animal": 4
+			  },
+			  "7_1": {
+			    "player": 1,
+			    "animal": 2
+			  },
+			  "6_6": {
+			    "player": 1,
+			    "animal": 1
+			  },
+			  "6_4": {
+			    "player": 1,
+			    "animal": 5
+			  },
+			  "6_2": {
+			    "player": 1,
+			    "animal": 3
+			  },
+			  "6_0": {
+			    "player": 1,
+			    "animal": 8
+			  }
+			};
 
 		  water = [
 		    [3, 1],
@@ -122,38 +124,18 @@ canvas {
 		    [0, 3],
 		    [8, 3]
 		  ]
-		  context.lineWidth = 4;
-		  context.strokeStyle = "rgb(60,60,60)";
-		  for (col = 0; col < 8; col++) {
-		    for (row = 0; row < 10; row++) {
-		      x = col * 100
-		      y = row * 100
-		      context.moveTo(x, y)
-		      context.lineTo(x + 100, y)
-		      context.lineTo(x + 100, y + 100)
-		      context.lineTo(x, y + 100)
-		      context.lineTo(x, y)
-		      context.stroke();
-		      for (w_i = 0; w_i < water.length; w_i++) {
-		        if ((water[w_i][0] == row) && (water[w_i][1] == col)) {
-		          context.fillStyle = "blue";
-		          context.fillRect(x, y, 100, 100)
-		        }
-		      }
-		      for (t_i = 0; t_i < traps.length; t_i++) {
-		        if ((traps[t_i][0] == row) && (traps[t_i][1] == col)) {
-		          context.fillStyle = "red";
-		          context.fillRect(x, y, 100, 100)
-		        }
-		      }
-		      for (d_i = 0; d_i < den.length; d_i++) {
-		        if ((den[d_i][0] == row) && (den[d_i][1] == col)) {
-		          context.fillStyle = "gray";
-		          context.fillRect(x, y, 100, 100)
-		        }
-		      }
-		    }
-		  }
+      for (w_i = 0; w_i < water.length; w_i++) {
+         context.fillStyle = "blue";
+         context.fillRect(water[w_i][1]*100, water[w_i][0]*100, 100, 100);
+      }
+      for (t_i = 0; t_i < traps.length; t_i++) {
+          context.fillStyle = "red";
+          context.fillRect(traps[t_i][1]*100, traps[t_i][0]*100, 100, 100);
+      }
+      for (d_i = 0; d_i < den.length; d_i++) {
+          context.fillStyle = "gray";
+          context.fillRect(den[d_i][1]*100, den[d_i][0]*100, 100, 100)
+			}
 		  console.log("pieces.length = " + Object.keys(pieces).length)
 		  pieces_position_list = Object.keys(pieces)
 		  for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
@@ -171,11 +153,21 @@ canvas {
 		      context.drawImage(animals_1[animal], x, y, 100, 100);
 		    }
 		  }
+		  context.lineWidth = 4;
+		  context.strokeStyle = "rgb(60,60,60)";
+		  for (col = 0; col < 8; col++) {
+		    for (row = 0; row < 10; row++) {
+		      x = col * 100
+		      y = row * 100
+		      context.moveTo(x, y)
+		      context.lineTo(x + 100, y)
+		      context.lineTo(x + 100, y + 100)
+		      context.lineTo(x, y + 100)
+		      context.lineTo(x, y)
+		      context.stroke();
+		    }
+		  }
 		}
-
-		var is_first_click = true
-		first_click_key = "0_0"
-
 
 		function canvasClick(e) {
 		  canvas = document.getElementById("drawingCanvas");
