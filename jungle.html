@@ -24,8 +24,8 @@ canvas {
 		}
 		
 		window.onload = function() {
-		  var canvas = document.getElementById("drawingCanvas");
-		  var context = canvas.getContext("2d");
+		  canvas = document.getElementById("drawingCanvas");
+		  context = canvas.getContext("2d");
 
 		  canvas.onmouseup = canvasClick;
 
@@ -124,6 +124,48 @@ canvas {
 		    [0, 3],
 		    [8, 3]
 		  ]
+			drawBoard()
+		}
+
+		function canvasClick(e) {
+		  canvas = document.getElementById("drawingCanvas");
+		  context = canvas.getContext("2d");
+		  clickX = e.pageX - canvas.offsetLeft;
+		  clickY = e.pageY - canvas.offsetTop;
+		  column = Math.floor(clickX / 100)
+		  row = Math.floor(clickY / 100)
+		  click_key = column + "_" + row
+		  if (is_first_click == true) {
+		    console.log("first_click true")
+		    if (pieces[click_key] == null) {
+		      console.log("no piece ; will return")
+		      return
+		    }
+		    first_click_key = click_key
+		    is_first_click = false
+		  } else {
+		    second_click_key = click_key
+		    console.log("first_click false")
+		    console.log("click_key " + click_key)
+		    if (pieces[second_click_key] != null) {
+		      console.log("second square occupied")
+		    }
+		    console.log("first_click_key " + first_click_key)
+		    console.log("pieces [before deletion] " + JSON.stringify(pieces))
+		    var moving_piece = pieces[first_click_key]
+		    console.log("moving_piece " + moving_piece)
+		    console.log("second_click_key " + second_click_key)
+		    delete pieces[first_click_key]
+		    console.log("pieces [after deletion] " + JSON.stringify(pieces))
+		    console.log("will replace pieces")
+		    pieces[click_key] = moving_piece;
+		    is_first_click = true
+		    console.log("pieces [after replacement] " + JSON.stringify(pieces))
+		  }
+			drawBoard()
+		};
+		
+		function drawBoard() {
       for (w_i = 0; w_i < water.length; w_i++) {
          context.fillStyle = "blue";
          context.fillRect(water[w_i][1]*100, water[w_i][0]*100, 100, 100);
@@ -168,43 +210,6 @@ canvas {
 		    }
 		  }
 		}
-
-		function canvasClick(e) {
-		  canvas = document.getElementById("drawingCanvas");
-		  context = canvas.getContext("2d");
-		  clickX = e.pageX - canvas.offsetLeft;
-		  clickY = e.pageY - canvas.offsetTop;
-		  column = Math.floor(clickX / 100)
-		  row = Math.floor(clickY / 100)
-		  click_key = column + "_" + row
-		  if (is_first_click == true) {
-		    console.log("first_click true")
-		    if (pieces[click_key] == null) {
-		      console.log("no piece ; will return")
-		      return
-		    }
-		    first_click_key = click_key
-		    is_first_click = false
-		  } else {
-		    second_click_key = click_key
-		    console.log("first_click false")
-		    console.log("click_key " + click_key)
-		    if (pieces[second_click_key] != null) {
-		      console.log("second square occupied")
-		    }
-		    console.log("first_click_key " + first_click_key)
-		    console.log("pieces [before deletion] " + JSON.stringify(pieces))
-		    var moving_piece = pieces[first_click_key]
-		    console.log("moving_piece " + moving_piece)
-		    console.log("second_click_key " + second_click_key)
-		    delete pieces[first_click_key]
-		    console.log("pieces [after deletion] " + JSON.stringify(pieces))
-		    console.log("will replace pieces")
-		    pieces[click_key] = moving_piece;
-		    is_first_click = true
-		    console.log("pieces [after replacement] " + JSON.stringify(pieces))
-		  }
-		};
   </script>
 </head>
 
