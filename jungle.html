@@ -179,25 +179,20 @@ canvas {
 		};
 		
 		function drawBoard(first_click_coords) {
-			var currentdate = new Date(); 
-			var datetime = "Beginning of drawboard"
-			                + currentdate.getSeconds() + "."
-											+ currentdate.getMilliseconds();
-			console.log(datetime)
-			context.clearRect(first_click_coords[0],first_click_coords[1],700,900)
+			context.clearRect(0,0,700,900)
       for (w_i = 0; w_i < water.length; w_i++) {
-         context.fillStyle = "blue";
-         context.fillRect(water[w_i][1]*100, water[w_i][0]*100, 100, 100);
-      }
-      for (t_i = 0; t_i < traps.length; t_i++) {
-				context.fillStyle = "yellow";
-          context.fillRect(traps[t_i][1]*100, traps[t_i][0]*100, 100, 100);
-      }
-      for (d_i = 0; d_i < den.length; d_i++) {
-          context.fillStyle = "gray";
-          context.fillRect(den[d_i][1]*100, den[d_i][0]*100, 100, 100)
+        context.fillStyle = "blue";
+			  context.fillRect(water[w_i][1]*100, water[w_i][0]*100, 100, 100);
 			}
-		  console.log("pieces.length = " + Object.keys(pieces).length)
+			for (t_i = 0; t_i < traps.length; t_i++) {
+				context.fillStyle = "yellow";
+			  context.fillRect(traps[t_i][1]*100, traps[t_i][0]*100, 100, 100);
+			}
+			for (d_i = 0; d_i < den.length; d_i++) {
+			  context.fillStyle = "gray";
+			  context.fillRect(den[d_i][1]*100, den[d_i][0]*100, 100, 100)
+			}
+			console.log("pieces.length = " + Object.keys(pieces).length)
 		  pieces_position_list = Object.keys(pieces)
 		  for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
 		    piece_position = pieces_position_list[p_i]
@@ -214,7 +209,8 @@ canvas {
 		      context.drawImage(animals_1[animal], x, y, 100, 100);
 		    }
 		  }
-		  context.lineWidth = 4;
+			context.beginPath()
+			context.lineWidth = 4;
 		  context.strokeStyle = "rgb(60,60,60)";
 		  for (col = 0; col < 8; col++) {
 		    for (row = 0; row < 10; row++) {
@@ -228,7 +224,7 @@ canvas {
 		      context.stroke();
 		    }
 		  }
-			var currentdate = new Date(); 
+			var currentdate = new Date();
 			var datetime = "End of drawboard"
 			                + currentdate.getSeconds() + "."
 											+ currentdate.getMilliseconds();
