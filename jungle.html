@@ -12,14 +12,14 @@ canvas {
 		for (a_i = 1; a_i < 9; a_i++) {
 		  console.log(a_i)
 		  img = new Image()
-		  img.src = 'a_' + a_i + '.png'
+		  img.src = 'a' + a_i + '.png'
 		  animals_0[a_i] = img
 		}
 		animals_1 = {}
 		for (b_i = 1; b_i < 9; b_i++) {
 		  console.log(b_i)
 		  img_1 = new Image()
-		  img_1.src = "b_" + b_i + '.png'
+		  img_1.src = "b" + b_i + '.png'
 		  animals_1[b_i] = img_1
 		}
 		
@@ -128,10 +128,16 @@ canvas {
 		}
 
 		function canvasClick(e) {
+			var currentdate = new Date(); 
+			var datetime = "beginning of canvasclick"
+			                + currentdate.getSeconds() + "."
+											+ currentdate.getMilliseconds();
+			console.log(datetime)
 		  canvas = document.getElementById("drawingCanvas");
 		  context = canvas.getContext("2d");
 		  clickX = e.pageX - canvas.offsetLeft;
 		  clickY = e.pageY - canvas.offsetTop;
+			future_reference = [clickX,clickY]
 		  row = Math.floor(clickX / 100)
 		  column = Math.floor(clickY / 100)
 		  click_key = column + "_" + row
@@ -142,6 +148,7 @@ canvas {
 		      return
 		    }
 		    first_click_key = click_key
+				first_click_coords = future_reference
 		    is_first_click = false
 		  } else {
 		    second_click_key = click_key
@@ -163,17 +170,27 @@ canvas {
 		    is_first_click = true
 		    console.log("pieces [after replacement] " + JSON.stringify(pieces))
 		  }
-			drawBoard()
+			var currentdate = new Date(); 
+			var datetime = "End of canvasclick"
+			                + currentdate.getSeconds() + "."
+											+ currentdate.getMilliseconds();
+			console.log(datetime)
+			drawBoard(first_click_coords)
 		};
 		
-		function drawBoard() {
-			context.clearRect(0, 0, 700, 900)
+		function drawBoard(first_click_coords) {
+			var currentdate = new Date(); 
+			var datetime = "Beginning of drawboard"
+			                + currentdate.getSeconds() + "."
+											+ currentdate.getMilliseconds();
+			console.log(datetime)
+			context.clearRect(first_click_coords[0],first_click_coords[1],700,900)
       for (w_i = 0; w_i < water.length; w_i++) {
          context.fillStyle = "blue";
          context.fillRect(water[w_i][1]*100, water[w_i][0]*100, 100, 100);
       }
       for (t_i = 0; t_i < traps.length; t_i++) {
-				context.fillStyle = "red";
+				context.fillStyle = "yellow";
           context.fillRect(traps[t_i][1]*100, traps[t_i][0]*100, 100, 100);
       }
       for (d_i = 0; d_i < den.length; d_i++) {
@@ -211,6 +228,11 @@ canvas {
 		      context.stroke();
 		    }
 		  }
+			var currentdate = new Date(); 
+			var datetime = "End of drawboard"
+			                + currentdate.getSeconds() + "."
+											+ currentdate.getMilliseconds();
+			console.log(datetime)
 		}
   </script>
 </head>
