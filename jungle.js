@@ -117,6 +117,8 @@ window.onload = function() {
 	drawBoard()
 }
 
+turn = 1
+
 function canvasClick(e) {
 	var currentdate = new Date();
 	var datetime = "beginning of canvasclick" +
@@ -135,6 +137,11 @@ function canvasClick(e) {
 		console.log("first_click true")
 		if (pieces[click_key] == null) {
 			console.log("no piece ; will return")
+			return
+		}
+		player = pieces[click_key]["player"]
+		console.log(player)
+		if (player != turn) {
 			return
 		}
 		first_click_key = click_key
@@ -159,6 +166,7 @@ function canvasClick(e) {
 		pieces[click_key] = moving_piece;
 		is_first_click = true
 		console.log("pieces [after replacement] " + JSON.stringify(pieces))
+		turn = 1-turn
 	}
 	var currentdate = new Date();
 	var datetime = "End of canvasclick" +
