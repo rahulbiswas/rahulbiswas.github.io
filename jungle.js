@@ -147,33 +147,53 @@ function canvasClick(e) {
 		first_click_key = click_key
 		first_click_coords = future_reference
 		is_first_click = false
-	} else {
-		second_click_key = click_key
-		console.log("first_click false")
-		console.log("click_key " + click_key)
-		if (pieces[second_click_key] != null) {
-			console.log("second square occupied")
-		}
-		console.log("first_click_key " + first_click_key)
-		console.log("pieces [before deletion] " + JSON.stringify(pieces))
+		return
+	}
+	second_click_key = click_key
+	console.log("first_click false")
+	console.log("click_key " + click_key)
+	if (pieces[second_click_key] == null) {
+		console.log("second square occupied")
 		var moving_piece = pieces[first_click_key]
 		console.log("moving_piece " + moving_piece)
 		console.log("second_click_key " + second_click_key)
 		delete pieces[first_click_key]
-		context.clearRect(clickX, clickY, clickX + 100, clickY + 100)
 		console.log("pieces [after deletion] " + JSON.stringify(pieces))
 		console.log("will replace pieces")
 		pieces[click_key] = moving_piece;
 		is_first_click = true
 		console.log("pieces [after replacement] " + JSON.stringify(pieces))
-		turn = 1-turn
+		turn = 1 - turn
+		drawBoard(first_click_coords)
+		return
 	}
-	var currentdate = new Date();
-	var datetime = "End of canvasclick" +
-		currentdate.getSeconds() + "." +
-		currentdate.getMilliseconds();
-	console.log(datetime)
+	attacking_animal_num = pieces[first_click_key]["animal"]
+	attacking_animal_player = pieces[first_click_key]["player"]
+	defending_animal_num = pieces[second_click_key]["animal"]
+	defending_animal_player = pieces[second_click_key]["player"]
+	console.log("attacking_animal_num: " + attacking_animal_num)
+	console.log("attacking_animal_player: " + attacking_animal_player)
+	console.log("defending_animal_num: " + defending_animal_num)
+	console.log("defending_animal_player: " + defending_animal_player)
+	if (attacking_animal_player == defending_animal_player) {
+		return
+	}
+	if (attacking_animal_num < defending_animal_num) {
+		return
+	}
+	console.log("first_click_key " + first_click_key)
+	console.log("pieces [before deletion] " + JSON.stringify(pieces))
+	var moving_piece = pieces[first_click_key]
+	console.log("moving_piece " + JSON.stringify(moving_piece))
+	console.log("second_click_key " + second_click_key)
+	delete pieces[first_click_key]
+	console.log("pieces [after deletion] " + JSON.stringify(pieces))
+	console.log("will replace pieces")
+	pieces[second_click_key] = moving_piece;
 	drawBoard(first_click_coords)
+	is_first_click = true
+	console.log("pieces [after replacement] " + JSON.stringify(pieces))
+	turn = 1 - turn
 };
 
 function drawBoard(first_click_coords) {
