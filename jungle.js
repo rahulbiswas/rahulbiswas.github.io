@@ -1,3 +1,6 @@
+// My list of the global variables.
+// animals_0, animals_1, canvas, context, is_first_click, pieces, water, traps, den, turn
+
 animals_0 = {}
 for (a_i = 1; a_i < 9; a_i++) {
 	console.log(a_i)
@@ -129,7 +132,6 @@ function canvasClick(e) {
 	context = canvas.getContext("2d");
 	clickX = e.pageX - canvas.offsetLeft;
 	clickY = e.pageY - canvas.offsetTop;
-	future_reference = [clickX, clickY]
 	row = Math.floor(clickX / 100)
 	column = Math.floor(clickY / 100)
 	click_key = column + "_" + row
@@ -145,11 +147,13 @@ function canvasClick(e) {
 			return
 		}
 		first_click_key = click_key
-		first_click_coords = future_reference
 		is_first_click = false
 		return
 	}
 	second_click_key = click_key
+	if (validMove()) {
+		return
+	}
 	console.log("first_click false")
 	console.log("click_key " + click_key)
 	if (pieces[second_click_key] == null) {
@@ -173,16 +177,26 @@ function canvasClick(e) {
 	movePiece()
 };
 
+function validMove() {
+	first_coords = first_click_key.split("_")
+	second_coords = second_click_key.split("_")
+	x_diff = Math.abs(first_coords[0] - second_coords[0])
+	y_diff = Math.abs(first_coords[1] - second_coords[1])
+	if (((x_diff == 1) && (y_diff == 1)) || ((x_diff > 1) || (y_diff > 1))) {
+		return true
+	}
+}
+
 function movePiece() {
 	var moving_piece = pieces[first_click_key]
 	delete pieces[first_click_key]
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	drawBoard(first_click_coords)	
+	drawBoard()	
 }
 
-function drawBoard(first_click_coords) {
+function drawBoard() {
 	context.clearRect(0, 0, 700, 900)
 	for (w_i = 0; w_i < water.length; w_i++) {
 		context.fillStyle = "blue";
