@@ -153,48 +153,34 @@ function canvasClick(e) {
 	console.log("first_click false")
 	console.log("click_key " + click_key)
 	if (pieces[second_click_key] == null) {
-		console.log("second square occupied")
-		var moving_piece = pieces[first_click_key]
-		console.log("moving_piece " + moving_piece)
-		console.log("second_click_key " + second_click_key)
-		delete pieces[first_click_key]
-		console.log("pieces [after deletion] " + JSON.stringify(pieces))
-		console.log("will replace pieces")
-		pieces[click_key] = moving_piece;
-		is_first_click = true
-		console.log("pieces [after replacement] " + JSON.stringify(pieces))
-		turn = 1 - turn
-		drawBoard(first_click_coords)
+		movePiece()
 		return
 	}
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
 	defending_animal_num = pieces[second_click_key]["animal"]
 	defending_animal_player = pieces[second_click_key]["player"]
-	console.log("attacking_animal_num: " + attacking_animal_num)
-	console.log("attacking_animal_player: " + attacking_animal_player)
-	console.log("defending_animal_num: " + defending_animal_num)
-	console.log("defending_animal_player: " + defending_animal_player)
 	if (attacking_animal_player == defending_animal_player) {
 		return
 	}
-	if (attacking_animal_num < defending_animal_num) {
+	if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
 		return
 	}
-	console.log("first_click_key " + first_click_key)
-	console.log("pieces [before deletion] " + JSON.stringify(pieces))
-	var moving_piece = pieces[first_click_key]
-	console.log("moving_piece " + JSON.stringify(moving_piece))
-	console.log("second_click_key " + second_click_key)
-	delete pieces[first_click_key]
-	console.log("pieces [after deletion] " + JSON.stringify(pieces))
-	console.log("will replace pieces")
-	pieces[second_click_key] = moving_piece;
-	drawBoard(first_click_coords)
-	is_first_click = true
-	console.log("pieces [after replacement] " + JSON.stringify(pieces))
-	turn = 1 - turn
+	if ((attacking_animal_num < defending_animal_num) &&
+		((attacking_animal_num != 1) || (defending_animal_num != 8))) {
+		return
+	}
+	movePiece()
 };
+
+function movePiece() {
+	var moving_piece = pieces[first_click_key]
+	delete pieces[first_click_key]
+	pieces[second_click_key] = moving_piece;
+	is_first_click = true
+	turn = 1 - turn
+	drawBoard(first_click_coords)	
+}
 
 function drawBoard(first_click_coords) {
 	context.clearRect(0, 0, 700, 900)
