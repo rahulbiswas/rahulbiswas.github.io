@@ -167,6 +167,19 @@ function canvasClick(e) {
 	if (attacking_animal_player == defending_animal_player) {
 		return
 	}
+	if (attacking_animal_player == 0) {
+		is_attacking_own_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
+		is_attacking_enemy_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
+	} else {
+		is_attacking_own_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
+		is_attacking_enemy_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
+	}
+	if (is_attacking_own_trap) {
+		attacking_animal_num = 100
+	}
+	if (is_attacking_enemy_trap) {
+		attacking_animal_num = 0
+	}
 	if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
 		return
 	}
@@ -193,7 +206,7 @@ function movePiece() {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	drawBoard()	
+	drawBoard()
 }
 
 function drawBoard() {
