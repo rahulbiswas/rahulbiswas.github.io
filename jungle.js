@@ -83,17 +83,16 @@ function setPieces() {
 			"animal": 8
 		}
 	};
+	is_first_click = true
+	turn = 1
+	has_won = false
 }
-
-has_won = false
 
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
 
 	canvas.onmouseup = canvasClick;
-
-	is_first_click = true
 
 	setPieces()
 
@@ -126,8 +125,6 @@ window.onload = function() {
 	drawBoard()
 }
 
-turn = 1
-
 function canvasClick(e) {
 	var currentdate = new Date();
 	var datetime = "beginning of canvasclick" +
@@ -136,6 +133,11 @@ function canvasClick(e) {
 	console.log(datetime)
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
+	if (has_won) {
+		setPieces()
+		drawBoard()
+		return
+	}
 	clickX = e.pageX - canvas.offsetLeft;
 	clickY = e.pageY - canvas.offsetTop;
 	row = Math.floor(clickX / 100)
