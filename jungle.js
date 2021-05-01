@@ -85,6 +85,8 @@ function setPieces() {
 	};
 }
 
+has_won = false
+
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
@@ -160,14 +162,38 @@ function canvasClick(e) {
 	}
 	console.log("first_click false")
 	console.log("click_key " + click_key)
+	attacking_animal_num = pieces[first_click_key]["animal"]
+	attacking_animal_player = pieces[first_click_key]["player"]
+	if (attacking_animal_player == 0) {
+		is_attacking_own_den = ["0_3"].indexOf(second_click_key) > -1
+		is_attacking_enemy_den = ["8_3"].indexOf(second_click_key) > -1
+	} else {
+		is_attacking_own_den = ["8_3"].indexOf(second_click_key) > -1
+		is_attacking_enemy_den = ["0_3"].indexOf(second_click_key) > -1
+	}
+	console.log("is_attacking_own_den = " + is_attacking_own_den)
+	console.log("is_attacking_enemy_den = " + is_attacking_enemy_den)
+	if (is_attacking_own_den) {
+		console.log("Someone is attacking their own den")
+		context.font = "20px Georgia";
+		context.fillText("Fool, you tried to attack your own den!", 10, 50);
+		return
+	}
+	if (is_attacking_enemy_den) {
+		console.log("Somebody is attacking an enemy den")
+		movePiece()
+		context.font = "20px Georgia";
+		context.fillText("Dude, you so smart, you just won!!!", 10, 50);
+		has_won = true
+		return
+	}
 	if (pieces[second_click_key] == null) {
 		movePiece()
 		return
 	}
-	attacking_animal_num = pieces[first_click_key]["animal"]
-	attacking_animal_player = pieces[first_click_key]["player"]
 	defending_animal_num = pieces[second_click_key]["animal"]
 	defending_animal_player = pieces[second_click_key]["player"]
+	console.log("Getting to den and traps")
 	if (attacking_animal_player == defending_animal_player) {
 		return
 	}
