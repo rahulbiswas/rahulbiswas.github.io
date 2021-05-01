@@ -16,14 +16,7 @@ for (b_i = 1; b_i < 9; b_i++) {
 	animals_1[b_i] = img_1
 }
 
-window.onload = function() {
-	canvas = document.getElementById("drawingCanvas");
-	context = canvas.getContext("2d");
-
-	canvas.onmouseup = canvasClick;
-
-	is_first_click = true
-
+function setPieces() {
 	pieces = {
 		"0_0": {
 			"player": 0,
@@ -90,6 +83,17 @@ window.onload = function() {
 			"animal": 8
 		}
 	};
+}
+
+window.onload = function() {
+	canvas = document.getElementById("drawingCanvas");
+	context = canvas.getContext("2d");
+
+	canvas.onmouseup = canvasClick;
+
+	is_first_click = true
+
+	setPieces()
 
 	water = [
 		[3, 1],
