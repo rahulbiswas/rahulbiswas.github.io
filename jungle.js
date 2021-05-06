@@ -125,24 +125,31 @@ window.onload = function() {
 	drawBoard()
 }
 
+class WaterJump {
+  constructor(dst, water) {
+    this.dst = dst;
+    this.water = water;
+  }
+}
+
 validMoveWater = {
-	"2_1": ["6_1"],
-	"2_2": ["6_2"],
-	"3_0": ["3_3"],
-	"4_0": ["4_3"],
-	"5_0": ["5_3"],
-	"6_1": ["2_1"],
-	"6_2": ["2_2"],
-	"3_3": ["3_0","3_6"],
-	"4_3": ["4_0","4_6"],
-	"5_3": ["5_0","5_6"],
-	"2_4": ["6_4"],
-	"2_5": ["6_5"],
-	"3_6": ["3_3"],
-	"4_6": ["4_3"],
-	"5_6": ["5_3"],
-	"6_4": ["2_4"],
-	"6_5": ["2_5"]
+	"2_1": [new WaterJump("6_1", [])],
+	"2_2": [new WaterJump("6_2", [])],
+	"3_0": [new WaterJump("3_3", [])],
+	"4_0": [new WaterJump("4_3", [])],
+	"5_0": [new WaterJump("5_3", [])],
+	"6_1": [new WaterJump("2_1", [])],
+	"6_2": [new WaterJump("2_2", [])],
+	"3_3": [new WaterJump("3_0", []), new WaterJump("3_6", [])],
+	"4_3": [new WaterJump("4_0", []), new WaterJump("4_6", [])],
+	"5_3": [new WaterJump("5_0", []), new WaterJump("5_6", [])],
+	"2_4": [new WaterJump("6_4", [])],
+	"2_5": [new WaterJump("6_5", [])],
+	"3_6": [new WaterJump("3_3", [])],
+	"4_6": [new WaterJump("4_3", [])],
+	"5_6": [new WaterJump("5_3", [])],
+	"6_4": [new WaterJump("2_4", [])],
+	"6_5": [new WaterJump("2_5", [])]
 }
 
 function canvasClick(e) {
@@ -266,11 +273,16 @@ function canvasClick(e) {
 
 function validMove() {
 	// Allow tigers and lions to jump over water.
-	if (validMoveWater[first_click_key] != null) {
-		if (validMoveWater[first_click_key] == second_click_key) {
-			if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-				return true
-			}
+	valid_moves = validMoveWater[first_click_key]
+	if (valid_moves != null) {
+		console.log('validMoveWater ' + JSON.stringify(valid_moves))
+		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
+			valid_move = valid_moves[valid_move_index]
+			if (valid_move.dst == second_click_key) {
+				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+					return true
+				}
+			}			
 		}
 	}
 
