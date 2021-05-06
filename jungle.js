@@ -125,21 +125,25 @@ window.onload = function() {
 	drawBoard()
 }
 
-validMoveWater = [{
-	"2_1": ["6_1"]
-}, {
-	"2_2": ["6_2"]
-}, {
-	"3_0": ["3_3"]
-}, {
-	"4_0": ["4_3"]
-}, {
-	"5_0": ["5_3"]
-}, {
-	"6_1": ["2_1"]
-}, {
-	"6_2": ["2_2"]
-}]
+validMoveWater = {
+	"2_1": ["6_1"],
+	"2_2": ["6_2"],
+	"3_0": ["3_3"],
+	"4_0": ["4_3"],
+	"5_0": ["5_3"],
+	"6_1": ["2_1"],
+	"6_2": ["2_2"],
+	"3_3": ["3_0","3_6"],
+	"4_3": ["4_0","4_6"],
+	"5_3": ["5_0","5_6"],
+	"2_4": ["6_4"],
+	"2_5": ["6_5"],
+	"3_6": ["3_3"],
+	"4_6": ["4_3"],
+	"5_6": ["5_3"],
+	"6_4": ["2_4"],
+	"6_5": ["2_5"]
+}
 
 function canvasClick(e) {
 	var currentdate = new Date();
@@ -175,13 +179,13 @@ function canvasClick(e) {
 		return
 	}
 	second_click_key = click_key
+	attacking_animal_num = pieces[first_click_key]["animal"]
+	attacking_animal_player = pieces[first_click_key]["player"]
 	if (validMove()) {
 		return
 	}
 	console.log("first_click false")
 	console.log("click_key " + click_key)
-	attacking_animal_num = pieces[first_click_key]["animal"]
-	attacking_animal_player = pieces[first_click_key]["player"]
 	console.log("second_click_key = " + second_click_key)
 	is_water_square = [
 		"3_1",
@@ -266,6 +270,13 @@ function validMove() {
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || ((x_diff > 1) || (y_diff > 1))) {
+		if (validMoveWater[first_click_key] != null) {
+			if (validMoveWater[first_click_key] == second_click_key) {
+				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+					return false
+				}
+			}
+		}
 		return true
 	}
 }
