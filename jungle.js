@@ -125,6 +125,22 @@ window.onload = function() {
 	drawBoard()
 }
 
+validMoveWater = [{
+	"2_1": ["6_1"]
+}, {
+	"2_2": ["6_2"]
+}, {
+	"3_0": ["3_3"]
+}, {
+	"4_0": ["4_3"]
+}, {
+	"5_0": ["5_3"]
+}, {
+	"6_1": ["2_1"]
+}, {
+	"6_2": ["2_2"]
+}]
+
 function canvasClick(e) {
 	var currentdate = new Date();
 	var datetime = "beginning of canvasclick" +
@@ -166,6 +182,28 @@ function canvasClick(e) {
 	console.log("click_key " + click_key)
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
+	console.log("second_click_key = " + second_click_key)
+	is_water_square = [
+		"3_1",
+		"4_1",
+		"5_1",
+		"3_2",
+		"4_2",
+		"5_2",
+		"3_4",
+		"4_4",
+		"5_4",
+		"3_5",
+		"4_5",
+		"5_5"
+	].indexOf(second_click_key) > -1
+	console.log("is_water_square = " + is_water_square)
+	if (is_water_square) {
+		console.log("Water square identification working")
+		if (attacking_animal_num != 1) {
+			return
+		}
+	}
 	if (attacking_animal_player == 0) {
 		is_attacking_own_den = ["0_3"].indexOf(second_click_key) > -1
 		is_attacking_enemy_den = ["8_3"].indexOf(second_click_key) > -1
