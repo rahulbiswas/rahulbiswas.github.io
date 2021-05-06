@@ -181,7 +181,7 @@ function canvasClick(e) {
 	second_click_key = click_key
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
-	if (validMove()) {
+	if (!validMove()) {
 		return
 	}
 	console.log("first_click false")
@@ -265,20 +265,24 @@ function canvasClick(e) {
 };
 
 function validMove() {
+	// Allow tigers and lions to jump over water.
+	if (validMoveWater[first_click_key] != null) {
+		if (validMoveWater[first_click_key] == second_click_key) {
+			if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+				return true
+			}
+		}
+	}
+
+	// Disallow non-adjacent moves.
 	first_coords = first_click_key.split("_")
 	second_coords = second_click_key.split("_")
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
-	if (((x_diff == 1) && (y_diff == 1)) || ((x_diff > 1) || (y_diff > 1))) {
-		if (validMoveWater[first_click_key] != null) {
-			if (validMoveWater[first_click_key] == second_click_key) {
-				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-					return false
-				}
-			}
-		}
-		return true
+	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
+		return false
 	}
+	return true
 }
 
 function movePiece() {
