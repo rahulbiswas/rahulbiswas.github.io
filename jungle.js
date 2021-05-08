@@ -276,10 +276,17 @@ function validMove() {
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
 		console.log('validMoveWater ' + JSON.stringify(valid_moves))
-		for (valid_move_destinationindex = 0; valid_move_index < valid_moves.length; valid_move_index++) {
+		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
 			valid_move = valid_moves[valid_move_index]
 			if (valid_move.destination == second_click_key) {
 				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i ++) {
+						console.log(pieces[valid_move.water[w_s_i]])
+						if (pieces[valid_move.water[w_s_i]] != null) {
+							console.log("blocking = "  + JSON.stringify(pieces[valid_move.water[w_s_i]]))
+							return false
+						}
+					}
 					return true
 				}
 			}
