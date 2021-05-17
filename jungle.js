@@ -195,19 +195,9 @@ function canvasClick(e) {
 	console.log("click_key " + click_key)
 	console.log("second_click_key = " + second_click_key)
 	if (attacking_animal_player == 0) {
-		is_attacking_own_den = ["0_3"].indexOf(second_click_key) > -1
 		is_attacking_enemy_den = ["8_3"].indexOf(second_click_key) > -1
 	} else {
-		is_attacking_own_den = ["8_3"].indexOf(second_click_key) > -1
 		is_attacking_enemy_den = ["0_3"].indexOf(second_click_key) > -1
-	}
-	console.log("is_attacking_own_den = " + is_attacking_own_den)
-	console.log("is_attacking_enemy_den = " + is_attacking_enemy_den)
-	if (is_attacking_own_den) {
-		console.log("Someone is attacking their own den")
-		context.font = "20px Georgia";
-		context.fillText("Fool, you tried to attack your own den!", 10, 50);
-		return
 	}
 	if (is_attacking_enemy_den) {
 		console.log("Somebody is attacking an enemy den")
@@ -286,7 +276,15 @@ function validMove() {
 			return false
 		}
 	}
-
+	if (attacking_animal_player == 0) {
+		is_attacking_own_den = ["0_3"].indexOf(second_click_key) > -1
+	} else {
+		is_attacking_own_den = ["8_3"].indexOf(second_click_key) > -1
+	}
+	if (is_attacking_own_den) {
+		return false
+	}
+	
 	// Disallow non-adjacent moves.
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
