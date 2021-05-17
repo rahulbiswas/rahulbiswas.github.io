@@ -208,29 +208,11 @@ function canvasClick(e) {
 		return
 	}
 	if (pieces[second_click_key] != null) {
-		defending_animal_num = pieces[second_click_key]["animal"]
-		defending_animal_player = pieces[second_click_key]["player"]
-		if (attacking_animal_player == defending_animal_player) {
-			return
-		}
-		if (attacking_animal_player == 0) {
-			is_attacking_own_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
-			is_attacking_enemy_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
-		} else {
-			is_attacking_own_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
-			is_attacking_enemy_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
-		}
-		if (is_attacking_own_trap) {
-			attacking_animal_num = 100
-		}
-		if (is_attacking_enemy_trap) {
-			attacking_animal_num = 0
-		}
 		if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
 			return
 		}
 		if ((attacking_animal_num < defending_animal_num) &&
-			((attacking_animal_num != 1) || (defending_animal_num != 8))) {
+			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
 			return
 		}
 	}
@@ -286,6 +268,27 @@ function validMove() {
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
+		return false
+	}
+	if (pieces[second_click_key] == null) {
+		return true
+	}
+	defending_animal_num = pieces[second_click_key]["animal"]
+	defending_animal_player = pieces[second_click_key]["player"]
+	if (attacking_animal_player == defending_animal_player) {
+		return false
+	}
+	if (attacking_animal_player == 0) {
+		is_attacking_own_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
+		is_attacking_enemy_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
+	} else {
+		is_attacking_own_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
+		is_attacking_enemy_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
+	}
+	if (is_attacking_own_trap) {
+		return true
+	}
+	if (is_attacking_enemy_trap) {
 		return false
 	}
 	return true
