@@ -194,27 +194,6 @@ function canvasClick(e) {
 	console.log("first_click false")
 	console.log("click_key " + click_key)
 	console.log("second_click_key = " + second_click_key)
-	is_water_square = [
-		"3_1",
-		"4_1",
-		"5_1",
-		"3_2",
-		"4_2",
-		"5_2",
-		"3_4",
-		"4_4",
-		"5_4",
-		"3_5",
-		"4_5",
-		"5_5"
-	].indexOf(second_click_key) > -1
-	console.log("is_water_square = " + is_water_square)
-	if (is_water_square) {
-		console.log("Water square identification working")
-		if (attacking_animal_num != 1) {
-			return
-		}
-	}
 	if (attacking_animal_player == 0) {
 		is_attacking_own_den = ["0_3"].indexOf(second_click_key) > -1
 		is_attacking_enemy_den = ["8_3"].indexOf(second_click_key) > -1
@@ -272,6 +251,10 @@ function canvasClick(e) {
 };
 
 function validMove() {
+	first_coords = first_click_key.split("_")
+	first_coords = first_coords.map((i) => Number(i));
+	second_coords = second_click_key.split("_")
+	second_coords = second_coords.map((i) => Number(i));
 	// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
@@ -292,10 +275,19 @@ function validMove() {
 			}
 		}
 	}
+	is_water_square = false
+	for (w_s_i=0; w_s_i<water.length; w_s_i++) {
+		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
+			is_water_square = true
+		}
+	}
+	if (is_water_square) {
+		if (attacking_animal_num != 1) {
+			return false
+		}
+	}
 
 	// Disallow non-adjacent moves.
-	first_coords = first_click_key.split("_")
-	second_coords = second_click_key.split("_")
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
