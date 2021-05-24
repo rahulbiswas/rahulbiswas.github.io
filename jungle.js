@@ -207,15 +207,6 @@ function canvasClick(e) {
 		has_won = true
 		return
 	}
-	if (pieces[second_click_key] != null) {
-		if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
-			return
-		}
-		if ((attacking_animal_num < defending_animal_num) &&
-			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
-			return
-		}
-	}
 	movePiece()
 };
 
@@ -290,6 +281,15 @@ function validMove() {
 	}
 	if (is_attacking_enemy_trap) {
 		return false
+	}
+	if (pieces[second_click_key] != null) {
+		if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
+			return false
+		}
+		if ((attacking_animal_num < defending_animal_num) &&
+			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
+			return false
+		}
 	}
 	return true
 }
