@@ -182,6 +182,10 @@ function canvasClick(e) {
 			return
 		}
 		first_click_key = click_key
+		console.log("I will now proceed to call the function")
+		//possiblemove = checkPossibleTurn()
+		//console.log("The function returned: " + possiblemove)
+		console.log("I have now called the function")
 		is_first_click = false
 		return
 	}
@@ -191,24 +195,29 @@ function canvasClick(e) {
 	if (!validMove()) {
 		return
 	}
-	console.log("first_click false")
-	console.log("click_key " + click_key)
-	console.log("second_click_key = " + second_click_key)
-	if (attacking_animal_player == 0) {
-		is_attacking_enemy_den = ["8_3"].indexOf(second_click_key) > -1
-	} else {
-		is_attacking_enemy_den = ["0_3"].indexOf(second_click_key) > -1
-	}
-	if (is_attacking_enemy_den) {
-		console.log("Somebody is attacking an enemy den")
-		movePiece()
+	movePiece()
+	if (pieces["8_3"] != null || pieces["0_3"] != null) {
 		context.font = "20px Georgia";
 		context.fillText("Dude, you so smart, you just won!!!", 10, 50);
 		has_won = true
-		return
 	}
-	movePiece()
 };
+
+function checkPossibleTurn() {
+	possibleMoves = []
+	for (column=0; column<7; column++) {
+		for (row=0; row<9; row++) {
+			second_click_key = row + "_" + column
+			if (validMove()) {
+				console.log("Possible square identified. Row =" + row + "Column =" + column)
+				possibleMove = second_click_key
+				possibleMoves.push(possibleMove)
+				console.log(possibleMoves)
+			}
+		}
+	}
+	return possibleMoves
+}
 
 function validMove() {
 	first_coords = first_click_key.split("_")
