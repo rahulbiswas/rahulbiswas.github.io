@@ -210,6 +210,25 @@ function canvasClick(e) {
 	}
 };
 
+function playerTurn() {
+	possible_pieces = []
+	keys = Object.keys(pieces)
+	for (piece = 0; piece < keys.length; piece++) {
+		piece_0 = keys[piece]
+		if (pieces[piece_0]["player"] == turn) {
+			first_click_key = keys[piece]
+			attacking_animal_num = pieces[first_click_key]["animal"]
+			attacking_animal_player = pieces[first_click_key]["player"]
+			checkpossibleturn = checkPossibleTurn()
+			console.log("checkpossibleturn = " + checkpossibleturn)
+			if (checkpossibleturn.length > 0) {
+				possible_pieces.push(first_click_key)
+			}
+		}
+	}
+	return possible_pieces
+}
+
 function checkPossibleTurn() {
 	possibleMoves = []
 	for (column=0; column<7; column++) {
@@ -353,7 +372,7 @@ function drawBoard() {
 	context.beginPath()
 	context.lineWidth = 4;
 	context.strokeStyle = "rgb(60,60,60)";
-	for (col = 0; col < 8; col++) {
+	for (col = 0; col < 7; col++) {
 		for (row = 0; row < 10; row++) {
 			x = col * 100
 			y = row * 100
@@ -364,6 +383,13 @@ function drawBoard() {
 			context.lineTo(x, y)
 			context.stroke();
 		}
+	}
+	moving_pieces = playerTurn()
+	console.log("Moving pieces =" + moving_pieces)
+	for (p_i=0; p_i<moving_pieces.length; p_i++) {
+		console.log("STUFF HAPPENED")
+		context.fillStyle = "green"
+		context.fillRect(moving_pieces[p_i][2]*100, moving_pieces[p_i][0]*100, 20, 20)
 	}
 	var currentdate = new Date();
 	var datetime = "End of drawboard" +
