@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Panda Peekaboo</title>
+	<style>
+canvas {
+	border: 1px dashed black;
+}
+	</style>
+
+	<script>
+		var panda = new Image();
+		panda.src = "panda.png";
+		var tree = new Image();
+		tree.src = "tree.png";
+		var showTree = 0;
+		
+window.onload = function() {
+	var canvas = document.getElementById("drawingCanvas");
+	var context = canvas.getContext("2d");
+
+	canvas.onmouseup = canvasClick;
+	
+	context.drawImage(panda, 0, 0, 1000, 667);
+};
+
+function canvasClick(e) {
+	var canvas = document.getElementById("drawingCanvas");
+	var context = canvas.getContext("2d");
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	showTree = 1 - showTree
+	if (showTree == 1) {
+		context.drawImage(panda, 0, 0, 1000, 667);
+		context.drawImage(tree, 0, 0, 1000, 667);
+	} else {
+		context.drawImage(panda, 0, 0, 1000, 667);
+	}
+};
+	</script>
+</head>
+
+<body>
+	<canvas id="drawingCanvas" width="1000"
+	 height="667"></canvas>
+</body>
+</html>
