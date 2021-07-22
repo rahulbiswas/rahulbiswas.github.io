@@ -12,18 +12,23 @@ canvas {
 	<script>
 		var panda = new Image();
 		panda.src = "panda.png";
-		var tree = new Image();
-		tree.src = "closeddoor.png";
-		var showTree = 1;
-		penguin_y = 200*Math.floor(Math.random() * 3)
+		var closed_door= new Image();
+		closed_door.src = "closeddoor.png";
+		var open_door= new Image();
+		open_door.src = "opendoor.png"
+		var open_doors = [0, 0, 0]
+		penguin_y = Math.floor(Math.random() * 3)
 		
-		function drawBoard(context, showTree) {
-			if (showTree) {
-				context.drawImage(tree, 0, 0, 200, 667);
-				context.drawImage(tree, 200, 0, 200, 667);
-				context.drawImage(tree, 400, 0, 200, 667);
-			} else {
-				context.drawImage(panda, penguin_y, 0, 200, 667);				
+		function drawBoard(context) {
+			for (door_index = 0; door_index < 3; door_index++) {
+				if (open_doors[door_index] == 1) {
+					if (door_index == penguin_y) {
+						context.drawImage(panda, 200*penguin_y, 0, 200, 667);						
+					}
+					context.drawImage(open_door, 200*door_index, 0, 200, 667);
+				} else {
+					context.drawImage(closed_door, 200*door_index,0, 200, 667);
+				}
 			}
 		}
 
@@ -33,15 +38,22 @@ window.onload = function() {
 
 	canvas.onmouseup = canvasClick;
 	
-  drawBoard(context, showTree) 
+  drawBoard(context) 
 };
 
 function canvasClick(e) {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	context.clearRect(0, 0, canvas.width, canvas.height);
-	showTree = 1 - showTree
-	drawBoard(context, showTree)
+	if (e.clientX < 202) {
+		which_door = 0
+	} else if (e.clientX < 404) {
+		which_door = 1
+	} else {
+		which_door = 2
+	}
+	open_doors[which_door] = 1 - open_doors[which_door]
+	drawBoard(context)
 };
 	</script>
 </head>
