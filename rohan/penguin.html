@@ -15,6 +15,7 @@ canvas {
 		var tree = new Image();
 		tree.src = "closeddoor.png";
 		var showTree = 1;
+		penguin_y = 200*Math.floor(Math.random() * 3)
 		
 		function drawBoard(context, showTree) {
 			if (showTree) {
@@ -22,7 +23,7 @@ canvas {
 				context.drawImage(tree, 200, 0, 200, 667);
 				context.drawImage(tree, 400, 0, 200, 667);
 			} else {
-				context.drawImage(panda, 200, 0, 200, 667);				
+				context.drawImage(panda, penguin_y, 0, 200, 667);				
 			}
 		}
 
