@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Panda Peekaboo</title>
+	<title>Find the Penguin</title>
 	<style>
 canvas {
 	border: 1px dashed black;
@@ -10,8 +10,10 @@ canvas {
 	</style>
 
 	<script>
-		var panda = new Image();
-		panda.src = "panda.png";
+		var width = 558
+		var height = 870
+		var penguin = new Image();
+		penguin.src = "penguin.png";
 		var closed_door= new Image();
 		closed_door.src = "closeddoor.png";
 		var open_door= new Image();
@@ -23,11 +25,11 @@ canvas {
 			for (door_index = 0; door_index < 3; door_index++) {
 				if (open_doors[door_index] == 1) {
 					if (door_index == penguin_y) {
-						context.drawImage(panda, 200*penguin_y, 0, 200, 667);						
+						context.drawImage(penguin, width*penguin_y, 0, width, height);						
 					}
-					context.drawImage(open_door, 200*door_index, 0, 200, 667);
+					context.drawImage(open_door, width*door_index, 0, width, height);
 				} else {
-					context.drawImage(closed_door, 200*door_index,0, 200, 667);
+					context.drawImage(closed_door, width*door_index,0, width, height);
 				}
 			}
 		}
@@ -45,9 +47,9 @@ function canvasClick(e) {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	context.clearRect(0, 0, canvas.width, canvas.height);
-	if (e.clientX < 202) {
+	if (e.clientX < width) {
 		which_door = 0
-	} else if (e.clientX < 404) {
+	} else if (e.clientX < 2 * width) {
 		which_door = 1
 	} else {
 		which_door = 2
@@ -59,7 +61,7 @@ function canvasClick(e) {
 </head>
 
 <body>
-	<canvas id="drawingCanvas" width="1000"
-	 height="667"></canvas>
+	<canvas id="drawingCanvas" width="1674"
+	 height="870"></canvas>
 </body>
 </html>
