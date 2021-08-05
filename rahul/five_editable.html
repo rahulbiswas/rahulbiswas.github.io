@@ -8,6 +8,7 @@ label {
   width: 60px;
 }
 </style>
+<script src="editor.js"></script>
 <script>
 function SwitchText(page) {
 	var resultElement = document.getElementById('result')
@@ -24,7 +25,7 @@ function cp() {
 </head>
 <body onload="SwitchText(0);">
   <h1>Five Pages</h1>
-  <p><textarea id="result" onKeyUp="cp()"></textarea></p>
+  <p><textarea id="result" onKeyUp="cp()" rows="4" cols="50"></textarea></p>
 <!--  <p><output id="result" contenteditable="true" onKeyUp="cp()"></output></p>-->
   <p><output id="result2"></output></p>
   <form action="#" id="whatevs">
