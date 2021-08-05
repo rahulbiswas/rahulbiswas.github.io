@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Five Pages</title>
+<style>
+label {
+  display: inline-block;
+  width: 60px;
+}
+</style>
+<script>
+function SwitchText(page) {
+	var resultElement = document.getElementById('result')
+	resultElement.innerHTML = "num " + page
+}
+
+function cp() {
+	var resultElement = document.getElementById('result')	
+	var result2Element = document.getElementById('result2')	
+	result2Element.innerHTML = resultElement.innerHTML
+}
+</script>
+</head>
+<body onload="SwitchText(0);">
+  <h1>Five Pages</h1>
+  <p><output id="result" contenteditable="true" onKeyUp="cp()"></output></p>
+  <p><output id="result2"></output></p>
+  <form action="#" id="whatevs">
+    <input type="button" name="0" value="0" onclick="SwitchText(0)" /></p>
+    <input type="button" name="1" value="1" onclick="SwitchText(1)" /></p>
+    <input type="button" name="2" value="2" onclick="SwitchText(2)" /></p>
+    <input type="button" name="3" value="3" onclick="SwitchText(3)" /></p>
+    <input type="button" name="4" value="4" onclick="SwitchText(4)" /></p>
+  </form>
+</body>
+</html>
