@@ -11,19 +11,21 @@ label {
 <script>
 function SwitchText(page) {
 	var resultElement = document.getElementById('result')
-	resultElement.innerHTML = "num " + page
+	resultElement.value = "num " + page
+	console.log(resultElement.value)
 }
 
 function cp() {
 	var resultElement = document.getElementById('result')	
 	var result2Element = document.getElementById('result2')	
-	result2Element.innerHTML = resultElement.innerHTML
+	result2Element.innerHTML = resultElement.value
 }
 </script>
 </head>
 <body onload="SwitchText(0);">
   <h1>Five Pages</h1>
-  <p><output id="result" contenteditable="true" onKeyUp="cp()"></output></p>
+  <p><textarea id="result" onKeyUp="cp()"></textarea></p>
+<!--  <p><output id="result" contenteditable="true" onKeyUp="cp()"></output></p>-->
   <p><output id="result2"></output></p>
   <form action="#" id="whatevs">
     <input type="button" name="0" value="0" onclick="SwitchText(0)" /></p>
