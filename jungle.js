@@ -88,9 +88,25 @@ function setPieces() {
 	has_won = false
 }
 
+function rules() {
+	context.font = "20px Georgia";
+	context.fillText("Dou Shou Qi : Rules and Info", 710, 50)
+	context.fillText("1. This is a two player game, so grab a family member or buddy to play with you. ", 710, 80)
+	context.fillText("2. When all of the pieces of one color have green squares in the top corner, it is that player's turn.", 710, 110)
+	context.fillText("3. When a square is colored brown, it means that the piece selected can move to that square", 710, 140)
+	context.fillText("3. All pieces can move one square vertically or horizontally.", 710, 170)
+	context.fillText("4. When pieces attack each other, whichever piece has the higher number wins.", 710, 200)
+	context.fillText("5. Rats can traverse through water, but cannot eat the elephant from the water", 710, 230)
+	context.fillText("6. Rats can eat elephants, elephants cannot eat rats.", 710, 260)
+	context.fillText("7. Lions and Tigers can jump across the water in any direction, as long as a rat is not in the water blocking the path, and there is no higher ranking player on the other side.", 710, 290)
+	context.fillText("8. Now have fun and get started!!!", 710, 350)
+	
+}
+
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
+	rules()
 
 	canvas.onmouseup = canvasClick;
 
@@ -188,17 +204,24 @@ function canvasClick(e) {
 		possiblemove = checkPossibleTurn()
 		console.log("The function returned: " + possiblemove)
 		console.log("I have now called the function")
-		for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
-			move = possiblemove[possible_move_index]
-			move = move.split("_")
-			move = move.map((i) => Number(i));
-			context.fillStyle = "chocolate"
-			context.fillRect(move[1]*100, move[0]*100, 20, 20)
-		}
 		is_first_click = false
 		return
 	}
 	second_click_key = click_key
+	if (first_click_key == second_click_key) {
+		first_click_key = null
+		second_click_key = null
+	}
+	if (first_click_key == null) {
+		return
+	}
+	for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
+		move = possiblemove[possible_move_index]
+		move = move.split("_")
+		move = move.map((i) => Number(i));
+		context.fillStyle = "chocolate"
+		context.fillRect(move[1]*100, move[0]*100, 20, 20)
+	}
 	if (!validMove()) {
 		return
 	}
@@ -387,7 +410,6 @@ function drawBoard() {
 	moving_pieces = playerTurn()
 	console.log("Moving pieces =" + moving_pieces)
 	for (p_i=0; p_i<moving_pieces.length; p_i++) {
-		console.log("STUFF HAPPENED")
 		context.fillStyle = "green"
 		context.fillRect(moving_pieces[p_i][2]*100, moving_pieces[p_i][0]*100, 20, 20)
 	}
