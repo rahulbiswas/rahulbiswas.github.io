@@ -100,6 +100,7 @@ function rules() {
 	context.fillText("6. Rats can eat elephants, elephants cannot eat rats.", 710, 260)
 	context.fillText("7. Lions and Tigers can jump across the water in any direction, as long as a rat is not in the water blocking the path, and there is no higher ranking player on the other side.", 710, 290)
 	context.fillText("8. Now have fun and get started!!!", 710, 350)
+	context.fillText("This wonderful and exciting game was created by your favorite person, Siddhartha Biswas")
 	
 }
 
