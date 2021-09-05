@@ -203,18 +203,18 @@ function canvasClick(e) {
 		attacking_animal_num = pieces[first_click_key]["animal"]
 		attacking_animal_player = pieces[first_click_key]["player"]
 		possiblemove = checkPossibleTurn()
+		for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
+			move = possiblemove[possible_move_index]
+			move = move.split("_")
+			move = move.map((i) => Number(i));
+			context.fillStyle = "chocolate"
+			context.fillRect(move[1]*100, move[0]*100, 20, 20)
+			console.log("Possible moves printed")
+		}
 		console.log("The function returned: " + possiblemove)
 		console.log("I have now called the function")
 		is_first_click = false
 		return
-	}
-	for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
-		move = possiblemove[possible_move_index]
-		move = move.split("_")
-		move = move.map((i) => Number(i));
-		context.fillStyle = "chocolate"
-		context.fillRect(move[1]*100, move[0]*100, 20, 20)
-		console.log("Possible moves printed")
 	}
 	second_click_key = click_key
 	if (first_click_key == second_click_key) {
