@@ -350,6 +350,9 @@ function validMove() {
 			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
 			return false
 		}
+		if ((attacking_animal_num == 1) && (defending_animal_num == 8) && (water[first_click_key] != null)) {
+			return false
+		} 
 	}
 	return true
 }
