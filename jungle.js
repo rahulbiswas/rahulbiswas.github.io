@@ -259,6 +259,9 @@ function checkPossibleTurn() {
 	for (column=0; column<7; column++) {
 		for (row=0; row<9; row++) {
 			second_click_key = row + "_" + column
+			if ((attacking_animal_num == 1) && (water[first_click_key] != null)) {
+				continue
+			} 
 			if (validMove()) {
 				console.log("Possible square identified. Row =" + row + "Column =" + column)
 				possibleMove = second_click_key
@@ -350,9 +353,6 @@ function validMove() {
 			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
 			return false
 		}
-		if ((attacking_animal_num == 1) && (defending_animal_num == 8) && (water[first_click_key] != null)) {
-			return false
-		} 
 	}
 	return true
 }
