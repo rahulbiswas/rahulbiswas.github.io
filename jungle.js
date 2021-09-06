@@ -263,7 +263,6 @@ function validMove() {
 	first_coords = first_coords.map((i) => Number(i));
 	second_coords = second_click_key.split("_")
 	second_coords = second_coords.map((i) => Number(i));
-	console.log("checking validity of " + first_coords + " to " + second_coords)
 	// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
@@ -308,8 +307,6 @@ function validMove() {
 	}
 	first_coords[0] = parseInt(first_coords[0])
 	first_coords[1] = parseInt(first_coords[1])
-	console.log("checking if rat leaving water")
-	console.log("reminder, checking validity of " + first_coords + " to " + second_coords)
 	is_moving_from_water_square = false
 	for (w_s_i=0; w_s_i<water.length; w_s_i++) {
 		if (water[w_s_i][0] == first_coords[0] && water[w_s_i][1] == first_coords[1]) {
@@ -317,7 +314,6 @@ function validMove() {
 		}
 	}
 	if ((is_moving_from_water_square) && (pieces[second_click_key] != null)) {
-		console.log("rat leaving water")
 		return false
 	}
 	if (pieces[second_click_key] == null) {
