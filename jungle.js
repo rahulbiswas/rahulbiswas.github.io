@@ -3,14 +3,12 @@
 
 animals_0 = {}
 for (a_i = 1; a_i < 9; a_i++) {
-	console.log(a_i)
 	img = new Image()
 	img.src = 'a' + a_i + '.png'
 	animals_0[a_i] = img
 }
 animals_1 = {}
 for (b_i = 1; b_i < 9; b_i++) {
-	console.log(b_i)
 	img_1 = new Image()
 	img_1.src = "b" + b_i + '.png'
 	animals_1[b_i] = img_1
@@ -174,7 +172,6 @@ function canvasClick(e) {
 	var datetime = "beginning of canvasclick" +
 		currentdate.getSeconds() + "." +
 		currentdate.getMilliseconds();
-	console.log(datetime)
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
 	if (has_won) {
@@ -188,31 +185,24 @@ function canvasClick(e) {
 	column = Math.floor(clickY / 100)
 	click_key = column + "_" + row
 	if (is_first_click == true) {
-		console.log("first_click true")
 		if (pieces[click_key] == null) {
-			console.log("no piece ; will return")
 			return
 		}
 		player = pieces[click_key]["player"]
-		console.log(player)
 		if (player != turn) {
 			return
 		}
 		first_click_key = click_key
-		console.log("I will now proceed to call the function")
 		attacking_animal_num = pieces[first_click_key]["animal"]
 		attacking_animal_player = pieces[first_click_key]["player"]
-		possiblemove = checkPossibleTurn()
-		for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
-			move = possiblemove[possible_move_index]
-			move = move.split("_")
-			move = move.map((i) => Number(i));
-			context.fillStyle = "chocolate"
-			context.fillRect(move[1]*100, move[0]*100, 20, 20)
-			console.log("Possible moves printed")
-		}
-		console.log("The function returned: " + possiblemove)
-		console.log("I have now called the function")
+		//possiblemove = checkPossibleTurn()
+		//for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
+		//	move = possiblemove[possible_move_index]
+		//	move = move.split("_")
+		//	move = move.map((i) => Number(i));
+		//	context.fillStyle = "chocolate"
+		//	context.fillRect(move[1]*100, move[0]*100, 20, 20)
+		//}
 		is_first_click = false
 		return
 	}
@@ -245,7 +235,6 @@ function playerTurn() {
 			attacking_animal_num = pieces[first_click_key]["animal"]
 			attacking_animal_player = pieces[first_click_key]["player"]
 			checkpossibleturn = checkPossibleTurn()
-			console.log("checkpossibleturn = " + checkpossibleturn)
 			if (checkpossibleturn.length > 0) {
 				possible_pieces.push(first_click_key)
 			}
@@ -259,14 +248,9 @@ function checkPossibleTurn() {
 	for (column=0; column<7; column++) {
 		for (row=0; row<9; row++) {
 			second_click_key = row + "_" + column
-			if ((attacking_animal_num == 1) && (water[first_click_key] != null)) {
-				continue
-			} 
 			if (validMove()) {
-				console.log("Possible square identified. Row =" + row + "Column =" + column)
 				possibleMove = second_click_key
 				possibleMoves.push(possibleMove)
-				console.log(possibleMoves)
 			}
 		}
 	}
@@ -274,22 +258,21 @@ function checkPossibleTurn() {
 }
 
 function validMove() {
+	var currentdate = new Date();
 	first_coords = first_click_key.split("_")
 	first_coords = first_coords.map((i) => Number(i));
 	second_coords = second_click_key.split("_")
 	second_coords = second_coords.map((i) => Number(i));
+	console.log("checking validity of " + first_coords + " to " + second_coords)
 	// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
-		console.log('validMoveWater ' + JSON.stringify(valid_moves))
 		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
 			valid_move = valid_moves[valid_move_index]
 			if (valid_move.destination == second_click_key) {
 				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
 					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i ++) {
-						console.log(pieces[valid_move.water[w_s_i]])
 						if (pieces[valid_move.water[w_s_i]] != null) {
-							console.log("blocking = "  + JSON.stringify(pieces[valid_move.water[w_s_i]]))
 							return false
 						}
 					}
@@ -298,13 +281,13 @@ function validMove() {
 			}
 		}
 	}
-	is_water_square = false
+	is_moving_to_water_square = false
 	for (w_s_i=0; w_s_i<water.length; w_s_i++) {
 		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
-			is_water_square = true
+			is_moving_to_water_square = true
 		}
 	}
-	if (is_water_square) {
+	if (is_moving_to_water_square) {
 		if (attacking_animal_num != 1) {
 			return false
 		}
@@ -317,11 +300,24 @@ function validMove() {
 	if (is_attacking_own_den) {
 		return false
 	}
-	
 	// Disallow non-adjacent moves.
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
+		return false
+	}
+	first_coords[0] = parseInt(first_coords[0])
+	first_coords[1] = parseInt(first_coords[1])
+	console.log("checking if rat leaving water")
+	console.log("reminder, checking validity of " + first_coords + " to " + second_coords)
+	is_moving_from_water_square = false
+	for (w_s_i=0; w_s_i<water.length; w_s_i++) {
+		if (water[w_s_i][0] == first_coords[0] && water[w_s_i][1] == first_coords[1]) {
+			is_moving_from_water_square = true
+		}
+	}
+	if ((is_moving_from_water_square) && (pieces[second_click_key] != null)) {
+		console.log("rat leaving water")
 		return false
 	}
 	if (pieces[second_click_key] == null) {
@@ -380,13 +376,11 @@ function drawBoard() {
 		context.fillStyle = "gray";
 		context.fillRect(den[d_i][1] * 100, den[d_i][0] * 100, 100, 100)
 	}
-	console.log("pieces.length = " + Object.keys(pieces).length)
 	pieces_position_list = Object.keys(pieces)
 	for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
 		piece_position = pieces_position_list[p_i]
 		player = pieces[piece_position]["player"]
 		animal = pieces[piece_position]["animal"]
-		console.log("piece_position " + piece_position + ", player " + player)
 		piece_components = piece_position.split("_")
 		x = piece_components[1] * 100
 		y = piece_components[0] * 100
@@ -412,15 +406,13 @@ function drawBoard() {
 			context.stroke();
 		}
 	}
-	moving_pieces = playerTurn()
-	console.log("Moving pieces =" + moving_pieces)
-	for (p_i=0; p_i<moving_pieces.length; p_i++) {
-		context.fillStyle = "green"
-		context.fillRect(moving_pieces[p_i][2]*100, moving_pieces[p_i][0]*100, 20, 20)
-	}
+	// moving_pieces = playerTurn()
+	// for (p_i=0; p_i<moving_pieces.length; p_i++) {
+	// 	context.fillStyle = "green"
+	// 	context.fillRect(moving_pieces[p_i][2]*100, moving_pieces[p_i][0]*100, 20, 20)
+	// }
 	var currentdate = new Date();
 	var datetime = "End of drawboard" +
 		currentdate.getSeconds() + "." +
 		currentdate.getMilliseconds();
-	console.log(datetime)
 }
