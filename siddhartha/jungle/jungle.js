@@ -1,17 +1,18 @@
-// My list of the global variables.
-// animals_0, animals_1, canvas, context, is_first_click, pieces, water, traps, den, turn
+loadPNGs()
 
-animals_0 = {}
-for (a_i = 1; a_i < 9; a_i++) {
-	img = new Image()
-	img.src = 'a' + a_i + '.png'
-	animals_0[a_i] = img
-}
-animals_1 = {}
-for (b_i = 1; b_i < 9; b_i++) {
-	img_1 = new Image()
-	img_1.src = "b" + b_i + '.png'
-	animals_1[b_i] = img_1
+function loadPNGs() {
+	animals_0 = {}
+	for (a_i = 1; a_i < 9; a_i++) {
+		img = new Image()
+		img.src = 'a' + a_i + '.png'
+		animals_0[a_i] = img
+	}
+	animals_1 = {}
+	for (b_i = 1; b_i < 9; b_i++) {
+		img_1 = new Image()
+		img_1.src = "b" + b_i + '.png'
+		animals_1[b_i] = img_1
+	}	
 }
 
 function setPieces() {
@@ -99,7 +100,7 @@ function rules() {
 	context.fillText("7. Lions and Tigers can jump across the water in any direction, as long as a rat is not in the water blocking the path, and there is no higher ranking player on the other side.", 710, 290)
 	context.fillText("8. Now have fun and get started!!!", 710, 320)
 	context.fillText("This wonderful and exciting game was created by your favorite person, Siddhartha Biswas", 710, 380)
-	
+
 }
 
 window.onload = function() {
@@ -148,23 +149,23 @@ class WaterJump {
 }
 
 validMoveWater = {
-	"2_1": [new WaterJump("6_1", ["3_1","4_1","5_1"])],
-	"2_2": [new WaterJump("6_2", ["3_2","4_2","5_2"])],
-	"3_0": [new WaterJump("3_3", ["3_1","3_2"])],
-	"4_0": [new WaterJump("4_3", ["4_1","4_2"])],
-	"5_0": [new WaterJump("5_3", ["5_1","5_2"])],
-	"6_1": [new WaterJump("2_1", ["5_1","4_1","3_1"])],
-	"6_2": [new WaterJump("2_2", ["5_2","4_2","3_2"])],
-	"3_3": [new WaterJump("3_0", ["3_2","3_1"]), new WaterJump("3_6", ["3_4","3_5"])],
-	"4_3": [new WaterJump("4_0", ["4_2","4_1"]), new WaterJump("4_6", ["4_4","4_5"])],
-	"5_3": [new WaterJump("5_0", ["5_2","5_1"]), new WaterJump("5_6", ["5_4","5_5"])],
-	"2_4": [new WaterJump("6_4", ["3_4","4_4","5_4"])],
-	"2_5": [new WaterJump("6_5", ["3_5","4_5","5_5"])],
-	"3_6": [new WaterJump("3_3", ["3_5","3_4"])],
-	"4_6": [new WaterJump("4_3", ["4_5","4_4"])],
-	"5_6": [new WaterJump("5_3", ["5_5","5_4"])],
-	"6_4": [new WaterJump("2_4", ["5_4","4_4","3_4"])],
-	"6_5": [new WaterJump("2_5", ["5_5","4_5","3_5"])]
+	"2_1": [new WaterJump("6_1", ["3_1", "4_1", "5_1"])],
+	"2_2": [new WaterJump("6_2", ["3_2", "4_2", "5_2"])],
+	"3_0": [new WaterJump("3_3", ["3_1", "3_2"])],
+	"4_0": [new WaterJump("4_3", ["4_1", "4_2"])],
+	"5_0": [new WaterJump("5_3", ["5_1", "5_2"])],
+	"6_1": [new WaterJump("2_1", ["5_1", "4_1", "3_1"])],
+	"6_2": [new WaterJump("2_2", ["5_2", "4_2", "3_2"])],
+	"3_3": [new WaterJump("3_0", ["3_2", "3_1"]), new WaterJump("3_6", ["3_4", "3_5"])],
+	"4_3": [new WaterJump("4_0", ["4_2", "4_1"]), new WaterJump("4_6", ["4_4", "4_5"])],
+	"5_3": [new WaterJump("5_0", ["5_2", "5_1"]), new WaterJump("5_6", ["5_4", "5_5"])],
+	"2_4": [new WaterJump("6_4", ["3_4", "4_4", "5_4"])],
+	"2_5": [new WaterJump("6_5", ["3_5", "4_5", "5_5"])],
+	"3_6": [new WaterJump("3_3", ["3_5", "3_4"])],
+	"4_6": [new WaterJump("4_3", ["4_5", "4_4"])],
+	"5_6": [new WaterJump("5_3", ["5_5", "5_4"])],
+	"6_4": [new WaterJump("2_4", ["5_4", "4_4", "3_4"])],
+	"6_5": [new WaterJump("2_5", ["5_5", "4_5", "3_5"])]
 }
 
 function canvasClick(e) {
@@ -195,14 +196,14 @@ function canvasClick(e) {
 		first_click_key = click_key
 		attacking_animal_num = pieces[first_click_key]["animal"]
 		attacking_animal_player = pieces[first_click_key]["player"]
-		//possiblemove = checkPossibleTurn()
-		//for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
-		//	move = possiblemove[possible_move_index]
-		//	move = move.split("_")
-		//	move = move.map((i) => Number(i));
-		//	context.fillStyle = "chocolate"
-		//	context.fillRect(move[1]*100, move[0]*100, 20, 20)
-		//}
+			//possiblemove = checkPossibleTurn()
+			//for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
+			//	move = possiblemove[possible_move_index]
+			//	move = move.split("_")
+			//	move = move.map((i) => Number(i));
+			//	context.fillStyle = "chocolate"
+			//	context.fillRect(move[1]*100, move[0]*100, 20, 20)
+			//}
 		is_first_click = false
 		return
 	}
@@ -245,8 +246,8 @@ function playerTurn() {
 
 function checkPossibleTurn() {
 	possibleMoves = []
-	for (column=0; column<7; column++) {
-		for (row=0; row<9; row++) {
+	for (column = 0; column < 7; column++) {
+		for (row = 0; row < 9; row++) {
 			second_click_key = row + "_" + column
 			if (validMove()) {
 				possibleMove = second_click_key
@@ -270,7 +271,7 @@ function validMove() {
 			valid_move = valid_moves[valid_move_index]
 			if (valid_move.destination == second_click_key) {
 				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i ++) {
+					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
 						if (pieces[valid_move.water[w_s_i]] != null) {
 							return false
 						}
@@ -281,7 +282,7 @@ function validMove() {
 		}
 	}
 	is_moving_to_water_square = false
-	for (w_s_i=0; w_s_i<water.length; w_s_i++) {
+	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
 			is_moving_to_water_square = true
 		}
@@ -308,7 +309,7 @@ function validMove() {
 	first_coords[0] = parseInt(first_coords[0])
 	first_coords[1] = parseInt(first_coords[1])
 	is_moving_from_water_square = false
-	for (w_s_i=0; w_s_i<water.length; w_s_i++) {
+	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == first_coords[0] && water[w_s_i][1] == first_coords[1]) {
 			is_moving_from_water_square = true
 		}
