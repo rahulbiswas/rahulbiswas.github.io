@@ -87,26 +87,10 @@ function setPieces() {
 	has_won = false
 }
 
-function rules() {
-	context.font = "20px Georgia";
-	context.fillText("Dou Shou Qi : Rules and Info", 710, 50)
-	context.fillText("1. This is a two player game, so grab a family member or buddy to play with you. ", 710, 80)
-	context.fillText("2. When all of the pieces of one color have green squares in the top corner, it is that player's turn.", 710, 110)
-	context.fillText("3. When a square is colored brown, it means that the piece selected can move to that square", 710, 140)
-	context.fillText("3. All pieces can move one square vertically or horizontally.", 710, 170)
-	context.fillText("4. When pieces attack each other, whichever piece has the higher number wins.", 710, 200)
-	context.fillText("5. Rats can traverse through water, but cannot eat the elephant from the water", 710, 230)
-	context.fillText("6. Rats can eat elephants, elephants cannot eat rats.", 710, 260)
-	context.fillText("7. Lions and Tigers can jump across the water in any direction, as long as a rat is not in the water blocking the path, and there is no higher ranking player on the other side.", 710, 290)
-	context.fillText("8. Now have fun and get started!!!", 710, 320)
-	context.fillText("This wonderful and exciting game was created by your favorite person, Siddhartha Biswas", 710, 380)
-
-}
-
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
-	rules()
+	print_rules()
 
 	canvas.onmouseup = canvasClick;
 
