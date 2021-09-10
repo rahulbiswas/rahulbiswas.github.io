@@ -22,6 +22,15 @@ function setPieces() {
 	has_won = false
 }
 
+function click_key_with_event(event) {
+	clickX = event.pageX - canvas.offsetLeft;
+	clickY = event.pageY - canvas.offsetTop;
+	row = Math.floor(clickX / 100)
+	column = Math.floor(clickY / 100)
+	click_key = column + "_" + row
+	return click_key
+}
+
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas")
 	context = canvas.getContext("2d")
@@ -40,7 +49,7 @@ class WaterJump {
 	}
 }
 
-function canvasClick(e) {
+function canvasClick(event) {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
 	if (has_won) {
@@ -48,11 +57,7 @@ function canvasClick(e) {
 		drawBoard()
 		return
 	}
-	clickX = e.pageX - canvas.offsetLeft;
-	clickY = e.pageY - canvas.offsetTop;
-	row = Math.floor(clickX / 100)
-	column = Math.floor(clickY / 100)
-	click_key = column + "_" + row
+	click_key = click_key_with_event(event)
 	if (is_first_click) {
 		if (pieces[click_key] == null) {
 			return
@@ -62,11 +67,9 @@ function canvasClick(e) {
 			return
 		}
 		first_click_key = click_key
-		attacking_animal_num = pieces[first_click_key]["animal"]
-		attacking_animal_player = pieces[first_click_key]["player"]
-		possiblemove = checkPossibleTurn()
-		for (possible_move_index = 0; possible_move_index < possiblemove.length; possible_move_index++) {
-			move = possiblemove[possible_move_index]
+		possible_moves = checkPossibleTurn()
+		for (possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
+			move = possible_moves[possible_move_index]
 			move = move.split("_")
 			move = move.map((i) => Number(i));
 			context.fillStyle = "chocolate"
@@ -101,7 +104,6 @@ function playerTurn() {
 		piece_0 = keys[piece]
 		if (pieces[piece_0]["player"] == turn) {
 			first_click_key = keys[piece]
-			attacking_animal_num = pieces[first_click_key]["animal"]
 			attacking_animal_player = pieces[first_click_key]["player"]
 			checkpossibleturn = checkPossibleTurn()
 			if (checkpossibleturn.length > 0) {
@@ -131,6 +133,8 @@ function validMove() {
 	first_coords = first_coords.map((i) => Number(i));
 	second_coords = second_click_key.split("_")
 	second_coords = second_coords.map((i) => Number(i));
+	attacking_animal_num = pieces[first_click_key]["animal"]
+	attacking_animal_player = pieces[first_click_key]["player"]
 	// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
