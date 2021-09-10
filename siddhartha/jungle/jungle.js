@@ -31,6 +31,17 @@ function click_key_with_event(event) {
 	return click_key
 }
 
+function possible_moves_mapping() {
+	possible_moves = checkPossibleTurn()
+	for (possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
+		move = possible_moves[possible_move_index]
+		move = move.split("_")
+		move = move.map((i) => Number(i));
+		context.fillStyle = "chocolate"
+		context.fillRect(move[1] * 100, move[0] * 100, 20, 20)
+	}
+}
+
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas")
 	context = canvas.getContext("2d")
@@ -67,14 +78,7 @@ function canvasClick(event) {
 			return
 		}
 		first_click_key = click_key
-		possible_moves = checkPossibleTurn()
-		for (possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
-			move = possible_moves[possible_move_index]
-			move = move.split("_")
-			move = move.map((i) => Number(i));
-			context.fillStyle = "chocolate"
-			context.fillRect(move[1] * 100, move[0] * 100, 20, 20)
-		}
+		possible_moves_mapping()
 		is_first_click = false
 		return
 	}
