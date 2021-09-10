@@ -41,10 +41,6 @@ class WaterJump {
 }
 
 function canvasClick(e) {
-	var currentdate = new Date();
-	var datetime = "beginning of canvasclick" +
-		currentdate.getSeconds() + "." +
-		currentdate.getMilliseconds();
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
 	if (has_won) {
@@ -131,7 +127,6 @@ function checkPossibleTurn() {
 }
 
 function validMove() {
-	var currentdate = new Date();
 	first_coords = first_click_key.split("_")
 	first_coords = first_coords.map((i) => Number(i));
 	second_coords = second_click_key.split("_")
@@ -280,8 +275,4 @@ function drawBoard() {
 		context.fillStyle = "green"
 		context.fillRect(moving_pieces[p_i][2]*100, moving_pieces[p_i][0]*100, 20, 20)
 	}
-	var currentdate = new Date();
-	var datetime = "End of drawboard" +
-		currentdate.getSeconds() + "." +
-		currentdate.getMilliseconds();
 }
