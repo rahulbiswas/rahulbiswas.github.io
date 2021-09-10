@@ -4,13 +4,13 @@ function loadPNGs() {
 	animals_0 = {}
 	for (a_i = 1; a_i < 9; a_i++) {
 		img = new Image()
-		img.src = 'a' + a_i + '.png'
+		img.src = 'png/a' + a_i + '.png'
 		animals_0[a_i] = img
 	}
 	animals_1 = {}
 	for (b_i = 1; b_i < 9; b_i++) {
 		img_1 = new Image()
-		img_1.src = "b" + b_i + '.png'
+		img_1.src = 'png/b' + b_i + '.png'
 		animals_1[b_i] = img_1
 	}	
 }
