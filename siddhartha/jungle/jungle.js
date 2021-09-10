@@ -53,7 +53,7 @@ function canvasClick(e) {
 	row = Math.floor(clickX / 100)
 	column = Math.floor(clickY / 100)
 	click_key = column + "_" + row
-	if (is_first_click == true) {
+	if (is_first_click) {
 		if (pieces[click_key] == null) {
 			return
 		}
@@ -64,14 +64,14 @@ function canvasClick(e) {
 		first_click_key = click_key
 		attacking_animal_num = pieces[first_click_key]["animal"]
 		attacking_animal_player = pieces[first_click_key]["player"]
-			possiblemove = checkPossibleTurn()
-			for (possible_move_index=0; possible_move_index<possiblemove.length; possible_move_index++) {
-				move = possiblemove[possible_move_index]
-				move = move.split("_")
-				move = move.map((i) => Number(i));
-				context.fillStyle = "chocolate"
-				context.fillRect(move[1]*100, move[0]*100, 20, 20)
-			}
+		possiblemove = checkPossibleTurn()
+		for (possible_move_index = 0; possible_move_index < possiblemove.length; possible_move_index++) {
+			move = possiblemove[possible_move_index]
+			move = move.split("_")
+			move = move.map((i) => Number(i));
+			context.fillStyle = "chocolate"
+			context.fillRect(move[1] * 100, move[0] * 100, 20, 20)
+		}
 		is_first_click = false
 		return
 	}
@@ -271,8 +271,8 @@ function drawBoard() {
 		}
 	}
 	moving_pieces = playerTurn()
-	for (p_i=0; p_i<moving_pieces.length; p_i++) {
+	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
 		context.fillStyle = "green"
-		context.fillRect(moving_pieces[p_i][2]*100, moving_pieces[p_i][0]*100, 20, 20)
+		context.fillRect(moving_pieces[p_i][2] * 100, moving_pieces[p_i][0] * 100, 20, 20)
 	}
 }
