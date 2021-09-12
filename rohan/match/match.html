@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Animal Match</title>
+	<style>
+canvas {
+	border: 1px dashed black;
+}
+	</style>
+
+<script>
+var a0 = new Image();
+a0.src = "a0.png";
+var a1 = new Image();
+a1.src = "a1.png";
+		
+window.onload = function() {
+	var canvas = document.getElementById("drawingCanvas");
+	canvas.onmouseup = canvasClick;
+	shown = {}
+	for (i = 0; i < 2; i++) {
+		for (j = 0; j < 2; j++) {
+			key = i + '_' + j
+			shown[key] = true
+		}
+	}
+	
+	drawBoard();
+};
+
+function drawBoard() {
+	var canvas = document.getElementById("drawingCanvas");
+	var context = canvas.getContext("2d");
+	console.log('shown: ' + JSON.stringify(shown))
+	context.clearRect(0, 0, 600, 600)
+	if (shown['0_0']) {
+		context.drawImage(a0,0,0,300,300);
+	}
+	context.drawImage(a0,300,300,300,300);
+	if (shown['0_1']) {
+		context.drawImage(a1,0,300,300,300);
+	}
+	context.drawImage(a1,300,0,300,300);
+}
+
+function canvasClick(e) {
+	var canvas = document.getElementById("drawingCanvas");
+	var context = canvas.getContext("2d");
+	i = Math.floor(e.x / 300)
+	j = Math.floor(e.y / 300)
+	console.log('i: ' + i + ', j: ' + j)
+	key = i + '_' + j
+	shown[key] = !shown[key]
+	drawBoard()
+};
+	</script>
+</head>
+
+<body>
+	<canvas id="drawingCanvas" width="600"
+	 height="600"></canvas>
+</body>
+</html>
