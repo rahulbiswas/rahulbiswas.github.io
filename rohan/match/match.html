@@ -32,16 +32,20 @@ window.onload = function() {
 function drawBoard() {
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
-	console.log('shown: ' + JSON.stringify(shown))
+	console.log("shown: " + JSON.stringify(shown))
 	context.clearRect(0, 0, 600, 600)
-	if (shown['0_0']) {
+	if (shown["0_0"]) {
 		context.drawImage(a0,0,0,300,300);
 	}
-	context.drawImage(a0,300,300,300,300);
-	if (shown['0_1']) {
+	if (shown["1_0"]) {
+		context.drawImage(a1,300,0,300,300);
+	}
+	if (shown["0_1"]) {
 		context.drawImage(a1,0,300,300,300);
 	}
-	context.drawImage(a1,300,0,300,300);
+	if (shown["1_1"]) {
+		context.drawImage(a0,300,300,300,300);
+	}
 }
 
 function canvasClick(e) {
