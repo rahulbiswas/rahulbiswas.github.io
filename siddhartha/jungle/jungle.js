@@ -86,6 +86,11 @@ function canvasClick(event) {
 	if (first_click_key == second_click_key) {
 		first_click_key = null
 		second_click_key = null
+		is_first_click = true
+		moving_piece = null
+		drawBoard()
+		console.log("Nulled")
+		
 	}
 	if (first_click_key == null) {
 		return
