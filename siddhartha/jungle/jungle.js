@@ -1,4 +1,5 @@
 loadPNGs()
+loadMenus()
 
 function loadPNGs() {
 	animals_0 = {}
@@ -13,6 +14,11 @@ function loadPNGs() {
 		img_1.src = 'png/b' + b_i + '.png'
 		animals_1[b_i] = img_1
 	}
+}
+
+function loadMenus() {
+	home_menu = new Image()
+	home_menu.src = "png/menus_home.png"
 }
 
 function setPieces() {
@@ -288,4 +294,5 @@ function drawBoard() {
 		context.fillStyle = "green"
 		context.fillRect(moving_pieces[p_i][2] * 100, moving_pieces[p_i][0] * 100, 20, 20)
 	}
+	context.drawImage(home_menu, 100, 0, 1500, 900);
 }
