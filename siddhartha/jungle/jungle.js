@@ -1,5 +1,14 @@
 loadPNGs()
-loadMenus()
+
+current_window = 'home'
+
+window.onload = function() {
+	canvas = document.getElementById("drawingCanvas")
+	context = canvas.getContext("2d")
+	canvas.onmouseup = canvasClick
+	setPieces()
+	draw()
+}
 
 function loadPNGs() {
 	animals_0 = {}
@@ -14,11 +23,10 @@ function loadPNGs() {
 		img_1.src = 'png/b' + b_i + '.png'
 		animals_1[b_i] = img_1
 	}
-}
-
-function loadMenus() {
 	home_menu = new Image()
 	home_menu.src = "png/menus_home.png"
+	rule_menu = new Image()
+	rule_menu.src = "png/menus_rules.png"
 }
 
 function setPieces() {
@@ -28,9 +36,13 @@ function setPieces() {
 	has_won = false
 }
 
-function click_key_with_event(event) {
+function clickXY(event) {
 	clickX = event.pageX - canvas.offsetLeft;
 	clickY = event.pageY - canvas.offsetTop;
+	return [clickX,clickY]
+}
+
+function click_key_with_event(clickX, clickY) {
 	row = Math.floor(clickX / 100)
 	column = Math.floor(clickY / 100)
 	click_key = column + "_" + row
@@ -48,17 +60,6 @@ function possible_moves_mapping() {
 	}
 }
 
-window.onload = function() {
-	canvas = document.getElementById("drawingCanvas")
-	context = canvas.getContext("2d")
-	print_rules()
-
-	canvas.onmouseup = canvasClick
-
-	setPieces()
-	drawBoard()
-}
-
 class WaterJump {
 	constructor(destination, water) {
 		this.destination = destination
@@ -69,12 +70,26 @@ class WaterJump {
 function canvasClick(event) {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
+	click_xy = clickXY(event)
+
+	if (current_window == "home") {
+		if (click_xy[0] > 69 && click_xy[0] < 559 && click_xy[1] > 187 && click_xy[1] < 396) {
+			current_window = "game"
+			draw()
+		}
+		if (click_xy[0] > 948 && click_xy[0] < 1426 && click_xy[1] > 317 && click_xy[1] < 515) {
+			current_window = "rules"
+			draw()
+		}
+		return
+	}
+
+	click_key = click_key_with_event(click_xy[0], click_xy[1])
 	if (has_won) {
 		setPieces()
 		drawBoard()
 		return
 	}
-	click_key = click_key_with_event(event)
 	if (is_first_click) {
 		if (pieces[click_key] == null) {
 			return
@@ -95,8 +110,6 @@ function canvasClick(event) {
 		is_first_click = true
 		moving_piece = null
 		drawBoard()
-		console.log("Nulled")
-		
 	}
 	if (first_click_key == null) {
 		return
@@ -245,8 +258,18 @@ function movePiece() {
 	drawBoard()
 }
 
+function draw() {
+	if (current_window == 'home') {
+		context.drawImage(home_menu, 0, 0, 1500, 900);
+	} else if (current_window == 'rules') {
+		context.drawImage(rule_menu, 0, 0, 1500, 900);
+	} else {
+		drawBoard()
+	}
+}
+
 function drawBoard() {
-	context.clearRect(0, 0, 700, 900)
+	context.clearRect(0, 0, 1700, 900)
 	for (w_i = 0; w_i < water.length; w_i++) {
 		context.fillStyle = "blue";
 		context.fillRect(water[w_i][1] * 100, water[w_i][0] * 100, 100, 100);
@@ -294,5 +317,4 @@ function drawBoard() {
 		context.fillStyle = "green"
 		context.fillRect(moving_pieces[p_i][2] * 100, moving_pieces[p_i][0] * 100, 20, 20)
 	}
-	context.drawImage(home_menu, 100, 0, 1500, 900);
 }
