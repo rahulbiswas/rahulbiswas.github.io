@@ -83,6 +83,12 @@ function canvasClick(event) {
 		}
 		return
 	}
+	if (current_window == "rules") {
+		if (click_xy[0] > 29 && click_xy[0] < 242 && click_xy[1] > 24 && click_xy[1] < 130) {
+			current_window = "home"
+			draw()
+		}
+	}
 
 	click_key = click_key_with_event(click_xy[0], click_xy[1])
 	if (has_won) {
