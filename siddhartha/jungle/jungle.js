@@ -2,6 +2,29 @@ loadPNGs()
 
 current_window = 'home'
 
+const BOARD_UPPER_LEFT_X = 242
+const BOARD_UPPER_LEFT_Y = 42
+const BOARD_SQUARE_WIDTH = 100
+const POTENTIAL_MOVE_LENGTH = 20
+const HOME_LOCAL_X_START = 69
+const HOME_LOCAL_X_END = 559
+const HOME_LOCAL_Y_START = 187
+const HOME_LOCAL_Y_END = 396
+const HOME_RULES_X_START = 948
+const HOME_RULES_X_END = 1426
+const HOME_RULES_Y_START = 317
+const HOME_RULES_Y_END = 515
+const HOME_ABOUT_Y_START = 545
+const HOME_ABOUT_Y_END = 751
+const BACK_X_START = 29
+const BACK_Y_START = 24
+const BACK_Y_END = 130
+const DRAWING_WIDTH = 1500
+const DRAWING_HEIGHT = 1000
+const PIECE_LENGTH = 96
+const GAME_WIDTH = 1180
+const GAME_HEIGHT = 980
+
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas")
 	context = canvas.getContext("2d")
@@ -27,6 +50,10 @@ function loadPNGs() {
 	home_menu.src = "png/menus_home.png"
 	rule_menu = new Image()
 	rule_menu.src = "png/menus_rules.png"
+	game_menu = new Image()
+	game_menu.src = "png/menus_game.png"
+	about_menu = new Image()
+	about_menu.src = "png/menus_info.png"
 }
 
 function setPieces() {
@@ -43,8 +70,10 @@ function clickXY(event) {
 }
 
 function click_key_with_event(clickX, clickY) {
-	row = Math.floor(clickX / 100)
-	column = Math.floor(clickY / 100)
+	row = Math.floor((clickX-BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
+	column = Math.floor((clickY-BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
+	console.log(row, column)
+	console.log(clickX, clickY)
 	click_key = column + "_" + row
 	return click_key
 }
@@ -56,7 +85,7 @@ function possible_moves_mapping() {
 		move = move.split("_")
 		move = move.map((i) => Number(i));
 		context.fillStyle = "chocolate"
-		context.fillRect(move[1] * 100, move[0] * 100, 20, 20)
+		context.fillRect(move[1] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
 	}
 }
 
@@ -73,30 +102,47 @@ function canvasClick(event) {
 	click_xy = clickXY(event)
 
 	if (current_window == "home") {
-		if (click_xy[0] > 69 && click_xy[0] < 559 && click_xy[1] > 187 && click_xy[1] < 396) {
+		if (click_xy[0] > HOME_LOCAL_X_START && click_xy[0] < HOME_LOCAL_X_END && click_xy[1] > HOME_LOCAL_Y_START && click_xy[1] < HOME_LOCAL_Y_END) {
 			current_window = "game"
 			draw()
 		}
-		if (click_xy[0] > 948 && click_xy[0] < 1426 && click_xy[1] > 317 && click_xy[1] < 515) {
+		if (click_xy[0] > HOME_RULES_X_START && click_xy[0] < HOME_RULES_X_END && click_xy[1] > HOME_RULES_Y_START && click_xy[1] < HOME_RULES_Y_END) {
 			current_window = "rules"
+			draw()
+		}
+		if (click_xy[0] > HOME_RULES_X_START && click_xy[0] < HOME_RULES_X_END && click_xy[1] > HOME_ABOUT_Y_START && click_xy[1] < HOME_ABOUT_Y_END) {
+			current_window = "about"
 			draw()
 		}
 		return
 	}
 	if (current_window == "rules") {
-		if (click_xy[0] > 29 && click_xy[0] < 242 && click_xy[1] > 24 && click_xy[1] < 130) {
+		if (click_xy[0] > BACK_X_START && click_xy[0] < BOARD_UPPER_LEFT_X && click_xy[1] > BACK_Y_START && click_xy[1] < BACK_Y_END) {
+			current_window = "home"
+			draw()
+		}
+	}
+	if (current_window == "game") {
+		if (click_xy[0] > BACK_X_START && click_xy[0] < BOARD_UPPER_LEFT_X && click_xy[1] > BACK_Y_START && click_xy[1] < BACK_Y_END) {
+			current_window = "home"
+			draw()
+		}
+	}
+	if (current_window == "about") {
+		if (click_xy[0] > BACK_X_START && click_xy[0] < BOARD_UPPER_LEFT_X && click_xy[1] > BACK_Y_START && click_xy[1] < BACK_Y_END) {
 			current_window = "home"
 			draw()
 		}
 	}
 
-	click_key = click_key_with_event(click_xy[0], click_xy[1])
 	if (has_won) {
 		setPieces()
 		drawBoard()
 		return
 	}
-	if (is_first_click) {
+
+	click_key = click_key_with_event(click_xy[0], click_xy[1])
+	if (is_first_click && current_window == "game") {
 		if (pieces[click_key] == null) {
 			return
 		}
@@ -125,8 +171,7 @@ function canvasClick(event) {
 	}
 	movePiece()
 	if (pieces["8_3"] != null || pieces["0_3"] != null) {
-		context.font = "20px Georgia";
-		context.fillText("Dude, you so smart, you just won!!!", 10, 50);
+		"Next milestone here"
 		has_won = true
 	}
 };
@@ -265,62 +310,39 @@ function movePiece() {
 }
 
 function draw() {
+	context.clearRect(0,0,DRAWING_WIDTH,DRAWING_HEIGHT)
 	if (current_window == 'home') {
-		context.drawImage(home_menu, 0, 0, 1500, 900);
+		context.drawImage(home_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'rules') {
-		context.drawImage(rule_menu, 0, 0, 1500, 900);
+		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+	} else if (current_window == 'about') {
+		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else {
 		drawBoard()
 	}
 }
 
 function drawBoard() {
-	context.clearRect(0, 0, 1700, 900)
-	for (w_i = 0; w_i < water.length; w_i++) {
-		context.fillStyle = "blue";
-		context.fillRect(water[w_i][1] * 100, water[w_i][0] * 100, 100, 100);
-	}
-	for (t_i = 0; t_i < traps.length; t_i++) {
-		context.fillStyle = "yellow";
-		context.fillRect(traps[t_i][1] * 100, traps[t_i][0] * 100, 100, 100);
-	}
-	for (d_i = 0; d_i < den.length; d_i++) {
-		context.fillStyle = "gray";
-		context.fillRect(den[d_i][1] * 100, den[d_i][0] * 100, 100, 100)
-	}
+	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
+	context.drawImage(game_menu, 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	pieces_position_list = Object.keys(pieces)
 	for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
 		piece_position = pieces_position_list[p_i]
 		player = pieces[piece_position]["player"]
 		animal = pieces[piece_position]["animal"]
 		piece_components = piece_position.split("_")
-		x = piece_components[1] * 100
-		y = piece_components[0] * 100
+		x = piece_components[1] * BOARD_SQUARE_WIDTH
+		y = piece_components[0] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
-			context.drawImage(animals_0[animal], x, y, 100, 100);
+			context.drawImage(animals_0[animal], x+BOARD_UPPER_LEFT_X, y+BOARD_UPPER_LEFT_Y, PIECE_LENGTH, PIECE_LENGTH);
 		}
 		if (player == 1) {
-			context.drawImage(animals_1[animal], x, y, 100, 100);
+			context.drawImage(animals_1[animal], x+BOARD_UPPER_LEFT_X, y+BOARD_UPPER_LEFT_Y, PIECE_LENGTH, PIECE_LENGTH);
 		}
-	}
-	context.beginPath()
-	context.lineWidth = 4;
-	context.strokeStyle = "rgb(60,60,60)";
-	for (col = 0; col < 7; col++) {
-		for (row = 0; row < 10; row++) {
-			x = col * 100
-			y = row * 100
-			context.moveTo(x, y)
-			context.lineTo(x + 100, y)
-			context.lineTo(x + 100, y + 100)
-			context.lineTo(x, y + 100)
-			context.lineTo(x, y)
-			context.stroke();
-		}
-	}
+	}	
 	moving_pieces = playerTurn()
 	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
 		context.fillStyle = "green"
-		context.fillRect(moving_pieces[p_i][2] * 100, moving_pieces[p_i][0] * 100, 20, 20)
+		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_X, moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
 	}
 }
