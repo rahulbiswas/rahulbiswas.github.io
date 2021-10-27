@@ -66,12 +66,12 @@ function setPieces() {
 function clickXY(event) {
 	clickX = event.pageX - canvas.offsetLeft;
 	clickY = event.pageY - canvas.offsetTop;
-	return [clickX,clickY]
+	return [clickX, clickY]
 }
 
 function click_key_with_event(clickX, clickY) {
-	row = Math.floor((clickX-BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
-	column = Math.floor((clickY-BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
+	row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
+	column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
 	console.log(row, column)
 	console.log(clickX, clickY)
 	click_key = column + "_" + row
@@ -85,7 +85,7 @@ function possible_moves_mapping() {
 		move = move.split("_")
 		move = move.map((i) => Number(i));
 		context.fillStyle = "chocolate"
-		context.fillRect(move[1] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
+		context.fillRect(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
 	}
 }
 
@@ -102,34 +102,52 @@ function canvasClick(event) {
 	click_xy = clickXY(event)
 
 	if (current_window == "home") {
-		if (click_xy[0] > HOME_LOCAL_X_START && click_xy[0] < HOME_LOCAL_X_END && click_xy[1] > HOME_LOCAL_Y_START && click_xy[1] < HOME_LOCAL_Y_END) {
+		if (click_xy[0] > HOME_LOCAL_X_START &&
+			click_xy[0] < HOME_LOCAL_X_END &&
+			click_xy[1] > HOME_LOCAL_Y_START &&
+			click_xy[1] < HOME_LOCAL_Y_END) {
 			current_window = "game"
 			draw()
 		}
-		if (click_xy[0] > HOME_RULES_X_START && click_xy[0] < HOME_RULES_X_END && click_xy[1] > HOME_RULES_Y_START && click_xy[1] < HOME_RULES_Y_END) {
+		if (click_xy[0] > HOME_RULES_X_START &&
+			click_xy[0] < HOME_RULES_X_END &&
+			click_xy[1] > HOME_RULES_Y_START &&
+			click_xy[1] < HOME_RULES_Y_END) {
 			current_window = "rules"
 			draw()
 		}
-		if (click_xy[0] > HOME_RULES_X_START && click_xy[0] < HOME_RULES_X_END && click_xy[1] > HOME_ABOUT_Y_START && click_xy[1] < HOME_ABOUT_Y_END) {
+		if (click_xy[0] > HOME_RULES_X_START &&
+			click_xy[0] < HOME_RULES_X_END &&
+			click_xy[1] > HOME_ABOUT_Y_START &&
+			click_xy[1] < HOME_ABOUT_Y_END) {
 			current_window = "about"
 			draw()
 		}
 		return
 	}
 	if (current_window == "rules") {
-		if (click_xy[0] > BACK_X_START && click_xy[0] < BOARD_UPPER_LEFT_X && click_xy[1] > BACK_Y_START && click_xy[1] < BACK_Y_END) {
+		if (click_xy[0] > BACK_X_START &&
+			click_xy[0] < BOARD_UPPER_LEFT_X &&
+			click_xy[1] > BACK_Y_START &&
+			click_xy[1] < BACK_Y_END) {
 			current_window = "home"
 			draw()
 		}
 	}
 	if (current_window == "game") {
-		if (click_xy[0] > BACK_X_START && click_xy[0] < BOARD_UPPER_LEFT_X && click_xy[1] > BACK_Y_START && click_xy[1] < BACK_Y_END) {
+		if (click_xy[0] > BACK_X_START &&
+			click_xy[0] < BOARD_UPPER_LEFT_X &&
+			click_xy[1] > BACK_Y_START &&
+			click_xy[1] < BACK_Y_END) {
 			current_window = "home"
 			draw()
 		}
 	}
 	if (current_window == "about") {
-		if (click_xy[0] > BACK_X_START && click_xy[0] < BOARD_UPPER_LEFT_X && click_xy[1] > BACK_Y_START && click_xy[1] < BACK_Y_END) {
+		if (click_xy[0] > BACK_X_START &&
+			click_xy[0] < BOARD_UPPER_LEFT_X &&
+			click_xy[1] > BACK_Y_START &&
+			click_xy[1] < BACK_Y_END) {
 			current_window = "home"
 			draw()
 		}
@@ -214,7 +232,7 @@ function validMove() {
 	second_coords = second_coords.map((i) => Number(i));
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
-	// Allow tigers and lions to jump over water.
+		// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
 		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
@@ -310,7 +328,7 @@ function movePiece() {
 }
 
 function draw() {
-	context.clearRect(0,0,DRAWING_WIDTH,DRAWING_HEIGHT)
+	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
 		context.drawImage(home_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'rules') {
@@ -334,15 +352,26 @@ function drawBoard() {
 		x = piece_components[1] * BOARD_SQUARE_WIDTH
 		y = piece_components[0] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
-			context.drawImage(animals_0[animal], x+BOARD_UPPER_LEFT_X, y+BOARD_UPPER_LEFT_Y, PIECE_LENGTH, PIECE_LENGTH);
+			context.drawImage(animals_0[animal],
+				x + BOARD_UPPER_LEFT_X,
+				y + BOARD_UPPER_LEFT_Y,
+				PIECE_LENGTH,
+				PIECE_LENGTH);
 		}
 		if (player == 1) {
-			context.drawImage(animals_1[animal], x+BOARD_UPPER_LEFT_X, y+BOARD_UPPER_LEFT_Y, PIECE_LENGTH, PIECE_LENGTH);
+			context.drawImage(animals_1[animal],
+				x + BOARD_UPPER_LEFT_X,
+				y + BOARD_UPPER_LEFT_Y,
+				PIECE_LENGTH,
+				PIECE_LENGTH);
 		}
-	}	
+	}
 	moving_pieces = playerTurn()
 	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
 		context.fillStyle = "green"
-		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_X, moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH+BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
+		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			POTENTIAL_MOVE_LENGTH,
+			POTENTIAL_MOVE_LENGTH)
 	}
 }
