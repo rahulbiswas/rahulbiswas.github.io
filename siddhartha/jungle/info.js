@@ -2,7 +2,7 @@
 // Dictionary entries are of the form:
 // position : { "player" : which_player, "animal": animal_number }
 piece_setup = {
-	"0_0": {
+	"8_4": {
 		"player": 0,
 		"animal": 7
 	},
@@ -34,7 +34,7 @@ piece_setup = {
 		"player": 0,
 		"animal": 8
 	},
-	"8_6": {
+	"0_4": {
 		"player": 1,
 		"animal": 7
 	},

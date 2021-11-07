@@ -24,6 +24,10 @@ const DRAWING_HEIGHT = 1000
 const PIECE_LENGTH = 96
 const GAME_WIDTH = 1180
 const GAME_HEIGHT = 980
+const HOME_X_LEFT = 515
+const HOME_Y_LEFT = 446
+const HOME_X_RIGHT = 662
+const HOME_Y_RIGHT = 664
 
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas")
@@ -54,6 +58,10 @@ function loadPNGs() {
 	game_menu.src = "png/menus_game.png"
 	about_menu = new Image()
 	about_menu.src = "png/menus_info.png"
+	win_red_menu = new Image()
+	win_red_menu.src = "png/menus_WinRed.png"
+	win_blue_menu = new Image()
+	win_blue_menu.src = "png/menus_WinBlue.png"
 }
 
 function setPieces() {
@@ -156,6 +164,10 @@ function canvasClick(event) {
 	if (has_won) {
 		setPieces()
 		drawBoard()
+		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+			current_window = "home"
+			draw()
+		}
 		return
 	}
 
@@ -188,9 +200,13 @@ function canvasClick(event) {
 		return
 	}
 	movePiece()
-	if (pieces["8_3"] != null || pieces["0_3"] != null) {
-		"Next milestone here"
+	if (pieces["0_3"] != null) {
 		has_won = true
+		context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+	}
+	if (pieces["8_3"] != null) {
+		has_won = true
+		context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
 	}
 };
 
