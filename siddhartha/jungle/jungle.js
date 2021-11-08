@@ -28,6 +28,10 @@ const HOME_X_LEFT = 515
 const HOME_Y_LEFT = 446
 const HOME_X_RIGHT = 662
 const HOME_Y_RIGHT = 664
+const CLOUD_X_START = 69
+const CLOUD_Y_START = 718
+const CLOUD_X_END = 559
+const CLOUD_Y_END = 950
 
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas")
@@ -62,6 +66,8 @@ function loadPNGs() {
 	win_red_menu.src = "png/menus_WinRed.png"
 	win_blue_menu = new Image()
 	win_blue_menu.src = "png/menus_WinBlue.png"
+	cloud_menu = new Image()
+	cloud_menu.src = "png/menus_multiplayer.png"
 }
 
 function setPieces() {
@@ -74,6 +80,8 @@ function setPieces() {
 function clickXY(event) {
 	clickX = event.pageX - canvas.offsetLeft;
 	clickY = event.pageY - canvas.offsetTop;
+	console.log(clickX)
+	console.log(clickY)
 	return [clickX, clickY]
 }
 
@@ -131,7 +139,13 @@ function canvasClick(event) {
 			current_window = "about"
 			draw()
 		}
-		return
+		if (click_xy[0] > CLOUD_X_START &&
+			click_xy[0] < CLOUD_X_END &&
+			click_xy[1] > CLOUD_Y_START &&
+			click_xy[1] < CLOUD_Y_END) {
+			current_window = "cloud"
+			draw()
+		}
 	}
 	if (current_window == "rules") {
 		if (click_xy[0] > BACK_X_START &&
@@ -351,6 +365,8 @@ function draw() {
 		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
 		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+	} else if (current_window == 'cloud') {
+		context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else {
 		drawBoard()
 	}
