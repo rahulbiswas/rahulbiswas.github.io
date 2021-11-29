@@ -369,7 +369,10 @@ function draw() {
 		canvas.hidden = true
 		function reqListener() {
 			game_code = this.responseText
-			document.write("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html/?code=" + game_code)
+			var setup = {piece_info : pieces, turn_info : turn}
+			setup = JSON.stringify(setup)
+			var url = 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html/' + encodeURIComponent(setup);
+			document.write("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html/?code=" + game_code + url)
 		}
 		var awsRequest = new XMLHttpRequest();
 		awsRequest.addEventListener("load", reqListener);
