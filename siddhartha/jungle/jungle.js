@@ -144,7 +144,8 @@ function canvasClick(event) {
 			click_xy[1] > CLOUD_Y_START &&
 			click_xy[1] < CLOUD_Y_END) {
 			current_window = "cloud"
-			cloud_player = 0
+			// cloud_player 1 means red
+			cloud_player = 1
 			draw()
 		}
 	}
@@ -262,6 +263,9 @@ function validMove() {
 	second_coords = second_coords.map((i) => Number(i));
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
+	if (current_window == cloud && cloud_player != turn) {
+		return false
+	}
 		// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
@@ -354,6 +358,7 @@ function movePiece() {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
+	setBoard()
 	drawBoard()
 }
 
@@ -366,24 +371,62 @@ function draw() {
 	} else if (current_window == 'about') {
 		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'cloud') {
-		function reqListener() {
-			game_code = this.responseText
-			var setup = {piece_info : pieces, turn_info : turn}
-			setup = JSON.stringify(setup)
-			var url = encodeURIComponent(setup);
-			context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-			document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html/?="+game_code;
-			console.log("https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url)
-			awsRequest.open("SET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url);
-		}
-		var awsRequest = new XMLHttpRequest();
-		awsRequest.addEventListener("load", reqListener);
-		awsRequest.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&create_game=1");
-		awsRequest.send();
+		context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		aws()
 	} else {
 		drawBoard()
 	}
 }
+
+function aws() {
+	function createGameListener() {
+		turn = 0
+		game_code = this.responseText
+		setBoard()
+	}
+	var createGameReq = new XMLHttpRequest();
+	createGameReq.addEventListener("load", createGameListener);
+	createGameReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&create_game=1");
+	createGameReq.send();
+}
+
+function setBoard() {
+	var setup = {piece_info : pieces, turn_info : turn}
+	setup = JSON.stringify(setup)
+	var url = encodeURIComponent(setup);
+	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html/?game_code="+game_code;
+	console.log("https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url)
+	function setGameListener() {
+		checkPeriodically()
+	}
+	setGameReq = new XMLHttpRequest();
+	setGameReq.addEventListener("load", setGameListener)
+	setGameReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url);
+	setGameReq.send();
+}
+
+function checkPeriodically() {
+	function getGameListener() {
+		console.log(this.responseText)
+		return_info = JSON.parse(this.responseText)
+		turn = return_info["turn_info"]
+		pieces = return_info["piece_info"]
+		console.log(pieces)
+		console.log(turn)
+		if (turn != cloud_player) {
+			setTimeout(checkPeriodically, 5000)
+		} else {
+			current_window = "game"
+			draw()
+		}
+	}
+	var getReq = new XMLHttpRequest();
+	getReq.addEventListener("load", getGameListener)
+	getReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code="+ game_code);
+	console.log("Time")
+	getReq.send();
+}
+
 
 function drawBoard() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
