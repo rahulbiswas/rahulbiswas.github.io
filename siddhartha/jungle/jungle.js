@@ -390,6 +390,7 @@ function aws() {
 			game_code = joining_code
 			cloud_player = 0
 			current_window = "cloud"
+			console.log(current_window)
 			draw()
 		}
 		console.log(turn)
