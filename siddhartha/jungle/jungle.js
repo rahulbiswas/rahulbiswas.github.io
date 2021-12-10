@@ -389,6 +389,8 @@ function aws() {
 			turn = 1
 			game_code = joining_code
 			cloud_player = 0
+			current_window = "cloud"
+			draw()
 		}
 		console.log(turn)
 		setBoard()
