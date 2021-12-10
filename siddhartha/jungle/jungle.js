@@ -397,20 +397,6 @@ function aws() {
 	function createGameListener() {
 		turn = 0
 		game_code = this.responseText
-<<<<<<< HEAD
-=======
-		joining_code = window.location.search
-		joining_code = joining_code.replace("?game_code=", "")
-		console.log('joining_code [' + joining_code + ']')
-		if (joining_code != "") {
-			turn = 1
-			game_code = joining_code
-			cloud_player = 0
-			current_window = "cloud"
-			console.log(current_window)
-			draw()
-		}
->>>>>>> 370c812408a8dd7535b3df7bcf91667708e3af1e
 		console.log(turn)
 		setBoard()
 	}
