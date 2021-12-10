@@ -263,7 +263,7 @@ function validMove() {
 	second_coords = second_coords.map((i) => Number(i));
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
-	if (current_window == cloud && cloud_player != turn) {
+	if (current_window == "cloud" && cloud_player != turn) {
 		return false
 	}
 		// Allow tigers and lions to jump over water.
@@ -382,6 +382,15 @@ function aws() {
 	function createGameListener() {
 		turn = 0
 		game_code = this.responseText
+		joining_code = window.location.search
+		joining_code = joining_code.replace("?game_code=", "")
+		console.log('joining_code [' + joining_code + ']')
+		if (joining_code != "") {
+			turn = 1
+			game_code = joining_code
+			cloud_player = 0
+		}
+		console.log(turn)
 		setBoard()
 	}
 	var createGameReq = new XMLHttpRequest();
@@ -417,7 +426,7 @@ function checkPeriodically() {
 			setTimeout(checkPeriodically, 5000)
 		} else {
 			current_window = "game"
-			draw()
+			drawBoard()
 		}
 	}
 	var getReq = new XMLHttpRequest();
