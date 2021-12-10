@@ -366,6 +366,7 @@ function draw() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
 		context.drawImage(home_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		join_multiplayer()
 	} else if (current_window == 'rules') {
 		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
@@ -378,18 +379,24 @@ function draw() {
 	}
 }
 
+function join_multiplayer() {
+	joining_code = window.location.search
+	joining_code = joining_code.replace("?game_code=", "")
+	console.log('joining_code [' + joining_code + ']')
+	if (joining_code != "") {
+		turn = 1
+		game_code = joining_code
+		cloud_player = 0
+		console.log("Entered 392")
+		drawBoard()
+		setBoard()
+	}
+}
+
 function aws() {
 	function createGameListener() {
 		turn = 0
 		game_code = this.responseText
-		joining_code = window.location.search
-		joining_code = joining_code.replace("?game_code=", "")
-		console.log('joining_code [' + joining_code + ']')
-		if (joining_code != "") {
-			turn = 1
-			game_code = joining_code
-			cloud_player = 0
-		}
 		console.log(turn)
 		setBoard()
 	}
@@ -403,7 +410,7 @@ function setBoard() {
 	var setup = {piece_info : pieces, turn_info : turn}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
-	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html/?game_code="+game_code;
+	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html?game_code="+game_code;
 	console.log("https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url)
 	function setGameListener() {
 		checkPeriodically()
