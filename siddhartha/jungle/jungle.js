@@ -403,7 +403,7 @@ function setBoard() {
 	var setup = {piece_info : pieces, turn_info : turn}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
-	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html/?game_code="+game_code;
+	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html?game_code="+game_code;
 	console.log("https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url)
 	function setGameListener() {
 		checkPeriodically()
