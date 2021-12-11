@@ -263,10 +263,11 @@ function validMove() {
 	second_coords = second_coords.map((i) => Number(i));
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
-	if (current_window == "cloud" && cloud_player != turn) {
+		// Allow tigers and lions to jump over water.
+	if (current_window == "game" && cloud_player != turn) {
+		drawBoard()
 		return false
 	}
-		// Allow tigers and lions to jump over water.
 	valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
 		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
@@ -387,7 +388,8 @@ function join_multiplayer() {
 		turn = 1
 		game_code = joining_code
 		cloud_player = 0
-		console.log("Entered 392")
+		console.log("turn ="+turn)
+		console.log("cloud_player ="+cloud_player)
 		drawBoard()
 		setBoard()
 	}
@@ -430,7 +432,7 @@ function checkPeriodically() {
 		console.log(pieces)
 		console.log(turn)
 		if (turn != cloud_player) {
-			setTimeout(checkPeriodically, 5000)
+			setTimeout(checkPeriodically, s000)
 		} else {
 			current_window = "game"
 			drawBoard()
