@@ -265,7 +265,6 @@ function validMove() {
 	attacking_animal_player = pieces[first_click_key]["player"]
 		// Allow tigers and lions to jump over water.
 	if (current_window == "game" && cloud_player != turn) {
-		drawBoard()
 		return false
 	}
 	valid_moves = validMoveWater[first_click_key]
@@ -432,7 +431,7 @@ function checkPeriodically() {
 		console.log(pieces)
 		console.log(turn)
 		if (turn != cloud_player) {
-			setTimeout(checkPeriodically, s000)
+			setTimeout(checkPeriodically, 2000)
 		} else {
 			current_window = "game"
 			drawBoard()
