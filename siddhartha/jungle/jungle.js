@@ -58,8 +58,12 @@ function loadPNGs() {
 	home_menu.src = "png/menus_home.png"
 	rule_menu = new Image()
 	rule_menu.src = "png/menus_rules.png"
-	game_menu = new Image()
-	game_menu.src = "png/menus_game.png"
+	game_menu_blank = new Image()
+	game_menu_blank.src = "png/menus_game.png"
+	game_menu_blue = new Image()
+	game_menu_blue.src = "png/menus_blue.png"
+	game_menu_red = new Image()
+	game_menu_red.src = "png/menus_red.png"
 	about_menu = new Image()
 	about_menu.src = "png/menus_info.png"
 	win_red_menu = new Image()
@@ -143,7 +147,7 @@ function canvasClick(event) {
 			click_xy[0] < CLOUD_X_END &&
 			click_xy[1] > CLOUD_Y_START &&
 			click_xy[1] < CLOUD_Y_END) {
-			current_window = "cloud"
+			current_window = "cloud_game"
 			// cloud_player 1 means red
 			cloud_player = 1
 			draw()
@@ -188,7 +192,7 @@ function canvasClick(event) {
 	}
 
 	click_key = click_key_with_event(click_xy[0], click_xy[1])
-	if (is_first_click && current_window == "game") {
+	if (is_first_click && (current_window == "game" || current_window == "cloud_game")) {
 		if (pieces[click_key] == null) {
 			return
 		}
@@ -202,7 +206,7 @@ function canvasClick(event) {
 		return
 	}
 	second_click_key = click_key
-	if (current_window == "game") {
+	if (current_window == "game" || current_window == "cloud_game") {
 		if (first_click_key == second_click_key) {
 			first_click_key = null
 			second_click_key = null
@@ -264,7 +268,7 @@ function validMove() {
 	attacking_animal_num = pieces[first_click_key]["animal"]
 	attacking_animal_player = pieces[first_click_key]["player"]
 		// Allow tigers and lions to jump over water.
-	if (current_window == "game" && cloud_player != turn) {
+	if (current_window == "cloud_game" && typeof cloud_player != 'undefined' && cloud_player != turn) {
 		return false
 	}
 	valid_moves = validMoveWater[first_click_key]
@@ -358,7 +362,9 @@ function movePiece() {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	setBoard()
+	if (current_window == "cloud_game") {
+		setBoard()
+	}
 	drawBoard()
 }
 
@@ -371,7 +377,7 @@ function draw() {
 		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
 		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-	} else if (current_window == 'cloud') {
+	} else if (current_window == 'cloud_game') {
 		context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 		aws()
 	} else {
@@ -433,7 +439,7 @@ function checkPeriodically() {
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
 		} else {
-			current_window = "game"
+			current_window = "cloud_game"
 			drawBoard()
 		}
 	}
@@ -447,7 +453,16 @@ function checkPeriodically() {
 
 function drawBoard() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
-	context.drawImage(game_menu, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	if (typeof cloud_player == 1) {
+		context.drawImage(game_menu_red, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	} else if (typeof cloud_player == 0) {
+		context.drawImage(game_menu_blue, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	} else if (turn == 1) {
+		context.drawImage(game_menu_red, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	} else if (turn == 0) {
+		context.drawImage(game_menu_blue, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	}
+	context.drawImage(game_menu_blank, 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	pieces_position_list = Object.keys(pieces)
 	for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
 		piece_position = pieces_position_list[p_i]
