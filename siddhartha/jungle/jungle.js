@@ -120,7 +120,6 @@ function canvasClick(event) {
 	canvas = document.getElementById("drawingCanvas");
 	context = canvas.getContext("2d");
 	click_xy = clickXY(event)
-
 	if (current_window == "home") {
 		if (click_xy[0] > HOME_LOCAL_X_START &&
 			click_xy[0] < HOME_LOCAL_X_END &&
@@ -162,7 +161,7 @@ function canvasClick(event) {
 			draw()
 		}
 	}
-	if (current_window == "game") {
+	if (current_window == "game" || current_window == "cloud_game") {
 		if (click_xy[0] > BACK_X_START &&
 			click_xy[0] < BOARD_UPPER_LEFT_X &&
 			click_xy[1] > BACK_Y_START &&
@@ -180,11 +179,13 @@ function canvasClick(event) {
 			draw()
 		}
 	}
-
+	console.log("Before function")
 	if (has_won) {
 		setPieces()
 		drawBoard()
+		console.log("In function has_won")
 		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+			console.log("In if function")
 			current_window = "home"
 			draw()
 		}
@@ -436,6 +437,18 @@ function checkPeriodically() {
 		pieces = return_info["piece_info"]
 		console.log(pieces)
 		console.log(turn)
+		if (pieces["0_3"] != null) {
+			has_won = true
+			context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+			setTimeout(checkPeriodically, 2000)
+			window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html");
+		}
+		if (pieces["8_3"] != null) {
+			has_won = true
+			context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+			setTimeout(checkPeriodically, 2000)
+			window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html");
+		}
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
 		} else {
