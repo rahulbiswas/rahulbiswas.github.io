@@ -33,7 +33,7 @@ const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
 
-const TEST_MODE = 0
+const TEST_MODE = 1
 
 function gameURL() {
 	if (TEST_MODE == 1) {
@@ -49,6 +49,7 @@ window.onload = function() {
 	canvas.onmouseup = canvasClick
 	setPieces()
 	draw()
+	join_multiplayer()
 }
 
 function loadPNGs() {
@@ -94,16 +95,16 @@ function setPieces() {
 function clickXY(event) {
 	clickX = event.pageX - canvas.offsetLeft;
 	clickY = event.pageY - canvas.offsetTop;
-	console.log(clickX)
-	console.log(clickY)
+	// console.log(clickX)
+	// console.log(clickY)
 	return [clickX, clickY]
 }
 
 function click_key_with_event(clickX, clickY) {
 	row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
 	column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
-	console.log(row, column)
-	console.log(clickX, clickY)
+	// console.log(row, column)
+	// console.log(clickX, clickY)
 	click_key = column + "_" + row
 	return click_key
 }
@@ -131,86 +132,85 @@ function canvasClick(event) {
 	context = canvas.getContext("2d");
 	click_xy = clickXY(event)
 	if (current_window == "home") {
-		if (click_xy[0] > HOME_LOCAL_X_START &&
-			click_xy[0] < HOME_LOCAL_X_END &&
-			click_xy[1] > HOME_LOCAL_Y_START &&
-			click_xy[1] < HOME_LOCAL_Y_END) {
-			current_window = "game"
-			draw()
-		}
-		if (click_xy[0] > HOME_RULES_X_START &&
-			click_xy[0] < HOME_RULES_X_END &&
-			click_xy[1] > HOME_RULES_Y_START &&
-			click_xy[1] < HOME_RULES_Y_END) {
-			current_window = "rules"
-			draw()
-		}
-		if (click_xy[0] > HOME_RULES_X_START &&
-			click_xy[0] < HOME_RULES_X_END &&
-			click_xy[1] > HOME_ABOUT_Y_START &&
-			click_xy[1] < HOME_ABOUT_Y_END) {
-			current_window = "about"
-			draw()
-		}
-		if (click_xy[0] > CLOUD_X_START &&
-			click_xy[0] < CLOUD_X_END &&
-			click_xy[1] > CLOUD_Y_START &&
-			click_xy[1] < CLOUD_Y_END) {
-			current_window = "cloud_game"
-			// cloud_player 1 means red
-			cloud_player = 1
-			draw()
-		}
-		click_xy[0]=-1
-		click_xy[1]=-1
+		homeScreen()
 	}
 	if (current_window == "rules") {
-		if (click_xy[0] > BACK_X_START &&
-			click_xy[0] < BOARD_UPPER_LEFT_X &&
-			click_xy[1] > BACK_Y_START &&
-			click_xy[1] < BACK_Y_END) {
-			current_window = "home"
-			draw()
-		}
-	}
-	if (current_window == "game" || current_window == "cloud_game") {
-		if (click_xy[0] > BACK_X_START &&
-			click_xy[0] < BOARD_UPPER_LEFT_X &&
-			click_xy[1] > BACK_Y_START &&
-			click_xy[1] < BACK_Y_END) {
-			current_window = "home"
-			draw()
-		}
+		rulesScreen()
 	}
 	if (current_window == "about") {
-		if (click_xy[0] > BACK_X_START &&
-			click_xy[0] < BOARD_UPPER_LEFT_X &&
-			click_xy[1] > BACK_Y_START &&
-			click_xy[1] < BACK_Y_END) {
-			current_window = "home"
-			draw()
-		}
+		aboutScreen()
 	}
-	if (has_won) {
-		setPieces()
-		drawBoard()
-		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-			current_window = "home"
-			draw()
-		}
-		return
+	if (current_window == "game" || current_window == "cloud_game") {
+		gameScreen()
 	}
-	if (has_won) {
-		setPieces()
-		drawBoard()
-		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-			current_window = "home"
-			draw()
-		}
-		return
+}
+
+function homeScreen() {
+	if (click_xy[0] > HOME_LOCAL_X_START &&
+		click_xy[0] < HOME_LOCAL_X_END &&
+		click_xy[1] > HOME_LOCAL_Y_START &&
+		click_xy[1] < HOME_LOCAL_Y_END) {
+		current_window = "game"
+		draw()
+	}
+	if (click_xy[0] > HOME_RULES_X_START &&
+		click_xy[0] < HOME_RULES_X_END &&
+		click_xy[1] > HOME_RULES_Y_START &&
+		click_xy[1] < HOME_RULES_Y_END) {
+		current_window = "rules"
+		draw()
+	}
+	if (click_xy[0] > HOME_RULES_X_START &&
+		click_xy[0] < HOME_RULES_X_END &&
+		click_xy[1] > HOME_ABOUT_Y_START &&
+		click_xy[1] < HOME_ABOUT_Y_END) {
+		current_window = "about"
+		draw()
+	}
+	if (click_xy[0] > CLOUD_X_START &&
+		click_xy[0] < CLOUD_X_END &&
+		click_xy[1] > CLOUD_Y_START &&
+		click_xy[1] < CLOUD_Y_END) {
+		current_window = "cloud_game"
+		// cloud_player 1 means red
+		cloud_player = 1
+		draw()
+		aws()
+	}
+	click_xy[0]=-1
+	click_xy[1]=-1
+}
+
+function rulesScreen() {
+	if (click_xy[0] > BACK_X_START &&
+		click_xy[0] < BOARD_UPPER_LEFT_X &&
+		click_xy[1] > BACK_Y_START &&
+		click_xy[1] < BACK_Y_END) {
+		current_window = "home"
+		draw()
+	}
+}
+
+function aboutScreen() { 
+	if (click_xy[0] > BACK_X_START &&
+		click_xy[0] < BOARD_UPPER_LEFT_X &&
+		click_xy[1] > BACK_Y_START &&
+		click_xy[1] < BACK_Y_END) {
+		current_window = "home"
+		draw()
+	}
+}
+
+function gameScreen() {
+	if (click_xy[0] > BACK_X_START &&
+		click_xy[0] < BOARD_UPPER_LEFT_X &&
+		click_xy[1] > BACK_Y_START &&
+		click_xy[1] < BACK_Y_END) {
+		current_window = "home"
+		draw()
 	}
 	click_key = click_key_with_event(click_xy[0], click_xy[1])
-	if (is_first_click && (current_window == "game" || current_window == "cloud_game")) {
+	if (is_first_click) {
 		if (pieces[click_key] == null) {
 			return
 		}
@@ -221,10 +221,8 @@ function canvasClick(event) {
 		first_click_key = click_key
 		possible_moves_mapping()
 		is_first_click = false
-		return
-	}
-	second_click_key = click_key
-	if (current_window == "game" || current_window == "cloud_game") {
+	} else {
+		second_click_key = click_key
 		if (first_click_key == second_click_key) {
 			first_click_key = null
 			second_click_key = null
@@ -236,7 +234,14 @@ function canvasClick(event) {
 			return
 		}
 		movePiece()
+		if (pieces["0_3"] != null || pieces["8_3"] != null) {
+			current_window = "game_over"
+			draw()
+		}
 	}
+}
+	
+function checkDenSquares() {
 	if (pieces["0_3"] != null) {
 		has_won = true
 		context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
@@ -245,7 +250,8 @@ function canvasClick(event) {
 		has_won = true
 		context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
 	}
-};
+	console.log("has_won = "+has_won)
+}
 
 function playerTurn() {
 	possible_pieces = []
@@ -391,18 +397,33 @@ function draw() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
 		context.drawImage(home_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-		join_multiplayer()
 	} else if (current_window == 'rules') {
 		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
 		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'cloud_game') {
 		context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-		aws()
-	} else {
+	} else if (current_window == 'game') {
 		drawBoard()
 	}
 }
+
+function hasWon() {
+	if (!has_won) {
+		return
+	}
+	setPieces()
+	hasWon()
+	if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+		console.log("Home button was tapped")
+		if (typeof cloud_player != undefined) {
+			setBoard()
+		}
+		window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html")
+		location.reload()
+	}
+}
+
 
 function join_multiplayer() {
 	joining_code = window.location.search
@@ -411,8 +432,8 @@ function join_multiplayer() {
 		turn = 1
 		game_code = joining_code
 		cloud_player = 0
-		console.log("turn ="+turn)
-		console.log("cloud_player ="+cloud_player)
+		// console.log("turn ="+turn)
+		// console.log("cloud_player ="+cloud_player)
 		drawBoard()
 		setBoard()
 	}
@@ -422,7 +443,7 @@ function aws() {
 	function createGameListener() {
 		turn = 0
 		game_code = this.responseText
-		console.log(turn)
+		// console.log(turn)
 		setBoard()
 	}
 	var createGameReq = new XMLHttpRequest();
@@ -447,25 +468,16 @@ function setBoard() {
 
 function checkPeriodically() {
 	function getGameListener() {
-		console.log(this.responseText)
+		// console.log(this.responseText)
 		return_info = JSON.parse(this.responseText)
 		turn = return_info["turn_info"]
 		pieces = return_info["piece_info"]
-		console.log(pieces)
-		console.log(turn)
+		// console.log(pieces)
+		// console.log(turn)
 		if (pieces["0_3"] != null || pieces["8_3"] != null) {
-			if (pieces["8_3"] != null) {
-				context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
-			}
-			if (pieces["0_3"] != null) {
-				context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
-			}
-			console.log("LOOK HERE")
-			if (clickX>HOME_X_LEFT && clickX<HOME_X_RIGHT && clickY>HOME_Y_LEFT && clickY<HOME_Y_RIGHT) {
-				console.log("LOOK HERE NOW")
-				// window.location.replace(gameURL())
-				// location.reload()
-			}
+			console.log("After getting information, game_over function was called")
+			current_window = "game_over"
+			draw()
 		}
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
@@ -473,6 +485,7 @@ function checkPeriodically() {
 			current_window = "cloud_game"
 			drawBoard()
 		}
+		hasWon()
 	}
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener("load", getGameListener)
@@ -517,13 +530,14 @@ function drawBoard() {
 		}
 	}
 	moving_pieces = playerTurn()
-	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
-		context.fillStyle = "green"
-		if (current_window == "game" || turn == cloud_player) {
-			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
-				POTENTIAL_MOVE_LENGTH,
-				POTENTIAL_MOVE_LENGTH)
-			}
+	show_green_squares = (current_window == 'game' || turn == cloud_player)
+	if (show_green_squares) {
+		for (p_i = 0; p_i < moving_pieces.length; p_i++) {
+			context.fillStyle = "green"
+				context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+					moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+					POTENTIAL_MOVE_LENGTH,
+					POTENTIAL_MOVE_LENGTH)
+		}
 	}
 }
