@@ -33,7 +33,7 @@ const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
 
-const TEST_MODE = 1
+const TEST_MODE = 0
 
 function gameURL() {
 	if (TEST_MODE == 1) {
