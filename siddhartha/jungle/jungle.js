@@ -318,6 +318,21 @@ function validMove() {
 		return false
 	}
 	valid_moves = validMoveWater[first_click_key]
+	if (valid_moves != null) {
+		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
+			valid_move = valid_moves[valid_move_index]
+			if (valid_move.destination == second_click_key) {
+				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
+						if (pieces[valid_move.water[w_s_i]] != null) {
+							return false
+						}
+					}
+					return true
+				}
+			}
+		}
+	}
 	is_moving_to_water_square = false
 	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
@@ -357,24 +372,8 @@ function validMove() {
 	if (pieces[second_click_key] == null) {
 		return true
 	}
-
 	defending_animal_num = pieces[second_click_key]['animal']
 	defending_animal_player = pieces[second_click_key]['player']
-	if (valid_moves != null) {
-		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
-			valid_move = valid_moves[valid_move_index]
-			if (valid_move.destination == second_click_key) {
-				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
-						if (pieces[valid_move.water[w_s_i]] != null) {
-							return false
-						}
-					}
-					return true
-				}
-			}
-		}
-	}
 	if (attacking_animal_player == defending_animal_player) {
 		return false
 	}
@@ -494,7 +493,7 @@ function checkPeriodically() {
 		}
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
-		} else if (current_window != "game_over") {
+		} else if (current_window != 'game_over') {
 			current_window = 'cloud_game'
 			drawBoard()
 		}
