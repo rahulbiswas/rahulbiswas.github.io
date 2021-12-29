@@ -33,6 +33,16 @@ const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
 
+const TEST_MODE = 0
+
+function gameURL() {
+	if (TEST_MODE == 1) {
+		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+	} else {
+	  return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+	}
+}
+
 window.onload = function() {
 	canvas = document.getElementById("drawingCanvas")
 	context = canvas.getContext("2d")
@@ -190,7 +200,15 @@ function canvasClick(event) {
 		}
 		return
 	}
-
+	if (has_won) {
+		setPieces()
+		drawBoard()
+		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+			current_window = "home"
+			draw()
+		}
+		return
+	}
 	click_key = click_key_with_event(click_xy[0], click_xy[1])
 	if (is_first_click && (current_window == "game" || current_window == "cloud_game")) {
 		if (pieces[click_key] == null) {
@@ -295,7 +313,7 @@ function validMove() {
 	x_diff = Math.abs(first_coords[0] - second_coords[0])
 	y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
-		return false
+		return TEST_MODE == 1
 	}
 	first_coords[0] = parseInt(first_coords[0])
 	first_coords[1] = parseInt(first_coords[1])
@@ -417,7 +435,7 @@ function setBoard() {
 	var setup = {piece_info : pieces, turn_info : turn}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
-	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html?game_code="+game_code;
+	document.getElementById("multiplayer_join_url").innerHTML = gameURL()+"?game_code="+game_code;
 	function setGameListener() {
 		checkPeriodically()
 	}
@@ -442,11 +460,11 @@ function checkPeriodically() {
 			if (pieces["0_3"] != null) {
 				context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
 			}
-			setTimeout(checkPeriodically, 2000)
-			if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-				current_window == "home"
-				setBoard()
-				window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html")
+			console.log("LOOK HERE")
+			if (clickX>HOME_X_LEFT && clickX<HOME_X_RIGHT && clickY>HOME_Y_LEFT && clickY<HOME_Y_RIGHT) {
+				console.log("LOOK HERE NOW")
+				// window.location.replace(gameURL())
+				// location.reload()
 			}
 		}
 		if (turn != cloud_player) {
@@ -501,7 +519,7 @@ function drawBoard() {
 	moving_pieces = playerTurn()
 	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
 		context.fillStyle = "green"
-		if (turn == cloud_player) {
+		if (current_window == "game" || turn == cloud_player) {
 			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
 				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 				POTENTIAL_MOVE_LENGTH,
