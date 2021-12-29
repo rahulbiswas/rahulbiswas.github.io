@@ -151,6 +151,8 @@ function canvasClick(event) {
 			cloud_player = 1
 			draw()
 		}
+		click_xy[0]=-1
+		click_xy[1]=-1
 	}
 	if (current_window == "rules") {
 		if (click_xy[0] > BACK_X_START &&
@@ -179,13 +181,10 @@ function canvasClick(event) {
 			draw()
 		}
 	}
-	console.log("Before function")
 	if (has_won) {
 		setPieces()
 		drawBoard()
-		console.log("In function has_won")
 		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-			console.log("In if function")
 			current_window = "home"
 			draw()
 		}
@@ -273,21 +272,6 @@ function validMove() {
 		return false
 	}
 	valid_moves = validMoveWater[first_click_key]
-	if (valid_moves != null) {
-		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
-			valid_move = valid_moves[valid_move_index]
-			if (valid_move.destination == second_click_key) {
-				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
-						if (pieces[valid_move.water[w_s_i]] != null) {
-							return false
-						}
-					}
-					return true
-				}
-			}
-		}
-	}
 	is_moving_to_water_square = false
 	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
@@ -327,8 +311,24 @@ function validMove() {
 	if (pieces[second_click_key] == null) {
 		return true
 	}
+
 	defending_animal_num = pieces[second_click_key]["animal"]
 	defending_animal_player = pieces[second_click_key]["player"]
+	if (valid_moves != null) {
+		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
+			valid_move = valid_moves[valid_move_index]
+			if (valid_move.destination == second_click_key) {
+				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
+						if (pieces[valid_move.water[w_s_i]] != null) {
+							return false
+						}
+					}
+					return true
+				}
+			}
+		}
+	}
 	if (attacking_animal_player == defending_animal_player) {
 		return false
 	}
@@ -389,7 +389,6 @@ function draw() {
 function join_multiplayer() {
 	joining_code = window.location.search
 	joining_code = joining_code.replace("?game_code=", "")
-	console.log('joining_code [' + joining_code + ']')
 	if (joining_code != "") {
 		turn = 1
 		game_code = joining_code
@@ -419,7 +418,6 @@ function setBoard() {
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
 	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html?game_code="+game_code;
-	console.log("https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url)
 	function setGameListener() {
 		checkPeriodically()
 	}
@@ -437,17 +435,19 @@ function checkPeriodically() {
 		pieces = return_info["piece_info"]
 		console.log(pieces)
 		console.log(turn)
-		if (pieces["0_3"] != null) {
-			has_won = true
-			context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+		if (pieces["0_3"] != null || pieces["8_3"] != null) {
+			if (pieces["8_3"] != null) {
+				context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+			}
+			if (pieces["0_3"] != null) {
+				context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+			}
 			setTimeout(checkPeriodically, 2000)
-			window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html");
-		}
-		if (pieces["8_3"] != null) {
-			has_won = true
-			context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
-			setTimeout(checkPeriodically, 2000)
-			window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html");
+			if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+				current_window == "home"
+				setBoard()
+				window.location.replace("http://rahulbiswas.github.io/siddhartha/jungle/jungle.html")
+			}
 		}
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
@@ -459,7 +459,6 @@ function checkPeriodically() {
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener("load", getGameListener)
 	getReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code="+ game_code);
-	console.log("Time")
 	getReq.send();
 }
 
@@ -502,9 +501,11 @@ function drawBoard() {
 	moving_pieces = playerTurn()
 	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
 		context.fillStyle = "green"
-		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-			moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
-			POTENTIAL_MOVE_LENGTH,
-			POTENTIAL_MOVE_LENGTH)
+		if (turn == cloud_player) {
+			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+				POTENTIAL_MOVE_LENGTH,
+				POTENTIAL_MOVE_LENGTH)
+			}
 	}
 }
