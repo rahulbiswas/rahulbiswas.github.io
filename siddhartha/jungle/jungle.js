@@ -1,6 +1,8 @@
 loadPNGs()
 
 current_window = 'home'
+player_piece_count_red = 8
+player_piece_count_blue = 8
 
 const BOARD_UPPER_LEFT_X = 242
 const BOARD_UPPER_LEFT_Y = 42
@@ -96,16 +98,12 @@ function setPieces() {
 function clickXY(event) {
 	clickX = event.pageX - canvas.offsetLeft;
 	clickY = event.pageY - canvas.offsetTop;
-	// console.log(clickX)
-	// console.log(clickY)
 	return [clickX, clickY]
 }
 
 function click_key_with_event(clickX, clickY) {
 	row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
 	column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
-	// console.log(row, column)
-	// console.log(clickX, clickY)
 	click_key = column + '_' + row
 	return click_key
 }
@@ -214,7 +212,6 @@ function gameScreen() {
 		draw()
 	}
 	click_key = click_key_with_event(click_xy[0], click_xy[1])
-	console.log('click_key='+ click_key)
 	if (is_first_click) {
 		if (pieces[click_key] == null) {
 			return
@@ -252,7 +249,6 @@ function gameOverScreen() {
 			return
 		}
 		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-			console.log('Home button was tapped')
 			window.location.replace('http://rahulbiswas.github.io/siddhartha/jungle/jungle.html')
 			setTimeout('location.reload()', 1000)
 		}
@@ -260,19 +256,18 @@ function gameOverScreen() {
 }
 	
 function checkDenSquares() {
-	if (pieces['0_3'] != null) {
+	if (pieces['0_3'] != null || player_piece_count_blue == 0) {
 		has_won = true
 		winning_player = 'red'
 		current_window = 'game_over'
 		draw()
 	}
-	if (pieces['8_3'] != null) {
+	if (pieces['8_3'] != null || player_piece_count_red == 0) {
 		has_won = true
 		winning_player = 'blue'
 		current_window = 'game_over'
 		draw()
 	}
-	console.log('has_won = '+has_won)
 }
 
 function playerTurn() {
@@ -328,7 +323,11 @@ function validMove() {
 							return false
 						}
 					}
-					return true
+					if (pieces[second_click_key] != null && pieces[second_click_key]["player"] != pieces[first_click_key]["player"] && pieces[second_click_key]["animal"] <= pieces[first_click_key]["animal"]) {
+						return true
+					} else if (pieces[second_click_key] == null) {
+						return true
+					}
 				}
 			}
 		}
@@ -402,9 +401,21 @@ function validMove() {
 	return true
 }
 
+function checkPiecesLeft() {
+	if (pieces[second_click_key] != null) {
+		if (pieces[second_click_key]["player"] == "1") {
+			player_piece_count_red -= 1
+		}
+		if (pieces[second_click_key]["player"] == "0") {
+			player_piece_count_blue -= 1
+		}
+	}
+}
+
 function movePiece() {
 	var moving_piece = pieces[first_click_key]
 	delete pieces[first_click_key]
+	checkPiecesLeft()
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
@@ -443,8 +454,6 @@ function join_multiplayer() {
 		turn = 1
 		game_code = joining_code
 		cloud_player = 0
-		// console.log('turn ='+turn)
-		// console.log('cloud_player ='+cloud_player)
 		drawBoard()
 		setBoard()
 	}
@@ -454,7 +463,6 @@ function aws() {
 	function createGameListener() {
 		turn = 0
 		game_code = this.responseText
-		// console.log(turn)
 		setBoard()
 	}
 	var createGameReq = new XMLHttpRequest();
@@ -464,7 +472,7 @@ function aws() {
 }
 
 function setBoard() {
-	var setup = {piece_info : pieces, turn_info : turn}
+	var setup = {piece_info : pieces, turn_info : turn, player_piece_count_red_info : player_piece_count_red, player_piece_count_blue_info : player_piece_count_blue}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
 	document.getElementById('multiplayer_join_url').innerHTML = gameURL()+'?game_code='+game_code;
@@ -479,12 +487,11 @@ function setBoard() {
 
 function checkPeriodically() {
 	function getGameListener() {
-		// console.log(this.responseText)
 		return_info = JSON.parse(this.responseText)
 		turn = return_info['turn_info']
 		pieces = return_info['piece_info']
-		// console.log(pieces)
-		// console.log(turn)
+		player_piece_count_red = return_info['player_piece_count_red_info']
+		player_piece_count_blue = return_info['player_piece_count_blue_info']
 		checkDenSquares()
 		if (winning_player != '') {
 			current_window = 'game_over'
