@@ -1,8 +1,37 @@
 loadPNGs()
 
+// Global variables.
 current_window = 'home'
 player_piece_count_red = 8
 player_piece_count_blue = 8
+
+// about_menu
+// animals_0
+// animals_1
+// canvas
+// clickX
+// clickY
+// click_key
+// cloud_menu
+// context
+// current_window
+// first_click_key
+// game_code
+// game_menu_blank
+// game_menu_blue
+// game_menu_red
+// has_won
+// home_menu
+// is_first_click
+// pieces
+// player_piece_count_blue
+// player_piece_count_red
+// rule_menu
+// second_click_key
+// turn
+// win_blue_menu
+// win_red_menu
+// winning_player
 
 const BOARD_UPPER_LEFT_X = 242
 const BOARD_UPPER_LEFT_Y = 42
@@ -37,14 +66,6 @@ const CLOUD_Y_END = 950
 
 const TEST_MODE = 0
 
-function gameURL() {
-	if (TEST_MODE == 1) {
-		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
-	} else {
-	  return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
-	}
-}
-
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
 	context = canvas.getContext('2d')
@@ -53,6 +74,20 @@ window.onload = function() {
 	setPieces()
 	draw()
 	join_multiplayer()
+}
+
+function gameURL() {
+	if (TEST_MODE == 1) {
+		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+	} else {
+	  return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+	}
+}
+
+function imageWithName(src) {
+	menu = new Image()
+	menu.src = 'png/'+src+'.png'
+	return menu
 }
 
 function loadPNGs() {
@@ -68,24 +103,16 @@ function loadPNGs() {
 		img_1.src = 'png/b' + b_i + '.png'
 		animals_1[b_i] = img_1
 	}
-	home_menu = new Image()
-	home_menu.src = 'png/menus_home.png'
-	rule_menu = new Image()
-	rule_menu.src = 'png/menus_rules.png'
-	game_menu_blank = new Image()
-	game_menu_blank.src = 'png/menus_game.png'
-	game_menu_blue = new Image()
-	game_menu_blue.src = 'png/menus_blue.png'
-	game_menu_red = new Image()
-	game_menu_red.src = 'png/menus_red.png'
-	about_menu = new Image()
-	about_menu.src = 'png/menus_info.png'
-	win_red_menu = new Image()
-	win_red_menu.src = 'png/menus_WinRed.png'
-	win_blue_menu = new Image()
-	win_blue_menu.src = 'png/menus_WinBlue.png'
-	cloud_menu = new Image()
-	cloud_menu.src = 'png/menus_multiplayer.png'
+
+	home_menu = imageWithName('menus_home')
+	rule_menu = imageWithName('menus_rules')
+	game_menu_blank = imageWithName('menus_game')
+	game_menu_blue = imageWithName('menus_blue')
+	game_menu_red = imageWithName('menus_red')
+	about_menu = imageWithName('menus_info')
+	win_red_menu = imageWithName('menus_winred')
+	win_blue_menu = imageWithName('menus_winblue')
+	cloud_menu = imageWithName('menus_multiplayer')
 }
 
 function setPieces() {
