@@ -15,7 +15,6 @@ menus = {}
 // winning_player
 
 // doubtful
-// clickX
 // clickY
 // click_xy
 // click_key
@@ -118,8 +117,8 @@ function setPieces() {
 }
 
 function clickXY(event) {
-	clickX = event.pageX - canvas.offsetLeft;
-	clickY = event.pageY - canvas.offsetTop;
+	var clickX = event.pageX - canvas.offsetLeft;
+	var clickY = event.pageY - canvas.offsetTop;
 	return [clickX, clickY]
 }
 
@@ -154,18 +153,14 @@ function canvasClick(event) {
 	click_xy = clickXY(event)
 	if (current_window == 'home') {
 		homeScreen()
-	}
-	if (current_window == 'rules') {
+	} else if (current_window == 'rules') {
 		rulesScreen()
-	}
-	if (current_window == 'about') {
+	} else if (current_window == 'about') {
 		aboutScreen()
-	}
-	if (current_window == 'game' || current_window == 'cloud_game') {
+	} else if (current_window == 'game' || current_window == 'cloud_game') {
 		gameScreen()
-	}
-	if (current_window == 'game_over') {
-		gameEnd()
+	} else if (current_window == 'game_over') {
+		gameEnd(click_xy[0], click_xy[1])
 	}
 }
 
@@ -270,7 +265,7 @@ function maybeEndGame() {
 	}
 }
 
-function gameEnd() {
+function gameEnd(clickX, clickY) {
 	if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
 		window.location.replace('http://rahulbiswas.github.io/siddhartha/jungle/jungle.html')
 		setTimeout('location.reload()', 1000)
@@ -440,11 +435,6 @@ function movePiece() {
 	checkPiecesLeft()
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
-	clickX = null
-	clickY = null
-	click_key = null
-	first_click_key = null
-	second_click_key = null
 	turn = 1 - turn
 	if (current_window == 'cloud_game') {
 		setBoard()
