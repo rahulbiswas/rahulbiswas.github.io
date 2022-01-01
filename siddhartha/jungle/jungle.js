@@ -15,7 +15,6 @@ menus = {}
 // winning_player
 
 // doubtful
-// clickY
 // click_xy
 // click_key
 // game_code
@@ -150,21 +149,21 @@ class WaterJump {
 function canvasClick(event) {
 	canvas = document.getElementById('drawingCanvas');
 	context = canvas.getContext('2d');
-	click_xy = clickXY(event)
+	var click_xy = clickXY(event)
 	if (current_window == 'home') {
-		homeScreen()
+		homeScreen(click_xy)
 	} else if (current_window == 'rules') {
-		rulesScreen()
+		rulesScreen(click_xy)
 	} else if (current_window == 'about') {
-		aboutScreen()
+		aboutScreen(click_xy)
 	} else if (current_window == 'game' || current_window == 'cloud_game') {
-		gameScreen()
+		gameScreen(click_xy)
 	} else if (current_window == 'game_over') {
 		gameEnd(click_xy[0], click_xy[1])
 	}
 }
 
-function homeScreen() {
+function homeScreen(click_xy) {
 	if (click_xy[0] > HOME_LOCAL_X_START &&
 		click_xy[0] < HOME_LOCAL_X_END &&
 		click_xy[1] > HOME_LOCAL_Y_START &&
@@ -200,7 +199,7 @@ function homeScreen() {
 	click_xy[1]=-1
 }
 
-function rulesScreen() {
+function rulesScreen(click_xy) {
 	if (click_xy[0] > BACK_X_START &&
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
@@ -210,7 +209,7 @@ function rulesScreen() {
 	}
 }
 
-function aboutScreen() { 
+function aboutScreen(click_xy) { 
 	if (click_xy[0] > BACK_X_START &&
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
@@ -220,7 +219,7 @@ function aboutScreen() {
 	}
 }
 
-function gameScreen() {
+function gameScreen(click_xy) {
 	if (click_xy[0] > BACK_X_START &&
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
