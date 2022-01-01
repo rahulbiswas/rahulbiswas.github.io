@@ -1,37 +1,32 @@
-loadPNGs()
-
 // Global variables.
 current_window = 'home'
 player_piece_count_red = 8
 player_piece_count_blue = 8
+menus = {}
 
-// about_menu
 // animals_0
 // animals_1
 // canvas
-// clickX
-// clickY
-// click_key
-// cloud_menu
 // context
 // current_window
-// first_click_key
-// game_code
-// game_menu_blank
-// game_menu_blue
-// game_menu_red
-// has_won
-// home_menu
 // is_first_click
 // pieces
+// turn
+// winning_player
+
+// doubtful
+// clickX
+// clickY
+// click_xy
+// click_key
+// game_code
+// has_won
+// first_click_key
 // player_piece_count_blue
 // player_piece_count_red
-// rule_menu
 // second_click_key
-// turn
-// win_blue_menu
-// win_red_menu
-// winning_player
+
+loadPNGs()
 
 const BOARD_UPPER_LEFT_X = 242
 const BOARD_UPPER_LEFT_Y = 42
@@ -64,7 +59,7 @@ const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
 
-const TEST_MODE = 0
+const TEST_MODE = 1
 
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
@@ -85,34 +80,34 @@ function gameURL() {
 }
 
 function imageWithName(src) {
-	menu = new Image()
+	var menu = new Image()
 	menu.src = 'png/'+src+'.png'
 	return menu
 }
 
 function loadPNGs() {
 	animals_0 = {}
-	for (a_i = 1; a_i < 9; a_i++) {
-		img = new Image()
+	for (var a_i = 1; a_i < 9; a_i++) {
+		var img = new Image()
 		img.src = 'png/a' + a_i + '.png'
 		animals_0[a_i] = img
 	}
 	animals_1 = {}
-	for (b_i = 1; b_i < 9; b_i++) {
-		img_1 = new Image()
+	for (var b_i = 1; b_i < 9; b_i++) {
+		var img_1 = new Image()
 		img_1.src = 'png/b' + b_i + '.png'
 		animals_1[b_i] = img_1
 	}
 
-	home_menu = imageWithName('menus_home')
-	rule_menu = imageWithName('menus_rules')
-	game_menu_blank = imageWithName('menus_game')
-	game_menu_blue = imageWithName('menus_blue')
-	game_menu_red = imageWithName('menus_red')
-	about_menu = imageWithName('menus_info')
-	win_red_menu = imageWithName('menus_winred')
-	win_blue_menu = imageWithName('menus_winblue')
-	cloud_menu = imageWithName('menus_multiplayer')
+	menus['home'] = imageWithName('menus_home')
+	menus['rule'] = imageWithName('menus_rules')
+	menus['game_blank'] = imageWithName('menus_game')
+	menus['game_blue'] = imageWithName('menus_blue')
+	menus['game_red'] = imageWithName('menus_red')
+	menus['about'] = imageWithName('menus_info')
+	menus['win_red'] = imageWithName('menus_winred')
+	menus['win_blue'] = imageWithName('menus_winblue')
+	menus['cloud'] = imageWithName('menus_multiplayer')
 }
 
 function setPieces() {
@@ -129,16 +124,16 @@ function clickXY(event) {
 }
 
 function click_key_with_event(clickX, clickY) {
-	row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
-	column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
+	var row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
+	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
 	click_key = column + '_' + row
 	return click_key
 }
 
 function possible_moves_mapping() {
-	possible_moves = checkPossibleTurn()
-	for (possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
-		move = possible_moves[possible_move_index]
+	var possible_moves = checkPossibleTurn()
+	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
+		var move = possible_moves[possible_move_index]
 		move = move.split('_')
 		move = move.map((i) => Number(i));
 		context.fillStyle = 'chocolate'
@@ -170,7 +165,7 @@ function canvasClick(event) {
 		gameScreen()
 	}
 	if (current_window == 'game_over') {
-		gameOverScreen()
+		gameEnd()
 	}
 }
 
@@ -243,7 +238,7 @@ function gameScreen() {
 		if (pieces[click_key] == null) {
 			return
 		}
-		player = pieces[click_key]['player']
+		var player = pieces[click_key]['player']
 		if (player != turn) {
 			return
 		}
@@ -264,21 +259,21 @@ function gameScreen() {
 		}
 		movePiece()
 	}
-	gameOverScreen()
+	maybeEndGame()
 }
 
-function gameOverScreen() {
+function maybeEndGame() {
 	checkDenSquares()
 	if (winning_player != '') {
 		current_window = 'game_over'
 		draw()
-		if (!has_won) {
-			return
-		}
-		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-			window.location.replace('http://rahulbiswas.github.io/siddhartha/jungle/jungle.html')
-			setTimeout('location.reload()', 1000)
-		}
+	}
+}
+
+function gameEnd() {
+	if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+		window.location.replace('http://rahulbiswas.github.io/siddhartha/jungle/jungle.html')
+		setTimeout('location.reload()', 1000)
 	}
 }
 	
@@ -298,13 +293,13 @@ function checkDenSquares() {
 }
 
 function playerTurn() {
-	possible_pieces = []
-	keys = Object.keys(pieces)
-	for (piece = 0; piece < keys.length; piece++) {
-		piece_0 = keys[piece]
+	var possible_pieces = []
+	var keys = Object.keys(pieces)
+	for (var piece = 0; piece < keys.length; piece++) {
+		var piece_0 = keys[piece]
 		if (pieces[piece_0]['player'] == turn) {
 			first_click_key = keys[piece]
-			attacking_animal_player = pieces[first_click_key]['player']
+			var attacking_animal_player = pieces[first_click_key]['player']
 			checkpossibleturn = checkPossibleTurn()
 			if (checkpossibleturn.length > 0) {
 				possible_pieces.push(first_click_key)
@@ -315,12 +310,12 @@ function playerTurn() {
 }
 
 function checkPossibleTurn() {
-	possibleMoves = []
-	for (column = 0; column < 7; column++) {
-		for (row = 0; row < 9; row++) {
+	var possibleMoves = []
+	for (var column = 0; column < 7; column++) {
+		for (var row = 0; row < 9; row++) {
 			second_click_key = row + '_' + column
 			if (validMove()) {
-				possibleMove = second_click_key
+				var possibleMove = second_click_key
 				possibleMoves.push(possibleMove)
 			}
 		}
@@ -329,23 +324,23 @@ function checkPossibleTurn() {
 }
 
 function validMove() {
-	first_coords = first_click_key.split('_')
+	var first_coords = first_click_key.split('_')
 	first_coords = first_coords.map((i) => Number(i));
-	second_coords = second_click_key.split('_')
+	var second_coords = second_click_key.split('_')
 	second_coords = second_coords.map((i) => Number(i));
-	attacking_animal_num = pieces[first_click_key]['animal']
-	attacking_animal_player = pieces[first_click_key]['player']
+	var attacking_animal_num = pieces[first_click_key]['animal']
+	var attacking_animal_player = pieces[first_click_key]['player']
 		// Allow tigers and lions to jump over water.
 	if (current_window == 'cloud_game' && typeof cloud_player != 'undefined' && cloud_player != turn) {
 		return false
 	}
-	valid_moves = validMoveWater[first_click_key]
+	var valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
-		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
+		for (var valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
 			valid_move = valid_moves[valid_move_index]
 			if (valid_move.destination == second_click_key) {
 				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
+					for (var w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
 						if (pieces[valid_move.water[w_s_i]] != null) {
 							return false
 						}
@@ -359,8 +354,8 @@ function validMove() {
 			}
 		}
 	}
-	is_moving_to_water_square = false
-	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
+	var is_moving_to_water_square = false
+	for (var w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
 			is_moving_to_water_square = true
 		}
@@ -371,23 +366,23 @@ function validMove() {
 		}
 	}
 	if (attacking_animal_player == 0) {
-		is_attacking_own_den = ['0_3'].indexOf(second_click_key) > -1
+		var is_attacking_own_den = ['0_3'].indexOf(second_click_key) > -1
 	} else {
-		is_attacking_own_den = ['8_3'].indexOf(second_click_key) > -1
+		var is_attacking_own_den = ['8_3'].indexOf(second_click_key) > -1
 	}
 	if (is_attacking_own_den) {
 		return false
 	}
 	// Disallow non-adjacent moves.
-	x_diff = Math.abs(first_coords[0] - second_coords[0])
-	y_diff = Math.abs(first_coords[1] - second_coords[1])
+	var x_diff = Math.abs(first_coords[0] - second_coords[0])
+	var y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
 		return TEST_MODE == 1
 	}
 	first_coords[0] = parseInt(first_coords[0])
 	first_coords[1] = parseInt(first_coords[1])
 	is_moving_from_water_square = false
-	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
+	for (var w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == first_coords[0] && water[w_s_i][1] == first_coords[1]) {
 			is_moving_from_water_square = true
 		}
@@ -398,17 +393,17 @@ function validMove() {
 	if (pieces[second_click_key] == null) {
 		return true
 	}
-	defending_animal_num = pieces[second_click_key]['animal']
-	defending_animal_player = pieces[second_click_key]['player']
+	var defending_animal_num = pieces[second_click_key]['animal']
+	var defending_animal_player = pieces[second_click_key]['player']
 	if (attacking_animal_player == defending_animal_player) {
 		return false
 	}
 	if (attacking_animal_player == 0) {
-		is_attacking_own_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
-		is_attacking_enemy_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
+		var is_attacking_own_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
+		var is_attacking_enemy_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
 	} else {
-		is_attacking_own_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
-		is_attacking_enemy_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
+		var is_attacking_own_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
+		var is_attacking_enemy_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
 	}
 	if (is_attacking_own_trap) {
 		return true
@@ -445,6 +440,11 @@ function movePiece() {
 	checkPiecesLeft()
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
+	clickX = null
+	clickY = null
+	click_key = null
+	first_click_key = null
+	second_click_key = null
 	turn = 1 - turn
 	if (current_window == 'cloud_game') {
 		setBoard()
@@ -455,19 +455,19 @@ function movePiece() {
 function draw() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
-		context.drawImage(home_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		context.drawImage(menus['home'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'rules') {
-		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		context.drawImage(menus['rule'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
-		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		context.drawImage(menus['about'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'cloud_game') {
-		context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
 		if (winning_player == 'red') {
-			context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+			context.drawImage(menus['win_red'], 0,0,GAME_WIDTH,GAME_HEIGHT);
 		}
 		if (winning_player == 'blue') {
-			context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
+			context.drawImage(menus['win_blue'], 0,0,GAME_WIDTH,GAME_HEIGHT);
 		}
 	} else if (current_window == 'game') {
 		drawBoard()
@@ -475,7 +475,7 @@ function draw() {
 }
 
 function join_multiplayer() {
-	joining_code = window.location.search
+	var joining_code = window.location.search
 	joining_code = joining_code.replace('?game_code=', '')
 	if (joining_code != '') {
 		turn = 1
@@ -506,7 +506,7 @@ function setBoard() {
 	function setGameListener() {
 		checkPeriodically()
 	}
-	setGameReq = new XMLHttpRequest();
+	var setGameReq = new XMLHttpRequest();
 	setGameReq.addEventListener('load', setGameListener)
 	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code='+ game_code +'&game_board='+url);
 	setGameReq.send();
@@ -514,7 +514,7 @@ function setBoard() {
 
 function checkPeriodically() {
 	function getGameListener() {
-		return_info = JSON.parse(this.responseText)
+		var return_info = JSON.parse(this.responseText)
 		turn = return_info['turn_info']
 		pieces = return_info['piece_info']
 		player_piece_count_red = return_info['player_piece_count_red_info']
@@ -523,7 +523,7 @@ function checkPeriodically() {
 		if (winning_player != '') {
 			current_window = 'game_over'
 			draw()
-			gameOverScreen()
+			maybeEndGame()
 		}
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
@@ -542,23 +542,23 @@ function checkPeriodically() {
 function drawBoard() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (typeof cloud_player == 1) {
-		context.drawImage(game_menu_red, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		context.drawImage(menus['game_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	} else if (typeof cloud_player == 0) {
-		context.drawImage(game_menu_blue, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	} else if (turn == 1) {
-		context.drawImage(game_menu_red, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		context.drawImage(menus['game_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	} else if (turn == 0) {
-		context.drawImage(game_menu_blue, 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	}
-	context.drawImage(game_menu_blank, 0, 0, GAME_WIDTH, GAME_HEIGHT);
-	pieces_position_list = Object.keys(pieces)
-	for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
-		piece_position = pieces_position_list[p_i]
-		player = pieces[piece_position]['player']
-		animal = pieces[piece_position]['animal']
-		piece_components = piece_position.split('_')
-		x = piece_components[1] * BOARD_SQUARE_WIDTH
-		y = piece_components[0] * BOARD_SQUARE_WIDTH
+	context.drawImage(menus['game_blank'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	var pieces_position_list = Object.keys(pieces)
+	for (var p_i = 0; p_i < pieces_position_list.length; p_i++) {
+		var piece_position = pieces_position_list[p_i]
+		var player = pieces[piece_position]['player']
+		var animal = pieces[piece_position]['animal']
+		var piece_components = piece_position.split('_')
+		var x = piece_components[1] * BOARD_SQUARE_WIDTH
+		var y = piece_components[0] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
 			context.drawImage(animals_0[animal],
 				x + BOARD_UPPER_LEFT_X,
@@ -574,10 +574,10 @@ function drawBoard() {
 				PIECE_LENGTH);
 		}
 	}
-	moving_pieces = playerTurn()
-	show_green_squares = (current_window == 'game' || turn == cloud_player)
+	var moving_pieces = playerTurn()
+	var show_green_squares = (current_window == 'game' || turn == cloud_player)
 	if (show_green_squares) {
-		for (p_i = 0; p_i < moving_pieces.length; p_i++) {
+		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
 				context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
 					moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
