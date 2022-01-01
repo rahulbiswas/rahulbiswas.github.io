@@ -15,8 +15,6 @@ menus = {}
 // winning_player
 
 // doubtful
-// click_xy
-// click_key
 // game_code
 // has_won
 // first_click_key
@@ -124,7 +122,7 @@ function clickXY(event) {
 function click_key_with_event(clickX, clickY) {
 	var row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
 	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
-	click_key = column + '_' + row
+	var click_key = column + '_' + row
 	return click_key
 }
 
@@ -227,7 +225,7 @@ function gameScreen(click_xy) {
 		current_window = 'home'
 		draw()
 	}
-	click_key = click_key_with_event(click_xy[0], click_xy[1])
+	var click_key = click_key_with_event(click_xy[0], click_xy[1])
 	if (is_first_click) {
 		if (pieces[click_key] == null) {
 			return
