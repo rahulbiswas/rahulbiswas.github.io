@@ -73,13 +73,13 @@ function gameURL() {
 	if (TEST_MODE == 1) {
 		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
 	} else {
-	  return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+		return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
 	}
 }
 
 function imageWithName(src) {
 	var menu = new Image()
-	menu.src = 'png/'+src+'.png'
+	menu.src = 'png/' + src + '.png'
 	return menu
 }
 
@@ -190,13 +190,13 @@ function homeScreen(click_xy) {
 		click_xy[1] > CLOUD_Y_START &&
 		click_xy[1] < CLOUD_Y_END) {
 		current_window = 'cloud_game'
-		// cloud_player 1 means red
+			// cloud_player 1 means red
 		cloud_player = 1
 		draw()
 		aws()
 	}
-	click_xy[0]=-1
-	click_xy[1]=-1
+	click_xy[0] = -1
+	click_xy[1] = -1
 }
 
 function rulesScreen(click_xy) {
@@ -209,7 +209,7 @@ function rulesScreen(click_xy) {
 	}
 }
 
-function aboutScreen(click_xy) { 
+function aboutScreen(click_xy) {
 	if (click_xy[0] > BACK_X_START &&
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
@@ -270,7 +270,7 @@ function gameEnd(clickX, clickY) {
 		setTimeout('location.reload()', 1000)
 	}
 }
-	
+
 function checkDenSquares() {
 	if (pieces['0_3'] != null || player_piece_count_blue == 0) {
 		has_won = true
@@ -453,10 +453,10 @@ function draw() {
 		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
 		if (winning_player == 'red') {
-			context.drawImage(menus['win_red'], 0,0,GAME_WIDTH,GAME_HEIGHT);
+			context.drawImage(menus['win_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
 		if (winning_player == 'blue') {
-			context.drawImage(menus['win_blue'], 0,0,GAME_WIDTH,GAME_HEIGHT);
+			context.drawImage(menus['win_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
 	} else if (current_window == 'game') {
 		drawBoard()
@@ -488,16 +488,22 @@ function aws() {
 }
 
 function setBoard() {
-	var setup = {piece_info : pieces, turn_info : turn, player_piece_count_red_info : player_piece_count_red, player_piece_count_blue_info : player_piece_count_blue}
+	var setup = {
+		piece_info: pieces,
+		turn_info: turn,
+		player_piece_count_red_info: player_piece_count_red,
+		player_piece_count_blue_info: player_piece_count_blue
+	}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
-	document.getElementById('multiplayer_join_url').innerHTML = gameURL()+'?game_code='+game_code;
+	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
+
 	function setGameListener() {
 		checkPeriodically()
 	}
 	var setGameReq = new XMLHttpRequest();
 	setGameReq.addEventListener('load', setGameListener)
-	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code='+ game_code +'&game_board='+url);
+	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code=' + game_code + '&game_board=' + url);
 	setGameReq.send();
 }
 
@@ -523,7 +529,7 @@ function checkPeriodically() {
 	}
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener('load', getGameListener)
-	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code='+ game_code);
+	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code=' + game_code);
 	getReq.send();
 }
 
@@ -568,10 +574,10 @@ function drawBoard() {
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
-				context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-					moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
-					POTENTIAL_MOVE_LENGTH,
-					POTENTIAL_MOVE_LENGTH)
+			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+				POTENTIAL_MOVE_LENGTH,
+				POTENTIAL_MOVE_LENGTH)
 		}
 	}
 }
