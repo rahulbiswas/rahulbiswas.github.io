@@ -15,7 +15,6 @@ menus = {}
 // winning_player
 
 // doubtful
-// has_won
 // first_click_key
 // player_piece_count_blue
 // player_piece_count_red
