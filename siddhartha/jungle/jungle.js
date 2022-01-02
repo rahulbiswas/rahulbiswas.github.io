@@ -15,7 +15,6 @@ menus = {}
 // winning_player
 
 // doubtful
-// game_code
 // has_won
 // first_click_key
 // player_piece_count_blue
@@ -110,7 +109,6 @@ function setPieces() {
 	pieces = JSON.parse(JSON.stringify(piece_setup))
 	is_first_click = true
 	turn = 1
-	has_won = false
 }
 
 function clickXY(event) {
@@ -271,13 +269,11 @@ function gameEnd(clickX, clickY) {
 
 function checkDenSquares() {
 	if (pieces['0_3'] != null || player_piece_count_blue == 0) {
-		has_won = true
 		winning_player = 'red'
 		current_window = 'game_over'
 		draw()
 	}
 	if (pieces['8_3'] != null || player_piece_count_red == 0) {
-		has_won = true
 		winning_player = 'blue'
 		current_window = 'game_over'
 		draw()
