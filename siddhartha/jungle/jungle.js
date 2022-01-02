@@ -251,7 +251,7 @@ function gameScreen(click_xy) {
 }
 
 function maybeEndGame() {
-	checkIfGameEnd()
+	checkIfGameEnded()
 	if (winning_player != '') {
 		current_window = 'game_over'
 		draw()
@@ -265,7 +265,7 @@ function gameEnd(clickX, clickY) {
 	}
 }
 
-function checkIfGameEnd() {
+function checkIfGameEnded() {
 	if (pieces['0_3'] != null || player_piece_count_blue == 0) {
 		winning_player = 'red'
 		current_window = 'game_over'
@@ -506,7 +506,7 @@ function checkPeriodically() {
 		pieces = return_info['piece_info']
 		player_piece_count_red = return_info['player_piece_count_red_info']
 		player_piece_count_blue = return_info['player_piece_count_blue_info']
-		checkIfGameEnd()
+		checkIfGameEnded()
 		if (winning_player != '') {
 			current_window = 'game_over'
 			draw()
