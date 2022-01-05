@@ -1,7 +1,5 @@
 // Global variables.
 current_window = 'home'
-player_piece_count_red = 8
-player_piece_count_blue = 8
 menus = {}
 
 // animals_0
@@ -15,8 +13,6 @@ menus = {}
 // winning_player
 
 // doubtful
-// player_piece_count_blue
-// player_piece_count_red
 // second_click_key
 
 loadPNGs()
@@ -265,13 +261,25 @@ function gameEnd(clickX, clickY) {
 	}
 }
 
+function checkNumberOfPieces(color_number) {
+	var pieces_position_list = Object.keys(pieces)
+	for (var p_i = 0; p_i < pieces_position_list.length; p_i++) {
+		var piece_position = pieces_position_list[p_i]
+		var player = pieces[piece_position]['player']
+		if (player == color_number) {
+			return false
+		}
+	}
+	return true
+}
+
 function checkIfGameEnded() {
-	if (pieces['0_3'] != null || player_piece_count_blue == 0) {
+	if (pieces['0_3'] != null || checkNumberOfPieces(0)) {
 		winning_player = 'red'
 		current_window = 'game_over'
 		draw()
 	}
-	if (pieces['8_3'] != null || player_piece_count_red == 0) {
+	if (pieces['8_3'] != null || checkNumberOfPieces(1)) {
 		winning_player = 'blue'
 		current_window = 'game_over'
 		draw()
@@ -409,21 +417,9 @@ function validMove() {
 	return true
 }
 
-function checkPiecesLeft() {
-	if (pieces[second_click_key] != null) {
-		if (pieces[second_click_key]["player"] == "1") {
-			player_piece_count_red -= 1
-		}
-		if (pieces[second_click_key]["player"] == "0") {
-			player_piece_count_blue -= 1
-		}
-	}
-}
-
 function movePiece() {
 	var moving_piece = pieces[first_click_key]
 	delete pieces[first_click_key]
-	checkPiecesLeft()
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
@@ -482,9 +478,7 @@ function aws() {
 function setBoard() {
 	var setup = {
 		piece_info: pieces,
-		turn_info: turn,
-		player_piece_count_red_info: player_piece_count_red,
-		player_piece_count_blue_info: player_piece_count_blue
+		turn_info: turn
 	}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
@@ -504,8 +498,6 @@ function checkPeriodically() {
 		var return_info = JSON.parse(this.responseText)
 		turn = return_info['turn_info']
 		pieces = return_info['piece_info']
-		player_piece_count_red = return_info['player_piece_count_red_info']
-		player_piece_count_blue = return_info['player_piece_count_blue_info']
 		checkIfGameEnded()
 		if (winning_player != '') {
 			current_window = 'game_over'
