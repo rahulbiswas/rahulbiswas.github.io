@@ -12,9 +12,6 @@ menus = {}
 // turn
 // winning_player
 
-// doubtful
-// second_click_key
-
 loadPNGs()
 
 const BOARD_UPPER_LEFT_X = 242
@@ -230,18 +227,16 @@ function gameScreen(click_xy) {
 		possible_moves_mapping()
 		is_first_click = false
 	} else {
-		second_click_key = click_key
+		var second_click_key = click_key
 		if (first_click_key == second_click_key) {
-			first_click_key = null
-			second_click_key = null
 			is_first_click = true
-			moving_piece = null
 			drawBoard()
-		}
-		if (!validMove()) {
 			return
 		}
-		movePiece()
+		if (!validMove(second_click_key)) {
+			return
+		}
+		movePiece(second_click_key)
 	}
 	maybeEndGame()
 }
@@ -307,8 +302,8 @@ function checkPossibleTurn() {
 	var possibleMoves = []
 	for (var column = 0; column < 7; column++) {
 		for (var row = 0; row < 9; row++) {
-			second_click_key = row + '_' + column
-			if (validMove()) {
+			var second_click_key = row + '_' + column
+			if (validMove(second_click_key)) {
 				var possibleMove = second_click_key
 				possibleMoves.push(possibleMove)
 			}
@@ -317,7 +312,7 @@ function checkPossibleTurn() {
 	return possibleMoves
 }
 
-function validMove() {
+function validMove(second_click_key) {
 	var first_coords = first_click_key.split('_')
 	first_coords = first_coords.map((i) => Number(i));
 	var second_coords = second_click_key.split('_')
@@ -417,7 +412,7 @@ function validMove() {
 	return true
 }
 
-function movePiece() {
+function movePiece(second_click_key) {
 	var moving_piece = pieces[first_click_key]
 	delete pieces[first_click_key]
 	pieces[second_click_key] = moving_piece;
