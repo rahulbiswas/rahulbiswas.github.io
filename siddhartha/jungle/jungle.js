@@ -1,18 +1,24 @@
 // Global variables.
 current_window = 'home'
 menus = {}
-
 // animals_0
 // animals_1
 // canvas
+// cloud_player
 // context
-// current_window
+// first_click_key
 // is_first_click
 // pieces
 // turn
 // winning_player
+// game_code
 
 loadPNGs()
+
+const RAT = 1
+const ELEPHANT = 8
+const TIGER = 6
+const LION = 7
 
 const BOARD_UPPER_LEFT_X = 242
 const BOARD_UPPER_LEFT_Y = 42
@@ -111,8 +117,7 @@ function clickXY(event) {
 function click_key_with_event(clickX, clickY) {
 	var row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
 	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
-	var click_key = column + '_' + row
-	return click_key
+	return column + '_' + row
 }
 
 function possible_moves_mapping() {
@@ -146,7 +151,7 @@ function canvasClick(event) {
 	} else if (current_window == 'game' || current_window == 'cloud_game') {
 		gameScreen(click_xy)
 	} else if (current_window == 'game_over') {
-		gameEnd(click_xy[0], click_xy[1])
+		gameEnd(click_xy)
 	}
 }
 
@@ -182,8 +187,6 @@ function homeScreen(click_xy) {
 		draw()
 		aws()
 	}
-	click_xy[0] = -1
-	click_xy[1] = -1
 }
 
 function rulesScreen(click_xy) {
@@ -249,8 +252,8 @@ function maybeEndGame() {
 	}
 }
 
-function gameEnd(clickX, clickY) {
-	if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
+function gameEnd(click_xy) {
+	if (click_xy[0] > HOME_X_LEFT && click_xy[0] < HOME_X_RIGHT && click_xy[1] > HOME_Y_LEFT && click_xy[1] < HOME_Y_RIGHT) {
 		window.location.replace('http://rahulbiswas.github.io/siddhartha/jungle/jungle.html')
 		setTimeout('location.reload()', 1000)
 	}
@@ -328,7 +331,7 @@ function validMove(second_click_key) {
 		for (var valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
 			valid_move = valid_moves[valid_move_index]
 			if (valid_move.destination == second_click_key) {
-				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
+				if (attacking_animal_num == TIGER || attacking_animal_num == LION) {
 					for (var w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
 						if (pieces[valid_move.water[w_s_i]] != null) {
 							return false
@@ -350,7 +353,7 @@ function validMove(second_click_key) {
 		}
 	}
 	if (is_moving_to_water_square) {
-		if (attacking_animal_num != 1) {
+		if (attacking_animal_num != RAT) {
 			return false
 		}
 	}
@@ -401,11 +404,11 @@ function validMove(second_click_key) {
 		return false
 	}
 	if (pieces[second_click_key] != null) {
-		if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
+		if ((attacking_animal_num == ELEPHANT) && (defending_animal_num == RAT)) {
 			return false
 		}
 		if ((attacking_animal_num < defending_animal_num) &&
-			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
+			((attacking_animal_num != RAT) || (defending_animal_num != ELEPHANT)) && (is_attacking_own_trap == false)) {
 			return false
 		}
 	}
