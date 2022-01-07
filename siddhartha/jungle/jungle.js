@@ -1,6 +1,7 @@
-// Global variables.
 current_window = 'home'
 menus = {}
+
+// Global variables.
 // animals_0
 // animals_1
 // canvas
@@ -12,8 +13,12 @@ menus = {}
 // turn
 // winning_player
 // game_code
+// current_window
+// menus
 
 loadPNGs()
+
+const TEST_MODE = 0
 
 const RAT = 1
 const ELEPHANT = 8
@@ -50,8 +55,6 @@ const CLOUD_X_START = 69
 const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
-
-const TEST_MODE = 1
 
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
