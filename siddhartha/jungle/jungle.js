@@ -1,5 +1,6 @@
 current_window = 'home'
 menus = {}
+moved_piece = ['0']
 
 // Global variables.
 // animals_0
@@ -15,6 +16,7 @@ menus = {}
 // game_code
 // current_window
 // menus
+// moved_piece
 
 loadPNGs()
 
@@ -234,6 +236,8 @@ function gameScreen(click_xy) {
 		is_first_click = false
 	} else {
 		var second_click_key = click_key
+		moved_piece[0] = first_click_key.split('_')
+		moved_piece[1] = second_click_key.split('_')
 		if (first_click_key == second_click_key) {
 			is_first_click = true
 			drawBoard()
@@ -428,6 +432,7 @@ function movePiece(second_click_key) {
 		setBoard()
 	}
 	drawBoard()
+	moved_piece = []
 }
 
 function draw() {
@@ -479,7 +484,8 @@ function aws() {
 function setBoard() {
 	var setup = {
 		piece_info: pieces,
-		turn_info: turn
+		turn_info: turn,
+		moved_piece_info: moved_piece
 	}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
@@ -499,6 +505,7 @@ function checkPeriodically() {
 		var return_info = JSON.parse(this.responseText)
 		turn = return_info['turn_info']
 		pieces = return_info['piece_info']
+		moved_piece = return_info['moved_piece_info']
 		checkIfGameEnded()
 		if (winning_player != '') {
 			current_window = 'game_over'
@@ -553,6 +560,17 @@ function drawBoard() {
 				PIECE_LENGTH,
 				PIECE_LENGTH);
 		}
+	}
+	if (moved_piece[0] != ['0']) {
+		context.fillStyle = 'purple'
+		context.fillRect(moved_piece[0][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			POTENTIAL_MOVE_LENGTH,
+			POTENTIAL_MOVE_LENGTH)
+		context.fillRect(moved_piece[1][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			POTENTIAL_MOVE_LENGTH,
+			POTENTIAL_MOVE_LENGTH)
 	}
 	var moving_pieces = playerTurn()
 	var show_green_squares = (current_window == 'game' || turn == cloud_player)
