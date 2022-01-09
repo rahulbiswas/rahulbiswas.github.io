@@ -327,6 +327,9 @@ function validMove(second_click_key) {
 	first_coords = first_coords.map((i) => Number(i));
 	var second_coords = second_click_key.split('_')
 	second_coords = second_coords.map((i) => Number(i));
+	if (second_coords[0] < 0 || second_coords[1] < 0 || second_coords[0] > 8 || second_coords[1] > 6) {
+		return false
+	}
 	var attacking_animal_num = pieces[first_click_key]['animal']
 	var attacking_animal_player = pieces[first_click_key]['player']
 		// Allow tigers and lions to jump over water.
