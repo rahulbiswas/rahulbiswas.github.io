@@ -1,6 +1,7 @@
 current_window = 'home'
 menus = {}
 moved_piece = ['0']
+eaten_animals = []
 
 // Global variables.
 // animals_0
@@ -49,6 +50,8 @@ const DRAWING_HEIGHT = 1000
 const PIECE_LENGTH = 96
 const GAME_WIDTH = 1180
 const GAME_HEIGHT = 980
+const BOARD_WIDTH = 800
+const BOARD_HEIGHT = 900
 const HOME_X_LEFT = 515
 const HOME_Y_LEFT = 446
 const HOME_X_RIGHT = 662
@@ -215,6 +218,7 @@ function aboutScreen(click_xy) {
 }
 
 function gameScreen(click_xy) {
+	console.log(click_xy)
 	if (click_xy[0] > BACK_X_START &&
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
@@ -541,6 +545,30 @@ function drawBoard() {
 		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	}
 	context.drawImage(menus['game_blank'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	for (var player = 0; player < 2; player ++) {
+		for (var animal = 1; animal < 9; animal ++) {
+			is_alive = false
+			for (var k in pieces) {
+				if (pieces[k]['player'] == player && pieces[k]['animal'] == animal) {
+					is_alive = true
+					break
+				}
+			}
+			if (is_alive == false) {
+				x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH)*player) - ((animal % 2) * 100) + 5
+				if (player == 0) {
+					x += 100
+				}
+				y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2)*100) + 100
+				console.log('x,y coordinates = '+x+','+y)
+				if (player == 0) {
+					context.drawImage(animals_0[animal], x, y, 95, 95)
+				} else if (player == 1) {
+					context.drawImage(animals_1[animal], x, y, 95, 95)
+				}
+			}
+		}
+	}
 	var pieces_position_list = Object.keys(pieces)
 	for (var p_i = 0; p_i < pieces_position_list.length; p_i++) {
 		var piece_position = pieces_position_list[p_i]
