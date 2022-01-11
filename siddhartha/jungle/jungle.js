@@ -218,7 +218,6 @@ function aboutScreen(click_xy) {
 }
 
 function gameScreen(click_xy) {
-	console.log(click_xy)
 	if (click_xy[0] > BACK_X_START &&
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
@@ -554,19 +553,23 @@ function drawBoard() {
 					break
 				}
 			}
-			if (is_alive == false) {
-				x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH)*player) - ((animal % 2) * 100) + 5
-				if (player == 0) {
-					x += 100
-				}
-				y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2)*100) + 100
-				console.log('x,y coordinates = '+x+','+y)
-				if (player == 0) {
-					context.drawImage(animals_0[animal], x, y, 95, 95)
-				} else if (player == 1) {
-					context.drawImage(animals_1[animal], x, y, 95, 95)
-				}
+			if (is_alive) {
+				alpha = 0.2
+			} else {
+				alpha = 1.0
 			}
+			context.globalAlpha = alpha;
+			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH)*player) - ((animal % 2) * 100) + 5
+			if (player == 0) {
+				x += 100
+			}
+			y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2)*100) + 100
+			if (player == 0) {
+				context.drawImage(animals_0[animal], x, y, 95, 95)
+			} else if (player == 1) {
+				context.drawImage(animals_1[animal], x, y, 95, 95)
+			}
+			context.globalAlpha = 1.0;
 		}
 	}
 	var pieces_position_list = Object.keys(pieces)
