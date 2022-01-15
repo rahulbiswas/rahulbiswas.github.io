@@ -129,10 +129,10 @@ function click_key_with_event(clickX, clickY) {
 }
 
 function possible_moves_mapping() {
-	var possible_moves = checkPossibleTurn()
+	var possible_moves = checkPossibleTurn(first_click_key, pieces, current_window)
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
-		move = move.split('_')
+		move = move[1].split('_')
 		move = move.map((i) => Number(i));
 		context.fillStyle = 'chocolate'
 		context.fillRect(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
@@ -246,7 +246,7 @@ function gameScreen(click_xy) {
 			drawBoard()
 			return
 		}
-		if (!validMove(second_click_key)) {
+		if (!validMove(first_click_key, pieces, second_click_key, current_window)) {
 			return
 		}
 		movePiece(second_click_key)
@@ -294,15 +294,15 @@ function checkIfGameEnded() {
 	}
 }
 
-function playerTurn() {
+function playerTurn(pieces, current_window, turn) {
 	var possible_pieces = []
 	var keys = Object.keys(pieces)
 	for (var piece = 0; piece < keys.length; piece++) {
 		var piece_0 = keys[piece]
 		if (pieces[piece_0]['player'] == turn) {
-			first_click_key = keys[piece]
+			var first_click_key = keys[piece]
 			var attacking_animal_player = pieces[first_click_key]['player']
-			checkpossibleturn = checkPossibleTurn()
+			checkpossibleturn = checkPossibleTurn(first_click_key, pieces, current_window)
 			if (checkpossibleturn.length > 0) {
 				possible_pieces.push(first_click_key)
 			}
@@ -311,13 +311,13 @@ function playerTurn() {
 	return possible_pieces
 }
 
-function checkPossibleTurn() {
+function checkPossibleTurn(first_click_key, pieces, current_window) {
 	var possibleMoves = []
 	for (var column = 0; column < 7; column++) {
 		for (var row = 0; row < 9; row++) {
 			var second_click_key = row + '_' + column
-			if (validMove(second_click_key)) {
-				var possibleMove = second_click_key
+			if (validMove(first_click_key, pieces, second_click_key, current_window)) {
+				var possibleMove = [first_click_key, second_click_key]
 				possibleMoves.push(possibleMove)
 			}
 		}
@@ -325,7 +325,7 @@ function checkPossibleTurn() {
 	return possibleMoves
 }
 
-function validMove(second_click_key) {
+function validMove(first_click_key, pieces, second_click_key, current_window) {
 	var first_coords = first_click_key.split('_')
 	first_coords = first_coords.map((i) => Number(i));
 	var second_coords = second_click_key.split('_')
@@ -335,10 +335,10 @@ function validMove(second_click_key) {
 	}
 	var attacking_animal_num = pieces[first_click_key]['animal']
 	var attacking_animal_player = pieces[first_click_key]['player']
-		// Allow tigers and lions to jump over water.
 	if (current_window == 'cloud_game' && typeof cloud_player != 'undefined' && cloud_player != turn) {
 		return false
 	}
+	// Allow tigers and lions to jump over water.
 	var valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
 		for (var valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
@@ -606,7 +606,7 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
-	var moving_pieces = playerTurn()
+	var moving_pieces = playerTurn(pieces, current_window, turn)
 	var show_green_squares = (current_window == 'game' || turn == cloud_player)
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
