@@ -239,8 +239,6 @@ function gameScreen(click_xy) {
 		is_first_click = false
 	} else {
 		var second_click_key = click_key
-		moved_piece[0] = first_click_key.split('_')
-		moved_piece[1] = second_click_key.split('_')
 		if (first_click_key == second_click_key) {
 			is_first_click = true
 			drawBoard()
@@ -434,6 +432,8 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 
 function movePiece(second_click_key) {
 	var moving_piece = pieces[first_click_key]
+	moved_piece[0] = first_click_key.split('_')
+	moved_piece[1] = second_click_key.split('_')
 	delete pieces[first_click_key]
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
