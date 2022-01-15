@@ -247,7 +247,7 @@ function gameScreen(click_xy) {
 		if (!validMove(first_click_key, pieces, second_click_key, current_window)) {
 			return
 		}
-		movePiece(second_click_key)
+		movePiece(first_click_key, second_click_key)
 	}
 	maybeEndGame()
 }
@@ -430,7 +430,7 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 	return true
 }
 
-function movePiece(second_click_key) {
+function movePiece(first_click_key, second_click_key) {
 	var moving_piece = pieces[first_click_key]
 	moved_piece[0] = first_click_key.split('_')
 	moved_piece[1] = second_click_key.split('_')
