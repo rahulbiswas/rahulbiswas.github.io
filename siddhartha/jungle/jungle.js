@@ -42,6 +42,10 @@ const HOME_RULES_Y_START = 317
 const HOME_RULES_Y_END = 515
 const HOME_ABOUT_Y_START = 545
 const HOME_ABOUT_Y_END = 751
+const HOME_PEWTER_X_START = 70
+const HOME_PEWTER_X_END = 558
+const HOME_PEWTER_Y_START = 464
+const HOME_PEWTER_Y_END = 694
 const BACK_X_START = 29
 const BACK_Y_START = 24
 const BACK_Y_END = 130
@@ -112,6 +116,9 @@ function loadPNGs() {
 
 function setPieces() {
 	pieces = JSON.parse(JSON.stringify(piece_setup))
+	if (TEST_MODE == 1) {
+		pieces = JSON.parse(JSON.stringify(test_only_piece_setup))
+	}
 	is_first_click = true
 	turn = 1
 }
@@ -156,7 +163,8 @@ function canvasClick(event) {
 		rulesScreen(click_xy)
 	} else if (current_window == 'about') {
 		aboutScreen(click_xy)
-	} else if (current_window == 'game' || current_window == 'cloud_game') {
+	}
+	if (current_window == 'game' || current_window == 'cloud_game' || current_window == 'ai_game') {
 		gameScreen(click_xy)
 	} else if (current_window == 'game_over') {
 		gameEnd(click_xy)
@@ -195,6 +203,13 @@ function homeScreen(click_xy) {
 		draw()
 		aws()
 	}
+	if (click_xy[0] > HOME_PEWTER_X_START &&
+		click_xy[0] < HOME_PEWTER_X_END &&
+		click_xy[1] > HOME_PEWTER_Y_START &&
+		click_xy[1] < HOME_PEWTER_Y_END) {
+		current_window = 'ai_game'
+		draw()
+	}
 }
 
 function rulesScreen(click_xy) {
@@ -225,31 +240,51 @@ function gameScreen(click_xy) {
 		current_window = 'home'
 		draw()
 	}
-	var click_key = click_key_with_event(click_xy[0], click_xy[1])
-	if (is_first_click) {
-		if (pieces[click_key] == null) {
-			return
+	if ((current_window == 'ai_game' && turn == 1) || current_window == 'game' || current_window == 'cloud_game') {
+		var click_key = click_key_with_event(click_xy[0], click_xy[1])
+		if (is_first_click) {
+			if (pieces[click_key] == null) {
+				return
+			}
+			var player = pieces[click_key]['player']
+			if (player != turn) {
+				return
+			}
+			first_click_key = click_key
+			possible_moves_mapping()
+			is_first_click = false
+		} else {
+			var second_click_key = click_key
+			if (first_click_key == second_click_key) {
+				is_first_click = true
+				drawBoard()
+				return
+			}
+			if (!validMove(first_click_key, pieces, second_click_key, current_window)) {
+				return
+			}
+			movePiece(first_click_key, second_click_key)
 		}
-		var player = pieces[click_key]['player']
-		if (player != turn) {
-			return
-		}
-		first_click_key = click_key
-		possible_moves_mapping()
-		is_first_click = false
-	} else {
-		var second_click_key = click_key
-		if (first_click_key == second_click_key) {
-			is_first_click = true
-			drawBoard()
-			return
-		}
-		if (!validMove(first_click_key, pieces, second_click_key, current_window)) {
-			return
-		}
-		movePiece(first_click_key, second_click_key)
+		maybeEndGame()
 	}
-	maybeEndGame()
+}
+
+function aiGame() {
+	var ai_moves = playerTurn(pieces, current_window, turn)
+	var ai_possible_moves = ai_moves[1]
+	var ai_possible_moves_index = Math.floor(Math.random() * ai_possible_moves.length)
+	if (TEST_MODE == 1) {
+		ai_possible_moves_index = 0
+	}
+	var ai_move = ai_possible_moves[ai_possible_moves_index]
+	if (TEST_MODE == 1) {
+		if (pieces['0_0'] != null && pieces['0_0']['animal'] == 5) {
+			ai_move = ['0_0','8_3']
+		}
+	}
+	var first_click_key = ai_move[0]
+	var second_click_key = ai_move[1]
+	movePiece(first_click_key, second_click_key)
 }
 
 function maybeEndGame() {
@@ -262,7 +297,7 @@ function maybeEndGame() {
 
 function gameEnd(click_xy) {
 	if (click_xy[0] > HOME_X_LEFT && click_xy[0] < HOME_X_RIGHT && click_xy[1] > HOME_Y_LEFT && click_xy[1] < HOME_Y_RIGHT) {
-		window.location.replace('http://rahulbiswas.github.io/siddhartha/jungle/jungle.html')
+		window.location.replace(gameURL())
 		setTimeout('location.reload()', 1000)
 	}
 }
@@ -438,11 +473,13 @@ function movePiece(first_click_key, second_click_key) {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	if (current_window == 'cloud_game') {
+	if (current_window == 'ai_game' && turn == 0) {
+		maybeEndGame()
+		aiGame()
+	} else if (current_window == 'cloud_game') {
 		setBoard()
 	}
 	drawBoard()
-	moved_piece = []
 }
 
 function draw() {
@@ -462,7 +499,7 @@ function draw() {
 		if (winning_player == 'blue') {
 			context.drawImage(menus['win_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
-	} else if (current_window == 'game') {
+	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
 	}
 }
@@ -612,7 +649,7 @@ function drawBoard() {
 	}
 	var moving_pieces = playerTurn(pieces, current_window, turn)[0]
 	var moves = playerTurn(pieces, current_window, turn)[1]
-	var show_green_squares = (current_window == 'game' || turn == cloud_player)
+	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || turn == typeof cloud_player)
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
