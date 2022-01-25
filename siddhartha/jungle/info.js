@@ -1,6 +1,18 @@
 // The initial setup of the pieces.
 // Dictionary entries are of the form:
 // position : { "player" : which_player, "animal": animal_number }
+
+test_only_piece_setup = {
+	"2_2": {
+		"player": 0,
+		"animal": 5
+	},
+	"6_4": {
+		"player": 1,
+		"animal": 5
+	}
+}
+
 piece_setup = {
 	"0_0": {
 		"player": 0,
