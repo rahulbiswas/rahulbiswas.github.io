@@ -1,6 +1,32 @@
+current_window = 'home'
+menus = {}
+moved_piece = ['0']
+eaten_animals = []
+
+// Global variables.
+// animals_0
+// animals_1
+// canvas
+// cloud_player
+// context
+// first_click_key
+// is_first_click
+// pieces
+// turn
+// winning_player
+// game_code
+// current_window
+// menus
+// moved_piece
+
 loadPNGs()
 
-current_window = 'home'
+const TEST_MODE = 0
+
+const RAT = 1
+const ELEPHANT = 8
+const TIGER = 6
+const LION = 7
 
 const BOARD_UPPER_LEFT_X = 242
 const BOARD_UPPER_LEFT_Y = 42
@@ -16,6 +42,10 @@ const HOME_RULES_Y_START = 317
 const HOME_RULES_Y_END = 515
 const HOME_ABOUT_Y_START = 545
 const HOME_ABOUT_Y_END = 751
+const HOME_PEWTER_X_START = 70
+const HOME_PEWTER_X_END = 558
+const HOME_PEWTER_Y_START = 464
+const HOME_PEWTER_Y_END = 694
 const BACK_X_START = 29
 const BACK_Y_START = 24
 const BACK_Y_END = 130
@@ -24,6 +54,8 @@ const DRAWING_HEIGHT = 1000
 const PIECE_LENGTH = 96
 const GAME_WIDTH = 1180
 const GAME_HEIGHT = 980
+const BOARD_WIDTH = 800
+const BOARD_HEIGHT = 900
 const HOME_X_LEFT = 515
 const HOME_Y_LEFT = 446
 const HOME_X_RIGHT = 662
@@ -34,73 +66,82 @@ const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
 
 window.onload = function() {
-	canvas = document.getElementById("drawingCanvas")
-	context = canvas.getContext("2d")
+	canvas = document.getElementById('drawingCanvas')
+	context = canvas.getContext('2d')
 	canvas.onmouseup = canvasClick
+	winning_player = ''
 	setPieces()
 	draw()
+	join_multiplayer()
+}
+
+function gameURL() {
+	if (TEST_MODE == 1) {
+		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+	} else {
+		return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+	}
+}
+
+function imageWithName(src) {
+	var menu = new Image()
+	menu.src = 'png/' + src + '.png'
+	return menu
 }
 
 function loadPNGs() {
 	animals_0 = {}
-	for (a_i = 1; a_i < 9; a_i++) {
-		img = new Image()
+	for (var a_i = 1; a_i < 9; a_i++) {
+		var img = new Image()
 		img.src = 'png/a' + a_i + '.png'
 		animals_0[a_i] = img
 	}
 	animals_1 = {}
-	for (b_i = 1; b_i < 9; b_i++) {
-		img_1 = new Image()
+	for (var b_i = 1; b_i < 9; b_i++) {
+		var img_1 = new Image()
 		img_1.src = 'png/b' + b_i + '.png'
 		animals_1[b_i] = img_1
 	}
-	home_menu = new Image()
-	home_menu.src = "png/menus_home.png"
-	rule_menu = new Image()
-	rule_menu.src = "png/menus_rules.png"
-	game_menu = new Image()
-	game_menu.src = "png/menus_game.png"
-	about_menu = new Image()
-	about_menu.src = "png/menus_info.png"
-	win_red_menu = new Image()
-	win_red_menu.src = "png/menus_WinRed.png"
-	win_blue_menu = new Image()
-	win_blue_menu.src = "png/menus_WinBlue.png"
-	cloud_menu = new Image()
-	cloud_menu.src = "png/menus_multiplayer.png"
+
+	menus['home'] = imageWithName('menus_home')
+	menus['rule'] = imageWithName('menus_rules')
+	menus['game_blank'] = imageWithName('menus_game')
+	menus['game_blue'] = imageWithName('menus_blue')
+	menus['game_red'] = imageWithName('menus_red')
+	menus['about'] = imageWithName('menus_info')
+	menus['win_red'] = imageWithName('menus_winred')
+	menus['win_blue'] = imageWithName('menus_winblue')
+	menus['cloud'] = imageWithName('menus_multiplayer')
 }
 
 function setPieces() {
 	pieces = JSON.parse(JSON.stringify(piece_setup))
+	if (TEST_MODE == 1) {
+		pieces = JSON.parse(JSON.stringify(test_only_piece_setup))
+	}
 	is_first_click = true
 	turn = 1
-	has_won = false
 }
 
 function clickXY(event) {
-	clickX = event.pageX - canvas.offsetLeft;
-	clickY = event.pageY - canvas.offsetTop;
-	console.log(clickX)
-	console.log(clickY)
+	var clickX = event.pageX - canvas.offsetLeft;
+	var clickY = event.pageY - canvas.offsetTop;
 	return [clickX, clickY]
 }
 
 function click_key_with_event(clickX, clickY) {
-	row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
-	column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
-	console.log(row, column)
-	console.log(clickX, clickY)
-	click_key = column + "_" + row
-	return click_key
+	var row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
+	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
+	return column + '_' + row
 }
 
 function possible_moves_mapping() {
-	possible_moves = checkPossibleTurn()
-	for (possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
-		move = possible_moves[possible_move_index]
-		move = move.split("_")
+	var possible_moves = checkPossibleTurn(first_click_key, pieces, current_window)
+	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
+		var move = possible_moves[possible_move_index]
+		move = move.split('_')
 		move = move.map((i) => Number(i));
-		context.fillStyle = "chocolate"
+		context.fillStyle = 'chocolate'
 		context.fillRect(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
 	}
 }
@@ -113,142 +154,207 @@ class WaterJump {
 }
 
 function canvasClick(event) {
-	canvas = document.getElementById("drawingCanvas");
-	context = canvas.getContext("2d");
-	click_xy = clickXY(event)
+	canvas = document.getElementById('drawingCanvas');
+	context = canvas.getContext('2d');
+	var click_xy = clickXY(event)
+	if (current_window == 'home') {
+		homeScreen(click_xy)
+	} else if (current_window == 'rules') {
+		rulesScreen(click_xy)
+	} else if (current_window == 'about') {
+		aboutScreen(click_xy)
+	}
+	if (current_window == 'game' || current_window == 'cloud_game' || current_window == 'ai_game') {
+		gameScreen(click_xy)
+	} else if (current_window == 'game_over') {
+		gameEnd(click_xy)
+	}
+}
 
-	if (current_window == "home") {
-		if (click_xy[0] > HOME_LOCAL_X_START &&
-			click_xy[0] < HOME_LOCAL_X_END &&
-			click_xy[1] > HOME_LOCAL_Y_START &&
-			click_xy[1] < HOME_LOCAL_Y_END) {
-			current_window = "game"
-			draw()
-		}
-		if (click_xy[0] > HOME_RULES_X_START &&
-			click_xy[0] < HOME_RULES_X_END &&
-			click_xy[1] > HOME_RULES_Y_START &&
-			click_xy[1] < HOME_RULES_Y_END) {
-			current_window = "rules"
-			draw()
-		}
-		if (click_xy[0] > HOME_RULES_X_START &&
-			click_xy[0] < HOME_RULES_X_END &&
-			click_xy[1] > HOME_ABOUT_Y_START &&
-			click_xy[1] < HOME_ABOUT_Y_END) {
-			current_window = "about"
-			draw()
-		}
-		if (click_xy[0] > CLOUD_X_START &&
-			click_xy[0] < CLOUD_X_END &&
-			click_xy[1] > CLOUD_Y_START &&
-			click_xy[1] < CLOUD_Y_END) {
-			current_window = "cloud"
+function homeScreen(click_xy) {
+	if (click_xy[0] > HOME_LOCAL_X_START &&
+		click_xy[0] < HOME_LOCAL_X_END &&
+		click_xy[1] > HOME_LOCAL_Y_START &&
+		click_xy[1] < HOME_LOCAL_Y_END) {
+		current_window = 'game'
+		draw()
+	}
+	if (click_xy[0] > HOME_RULES_X_START &&
+		click_xy[0] < HOME_RULES_X_END &&
+		click_xy[1] > HOME_RULES_Y_START &&
+		click_xy[1] < HOME_RULES_Y_END) {
+		current_window = 'rules'
+		draw()
+	}
+	if (click_xy[0] > HOME_RULES_X_START &&
+		click_xy[0] < HOME_RULES_X_END &&
+		click_xy[1] > HOME_ABOUT_Y_START &&
+		click_xy[1] < HOME_ABOUT_Y_END) {
+		current_window = 'about'
+		draw()
+	}
+	if (click_xy[0] > CLOUD_X_START &&
+		click_xy[0] < CLOUD_X_END &&
+		click_xy[1] > CLOUD_Y_START &&
+		click_xy[1] < CLOUD_Y_END) {
+		current_window = 'cloud_game'
 			// cloud_player 1 means red
-			cloud_player = 1
-			draw()
-		}
+		cloud_player = 1
+		draw()
+		aws()
 	}
-	if (current_window == "rules") {
-		if (click_xy[0] > BACK_X_START &&
-			click_xy[0] < BOARD_UPPER_LEFT_X &&
-			click_xy[1] > BACK_Y_START &&
-			click_xy[1] < BACK_Y_END) {
-			current_window = "home"
-			draw()
-		}
+	if (click_xy[0] > HOME_PEWTER_X_START &&
+		click_xy[0] < HOME_PEWTER_X_END &&
+		click_xy[1] > HOME_PEWTER_Y_START &&
+		click_xy[1] < HOME_PEWTER_Y_END) {
+		current_window = 'ai_game'
+		draw()
 	}
-	if (current_window == "game") {
-		if (click_xy[0] > BACK_X_START &&
-			click_xy[0] < BOARD_UPPER_LEFT_X &&
-			click_xy[1] > BACK_Y_START &&
-			click_xy[1] < BACK_Y_END) {
-			current_window = "home"
-			draw()
-		}
-	}
-	if (current_window == "about") {
-		if (click_xy[0] > BACK_X_START &&
-			click_xy[0] < BOARD_UPPER_LEFT_X &&
-			click_xy[1] > BACK_Y_START &&
-			click_xy[1] < BACK_Y_END) {
-			current_window = "home"
-			draw()
-		}
-	}
+}
 
-	if (has_won) {
-		setPieces()
-		drawBoard()
-		if (clickX > HOME_X_LEFT && clickX < HOME_X_RIGHT && clickY > HOME_Y_LEFT && clickY < HOME_Y_RIGHT) {
-			current_window = "home"
-			draw()
-		}
-		return
+function rulesScreen(click_xy) {
+	if (click_xy[0] > BACK_X_START &&
+		click_xy[0] < BOARD_UPPER_LEFT_X &&
+		click_xy[1] > BACK_Y_START &&
+		click_xy[1] < BACK_Y_END) {
+		current_window = 'home'
+		draw()
 	}
+}
 
-	click_key = click_key_with_event(click_xy[0], click_xy[1])
-	if (is_first_click && current_window == "game") {
-		if (pieces[click_key] == null) {
-			return
-		}
-		player = pieces[click_key]["player"]
-		if (player != turn) {
-			return
-		}
-		first_click_key = click_key
-		possible_moves_mapping()
-		is_first_click = false
-		return
+function aboutScreen(click_xy) {
+	if (click_xy[0] > BACK_X_START &&
+		click_xy[0] < BOARD_UPPER_LEFT_X &&
+		click_xy[1] > BACK_Y_START &&
+		click_xy[1] < BACK_Y_END) {
+		current_window = 'home'
+		draw()
 	}
-	second_click_key = click_key
-	if (current_window == "game") {
-		if (first_click_key == second_click_key) {
-			first_click_key = null
-			second_click_key = null
-			is_first_click = true
-			moving_piece = null
-			drawBoard()
-		}
-		if (!validMove()) {
-			return
-		}
-		movePiece()
-	}
-	if (pieces["0_3"] != null) {
-		has_won = true
-		context.drawImage(win_red_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
-	}
-	if (pieces["8_3"] != null) {
-		has_won = true
-		context.drawImage(win_blue_menu, 0,0,GAME_WIDTH,GAME_HEIGHT);
-	}
-};
+}
 
-function playerTurn() {
-	possible_pieces = []
-	keys = Object.keys(pieces)
-	for (piece = 0; piece < keys.length; piece++) {
-		piece_0 = keys[piece]
-		if (pieces[piece_0]["player"] == turn) {
-			first_click_key = keys[piece]
-			attacking_animal_player = pieces[first_click_key]["player"]
-			checkpossibleturn = checkPossibleTurn()
+function gameScreen(click_xy) {
+	if (click_xy[0] > BACK_X_START &&
+		click_xy[0] < BOARD_UPPER_LEFT_X &&
+		click_xy[1] > BACK_Y_START &&
+		click_xy[1] < BACK_Y_END) {
+		current_window = 'home'
+		draw()
+	}
+	if ((current_window == 'ai_game' && turn == 1) || current_window == 'game' || current_window == 'cloud_game') {
+		var click_key = click_key_with_event(click_xy[0], click_xy[1])
+		if (is_first_click) {
+			if (pieces[click_key] == null) {
+				return
+			}
+			var player = pieces[click_key]['player']
+			if (player != turn) {
+				return
+			}
+			first_click_key = click_key
+			possible_moves_mapping()
+			is_first_click = false
+		} else {
+			var second_click_key = click_key
+			if (first_click_key == second_click_key) {
+				is_first_click = true
+				drawBoard()
+				return
+			}
+			if (!validMove(first_click_key, pieces, second_click_key, current_window)) {
+				return
+			}
+			movePiece(first_click_key, second_click_key)
+		}
+		maybeEndGame()
+	}
+}
+
+function aiGame() {
+	var ai_moves = playerTurn(pieces, current_window, turn)
+	var ai_possible_moves = ai_moves[1]
+	var ai_possible_moves_index = Math.floor(Math.random() * ai_possible_moves.length)
+	if (TEST_MODE == 1) {
+		ai_possible_moves_index = 0
+	}
+	var ai_move = ai_possible_moves[ai_possible_moves_index]
+	if (TEST_MODE == 1) {
+		if (pieces['0_0'] != null && pieces['0_0']['animal'] == 5) {
+			ai_move = ['0_0','8_3']
+		}
+	}
+	var first_click_key = ai_move[0]
+	var second_click_key = ai_move[1]
+	movePiece(first_click_key, second_click_key)
+}
+
+function maybeEndGame() {
+	checkIfGameEnded()
+	if (winning_player != '') {
+		current_window = 'game_over'
+		draw()
+	}
+}
+
+function gameEnd(click_xy) {
+	if (click_xy[0] > HOME_X_LEFT && click_xy[0] < HOME_X_RIGHT && click_xy[1] > HOME_Y_LEFT && click_xy[1] < HOME_Y_RIGHT) {
+		window.location.replace(gameURL())
+		setTimeout('location.reload()', 1000)
+	}
+}
+
+function checkNumberOfPieces(color_number) {
+	var pieces_position_list = Object.keys(pieces)
+	for (var p_i = 0; p_i < pieces_position_list.length; p_i++) {
+		var piece_position = pieces_position_list[p_i]
+		var player = pieces[piece_position]['player']
+		if (player == color_number) {
+			return false
+		}
+	}
+	return true
+}
+
+function checkIfGameEnded() {
+	if (pieces['0_3'] != null || checkNumberOfPieces(0)) {
+		winning_player = 'red'
+		current_window = 'game_over'
+		draw()
+	}
+	if (pieces['8_3'] != null || checkNumberOfPieces(1)) {
+		winning_player = 'blue'
+		current_window = 'game_over'
+		draw()
+	}
+}
+
+function playerTurn(pieces, current_window, turn) {
+	var possible_pieces = []
+	var possible_moves = []
+	var keys = Object.keys(pieces)
+	for (var piece = 0; piece < keys.length; piece++) {
+		var piece_0 = keys[piece]
+		if (pieces[piece_0]['player'] == turn) {
+			var first_click_key = keys[piece]
+			var attacking_animal_player = pieces[first_click_key]['player']
+			checkpossibleturn = checkPossibleTurn(first_click_key, pieces, current_window)
+			for (turns = 0; turns < checkpossibleturn.length; turns++) {
+				possible_moves.push([first_click_key, checkpossibleturn[turns]])
+			}
 			if (checkpossibleturn.length > 0) {
 				possible_pieces.push(first_click_key)
 			}
 		}
 	}
-	return possible_pieces
+	return [possible_pieces, possible_moves]
 }
 
-function checkPossibleTurn() {
-	possibleMoves = []
-	for (column = 0; column < 7; column++) {
-		for (row = 0; row < 9; row++) {
-			second_click_key = row + "_" + column
-			if (validMove()) {
-				possibleMove = second_click_key
+function checkPossibleTurn(first_click_key, pieces, current_window) {
+	var possibleMoves = []
+	for (var column = 0; column < 7; column++) {
+		for (var row = 0; row < 9; row++) {
+			var second_click_key = row + '_' + column
+			if (validMove(first_click_key, pieces, second_click_key, current_window)) {
+				var possibleMove = second_click_key
 				possibleMoves.push(possibleMove)
 			}
 		}
@@ -256,62 +362,69 @@ function checkPossibleTurn() {
 	return possibleMoves
 }
 
-function validMove() {
-	first_coords = first_click_key.split("_")
+function validMove(first_click_key, pieces, second_click_key, current_window) {
+	var first_coords = first_click_key.split('_')
 	first_coords = first_coords.map((i) => Number(i));
-	second_coords = second_click_key.split("_")
+	var second_coords = second_click_key.split('_')
 	second_coords = second_coords.map((i) => Number(i));
-	attacking_animal_num = pieces[first_click_key]["animal"]
-	attacking_animal_player = pieces[first_click_key]["player"]
-		// Allow tigers and lions to jump over water.
-	if (current_window == "game" && cloud_player != turn) {
+	if (second_coords[0] < 0 || second_coords[1] < 0 || second_coords[0] > 8 || second_coords[1] > 6) {
 		return false
 	}
-	valid_moves = validMoveWater[first_click_key]
+	var attacking_animal_num = pieces[first_click_key]['animal']
+	var attacking_animal_player = pieces[first_click_key]['player']
+	if (current_window == 'cloud_game' && typeof cloud_player != 'undefined' && cloud_player != turn) {
+		return false
+	}
+	// Allow tigers and lions to jump over water.
+	var valid_moves = validMoveWater[first_click_key]
 	if (valid_moves != null) {
-		for (valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
+		for (var valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
 			valid_move = valid_moves[valid_move_index]
 			if (valid_move.destination == second_click_key) {
-				if (attacking_animal_num == 6 || attacking_animal_num == 7) {
-					for (w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
+				if (attacking_animal_num == TIGER || attacking_animal_num == LION) {
+					for (var w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
 						if (pieces[valid_move.water[w_s_i]] != null) {
 							return false
 						}
 					}
-					return true
+					if (pieces[second_click_key] != null && pieces[second_click_key]["player"] != pieces[first_click_key]["player"] && pieces[second_click_key]["animal"] <= pieces[first_click_key]["animal"]) {
+						return true
+					} else if (pieces[second_click_key] == null) {
+						return true
+					}
 				}
 			}
 		}
 	}
-	is_moving_to_water_square = false
-	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
+	var is_moving_to_water_square = false
+	for (var w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
 			is_moving_to_water_square = true
 		}
 	}
 	if (is_moving_to_water_square) {
-		if (attacking_animal_num != 1) {
+		if (attacking_animal_num != RAT) {
 			return false
 		}
 	}
 	if (attacking_animal_player == 0) {
-		is_attacking_own_den = ["0_3"].indexOf(second_click_key) > -1
+		var is_attacking_own_den = ['0_3'].indexOf(second_click_key) > -1
 	} else {
-		is_attacking_own_den = ["8_3"].indexOf(second_click_key) > -1
+		var is_attacking_own_den = ['8_3'].indexOf(second_click_key) > -1
 	}
 	if (is_attacking_own_den) {
 		return false
 	}
 	// Disallow non-adjacent moves.
-	x_diff = Math.abs(first_coords[0] - second_coords[0])
-	y_diff = Math.abs(first_coords[1] - second_coords[1])
+	var x_diff = Math.abs(first_coords[0] - second_coords[0])
+	var y_diff = Math.abs(first_coords[1] - second_coords[1])
 	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
-		return false
+		return TEST_MODE == 1
 	}
 	first_coords[0] = parseInt(first_coords[0])
 	first_coords[1] = parseInt(first_coords[1])
 	is_moving_from_water_square = false
-	for (w_s_i = 0; w_s_i < water.length; w_s_i++) {
+	for (var w_s_i = 0; w_s_i < water.length; w_s_i++) {
 		if (water[w_s_i][0] == first_coords[0] && water[w_s_i][1] == first_coords[1]) {
 			is_moving_from_water_square = true
 		}
@@ -322,17 +435,17 @@ function validMove() {
 	if (pieces[second_click_key] == null) {
 		return true
 	}
-	defending_animal_num = pieces[second_click_key]["animal"]
-	defending_animal_player = pieces[second_click_key]["player"]
+	var defending_animal_num = pieces[second_click_key]['animal']
+	var defending_animal_player = pieces[second_click_key]['player']
 	if (attacking_animal_player == defending_animal_player) {
 		return false
 	}
 	if (attacking_animal_player == 0) {
-		is_attacking_own_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
-		is_attacking_enemy_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
+		var is_attacking_own_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
+		var is_attacking_enemy_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
 	} else {
-		is_attacking_own_trap = ["8_2", "7_3", "8_4"].indexOf(second_click_key) > -1
-		is_attacking_enemy_trap = ["0_2", "1_3", "0_4"].indexOf(second_click_key) > -1
+		var is_attacking_own_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
+		var is_attacking_enemy_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
 	}
 	if (is_attacking_own_trap) {
 		return true
@@ -341,54 +454,63 @@ function validMove() {
 		return false
 	}
 	if (pieces[second_click_key] != null) {
-		if ((attacking_animal_num == 8) && (defending_animal_num == 1)) {
+		if ((attacking_animal_num == ELEPHANT) && (defending_animal_num == RAT)) {
 			return false
 		}
 		if ((attacking_animal_num < defending_animal_num) &&
-			((attacking_animal_num != 1) || (defending_animal_num != 8)) && (is_attacking_own_trap == false)) {
+			((attacking_animal_num != RAT) || (defending_animal_num != ELEPHANT)) && (is_attacking_own_trap == false)) {
 			return false
 		}
 	}
 	return true
 }
 
-function movePiece() {
+function movePiece(first_click_key, second_click_key) {
 	var moving_piece = pieces[first_click_key]
+	moved_piece[0] = first_click_key.split('_')
+	moved_piece[1] = second_click_key.split('_')
 	delete pieces[first_click_key]
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	setBoard()
+	if (current_window == 'ai_game' && turn == 0) {
+		maybeEndGame()
+		aiGame()
+	} else if (current_window == 'cloud_game') {
+		setBoard()
+	}
 	drawBoard()
 }
 
 function draw() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
-		context.drawImage(home_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-		join_multiplayer()
+		context.drawImage(menus['home'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'rules') {
-		context.drawImage(rule_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		context.drawImage(menus['rule'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
-		context.drawImage(about_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-	} else if (current_window == 'cloud') {
-		context.drawImage(cloud_menu, 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-		aws()
-	} else {
+		context.drawImage(menus['about'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+	} else if (current_window == 'cloud_game') {
+		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+	} else if (current_window == 'game_over') {
+		if (winning_player == 'red') {
+			context.drawImage(menus['win_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		}
+		if (winning_player == 'blue') {
+			context.drawImage(menus['win_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		}
+	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
 	}
 }
 
 function join_multiplayer() {
-	joining_code = window.location.search
-	joining_code = joining_code.replace("?game_code=", "")
-	console.log('joining_code [' + joining_code + ']')
-	if (joining_code != "") {
+	var joining_code = window.location.search
+	joining_code = joining_code.replace('?game_code=', '')
+	if (joining_code != '') {
 		turn = 1
 		game_code = joining_code
 		cloud_player = 0
-		console.log("turn ="+turn)
-		console.log("cloud_player ="+cloud_player)
 		drawBoard()
 		setBoard()
 	}
@@ -398,64 +520,107 @@ function aws() {
 	function createGameListener() {
 		turn = 0
 		game_code = this.responseText
-		console.log(turn)
 		setBoard()
 	}
 	var createGameReq = new XMLHttpRequest();
-	createGameReq.addEventListener("load", createGameListener);
-	createGameReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&create_game=1");
+	createGameReq.addEventListener('load', createGameListener);
+	createGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&create_game=1');
 	createGameReq.send();
 }
 
 function setBoard() {
-	var setup = {piece_info : pieces, turn_info : turn}
+	var setup = {
+		piece_info: pieces,
+		turn_info: turn,
+		moved_piece_info: moved_piece
+	}
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
-	document.getElementById("multiplayer_join_url").innerHTML = "http://rahulbiswas.github.io/siddhartha/jungle/jungle.html?game_code="+game_code;
-	console.log("https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url)
+	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
+
 	function setGameListener() {
 		checkPeriodically()
 	}
-	setGameReq = new XMLHttpRequest();
-	setGameReq.addEventListener("load", setGameListener)
-	setGameReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code="+ game_code +"&game_board="+url);
+	var setGameReq = new XMLHttpRequest();
+	setGameReq.addEventListener('load', setGameListener)
+	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code=' + game_code + '&game_board=' + url);
 	setGameReq.send();
 }
 
 function checkPeriodically() {
 	function getGameListener() {
-		console.log(this.responseText)
-		return_info = JSON.parse(this.responseText)
-		turn = return_info["turn_info"]
-		pieces = return_info["piece_info"]
-		console.log(pieces)
-		console.log(turn)
+		var return_info = JSON.parse(this.responseText)
+		turn = return_info['turn_info']
+		pieces = return_info['piece_info']
+		moved_piece = return_info['moved_piece_info']
+		checkIfGameEnded()
+		if (winning_player != '') {
+			current_window = 'game_over'
+			draw()
+			maybeEndGame()
+		}
 		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
-		} else {
-			current_window = "game"
+		} else if (current_window != 'game_over') {
+			current_window = 'cloud_game'
 			drawBoard()
 		}
 	}
 	var getReq = new XMLHttpRequest();
-	getReq.addEventListener("load", getGameListener)
-	getReq.open("GET", "https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code="+ game_code);
-	console.log("Time")
+	getReq.addEventListener('load', getGameListener)
+	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code=' + game_code);
 	getReq.send();
 }
 
 
 function drawBoard() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
-	context.drawImage(game_menu, 0, 0, GAME_WIDTH, GAME_HEIGHT);
-	pieces_position_list = Object.keys(pieces)
-	for (p_i = 0; p_i < pieces_position_list.length; p_i++) {
-		piece_position = pieces_position_list[p_i]
-		player = pieces[piece_position]["player"]
-		animal = pieces[piece_position]["animal"]
-		piece_components = piece_position.split("_")
-		x = piece_components[1] * BOARD_SQUARE_WIDTH
-		y = piece_components[0] * BOARD_SQUARE_WIDTH
+	if (typeof cloud_player == 1) {
+		context.drawImage(menus['game_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	} else if (typeof cloud_player == 0) {
+		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	} else if (turn == 1) {
+		context.drawImage(menus['game_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	} else if (turn == 0) {
+		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	}
+	context.drawImage(menus['game_blank'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	for (var player = 0; player < 2; player ++) {
+		for (var animal = 1; animal < 9; animal ++) {
+			is_alive = false
+			for (var k in pieces) {
+				if (pieces[k]['player'] == player && pieces[k]['animal'] == animal) {
+					is_alive = true
+					break
+				}
+			}
+			if (is_alive) {
+				alpha = 0.2
+			} else {
+				alpha = 1.0
+			}
+			context.globalAlpha = alpha;
+			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH)*player) - ((animal % 2) * 100) + 5
+			if (player == 0) {
+				x += 100
+			}
+			y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2)*100) + 100
+			if (player == 0) {
+				context.drawImage(animals_0[animal], x, y, 95, 95)
+			} else if (player == 1) {
+				context.drawImage(animals_1[animal], x, y, 95, 95)
+			}
+			context.globalAlpha = 1.0;
+		}
+	}
+	var pieces_position_list = Object.keys(pieces)
+	for (var p_i = 0; p_i < pieces_position_list.length; p_i++) {
+		var piece_position = pieces_position_list[p_i]
+		var player = pieces[piece_position]['player']
+		var animal = pieces[piece_position]['animal']
+		var piece_components = piece_position.split('_')
+		var x = piece_components[1] * BOARD_SQUARE_WIDTH
+		var y = piece_components[0] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
 			context.drawImage(animals_0[animal],
 				x + BOARD_UPPER_LEFT_X,
@@ -471,12 +636,27 @@ function drawBoard() {
 				PIECE_LENGTH);
 		}
 	}
-	moving_pieces = playerTurn()
-	for (p_i = 0; p_i < moving_pieces.length; p_i++) {
-		context.fillStyle = "green"
-		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-			moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+	if (moved_piece[0] != ['0']) {
+		context.fillStyle = 'purple'
+		context.fillRect(moved_piece[0][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
+		context.fillRect(moved_piece[1][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			POTENTIAL_MOVE_LENGTH,
+			POTENTIAL_MOVE_LENGTH)
+	}
+	var moving_pieces = playerTurn(pieces, current_window, turn)[0]
+	var moves = playerTurn(pieces, current_window, turn)[1]
+	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || turn == typeof cloud_player)
+	if (show_green_squares) {
+		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
+			context.fillStyle = 'green'
+			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+				POTENTIAL_MOVE_LENGTH,
+				POTENTIAL_MOVE_LENGTH)
+		}
 	}
 }
