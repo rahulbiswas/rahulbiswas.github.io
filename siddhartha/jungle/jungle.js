@@ -64,6 +64,31 @@ const CLOUD_X_START = 69
 const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
+const AI_A_X_START = 52
+const AI_C_X_START = 52
+const AI_E_X_START = 52
+const AI_A_X_END = 595
+const AI_C_X_END = 595
+const AI_E_X_END = 595
+const AI_A_Y_START = 62
+const AI_B_Y_START = 62
+const AI_A_Y_END = 207
+const AI_B_Y_END = 207
+const AI_B_X_START = 617
+const AI_D_X_START = 617
+const AI_F_X_START = 617
+const AI_B_X_END = 1160
+const AI_D_X_END = 1160
+const AI_F_X_END = 1160
+const AI_C_Y_START = 355
+const AI_D_Y_START = 355
+const AI_C_Y_END = 501
+const AI_D_Y_END = 501
+const AI_E_Y_START = 630
+const AI_F_Y_START = 630
+const AI_E_Y_END = 744
+const AI_F_Y_END = 744
+
 
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
@@ -112,6 +137,7 @@ function loadPNGs() {
 	menus['win_red'] = imageWithName('menus_winred')
 	menus['win_blue'] = imageWithName('menus_winblue')
 	menus['cloud'] = imageWithName('menus_multiplayer')
+	menus['pewter_select'] = imageWithName('menus_pewter_select')
 }
 
 function setPieces() {
@@ -168,7 +194,9 @@ function canvasClick(event) {
 		gameScreen(click_xy)
 	} else if (current_window == 'game_over') {
 		gameEnd(click_xy)
-	}
+	} else if (current_window == 'ai_select_game') [
+		pewterSelectScreen(click_xy)
+	]
 }
 
 function homeScreen(click_xy) {
@@ -207,7 +235,8 @@ function homeScreen(click_xy) {
 		click_xy[0] < HOME_PEWTER_X_END &&
 		click_xy[1] > HOME_PEWTER_Y_START &&
 		click_xy[1] < HOME_PEWTER_Y_END) {
-		current_window = 'ai_game'
+		current_window = 'ai_select_game'
+		pewterSelectScreen(click_xy)
 		draw()
 	}
 }
@@ -267,6 +296,57 @@ function gameScreen(click_xy) {
 		}
 		maybeEndGame()
 	}
+}
+
+function pewterSelectScreen(click_xy) {
+	if (click_xy[0] > AI_A_X_START &&
+		click_xy[0] < AI_A_X_END &&
+		click_xy[1] > AI_A_Y_START &&
+		click_xy[1] < AI_A_Y_END) {
+		ai_select = 'A'
+		current_window = 'ai_game'
+		draw()
+	}
+	// if (click_xy[0] > AI_B_X_START &&
+	// 	click_xy[0] < AI_B_X_END &&
+	// 	click_xy[1] > AI_B_Y_START &&
+	// 	click_xy[1] < AI_B_Y_END) {
+	// 	ai_select = 'B'
+	// 	current_window = 'ai_game'
+	// 	draw()
+	// }
+	// if (click_xy[0] > AI_C_X_START &&
+	// 	click_xy[0] < AI_C_X_END &&
+	// 	click_xy[1] > AI_C_Y_START &&
+	// 	click_xy[1] < AI_C_Y_END) {
+	// 	ai_select = 'C'
+	// 	current_window = 'ai_game'
+	// 	draw()
+	// }
+	// if (click_xy[0] > AI_D_X_START &&
+	// 	click_xy[0] < AI_D_X_END &&
+	// 	click_xy[1] > AI_D_Y_START &&
+	// 	click_xy[1] < AI_D_Y_END) {
+	// 	ai_select = 'D'
+	// 	current_window = 'ai_game'
+	// 	draw()
+	// }
+	// if (click_xy[0] > AI_E_X_START &&
+	// 	click_xy[0] < AI_E_X_END &&
+	// 	click_xy[1] > AI_E_Y_START &&
+	// 	click_xy[1] < AI_E_Y_END) {
+	// 	ai_select = 'E'
+	// 	current_window = 'ai_game'
+	// 	draw()
+	// }
+	// if (click_xy[0] > AI_F_X_START &&
+	// 	click_xy[0] < AI_F_X_END &&
+	// 	click_xy[1] > AI_F_Y_START &&
+	// 	click_xy[1] < AI_F_Y_END) {
+	// 	ai_select = 'F'
+	// 	current_window = 'ai_game'
+	// 	draw()
+	// }
 }
 
 function aiGame() {
@@ -499,6 +579,8 @@ function draw() {
 		if (winning_player == 'blue') {
 			context.drawImage(menus['win_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
+	} else if (current_window == 'ai_select_game') {
+		context.drawImage(menus['pewter_select'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
 	}
@@ -649,7 +731,7 @@ function drawBoard() {
 	}
 	var moving_pieces = playerTurn(pieces, current_window, turn)[0]
 	var moves = playerTurn(pieces, current_window, turn)[1]
-	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || turn == typeof cloud_player)
+	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || (turn == typeof cloud_player && current_window == 'cloud_game'))
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
