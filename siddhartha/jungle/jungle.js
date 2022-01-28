@@ -350,27 +350,37 @@ function pewterSelectScreen(click_xy) {
 	// }
 }
 
+function aiGameAMove(ai_possible_moves) {
+	return Math.floor(Math.random() * ai_possible_moves.length)
+}
+
+function aiGameBMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		var first_coords = ai_possible_moves[move_index][0].split('_')
+		first_coords = first_coords.map((i) => Number(i));
+		var second_coords = ai_possible_moves[move_index][1].split('_')
+		second_coords = second_coords.map((i) => Number(i));
+		if (first_coords[0] < second_coords[0]) {
+			ai_possible_moves_index = move_index
+			break
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
 function aiGame() {
 	var ai_moves = playerTurn(pieces, current_window, turn)
 	var ai_possible_moves = ai_moves[1]
-	var ai_possible_moves_index = -1
+	var ai_possible_moves_index = 0
 	if (ai_select == 'A') {
-		ai_possible_moves_index = Math.floor(Math.random() * ai_possible_moves.length)
+		ai_possible_moves_index = aiGameAMove(ai_possible_moves)
 	}
 	if (ai_select == 'B') {
-		for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-			var first_coords = ai_possible_moves[move_index][0].split('_')
-			first_coords = first_coords.map((i) => Number(i));
-			var second_coords = ai_possible_moves[move_index][1].split('_')
-			second_coords = second_coords.map((i) => Number(i));
-			if (first_coords[0] < second_coords[0]) {
-				ai_possible_moves_index = move_index
-				break
-			}
-		}
-		if (ai_possible_moves_index == -1) {
-			ai_possible_moves_index = Math.floor(Math.random() * ai_possible_moves.length)
-		}
+		ai_possible_moves_index = aiGameBMove(ai_possible_moves)
 	}
 	if (TEST_MODE == 1) {
 		ai_possible_moves_index = 0
