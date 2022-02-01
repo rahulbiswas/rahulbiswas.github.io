@@ -316,22 +316,22 @@ function pewterSelectScreen(click_xy) {
 		current_window = 'ai_game'
 		draw()
 	}
-	// if (click_xy[0] > AI_C_X_START &&
-	// 	click_xy[0] < AI_C_X_END &&
-	// 	click_xy[1] > AI_C_Y_START &&
-	// 	click_xy[1] < AI_C_Y_END) {
-	// 	ai_select = 'C'
-	// 	current_window = 'ai_game'
-	// 	draw()
-	// }
-	// if (click_xy[0] > AI_D_X_START &&
-	// 	click_xy[0] < AI_D_X_END &&
-	// 	click_xy[1] > AI_D_Y_START &&
-	// 	click_xy[1] < AI_D_Y_END) {
-	// 	ai_select = 'D'
-	// 	current_window = 'ai_game'
-	// 	draw()
-	// }
+	if (click_xy[0] > AI_C_X_START &&
+		click_xy[0] < AI_C_X_END &&
+		click_xy[1] > AI_C_Y_START &&
+		click_xy[1] < AI_C_Y_END) {
+		ai_select = 'C'
+		current_window = 'ai_game'
+		draw()
+	}
+	if (click_xy[0] > AI_D_X_START &&
+		click_xy[0] < AI_D_X_END &&
+		click_xy[1] > AI_D_Y_START &&
+		click_xy[1] < AI_D_Y_END) {
+		ai_select = 'D'
+		current_window = 'ai_game'
+		draw()
+	}
 	// if (click_xy[0] > AI_E_X_START &&
 	// 	click_xy[0] < AI_E_X_END &&
 	// 	click_xy[1] > AI_E_Y_START &&
@@ -372,6 +372,43 @@ function aiGameBMove(ai_possible_moves) {
 	return ai_possible_moves_index
 }
 
+function aiGameCMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		possible_square = ai_possible_moves[move_index][1]
+		if (pieces[possible_square] != null) {
+			ai_possible_moves_index = move_index
+			break
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
+function aiGameDMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		den_square_coords = [8,3]
+		var first_coords = ai_possible_moves[move_index][0].split('_')
+		first_coords = first_coords.map((i) => Number(i));
+		var second_coords = ai_possible_moves[move_index][1].split('_')
+		second_coords = second_coords.map((i) => Number(i));
+		current_difference_x = Math.abs(den_square_coords[0]-first_coords[0])
+		current_difference_y = Math.abs(den_square_coords[1]-first_coords[1])
+		future_difference_x = Math.abs(den_square_coords[0]-second_coords[0])
+		future_difference_y = Math.abs(den_square_coords[1]-second_coords[1])
+		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
+			ai_possible_moves_index = move_index
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
 function aiGame() {
 	var ai_moves = playerTurn(pieces, current_window, turn)
 	var ai_possible_moves = ai_moves[1]
@@ -382,10 +419,17 @@ function aiGame() {
 	if (ai_select == 'B') {
 		ai_possible_moves_index = aiGameBMove(ai_possible_moves)
 	}
+	if (ai_select == 'C') {
+		ai_possible_moves_index = aiGameCMove(ai_possible_moves)
+	}
+	if (ai_select == 'D') {
+		ai_possible_moves_index = aiGameDMove(ai_possible_moves)
+	}
 	if (TEST_MODE == 1) {
 		ai_possible_moves_index = 0
 	}
 	var ai_move = ai_possible_moves[ai_possible_moves_index]
+	console.log(ai_move)
 	if (TEST_MODE == 1) {
 		if (pieces['0_0'] != null && pieces['0_0']['animal'] == 5) {
 			ai_move = ['0_0', '8_3']
