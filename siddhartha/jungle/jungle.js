@@ -390,15 +390,15 @@ function aiGameCMove(ai_possible_moves) {
 function aiGameDMove(ai_possible_moves) {
 	ai_possible_moves_index = -1
 	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-		den_square_coords = [8,3]
+		den_square_coords = [8, 3]
 		var first_coords = ai_possible_moves[move_index][0].split('_')
 		first_coords = first_coords.map((i) => Number(i));
 		var second_coords = ai_possible_moves[move_index][1].split('_')
 		second_coords = second_coords.map((i) => Number(i));
-		current_difference_x = Math.abs(den_square_coords[0]-first_coords[0])
-		current_difference_y = Math.abs(den_square_coords[1]-first_coords[1])
-		future_difference_x = Math.abs(den_square_coords[0]-second_coords[0])
-		future_difference_y = Math.abs(den_square_coords[1]-second_coords[1])
+		current_difference_x = Math.abs(den_square_coords[0] - first_coords[0])
+		current_difference_y = Math.abs(den_square_coords[1] - first_coords[1])
+		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
+		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
 		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
 			ai_possible_moves_index = move_index
 		}
