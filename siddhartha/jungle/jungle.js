@@ -2,6 +2,7 @@ current_window = 'home'
 menus = {}
 moved_piece = ['0']
 eaten_animals = []
+ai_select = ''
 
 // Global variables.
 // animals_0
@@ -64,6 +65,31 @@ const CLOUD_X_START = 69
 const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
+const AI_A_X_START = 52
+const AI_C_X_START = 52
+const AI_E_X_START = 52
+const AI_A_X_END = 595
+const AI_C_X_END = 595
+const AI_E_X_END = 595
+const AI_A_Y_START = 62
+const AI_B_Y_START = 62
+const AI_A_Y_END = 207
+const AI_B_Y_END = 207
+const AI_B_X_START = 617
+const AI_D_X_START = 617
+const AI_F_X_START = 617
+const AI_B_X_END = 1160
+const AI_D_X_END = 1160
+const AI_F_X_END = 1160
+const AI_C_Y_START = 355
+const AI_D_Y_START = 355
+const AI_C_Y_END = 501
+const AI_D_Y_END = 501
+const AI_E_Y_START = 630
+const AI_F_Y_START = 630
+const AI_E_Y_END = 744
+const AI_F_Y_END = 744
+
 
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
@@ -112,6 +138,7 @@ function loadPNGs() {
 	menus['win_red'] = imageWithName('menus_winred')
 	menus['win_blue'] = imageWithName('menus_winblue')
 	menus['cloud'] = imageWithName('menus_multiplayer')
+	menus['pewter_select'] = imageWithName('menus_pewter_select')
 }
 
 function setPieces() {
@@ -168,6 +195,8 @@ function canvasClick(event) {
 		gameScreen(click_xy)
 	} else if (current_window == 'game_over') {
 		gameEnd(click_xy)
+	} else if (current_window == 'ai_select_game') {
+		pewterSelectScreen(click_xy)
 	}
 }
 
@@ -207,7 +236,8 @@ function homeScreen(click_xy) {
 		click_xy[0] < HOME_PEWTER_X_END &&
 		click_xy[1] > HOME_PEWTER_Y_START &&
 		click_xy[1] < HOME_PEWTER_Y_END) {
-		current_window = 'ai_game'
+		current_window = 'ai_select_game'
+		pewterSelectScreen(click_xy)
 		draw()
 	}
 }
@@ -269,17 +299,166 @@ function gameScreen(click_xy) {
 	}
 }
 
+function pewterSelectScreen(click_xy) {
+	if (click_xy[0] > AI_A_X_START &&
+		click_xy[0] < AI_A_X_END &&
+		click_xy[1] > AI_A_Y_START &&
+		click_xy[1] < AI_A_Y_END) {
+		ai_select = 'A'
+		current_window = 'ai_game'
+		draw()
+	}
+	if (click_xy[0] > AI_B_X_START &&
+		click_xy[0] < AI_B_X_END &&
+		click_xy[1] > AI_B_Y_START &&
+		click_xy[1] < AI_B_Y_END) {
+		ai_select = 'B'
+		current_window = 'ai_game'
+		draw()
+	}
+	if (click_xy[0] > AI_C_X_START &&
+		click_xy[0] < AI_C_X_END &&
+		click_xy[1] > AI_C_Y_START &&
+		click_xy[1] < AI_C_Y_END) {
+		ai_select = 'C'
+		current_window = 'ai_game'
+		draw()
+	}
+	if (click_xy[0] > AI_D_X_START &&
+		click_xy[0] < AI_D_X_END &&
+		click_xy[1] > AI_D_Y_START &&
+		click_xy[1] < AI_D_Y_END) {
+		ai_select = 'D'
+		current_window = 'ai_game'
+		draw()
+	}
+	if (click_xy[0] > AI_E_X_START &&
+		click_xy[0] < AI_E_X_END &&
+		click_xy[1] > AI_E_Y_START &&
+		click_xy[1] < AI_E_Y_END) {
+		ai_select = 'E'
+		current_window = 'ai_game'
+		draw()
+	}
+	// if (click_xy[0] > AI_F_X_START &&
+	// 	click_xy[0] < AI_F_X_END &&
+	// 	click_xy[1] > AI_F_Y_START &&
+	// 	click_xy[1] < AI_F_Y_END) {
+	// 	ai_select = 'F'
+	// 	current_window = 'ai_game'
+	// 	draw()
+	// }
+}
+
+function aiGameAMove(ai_possible_moves) {
+	return Math.floor(Math.random() * ai_possible_moves.length)
+}
+
+function aiGameBMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		var first_coords = ai_possible_moves[move_index][0].split('_')
+		first_coords = first_coords.map((i) => Number(i));
+		var second_coords = ai_possible_moves[move_index][1].split('_')
+		second_coords = second_coords.map((i) => Number(i));
+		if (first_coords[0] < second_coords[0]) {
+			ai_possible_moves_index = move_index
+			break
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
+function aiGameCMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		possible_square = ai_possible_moves[move_index][1]
+		if (pieces[possible_square] != null) {
+			ai_possible_moves_index = move_index
+			break
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
+function aiGameDMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		den_square_coords = [8, 3]
+		var first_coords = ai_possible_moves[move_index][0].split('_')
+		first_coords = first_coords.map((i) => Number(i));
+		var second_coords = ai_possible_moves[move_index][1].split('_')
+		second_coords = second_coords.map((i) => Number(i));
+		current_difference_x = Math.abs(den_square_coords[0] - first_coords[0])
+		current_difference_y = Math.abs(den_square_coords[1] - first_coords[1])
+		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
+		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
+		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
+			ai_possible_moves_index = move_index
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
+function aiGameEMove(ai_possible_moves) {
+	ai_possible_moves_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		den_square_coords = [0, 3]
+		var first_coords = ai_possible_moves[move_index][0].split('_')
+		first_coords = first_coords.map((i) => Number(i));
+		var second_coords = ai_possible_moves[move_index][1].split('_')
+		second_coords = second_coords.map((i) => Number(i));
+		current_difference_x = Math.abs(den_square_coords[0] - first_coords[0])
+		current_difference_y = Math.abs(den_square_coords[1] - first_coords[1])
+		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
+		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
+		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
+			ai_possible_moves_index = move_index
+		}
+	}
+	if (ai_possible_moves_index == -1) {
+		return aiGameAMove(ai_possible_moves)
+	}
+	return ai_possible_moves_index
+}
+
+
 function aiGame() {
 	var ai_moves = playerTurn(pieces, current_window, turn)
 	var ai_possible_moves = ai_moves[1]
-	var ai_possible_moves_index = Math.floor(Math.random() * ai_possible_moves.length)
+	var ai_possible_moves_index = 0
+	if (ai_select == 'A') {
+		ai_possible_moves_index = aiGameAMove(ai_possible_moves)
+	}
+	if (ai_select == 'B') {
+		ai_possible_moves_index = aiGameBMove(ai_possible_moves)
+	}
+	if (ai_select == 'C') {
+		ai_possible_moves_index = aiGameCMove(ai_possible_moves)
+	}
+	if (ai_select == 'D') {
+		ai_possible_moves_index = aiGameDMove(ai_possible_moves)
+	}
+	if (ai_select == 'E') {
+		ai_possible_moves_index = aiGameEMove(ai_possible_moves)
+	}
 	if (TEST_MODE == 1) {
 		ai_possible_moves_index = 0
 	}
 	var ai_move = ai_possible_moves[ai_possible_moves_index]
+	console.log(ai_move)
 	if (TEST_MODE == 1) {
 		if (pieces['0_0'] != null && pieces['0_0']['animal'] == 5) {
-			ai_move = ['0_0','8_3']
+			ai_move = ['0_0', '8_3']
 		}
 	}
 	var first_click_key = ai_move[0]
@@ -473,7 +652,7 @@ function movePiece(first_click_key, second_click_key) {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	if (current_window == 'ai_game' && turn == 0) {
+	if (current_window == 'ai_game' && turn == 0 && ai_select != '') {
 		maybeEndGame()
 		aiGame()
 	} else if (current_window == 'cloud_game') {
@@ -499,6 +678,8 @@ function draw() {
 		if (winning_player == 'blue') {
 			context.drawImage(menus['win_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
+	} else if (current_window == 'ai_select_game') {
+		context.drawImage(menus['pewter_select'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
 	}
@@ -585,8 +766,8 @@ function drawBoard() {
 		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	}
 	context.drawImage(menus['game_blank'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
-	for (var player = 0; player < 2; player ++) {
-		for (var animal = 1; animal < 9; animal ++) {
+	for (var player = 0; player < 2; player++) {
+		for (var animal = 1; animal < 9; animal++) {
 			is_alive = false
 			for (var k in pieces) {
 				if (pieces[k]['player'] == player && pieces[k]['animal'] == animal) {
@@ -600,11 +781,11 @@ function drawBoard() {
 				alpha = 1.0
 			}
 			context.globalAlpha = alpha;
-			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH)*player) - ((animal % 2) * 100) + 5
+			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH) * player) - ((animal % 2) * 100) + 5
 			if (player == 0) {
 				x += 100
 			}
-			y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2)*100) + 100
+			y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2) * 100) + 100
 			if (player == 0) {
 				context.drawImage(animals_0[animal], x, y, 95, 95)
 			} else if (player == 1) {
@@ -649,7 +830,7 @@ function drawBoard() {
 	}
 	var moving_pieces = playerTurn(pieces, current_window, turn)[0]
 	var moves = playerTurn(pieces, current_window, turn)[1]
-	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || turn == typeof cloud_player)
+	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || (turn == typeof cloud_player && current_window == 'cloud_game'))
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
