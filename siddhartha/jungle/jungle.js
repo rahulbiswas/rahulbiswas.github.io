@@ -108,7 +108,7 @@ function gameURL() {
 	if (TEST_MODE == 1 || TEST_MODE == 3) {
 		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
 	} else {
-		return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
+		return 'http://biswas.net/siddhartha/jungle/jungle.html'
 	}
 }
 
