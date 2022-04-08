@@ -21,8 +21,11 @@ ai_select = ''
 // moved_piece
 
 loadPNGs()
-
-const TEST_MODE = 0
+var TEST_MODE = 0
+console.log(window.location.href)
+if (window.location.href == "file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html") {
+	TEST_MODE = 3
+}
 
 const RAT = 1
 const ELEPHANT = 8
@@ -102,7 +105,7 @@ window.onload = function() {
 }
 
 function gameURL() {
-	if (TEST_MODE == 1) {
+	if (TEST_MODE == 1 || TEST_MODE == 3) {
 		return 'file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html'
 	} else {
 		return 'http://rahulbiswas.github.io/siddhartha/jungle/jungle.html'
@@ -196,7 +199,9 @@ function canvasClick(event) {
 	} else if (current_window == 'game_over') {
 		gameEnd(click_xy)
 	} else if (current_window == 'ai_select_game') {
-		pewterSelectScreen(click_xy)
+		ai_select = 'F'
+		current_window = 'ai_game'
+		draw()
 	}
 }
 
@@ -236,8 +241,8 @@ function homeScreen(click_xy) {
 		click_xy[0] < HOME_PEWTER_X_END &&
 		click_xy[1] > HOME_PEWTER_Y_START &&
 		click_xy[1] < HOME_PEWTER_Y_END) {
-		current_window = 'ai_select_game'
-		pewterSelectScreen(click_xy)
+		ai_select = 'F'
+		current_window = 'ai_game'
 		draw()
 	}
 }
@@ -248,7 +253,7 @@ function rulesScreen(click_xy) {
 		click_xy[1] > BACK_Y_START &&
 		click_xy[1] < BACK_Y_END) {
 		current_window = 'home'
-		draw()
+		document.location.reload()
 	}
 }
 
@@ -258,7 +263,7 @@ function aboutScreen(click_xy) {
 		click_xy[1] > BACK_Y_START &&
 		click_xy[1] < BACK_Y_END) {
 		current_window = 'home'
-		draw()
+		document.location.reload()
 	}
 }
 
@@ -268,7 +273,7 @@ function gameScreen(click_xy) {
 		click_xy[1] > BACK_Y_START &&
 		click_xy[1] < BACK_Y_END) {
 		current_window = 'home'
-		draw()
+		document.location.reload()
 	}
 	if ((current_window == 'ai_game' && turn == 1) || current_window == 'game' || current_window == 'cloud_game') {
 		var click_key = click_key_with_event(click_xy[0], click_xy[1])
@@ -299,59 +304,19 @@ function gameScreen(click_xy) {
 	}
 }
 
-function pewterSelectScreen(click_xy) {
-	if (click_xy[0] > AI_A_X_START &&
-		click_xy[0] < AI_A_X_END &&
-		click_xy[1] > AI_A_Y_START &&
-		click_xy[1] < AI_A_Y_END) {
-		ai_select = 'A'
-		current_window = 'ai_game'
-		draw()
-	}
-	if (click_xy[0] > AI_B_X_START &&
-		click_xy[0] < AI_B_X_END &&
-		click_xy[1] > AI_B_Y_START &&
-		click_xy[1] < AI_B_Y_END) {
-		ai_select = 'B'
-		current_window = 'ai_game'
-		draw()
-	}
-	if (click_xy[0] > AI_C_X_START &&
-		click_xy[0] < AI_C_X_END &&
-		click_xy[1] > AI_C_Y_START &&
-		click_xy[1] < AI_C_Y_END) {
-		ai_select = 'C'
-		current_window = 'ai_game'
-		draw()
-	}
-	if (click_xy[0] > AI_D_X_START &&
-		click_xy[0] < AI_D_X_END &&
-		click_xy[1] > AI_D_Y_START &&
-		click_xy[1] < AI_D_Y_END) {
-		ai_select = 'D'
-		current_window = 'ai_game'
-		draw()
-	}
-	if (click_xy[0] > AI_E_X_START &&
-		click_xy[0] < AI_E_X_END &&
-		click_xy[1] > AI_E_Y_START &&
-		click_xy[1] < AI_E_Y_END) {
-		ai_select = 'E'
-		current_window = 'ai_game'
-		draw()
-	}
-	// if (click_xy[0] > AI_F_X_START &&
-	// 	click_xy[0] < AI_F_X_END &&
-	// 	click_xy[1] > AI_F_Y_START &&
-	// 	click_xy[1] < AI_F_Y_END) {
-	// 	ai_select = 'F'
-	// 	current_window = 'ai_game'
-	// 	draw()
-	// }
-}
-
 function aiGameAMove(ai_possible_moves) {
-	return Math.floor(Math.random() * ai_possible_moves.length)
+	ai_possible_move_index = -1
+	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		if ((ai_possible_moves[move_index][0] == ['0_2'] || ai_possible_moves[move_index][0] == ['1_3'] || ai_possible_moves[move_index][0] == ['0_4']) && ai_select == 'F') {
+			continue
+		} else {
+			ai_possible_move_index = move_index
+			return move_index
+		}
+	}
+	if (ai_possible_move_index == -1) {
+		return Math.floor(Math.random() * ai_possible_moves.length)
+	}
 }
 
 function aiGameBMove(ai_possible_moves) {
@@ -381,8 +346,10 @@ function aiGameCMove(ai_possible_moves) {
 			break
 		}
 	}
-	if (ai_possible_moves_index == -1) {
+	if (ai_possible_moves_index == -1 && ai_select != 'F') {
 		return aiGameAMove(ai_possible_moves)
+	} else if (ai_possible_moves_index == -1 && ai_select == 'F') {
+		return null
 	}
 	return ai_possible_moves_index
 }
@@ -390,6 +357,9 @@ function aiGameCMove(ai_possible_moves) {
 function aiGameDMove(ai_possible_moves) {
 	ai_possible_moves_index = -1
 	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		if ((ai_possible_moves[move_index][0] == ['0_2'] || ai_possible_moves[move_index][0] == ['1_3'] || ai_possible_moves[move_index][0] == ['0_4']) && ai_select == 'F') {
+			continue
+		}
 		den_square_coords = [8, 3]
 		var first_coords = ai_possible_moves[move_index][0].split('_')
 		first_coords = first_coords.map((i) => Number(i));
@@ -399,7 +369,7 @@ function aiGameDMove(ai_possible_moves) {
 		current_difference_y = Math.abs(den_square_coords[1] - first_coords[1])
 		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
 		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
-		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
+		if (future_difference_y < current_difference_y || future_difference_x < current_difference_x) {
 			ai_possible_moves_index = move_index
 		}
 	}
@@ -411,7 +381,13 @@ function aiGameDMove(ai_possible_moves) {
 
 function aiGameEMove(ai_possible_moves) {
 	ai_possible_moves_index = -1
+	possible_moves = []
 	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
+		if ((ai_possible_moves[0][move_index] == ['0_2'] || ai_possible_moves[0][move_index] == ['1_3'] || ai_possible_moves[0][move_index] == ['0_4']) && ai_select == 'F') {
+			continue
+		} else if (pieces['0_2'] != null && pieces['1_3'] != null && pieces['0_4'] != null && ai_select == 'F') {
+			return aiGameDMove(ai_possible_moves)
+		}
 		den_square_coords = [0, 3]
 		var first_coords = ai_possible_moves[move_index][0].split('_')
 		first_coords = first_coords.map((i) => Number(i));
@@ -422,15 +398,35 @@ function aiGameEMove(ai_possible_moves) {
 		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
 		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
 		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
-			ai_possible_moves_index = move_index
+			possible_moves.push([current_difference_x+current_difference_y, move_index])
 		}
 	}
-	if (ai_possible_moves_index == -1) {
+	smallest_difference = 100
+	console.log(possible_moves.length)
+	for (move_index = 0; move_index < possible_moves.length; move_index++) {
+		if (possible_moves[move_index][0] < smallest_difference) {
+			ai_possible_moves_index = possible_moves[move_index][1]
+			smallest_difference = possible_moves[move_index][0]
+		}
+	}
+	if (ai_possible_moves_index == -1 && ai_select != 'F') {
 		return aiGameAMove(ai_possible_moves)
+	} else if (ai_possible_moves_index == -1 && ai_select == 'F') {
+		return aiGameDMove(ai_possible_moves)
 	}
 	return ai_possible_moves_index
 }
 
+function aiGameFMove(ai_possible_moves) {
+	possible_move = aiGameCMove(ai_possible_moves)
+	if (possible_move == null) {
+		possible_move = aiGameEMove(ai_possible_moves)
+	}
+	if (possible_move == null) {
+		possible_move = aiGameAMove(ai_possible_moves)
+	}
+	return possible_move
+}
 
 function aiGame() {
 	var ai_moves = playerTurn(pieces, current_window, turn)
@@ -450,6 +446,9 @@ function aiGame() {
 	}
 	if (ai_select == 'E') {
 		ai_possible_moves_index = aiGameEMove(ai_possible_moves)
+	}
+	if (ai_select == 'F') {
+		ai_possible_moves_index = aiGameFMove(ai_possible_moves)
 	}
 	if (TEST_MODE == 1) {
 		ai_possible_moves_index = 0
