@@ -273,7 +273,7 @@ function gameScreen(click_xy) {
 		click_xy[1] > BACK_Y_START &&
 		click_xy[1] < BACK_Y_END) {
 		current_window = 'home'
-		document.location.reload()
+		window.location.replace('http://biswas.net/siddhartha/jungle/jungle.html')
 	}
 	if ((current_window == 'ai_game' && turn == 1) || current_window == 'game' || current_window == 'cloud_game') {
 		var click_key = click_key_with_event(click_xy[0], click_xy[1])
