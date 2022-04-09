@@ -202,6 +202,8 @@ function canvasClick(event) {
 		ai_select = 'F'
 		current_window = 'ai_game'
 		draw()
+	} else if (current_window == 'cloud_game_menu') {
+		draw()
 	}
 }
 
@@ -231,7 +233,7 @@ function homeScreen(click_xy) {
 		click_xy[0] < CLOUD_X_END &&
 		click_xy[1] > CLOUD_Y_START &&
 		click_xy[1] < CLOUD_Y_END) {
-		current_window = 'cloud_game'
+		current_window = 'cloud_game_menu'
 			// cloud_player 1 means red
 		cloud_player = 1
 		draw()
@@ -668,7 +670,7 @@ function draw() {
 		context.drawImage(menus['rule'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
 		context.drawImage(menus['about'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-	} else if (current_window == 'cloud_game') {
+	} else if (current_window == 'cloud_game_menu') {
 		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
 		if (winning_player == 'red') {
@@ -691,6 +693,7 @@ function join_multiplayer() {
 		turn = 1
 		game_code = joining_code
 		cloud_player = 0
+		player = 0
 		drawBoard()
 		setBoard()
 	}
@@ -829,7 +832,7 @@ function drawBoard() {
 	}
 	var moving_pieces = playerTurn(pieces, current_window, turn)[0]
 	var moves = playerTurn(pieces, current_window, turn)[1]
-	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1) || (turn == typeof cloud_player && current_window == 'cloud_game'))
+	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
