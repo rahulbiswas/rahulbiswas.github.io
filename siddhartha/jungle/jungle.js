@@ -97,6 +97,9 @@ const AI_F_Y_END = 744
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
 	context = canvas.getContext('2d')
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+	  context.scale(0.7, 0.7);
+	}
 	canvas.onmouseup = canvasClick
 	winning_player = ''
 	setPieces()
