@@ -92,6 +92,10 @@ const AI_E_Y_START = 630
 const AI_F_Y_START = 630
 const AI_E_Y_END = 744
 const AI_F_Y_END = 744
+const RULES_NEXT_X_START = 1250
+const RULES_NEXT_Y_START = 0
+const RULES_NEXT_X_END = 1500
+const RULES_NEXT_Y_END = 150
 
 
 window.onload = function() {
@@ -121,6 +125,12 @@ function imageWithName(src) {
 	return menu
 }
 
+function imageWithNameRules(src) {
+	var menu = new Image()
+	menu.src = 'rules/1x/' + src + '.png'
+	return menu
+}
+
 function loadPNGs() {
 	animals_0 = {}
 	for (var a_i = 1; a_i < 9; a_i++) {
@@ -136,7 +146,12 @@ function loadPNGs() {
 	}
 
 	menus['home'] = imageWithName('menus_home')
-	menus['rule'] = imageWithName('menus_rules')
+	menus['agilityrules'] = imageWithNameRules('agilityrules')
+	menus['eatinganimals'] = imageWithNameRules('eatinganimals')
+	menus['howtowin'] = imageWithNameRules('howtowin')
+	menus['jumpingoverwater'] = imageWithNameRules('jumpingoverwater')
+	menus['ratsarespecial'] = imageWithNameRules('ratsarespecial')
+	menus['traps'] = imageWithNameRules('traps')
 	menus['game_blank'] = imageWithName('menus_game')
 	menus['game_blue'] = imageWithName('menus_blue')
 	menus['game_red'] = imageWithName('menus_red')
@@ -190,9 +205,10 @@ function canvasClick(event) {
 	canvas = document.getElementById('drawingCanvas');
 	context = canvas.getContext('2d');
 	var click_xy = clickXY(event)
+	console.log(click_xy)
 	if (current_window == 'home') {
 		homeScreen(click_xy)
-	} else if (current_window == 'rules') {
+	} else if (current_window == 'agilityrules' ||current_window == 'eatinganimals' ||current_window == 'howtowin' ||current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
 		rulesScreen(click_xy)
 	} else if (current_window == 'about') {
 		aboutScreen(click_xy)
@@ -222,7 +238,7 @@ function homeScreen(click_xy) {
 		click_xy[0] < HOME_RULES_X_END &&
 		click_xy[1] > HOME_RULES_Y_START &&
 		click_xy[1] < HOME_RULES_Y_END) {
-		current_window = 'rules'
+		current_window = 'agilityrules'
 		draw()
 	}
 	if (click_xy[0] > HOME_RULES_X_START &&
@@ -257,8 +273,18 @@ function rulesScreen(click_xy) {
 		click_xy[0] < BOARD_UPPER_LEFT_X &&
 		click_xy[1] > BACK_Y_START &&
 		click_xy[1] < BACK_Y_END) {
-		current_window = 'home'
-		document.location.reload()
+		if (current_window == 'agilityrules') {
+			current_window = 'home'
+			document.location.reload()
+		} else {
+			current_window = ruleTutorial('yes', 'yes')
+			draw()
+		}
+	}
+	if (click_xy[0] > RULES_NEXT_X_START && click_xy[0] < RULES_NEXT_X_END && click_xy[1] > RULES_NEXT_Y_START && click_xy[1] < RULES_NEXT_Y_END && current_window != 'traps') {
+		current_window = ruleTutorial('yes', 'no')
+		console.log('changing screen')
+		draw()
 	}
 }
 
@@ -665,12 +691,73 @@ function movePiece(first_click_key, second_click_key) {
 	drawBoard()
 }
 
+function ruleTutorial(change, back) {
+	if (current_window == 'eatinganimals') {
+		if (change == 'yes' && back == 'yes') {
+			current_window == 'agilityrules'
+			return 'agilityrules'
+		} else if (change == 'no') {
+			return 'eatinganimals'
+		} else if (change == 'yes' && back == 'no') {
+			return 'howtowin'
+		}
+	}
+	if (current_window == 'howtowin') {
+		if (change == 'yes' && back == 'yes') {
+			current_window == 'agilityrules'
+			return 'eatinganimals'
+		} else if (change == 'no') {
+			return 'howtowin'
+		} else if (change == 'yes' && back == 'no') {
+			return 'jumpingoverwater'
+		}
+	}
+	if (current_window == 'jumpingoverwater') {
+		if (change == 'yes' && back == 'yes') {
+			current_window == 'agilityrules'
+			return 'howtowin'
+		} else if (change == 'no') {
+			return 'jumpingoverwater'
+		} else if (change == 'yes' && back == 'no') {
+			return 'ratsarespecial'
+		}
+	}
+	if (current_window == 'ratsarespecial') {
+		if (change == 'yes' && back == 'yes') {
+			current_window == 'agilityrules'
+			return 'jumpingoverwater'
+		} else if (change == 'no') {
+			return 'ratsarespecial'
+		} else if (change == 'yes' && back == 'no') {
+			return 'traps'
+		}
+	}
+	if (current_window == 'traps') {
+		if (change == 'yes' && back == 'yes') {
+			current_window == 'agilityrules'
+			return 'ratsarespecial'
+		} else if (change == 'no') {
+			return 'traps'
+		}
+	}
+	if (current_window == 'agilityrules') {
+		if (change == 'yes' && back == 'no') {
+			return 'eatinganimals'
+		}
+		if (change == 'no') {
+			return 'agilityrules'
+		}
+	}
+}
+
 function draw() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
 		context.drawImage(menus['home'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-	} else if (current_window == 'rules') {
-		context.drawImage(menus['rule'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+	} else if (current_window == 'agilityrules' ||current_window == 'eatinganimals' ||current_window == 'howtowin' ||current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
+		window_to_draw = (ruleTutorial('no', 'no'))
+		console.log(window_to_draw)
+		context.drawImage(menus[window_to_draw], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
 		context.drawImage(menus['about'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'cloud_game_menu') {
