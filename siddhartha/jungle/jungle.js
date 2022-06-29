@@ -3,6 +3,7 @@ menus = {}
 moved_piece = ['0']
 eaten_animals = []
 ai_select = ''
+s = {}
 
 // Global variables.
 // animals_0
@@ -22,7 +23,6 @@ ai_select = ''
 
 loadPNGs()
 var TEST_MODE = 0
-console.log(window.location.href)
 if (window.location.href == "file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html") {
 	TEST_MODE = 3
 }
@@ -185,6 +185,9 @@ function click_key_with_event(clickX, clickY) {
 
 function possible_moves_mapping() {
 	var possible_moves = checkPossibleTurn(first_click_key, pieces, current_window)
+	if (JSON.stringify(s) != '{}') {
+		Actions(s)
+	}
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
 		move = move.split('_')
@@ -202,10 +205,13 @@ class WaterJump {
 }
 
 function canvasClick(event) {
+	s = {
+		piece_info: pieces,
+		turn: turn
+	}
 	canvas = document.getElementById('drawingCanvas');
 	context = canvas.getContext('2d');
 	var click_xy = clickXY(event)
-	console.log(click_xy)
 	if (current_window == 'home') {
 		homeScreen(click_xy)
 	} else if (current_window == 'agilityrules' ||current_window == 'eatinganimals' ||current_window == 'howtowin' ||current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
@@ -283,7 +289,6 @@ function rulesScreen(click_xy) {
 	}
 	if (click_xy[0] > RULES_NEXT_X_START && click_xy[0] < RULES_NEXT_X_END && click_xy[1] > RULES_NEXT_Y_START && click_xy[1] < RULES_NEXT_Y_END && current_window != 'traps') {
 		current_window = ruleTutorial('yes', 'no')
-		console.log('changing screen')
 		draw()
 	}
 }
@@ -330,6 +335,9 @@ function gameScreen(click_xy) {
 				return
 			}
 			movePiece(first_click_key, second_click_key)
+			if (JSON.stringify(s) != '{}') {
+				Result(s, [first_click_key, second_click_key])
+			}
 		}
 		maybeEndGame()
 	}
@@ -433,7 +441,6 @@ function aiGameEMove(ai_possible_moves) {
 		}
 	}
 	smallest_difference = 100
-	console.log(possible_moves.length)
 	for (move_index = 0; move_index < possible_moves.length; move_index++) {
 		if (possible_moves[move_index][0] < smallest_difference) {
 			ai_possible_moves_index = possible_moves[move_index][1]
@@ -485,7 +492,6 @@ function aiGame() {
 		ai_possible_moves_index = 0
 	}
 	var ai_move = ai_possible_moves[ai_possible_moves_index]
-	console.log(ai_move)
 	if (TEST_MODE == 1) {
 		if (pieces['0_0'] != null && pieces['0_0']['animal'] == 5) {
 			ai_move = ['0_0', '8_3']
@@ -498,6 +504,9 @@ function aiGame() {
 
 function maybeEndGame() {
 	checkIfGameEnded()
+	if (JSON.stringify(s) != '{}') {
+		isTerminal(s)
+	}
 	if (winning_player != '') {
 		current_window = 'game_over'
 		draw()
@@ -682,6 +691,9 @@ function movePiece(first_click_key, second_click_key) {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
+	if (JSON.stringify(s) != '{}') {
+		Utility(s)
+	}
 	if (current_window == 'ai_game' && turn == 0 && ai_select != '') {
 		maybeEndGame()
 		aiGame()
@@ -756,7 +768,6 @@ function draw() {
 		context.drawImage(menus['home'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'agilityrules' ||current_window == 'eatinganimals' ||current_window == 'howtowin' ||current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
 		window_to_draw = (ruleTutorial('no', 'no'))
-		console.log(window_to_draw)
 		context.drawImage(menus[window_to_draw], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
 		context.drawImage(menus['about'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
@@ -932,4 +943,117 @@ function drawBoard() {
 				POTENTIAL_MOVE_LENGTH)
 		}
 	}
+}
+
+// Minimax function start here
+
+function whoWon(s) {
+	winningsquares = ['0_3', '8_3']
+	sq0 = winningsquares[0]
+	sq1 = winningsquares[1]
+	if (s['piece_info'][sq0] != null) {
+		console.log('whoWon: red')
+		return 'red'
+	} else if (s['piece_info'][sq1] != null) {
+		console.log('whoWon: blue')
+		return 'blue'
+	} else {
+		for (var player = 0; player < 2; player++) {
+			dead = 0
+			for (var animal = 1; animal < 9; animal++) {
+				is_alive = false
+				for (var k in s['piece_info']) {
+					if (s['piece_info'][k]['player'] == player && s['piece_info'][k]['animal'] == animal) {
+						is_alive = true
+						break
+					} else {
+						dead += 1
+					}
+				}
+			}
+			if (dead == 8 && player == 0) {
+				console.log('whoWon: red')
+				return 'red'
+			} else if (dead == 8 && player == 1) {
+				console.log('whoWon: blue')
+				return 'blue'
+			}
+		}
+	}
+	console.log('whoWon: game not over')
+	return false
+}
+
+function isTerminal(s) {
+	if (whoWon(s) == false) {
+		console.log('isTerminal: false')
+		return false
+	} else {
+		console.log('isTerminal: true')
+		return true
+	}
+}
+
+function Utility(s) {
+	if (isTerminal) {
+		if (whoWon(s) == 'red') {
+			console.log('Utility: 1')
+			return 1
+		} else if (whoWon(s) == 'blue') {
+			console.log('Utility: 0')
+			return 0
+		}
+	}
+	console.log('Utility: 0.5')
+	return 0.5
+}
+
+function Actions(s) {
+	moves = []
+	for (var i = 0; i < (Object.keys(s['piece_info']).length); i++) {
+		console.log(Object.keys(s['piece_info'])[i])
+		move = checkPossibleTurn(Object.keys(s['piece_info'])[i], s['piece_info'], 'ai_game')
+		console.log(move)
+		for (var x = 0; x < move.length; x++) {
+			piece1 = Object.keys(s['piece_info'])[i]
+			move1 = {[piece1] :move[x]}
+			moves.push(move1)
+		}
+	}
+	console.log('Actions: ' + JSON.stringify(moves))
+	return moves
+}
+
+function Result(s,a) {
+	p = toMove(s)
+	console.log('before Result: '+JSON.stringify(s))
+	crd1 = a[0]
+	crd2 = a[1]
+	s[crd1] = s[crd2]
+	s['turn'] = Math.abs(p-1)
+	console.log('Result: '+JSON.stringify(s))
+	return s
+}
+
+function toMove(s) {
+	console.log('toMove: '+s['turn'])
+	return s['turn']
+}
+
+function miniMax(s) {
+	moves = Actions(s)
+	for (var move = 0; move < moves.length; move++) {
+		s1 = Result(s, moves[move])
+		if (Utility(s1) == toMove(s)) {
+			return moves[move]
+		} else {
+			moves = Actions(s1)
+			for (var move1 = 0; move1 < moves.length; move1++) {
+				s2 = Result(s1, moves[move])
+				if (Utility(s2) == toMove(s)) {
+					moves.splice(move1, 1)
+				}
+			}
+		}
+ 	}
 }
