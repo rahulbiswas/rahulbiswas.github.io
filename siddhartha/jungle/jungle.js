@@ -808,8 +808,12 @@ function aws() {
 	}
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.addEventListener('load', createGameListener);
-	createGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&create_game=1');
+	createGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&create_game=1');
 	createGameReq.send();
+}
+
+function setGameListener() {
+	checkPeriodically()
 }
 
 function setBoard() {
@@ -821,13 +825,10 @@ function setBoard() {
 	setup = JSON.stringify(setup)
 	var url = encodeURIComponent(setup);
 	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
-
-	function setGameListener() {
-		checkPeriodically()
-	}
 	var setGameReq = new XMLHttpRequest();
 	setGameReq.addEventListener('load', setGameListener)
-	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&set=1&game_code=' + game_code + '&game_board=' + url);
+	console.log(current_window)
+	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&set=1&game_code=' + game_code + '&game_board=' + url);
 	setGameReq.send();
 }
 
@@ -843,16 +844,23 @@ function checkPeriodically() {
 			draw()
 			maybeEndGame()
 		}
-		if (turn != cloud_player) {
+		if (current_window == 'cloud_game' && turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
 		} else if (current_window != 'game_over') {
 			current_window = 'cloud_game'
 			drawBoard()
 		}
 	}
+	var setup = {
+		piece_info: pieces,
+		turn_info: turn,
+		moved_piece_info: moved_piece
+	}
+	setup = JSON.stringify(setup)
+	var url = encodeURIComponent(setup).replace('"', '%22');
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener('load', getGameListener)
-	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=fool&get=1&game_code=' + game_code);
+	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&get=1&game_board='+url);
 	getReq.send();
 }
 
