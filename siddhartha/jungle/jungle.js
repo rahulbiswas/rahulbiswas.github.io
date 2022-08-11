@@ -1001,6 +1001,39 @@ function isTerminal(s) {
 		return true
 	}
 }
+//
+//  function Utility(s) {
+// +       utility = 50
+//         if (isTerminal) {
+//                 if (whoWon(s) == 'red') {
+// -                       console.log('Utility: 1')
+// -                       return 1
+// +//                     console.log('Utility: 1')
+// +                       return 100
+//                 } else if (whoWon(s) == 'blue') {
+// -                       console.log('Utility: 0')
+// +//                     console.log('Utility: 0')
+//                         return 0
+//                 }
+//         }
+// -       console.log('Utility: 0.5')
+// -       return 0.5
+// +       for (var p in s['piece_info']) {
+// +               if (s['piece_info'][p]['player'] == 0) {
+// +                       utility-=s['piece_info'][p]['animal']
+// +                       if (s['piece_info'][p]['animal'] == 1) {
+// +                               utility-=7
+// +                       }
+// +               }
+// +               if (s['piece_info'][p]['player'] == 1) {
+// +                       utility+=s['piece_info'][p]['animal']
+// +                       if (s['piece_info'][p]['animal'] == 1) {
+// +                               utility+=7
+// +                       }
+// +               }
+// +       }
+// +       return utility
+//  }
 
 function Utility(s) {
 	if (isTerminal) {
