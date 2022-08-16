@@ -1,6 +1,7 @@
 # Format with:
 #    python3 -m black aws.py
 
+import dataclasses
 import json
 
 # import boto3
@@ -11,6 +12,40 @@ import random
 
 # client = boto3.client("dynamodb")
 # table_name = os.environ["LOCATIONS_TABLE"]
+
+
+@dataclasses.dataclass
+class WaterJump:
+    """Holds a possible jump over water for lions and tigers.
+
+    Attributes:
+        destination: FILL_IN.
+        water: FILL_IN.
+    """
+
+    destination: list
+    water: int
+
+
+_VALID_MOVE_WATER = {
+    "2_1": [WaterJump("6_1", ["3_1", "4_1", "5_1"])],
+    "2_2": [WaterJump("6_2", ["3_2", "4_2", "5_2"])],
+    "3_0": [WaterJump("3_3", ["3_1", "3_2"])],
+    "4_0": [WaterJump("4_3", ["4_1", "4_2"])],
+    "5_0": [WaterJump("5_3", ["5_1", "5_2"])],
+    "6_1": [WaterJump("2_1", ["5_1", "4_1", "3_1"])],
+    "6_2": [WaterJump("2_2", ["5_2", "4_2", "3_2"])],
+    "3_3": [WaterJump("3_0", ["3_2", "3_1"]), WaterJump("3_6", ["3_4", "3_5"])],
+    "4_3": [WaterJump("4_0", ["4_2", "4_1"]), WaterJump("4_6", ["4_4", "4_5"])],
+    "5_3": [WaterJump("5_0", ["5_2", "5_1"]), WaterJump("5_6", ["5_4", "5_5"])],
+    "2_4": [WaterJump("6_4", ["3_4", "4_4", "5_4"])],
+    "2_5": [WaterJump("6_5", ["3_5", "4_5", "5_5"])],
+    "3_6": [WaterJump("3_3", ["3_5", "3_4"])],
+    "4_6": [WaterJump("4_3", ["4_5", "4_4"])],
+    "5_6": [WaterJump("5_3", ["5_5", "5_4"])],
+    "6_4": [WaterJump("2_4", ["5_4", "4_4", "3_4"])],
+    "6_5": [WaterJump("2_5", ["5_5", "4_5", "3_5"])],
+}
 
 
 def whoWon(s):
@@ -25,14 +60,14 @@ def whoWon(s):
     winning_squares = ["0_3", "8_3"]
     sq0 = winning_squares[0]
     sq1 = winning_squares[1]
-    if s["piece_info"][sq0] != null:
+    if sq0 in s["piece_info"]:
         return "red"
-    elif s["piece_info"][sq1] != null:
+    elif sq1 in s["piece_info"]:
         return "blue"
     else:
         for player in range(2):
             dead = 0
-            for animal in range(1, 8):
+            for animal in range(0, 8):
                 is_alive = False
                 for k in s["piece_info"]:
                     if (
@@ -40,7 +75,7 @@ def whoWon(s):
                         and s["piece_info"][k]["animal"] == animal
                     ):
                         is_alive = True
-                        siddhartha = aibreak
+                        break
                     else:
                         dead += 1
             if dead == 8 and player == 0:
@@ -52,9 +87,9 @@ def whoWon(s):
 
 def isTerminal(s):
     if whoWon(s) == False:
-        return false
+        return False
     else:
-        return true
+        return True
 
 
 def Utility(s):
@@ -76,11 +111,26 @@ def Utility(s):
     return utility
 
 
+def checkPossibleTurn(first_click_key, pieces, current_window):
+    possibleMoves = []
+    for column in range(8):
+        for row in range(10):
+            second_click_key = str(row) + "_" + str(column)
+            if validMove(first_click_key, pieces, second_click_key, current_window):
+                possibleMove = second_click_key
+                possibleMoves.append(possibleMove)
+    return possibleMoves
+
+
 def Actions(s):
-    moves = []
-    for i in range(len(keys(s["piece_info"]))):
-        pass
-        # Continue working here and ask daddy about it
+    moves = set()
+    for i in (s["piece_info"]).keys():
+        move = checkPossibleTurn(i, s["piece_info"], "ai_game")
+        for x in range(len(move)):
+            if s["piece_info"][i]["player"] == s["turn_info"]:
+                move1 = (i, move[x])
+                moves.add(move1)
+    return moves
 
 
 def Result(s1, a):
@@ -89,7 +139,7 @@ def Result(s1, a):
     crd1 = a[1]
     s1["piece_info"][crd1] = s1["piece_info"][crd]
     del s1["piece_info"][crd]
-    s["turn_info"] = 1 - s["turn_info"]
+    s1["turn_info"] = 1 - s1["turn_info"]
     return s1
 
 
@@ -183,3 +233,112 @@ def lambda_handler(event, context):
             "Access-Control-Allow-Origin": "*",  # Required for CORS support to work
         },
     }
+
+
+water = [
+    [3, 1],
+    [4, 1],
+    [5, 1],
+    [3, 2],
+    [4, 2],
+    [5, 2],
+    [3, 4],
+    [4, 4],
+    [5, 4],
+    [3, 5],
+    [4, 5],
+    [5, 5],
+]
+
+
+def validMove(first_click_key, pieces, second_click_key):
+    first_coords = first_click_key.split("_")
+    first_coords = [int(n) for n in first_coords]
+    second_coords = second_click_key.split("_")
+    second_coords = [int(n) for n in second_coords]
+    if (
+        second_coords[0] < 0
+        or second_coords[1] < 0
+        or second_coords[0] > 8
+        or second_coords[1] > 6
+    ):
+        return False
+    attacking_animal_num = pieces[first_click_key]["animal"]
+    attacking_animal_player = pieces[first_click_key]["player"]
+    # Allow tigers and lions to jump over water.
+    valid_moves = None
+    if first_click_key in _VALID_MOVE_WATER:
+        valid_moves = _VALID_MOVE_WATER[first_click_key]
+    if valid_moves != None:
+        for valid_move_index in range(len(valid_moves)):
+            valid_move = valid_moves[valid_move_index]
+            if valid_move.destination == second_click_key:
+                if attacking_animal_num == 6 or attacking_animal_num == 7:
+                    for w_s_i in range(len(valid_move.water)):
+                        if valid_move.water[w_s_i] in pieces:
+                            return False
+                        elif second_click_key not in pieces:
+                            return True
+    else:
+        pass
+    if (
+        second_click_key in pieces
+        and pieces[second_click_key]["player"] != pieces[first_click_key]["player"]
+        and pieces[second_click_key]["animal"] <= pieces[first_click_key]["animal"]
+    ):
+        return True
+    is_moving_to_water_square = False
+    for w_s_i in range(len(water)):
+        if water[w_s_i][0] == second_coords[0] and water[w_s_i][1] == second_coords[1]:
+            is_moving_to_water_square = True
+    if is_moving_to_water_square:
+        if attacking_animal_num != 1:
+            return False
+    is_attacking_own_den = False
+    if attacking_animal_player == 0:
+        if second_click_key == "0_3":
+            is_attacking_own_den = True
+    else:
+        if second_click_key == "8_3":
+            is_attacking_own_den = True
+    if is_attacking_own_den:
+        return False
+    x_diff = abs(first_coords[0] - second_coords[0])
+    y_diff = abs(first_coords[1] - second_coords[1])
+    if x_diff == 1 and y_diff == 1:
+        return False
+    elif x_diff > 1:
+        return False
+    elif y_diff > 1:
+        return False
+    is_moving_from_water_square = False
+    for w_s_i in range(len(water)):
+        if water[w_s_i][0] == first_coords[0] and water[w_s_i][1] == first_coords[1]:
+            is_moving_from_water_square = True
+    if is_moving_from_water_square and second_click_key not in pieces:
+        return True
+    if is_moving_from_water_square and pieces[second_click_key]["animal"] == 8:
+        return False
+    if second_click_key not in pieces:
+        return True
+    defending_animal_num = pieces[second_click_key]["animal"]
+    defending_animal_player = pieces[second_click_key]["player"]
+    if attacking_animal_player == defending_animal_player:
+        return False
+    is_attacking_own_trap = False
+    if (attacking_animal_player == 0 and second_click_key in ["0_2", "1_3", "0_4"]) or (
+        attacking_animal_player == 1 and second_click_key in ["8_2", "7_3", "8_4"]
+    ):
+        return True
+    if (attacking_animal_player == 1 and second_click_key in ["0_2", "1_3", "0_4"]) or (
+        attacking_animal_player == 0 and second_click_key in ["8_2", "7_3", "8_4"]
+    ):
+        return False
+    if pieces[second_click_key] != None:
+        if attacking_animal_num == 8 and defending_animal_num == 1:
+            return False
+        elif (
+            attacking_animal_num < defending_animal_num and attacking_animal_num != 1
+        ) or (defending_animal_num != 8 and is_attacking_own_trap == False):
+            return False
+    return True
