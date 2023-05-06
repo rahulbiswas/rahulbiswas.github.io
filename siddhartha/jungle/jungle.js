@@ -691,9 +691,7 @@ function movePiece(first_click_key, second_click_key) {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	if (JSON.stringify(s) != '{}') {
-		Utility(s)
-	}
+	console.log(pieces)
 	if (current_window == 'ai_game' && turn == 0 && ai_select != '') {
 		maybeEndGame()
 		aiGame()
@@ -827,7 +825,7 @@ function setBoard() {
 	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
 	var setGameReq = new XMLHttpRequest();
 	setGameReq.addEventListener('load', setGameListener)
-	console.log(current_window)
+	// console.log(current_window)
 	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&set=1&game_code=' + game_code + '&game_board=' + url);
 	setGameReq.send();
 }
@@ -960,10 +958,10 @@ function whoWon(s) {
 	sq0 = winningsquares[0]
 	sq1 = winningsquares[1]
 	if (s['piece_info'][sq0] != null) {
-		console.log('whoWon: red')
+		// console.log('whoWon: red')
 		return 'red'
 	} else if (s['piece_info'][sq1] != null) {
-		console.log('whoWon: blue')
+		// console.log('whoWon: blue')
 		return 'blue'
 	} else {
 		for (var player = 0; player < 2; player++) {
@@ -980,24 +978,24 @@ function whoWon(s) {
 				}
 			}
 			if (dead == 8 && player == 0) {
-				console.log('whoWon: red')
+				// console.log('whoWon: red')
 				return 'red'
 			} else if (dead == 8 && player == 1) {
-				console.log('whoWon: blue')
+				// console.log('whoWon: blue')
 				return 'blue'
 			}
 		}
 	}
-	console.log('whoWon: game not over')
+	// console.log('whoWon: game not over')
 	return false
 }
 
 function isTerminal(s) {
 	if (whoWon(s) == false) {
-		console.log('isTerminal: false')
+		// console.log('isTerminal: false')
 		return false
 	} else {
-		console.log('isTerminal: true')
+		// console.log('isTerminal: true')
 		return true
 	}
 }
@@ -1006,17 +1004,17 @@ function isTerminal(s) {
 // +       utility = 50
 //         if (isTerminal) {
 //                 if (whoWon(s) == 'red') {
-// -                       console.log('Utility: 1')
+// -                       // console.log('Utility: 1')
 // -                       return 1
-// +//                     console.log('Utility: 1')
+// +//                     // console.log('Utility: 1')
 // +                       return 100
 //                 } else if (whoWon(s) == 'blue') {
-// -                       console.log('Utility: 0')
-// +//                     console.log('Utility: 0')
+// -                       // console.log('Utility: 0')
+// +//                     // console.log('Utility: 0')
 //                         return 0
 //                 }
 //         }
-// -       console.log('Utility: 0.5')
+// -       // console.log('Utility: 0.5')
 // -       return 0.5
 // +       for (var p in s['piece_info']) {
 // +               if (s['piece_info'][p]['player'] == 0) {
@@ -1038,46 +1036,46 @@ function isTerminal(s) {
 function Utility(s) {
 	if (isTerminal) {
 		if (whoWon(s) == 'red') {
-			console.log('Utility: 1')
+			// console.log('Utility: 1')
 			return 1
 		} else if (whoWon(s) == 'blue') {
-			console.log('Utility: 0')
+			// console.log('Utility: 0')
 			return 0
 		}
 	}
-	console.log('Utility: 0.5')
+	// console.log('Utility: 0.5')
 	return 0.5
 }
 
 function Actions(s) {
 	moves = []
 	for (var i = 0; i < (Object.keys(s['piece_info']).length); i++) {
-		console.log(Object.keys(s['piece_info'])[i])
+		// console.log(Object.keys(s['piece_info'])[i])
 		move = checkPossibleTurn(Object.keys(s['piece_info'])[i], s['piece_info'], 'ai_game')
-		console.log(move)
+		// console.log(move)
 		for (var x = 0; x < move.length; x++) {
 			piece1 = Object.keys(s['piece_info'])[i]
 			move1 = {[piece1] :move[x]}
 			moves.push(move1)
 		}
 	}
-	console.log('Actions: ' + JSON.stringify(moves))
+	// console.log('Actions: ' + JSON.stringify(moves))
 	return moves
 }
 
 function Result(s,a) {
 	p = toMove(s)
-	console.log('before Result: '+JSON.stringify(s))
+	// console.log('before Result: '+JSON.stringify(s))
 	crd1 = a[0]
 	crd2 = a[1]
 	s[crd1] = s[crd2]
 	s['turn'] = Math.abs(p-1)
-	console.log('Result: '+JSON.stringify(s))
+	// console.log('Result: '+JSON.stringify(s))
 	return s
 }
 
 function toMove(s) {
-	console.log('toMove: '+s['turn'])
+	// console.log('toMove: '+s['turn'])
 	return s['turn']
 }
 
