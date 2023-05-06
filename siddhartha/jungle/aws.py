@@ -126,14 +126,15 @@ def Actions(s):
     moves = set()
     for i in (s["piece_info"]).keys():
         move = checkPossibleTurn(i, s["piece_info"], "ai_game")
-        for x in range(len(move)):
+        for x in move:
             if s["piece_info"][i]["player"] == s["turn_info"]:
-                move1 = (i, move[x])
+                move1 = (i, x)
                 moves.add(move1)
     return moves
 
 
 def Result(s1, a):
+    s2 = s1[:]
     p = toMove(s1)
     crd = a[0]
     crd1 = a[1]
@@ -234,8 +235,21 @@ def lambda_handler(event, context):
         },
     }
 
+_RAT = 1
+_TIGER = 6
+_LION = 7
+_ELEPHANT = 8
 
-water = [
+_BLUE_PLAYER = 0
+_RED_PLAYER = 1
+
+_BLUE_TRAPS = ["0_2", "1_3", "0_4"]
+_RED_TRAPS = ["8_2", "7_3", "8_4"]
+
+_BLUE_DEN = "0_3"
+_RED_DEN = "8_3"
+
+_WATER = [
     [3, 1],
     [4, 1],
     [5, 1],
@@ -250,6 +264,68 @@ water = [
     [5, 5],
 ]
 
+def BiggerEatSmaller(pieces, second_click_key, attacking_animal, attacking_player):
+    if second_click_key in pieces and pieces[second_click_key]["animal"] <= attacking_animal and pieces[second_click_key]["player"] != attacking_player:
+        return True
+    return None
+
+def validMoveWater(first_click_key, pieces, second_click_key, attacking_animal, attacking_player, second_coords):
+    valid_moves = _VALID_MOVE_WATER.get(first_click_key, None)
+    if valid_moves:
+        for valid_move in valid_moves:
+            if valid_move.destination != second_click_key:
+                continue
+            if attacking_animal != _LION and attacking_animal != _TIGER:
+                continue
+            for water_square in valid_move.water:
+                if water_square in pieces:
+                    return False
+            for water_square in valid_move.water:
+                if water_square in pieces:
+                    return False
+                elif second_click_key not in pieces:
+                    return True
+                elif BiggerEatSmaller(pieces, second_click_key, attacking_animal, attacking_player):
+                    return True
+
+    is_moving_to_water_square = False
+    for w_s_i in _WATER:
+        if w_s_i == second_coords:
+            is_moving_to_water_square = True
+    if is_moving_to_water_square:
+        if attacking_animal != _RAT:
+            return False
+    return None
+
+def validMoveTraps(attacking_player, second_click_key):
+    if (attacking_player == _BLUE_PLAYER and second_click_key in _BLUE_TRAPS) or (
+        attacking_player == _RED_PLAYER and second_click_key in _RED_TRAPS
+    ):
+        return True
+    if (attacking_player == _RED_PLAYER and second_click_key in _BLUE_TRAPS) or (
+        attacking_player == _BLUE_PLAYER and second_click_key in _RED_TRAPS
+    ):
+        return False
+    return None
+
+def validMoveRatElephant(pieces, second_click_key, attacking_animal, defending_animal):
+    if pieces[second_click_key] != None:
+        if attacking_animal == _ELEPHANT and defending_animal == _RAT:
+            return False
+        elif (
+            attacking_animal < defending_animal and attacking_animal != _RAT
+        ):
+            return False
+    return None
+
+def ratWater(first_coords, is_moving_from_water_square, second_click_key, pieces):
+    if first_coords in _WATER:
+        is_moving_from_water_square = True
+    if is_moving_from_water_square and second_click_key not in pieces:
+        return True
+    if is_moving_from_water_square and pieces[second_click_key]["animal"] == 8:
+        return False
+    return None
 
 def validMove(first_click_key, pieces, second_click_key):
     first_coords = first_click_key.split("_")
@@ -263,43 +339,18 @@ def validMove(first_click_key, pieces, second_click_key):
         or second_coords[1] > 6
     ):
         return False
-    attacking_animal_num = pieces[first_click_key]["animal"]
-    attacking_animal_player = pieces[first_click_key]["player"]
+    attacking_animal = pieces[first_click_key]["animal"]
+    attacking_player = pieces[first_click_key]["player"]
+    water_validness = validMoveWater(first_click_key, pieces, second_click_key, attacking_animal, attacking_player, second_coords)
     # Allow tigers and lions to jump over water.
-    valid_moves = None
-    if first_click_key in _VALID_MOVE_WATER:
-        valid_moves = _VALID_MOVE_WATER[first_click_key]
-    if valid_moves != None:
-        for valid_move_index in range(len(valid_moves)):
-            valid_move = valid_moves[valid_move_index]
-            if valid_move.destination == second_click_key:
-                if attacking_animal_num == 6 or attacking_animal_num == 7:
-                    for w_s_i in range(len(valid_move.water)):
-                        if valid_move.water[w_s_i] in pieces:
-                            return False
-                        elif second_click_key not in pieces:
-                            return True
-    else:
-        pass
-    if (
-        second_click_key in pieces
-        and pieces[second_click_key]["player"] != pieces[first_click_key]["player"]
-        and pieces[second_click_key]["animal"] <= pieces[first_click_key]["animal"]
-    ):
-        return True
-    is_moving_to_water_square = False
-    for w_s_i in range(len(water)):
-        if water[w_s_i][0] == second_coords[0] and water[w_s_i][1] == second_coords[1]:
-            is_moving_to_water_square = True
-    if is_moving_to_water_square:
-        if attacking_animal_num != 1:
-            return False
+    if water_validness != None:
+        return water_validness
     is_attacking_own_den = False
-    if attacking_animal_player == 0:
-        if second_click_key == "0_3":
+    if attacking_player == 0:
+        if second_click_key == _BLUE_DEN:
             is_attacking_own_den = True
     else:
-        if second_click_key == "8_3":
+        if second_click_key == _RED_DEN:
             is_attacking_own_den = True
     if is_attacking_own_den:
         return False
@@ -311,34 +362,22 @@ def validMove(first_click_key, pieces, second_click_key):
         return False
     elif y_diff > 1:
         return False
-    is_moving_from_water_square = False
-    for w_s_i in range(len(water)):
-        if water[w_s_i][0] == first_coords[0] and water[w_s_i][1] == first_coords[1]:
-            is_moving_from_water_square = True
-    if is_moving_from_water_square and second_click_key not in pieces:
+    if BiggerEatSmaller(pieces, second_click_key, attacking_animal, attacking_player):
         return True
-    if is_moving_from_water_square and pieces[second_click_key]["animal"] == 8:
-        return False
+    is_moving_from_water_square = False
+    ratWater_validness = ratWater(first_coords, is_moving_from_water_square, second_click_key, pieces)
+    if ratWater_validness != None:
+        return ratWater_validness
     if second_click_key not in pieces:
         return True
-    defending_animal_num = pieces[second_click_key]["animal"]
-    defending_animal_player = pieces[second_click_key]["player"]
-    if attacking_animal_player == defending_animal_player:
+    defending_animal = pieces[second_click_key]["animal"]
+    defending_player = pieces[second_click_key]["player"]
+    if attacking_player == defending_player:
         return False
-    is_attacking_own_trap = False
-    if (attacking_animal_player == 0 and second_click_key in ["0_2", "1_3", "0_4"]) or (
-        attacking_animal_player == 1 and second_click_key in ["8_2", "7_3", "8_4"]
-    ):
-        return True
-    if (attacking_animal_player == 1 and second_click_key in ["0_2", "1_3", "0_4"]) or (
-        attacking_animal_player == 0 and second_click_key in ["8_2", "7_3", "8_4"]
-    ):
-        return False
-    if pieces[second_click_key] != None:
-        if attacking_animal_num == 8 and defending_animal_num == 1:
-            return False
-        elif (
-            attacking_animal_num < defending_animal_num and attacking_animal_num != 1
-        ) or (defending_animal_num != 8 and is_attacking_own_trap == False):
-            return False
+    trap_validness = validMoveTraps(attacking_player, second_click_key)
+    if trap_validness != None:
+        return trap_validness
+    rat_validness = validMoveRatElephant(pieces, second_click_key, attacking_animal, defending_animal)
+    if rat_validness != None:
+        return rat_validness
     return True

@@ -536,6 +536,13 @@ class TestAWS(unittest.TestCase):
         rat_pieces = {"0_0": {"player": 0, "animal": 1}}
         self.assertFalse(validMove("0_0", rat_pieces, "1_1"))
 
+    def test_DiagonalEat(self):
+        rat_pieces = {
+            "0_0": {"player": 0, "animal": 2},
+            "1_1": {"player": 1, "animal": 1},
+        }
+        self.assertFalse(validMove("0_0", rat_pieces, "1_1"))
+
     def test_validMove_TigerEatInOwnTrapsAndNormal(self):
         tiger_pieces = {
             "1_2": {"player": 0, "animal": 6},
@@ -565,6 +572,13 @@ class TestAWS(unittest.TestCase):
         self.assertTrue(validMove("4_3", lion_pieces_fake_o, "4_0"))
         self.assertTrue(validMove("4_3", lion_pieces_fake_o, "4_6"))
 
+    def test_LionEatingDuringJump(self):
+        lion_pieces = {
+            "4_3": {"player": 0, "animal": 7},
+            "4_0": {"player": 1, "animal": 4},
+        }
+        self.assertTrue(validMove("4_3", lion_pieces, "4_0"))
+
     def test_validMove_PantherOffBoard(self):
         panther_pieces = {"0_0": {"player": 0, "animal": 5}}
         self.assertFalse(validMove("0_0", panther_pieces, "-1_0"))
@@ -583,7 +597,7 @@ class TestAWS(unittest.TestCase):
             "0_1": {"player": 0, "animal": 1},
         }
         self.assertFalse(validMove("0_0", cat_pieces, "0_1"))
-    
+
     def test_RatNotEatElephantFromWater(self):
         rat_pieces = {
             "3_1": {"player": 0, "animal": 1},
@@ -591,6 +605,24 @@ class TestAWS(unittest.TestCase):
         }
         self.assertFalse(validMove("3_1", rat_pieces, "3_0"))
 
+    def test_ResultAnswer(self):
+        s1 = {
+            'piece_info': {
+                "3_1": {"player": 0, "animal": 2},
+                "3_0": {"player": 1, "animal": 1}
+            },
+            'turn_info': 1
+        }
 
+        s = {
+            'piece_info': {
+                "2_0": {"player": 0, "animal": 2},
+                "3_0": {"player": 1, "animal": 1},
+                
+            },
+            'turn_info': 0
+        }
+        self.assertEqual(Result(s, ['2_0', '3_1']), s1)
+        
 if __name__ == "__main__":
     unittest.main()
