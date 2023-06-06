@@ -101,8 +101,8 @@ const RULES_NEXT_Y_END = 150
 window.onload = function() {
 	canvas = document.getElementById('drawingCanvas')
 	context = canvas.getContext('2d')
-	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-	  context.scale(0.1, 0.1);
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		context.scale(0.1, 0.1);
 	}
 	canvas.onmouseup = canvasClick
 	winning_player = ''
@@ -214,7 +214,7 @@ function canvasClick(event) {
 	var click_xy = clickXY(event)
 	if (current_window == 'home') {
 		homeScreen(click_xy)
-	} else if (current_window == 'agilityrules' ||current_window == 'eatinganimals' ||current_window == 'howtowin' ||current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
+	} else if (current_window == 'agilityrules' || current_window == 'eatinganimals' || current_window == 'howtowin' || current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
 		rulesScreen(click_xy)
 	} else if (current_window == 'about') {
 		aboutScreen(click_xy)
@@ -259,7 +259,7 @@ function homeScreen(click_xy) {
 		click_xy[1] > CLOUD_Y_START &&
 		click_xy[1] < CLOUD_Y_END) {
 		current_window = 'cloud_game_menu'
-			// cloud_player 1 means red
+		// cloud_player 1 means red
 		cloud_player = 1
 		draw()
 		aws()
@@ -437,7 +437,7 @@ function aiGameEMove(ai_possible_moves) {
 		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
 		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
 		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
-			possible_moves.push([current_difference_x+current_difference_y, move_index])
+			possible_moves.push([current_difference_x + current_difference_y, move_index])
 		}
 	}
 	smallest_difference = 100
@@ -581,6 +581,15 @@ function checkPossibleTurn(first_click_key, pieces, current_window) {
 }
 
 function validMove(first_click_key, pieces, second_click_key, current_window) {
+	combined = {
+		"command": "validMove",
+		"first_click_key": first_click_key,
+		"pieces": JSON.stringify(pieces),
+		"second_click_key": second_click_key
+	}
+	string_combined = JSON.stringify(combined)
+	console.log(string_combined)
+	return gcf(string_combined)
 	var first_coords = first_click_key.split('_')
 	first_coords = first_coords.map((i) => Number(i));
 	var second_coords = second_click_key.split('_')
@@ -764,7 +773,7 @@ function draw() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (current_window == 'home') {
 		context.drawImage(menus['home'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
-	} else if (current_window == 'agilityrules' ||current_window == 'eatinganimals' ||current_window == 'howtowin' ||current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
+	} else if (current_window == 'agilityrules' || current_window == 'eatinganimals' || current_window == 'howtowin' || current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
 		window_to_draw = (ruleTutorial('no', 'no'))
 		context.drawImage(menus[window_to_draw], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
@@ -808,6 +817,13 @@ function aws() {
 	createGameReq.addEventListener('load', createGameListener);
 	createGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&create_game=1');
 	createGameReq.send();
+}
+
+function gcf(request) {
+	var createGameReq = new XMLHttpRequest();
+	createGameReq.open('GET', 'https://animal12-3rtw2phyba-uw.a.run.app/?request=' + request, false);
+	createGameReq.send(null);
+	return createGameReq.responseText.includes("true")
 }
 
 function setGameListener() {
@@ -858,7 +874,7 @@ function checkPeriodically() {
 	var url = encodeURIComponent(setup).replace('"', '%22');
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener('load', getGameListener)
-	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&get=1&game_board='+url);
+	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&get=1&game_board=' + url);
 	getReq.send();
 }
 
@@ -937,18 +953,18 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
-	var moving_pieces = playerTurn(pieces, current_window, turn)[0]
-	var moves = playerTurn(pieces, current_window, turn)[1]
-	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
-	if (show_green_squares) {
-		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
-			context.fillStyle = 'green'
-			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
-				POTENTIAL_MOVE_LENGTH,
-				POTENTIAL_MOVE_LENGTH)
-		}
-	}
+	// var moving_pieces = playerTurn(pieces, current_window, turn)[0]
+	// var moves = playerTurn(pieces, current_window, turn)[1]
+	// var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
+	// if (show_green_squares) {
+	// 	for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
+	// 		context.fillStyle = 'green'
+	// 		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+	// 			moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+	// 			POTENTIAL_MOVE_LENGTH,
+	// 			POTENTIAL_MOVE_LENGTH)
+	// 	}
+	// }
 }
 
 // Minimax function start here
@@ -1055,7 +1071,9 @@ function Actions(s) {
 		// console.log(move)
 		for (var x = 0; x < move.length; x++) {
 			piece1 = Object.keys(s['piece_info'])[i]
-			move1 = {[piece1] :move[x]}
+			move1 = {
+				[piece1]: move[x]
+			}
 			moves.push(move1)
 		}
 	}
@@ -1063,13 +1081,13 @@ function Actions(s) {
 	return moves
 }
 
-function Result(s,a) {
+function Result(s, a) {
 	p = toMove(s)
 	// console.log('before Result: '+JSON.stringify(s))
 	crd1 = a[0]
 	crd2 = a[1]
 	s[crd1] = s[crd2]
-	s['turn'] = Math.abs(p-1)
+	s['turn'] = Math.abs(p - 1)
 	// console.log('Result: '+JSON.stringify(s))
 	return s
 }
@@ -1094,5 +1112,5 @@ function miniMax(s) {
 				}
 			}
 		}
- 	}
+	}
 }
