@@ -363,165 +363,6 @@ function gameScreen(click_xy) {
 	}
 }
 
-function aiGameAMove(ai_possible_moves) {
-	ai_possible_move_index = -1
-	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-		if ((ai_possible_moves[move_index][0] == ['0_2'] || ai_possible_moves[move_index][0] == ['1_3'] || ai_possible_moves[move_index][0] == ['0_4']) && ai_select == 'F') {
-			continue
-		} else {
-			ai_possible_move_index = move_index
-			return move_index
-		}
-	}
-	if (ai_possible_move_index == -1) {
-		return Math.floor(Math.random() * ai_possible_moves.length)
-	}
-}
-
-function aiGameBMove(ai_possible_moves) {
-	ai_possible_moves_index = -1
-	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-		var first_coords = ai_possible_moves[move_index][0].split('_')
-		first_coords = first_coords.map((i) => Number(i));
-		var second_coords = ai_possible_moves[move_index][1].split('_')
-		second_coords = second_coords.map((i) => Number(i));
-		if (first_coords[0] < second_coords[0]) {
-			ai_possible_moves_index = move_index
-			break
-		}
-	}
-	if (ai_possible_moves_index == -1) {
-		return aiGameAMove(ai_possible_moves)
-	}
-	return ai_possible_moves_index
-}
-
-function aiGameCMove(ai_possible_moves) {
-	ai_possible_moves_index = -1
-	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-		possible_square = ai_possible_moves[move_index][1]
-		if (pieces[possible_square] != null) {
-			ai_possible_moves_index = move_index
-			break
-		}
-	}
-	if (ai_possible_moves_index == -1 && ai_select != 'F') {
-		return aiGameAMove(ai_possible_moves)
-	} else if (ai_possible_moves_index == -1 && ai_select == 'F') {
-		return null
-	}
-	return ai_possible_moves_index
-}
-
-function aiGameDMove(ai_possible_moves) {
-	ai_possible_moves_index = -1
-	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-		if ((ai_possible_moves[move_index][0] == ['0_2'] || ai_possible_moves[move_index][0] == ['1_3'] || ai_possible_moves[move_index][0] == ['0_4']) && ai_select == 'F') {
-			continue
-		}
-		den_square_coords = [8, 3]
-		var first_coords = ai_possible_moves[move_index][0].split('_')
-		first_coords = first_coords.map((i) => Number(i));
-		var second_coords = ai_possible_moves[move_index][1].split('_')
-		second_coords = second_coords.map((i) => Number(i));
-		current_difference_x = Math.abs(den_square_coords[0] - first_coords[0])
-		current_difference_y = Math.abs(den_square_coords[1] - first_coords[1])
-		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
-		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
-		if (future_difference_y < current_difference_y || future_difference_x < current_difference_x) {
-			ai_possible_moves_index = move_index
-		}
-	}
-	if (ai_possible_moves_index == -1) {
-		return aiGameAMove(ai_possible_moves)
-	}
-	return ai_possible_moves_index
-}
-
-function aiGameEMove(ai_possible_moves) {
-	ai_possible_moves_index = -1
-	possible_moves = []
-	for (move_index = 0; move_index < ai_possible_moves.length; move_index++) {
-		if ((ai_possible_moves[0][move_index] == ['0_2'] || ai_possible_moves[0][move_index] == ['1_3'] || ai_possible_moves[0][move_index] == ['0_4']) && ai_select == 'F') {
-			continue
-		} else if (pieces['0_2'] != null && pieces['1_3'] != null && pieces['0_4'] != null && ai_select == 'F') {
-			return aiGameDMove(ai_possible_moves)
-		}
-		den_square_coords = [0, 3]
-		var first_coords = ai_possible_moves[move_index][0].split('_')
-		first_coords = first_coords.map((i) => Number(i));
-		var second_coords = ai_possible_moves[move_index][1].split('_')
-		second_coords = second_coords.map((i) => Number(i));
-		current_difference_x = Math.abs(den_square_coords[0] - first_coords[0])
-		current_difference_y = Math.abs(den_square_coords[1] - first_coords[1])
-		future_difference_x = Math.abs(den_square_coords[0] - second_coords[0])
-		future_difference_y = Math.abs(den_square_coords[1] - second_coords[1])
-		if (future_difference_x < current_difference_x || future_difference_y < current_difference_y) {
-			possible_moves.push([current_difference_x + current_difference_y, move_index])
-		}
-	}
-	smallest_difference = 100
-	for (move_index = 0; move_index < possible_moves.length; move_index++) {
-		if (possible_moves[move_index][0] < smallest_difference) {
-			ai_possible_moves_index = possible_moves[move_index][1]
-			smallest_difference = possible_moves[move_index][0]
-		}
-	}
-	if (ai_possible_moves_index == -1 && ai_select != 'F') {
-		return aiGameAMove(ai_possible_moves)
-	} else if (ai_possible_moves_index == -1 && ai_select == 'F') {
-		return aiGameDMove(ai_possible_moves)
-	}
-	return ai_possible_moves_index
-}
-
-function aiGameFMove(ai_possible_moves) {
-	possible_move = aiGameCMove(ai_possible_moves)
-	if (possible_move == null) {
-		possible_move = aiGameEMove(ai_possible_moves)
-	}
-	if (possible_move == null) {
-		possible_move = aiGameAMove(ai_possible_moves)
-	}
-	return possible_move
-}
-
-function aiGame() {
-	var ai_moves = playerTurn(pieces, current_window, turn)
-	var ai_possible_moves = ai_moves[1]
-	var ai_possible_moves_index = 0
-	if (ai_select == 'A') {
-		ai_possible_moves_index = aiGameAMove(ai_possible_moves)
-	}
-	if (ai_select == 'B') {
-		ai_possible_moves_index = aiGameBMove(ai_possible_moves)
-	}
-	if (ai_select == 'C') {
-		ai_possible_moves_index = aiGameCMove(ai_possible_moves)
-	}
-	if (ai_select == 'D') {
-		ai_possible_moves_index = aiGameDMove(ai_possible_moves)
-	}
-	if (ai_select == 'E') {
-		ai_possible_moves_index = aiGameEMove(ai_possible_moves)
-	}
-	if (ai_select == 'F') {
-		ai_possible_moves_index = aiGameFMove(ai_possible_moves)
-	}
-	if (TEST_MODE == 1) {
-		ai_possible_moves_index = 0
-	}
-	var ai_move = ai_possible_moves[ai_possible_moves_index]
-	if (TEST_MODE == 1) {
-		if (pieces['0_0'] != null && pieces['0_0']['animal'] == 5) {
-			ai_move = ['0_0', '8_3']
-		}
-	}
-	var first_click_key = ai_move[0]
-	var second_click_key = ai_move[1]
-	movePiece(first_click_key, second_click_key)
-}
-
 function maybeEndGame() {
 	checkIfGameEnded()
 	if (JSON.stringify(s) != '{}') {
@@ -563,41 +404,6 @@ function checkIfGameEnded() {
 		current_window = 'game_over'
 		draw()
 	}
-}
-
-// function playerTurn(pieces, current_window, turn) {
-// 	var possible_pieces = []
-// 	var possible_moves = []
-// 	var keys = Object.keys(pieces)
-// 	for (var piece = 0; piece < keys.length; piece++) {
-// 		var piece_0 = keys[piece]
-// 		if (pieces[piece_0]['player'] == turn) {
-// 			var first_click_key = keys[piece]
-// 			var attacking_animal_player = pieces[first_click_key]['player']
-// 			checkpossibleturn = checkPossibleTurn(first_click_key, pieces, current_window)
-// 			for (turns = 0; turns < checkpossibleturn.length; turns++) {
-// 				possible_moves.push([first_click_key, checkpossibleturn[turns]])
-// 			}
-// 			if (checkpossibleturn.length > 0) {
-// 				possible_pieces.push(first_click_key)
-// 			}
-// 		}
-// 	}
-// 	return [possible_pieces, possible_moves]
-// }
-
-function checkPossibleTurn(first_click_key, pieces, current_window) {
-	var possibleMoves = []
-	for (var column = 0; column < 7; column++) {
-		for (var row = 0; row < 9; row++) {
-			var second_click_key = row + '_' + column
-			if (validMove(first_click_key, pieces, second_click_key, current_window)) {
-				var possibleMove = second_click_key
-				possibleMoves.push(possibleMove)
-			}
-		}
-	}
-	return possibleMoves
 }
 
 function validMove(first_click_key, pieces, second_click_key, current_window) {
@@ -878,18 +684,6 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
-	// var moving_pieces = playerTurn(pieces, current_window, turn)[0]
-	// var moves = playerTurn(pieces, current_window, turn)[1]
-	// var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
-	// if (show_green_squares) {
-	// 	for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
-	// 		context.fillStyle = 'green'
-	// 		context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-	// 			moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
-	// 			POTENTIAL_MOVE_LENGTH,
-	// 			POTENTIAL_MOVE_LENGTH)
-	// 	}
-	// }
 }
 
 // Minimax function start here
@@ -899,10 +693,8 @@ function whoWon(s) {
 	sq0 = winningsquares[0]
 	sq1 = winningsquares[1]
 	if (s['piece_info'][sq0] != null) {
-		// console.log('whoWon: red')
 		return 'red'
 	} else if (s['piece_info'][sq1] != null) {
-		// console.log('whoWon: blue')
 		return 'blue'
 	} else {
 		for (var player = 0; player < 2; player++) {
@@ -919,123 +711,19 @@ function whoWon(s) {
 				}
 			}
 			if (dead == 8 && player == 0) {
-				// console.log('whoWon: red')
 				return 'red'
 			} else if (dead == 8 && player == 1) {
-				// console.log('whoWon: blue')
 				return 'blue'
 			}
 		}
 	}
-	// console.log('whoWon: game not over')
 	return false
 }
 
 function isTerminal(s) {
 	if (whoWon(s) == false) {
-		// console.log('isTerminal: false')
 		return false
 	} else {
-		// console.log('isTerminal: true')
 		return true
-	}
-}
-//
-//  function Utility(s) {
-// +       utility = 50
-//         if (isTerminal) {
-//                 if (whoWon(s) == 'red') {
-// -                       // console.log('Utility: 1')
-// -                       return 1
-// +//                     // console.log('Utility: 1')
-// +                       return 100
-//                 } else if (whoWon(s) == 'blue') {
-// -                       // console.log('Utility: 0')
-// +//                     // console.log('Utility: 0')
-//                         return 0
-//                 }
-//         }
-// -       // console.log('Utility: 0.5')
-// -       return 0.5
-// +       for (var p in s['piece_info']) {
-// +               if (s['piece_info'][p]['player'] == 0) {
-// +                       utility-=s['piece_info'][p]['animal']
-// +                       if (s['piece_info'][p]['animal'] == 1) {
-// +                               utility-=7
-// +                       }
-// +               }
-// +               if (s['piece_info'][p]['player'] == 1) {
-// +                       utility+=s['piece_info'][p]['animal']
-// +                       if (s['piece_info'][p]['animal'] == 1) {
-// +                               utility+=7
-// +                       }
-// +               }
-// +       }
-// +       return utility
-//  }
-
-function Utility(s) {
-	if (isTerminal) {
-		if (whoWon(s) == 'red') {
-			// console.log('Utility: 1')
-			return 1
-		} else if (whoWon(s) == 'blue') {
-			// console.log('Utility: 0')
-			return 0
-		}
-	}
-	// console.log('Utility: 0.5')
-	return 0.5
-}
-
-// function Actions(s) {
-// 	moves = []
-// 	for (var i = 0; i < (Object.keys(s['piece_info']).length); i++) {
-// 		// console.log(Object.keys(s['piece_info'])[i])
-// 		move = checkPossibleTurn(Object.keys(s['piece_info'])[i], s['piece_info'], 'ai_game')
-// 		// console.log(move)
-// 		for (var x = 0; x < move.length; x++) {
-// 			piece1 = Object.keys(s['piece_info'])[i]
-// 			move1 = {
-// 				[piece1]: move[x]
-// 			}
-// 			moves.push(move1)
-// 		}
-// 	}
-// 	// console.log('Actions: ' + JSON.stringify(moves))
-// 	return moves
-// }
-
-function Result(s, a) {
-	p = toMove(s)
-	// console.log('before Result: '+JSON.stringify(s))
-	crd1 = a[0]
-	crd2 = a[1]
-	s[crd1] = s[crd2]
-	s['turn'] = Math.abs(p - 1)
-	// console.log('Result: '+JSON.stringify(s))
-	return s
-}
-
-function toMove(s) {
-	// console.log('toMove: '+s['turn'])
-	return s['turn']
-}
-
-function miniMax(s) {
-	moves = Actions(s)
-	for (var move = 0; move < moves.length; move++) {
-		s1 = Result(s, moves[move])
-		if (Utility(s1) == toMove(s)) {
-			return moves[move]
-		} else {
-			moves = Actions(s1)
-			for (var move1 = 0; move1 < moves.length; move1++) {
-				s2 = Result(s1, moves[move])
-				if (Utility(s2) == toMove(s)) {
-					moves.splice(move1, 1)
-				}
-			}
-		}
 	}
 }
