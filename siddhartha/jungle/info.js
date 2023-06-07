@@ -7,7 +7,7 @@ test_only_piece_setup = {
 		"player": 0,
 		"animal": 5
 	},
-	"6_4": {
+	"4_6": {
 		"player": 1,
 		"animal": 5
 	}
@@ -18,7 +18,7 @@ piece_setup = {
 		"player": 0,
 		"animal": 7
 	},
-	"0_6": {
+	"6_0": {
 		"player": 0,
 		"animal": 6
 	},
@@ -26,11 +26,11 @@ piece_setup = {
 		"player": 0,
 		"animal": 4
 	},
-	"1_5": {
+	"5_1": {
 		"player": 0,
 		"animal": 2
 	},
-	"2_0": {
+	"0_2": {
 		"player": 0,
 		"animal": 1
 	},
@@ -38,27 +38,27 @@ piece_setup = {
 		"player": 0,
 		"animal": 5
 	},
-	"2_4": {
+	"4_2": {
 		"player": 0,
 		"animal": 3
 	},
-	"2_6": {
+	"6_2": {
 		"player": 0,
 		"animal": 8
 	},
-	"8_6": {
+	"6_8": {
 		"player": 1,
 		"animal": 7
 	},
-	"8_0": {
+	"0_8": {
 		"player": 1,
 		"animal": 6
 	},
-	"7_5": {
+	"5_7": {
 		"player": 1,
 		"animal": 4
 	},
-	"7_1": {
+	"1_7": {
 		"player": 1,
 		"animal": 2
 	},
@@ -66,15 +66,15 @@ piece_setup = {
 		"player": 1,
 		"animal": 1
 	},
-	"6_4": {
+	"4_6": {
 		"player": 1,
 		"animal": 5
 	},
-	"6_2": {
+	"2_6": {
 		"player": 1,
 		"animal": 3
 	},
-	"6_0": {
+	"0_6": {
 		"player": 1,
 		"animal": 8
 	}
