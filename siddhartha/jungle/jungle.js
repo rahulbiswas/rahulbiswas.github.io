@@ -193,18 +193,27 @@ function possible_moves_mapping() {
 	console.log(string_combined)
 	possible_moves = gcf(string_combined)
 	possible_moves = possible_moves.replace('<span class="code" >', '').replace('</span>', '')
-	possible_moves = possible_moves.replaceAll('&quot;', '\'')
+	possible_moves = possible_moves.replaceAll('&quot;', '"')
+	console.log(possible_moves)
+	possible_moves = JSON.parse(possible_moves)
 	console.log(possible_moves)
 	// if (JSON.stringify(s) != '{}') {
 	// 	Actions(s)
 	// }
+	console.log("possible_moves.length = " + possible_moves.length)
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
 		move = move.split('_')
 		move = move.map((i) => Number(i));
 		context.fillStyle = 'chocolate'
 		console.log("coloring brown")
-		context.fillRect(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
+		console.log(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X)
+		console.log(move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y)
+		context.fillRect(
+			move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			POTENTIAL_MOVE_LENGTH,
+			POTENTIAL_MOVE_LENGTH)
 	}
 }
 
@@ -599,108 +608,7 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 		"second_click_key": second_click_key
 	}
 	string_combined = JSON.stringify(combined)
-	//	console.log(string_combined)
 	return gcf(string_combined)
-	var first_coords = first_click_key.split('_')
-	first_coords = first_coords.map((i) => Number(i));
-	var second_coords = second_click_key.split('_')
-	second_coords = second_coords.map((i) => Number(i));
-	if (second_coords[0] < 0 || second_coords[1] < 0 || second_coords[0] > 8 || second_coords[1] > 6) {
-		return false
-	}
-	var attacking_animal_num = pieces[first_click_key]['animal']
-	var attacking_animal_player = pieces[first_click_key]['player']
-	if (current_window == 'cloud_game' && typeof cloud_player != 'undefined' && cloud_player != turn) {
-		return false
-	}
-	// Allow tigers and lions to jump over water.
-	var valid_moves = validMoveWater[first_click_key]
-	if (valid_moves != null) {
-		for (var valid_move_index = 0; valid_move_index < valid_moves.length; valid_move_index++) {
-			valid_move = valid_moves[valid_move_index]
-			if (valid_move.destination == second_click_key) {
-				if (attacking_animal_num == TIGER || attacking_animal_num == LION) {
-					for (var w_s_i = 0; w_s_i < valid_move.water.length; w_s_i++) {
-						if (pieces[valid_move.water[w_s_i]] != null) {
-							return false
-						}
-					}
-					if (pieces[second_click_key] != null && pieces[second_click_key]["player"] != pieces[first_click_key]["player"] && pieces[second_click_key]["animal"] <= pieces[first_click_key]["animal"]) {
-						return true
-					} else if (pieces[second_click_key] == null) {
-						return true
-					}
-				}
-			}
-		}
-	}
-	var is_moving_to_water_square = false
-	for (var w_s_i = 0; w_s_i < water.length; w_s_i++) {
-		if (water[w_s_i][0] == second_coords[0] && water[w_s_i][1] == second_coords[1]) {
-			is_moving_to_water_square = true
-		}
-	}
-	if (is_moving_to_water_square) {
-		if (attacking_animal_num != RAT) {
-			return false
-		}
-	}
-	if (attacking_animal_player == 0) {
-		var is_attacking_own_den = ['0_3'].indexOf(second_click_key) > -1
-	} else {
-		var is_attacking_own_den = ['8_3'].indexOf(second_click_key) > -1
-	}
-	if (is_attacking_own_den) {
-		return false
-	}
-	// Disallow non-adjacent moves.
-	var x_diff = Math.abs(first_coords[0] - second_coords[0])
-	var y_diff = Math.abs(first_coords[1] - second_coords[1])
-	if (((x_diff == 1) && (y_diff == 1)) || (x_diff > 1) || (y_diff > 1)) {
-		return TEST_MODE == 1
-	}
-	first_coords[0] = parseInt(first_coords[0])
-	first_coords[1] = parseInt(first_coords[1])
-	is_moving_from_water_square = false
-	for (var w_s_i = 0; w_s_i < water.length; w_s_i++) {
-		if (water[w_s_i][0] == first_coords[0] && water[w_s_i][1] == first_coords[1]) {
-			is_moving_from_water_square = true
-		}
-	}
-	if ((is_moving_from_water_square) && (pieces[second_click_key] != null)) {
-		return false
-	}
-	if (pieces[second_click_key] == null) {
-		return true
-	}
-	var defending_animal_num = pieces[second_click_key]['animal']
-	var defending_animal_player = pieces[second_click_key]['player']
-	if (attacking_animal_player == defending_animal_player) {
-		return false
-	}
-	if (attacking_animal_player == 0) {
-		var is_attacking_own_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
-		var is_attacking_enemy_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
-	} else {
-		var is_attacking_own_trap = ['8_2', '7_3', '8_4'].indexOf(second_click_key) > -1
-		var is_attacking_enemy_trap = ['0_2', '1_3', '0_4'].indexOf(second_click_key) > -1
-	}
-	if (is_attacking_own_trap) {
-		return true
-	}
-	if (is_attacking_enemy_trap) {
-		return false
-	}
-	if (pieces[second_click_key] != null) {
-		if ((attacking_animal_num == ELEPHANT) && (defending_animal_num == RAT)) {
-			return false
-		}
-		if ((attacking_animal_num < defending_animal_num) &&
-			((attacking_animal_num != RAT) || (defending_animal_num != ELEPHANT)) && (is_attacking_own_trap == false)) {
-			return false
-		}
-	}
-	return true
 }
 
 function movePiece(first_click_key, second_click_key) {
