@@ -205,6 +205,7 @@ function possible_moves_mapping() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
+}
 
 
 function canvasClick(event) {
@@ -397,7 +398,7 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 		"second_click_key": second_click_key
 	}
 	string_combined = JSON.stringify(combined)
-	return gcf(string_combined)
+	return (gcf(string_combined) == "true")
 }
 
 function movePiece(first_click_key, second_click_key) {
@@ -530,13 +531,7 @@ function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.open('GET', 'https://animal12-3rtw2phyba-uw.a.run.app/?request=' + request, false);
 	createGameReq.send(null);
-	if (createGameReq.responseText.includes("true")) {
-		return true
-	} else if (createGameReq.responseText.includes("false")) {
-		return false
-	} else {
-		return createGameReq.responseText
-	}
+	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '')
 }
 
 function setGameListener() {
@@ -665,6 +660,29 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
+	console.log("drawing green squares")
+	drawGreenSquares()
+}
+
+function drawGreenSquares() {
+	combined = {
+		"command": "playerTurn",
+		"pieces": JSON.stringify(pieces),
+		"turn": turn.toString()
+	}
+	string_combined = JSON.stringify(combined)
+	moving_pieces = gcf(string_combined)
+	console.log(moving_pieces)
+	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
+	if (show_green_squares) {
+		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
+			context.fillStyle = 'green'
+			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+				POTENTIAL_MOVE_LENGTH,
+				POTENTIAL_MOVE_LENGTH)
+		}
+	}
 }
 
 function whoWon(s) {
@@ -705,4 +723,20 @@ function isTerminal(s) {
 	} else {
 		return true
 	}
+}
+
+function Result(s, a) {
+	p = toMove(s)
+	// console.log('before Result: '+JSON.stringify(s))
+	crd1 = a[0]
+	crd2 = a[1]
+	s[crd1] = s[crd2]
+	s['turn'] = Math.abs(p - 1)
+	// console.log('Result: '+JSON.stringify(s))
+	return s
+}
+
+function toMove(s) {
+	// console.log('toMove: '+s['turn'])
+	return s['turn']
 }
