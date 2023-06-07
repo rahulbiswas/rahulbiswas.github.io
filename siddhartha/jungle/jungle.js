@@ -190,25 +190,15 @@ function possible_moves_mapping() {
 		"pieces": JSON.stringify(pieces)
 	}
 	string_combined = JSON.stringify(combined)
-	console.log(string_combined)
 	possible_moves = gcf(string_combined)
 	possible_moves = possible_moves.replace('<span class="code" >', '').replace('</span>', '')
 	possible_moves = possible_moves.replaceAll('&quot;', '"')
-	console.log(possible_moves)
 	possible_moves = JSON.parse(possible_moves)
-	console.log(possible_moves)
-	// if (JSON.stringify(s) != '{}') {
-	// 	Actions(s)
-	// }
-	console.log("possible_moves.length = " + possible_moves.length)
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
 		move = move.split('_')
 		move = move.map((i) => Number(i));
 		context.fillStyle = 'chocolate'
-		console.log("coloring brown")
-		console.log(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X)
-		console.log(move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y)
 		context.fillRect(
 			move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
 			move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
@@ -425,7 +415,6 @@ function movePiece(first_click_key, second_click_key) {
 	pieces[second_click_key] = moving_piece;
 	is_first_click = true
 	turn = 1 - turn
-	console.log(pieces)
 	if (current_window == 'ai_game' && turn == 0 && ai_select != '') {
 		maybeEndGame()
 		aiGame()
@@ -572,7 +561,6 @@ function setBoard() {
 	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
 	var setGameReq = new XMLHttpRequest();
 	setGameReq.addEventListener('load', setGameListener)
-	// console.log(current_window)
 	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&set=1&game_code=' + game_code + '&game_board=' + url);
 	setGameReq.send();
 }
