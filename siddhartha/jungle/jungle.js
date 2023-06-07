@@ -205,14 +205,7 @@ function possible_moves_mapping() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
-}
 
-class WaterJump {
-	constructor(destination, water) {
-		this.destination = destination
-		this.water = water
-	}
-}
 
 function canvasClick(event) {
 	s = {
@@ -673,8 +666,6 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH)
 	}
 }
-
-// Minimax function start here
 
 function whoWon(s) {
 	winningsquares = ['0_3', '8_3']
