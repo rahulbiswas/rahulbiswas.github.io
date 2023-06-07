@@ -180,19 +180,30 @@ function clickXY(event) {
 function click_key_with_event(clickX, clickY) {
 	var row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
 	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
-	return column + '_' + row
+	return row + '_' + column
 }
 
 function possible_moves_mapping() {
-	var possible_moves = checkPossibleTurn(first_click_key, pieces, current_window)
-	if (JSON.stringify(s) != '{}') {
-		Actions(s)
+	combined = {
+		"command": "checkPossibleTurn",
+		"first_click_key": first_click_key,
+		"pieces": JSON.stringify(pieces)
 	}
+	string_combined = JSON.stringify(combined)
+	console.log(string_combined)
+	possible_moves = gcf(string_combined)
+	possible_moves = possible_moves.replace('<span class="code" >', '').replace('</span>', '')
+	possible_moves = possible_moves.replaceAll('&quot;', '\'')
+	console.log(possible_moves)
+	// if (JSON.stringify(s) != '{}') {
+	// 	Actions(s)
+	// }
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
 		move = move.split('_')
 		move = move.map((i) => Number(i));
 		context.fillStyle = 'chocolate'
+		console.log("coloring brown")
 		context.fillRect(move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X, move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y, POTENTIAL_MOVE_LENGTH, POTENTIAL_MOVE_LENGTH)
 	}
 }
@@ -545,26 +556,26 @@ function checkIfGameEnded() {
 	}
 }
 
-function playerTurn(pieces, current_window, turn) {
-	var possible_pieces = []
-	var possible_moves = []
-	var keys = Object.keys(pieces)
-	for (var piece = 0; piece < keys.length; piece++) {
-		var piece_0 = keys[piece]
-		if (pieces[piece_0]['player'] == turn) {
-			var first_click_key = keys[piece]
-			var attacking_animal_player = pieces[first_click_key]['player']
-			checkpossibleturn = checkPossibleTurn(first_click_key, pieces, current_window)
-			for (turns = 0; turns < checkpossibleturn.length; turns++) {
-				possible_moves.push([first_click_key, checkpossibleturn[turns]])
-			}
-			if (checkpossibleturn.length > 0) {
-				possible_pieces.push(first_click_key)
-			}
-		}
-	}
-	return [possible_pieces, possible_moves]
-}
+// function playerTurn(pieces, current_window, turn) {
+// 	var possible_pieces = []
+// 	var possible_moves = []
+// 	var keys = Object.keys(pieces)
+// 	for (var piece = 0; piece < keys.length; piece++) {
+// 		var piece_0 = keys[piece]
+// 		if (pieces[piece_0]['player'] == turn) {
+// 			var first_click_key = keys[piece]
+// 			var attacking_animal_player = pieces[first_click_key]['player']
+// 			checkpossibleturn = checkPossibleTurn(first_click_key, pieces, current_window)
+// 			for (turns = 0; turns < checkpossibleturn.length; turns++) {
+// 				possible_moves.push([first_click_key, checkpossibleturn[turns]])
+// 			}
+// 			if (checkpossibleturn.length > 0) {
+// 				possible_pieces.push(first_click_key)
+// 			}
+// 		}
+// 	}
+// 	return [possible_pieces, possible_moves]
+// }
 
 function checkPossibleTurn(first_click_key, pieces, current_window) {
 	var possibleMoves = []
@@ -588,7 +599,7 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 		"second_click_key": second_click_key
 	}
 	string_combined = JSON.stringify(combined)
-	console.log(string_combined)
+	//	console.log(string_combined)
 	return gcf(string_combined)
 	var first_coords = first_click_key.split('_')
 	first_coords = first_coords.map((i) => Number(i));
@@ -823,7 +834,13 @@ function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.open('GET', 'https://animal12-3rtw2phyba-uw.a.run.app/?request=' + request, false);
 	createGameReq.send(null);
-	return createGameReq.responseText.includes("true")
+	if (createGameReq.responseText.includes("true")) {
+		return true
+	} else if (createGameReq.responseText.includes("false")) {
+		return false
+	} else {
+		return createGameReq.responseText
+	}
 }
 
 function setGameListener() {
@@ -925,8 +942,8 @@ function drawBoard() {
 		var player = pieces[piece_position]['player']
 		var animal = pieces[piece_position]['animal']
 		var piece_components = piece_position.split('_')
-		var x = piece_components[1] * BOARD_SQUARE_WIDTH
-		var y = piece_components[0] * BOARD_SQUARE_WIDTH
+		var x = piece_components[0] * BOARD_SQUARE_WIDTH
+		var y = piece_components[1] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
 			context.drawImage(animals_0[animal],
 				x + BOARD_UPPER_LEFT_X,
@@ -944,12 +961,12 @@ function drawBoard() {
 	}
 	if (moved_piece[0] != ['0']) {
 		context.fillStyle = 'purple'
-		context.fillRect(moved_piece[0][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+		context.fillRect(moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moved_piece[0][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
-		context.fillRect(moved_piece[1][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-			moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+		context.fillRect(moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			moved_piece[1][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
@@ -1063,23 +1080,23 @@ function Utility(s) {
 	return 0.5
 }
 
-function Actions(s) {
-	moves = []
-	for (var i = 0; i < (Object.keys(s['piece_info']).length); i++) {
-		// console.log(Object.keys(s['piece_info'])[i])
-		move = checkPossibleTurn(Object.keys(s['piece_info'])[i], s['piece_info'], 'ai_game')
-		// console.log(move)
-		for (var x = 0; x < move.length; x++) {
-			piece1 = Object.keys(s['piece_info'])[i]
-			move1 = {
-				[piece1]: move[x]
-			}
-			moves.push(move1)
-		}
-	}
-	// console.log('Actions: ' + JSON.stringify(moves))
-	return moves
-}
+// function Actions(s) {
+// 	moves = []
+// 	for (var i = 0; i < (Object.keys(s['piece_info']).length); i++) {
+// 		// console.log(Object.keys(s['piece_info'])[i])
+// 		move = checkPossibleTurn(Object.keys(s['piece_info'])[i], s['piece_info'], 'ai_game')
+// 		// console.log(move)
+// 		for (var x = 0; x < move.length; x++) {
+// 			piece1 = Object.keys(s['piece_info'])[i]
+// 			move1 = {
+// 				[piece1]: move[x]
+// 			}
+// 			moves.push(move1)
+// 		}
+// 	}
+// 	// console.log('Actions: ' + JSON.stringify(moves))
+// 	return moves
+// }
 
 function Result(s, a) {
 	p = toMove(s)
