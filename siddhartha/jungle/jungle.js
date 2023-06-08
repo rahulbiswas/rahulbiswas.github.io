@@ -350,6 +350,7 @@ function gameScreen(click_xy) {
 function maybeEndGame() {
 	checkIfGameEnded()
 	if (JSON.stringify(s) != '{}') {
+		console.log("354")
 		isTerminal(s)
 	}
 	if (winning_player != '') {
@@ -378,14 +379,12 @@ function checkNumberOfPieces(color_number) {
 }
 
 function checkIfGameEnded() {
-	if (pieces['0_3'] != null || checkNumberOfPieces(0)) {
-		winning_player = 'red'
-		current_window = 'game_over'
-		draw()
+	s = {
+		"piece_info" : pieces,
+		"turn_info" : turn
 	}
-	if (pieces['8_3'] != null || checkNumberOfPieces(1)) {
-		winning_player = 'blue'
-		current_window = 'game_over'
+	if (isTerminal(s)) {
+		current_window = "game_over"
 		draw()
 	}
 }
@@ -489,7 +488,9 @@ function draw() {
 	} else if (current_window == 'cloud_game_menu') {
 		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
+		console.log("somebody won")
 		if (winning_player == 'red') {
+			console.log("red has won!")
 			context.drawImage(menus['win_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
 		if (winning_player == 'blue') {
@@ -660,7 +661,6 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
 	}
-	console.log("drawing green squares")
 	drawGreenSquares()
 }
 
@@ -672,55 +672,36 @@ function drawGreenSquares() {
 	}
 	string_combined = JSON.stringify(combined)
 	moving_pieces = gcf(string_combined)
-	console.log(moving_pieces)
+	moving_pieces = moving_pieces.replace('<span class="code" >', '').replace('</span>', '')
+	moving_pieces = moving_pieces.replaceAll('&quot;', '"')
+	moving_pieces = JSON.parse(moving_pieces)
 	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
-			context.fillRect(moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			context.fillRect(moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+				moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 				POTENTIAL_MOVE_LENGTH,
 				POTENTIAL_MOVE_LENGTH)
 		}
 	}
 }
 
-function whoWon(s) {
-	winningsquares = ['0_3', '8_3']
-	sq0 = winningsquares[0]
-	sq1 = winningsquares[1]
-	if (s['piece_info'][sq0] != null) {
-		return 'red'
-	} else if (s['piece_info'][sq1] != null) {
-		return 'blue'
-	} else {
-		for (var player = 0; player < 2; player++) {
-			dead = 0
-			for (var animal = 1; animal < 9; animal++) {
-				is_alive = false
-				for (var k in s['piece_info']) {
-					if (s['piece_info'][k]['player'] == player && s['piece_info'][k]['animal'] == animal) {
-						is_alive = true
-						break
-					} else {
-						dead += 1
-					}
-				}
-			}
-			if (dead == 8 && player == 0) {
-				return 'red'
-			} else if (dead == 8 && player == 1) {
-				return 'blue'
-			}
-		}
-	}
-	return false
-}
-
 function isTerminal(s) {
-	if (whoWon(s) == false) {
+	combined = {
+		"command": "whoWon",
+		"pieces": JSON.stringify(pieces)
+	}
+	string_combined = JSON.stringify(combined)
+	somebodyWon = gcf(string_combined)
+	console.log(somebodyWon)
+	if (somebodyWon == "false") {
 		return false
+	} else if (somebodyWon == "red"){
+		winning_player = "red"
+		return true
 	} else {
+		winning_player = "blue"
 		return true
 	}
 }
