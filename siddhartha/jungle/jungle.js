@@ -350,7 +350,6 @@ function gameScreen(click_xy) {
 function maybeEndGame() {
 	checkIfGameEnded()
 	if (JSON.stringify(s) != '{}') {
-		console.log("354")
 		isTerminal(s)
 	}
 	if (winning_player != '') {
@@ -488,9 +487,7 @@ function draw() {
 	} else if (current_window == 'cloud_game_menu') {
 		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
-		console.log("somebody won")
 		if (winning_player == 'red') {
-			console.log("red has won!")
 			context.drawImage(menus['win_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 		}
 		if (winning_player == 'blue') {
@@ -694,7 +691,6 @@ function isTerminal(s) {
 	}
 	string_combined = JSON.stringify(combined)
 	somebodyWon = gcf(string_combined)
-	console.log(somebodyWon)
 	if (somebodyWon == "false") {
 		return false
 	} else if (somebodyWon == "red"){
@@ -708,16 +704,13 @@ function isTerminal(s) {
 
 function Result(s, a) {
 	p = toMove(s)
-	// console.log('before Result: '+JSON.stringify(s))
 	crd1 = a[0]
 	crd2 = a[1]
 	s[crd1] = s[crd2]
 	s['turn'] = Math.abs(p - 1)
-	// console.log('Result: '+JSON.stringify(s))
 	return s
 }
 
 function toMove(s) {
-	// console.log('toMove: '+s['turn'])
 	return s['turn']
 }
