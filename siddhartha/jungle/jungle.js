@@ -106,7 +106,7 @@ window.onload = function() {
 	}
 	canvas.onmouseup = canvasClick
 	winning_player = ''
-	setPieces()
+	setInitialBoard()
 	draw()
 	join_multiplayer()
 }
@@ -162,11 +162,14 @@ function loadPNGs() {
 	menus['pewter_select'] = imageWithName('menus_pewter_select')
 }
 
-function setPieces() {
-	pieces = JSON.parse(JSON.stringify(piece_setup))
-	if (TEST_MODE == 1) {
-		pieces = JSON.parse(JSON.stringify(test_only_piece_setup))
+function setInitialBoard() {
+	combined = {
+		"command": "setPieces"
 	}
+	string_combined = JSON.stringify(combined)
+	pieces = gcf(string_combined)
+	pieces = JSON.parse(pieces)
+	console.log("pieces = " + pieces)
 	is_first_click = true
 	turn = 1
 }
@@ -191,8 +194,6 @@ function possible_moves_mapping() {
 	}
 	string_combined = JSON.stringify(combined)
 	possible_moves = gcf(string_combined)
-	possible_moves = possible_moves.replace('<span class="code" >', '').replace('</span>', '')
-	possible_moves = possible_moves.replaceAll('&quot;', '"')
 	possible_moves = JSON.parse(possible_moves)
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
@@ -400,7 +401,9 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 }
 
 function movePiece(first_click_key, second_click_key) {
+	console.log(first_click_key, second_click_key)
 	var moving_piece = pieces[first_click_key]
+	console.log(moving_piece)
 	moved_piece[0] = first_click_key.split('_')
 	moved_piece[1] = second_click_key.split('_')
 	delete pieces[first_click_key]
@@ -414,6 +417,20 @@ function movePiece(first_click_key, second_click_key) {
 		setBoard()
 	}
 	drawBoard()
+}
+
+function aiGame() {
+	combined = {
+		"command": "miniMax",
+		"pieces": JSON.stringify(pieces),
+		"turn" : turn.toString()
+	}
+	string_combined = JSON.stringify(combined)
+	move = gcf(string_combined)
+	console.log(move)
+	first = move[2] + move[3] + move[4]
+	second = move[8] + move[9] + move[10]
+	movePiece(first, second)
 }
 
 function ruleTutorial(change, back) {
@@ -529,7 +546,7 @@ function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.open('GET', 'https://animal12-3rtw2phyba-uw.a.run.app/?request=' + request, false);
 	createGameReq.send(null);
-	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '')
+	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
 }
 
 function setGameListener() {
