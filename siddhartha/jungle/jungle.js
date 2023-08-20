@@ -708,6 +708,7 @@ function isTerminal(s) {
 	}
 	string_combined = JSON.stringify(combined)
 	somebodyWon = gcf(string_combined)
+	console.log(somebodyWon)
 	if (somebodyWon == "false") {
 		return false
 	} else if (somebodyWon == "red"){
