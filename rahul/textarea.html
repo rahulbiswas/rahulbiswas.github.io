@@ -17,8 +17,8 @@ label {
 <script>
 function rmtext(page) {
 	var ta = document.getElementById('ta')
-	if (ta.value.length > 200) {
-  	ta.value = ta.value.substring(1)
+	if (ta.value.length > 300) {
+  	ta.value = ta.value.substring(50)
   }
   if (ta.value.includes("xxx")) {
     ta.value = ""
@@ -35,6 +35,6 @@ function cleartext() {
 	<br>
 	<button class="button" onclick="cleartext()">clear</button>
 <br>	
-4
+5
 </body>
 </html>
