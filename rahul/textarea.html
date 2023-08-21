@@ -9,13 +9,16 @@ label {
 }
 </style>
 <script>
-function SwitchText(page) {
-	var resultElement = document.getElementById('result')
-	resultElement.innerHTML = "num " + page
+function rmtext(page) {
+	console.log('hello')
+	var ta = document.getElementById('ta')
+	if (ta.value.length > 100) {
+  	ta.value = ta.value.substring(1)
+  }
 }
 </script>
 </head>
 <body>
-  <textarea rows="4" cols="50"></textarea>
+  <textarea id="ta" name="ta" rows="4" cols="50" oninput="rmtext()"></textarea>
 </body>
 </html>
