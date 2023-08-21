@@ -7,6 +7,12 @@ label {
   display: inline-block;
   width: 60px;
 }
+.button {
+  padding: 30px 100px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+}
 </style>
 <script>
 function rmtext(page) {
@@ -15,9 +21,15 @@ function rmtext(page) {
   	ta.value = ta.value.substring(1)
   }
 }
+function cleartext() {
+	var ta = document.getElementById('ta')
+  ta.value = ""
+}
 </script>
 </head>
 <body>
   <textarea id="ta" name="ta" rows="15" cols="35" oninput="rmtext()" autofocus></textarea>
+	<br>
+	<button class="button" onclick="cleartext()">clear</button>
 </body>
 </html>
