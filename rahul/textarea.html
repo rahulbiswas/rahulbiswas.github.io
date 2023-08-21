@@ -23,6 +23,13 @@ function rmtext(page) {
   if (ta.value.includes("xxx")) {
     ta.value = ""
   }
+  if (ta.value.endsWith(" dx")) {
+    ta.value = ta.value.substring(0, ta.value.lastIndexOf(" "))
+    ta.value = ta.value.substring(0, ta.value.lastIndexOf(" ")) + " "
+  }
+  if (ta.value.endsWith("dx")) {
+    ta.value = ta.value.substring(0, ta.value.lastIndexOf(" ")) + " "
+  }
 }
 function cleartext() {
 	var ta = document.getElementById('ta')
@@ -35,6 +42,6 @@ function cleartext() {
 	<br>
 	<button class="button" onclick="cleartext()">clear</button>
 <br>	
-5
+6
 </body>
 </html>
