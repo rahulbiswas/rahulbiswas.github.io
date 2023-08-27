@@ -544,7 +544,7 @@ function aws() {
 
 function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
-	createGameReq.open('GET', 'https://animal12-3rtw2phyba-uw.a.run.app/?request=' + request, false);
+	createGameReq.open('GET', 'https://animal-397104.uw.r.appspot.com/?request=' + request, false);
 	createGameReq.send(null);
 	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
 }
