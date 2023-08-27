@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Area</title>
+<style>
+label {
+  display: inline-block;
+  width: 60px;
+}
+.button {
+  padding: 30px 100px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+}
+</style>
+<script>
+function rmtext(page) {
+	var ta = document.getElementById('ta')
+	if (ta.value.length > 300) {
+  	ta.value = ta.value.substring(50)
+  }
+  if (ta.value.includes("xxx")) {
+    ta.value = ""
+  }
+  if (ta.value.endsWith(" dx")) {
+    ta.value = ta.value.substring(0, ta.value.lastIndexOf(" "))
+    ta.value = ta.value.substring(0, ta.value.lastIndexOf(" ")) + " "
+  }
+  if (ta.value.endsWith("dx")) {
+    ta.value = ta.value.substring(0, ta.value.lastIndexOf(" ")) + " "
+  }
+}
+function cleartext() {
+	var ta = document.getElementById('ta')
+  ta.value = ""
+}
+</script>
+</head>
+<body>
+  <textarea id="ta" name="ta" rows="15" cols="35" oninput="rmtext()" autofocus></textarea>
+	<br>
+	<button class="button" onclick="cleartext()">clear</button>
+<br>	
+6
+</body>
+</html>
