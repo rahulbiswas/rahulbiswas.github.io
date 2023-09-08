@@ -538,7 +538,7 @@ function aws() {
 	}
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.addEventListener('load', createGameListener);
-	createGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&create_game=1');
+	createGameReq.open('GET', 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?create_game=1');
 	createGameReq.send();
 }
 
@@ -564,7 +564,7 @@ function setBoard() {
 	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
 	var setGameReq = new XMLHttpRequest();
 	setGameReq.addEventListener('load', setGameListener)
-	setGameReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&set=1&game_code=' + game_code + '&game_board=' + url);
+	setGameReq.open('GET', 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?set=1&game_code=' + game_code + '&game_board=' + url);
 	setGameReq.send();
 }
 
@@ -580,26 +580,18 @@ function checkPeriodically() {
 			draw()
 			maybeEndGame()
 		}
-		if (current_window == 'cloud_game' && turn != cloud_player) {
+		if (turn != cloud_player) {
 			setTimeout(checkPeriodically, 2000)
 		} else if (current_window != 'game_over') {
 			current_window = 'cloud_game'
 			drawBoard()
 		}
 	}
-	var setup = {
-		piece_info: pieces,
-		turn_info: turn,
-		moved_piece_info: moved_piece
-	}
-	setup = JSON.stringify(setup)
-	var url = encodeURIComponent(setup).replace('"', '%22');
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener('load', getGameListener)
-	getReq.open('GET', 'https://06z51kydsh.execute-api.us-west-2.amazonaws.com/Prod/hello?siddhartha=ai&get=1&game_board=' + url);
+	getReq.open('GET', 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?get=1&game_code=' + game_code);
 	getReq.send();
 }
-
 
 function drawBoard() {
 	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
