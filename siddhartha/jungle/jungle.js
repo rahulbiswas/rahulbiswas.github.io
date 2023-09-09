@@ -538,13 +538,17 @@ function aws() {
 	}
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.addEventListener('load', createGameListener);
-	createGameReq.open('GET', 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?create_game=1');
+	url = 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?create_game=1';
+	console.log(url);
+	createGameReq.open('GET', url);
 	createGameReq.send();
 }
 
 function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
-	createGameReq.open('GET', 'https://animal-397104.uw.r.appspot.com/?request=' + request, false);
+	url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
+	console.log(url)
+	createGameReq.open('GET', url, false);
 	createGameReq.send(null);
 	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
 }
@@ -560,12 +564,14 @@ function setBoard() {
 		moved_piece_info: moved_piece
 	}
 	setup = JSON.stringify(setup)
-	var url = encodeURIComponent(setup);
-	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code;
-	var setGameReq = new XMLHttpRequest();
+	var url = encodeURIComponent(setup)
+	document.getElementById('multiplayer_join_url').innerHTML = gameURL() + '?game_code=' + game_code
+	var setGameReq = new XMLHttpRequest()
 	setGameReq.addEventListener('load', setGameListener)
-	setGameReq.open('GET', 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?set=1&game_code=' + game_code + '&game_board=' + url);
-	setGameReq.send();
+	url = 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?set=1&game_code=' + game_code + '&game_board=' + url
+	console.log(url)
+	setGameReq.open('GET', url)
+	setGameReq.send()
 }
 
 function checkPeriodically() {
@@ -589,8 +595,10 @@ function checkPeriodically() {
 	}
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener('load', getGameListener)
-	getReq.open('GET', 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?get=1&game_code=' + game_code);
-	getReq.send();
+	url = 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?get=1&game_code=' + game_code
+	console.log(url)
+	getReq.open('GET', url)
+	getReq.send()
 }
 
 function drawBoard() {
