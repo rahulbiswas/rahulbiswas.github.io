@@ -3,13 +3,28 @@
 // position : { "player" : which_player, "animal": animal_number }
 
 test_only_piece_setup = {
-	"2_2": {
+
+    addPiece(pieces, Animal.BLUE_PLAYER, Animal.WOLF, "1_2");
+    addPiece(pieces, Animal.RED_PLAYER, Animal.ELEPHANT, "1_1");
+    addPiece(pieces, Animal.RED_PLAYER, Animal.CAT, "2_1");
+    addPiece(pieces, Animal.BLUE_PLAYER, Animal.RAT, "0_1");
+
+
+	"1_2": {
 		"player": 0,
-		"animal": 5
+		"animal": 3
 	},
-	"4_6": {
+	"1_1": {
 		"player": 1,
-		"animal": 5
+		"animal": 8
+	},
+	"2_1": {
+		"player": 1,
+		"animal": 2,
+	},
+	"0_1": {
+		"player": 0,
+		"animal": 1
 	}
 }
 

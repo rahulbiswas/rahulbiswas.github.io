@@ -164,7 +164,8 @@ function loadPNGs() {
 
 function setInitialBoard() {
 	combined = {
-		"command": "setPieces"
+		"command": "setPieces",
+		"test_mode": "0"
 	}
 	string_combined = JSON.stringify(combined)
 	pieces = gcf(string_combined)
@@ -544,7 +545,8 @@ function aws() {
 
 function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
-	createGameReq.open('GET', 'https://animal-397104.uw.r.appspot.com/?request=' + request, false);
+	createGameReq.open('GET', 'http://localhost:8080/?request=' + request, false);
+	console.log('sending local')
 	createGameReq.send(null);
 	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
 }
