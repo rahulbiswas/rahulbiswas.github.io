@@ -355,9 +355,12 @@ function maybeEndGame() {
 		isTerminal(s)
 	}
 	if (winning_player != '') {
+		console.log('game is over')
 		current_window = 'game_over'
 		draw()
+		return true
 	}
+	return false
 }
 
 function gameEnd(click_xy) {
@@ -412,8 +415,9 @@ function movePiece(first_click_key, second_click_key) {
 	is_first_click = true
 	turn = 1 - turn
 	if (current_window == 'ai_game' && turn == 0 && ai_select != '') {
-		maybeEndGame()
-		aiGame()
+		if (!maybeEndGame()) {
+			aiGame()
+		}
 	} else if (current_window == 'cloud_game') {
 		setBoard()
 	}
@@ -547,9 +551,10 @@ function aws() {
 
 function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
-	url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
-	// url = 'http://localhost:8080/?request=' + request
+	//url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
+	url = 'http://localhost:8080/?request=' + request
 	console.log(url)
+	console.trace()
 	createGameReq.open('GET', url, false);
 	createGameReq.send(null);
 	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
@@ -712,11 +717,14 @@ function isTerminal(s) {
 	somebodyWon = gcf(string_combined)
 	console.log(somebodyWon)
 	if (somebodyWon == "false") {
+		console.log("nobody won")
 		return false
 	} else if (somebodyWon == "red"){
+		console.log("red won")
 		winning_player = "red"
 		return true
 	} else {
+		console.log("blue won")
 		winning_player = "blue"
 		return true
 	}
