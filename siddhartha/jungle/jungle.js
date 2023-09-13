@@ -24,6 +24,7 @@ s = {}
 var url_string = window.location.href
 var url = new URL(url_string)
 var testBoard = url.searchParams.get("board")
+var useLocal = url.searchParams.get("local")
 
 loadPNGs()
 var TEST_MODE = 0
@@ -531,6 +532,9 @@ function draw() {
 
 function join_multiplayer() {
 	var joining_code = window.location.search
+	if (joining_code.contains('game_code')) {
+		return;
+	}
 	joining_code = joining_code.replace('?game_code=', '')
 	if (joining_code != '') {
 		turn = 1
@@ -559,7 +563,9 @@ function aws() {
 function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
 	url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
-	//url = 'http://localhost:8080/?request=' + request
+	if (useLocal != null) {
+		url = 'http://localhost:8080/?request=' + request
+	}
 	console.log(url)
 	console.trace()
 	createGameReq.open('GET', url, false);
