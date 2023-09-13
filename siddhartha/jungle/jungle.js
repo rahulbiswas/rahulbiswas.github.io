@@ -21,6 +21,10 @@ s = {}
 // menus
 // moved_piece
 
+var url_string = window.location.href
+var url = new URL(url_string)
+var testBoard = url.searchParams.get("board")
+
 loadPNGs()
 var TEST_MODE = 0
 if (window.location.href == "file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html") {
@@ -166,6 +170,9 @@ function setInitialBoard() {
 	combined = {
 		"command": "setPieces",
 		"test_mode": "0"
+	}
+	if (testBoard != null) {
+		combined["board"] = testBoard
 	}
 	string_combined = JSON.stringify(combined)
 	pieces = gcf(string_combined)
@@ -551,8 +558,8 @@ function aws() {
 
 function gcf(request) {
 	var createGameReq = new XMLHttpRequest();
-	//url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
-	url = 'http://localhost:8080/?request=' + request
+	url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
+	//url = 'http://localhost:8080/?request=' + request
 	console.log(url)
 	console.trace()
 	createGameReq.open('GET', url, false);
