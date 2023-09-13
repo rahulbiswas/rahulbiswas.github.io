@@ -25,6 +25,7 @@ var url_string = window.location.href
 var url = new URL(url_string)
 var testBoard = url.searchParams.get("board")
 var useLocal = url.searchParams.get("local")
+var usePMCS = url.searchParams.get("pmcs")
 
 loadPNGs()
 var TEST_MODE = 0
@@ -437,6 +438,9 @@ function aiGame() {
 		"command": "miniMax",
 		"pieces": JSON.stringify(pieces),
 		"turn" : turn.toString()
+	}
+	if (usePMCS) {
+		combined["command"] = "pmcs"
 	}
 	string_combined = JSON.stringify(combined)
 	move = gcf(string_combined)
