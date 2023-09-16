@@ -442,6 +442,9 @@ function aiGame() {
 	if (usePMCS) {
 		combined["command"] = "pmcs"
 	}
+	if (utilityPersona == null) {
+		combined["utility"] = 0;
+	}
 	console.log(combined);
 	string_combined = JSON.stringify(combined)
 	move = gcf(string_combined)
