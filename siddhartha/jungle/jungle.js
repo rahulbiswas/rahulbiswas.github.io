@@ -26,6 +26,7 @@ var url = new URL(url_string)
 var testBoard = url.searchParams.get("board")
 var useLocal = url.searchParams.get("local")
 var usePMCS = url.searchParams.get("pmcs")
+var utilityPersona = url.searchParams.get("utility")
 
 loadPNGs()
 var TEST_MODE = 0
@@ -431,14 +432,17 @@ function movePiece(first_click_key, second_click_key) {
 }
 
 function aiGame() {
+	console.log("HELLO MY NAME SID")
 	combined = {
 		"command": "miniMax",
 		"pieces": JSON.stringify(pieces),
-		"turn" : turn.toString()
+		"turn" : turn.toString(),
+		"utility" : utilityPersona
 	}
 	if (usePMCS) {
 		combined["command"] = "pmcs"
 	}
+	console.log(combined);
 	string_combined = JSON.stringify(combined)
 	move = gcf(string_combined)
 	console.log(move)
