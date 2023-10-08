@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Animal Match</title>
+	<title>Animal Match Rohan Biswas</title>
 	<style>
 canvas {
-	border: 1px dashed black;
+	border: 10px dashed orange;
 }
 	</style>
 
 <script>
 var a0 = new Image();
 a0.src = "a0.png";
+
 var a1 = new Image();
 a1.src = "a1.png";
-		
+
+var a2 = new Image();
+a2.src = "a2.png";
+
+animals = [0,0,1,1,2,2]
+
 window.onload = function() {
 	var canvas = document.getElementById("drawingCanvas");
 	canvas.onmouseup = canvasClick;
 	shown = {}
-	for (i = 0; i < 2; i++) {
+	for (i = 0; i < 3; i++) {
 		for (j = 0; j < 2; j++) {
 			key = i + '_' + j
-			shown[key] = true
+			shown[key] = false
 		}
 	}
+
+	animals = animals.sort((a, b) => 0.5 - Math.random());
 	
 	drawBoard();
 };
@@ -34,18 +42,25 @@ function drawBoard() {
 	var context = canvas.getContext("2d");
 	console.log("shown: " + JSON.stringify(shown))
 	context.clearRect(0, 0, 600, 600)
-	if (shown["0_0"]) {
-		context.drawImage(a0,0,0,300,300);
-	}
-	if (shown["1_0"]) {
-		context.drawImage(a1,300,0,300,300);
-	}
-	if (shown["0_1"]) {
-		context.drawImage(a1,0,300,300,300);
-	}
-	if (shown["1_1"]) {
-		context.drawImage(a0,300,300,300,300);
-	}
+	for (i = 0; i < 3; i++) {
+		for (j = 0; j < 2; j++) {
+			if (shown[i + "_" + j]) {
+				image_to_draw = a0
+				switch (animals[2 * i + j]) {
+					case 0:
+						image_to_draw = a0
+						break
+					case 1:
+						image_to_draw = a1
+						break
+					case 2:
+						image_to_draw = a2
+						break
+				}
+				context.drawImage(image_to_draw,300*i,300*j,300,300)			
+			}
+    }
+	}	
 }
 
 function canvasClick(e) {
@@ -62,7 +77,9 @@ function canvasClick(e) {
 </head>
 
 <body>
-	<canvas id="drawingCanvas" width="600"
+  use 1500, 900 later
+	<br>
+	<canvas id="drawingCanvas" width="900"
 	 height="600"></canvas>
 </body>
 </html>
