@@ -62,7 +62,7 @@ const BACK_Y_START = 24
 const BACK_Y_END = 130
 const DRAWING_WIDTH = 1500
 const DRAWING_HEIGHT = 1000
-const PIECE_LENGTH = 96
+const PIECE_LENGTH = 70
 const GAME_WIDTH = 1873
 const GAME_HEIGHT = 1189
 const BOARD_WIDTH = 800
@@ -682,25 +682,25 @@ function drawBoard() {
 		var y = piece_components[1] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
 			context.drawImage(menus['piece'],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
-				PIECE_LENGTH,
-				PIECE_LENGTH)
+				x + BOARD_UPPER_LEFT_X - 7,
+				y + BOARD_UPPER_LEFT_Y - 4,
+				109,
+				109)
 			context.drawImage(animals_0[animal],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
+				x + BOARD_UPPER_LEFT_X + (109 - PIECE_LENGTH) / 2 - 7,
+				y + BOARD_UPPER_LEFT_Y + (109 - PIECE_LENGTH) / 2 - 4,
 				PIECE_LENGTH,
 				PIECE_LENGTH);
 		}
 		if (player == 1) {
 			context.drawImage(menus['piece'],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
-				PIECE_LENGTH,
-				PIECE_LENGTH)
+				x + BOARD_UPPER_LEFT_X - 7,
+				y + BOARD_UPPER_LEFT_Y - 4,
+				109,
+				109)
 			context.drawImage(animals_1[animal],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
+				x + BOARD_UPPER_LEFT_X + (109 - PIECE_LENGTH) / 2 - 7,
+				y + BOARD_UPPER_LEFT_Y + (109 - PIECE_LENGTH) / 2 - 4,
 				PIECE_LENGTH,
 				PIECE_LENGTH);
 		}
