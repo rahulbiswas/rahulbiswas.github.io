@@ -39,9 +39,9 @@ const ELEPHANT = 8
 const TIGER = 6
 const LION = 7
 
-const BOARD_UPPER_LEFT_X = 242
-const BOARD_UPPER_LEFT_Y = 42
-const BOARD_SQUARE_WIDTH = 100
+const BOARD_UPPER_LEFT_X = 539
+const BOARD_UPPER_LEFT_Y = 83
+const BOARD_SQUARE_WIDTH = 116
 const POTENTIAL_MOVE_LENGTH = 20
 const HOME_LOCAL_X_START = 69
 const HOME_LOCAL_X_END = 559
@@ -63,8 +63,8 @@ const BACK_Y_END = 130
 const DRAWING_WIDTH = 1500
 const DRAWING_HEIGHT = 1000
 const PIECE_LENGTH = 96
-const GAME_WIDTH = 1180
-const GAME_HEIGHT = 980
+const GAME_WIDTH = 1873
+const GAME_HEIGHT = 1189
 const BOARD_WIDTH = 800
 const BOARD_HEIGHT = 900
 const HOME_X_LEFT = 515
@@ -657,7 +657,7 @@ function drawBoard() {
 				alpha = 1.0
 			}
 			context.globalAlpha = alpha;
-			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH) * player) - ((animal % 2) * 100) + 5
+			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH + 200) * player) - ((animal % 2) * 100) + 5 + 100
 			if (player == 0) {
 				x += 100
 			}
