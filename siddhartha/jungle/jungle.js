@@ -62,7 +62,7 @@ const BACK_Y_START = 24
 const BACK_Y_END = 130
 const DRAWING_WIDTH = 1500
 const DRAWING_HEIGHT = 1000
-const PIECE_LENGTH = 96
+const PIECE_LENGTH = 97.5
 const GAME_WIDTH = 1180
 const GAME_HEIGHT = 980
 const BOARD_WIDTH = 800
@@ -164,6 +164,8 @@ function loadPNGs() {
 	menus['win_blue'] = imageWithName('menus_winblue')
 	menus['cloud'] = imageWithName('menus_multiplayer')
 	menus['pewter_select'] = imageWithName('menus_pewter_select')
+	menus['apiece'] = imageWithName('apiece')
+	menus['bpiece'] = imageWithName('bpiece')
 }
 
 function setInitialBoard() {
@@ -662,8 +664,10 @@ function drawBoard() {
 			}
 			y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2) * 100) + 100
 			if (player == 0) {
+				context.drawImage(menus['apiece'], x, y, 95, 95)
 				context.drawImage(animals_0[animal], x, y, 95, 95)
 			} else if (player == 1) {
+				context.drawImage(menus['bpiece'], x, y, 95, 95)
 				context.drawImage(animals_1[animal], x, y, 95, 95)
 			}
 			context.globalAlpha = 1.0;
@@ -678,6 +682,11 @@ function drawBoard() {
 		var x = piece_components[0] * BOARD_SQUARE_WIDTH
 		var y = piece_components[1] * BOARD_SQUARE_WIDTH
 		if (player == 0) {
+			context.drawImage(menus['apiece'],
+				x + BOARD_UPPER_LEFT_X,
+				y + BOARD_UPPER_LEFT_Y,
+				PIECE_LENGTH,
+				PIECE_LENGTH)
 			context.drawImage(animals_0[animal],
 				x + BOARD_UPPER_LEFT_X,
 				y + BOARD_UPPER_LEFT_Y,
@@ -685,6 +694,11 @@ function drawBoard() {
 				PIECE_LENGTH);
 		}
 		if (player == 1) {
+			context.drawImage(menus['bpiece'],
+				x + BOARD_UPPER_LEFT_X,
+				y + BOARD_UPPER_LEFT_Y,
+				PIECE_LENGTH,
+				PIECE_LENGTH)
 			context.drawImage(animals_1[animal],
 				x + BOARD_UPPER_LEFT_X,
 				y + BOARD_UPPER_LEFT_Y,
@@ -694,11 +708,13 @@ function drawBoard() {
 	}
 	if (moved_piece[0] != ['0']) {
 		context.fillStyle = 'purple'
-		context.fillRect(moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+		context.fillRect(
+			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH,
 			moved_piece[0][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
-		context.fillRect(moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+		context.fillRect(
+			moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH,
 			moved_piece[1][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
 			POTENTIAL_MOVE_LENGTH)
@@ -721,7 +737,8 @@ function drawGreenSquares() {
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
 			context.fillStyle = 'green'
-			context.fillRect(moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
+			context.fillRect(
+				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH,
 				moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 				POTENTIAL_MOVE_LENGTH,
 				POTENTIAL_MOVE_LENGTH)
