@@ -1,0 +1,16 @@
+<div id="container"></div>
+<body onresize="drawRat()">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"> </script> 
+<script>
+function drawRat() {
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	W = 4000
+	W = Math.min(w, h)
+	console.log(W)
+	var paper = Raphael("container", W, W); 
+	var bpiece = paper.image('png/piece.svg', 0, 0, W, W)
+	var b1 = paper.image('png/b1.svg', 0, 0, W, W)
+}
+drawRat()
+</script> 
