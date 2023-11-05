@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Red_Icons" data-name="Red Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.2 97.2">
+<svg id="Gold_Icons" data-name="Gold Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.2 97.2">
   <defs>
     <style>
       .cls-1 {
@@ -8,7 +8,7 @@
 
       .cls-1, .cls-2, .cls-3 {
         fill: none;
-        stroke: #be1e2d;
+        stroke: #965f36;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
@@ -22,7 +22,7 @@
       }
 
       .cls-4 {
-        fill: #be1e2d;
+        fill: #965f36;
         stroke-width: 0px;
       }
     </style>
