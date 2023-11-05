@@ -4,7 +4,7 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #be1e2d;
+        stroke: #965f36;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 3px;
@@ -27,14 +27,14 @@
       }
 
       .cls-3 {
-        fill: #be1e2d;
+        fill: #965f36;
       }
 
       .cls-4 {
         fill: #f1e4b2;
       }
     </style>
-    <radialGradient id="radial-gradient" cx="67.33" cy="-9.71" fx="67.33" fy="-9.71" r="175.2" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient" cx="67.08" cy="-8.93" fx="67.08" fy="-8.93" r="166.71" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff" stop-opacity="0"/>
       <stop offset="1" stop-color="#c1a292"/>
     </radialGradient>
@@ -42,15 +42,15 @@
   <g class="cls-6">
     <g id="Gold_Piece" data-name="Gold Piece">
       <g>
-        <rect class="cls-3" x="2.02" y="1.77" width="94" height="94" rx="5.9" ry="5.9"/>
-        <rect class="cls-4" x="5.68" y="5.43" width="86.68" height="86.68" rx="2.24" ry="2.24" transform="translate(97.79 -.25) rotate(90)"/>
-        <rect class="cls-4" x="5.68" y="5.43" width="86.68" height="86.68" rx="2.24" ry="2.24" transform="translate(97.79 -.25) rotate(90)"/>
+        <rect class="cls-3" x="1.77" y="1.77" width="94" height="94" rx="8.58" ry="8.58"/>
+        <rect class="cls-4" x="5.43" y="5.43" width="86.68" height="86.68" rx="4.92" ry="4.92" transform="translate(97.54 0) rotate(90)"/>
+        <rect class="cls-4" x="5.43" y="5.43" width="86.68" height="86.68" rx="4.92" ry="4.92" transform="translate(97.54 0) rotate(90)"/>
         <g class="cls-5">
-          <path class="cls-2" d="m90.12,5.43H11.48v78.64c0,1.23,1,2.24,2.24,2.24h73.13l5.5,6.33V14c0-7.57-1-8.57-2.24-8.57Z"/>
+          <path class="cls-2" d="m89.87,5.43H13.91c-1.48,0-2.68,1.2-2.68,2.68v73.28c0,2.72,2.2,4.92,4.92,4.92h69.23c.78,0,1.51.34,2.02.92h0c1.63,1.87,4.7.72,4.7-1.76V14c0-7.57-1-8.57-2.24-8.57Z"/>
         </g>
-        <polygon class="cls-1" points="87.29 85.39 87.29 9.91 12.41 9.91 12.41 85.6 87.29 85.39"/>
-        <line class="cls-1" x1="12.52" y1="85.6" x2="5.75" y2="92"/>
-        <line class="cls-1" x1="87.29" y1="85.39" x2="93.19" y2="91.6"/>
+        <path class="cls-1" d="m87.04,82.72V12.59c0-1.48-1.2-2.68-2.68-2.68H14.84c-1.48,0-2.68,1.2-2.68,2.68v70.33c0,1.48,1.2,2.68,2.69,2.68l69.51-.19c1.48,0,2.67-1.2,2.67-2.68Z"/>
+        <line class="cls-1" x1="12.27" y1="85.6" x2="5.5" y2="92"/>
+        <line class="cls-1" x1="87.04" y1="85.39" x2="92.94" y2="91.6"/>
       </g>
     </g>
   </g>

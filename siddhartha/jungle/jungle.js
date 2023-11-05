@@ -640,7 +640,7 @@ function drawBoard() {
 				rdraw('png/apiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
 					'opacity': alpha
 				})
-				rdraw('png/b' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+				rdraw('png/a' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
 					'opacity': alpha
 				})
 			} else if (player == 1) {
@@ -667,7 +667,7 @@ function drawBoard() {
 				(y + BOARD_UPPER_LEFT_Y),
 				PIECE_SIZE,
 				PIECE_SIZE)
-			rdraw('png/b' + animal + '.svg',
+			rdraw('png/a' + animal + '.svg',
 				(x + BOARD_UPPER_LEFT_X),
 				(y + BOARD_UPPER_LEFT_Y),
 				PIECE_SIZE,
