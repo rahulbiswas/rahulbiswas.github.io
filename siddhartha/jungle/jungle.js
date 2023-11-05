@@ -49,6 +49,7 @@ const BOARD_UPPER_LEFT_Y = 3
 const BOARD_SQUARE_WIDTH = 8.6
 const BOARD_SQUARE_HEIGHT = 6.82
 const POTENTIAL_MOVE_LENGTH = 2
+
 const HOME_LOCAL_X_START = 4
 const HOME_LOCAL_X_END = 37
 const HOME_LOCAL_Y_START = 13
@@ -65,14 +66,15 @@ const HOME_PEWTER_X_START = 4
 const HOME_PEWTER_X_END = 37
 const HOME_PEWTER_Y_START = 31
 const HOME_PEWTER_Y_END = 46
+const CLOUD_X_START = 4
+const CLOUD_Y_START = 48
+const CLOUD_X_END = 37
+const CLOUD_Y_END = 63
+
 const BACK_X_START = 3
 const BACK_Y_START = 2
 const BACK_Y_END = 13
 const PIECE_SIZE = 6.5
-const CLOUD_X_START = 69
-const CLOUD_Y_START = 718
-const CLOUD_X_END = 559
-const CLOUD_Y_END = 950
 const RULES_NEXT_X_START = 80
 const RULES_NEXT_Y_START = 0
 const RULES_NEXT_X_END = 100
@@ -503,7 +505,7 @@ function draw() {
 
 function join_multiplayer() {
 	var joining_code = window.location.search
-	if (joining_code.contains('game_code')) {
+	if (!joining_code || !joining_code.contains('game_code')) {
 		return;
 	}
 	joining_code = joining_code.replace('?game_code=', '')
