@@ -102,18 +102,6 @@ function gameURL() {
 	}
 }
 
-function imageWithName(src) {
-	var menu = new Image()
-	menu.src = 'png/' + src + '.png'
-	return menu
-}
-
-function imageWithNameRules(src) {
-	var menu = new Image()
-	menu.src = 'rules/1x/' + src + '.png'
-	return menu
-}
-
 function rdraw(img_name, x, y, w, h) {
 	width = window.innerWidth
 	height = window.innerHeight
@@ -126,7 +114,7 @@ function rdraw(img_name, x, y, w, h) {
 	dy = y * height / DRAWING_HEIGHT
 	dw = w * width / DRAWING_WIDTH
 	dh = h * height / DRAWING_HEIGHT
-	return paper.image(img_name, dx, dy, dw, dh)
+	return paper.image('images/' + img_name, dx, dy, dw, dh)
 }
 
 function rrect(x, y, w, h, color) {
@@ -488,20 +476,20 @@ function draw() {
 	}
 	paper.setSize(iw, ih)
 	if (current_window == 'home') {
-		rdraw('png/menus_home.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_home.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'agilityrules' || current_window == 'eatinganimals' || current_window == 'howtowin' || current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
 		window_to_draw = (ruleTutorial('no', 'no'))
-		rdraw('rules/' + window_to_draw + '.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('' + window_to_draw + '.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
-		rdraw('png/menus_info.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_info.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'cloud_game_menu') {
-		rdraw('png/menus_multiplayer.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_multiplayer.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
 		if (winning_player == 'red') {
-			rdraw('png/menus_winred.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+			rdraw('menus_winred.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 		}
 		if (winning_player == 'blue') {
-			rdraw('png/menus_winblue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+			rdraw('menus_winblue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 		}
 	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
@@ -601,15 +589,15 @@ function checkPeriodically() {
 
 function drawBoard() {
 	if (typeof cloud_player == 1) {
-		rdraw('png/menus_red.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_red.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (typeof cloud_player == 0) {
-		rdraw('png/menus_blue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_blue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (turn == 1) {
-		rdraw('png/menus_red.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_red.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (turn == 0) {
-		rdraw('png/menus_blue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('menus_blue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	}
-	rdraw('png/menus_game.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+	rdraw('menus_game.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	for (var player = 0; player < 2; player++) {
 		for (var animal = 1; animal < 9; animal++) {
 			is_alive = false
@@ -627,17 +615,17 @@ function drawBoard() {
 			x = 6 + (animal % 2) * PIECE_SIZE + player * 80
 			y = 10 + (Math.ceil(animal / 2) * PIECE_SIZE)
 			if (player == 0) {
-				rdraw('png/apiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+				rdraw('apiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
 					'opacity': alpha
 				})
-				rdraw('png/a' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+				rdraw('a' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
 					'opacity': alpha
 				})
 			} else if (player == 1) {
-				rdraw('png/bpiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+				rdraw('bpiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
 					'opacity': alpha
 				})
-				rdraw('png/b' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+				rdraw('b' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
 					'opacity': alpha
 				})
 			}
@@ -652,24 +640,24 @@ function drawBoard() {
 		var x = piece_components[0] * BOARD_SQUARE_WIDTH
 		var y = piece_components[1] * BOARD_SQUARE_HEIGHT
 		if (player == 0) {
-			rdraw('png/apiece.svg',
+			rdraw('apiece.svg',
 				(x + BOARD_UPPER_LEFT_X),
 				(y + BOARD_UPPER_LEFT_Y),
 				PIECE_SIZE,
 				PIECE_SIZE)
-			rdraw('png/a' + animal + '.svg',
+			rdraw('a' + animal + '.svg',
 				(x + BOARD_UPPER_LEFT_X),
 				(y + BOARD_UPPER_LEFT_Y),
 				PIECE_SIZE,
 				PIECE_SIZE)
 		}
 		if (player == 1) {
-			rdraw('png/bpiece.svg',
+			rdraw('bpiece.svg',
 				(x + BOARD_UPPER_LEFT_X),
 				(y + BOARD_UPPER_LEFT_Y),
 				PIECE_SIZE,
 				PIECE_SIZE)
-			rdraw('png/b' + animal + '.svg',
+			rdraw('b' + animal + '.svg',
 				(x + BOARD_UPPER_LEFT_X),
 				(y + BOARD_UPPER_LEFT_Y),
 				PIECE_SIZE,
