@@ -199,7 +199,6 @@ function canvasClick(event) {
 		ih = iw * DRAWING_HEIGHT / DRAWING_WIDTH
 	}
 	click_xy = [event.clientX * DRAWING_WIDTH / iw, event.clientY * DRAWING_HEIGHT / ih]
-	console.log('clicked ' + click_xy)
 	s = {
 		piece_info: pieces,
 		turn: turn
@@ -337,22 +336,15 @@ function gameScreen(click_xy) {
 
 function maybeEndGame() {
 	checkIfGameEnded()
-	if (JSON.stringify(s) != '{}') {
-		isTerminal(s)
-	}
 	if (winning_player != '') {
-		current_window = 'game_over'
-		draw()
 		return true
 	}
 	return false
 }
 
 function gameEnd(click_xy) {
-	if (click_xy[0] > HOME_X_LEFT && click_xy[0] < HOME_X_RIGHT && click_xy[1] > HOME_Y_LEFT && click_xy[1] < HOME_Y_RIGHT) {
-		window.location.replace(gameURL())
-		setTimeout('location.reload()', 1000)
-	}
+	window.location.replace(gameURL())
+	setTimeout('location.reload()', 1000)
 }
 
 function checkNumberOfPieces(color_number) {
@@ -487,7 +479,6 @@ function ruleTutorial(change, back) {
 }
 
 function draw() {
-	console.log('draw')
 	iw = window.innerWidth
 	ih = window.innerHeight
 	if (iw > DRAWING_WIDTH / DRAWING_HEIGHT * ih) {
@@ -515,7 +506,6 @@ function draw() {
 	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
 	}
-	console.log('adding yellow')
 	var clickArea = paper.rect(0, 0, iw, ih).attr({
 		'fill': 'yellow',
 		'opacity': 0.0
@@ -717,7 +707,6 @@ function drawGreenSquares() {
 	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
-			console.log('drawing green square')
 			rrect(
 				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
 				moving_pieces[p_i][2] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
