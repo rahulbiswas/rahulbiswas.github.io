@@ -28,7 +28,6 @@ var useLocal = url.searchParams.get("local")
 var usePMCS = url.searchParams.get("pmcs")
 var utilityPersona = url.searchParams.get("utility")
 
-loadPNGs()
 var TEST_MODE = 0
 if (window.location.href == "file:///Users/siddhartha/Documents/github/rahulbiswas.github.io/siddhartha/jungle/jungle.html") {
 	TEST_MODE = 3
@@ -39,76 +38,56 @@ const ELEPHANT = 8
 const TIGER = 6
 const LION = 7
 
-const BOARD_UPPER_LEFT_X = 242
-const BOARD_UPPER_LEFT_Y = 42
-const BOARD_SQUARE_WIDTH = 100
-const POTENTIAL_MOVE_LENGTH = 20
-const HOME_LOCAL_X_START = 69
-const HOME_LOCAL_X_END = 559
-const HOME_LOCAL_Y_START = 187
-const HOME_LOCAL_Y_END = 396
-const HOME_RULES_X_START = 948
-const HOME_RULES_X_END = 1426
-const HOME_RULES_Y_START = 317
-const HOME_RULES_Y_END = 515
-const HOME_ABOUT_Y_START = 545
-const HOME_ABOUT_Y_END = 751
-const HOME_PEWTER_X_START = 70
-const HOME_PEWTER_X_END = 558
-const HOME_PEWTER_Y_START = 464
-const HOME_PEWTER_Y_END = 694
-const BACK_X_START = 29
-const BACK_Y_START = 24
-const BACK_Y_END = 130
-const DRAWING_WIDTH = 1500
-const DRAWING_HEIGHT = 1000
-const PIECE_LENGTH = 97.5
-const GAME_WIDTH = 1180
-const GAME_HEIGHT = 980
-const BOARD_WIDTH = 800
-const BOARD_HEIGHT = 900
-const HOME_X_LEFT = 515
-const HOME_Y_LEFT = 446
-const HOME_X_RIGHT = 662
-const HOME_Y_RIGHT = 664
+// The game will be drawn with SVG images going forward.
+// The full game will be 100x67.  All coordinates are in relation to that.
+
+const DRAWING_WIDTH = 100
+const DRAWING_HEIGHT = 67
+
+const BOARD_UPPER_LEFT_X = 20.7
+const BOARD_UPPER_LEFT_Y = 3
+const BOARD_SQUARE_WIDTH = 8.6
+const BOARD_SQUARE_HEIGHT = 6.82
+const POTENTIAL_MOVE_LENGTH = 2
+const HOME_LOCAL_X_START = 4
+const HOME_LOCAL_X_END = 37
+const HOME_LOCAL_Y_START = 13
+const HOME_LOCAL_Y_END = 29
+const HOME_RULES_X_START = 62
+const HOME_RULES_X_END = 95
+const HOME_RULES_Y_START = 23
+const HOME_RULES_Y_END = 38
+const HOME_ABOUT_X_START = 62
+const HOME_ABOUT_X_STOP = 95
+const HOME_ABOUT_Y_START = 40
+const HOME_ABOUT_Y_END = 55
+const HOME_PEWTER_X_START = 4
+const HOME_PEWTER_X_END = 37
+const HOME_PEWTER_Y_START = 31
+const HOME_PEWTER_Y_END = 46
+const BACK_X_START = 3
+const BACK_Y_START = 2
+const BACK_Y_END = 13
+const PIECE_SIZE = 6.5
 const CLOUD_X_START = 69
 const CLOUD_Y_START = 718
 const CLOUD_X_END = 559
 const CLOUD_Y_END = 950
-const AI_A_X_START = 52
-const AI_C_X_START = 52
-const AI_E_X_START = 52
-const AI_A_X_END = 595
-const AI_C_X_END = 595
-const AI_E_X_END = 595
-const AI_A_Y_START = 62
-const AI_B_Y_START = 62
-const AI_A_Y_END = 207
-const AI_B_Y_END = 207
-const AI_B_X_START = 617
-const AI_D_X_START = 617
-const AI_F_X_START = 617
-const AI_B_X_END = 1160
-const AI_D_X_END = 1160
-const AI_F_X_END = 1160
-const AI_C_Y_START = 355
-const AI_D_Y_START = 355
-const AI_C_Y_END = 501
-const AI_D_Y_END = 501
-const AI_E_Y_START = 630
-const AI_F_Y_START = 630
-const AI_E_Y_END = 744
-const AI_F_Y_END = 744
-const RULES_NEXT_X_START = 1250
+const RULES_NEXT_X_START = 80
 const RULES_NEXT_Y_START = 0
-const RULES_NEXT_X_END = 1500
-const RULES_NEXT_Y_END = 150
+const RULES_NEXT_X_END = 100
+const RULES_NEXT_Y_END = 10
 
+iw = window.innerWidth
+ih = window.innerHeight
+if (iw > DRAWING_WIDTH / DRAWING_HEIGHT * ih) {
+	iw = ih * DRAWING_WIDTH / DRAWING_HEIGHT
+} else {
+	ih = iw * DRAWING_HEIGHT / DRAWING_WIDTH
+}
+paper = Raphael("container", iw, ih)
 
 window.onload = function() {
-	canvas = document.getElementById('drawingCanvas')
-	context = canvas.getContext('2d')
-	canvas.onmouseup = canvasClick
 	winning_player = ''
 	setInitialBoard()
 	draw()
@@ -135,37 +114,37 @@ function imageWithNameRules(src) {
 	return menu
 }
 
-function loadPNGs() {
-	animals_0 = {}
-	for (var a_i = 1; a_i < 9; a_i++) {
-		var img = new Image()
-		img.src = 'png/a' + a_i + '.png'
-		animals_0[a_i] = img
+function rdraw(img_name, x, y, w, h) {
+	width = window.innerWidth
+	height = window.innerHeight
+	if (width > DRAWING_WIDTH / DRAWING_HEIGHT * height) {
+		width = height * DRAWING_WIDTH / DRAWING_HEIGHT
+	} else {
+		height = width * DRAWING_HEIGHT / DRAWING_WIDTH
 	}
-	animals_1 = {}
-	for (var b_i = 1; b_i < 9; b_i++) {
-		var img_1 = new Image()
-		img_1.src = 'png/b' + b_i + '.png'
-		animals_1[b_i] = img_1
-	}
+	dx = x * width / DRAWING_WIDTH
+	dy = y * height / DRAWING_HEIGHT
+	dw = w * width / DRAWING_WIDTH
+	dh = h * height / DRAWING_HEIGHT
+	return paper.image(img_name, dx, dy, dw, dh)
+}
 
-	menus['home'] = imageWithName('menus_home')
-	menus['agilityrules'] = imageWithNameRules('agilityrules')
-	menus['eatinganimals'] = imageWithNameRules('eatinganimals')
-	menus['howtowin'] = imageWithNameRules('howtowin')
-	menus['jumpingoverwater'] = imageWithNameRules('jumpingoverwater')
-	menus['ratsarespecial'] = imageWithNameRules('ratsarespecial')
-	menus['traps'] = imageWithNameRules('traps')
-	menus['game_blank'] = imageWithName('menus_game')
-	menus['game_blue'] = imageWithName('menus_blue')
-	menus['game_red'] = imageWithName('menus_red')
-	menus['about'] = imageWithName('menus_info')
-	menus['win_red'] = imageWithName('menus_winred')
-	menus['win_blue'] = imageWithName('menus_winblue')
-	menus['cloud'] = imageWithName('menus_multiplayer')
-	menus['pewter_select'] = imageWithName('menus_pewter_select')
-	menus['apiece'] = imageWithName('apiece')
-	menus['bpiece'] = imageWithName('bpiece')
+function rrect(x, y, w, h, color) {
+	width = window.innerWidth
+	height = window.innerHeight
+	if (width > DRAWING_WIDTH / DRAWING_HEIGHT * height) {
+		width = height * DRAWING_WIDTH / DRAWING_HEIGHT
+	} else {
+		height = width * DRAWING_HEIGHT / DRAWING_WIDTH
+	}
+	dx = x * width / DRAWING_WIDTH
+	dy = y * height / DRAWING_HEIGHT
+	dw = w * width / DRAWING_WIDTH
+	dh = h * height / DRAWING_HEIGHT
+	paper.rect(dx, dy, dw, dh).attr({
+		'fill': color,
+		'opacity': 1.0
+	})
 }
 
 function setInitialBoard() {
@@ -179,20 +158,13 @@ function setInitialBoard() {
 	string_combined = JSON.stringify(combined)
 	pieces = gcf(string_combined)
 	pieces = JSON.parse(pieces)
-	console.log("pieces = " + pieces)
 	is_first_click = true
 	turn = 1
 }
 
-function clickXY(event) {
-	var clickX = event.pageX - canvas.offsetLeft;
-	var clickY = event.pageY - canvas.offsetTop;
-	return [clickX, clickY]
-}
-
 function click_key_with_event(clickX, clickY) {
 	var row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH)
-	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_WIDTH)
+	var column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_HEIGHT)
 	return row + '_' + column
 }
 
@@ -209,24 +181,29 @@ function possible_moves_mapping() {
 		var move = possible_moves[possible_move_index]
 		move = move.split('_')
 		move = move.map((i) => Number(i));
-		context.fillStyle = 'chocolate'
-		context.fillRect(
-			move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
-			move[1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+		rrect(
+			move[0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+			move[1] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
-			POTENTIAL_MOVE_LENGTH)
+			POTENTIAL_MOVE_LENGTH,
+			'brown')
 	}
 }
 
-
 function canvasClick(event) {
+	iw = window.innerWidth
+	ih = window.innerHeight
+	if (iw > DRAWING_WIDTH / DRAWING_HEIGHT * ih) {
+		iw = ih * DRAWING_WIDTH / DRAWING_HEIGHT
+	} else {
+		ih = iw * DRAWING_HEIGHT / DRAWING_WIDTH
+	}
+	click_xy = [event.clientX * DRAWING_WIDTH / iw, event.clientY * DRAWING_HEIGHT / ih]
+	console.log('clicked ' + click_xy)
 	s = {
 		piece_info: pieces,
 		turn: turn
 	}
-	canvas = document.getElementById('drawingCanvas');
-	context = canvas.getContext('2d');
-	var click_xy = clickXY(event)
 	if (current_window == 'home') {
 		homeScreen(click_xy)
 	} else if (current_window == 'agilityrules' || current_window == 'eatinganimals' || current_window == 'howtowin' || current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
@@ -262,8 +239,8 @@ function homeScreen(click_xy) {
 		current_window = 'agilityrules'
 		draw()
 	}
-	if (click_xy[0] > HOME_RULES_X_START &&
-		click_xy[0] < HOME_RULES_X_END &&
+	if (click_xy[0] > HOME_ABOUT_X_START &&
+		click_xy[0] < HOME_ABOUT_X_STOP &&
 		click_xy[1] > HOME_ABOUT_Y_START &&
 		click_xy[1] < HOME_ABOUT_Y_END) {
 		current_window = 'about'
@@ -343,7 +320,7 @@ function gameScreen(click_xy) {
 			var second_click_key = click_key
 			if (first_click_key == second_click_key) {
 				is_first_click = true
-				drawBoard()
+				draw()
 				return
 			}
 			if (!validMove(first_click_key, pieces, second_click_key, current_window)) {
@@ -364,7 +341,6 @@ function maybeEndGame() {
 		isTerminal(s)
 	}
 	if (winning_player != '') {
-		console.log('game is over')
 		current_window = 'game_over'
 		draw()
 		return true
@@ -393,8 +369,8 @@ function checkNumberOfPieces(color_number) {
 
 function checkIfGameEnded() {
 	s = {
-		"piece_info" : pieces,
-		"turn_info" : turn
+		"piece_info": pieces,
+		"turn_info": turn
 	}
 	if (isTerminal(s)) {
 		current_window = "game_over"
@@ -414,9 +390,7 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 }
 
 function movePiece(first_click_key, second_click_key) {
-	console.log(first_click_key, second_click_key)
 	var moving_piece = pieces[first_click_key]
-	console.log(moving_piece)
 	moved_piece[0] = first_click_key.split('_')
 	moved_piece[1] = second_click_key.split('_')
 	delete pieces[first_click_key]
@@ -430,16 +404,15 @@ function movePiece(first_click_key, second_click_key) {
 	} else if (current_window == 'cloud_game') {
 		setBoard()
 	}
-	drawBoard()
+	draw()
 }
 
 function aiGame() {
-	console.log("HELLO MY NAME SID")
 	combined = {
 		"command": "miniMax",
 		"pieces": JSON.stringify(pieces),
-		"turn" : turn.toString(),
-		"utility" : utilityPersona
+		"turn": turn.toString(),
+		"utility": utilityPersona
 	}
 	if (usePMCS) {
 		combined["command"] = "pmcs"
@@ -447,10 +420,8 @@ function aiGame() {
 	if (utilityPersona == null) {
 		combined["utility"] = 0;
 	}
-	console.log(combined);
 	string_combined = JSON.stringify(combined)
 	move = gcf(string_combined)
-	console.log(move)
 	first = move[2] + move[3] + move[4]
 	second = move[8] + move[9] + move[10]
 	movePiece(first, second)
@@ -516,28 +487,40 @@ function ruleTutorial(change, back) {
 }
 
 function draw() {
-	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
+	console.log('draw')
+	iw = window.innerWidth
+	ih = window.innerHeight
+	if (iw > DRAWING_WIDTH / DRAWING_HEIGHT * ih) {
+		iw = ih * DRAWING_WIDTH / DRAWING_HEIGHT
+	} else {
+		ih = iw * DRAWING_HEIGHT / DRAWING_WIDTH
+	}
+	paper.setSize(iw, ih)
 	if (current_window == 'home') {
-		context.drawImage(menus['home'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('png/menus_home.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'agilityrules' || current_window == 'eatinganimals' || current_window == 'howtowin' || current_window == 'jumpingoverwater' || current_window == 'ratsarespecial' || current_window == 'traps') {
 		window_to_draw = (ruleTutorial('no', 'no'))
-		context.drawImage(menus[window_to_draw], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('rules/' + window_to_draw + '.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'about') {
-		context.drawImage(menus['about'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('png/menus_info.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'cloud_game_menu') {
-		context.drawImage(menus['cloud'], 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
+		rdraw('png/menus_multiplayer.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (current_window == 'game_over') {
 		if (winning_player == 'red') {
-			context.drawImage(menus['win_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+			rdraw('png/menus_winred.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 		}
 		if (winning_player == 'blue') {
-			context.drawImage(menus['win_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+			rdraw('png/menus_winblue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 		}
-	} else if (current_window == 'ai_select_game') {
-		context.drawImage(menus['pewter_select'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
 	} else if (current_window == 'game' || current_window == 'ai_game') {
 		drawBoard()
 	}
+	console.log('adding yellow')
+	var clickArea = paper.rect(0, 0, iw, ih).attr({
+		'fill': 'yellow',
+		'opacity': 0.0
+	})
+	clickArea.mousedown(canvasClick)
 }
 
 function join_multiplayer() {
@@ -551,7 +534,7 @@ function join_multiplayer() {
 		game_code = joining_code
 		cloud_player = 0
 		player = 0
-		drawBoard()
+		draw()
 		setBoard()
 	}
 }
@@ -565,7 +548,6 @@ function aws() {
 	var createGameReq = new XMLHttpRequest();
 	createGameReq.addEventListener('load', createGameListener);
 	url = 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?create_game=1';
-	console.log(url);
 	createGameReq.open('GET', url);
 	createGameReq.send();
 }
@@ -576,8 +558,6 @@ function gcf(request) {
 	if (useLocal != null) {
 		url = 'http://localhost:8080/?request=' + request
 	}
-	console.log(url)
-	console.trace()
 	createGameReq.open('GET', url, false);
 	createGameReq.send(null);
 	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
@@ -599,7 +579,6 @@ function setBoard() {
 	var setGameReq = new XMLHttpRequest()
 	setGameReq.addEventListener('load', setGameListener)
 	url = 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?set=1&game_code=' + game_code + '&game_board=' + url
-	console.log(url)
 	setGameReq.open('GET', url)
 	setGameReq.send()
 }
@@ -620,29 +599,27 @@ function checkPeriodically() {
 			setTimeout(checkPeriodically, 2000)
 		} else if (current_window != 'game_over') {
 			current_window = 'cloud_game'
-			drawBoard()
+			draw()
 		}
 	}
 	var getReq = new XMLHttpRequest();
 	getReq.addEventListener('load', getGameListener)
 	url = 'https://us-west2-animal-397104.cloudfunctions.net/readwrite/?get=1&game_code=' + game_code
-	console.log(url)
 	getReq.open('GET', url)
 	getReq.send()
 }
 
 function drawBoard() {
-	context.clearRect(0, 0, DRAWING_WIDTH, DRAWING_HEIGHT)
 	if (typeof cloud_player == 1) {
-		context.drawImage(menus['game_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		rdraw('png/menus_red.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (typeof cloud_player == 0) {
-		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		rdraw('png/menus_blue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (turn == 1) {
-		context.drawImage(menus['game_red'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		rdraw('png/menus_red.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	} else if (turn == 0) {
-		context.drawImage(menus['game_blue'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+		rdraw('png/menus_blue.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	}
-	context.drawImage(menus['game_blank'], 0, 0, GAME_WIDTH, GAME_HEIGHT);
+	rdraw('png/menus_game.png', 0, 0, DRAWING_WIDTH, DRAWING_HEIGHT);
 	for (var player = 0; player < 2; player++) {
 		for (var animal = 1; animal < 9; animal++) {
 			is_alive = false
@@ -657,20 +634,23 @@ function drawBoard() {
 			} else {
 				alpha = 1.0
 			}
-			context.globalAlpha = alpha;
-			x = ((BOARD_UPPER_LEFT_X + BOARD_WIDTH) * player) - ((animal % 2) * 100) + 5
+			x = 6 + (animal % 2) * PIECE_SIZE + player * 80
+			y = 10 + (Math.ceil(animal / 2) * PIECE_SIZE)
 			if (player == 0) {
-				x += 100
-			}
-			y = BOARD_UPPER_LEFT_Y + (Math.ceil(animal / 2) * 100) + 100
-			if (player == 0) {
-				context.drawImage(menus['apiece'], x, y, 95, 95)
-				context.drawImage(animals_0[animal], x, y, 95, 95)
+				rdraw('png/apiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+					'opacity': alpha
+				})
+				rdraw('png/b' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+					'opacity': alpha
+				})
 			} else if (player == 1) {
-				context.drawImage(menus['bpiece'], x, y, 95, 95)
-				context.drawImage(animals_1[animal], x, y, 95, 95)
+				rdraw('png/bpiece.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+					'opacity': alpha
+				})
+				rdraw('png/b' + animal + '.svg', x, y, PIECE_SIZE, PIECE_SIZE).attr({
+					'opacity': alpha
+				})
 			}
-			context.globalAlpha = 1.0;
 		}
 	}
 	var pieces_position_list = Object.keys(pieces)
@@ -680,44 +660,45 @@ function drawBoard() {
 		var animal = pieces[piece_position]['animal']
 		var piece_components = piece_position.split('_')
 		var x = piece_components[0] * BOARD_SQUARE_WIDTH
-		var y = piece_components[1] * BOARD_SQUARE_WIDTH
+		var y = piece_components[1] * BOARD_SQUARE_HEIGHT
 		if (player == 0) {
-			context.drawImage(menus['apiece'],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
-				PIECE_LENGTH,
-				PIECE_LENGTH)
-			context.drawImage(animals_0[animal],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
-				PIECE_LENGTH,
-				PIECE_LENGTH);
+			rdraw('png/apiece.svg',
+				(x + BOARD_UPPER_LEFT_X),
+				(y + BOARD_UPPER_LEFT_Y),
+				PIECE_SIZE,
+				PIECE_SIZE)
+			rdraw('png/b' + animal + '.svg',
+				(x + BOARD_UPPER_LEFT_X),
+				(y + BOARD_UPPER_LEFT_Y),
+				PIECE_SIZE,
+				PIECE_SIZE)
 		}
 		if (player == 1) {
-			context.drawImage(menus['bpiece'],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
-				PIECE_LENGTH,
-				PIECE_LENGTH)
-			context.drawImage(animals_1[animal],
-				x + BOARD_UPPER_LEFT_X,
-				y + BOARD_UPPER_LEFT_Y,
-				PIECE_LENGTH,
-				PIECE_LENGTH);
+			rdraw('png/bpiece.svg',
+				(x + BOARD_UPPER_LEFT_X),
+				(y + BOARD_UPPER_LEFT_Y),
+				PIECE_SIZE,
+				PIECE_SIZE)
+			rdraw('png/b' + animal + '.svg',
+				(x + BOARD_UPPER_LEFT_X),
+				(y + BOARD_UPPER_LEFT_Y),
+				PIECE_SIZE,
+				PIECE_SIZE)
 		}
 	}
 	if (moved_piece[0] != ['0']) {
-		context.fillStyle = 'purple'
-		context.fillRect(
-			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH,
-			moved_piece[0][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+		rrect(
+			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+			moved_piece[0][1] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
-			POTENTIAL_MOVE_LENGTH)
-		context.fillRect(
-			moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH,
-			moved_piece[1][1] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
 			POTENTIAL_MOVE_LENGTH,
-			POTENTIAL_MOVE_LENGTH)
+			'purple')
+		rrect(
+			moved_piece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+			moved_piece[1][1] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
+			POTENTIAL_MOVE_LENGTH,
+			POTENTIAL_MOVE_LENGTH,
+			'purple')
 	}
 	drawGreenSquares()
 }
@@ -736,12 +717,13 @@ function drawGreenSquares() {
 	var show_green_squares = (current_window == 'game' || (current_window == 'ai_game' && turn == 1))
 	if (show_green_squares) {
 		for (var p_i = 0; p_i < moving_pieces.length; p_i++) {
-			context.fillStyle = 'green'
-			context.fillRect(
-				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH,
-				moving_pieces[p_i][2] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_Y,
+			console.log('drawing green square')
+			rrect(
+				moving_pieces[p_i][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+				moving_pieces[p_i][2] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
 				POTENTIAL_MOVE_LENGTH,
-				POTENTIAL_MOVE_LENGTH)
+				POTENTIAL_MOVE_LENGTH,
+				'green')
 		}
 	}
 }
@@ -753,16 +735,12 @@ function isTerminal(s) {
 	}
 	string_combined = JSON.stringify(combined)
 	somebodyWon = gcf(string_combined)
-	console.log(somebodyWon)
 	if (somebodyWon == "false") {
-		console.log("nobody won")
 		return false
-	} else if (somebodyWon == "red"){
-		console.log("red won")
+	} else if (somebodyWon == "red") {
 		winning_player = "red"
 		return true
 	} else {
-		console.log("blue won")
 		winning_player = "blue"
 		return true
 	}
