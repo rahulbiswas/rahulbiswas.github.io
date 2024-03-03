@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Switch Signs</title>
+  <title>Polar Conics</title>
 <style>
 label {
   display: inline-block;
@@ -50,7 +50,6 @@ function dValue() {
 }
 
 function drawGraph() {
-	console.log("DRAWING GRAPH AGAIN")
 	var canvas = document.getElementById("drawingCanvas");
 	var context = canvas.getContext("2d");
 	
@@ -101,14 +100,25 @@ function drawGraph() {
 	}
 }
 </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 
 <body onload="SwitchSigns(0);SwitchCosSin(0);drawGraph()">
-	<canvas id="drawingCanvas" width="500" height="500"></canvas>
+	<table>
+		<tr>
+			<td><canvas id="drawingCanvas" width="500" height="500"></canvas></td>
+			<td>
+				  \[r=\frac{e\cdot d}{1+e\cdot cos(\theta)}\]
+			</td>
+		</tr>
+	<table>
 	<br>
 	<table>
 	  <tr>
-	    <th>Switch e and d</th>
+	    <th>Eccentricity (e) and Distance from Directrix (d)</th>
 	    <th>Switch signs</th>
 	    <th>Switch cos sin</th>
 	  </tr>
