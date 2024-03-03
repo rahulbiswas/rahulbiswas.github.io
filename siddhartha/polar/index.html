@@ -7,6 +7,18 @@ label {
   display: inline-block;
   width: 60px;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 </style>
 <script>
 
@@ -94,22 +106,41 @@ function drawGraph() {
 <body onload="SwitchSigns(0);SwitchCosSin(0);drawGraph()">
 	<canvas id="drawingCanvas" width="500" height="500"></canvas>
 	<br>
-	<h1>Switch e and d</h1>
-  <input type="text" id="myText" value="1">
-  <p>Click the "enter e" button to alter the value of e.</p>
+	<table>
+	  <tr>
+	    <th>Switch e and d</th>
+	    <th>Switch signs</th>
+	    <th>Switch cos sin</th>
+	  </tr>
+	  <tr>
+	    <td>
+				<input type="text" id="myText" value="1">
+  <p>Click the "enter e" button to alter the value of e.     </p>
   <button onclick="eValue();drawGraph()">enter e</button>
-	<br>
-	<br>
-  <input type="text" id="myText2" value="1">
-  <p>Click the "enter d" button to alter the value of d.</p>
-  <button onclick="dValue();drawGraph()">enter d</button>
-  <h1>Switch Signs</h1>
-  <p><output id="result"></output></p>
+			</td>
+	    <td>
+				<p><output id="result"></output></p>
   <input type="button" name="+" value="+" onclick="SwitchSigns(0);drawGraph()" /></p>
-  <input type="button" name="-" value="-" onclick="SwitchSigns(1);drawGraph()" /></p>
-  <h1>Switch Cos Sin</h1>
-  <p><output id="result2"></output></p>
+			</td>
+	    <td>
+				<p><output id="result2"></output></p>
   <input type="button" name="cos" value="cos" onclick="SwitchCosSin(0);drawGraph()" /></p>
+			</td>
+	  </tr>
+	  <tr>
+	    <td>
+				<input type="text" id="myText2" value="1">
+  <p>Click the "enter d" button to alter the value of d.     </p>
+  <button onclick="dValue();drawGraph()">enter d</button>
+			</td>
+	    <td>
+				<p><output id="result"></output></p><input type="button" name="-" value="-" onclick="SwitchSigns(1);drawGraph()" /></p>
+			</td>
+	    <td>
+				<p><output id="result2"></output></p>
   <input type="button" name="sin" value="sin" onclick="SwitchCosSin(1);drawGraph()" /></p>
+			</td>
+	  </tr>
+	</table>
 </body>
 </html>
