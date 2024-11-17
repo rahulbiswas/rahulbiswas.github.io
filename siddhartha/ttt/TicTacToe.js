@@ -1,7 +1,18 @@
+/* @jsx React.createElement */
+// Above comment helps IntelliJ understand this is a React file
+
+/**
+ * @type {React.FC}
+ */
 const TicTacToe = () => {
     const [board, setBoard] = React.useState(Array(9).fill(null));
     const [isXNext, setIsXNext] = React.useState(true);
 
+    /**
+     * Calculate winner of the game
+     * @param {Array<string|null>} squares
+     * @returns {{winner: string, line: number[]}|null}
+     */
     const calculateWinner = (squares) => {
         const lines = [
             [0, 1, 2], // horizontal
@@ -25,6 +36,10 @@ const TicTacToe = () => {
     const winner = calculateWinner(board);
     const isDraw = !winner && board.every(square => square !== null);
 
+    /**
+     * Handle square click
+     * @param {number} index
+     */
     const handleClick = (index) => {
         if (board[index] || winner) return;
 
@@ -39,6 +54,11 @@ const TicTacToe = () => {
         setIsXNext(true);
     };
 
+    /**
+     * Render individual square
+     * @param {number} index
+     * @returns {JSX.Element}
+     */
     const renderSquare = (index) => {
         const isWinningSquare = winner && winner.line && winner.line.includes(index);
         const value = board[index];
