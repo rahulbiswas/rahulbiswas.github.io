@@ -4,10 +4,14 @@ body {
     background-color: #f5f1e6;
 }
 
+:root {
+    --game-size: 70;  /* Percentage as a number */
+}
+
 .game-grid {
     background-image: url('board.svg');
-    width: 500px;
-    height: 500px;
+    width: min(calc(var(--game-size) * 1vw), calc(var(--game-size) * 1vh));
+    height: min(calc(var(--game-size) * 1vw), calc(var(--game-size) * 1vh));
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -64,15 +68,50 @@ body {
     transform-origin: left center;
 }
 
+:root {
+    --edge-margin: 0%;
+    --first-line: 16%;
+    --second-line: 50%;
+    --third-line: 84%;
+    --line-width: 100%;
+}
+
 /* Horizontal lines */
-.winning-line.h0 { top: 83px; left: 35px; width: 430px; }
-.winning-line.h1 { top: 250px; left: 35px; width: 430px; }
-.winning-line.h2 { top: 415px; left: 35px; width: 430px; }
+.winning-line.h0 {
+    top: var(--first-line);
+    left: var(--edge-margin);
+    width: var(--line-width);
+}
+.winning-line.h1 {
+    top: var(--second-line);
+    left: var(--edge-margin);
+    width: var(--line-width);
+}
+.winning-line.h2 {
+    top: var(--third-line);
+    left: var(--edge-margin);
+    width: var(--line-width);
+}
 
 /* Vertical lines */
-.winning-line.v0 { top: 35px; left: 83px; width: 430px; transform: rotate(90deg); }
-.winning-line.v1 { top: 35px; left: 250px; width: 430px; transform: rotate(90deg); }
-.winning-line.v2 { top: 35px; left: 415px; width: 430px; transform: rotate(90deg); }
+.winning-line.v0 {
+    top: var(--edge-margin);
+    left: var(--first-line);
+    width: var(--line-width);
+    transform: rotate(90deg);
+}
+.winning-line.v1 {
+    top: var(--edge-margin);
+    left: var(--second-line);
+    width: var(--line-width);
+    transform: rotate(90deg);
+}
+.winning-line.v2 {
+    top: var(--edge-margin);
+    left: var(--third-line);
+    width: var(--line-width);
+    transform: rotate(90deg);
+}
 
 /* Diagonal lines */
 .winning-line.d0 { /* top-left to bottom-right */
@@ -108,8 +147,8 @@ body {
 }
 
 .reset-button {
-    background: #5fb5b5;
-    color: white;
+    background: #e8d5b5;
+    color: #4a3c31;
     padding: 16px 24px;
     border-radius: 12px;
     border: none;
@@ -120,7 +159,7 @@ body {
 }
 
 .reset-button:hover {
-    background: #4a9090;
+    background: #f4e8d1;
 }
 
 /* Utility classes */
