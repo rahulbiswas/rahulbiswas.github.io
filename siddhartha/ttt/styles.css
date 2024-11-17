@@ -1,97 +1,93 @@
 body {
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
-    background-color: #f9fafb;
+    background-color: #f5f1e6;
 }
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    width: 300px;
-    height: 300px;
+    grid-template-columns: repeat(3, 166px);
+    width: 500px;
+    height: 500px;
     margin: 40px 0;
-    background-image: url('grid-pattern.svg');
-    background-size: 300px 300px;
+    background-image: url('board.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
+}
+
+.square {
+    width: 166px;
+    height: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.square.x-mark::after,
+.square.o-mark::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.square.x-mark::after {
+    background-image: url('x-piece.svg');
+}
+
+.square.o-mark::after {
+    background-image: url('o-piece.svg');
 }
 
 .winning-line {
     position: absolute;
-    background: #333333;
+    background: #2b2b2b;
     height: 4px;
     transform-origin: left center;
 }
 
 /* Horizontal lines */
-.winning-line.h0 { top: 50px; left: 20px; width: 260px; }
-.winning-line.h1 { top: 150px; left: 20px; width: 260px; }
-.winning-line.h2 { top: 250px; left: 20px; width: 260px; }
+.winning-line.h0 { top: 83px; left: 35px; width: 430px; }
+.winning-line.h1 { top: 250px; left: 35px; width: 430px; }
+.winning-line.h2 { top: 415px; left: 35px; width: 430px; }
 
 /* Vertical lines */
-.winning-line.v0 { top: 20px; left: 50px; width: 260px; transform: rotate(90deg); }
-.winning-line.v1 { top: 20px; left: 150px; width: 260px; transform: rotate(90deg); }
-.winning-line.v2 { top: 20px; left: 250px; width: 260px; transform: rotate(90deg); }
+.winning-line.v0 { top: 35px; left: 83px; width: 430px; transform: rotate(90deg); }
+.winning-line.v1 { top: 35px; left: 250px; width: 430px; transform: rotate(90deg); }
+.winning-line.v2 { top: 35px; left: 415px; width: 430px; transform: rotate(90deg); }
 
 /* Diagonal lines */
 .winning-line.d0 { /* top-left to bottom-right */
-    top: 20px;
-    left: 20px;
-    width: 367px;
+    top: 35px;
+    left: 35px;
+    width: 600px;
     transform: rotate(45deg);
     transform-origin: top left;
 }
 
 .winning-line.d1 { /* top-right to bottom-left */
-    top: 20px;
-    right: 20px;
-    width: 367px;
+    top: 35px;
+    right: 35px;
+    width: 600px;
     transform: rotate(-45deg);
     transform-origin: top right;
 }
 
-.square {
-    width: 100px;
-    height: 100px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    cursor: pointer;
-    border: none;
-}
-
-.square:disabled {
-    cursor: not-allowed;
-}
-
-.x-mark {
-    color: #ef4444;
-}
-
-.o-mark {
-    color: #3b82f6;
-}
-
-.reset-button {
-    background: #4F7DF3;
-    color: white;
-    padding: 16px 24px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.125rem;
-    width: 100%;
-}
-
 .game-container {
-    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 32px;
-    border-radius: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -99,8 +95,24 @@ body {
     font-size: 1.75rem;
     font-weight: 600;
     text-align: center;
-    color: #1f2937;
+    color: #2b2b2b;
     margin-bottom: 2rem;
+}
+
+.reset-button {
+    background: #5fb5b5;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    width: 200px;
+    margin-top: 2rem;
+}
+
+.reset-button:hover {
+    background: #4a9090;
 }
 
 /* Utility classes */
