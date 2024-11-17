@@ -7,6 +7,7 @@ body {
 .game-grid {
     display: grid;
     grid-template-columns: repeat(3, 166px);
+    grid-template-rows: repeat(3, 166px);
     width: 500px;
     height: 500px;
     margin: 40px 0;
