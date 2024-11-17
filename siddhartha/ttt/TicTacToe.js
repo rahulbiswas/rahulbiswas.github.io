@@ -40,15 +40,15 @@ const TicTacToe = () => {
     };
 
     const renderSquare = (index) => {
-        const isWinningSquare = winner?.line?.includes(index);
+        const isWinningSquare = winner && winner.line && winner.line.includes(index);
         const value = board[index];
-        const squareClass = `square 
-            ${isWinningSquare ? 'winning' : ''} 
-            ${value === 'X' ? 'x-mark' : value === 'O' ? 'o-mark' : ''}`;
+        const squareClass = 'square ' + 
+            (isWinningSquare ? 'winning ' : '') + 
+            (value === 'X' ? 'x-mark' : value === 'O' ? 'o-mark' : '');
 
         return (
             <button
-                className={squareClass}
+                className={squareClass.trim()}
                 onClick={() => handleClick(index)}
                 disabled={board[index] || winner}
                 aria-label={`Square ${index + 1}${value ? ` marked with ${value}` : ''}`}
@@ -89,5 +89,3 @@ const TicTacToe = () => {
         </div>
     );
 };
-
-export default TicTacToe;
