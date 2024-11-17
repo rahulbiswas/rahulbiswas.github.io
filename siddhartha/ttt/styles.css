@@ -12,6 +12,41 @@ body {
     margin: 40px 0;
     background-image: url('grid-pattern.svg');
     background-size: 300px 300px;
+    position: relative;
+}
+
+.winning-line {
+    position: absolute;
+    background: #333333;
+    height: 4px;
+    transform-origin: left center;
+}
+
+/* Horizontal lines */
+.winning-line.h0 { top: 50px; left: 20px; width: 260px; }
+.winning-line.h1 { top: 150px; left: 20px; width: 260px; }
+.winning-line.h2 { top: 250px; left: 20px; width: 260px; }
+
+/* Vertical lines */
+.winning-line.v0 { top: 20px; left: 50px; width: 260px; transform: rotate(90deg); }
+.winning-line.v1 { top: 20px; left: 150px; width: 260px; transform: rotate(90deg); }
+.winning-line.v2 { top: 20px; left: 250px; width: 260px; transform: rotate(90deg); }
+
+/* Diagonal lines */
+.winning-line.d0 { /* top-left to bottom-right */
+    top: 20px;
+    left: 20px;
+    width: 367px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.winning-line.d1 { /* top-right to bottom-left */
+    top: 20px;
+    right: 20px;
+    width: 367px;
+    transform: rotate(-45deg);
+    transform-origin: top right;
 }
 
 .square {
@@ -29,10 +64,6 @@ body {
 
 .square:disabled {
     cursor: not-allowed;
-}
-
-.square.winning {
-    background: #bbf7d0;
 }
 
 .x-mark {
