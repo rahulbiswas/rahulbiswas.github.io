@@ -54,11 +54,11 @@ body {
 }
 
 .square.x-mark::after {
-    background-image: url('x-piece.svg');
+    background-image: url('x-piece.svg?v=2');
 }
 
 .square.o-mark::after {
-    background-image: url('o-piece.svg');
+    background-image: url('o-piece.svg?v=2');
 }
 
 .winning-line {

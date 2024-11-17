@@ -55,9 +55,39 @@ const TicTacToe = () => {
     };
 
     const getStatus = () => {
-        if (winner) return `Winner: ${winner.winner}!`;
-        if (isDraw) return "It's a draw!";
-        return `Next player: ${isXNext ? 'X' : 'O'}`;
+        // Messages for draw
+        const drawMessages = [
+            "A five-year plan of perfect balance!",
+            "The people's stalemate!",
+            "Equal distribution of points achieved!",
+            "Perfect harmony, just like the commune!",
+            "Balance worthy of the Supreme Soviet!"
+        ];
+
+        // Messages for next player
+        const nextPlayerMessages = [
+            `Time for Comrade ${isXNext ? 'X' : 'O'} to seize their destiny!`,
+            `The Party calls upon ${isXNext ? 'X' : 'O'} to make their move!`,
+            `Forward, Comrade ${isXNext ? 'X' : 'O'}, for glory!`,
+            `The people await ${isXNext ? 'X' : 'O'}'s next decree!`,
+            `Comrade ${isXNext ? 'X' : 'O'}, your move for the collective!`
+        ];
+
+        // Get random message from appropriate array
+        if (winner !== null) {  // Changed this condition
+            const winnerMessages = [
+                `${winner.winner} triumphs for the Motherland!`,
+                `Glory to ${winner.winner}, Champion of the People!`,
+                `${winner.winner} seizes the means of victory!`,
+                `A historic victory for Comrade ${winner.winner}!`,
+                `${winner.winner} wins by decree of the Party!`
+            ];
+            return winnerMessages[Math.floor(Math.random() * winnerMessages.length)];
+        }
+        if (isDraw) {
+            return drawMessages[Math.floor(Math.random() * drawMessages.length)];
+        }
+        return nextPlayerMessages[Math.floor(Math.random() * nextPlayerMessages.length)];
     };
 
     const getLineClass = () => {
