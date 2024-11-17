@@ -1,6 +1,6 @@
 const TicTacToe = () => {
     const [board, setBoard] = React.useState(Array(9).fill(null));
-    const [isXNext, setIsXNext] = React.useState(true);
+    const [isHumanNext, setIsHumanNext] = React.useState(true);
 
     const calculateWinner = (squares) => {
         const lines = [
@@ -23,21 +23,86 @@ const TicTacToe = () => {
         return null;
     };
 
+    // Minimax algorithm with alpha-beta pruning
+    const minimax = (board, depth, isMaximizing, alpha = -Infinity, beta = Infinity) => {
+        const winner = calculateWinner(board);
+        if (winner) return winner.winner === 'O' ? 10 - depth : depth - 10;
+        if (!board.includes(null)) return 0;
+
+        if (isMaximizing) {
+            let bestScore = -Infinity;
+            for (let i = 0; i < board.length; i++) {
+                if (!board[i]) {
+                    board[i] = 'O';
+                    const score = minimax(board, depth + 1, false, alpha, beta);
+                    board[i] = null;
+                    bestScore = Math.max(score, bestScore);
+                    alpha = Math.max(alpha, bestScore);
+                    if (beta <= alpha) break;
+                }
+            }
+            return bestScore;
+        } else {
+            let bestScore = Infinity;
+            for (let i = 0; i < board.length; i++) {
+                if (!board[i]) {
+                    board[i] = 'X';
+                    const score = minimax(board, depth + 1, true, alpha, beta);
+                    board[i] = null;
+                    bestScore = Math.min(score, bestScore);
+                    beta = Math.min(beta, bestScore);
+                    if (beta <= alpha) break;
+                }
+            }
+            return bestScore;
+        }
+    };
+
+    const findBestMove = (board) => {
+        let bestScore = -Infinity;
+        let bestMove = null;
+
+        for (let i = 0; i < board.length; i++) {
+            if (!board[i]) {
+                board[i] = 'O';
+                const score = minimax(board, 0, false);
+                board[i] = null;
+                if (score > bestScore) {
+                    bestScore = score;
+                    bestMove = i;
+                }
+            }
+        }
+        return bestMove;
+    };
+
     const winner = calculateWinner(board);
     const isDraw = !winner && board.every(square => square !== null);
 
     const handleClick = (index) => {
-        if (board[index] || winner) return;
+        if (board[index] || winner || !isHumanNext) return;
 
         const newBoard = [...board];
-        newBoard[index] = isXNext ? 'X' : 'O';
+        newBoard[index] = 'X';
         setBoard(newBoard);
-        setIsXNext(!isXNext);
+        setIsHumanNext(false);
+
+        // AI's turn
+        setTimeout(() => {
+            if (!calculateWinner(newBoard) && !newBoard.every(square => square !== null)) {
+                const aiMove = findBestMove(newBoard);
+                if (aiMove !== null) {
+                    newBoard[aiMove] = 'O';
+                    setBoard(newBoard);
+                    setIsHumanNext(true);
+                }
+            }
+        }, 500); // Add delay for better UX
     };
 
     const resetGame = () => {
         setBoard(Array(9).fill(null));
-        setIsXNext(true);
+        setIsHumanNext(true);
     };
 
     const renderSquare = (index) => {
@@ -48,45 +113,40 @@ const TicTacToe = () => {
             <button
                 className={squareClass}
                 onClick={() => handleClick(index)}
-                disabled={board[index] || winner}
+                disabled={board[index] || winner || !isHumanNext}
                 aria-label={`Square ${index + 1}${value ? ` marked with ${value}` : ''}`}
             />
         );
     };
 
     const getStatus = () => {
-        // Messages for draw
-        const drawMessages = [
-            "A five-year plan of perfect balance!",
-            "The people's stalemate!",
-            "Equal distribution of points achieved!",
-            "Perfect harmony, just like the commune!",
-            "Balance worthy of the Supreme Soviet!"
-        ];
-
-        // Messages for next player
-        const nextPlayerMessages = [
-            `Time for Comrade ${isXNext ? 'X' : 'O'} to seize their destiny!`,
-            `The Party calls upon ${isXNext ? 'X' : 'O'} to make their move!`,
-            `Forward, Comrade ${isXNext ? 'X' : 'O'}, for glory!`,
-            `The people await ${isXNext ? 'X' : 'O'}'s next decree!`,
-            `Comrade ${isXNext ? 'X' : 'O'}, your move for the collective!`
-        ];
-
-        // Get random message from appropriate array
-        if (winner !== null) {  // Changed this condition
+        if (winner) {
             const winnerMessages = [
-                `${winner.winner} triumphs for the Motherland!`,
-                `Glory to ${winner.winner}, Champion of the People!`,
-                `${winner.winner} seizes the means of victory!`,
-                `A historic victory for Comrade ${winner.winner}!`,
-                `${winner.winner} wins by decree of the Party!`
+                `${winner.winner === 'X' ? 'Neo' : 'Agent Smith'} has altered the Matrix!`,
+                `${winner.winner === 'X' ? 'The One' : 'The System'} proves prophecy true!`,
+                `${winner.winner === 'X' ? 'Humanity' : 'The Machines'} controls the code now!`,
+                `${winner.winner === 'X' ? 'Zion' : 'The Matrix'} claims victory!`,
+                `${winner.winner === 'X' ? 'The Oracle foresaw' : 'The Architect designed'} this victory!`
             ];
             return winnerMessages[Math.floor(Math.random() * winnerMessages.length)];
         }
         if (isDraw) {
+            const drawMessages = [
+                "A glitch in the Matrix creates perfect balance",
+                "The System and Reality reach equilibrium",
+                "Neither the red nor blue pill prevails",
+                "The Oracle predicted this stalemate",
+                "Balance maintained in the Matrix"
+            ];
             return drawMessages[Math.floor(Math.random() * drawMessages.length)];
         }
+        const nextPlayerMessages = [
+            `${isHumanNext ? 'Neo, make' : 'Agent Smith executes'} your next move`,
+            `${isHumanNext ? 'Free your mind with' : 'The System processes'} the next choice`,
+            `${isHumanNext ? 'Humanity' : 'The Machine'} must choose wisely`,
+            `${isHumanNext ? 'The One' : 'The Program'} must continue the sequence`,
+            `${isHumanNext ? 'Break free' : 'Execute protocol'} with your next move`
+        ];
         return nextPlayerMessages[Math.floor(Math.random() * nextPlayerMessages.length)];
     };
 
@@ -124,3 +184,5 @@ const TicTacToe = () => {
         </div>
     );
 };
+
+// export default TicTacToe;
