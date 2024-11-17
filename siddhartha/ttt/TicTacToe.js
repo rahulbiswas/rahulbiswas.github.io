@@ -50,9 +50,7 @@ const TicTacToe = () => {
                 onClick={() => handleClick(index)}
                 disabled={board[index] || winner}
                 aria-label={`Square ${index + 1}${value ? ` marked with ${value}` : ''}`}
-            >
-                {value}
-            </button>
+            />
         );
     };
 
