@@ -1,33 +1,23 @@
-/* @jsx React.createElement */
-// Above comment helps IntelliJ understand this is a React file
-
-/**
- * @type {React.FC}
- */
 const TicTacToe = () => {
     const [board, setBoard] = React.useState(Array(9).fill(null));
     const [isXNext, setIsXNext] = React.useState(true);
 
-    /**
-     * Calculate winner of the game
-     * @param {Array<string|null>} squares
-     * @returns {{winner: string, line: number[]}|null}
-     */
     const calculateWinner = (squares) => {
         const lines = [
-            [0, 1, 2], // horizontal
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 3, 6], // vertical
-            [1, 4, 7],
-            [2, 5, 8],
-            [0, 4, 8], // diagonal
-            [2, 4, 6]
+            [0, 1, 2], // h0
+            [3, 4, 5], // h1
+            [6, 7, 8], // h2
+            [0, 3, 6], // v0
+            [1, 4, 7], // v1
+            [2, 5, 8], // v2
+            [0, 4, 8], // d0
+            [2, 4, 6]  // d1
         ];
 
-        for (const [a, b, c] of lines) {
+        for (let i = 0; i < lines.length; i++) {
+            const [a, b, c] = lines[i];
             if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-                return { winner: squares[a], line: [a, b, c] };
+                return { winner: squares[a], line: i };
             }
         }
         return null;
@@ -36,10 +26,6 @@ const TicTacToe = () => {
     const winner = calculateWinner(board);
     const isDraw = !winner && board.every(square => square !== null);
 
-    /**
-     * Handle square click
-     * @param {number} index
-     */
     const handleClick = (index) => {
         if (board[index] || winner) return;
 
@@ -54,21 +40,13 @@ const TicTacToe = () => {
         setIsXNext(true);
     };
 
-    /**
-     * Render individual square
-     * @param {number} index
-     * @returns {JSX.Element}
-     */
     const renderSquare = (index) => {
-        const isWinningSquare = winner && winner.line && winner.line.includes(index);
         const value = board[index];
-        const squareClass = 'square ' + 
-            (isWinningSquare ? 'winning ' : '') + 
-            (value === 'X' ? 'x-mark' : value === 'O' ? 'o-mark' : '');
+        const squareClass = `square ${value === 'X' ? 'x-mark' : value === 'O' ? 'o-mark' : ''}`;
 
         return (
             <button
-                className={squareClass.trim()}
+                className={squareClass}
                 onClick={() => handleClick(index)}
                 disabled={board[index] || winner}
                 aria-label={`Square ${index + 1}${value ? ` marked with ${value}` : ''}`}
@@ -84,24 +62,31 @@ const TicTacToe = () => {
         return `Next player: ${isXNext ? 'X' : 'O'}`;
     };
 
+    const getLineClass = () => {
+        if (!winner) return null;
+        const lineTypes = ['h0', 'h1', 'h2', 'v0', 'v1', 'v2', 'd0', 'd1'];
+        return `winning-line ${lineTypes[winner.line]}`;
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
             <div className="game-container">
-                <div className="text-xl font-semibold text-center text-gray-800 mb-4">
+                <div className="status-text">
                     {getStatus()}
                 </div>
-                
-                <div className="game-grid mb-4">
+
+                <div className="game-grid">
                     {Array(9).fill(null).map((_, index) => (
                         <div key={index}>
                             {renderSquare(index)}
                         </div>
                     ))}
+                    {winner && <div className={getLineClass()}></div>}
                 </div>
 
                 <button
                     onClick={resetGame}
-                    className="reset-button w-full"
+                    className="reset-button"
                 >
                     Reset Game
                 </button>
