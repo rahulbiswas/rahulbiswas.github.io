@@ -146,8 +146,7 @@ function setInitialBoard() {
 		combined["board"] = testBoard
 	}
 	string_combined = JSON.stringify(combined)
-	pieces = gcf(string_combined)
-	pieces = JSON.parse(pieces)
+	pieces = {"0_0":{"player":0,"animal":7},"6_0":{"player":0,"animal":6},"1_1":{"player":0,"animal":4},"5_1":{"player":0,"animal":2},"0_2":{"player":0,"animal":1},"2_2":{"player":0,"animal":5},"4_2":{"player":0,"animal":3},"6_2":{"player":0,"animal":8},"6_8":{"player":1,"animal":7},"0_8":{"player":1,"animal":6},"5_7":{"player":1,"animal":4},"1_7":{"player":1,"animal":2},"6_6":{"player":1,"animal":1},"4_6":{"player":1,"animal":5},"2_6":{"player":1,"animal":3},"0_6":{"player":1,"animal":8}}
 	is_first_click = true
 	turn = 1
 }
@@ -165,7 +164,7 @@ function possible_moves_mapping() {
 		"pieces": JSON.stringify(pieces)
 	}
 	string_combined = JSON.stringify(combined)
-	possible_moves = gcf(string_combined)
+	// possible_moves = gcf(string_combined)
 	possible_moves = JSON.parse(possible_moves)
 	for (var possible_move_index = 0; possible_move_index < possible_moves.length; possible_move_index++) {
 		var move = possible_moves[possible_move_index]
@@ -303,7 +302,7 @@ function gameScreen(click_xy) {
 				return
 			}
 			first_click_key = click_key
-			possible_moves_mapping()
+			// possible_moves_mapping()
 			is_first_click = false
 		} else {
 			var second_click_key = click_key
@@ -368,7 +367,8 @@ function validMove(first_click_key, pieces, second_click_key, current_window) {
 		"second_click_key": second_click_key
 	}
 	string_combined = JSON.stringify(combined)
-	return (gcf(string_combined) == "true")
+	return true
+	// return (gcf(string_combined) == "true")
 }
 
 function movePiece(first_click_key, second_click_key) {
@@ -403,7 +403,7 @@ function aiGame() {
 		combined["utility"] = 0;
 	}
 	string_combined = JSON.stringify(combined)
-	move = gcf(string_combined)
+	// move = gcf(string_combined)
 	first = move[2] + move[3] + move[4]
 	second = move[8] + move[9] + move[10]
 	movePiece(first, second)
@@ -532,16 +532,16 @@ function aws() {
 	createGameReq.send();
 }
 
-function gcf(request) {
-	var createGameReq = new XMLHttpRequest();
-	url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
-	if (useLocal != null) {
-		url = 'http://localhost:8080/?request=' + request
-	}
-	createGameReq.open('GET', url, false);
-	createGameReq.send(null);
-	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
-}
+// function gcf(request) {
+// 	var createGameReq = new XMLHttpRequest();
+// 	url = 'https://animal-397104.uw.r.appspot.com/?request=' + request
+// 	if (useLocal != null) {
+// 		url = 'http://localhost:8080/?request=' + request
+// 	}
+// 	createGameReq.open('GET', url, false);
+// 	createGameReq.send(null);
+// 	return createGameReq.responseText.replace('<span class="code" >', '').replace('</span>', '').replaceAll('&quot;', '"')
+// }
 
 function setGameListener() {
 	checkPeriodically()
@@ -680,7 +680,7 @@ function drawBoard() {
 			POTENTIAL_MOVE_LENGTH,
 			'purple')
 	}
-	drawGreenSquares()
+	// drawGreenSquares()
 }
 
 function drawGreenSquares() {
@@ -690,7 +690,7 @@ function drawGreenSquares() {
 		"turn": turn.toString()
 	}
 	string_combined = JSON.stringify(combined)
-	moving_pieces = gcf(string_combined)
+	// moving_pieces = gcf(string_combined)
 	moving_pieces = moving_pieces.replace('<span class="code" >', '').replace('</span>', '')
 	moving_pieces = moving_pieces.replaceAll('&quot;', '"')
 	moving_pieces = JSON.parse(moving_pieces)
@@ -708,6 +708,7 @@ function drawGreenSquares() {
 }
 
 function isTerminal(s) {
+	return false
 	combined = {
 		"command": "whoWon",
 		"pieces": JSON.stringify(pieces)
