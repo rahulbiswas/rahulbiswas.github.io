@@ -1,0 +1,16 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="paper-texture-x" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="1" />
+            <feColorMatrix type="saturate" values="0.1" />
+            <feBlend mode="multiply" in="SourceGraphic" />
+        </filter>
+    </defs>
+    
+    <!-- X piece -->
+    <circle cx="60" cy="60" r="50" fill="#ff7676" stroke="#2b2b2b" stroke-width="4" filter="url(#paper-texture-x)"/>
+    <g stroke="#2b2b2b" stroke-width="4" fill="none">
+        <line x1="40" y1="40" x2="80" y2="80" />
+        <line x1="80" y1="40" x2="40" y2="80" />
+    </g>
+</svg>
