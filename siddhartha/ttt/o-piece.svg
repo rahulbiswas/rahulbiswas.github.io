@@ -5,23 +5,41 @@
             <feColorMatrix type="saturate" values="0.1" />
             <feBlend mode="multiply" in="SourceGraphic" />
         </filter>
-        <!-- Create a clipping path for the circle -->
-        <clipPath id="circle-clip-o">
-            <circle cx="60" cy="60" r="50"/>
+        <!-- Create a clipping path using the wobbly path -->
+        <clipPath id="wobbly-clip">
+            <path d="M60 10
+                     C80 10, 100 30, 110 60
+                     C115 80, 100 100, 60 110
+                     C30 115, 10 90, 10 60
+                     C5 30, 40 10, 60 10"/>
         </clipPath>
     </defs>
 
-    <!-- Background is now transparent -->
     <rect x="0" y="0" width="120" height="120" fill="transparent"/>
 
-    <!-- Circle with texture, clipped -->
-    <g clip-path="url(#circle-clip-o)">
-        <circle cx="60" cy="60" r="50" fill="#5fb5b5" stroke="#2b2b2b" stroke-width="4" filter="url(#paper-texture-o)"/>
+    <!-- Background circle with texture, clipped to wobbly shape -->
+    <g clip-path="url(#wobbly-clip)">
+        <circle cx="60" cy="60" r="55" fill="#5fb5b5" filter="url(#paper-texture-o)"/>
     </g>
 
-    <!-- Inner O ring -->
-    <circle cx="60" cy="60" r="25" fill="none" stroke="#2b2b2b" stroke-width="4"/>
+    <!-- Wobbly outline -->
+    <path d="M60 10
+             C80 10, 100 30, 110 60
+             C115 80, 100 100, 60 110
+             C30 115, 10 90, 10 60
+             C5 30, 40 10, 60 10"
+          fill="none"
+          stroke="#2b2b2b"
+          stroke-width="4"/>
 
-    <!-- Circle stroke on top to ensure clean edge -->
-    <circle cx="60" cy="60" r="50" fill="none" stroke="#2b2b2b" stroke-width="4"/>
+    <!-- Wobbly inner O ring -->
+    <path d="M60 35
+             C70 35, 80 45, 85 60
+             C87 70, 80 80, 60 85
+             C45 87, 35 75, 35 60
+             C33 45, 50 35, 60 35"
+          fill="none"
+          stroke="#2b2b2b"
+          stroke-width="4"
+          stroke-linecap="round"/>
 </svg>
