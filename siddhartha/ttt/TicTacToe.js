@@ -74,12 +74,14 @@ const TicTacToe = () => {
                 </div>
 
                 <div className="game-grid">
-                    {Array(9).fill(null).map((_, index) => (
-                        <div key={index}>
-                            {renderSquare(index)}
-                        </div>
-                    ))}
-                    {winner && <div className={getLineClass()}></div>}
+                    <div className="game-grid-2">
+                        {Array(9).fill(null).map((_, index) => (
+                            <div key={index}>
+                                {renderSquare(index)}
+                            </div>
+                        ))}
+                        {winner && <div className={getLineClass()}></div>}
+                    </div>
                 </div>
 
                 <button
