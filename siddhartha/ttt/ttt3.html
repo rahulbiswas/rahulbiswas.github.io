@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 96px);
+            gap: 8px;
+        }
+        .square {
+            width: 96px;
+            height: 96px;
+            border: 2px solid #e5e7eb;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            background: white;
+            cursor: pointer;
+        }
+        .square:hover:not(:disabled) {
+            background: #f3f4f6;
+        }
+        .square:disabled {
+            cursor: not-allowed;
+        }
+        .square.winning {
+            background: #bbf7d0;
+        }
+        .x-mark {
+            color: #ef4444;
+        }
+        .o-mark {
+            color: #3b82f6;
+        }
+        .reset-button {
+            background: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .reset-button:hover {
+            background: #2563eb;
+        }
+        .game-container {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const TicTacToe = () => {
+            const [board, setBoard] = React.useState(Array(9).fill(null));
+            const [isXNext, setIsXNext] = React.useState(true);
+
+            const calculateWinner = (squares) => {
+                const lines = [
+                    [0, 1, 2], // horizontal
+                    [3, 4, 5],
+                    [6, 7, 8],
+                    [0, 3, 6], // vertical
+                    [1, 4, 7],
+                    [2, 5, 8],
+                    [0, 4, 8], // diagonal
+                    [2, 4, 6]
+                ];
+
+                for (const [a, b, c] of lines) {
+                    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+                        return { winner: squares[a], line: [a, b, c] };
+                    }
+                }
+                return null;
+            };
+
+            const winner = calculateWinner(board);
+            const isDraw = !winner && board.every(square => square !== null);
+
+            const handleClick = (index) => {
+                if (board[index] || winner) return;
+
+                const newBoard = [...board];
+                newBoard[index] = isXNext ? 'X' : 'O';
+                setBoard(newBoard);
+                setIsXNext(!isXNext);
+            };
+
+            const resetGame = () => {
+                setBoard(Array(9).fill(null));
+                setIsXNext(true);
+            };
+
+            const renderSquare = (index) => {
+                const isWinningSquare = winner?.line?.includes(index);
+                const value = board[index];
+                const squareClass = `square 
+                    ${isWinningSquare ? 'winning' : ''} 
+                    ${value === 'X' ? 'x-mark' : value === 'O' ? 'o-mark' : ''}`;
+
+                return (
+                    <button
+                        className={squareClass}
+                        onClick={() => handleClick(index)}
+                        disabled={board[index] || winner}
+                        aria-label={`Square ${index + 1}${value ? ` marked with ${value}` : ''}`}
+                    >
+                        {value}
+                    </button>
+                );
+            };
+
+            const getStatus = () => {
+                if (winner) return `Winner: ${winner.winner}!`;
+                if (isDraw) return "It's a draw!";
+                return `Next player: ${isXNext ? 'X' : 'O'}`;
+            };
+
+            return (
+                <div className="min-h-screen flex items-center justify-center p-4">
+                    <div className="game-container">
+                        <div className="text-xl font-semibold text-center text-gray-800 mb-4">
+                            {getStatus()}
+                        </div>
+                        
+                        <div className="game-grid mb-4">
+                            {Array(9).fill(null).map((_, index) => (
+                                <div key={index}>
+                                    {renderSquare(index)}
+                                </div>
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={resetGame}
+                            className="reset-button w-full"
+                        >
+                            Reset Game
+                        </button>
+                    </div>
+                </div>
+            );
+        };
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<TicTacToe />);
+    </script>
+</body>
+</html>
