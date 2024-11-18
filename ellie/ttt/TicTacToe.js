@@ -23,57 +23,62 @@ const TicTacToe = () => {
         return null;
     };
 
-    // Minimax algorithm with alpha-beta pruning
-    const minimax = (board, depth, isMaximizing, alpha = -Infinity, beta = Infinity) => {
-        const winner = calculateWinner(board);
-        if (winner) return winner.winner === 'O' ? 10 - depth : depth - 10;
-        if (!board.includes(null)) return 0;
+    // Simplified AI that makes some intentional mistakes
+    const findKidFriendlyMove = (board) => {
+        // First, check if AI can win immediately
+        const possibleMoves = [];
+        const goodMoves = [];
+        const okayMoves = [];
 
-        if (isMaximizing) {
-            let bestScore = -Infinity;
-            for (let i = 0; i < board.length; i++) {
-                if (!board[i]) {
-                    board[i] = 'O';
-                    const score = minimax(board, depth + 1, false, alpha, beta);
-                    board[i] = null;
-                    bestScore = Math.max(score, bestScore);
-                    alpha = Math.max(alpha, bestScore);
-                    if (beta <= alpha) break;
-                }
+        // Collect all possible moves
+        board.forEach((square, index) => {
+            if (!square) {
+                possibleMoves.push(index);
             }
-            return bestScore;
-        } else {
-            let bestScore = Infinity;
-            for (let i = 0; i < board.length; i++) {
-                if (!board[i]) {
-                    board[i] = 'X';
-                    const score = minimax(board, depth + 1, true, alpha, beta);
-                    board[i] = null;
-                    bestScore = Math.min(score, bestScore);
-                    beta = Math.min(beta, bestScore);
-                    if (beta <= alpha) break;
-                }
-            }
-            return bestScore;
+        });
+
+        // Randomly decide to make a suboptimal move (70% chance)
+        if (Math.random() < 0.7) {
+            // Just pick a random available spot
+            return possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
         }
-    };
 
-    const findBestMove = (board) => {
-        let bestScore = -Infinity;
-        let bestMove = null;
-
-        for (let i = 0; i < board.length; i++) {
-            if (!board[i]) {
-                board[i] = 'O';
-                const score = minimax(board, 0, false);
-                board[i] = null;
-                if (score > bestScore) {
-                    bestScore = score;
-                    bestMove = i;
+        // For the other 30%, try to play somewhat strategically
+        // Check each possible move
+        for (let i of possibleMoves) {
+            const testBoard = [...board];
+            testBoard[i] = 'O';
+            
+            // If this move would win, it's a good move
+            if (calculateWinner(testBoard)) {
+                goodMoves.push(i);
+            } else {
+                // Check if this prevents an immediate player win
+                let isBlocking = false;
+                const playerTestBoard = [...board];
+                playerTestBoard[i] = 'X';
+                if (calculateWinner(playerTestBoard)) {
+                    isBlocking = true;
+                }
+                
+                if (isBlocking) {
+                    okayMoves.push(i);
                 }
             }
         }
-        return bestMove;
+
+        // If there's a winning move, take it sometimes (50% chance)
+        if (goodMoves.length > 0 && Math.random() < 0.5) {
+            return goodMoves[Math.floor(Math.random() * goodMoves.length)];
+        }
+        
+        // If there's a blocking move, take it sometimes (30% chance)
+        if (okayMoves.length > 0 && Math.random() < 0.3) {
+            return okayMoves[Math.floor(Math.random() * okayMoves.length)];
+        }
+
+        // Otherwise, just pick a random available spot
+        return possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
     };
 
     const winner = calculateWinner(board);
@@ -90,14 +95,14 @@ const TicTacToe = () => {
         // AI's turn
         setTimeout(() => {
             if (!calculateWinner(newBoard) && !newBoard.every(square => square !== null)) {
-                const aiMove = findBestMove(newBoard);
+                const aiMove = findKidFriendlyMove(newBoard);
                 if (aiMove !== null) {
                     newBoard[aiMove] = 'O';
                     setBoard(newBoard);
                     setIsHumanNext(true);
                 }
             }
-        }, 500); // Add delay for better UX
+        }, 500);
     };
 
     const resetGame = () => {
@@ -122,32 +127,18 @@ const TicTacToe = () => {
     const getStatus = () => {
         if (winner) {
             const winnerMessages = [
-                `${winner.winner === 'X' ? 'Neo' : 'Agent Smith'} has altered the Matrix!`,
-                `${winner.winner === 'X' ? 'The One' : 'The System'} proves prophecy true!`,
-                `${winner.winner === 'X' ? 'Humanity' : 'The Machines'} controls the code now!`,
-                `${winner.winner === 'X' ? 'Zion' : 'The Matrix'} claims victory!`,
-                `${winner.winner === 'X' ? 'The Oracle foresaw' : 'The Architect designed'} this victory!`
+                `${winner.winner === 'X' ? 'You win!' : 'Good try!'} Want to play again?`,
+                `${winner.winner === 'X' ? 'Amazing job!' : 'Almost got it!'} Let's play more!`,
+                `${winner.winner === 'X' ? 'You did it!' : 'So close!'} Another round?`,
+                `${winner.winner === 'X' ? 'Super win!' : 'Nice try!'} Once more?`,
+                `${winner.winner === 'X' ? 'Wonderful!' : 'Keep trying!'} Play again?`
             ];
             return winnerMessages[Math.floor(Math.random() * winnerMessages.length)];
         }
         if (isDraw) {
-            const drawMessages = [
-                "A glitch in the Matrix creates perfect balance",
-                "The System and Reality reach equilibrium",
-                "Neither the red nor blue pill prevails",
-                "The Oracle predicted this stalemate",
-                "Balance maintained in the Matrix"
-            ];
-            return drawMessages[Math.floor(Math.random() * drawMessages.length)];
+            return "It's a tie! Want to try again?";
         }
-        const nextPlayerMessages = [
-            `${isHumanNext ? 'Neo, make' : 'Agent Smith executes'} your next move`,
-            `${isHumanNext ? 'Free your mind with' : 'The System processes'} the next choice`,
-            `${isHumanNext ? 'Humanity' : 'The Machine'} must choose wisely`,
-            `${isHumanNext ? 'The One' : 'The Program'} must continue the sequence`,
-            `${isHumanNext ? 'Break free' : 'Execute protocol'} with your next move`
-        ];
-        return nextPlayerMessages[Math.floor(Math.random() * nextPlayerMessages.length)];
+        return isHumanNext ? "Your turn! Where do you want to go?" : "Thinking...";
     };
 
     const getLineClass = () => {
@@ -178,7 +169,7 @@ const TicTacToe = () => {
                     onClick={resetGame}
                     className="reset-button"
                 >
-                    Reset Game
+                    Play Again
                 </button>
             </div>
         </div>
