@@ -2,12 +2,12 @@
   "name": "dou-shou-qi",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://rahulbiswas.github.io/jungle",
+  "homepage": "https://rahulbiswas.github.io/siddhartha/jungle",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --public-url /siddhartha/jungle/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "cp -r dist/* /Users/rahulbiswas/rahulbiswas.github.io/siddhartha/jungle/"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -17,7 +17,6 @@
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
     "@babel/preset-react": "^7.23.7",
-    "gh-pages": "^6.1.1",
     "parcel": "^2.11.0",
     "parcel-reporter-static-files-copy": "^1.5.3",
     "process": "^0.11.10"
