@@ -359,9 +359,9 @@ function drawBoard() {
 				}
 			}
 			if (is_alive) {
-				alpha = 0.2
+			    alpha = 1.0
 			} else {
-				alpha = 1.0
+			    alpha = 0.2
 			}
 			x = 6 + (animal % 2) * PIECE_SIZE + player * 80
 			y = 10 + (Math.ceil(animal / 2) * PIECE_SIZE)
@@ -415,7 +415,7 @@ function drawBoard() {
 				PIECE_SIZE)
 		}
 	}
-	if (moved_piece[0] != ['0']) {
+	if (moved_piece[0][0] != '0') {
 		rrect(
 			moved_piece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
 			moved_piece[0][1] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
