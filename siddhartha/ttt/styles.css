@@ -5,16 +5,13 @@ body {
 }
 
 :root {
-    --game-size: 70;  /* Percentage as a number */
+    --game-size: 70;
 }
 
 .game-grid {
-    background-image: url('board.svg');
     width: min(calc(var(--game-size) * 1vw), calc(var(--game-size) * 1vh));
-    height: min(calc(var(--game-size) * 1vw), calc(var(--game-size) * 1vh));
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    aspect-ratio: 1;
+    background: url('board.svg') center/contain no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -23,34 +20,30 @@ body {
 
 .game-grid-2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 80%;
-    height: 80%;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    inline-size: 80%;
+    aspect-ratio: 1;
     position: relative;
 }
 
 .square {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    inline-size: 100%;
+    aspect-ratio: 1;
     cursor: pointer;
-    border: none;
+    border: 0;
     background: transparent;
     padding: 0;
-    margin: 0;
 }
 
 .square.x-mark::after,
 .square.o-mark::after {
     content: "";
-    width: 100px;
-    height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    inline-size: 100px;
+    aspect-ratio: 1;
+    background: center/contain no-repeat;
 }
 
 .square.x-mark::after {
@@ -74,38 +67,42 @@ body {
     --second-line: 50%;
     --third-line: 84%;
     --line-width: 100%;
+    --diagonal-offset: 0%;
+    --diagonal-width: 140%;
 }
 
-/* Horizontal lines */
 .winning-line.h0 {
     top: var(--first-line);
     left: var(--edge-margin);
     width: var(--line-width);
 }
+
 .winning-line.h1 {
     top: var(--second-line);
     left: var(--edge-margin);
     width: var(--line-width);
 }
+
 .winning-line.h2 {
     top: var(--third-line);
     left: var(--edge-margin);
     width: var(--line-width);
 }
 
-/* Vertical lines */
 .winning-line.v0 {
     top: var(--edge-margin);
     left: var(--first-line);
     width: var(--line-width);
     transform: rotate(90deg);
 }
+
 .winning-line.v1 {
     top: var(--edge-margin);
     left: var(--second-line);
     width: var(--line-width);
     transform: rotate(90deg);
 }
+
 .winning-line.v2 {
     top: var(--edge-margin);
     left: var(--third-line);
@@ -113,19 +110,18 @@ body {
     transform: rotate(90deg);
 }
 
-/* Diagonal lines */
-.winning-line.d0 { /* top-left to bottom-right */
-    top: 35px;
-    left: 35px;
-    width: 600px;
+.winning-line.d0 {
+    top: var(--diagonal-offset);
+    left: var(--diagonal-offset);
+    width: var(--diagonal-width);
     transform: rotate(45deg);
     transform-origin: top left;
 }
 
-.winning-line.d1 { /* top-right to bottom-left */
-    top: 35px;
-    right: 35px;
-    width: 600px;
+.winning-line.d1 {
+    top: var(--diagonal-offset);
+    right: var(--diagonal-offset);
+    width: var(--diagonal-width);
     transform: rotate(-45deg);
     transform-origin: top right;
 }
