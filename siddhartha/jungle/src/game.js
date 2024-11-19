@@ -1,3 +1,7 @@
+import React, { useState, useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HomeMenu, GameBoard } from './components';
+
 // Constants for click areas
 const HOME_LOCAL_X_START = 35; // -15 + 50 (center)
 const HOME_LOCAL_X_END = 65;   // +15 + 50 (center)
@@ -51,14 +55,14 @@ const initialPieces = {
     "0_6": { "player": 1, "animal": 8 }
 };
 
-window.JungleGame = function JungleGame() {
-    const [currentWindow, setCurrentWindow] = React.useState('home');
-    const [pieces, setPieces] = React.useState(initialPieces);
-    const [turn, setTurn] = React.useState(1);
-    const [isFirstClick, setIsFirstClick] = React.useState(true);
-    const [firstClickKey, setFirstClickKey] = React.useState(null);
-    const [movedPiece, setMovedPiece] = React.useState(['0']);
-    const contentRef = React.useRef(null);
+function JungleGame() {
+    const [currentWindow, setCurrentWindow] = useState('home');
+    const [pieces, setPieces] = useState(initialPieces);
+    const [turn, setTurn] = useState(1);
+    const [isFirstClick, setIsFirstClick] = useState(true);
+    const [firstClickKey, setFirstClickKey] = useState(null);
+    const [movedPiece, setMovedPiece] = useState(['0']);
+    const contentRef = useRef(null);
 
     const getClickKey = (clickX, clickY) => {
         const row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH);
@@ -178,4 +182,10 @@ window.JungleGame = function JungleGame() {
             </div>
         </div>
     );
-};
+}
+
+// Create root and render app
+const root = createRoot(document.getElementById('root'));
+root.render(<JungleGame />);
+
+export default JungleGame;
