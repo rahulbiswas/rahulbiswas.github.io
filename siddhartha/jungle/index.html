@@ -10,7 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel" src="game.js"></script>
+<div id="root"></div>
+<script type="text/babel" data-plugins="transform-modules-umd" src="components.js"></script>
+<script type="text/babel" data-plugins="transform-modules-umd" src="game.js"></script>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<JungleGame />);
+</script>
 </body>
 </html>
