@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #root {
+            width: 100%;
+            height: 100%;
+        }
+        .game-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .game-content {
+            position: relative;
+            aspect-ratio: 100/67;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @media (min-aspect-ratio: 100/67) {
+            .game-content {
+                height: 100%;
+                width: auto;
+            }
+        }
+        @media (max-aspect-ratio: 100/67) {
+            .game-content {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .game-content svg, .game-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Constants for click areas
+        const DRAWING_WIDTH = 100;
+        const DRAWING_HEIGHT = 67;
+        const HOME_LOCAL_X_START = 4;
+        const HOME_LOCAL_X_END = 37;
+        const HOME_LOCAL_Y_START = 13;
+        const HOME_LOCAL_Y_END = 29;
+        const HOME_RULES_X_START = 62;
+        const HOME_RULES_X_END = 95;
+        const HOME_RULES_Y_START = 23;
+        const HOME_RULES_Y_END = 38;
+        const BACK_X_START = 3;
+        const BACK_X_END = 20;
+        const BACK_Y_START = 2;
+        const BACK_Y_END = 13;
+        const NEXT_X_START = 80;
+        const NEXT_X_END = 100;
+        const NEXT_Y_START = 0;
+        const NEXT_Y_END = 10;
+
+        const ruleScreens = [
+            'agilityrules',
+            'eatinganimals',
+            'howtowin',
+            'jumpingoverwater',
+            'ratsarespecial',
+            'traps'
+        ];
+
+        const HomeMenu = () => (
+            <svg viewBox="0 0 100 67">
+                <rect width="100" height="67" fill="#87CEEB"/>
+                <text x="50" y="12" fill="black" fontSize="9" fontFamily="Impact, Arial Black, sans-serif" textAnchor="middle">
+                    Dou Shou Qi
+                </text>
+                <g transform="translate(4, 13)">
+                    <rect width="33" height="16" rx="2" fill="white" stroke="black" strokeWidth="0.5"/>
+                    <text x="16.5" y="11" fill="black" fontSize="7" fontFamily="Impact, Arial Black, sans-serif" textAnchor="middle">
+                        Local
+                    </text>
+                </g>
+                <g transform="translate(62, 23)">
+                    <rect width="33" height="15" rx="2" fill="white" stroke="black" strokeWidth="0.5"/>
+                    <text x="16.5" y="10" fill="black" fontSize="7" fontFamily="Impact, Arial Black, sans-serif" textAnchor="middle">
+                        Rules
+                    </text>
+                </g>
+            </svg>
+        );
+
+        function JungleGame() {
+            const [currentWindow, setCurrentWindow] = React.useState('home');
+            const contentRef = React.useRef(null);
+
+            const handleClick = (e) => {
+                if (!contentRef.current) return;
+                
+                const rect = contentRef.current.getBoundingClientRect();
+                const clickX = (e.clientX - rect.left) * DRAWING_WIDTH / rect.width;
+                const clickY = (e.clientY - rect.top) * DRAWING_HEIGHT / rect.height;
+
+                console.log('Click coordinates:', clickX, clickY);
+
+                if (currentWindow === 'home') {
+                    if (clickX > HOME_LOCAL_X_START && 
+                        clickX < HOME_LOCAL_X_END &&
+                        clickY > HOME_LOCAL_Y_START && 
+                        clickY < HOME_LOCAL_Y_END) {
+                        setCurrentWindow('game');
+                    }
+                    else if (clickX > HOME_RULES_X_START &&
+                        clickX < HOME_RULES_X_END &&
+                        clickY > HOME_RULES_Y_START &&
+                        clickY < HOME_RULES_Y_END) {
+                        setCurrentWindow('agilityrules');
+                    }
+                }
+                else if (ruleScreens.includes(currentWindow)) {
+                    // Back button
+                    if (clickX > BACK_X_START &&
+                        clickX < BACK_X_END &&
+                        clickY > BACK_Y_START &&
+                        clickY < BACK_Y_END) {
+                        setCurrentWindow('home');
+                    }
+                    // Next button
+                    else if (currentWindow !== 'traps' &&
+                        clickX > NEXT_X_START &&
+                        clickX < NEXT_X_END &&
+                        clickY > NEXT_Y_START &&
+                        clickY < NEXT_Y_END) {
+                        const currentIndex = ruleScreens.indexOf(currentWindow);
+                        setCurrentWindow(ruleScreens[currentIndex + 1]);
+                    }
+                }
+            };
+
+            return (
+                <div className="game-container">
+                    <div 
+                        ref={contentRef}
+                        className="game-content"
+                        onClick={handleClick}
+                    >
+                        {currentWindow === 'home' && <HomeMenu />}
+                        {ruleScreens.includes(currentWindow) && (
+                            <img 
+                                src={`images/${currentWindow}.png`}
+                                alt={`${currentWindow} rules`}
+                            />
+                        )}
+                        {currentWindow === 'game' && (
+                            <div style={{color: 'white', padding: '20px'}}>
+                                Game Board (Coming Soon)
+                                <br />
+                                <button onClick={() => setCurrentWindow('home')}>
+                                    Back to Home
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<JungleGame />);
+    </script>
+</body>
+</html>
