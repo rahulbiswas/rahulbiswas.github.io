@@ -114,7 +114,6 @@ const TicTacToe = () => {
                 className={squareClass}
                 onClick={() => handleClick(index)}
                 disabled={board[index] || winner || !isHumanNext}
-                aria-label={`Square ${index + 1}${value ? ` marked with ${value}` : ''}`}
             />
         );
     };
@@ -184,5 +183,3 @@ const TicTacToe = () => {
         </div>
     );
 };
-
-// export default TicTacToe;
