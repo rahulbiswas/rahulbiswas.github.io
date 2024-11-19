@@ -1,12 +1,12 @@
 // Constants for click areas
-const HOME_LOCAL_X_START = 4;
-const HOME_LOCAL_X_END = 37;
-const HOME_LOCAL_Y_START = 13;
-const HOME_LOCAL_Y_END = 29;
-const HOME_RULES_X_START = 62;
-const HOME_RULES_X_END = 95;
-const HOME_RULES_Y_START = 23;
-const HOME_RULES_Y_END = 38;
+const HOME_LOCAL_X_START = 35; // -15 + 50 (center)
+const HOME_LOCAL_X_END = 65;   // +15 + 50 (center)
+const HOME_LOCAL_Y_START = 29; // -6 + 35 (center)
+const HOME_LOCAL_Y_END = 41;   // +6 + 35 (center)
+const HOME_RULES_X_START = 35; // -15 + 50 (center)
+const HOME_RULES_X_END = 65;   // +15 + 50 (center)
+const HOME_RULES_Y_START = 44; // -6 + 50 (center)
+const HOME_RULES_Y_END = 56;   // +6 + 50 (center)
 const BACK_X_START = 3;
 const BACK_X_END = 20;
 const BACK_Y_START = 2;
