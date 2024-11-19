@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { HomeMenu, GameBoard } from './components';
+import HomeMenu from './HomeMenu';
+import GameBoard from './GameBoard';
+import { isValidMove, initialPieces } from './gameLogic';
 
 // Constants for click areas
 const HOME_LOCAL_X_START = 35; // -15 + 50 (center)
@@ -35,26 +37,6 @@ const ruleScreens = [
     'traps'
 ];
 
-// Initial piece setup
-const initialPieces = {
-    "0_0": { "player": 0, "animal": 7 }, // Lion
-    "6_0": { "player": 0, "animal": 6 }, // Tiger
-    "1_1": { "player": 0, "animal": 4 },
-    "5_1": { "player": 0, "animal": 2 },
-    "0_2": { "player": 0, "animal": 1 }, // Rat
-    "2_2": { "player": 0, "animal": 5 },
-    "4_2": { "player": 0, "animal": 3 },
-    "6_2": { "player": 0, "animal": 8 }, // Elephant
-    "6_8": { "player": 1, "animal": 7 },
-    "0_8": { "player": 1, "animal": 6 },
-    "5_7": { "player": 1, "animal": 4 },
-    "1_7": { "player": 1, "animal": 2 },
-    "6_6": { "player": 1, "animal": 1 },
-    "4_6": { "player": 1, "animal": 5 },
-    "2_6": { "player": 1, "animal": 3 },
-    "0_6": { "player": 1, "animal": 8 }
-};
-
 function JungleGame() {
     const [currentWindow, setCurrentWindow] = useState('home');
     const [pieces, setPieces] = useState(initialPieces);
@@ -71,7 +53,15 @@ function JungleGame() {
     };
 
     const handleMove = (firstKey, secondKey) => {
+        const [fromX, fromY] = firstKey.split('_');
+        const [toX, toY] = secondKey.split('_');
         const movingPiece = pieces[firstKey];
+
+        if (!isValidMove(fromX, fromY, toX, toY, pieces, movingPiece)) {
+            setIsFirstClick(true);
+            return;
+        }
+
         setMovedPiece([firstKey.split('_'), secondKey.split('_')]);
         setPieces(prev => {
             const newPieces = { ...prev };
