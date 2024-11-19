@@ -121,15 +121,14 @@ window.HomeMenu = () => (
 
 window.GameBoard = ({ turn, pieces, movedPiece }) => (
     <svg viewBox="0 0 100 67">
-        {/* Background */}
-        <rect width="100" height="67" fill="#87CEEB"/>
-
-        {/* Turn indicator and board */}
-        <image
-            href={`images/menus_${turn === 1 ? 'red' : 'blue'}.png`}
+        {/* Background with player color */}
+        <rect
             width="100"
             height="67"
+            fill={turn === 1 ? "#C25B5B" : "#87CEEB"}
         />
+
+        {/* Game board */}
         <image
             href="images/menus_game.png"
             width="100"
