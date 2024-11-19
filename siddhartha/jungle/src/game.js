@@ -47,9 +47,19 @@ function JungleGame() {
     const contentRef = useRef(null);
 
     const getClickKey = (clickX, clickY) => {
-        const row = Math.floor((clickX - BOARD_UPPER_LEFT_X) / BOARD_SQUARE_WIDTH);
-        const column = Math.floor((clickY - BOARD_UPPER_LEFT_Y) / BOARD_SQUARE_HEIGHT);
-        return `${row}_${column}`;
+        // Adjust coordinates relative to board origin
+        const boardX = clickX - BOARD_UPPER_LEFT_X;
+        const boardY = clickY - BOARD_UPPER_LEFT_Y;
+
+        // Calculate grid position
+        const col = Math.floor(boardY / BOARD_SQUARE_HEIGHT);  // Swapped X and Y
+        const row = Math.floor(boardX / BOARD_SQUARE_WIDTH);   // Swapped X and Y
+
+        // Verify the click is within bounds
+        if (row >= 0 && row < 7 && col >= 0 && col < 9) {
+            return `${row}_${col}`;
+        }
+        return null;
     };
 
     const handleMove = (firstKey, secondKey) => {
@@ -59,6 +69,7 @@ function JungleGame() {
 
         if (!isValidMove(fromX, fromY, toX, toY, pieces, movingPiece)) {
             setIsFirstClick(true);
+            setFirstClickKey(null);  // Clear selection on invalid move
             return;
         }
 
@@ -70,6 +81,7 @@ function JungleGame() {
             return newPieces;
         });
         setIsFirstClick(true);
+        setFirstClickKey(null);  // Clear selection after successful move
         setTurn(prev => 1 - prev);
     };
 
@@ -87,6 +99,8 @@ function JungleGame() {
 
         const clickKey = getClickKey(clickX, clickY);
 
+        if (!clickKey) return; // Exit if click is outside board
+
         if (isFirstClick) {
             if (!pieces[clickKey]) return;
             const player = pieces[clickKey].player;
@@ -95,6 +109,7 @@ function JungleGame() {
             setIsFirstClick(false);
         } else {
             if (firstClickKey === clickKey) {
+                setFirstClickKey(null);  // Clear selection when clicking same piece
                 setIsFirstClick(true);
                 return;
             }
@@ -167,6 +182,7 @@ function JungleGame() {
                         turn={turn}
                         pieces={pieces}
                         movedPiece={movedPiece}
+                        selectedPiece={firstClickKey}
                     />
                 )}
             </div>
