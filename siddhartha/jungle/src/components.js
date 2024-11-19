@@ -1,14 +1,16 @@
-// Constants for layout
-const DRAWING_WIDTH = 100;
-const DRAWING_HEIGHT = 67;
-const BOARD_UPPER_LEFT_X = 20.7;
-const BOARD_UPPER_LEFT_Y = 3;
-const BOARD_SQUARE_WIDTH = 8.6;
-const BOARD_SQUARE_HEIGHT = 6.82;
-const PIECE_SIZE = 6.5;
-const POTENTIAL_MOVE_LENGTH = 2;
+import React from 'react';
 
-window.HomeMenu = () => (
+// Constants for layout
+export const DRAWING_WIDTH = 100;
+export const DRAWING_HEIGHT = 67;
+export const BOARD_UPPER_LEFT_X = 20.7;
+export const BOARD_UPPER_LEFT_Y = 3;
+export const BOARD_SQUARE_WIDTH = 8.6;
+export const BOARD_SQUARE_HEIGHT = 6.82;
+export const PIECE_SIZE = 6.5;
+export const POTENTIAL_MOVE_LENGTH = 2;
+
+export const HomeMenu = () => (
     <svg viewBox="0 0 100 67">
         {/* Background with gradient */}
         <defs>
@@ -119,7 +121,7 @@ window.HomeMenu = () => (
     </svg>
 );
 
-window.GameBoard = ({ turn, pieces, movedPiece }) => (
+export const GameBoard = ({ turn, pieces, movedPiece }) => (
     <svg viewBox="0 0 100 67">
         {/* Background with player color */}
         <rect
