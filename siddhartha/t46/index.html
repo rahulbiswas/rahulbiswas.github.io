@@ -1,0 +1,91 @@
+import React from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+
+const UniversityRankings = () => {
+  const universities = [
+    {rank: 1, name: "Princeton University"},
+    {rank: 2, name: "Massachusetts Institute of Technology"},
+    {rank: 3, name: "Harvard University"},
+    {rank: 4, name: "Stanford University"},
+    {rank: 5, name: "Yale University"},
+    {rank: 6, name: "California Institute of Technology"},
+    {rank: 6, name: "Duke University"},
+    {rank: 6, name: "Johns Hopkins University"},
+    {rank: 6, name: "Northwestern University"},
+    {rank: 10, name: "University of Pennsylvania"},
+    {rank: 11, name: "Cornell University"},
+    {rank: 11, name: "University of Chicago"},
+    {rank: 13, name: "Brown University"},
+    {rank: 13, name: "Columbia University"},
+    {rank: 15, name: "Dartmouth College"},
+    {rank: 15, name: "University of California, Los Angeles"},
+    {rank: 17, name: "University of California, Berkeley"},
+    {rank: 18, name: "Rice University"},
+    {rank: 18, name: "University of Notre Dame"},
+    {rank: 18, name: "Vanderbilt University"},
+    {rank: 21, name: "Carnegie Mellon University"},
+    {rank: 21, name: "University of Michigan"},
+    {rank: 21, name: "Washington University in St. Louis"},
+    {rank: 24, name: "Emory University"},
+    {rank: 24, name: "Georgetown University"},
+    {rank: 25, name: "University of Virginia"},
+    {rank: 27, name: "University of North Carolina, Chapel Hill"},
+    {rank: 27, name: "University of Southern California"},
+    {rank: 29, name: "University of California, San Diego"},
+    {rank: 30, name: "New York University"},
+    {rank: 30, name: "University of Florida"},
+    {rank: 30, name: "University of Texas at Austin"},
+    {rank: 33, name: "Georgia Institute of Technology"},
+    {rank: 33, name: "University of California, Davis"},
+    {rank: 33, name: "University of California, Irvine"},
+    {rank: 33, name: "University of Illinois Urbana-Champaign"},
+    {rank: 37, name: "Boston College"},
+    {rank: 37, name: "Tufts University"},
+    {rank: 39, name: "University of California, Santa Barbara"},
+    {rank: 39, name: "University of Wisconsin-Madison"},
+    {rank: 41, name: "Boston University"},
+    {rank: 41, name: "Ohio State University"},
+    {rank: 41, name: "Rutgers University"},
+    {rank: 44, name: "University of Maryland"},
+    {rank: 44, name: "University of Rochester"},
+    {rank: 46, name: "Lehigh University"},
+    {rank: 46, name: "Purdue University"},
+    {rank: 46, name: "University of Georgia"},
+    {rank: 46, name: "University of Washington"},
+    {rank: 46, name: "Wake Forest University"}
+  ];
+
+  return (
+    <Card className="w-full max-w-3xl">
+      <CardHeader>
+        <CardTitle className="text-2xl font-bold text-center">
+          2024 National University Rankings
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {universities.map((uni, index) => (
+            <div 
+              key={index}
+              className={`p-4 rounded-lg border ${
+                uni.rank <= 10 ? 'bg-blue-50' :
+                uni.rank <= 20 ? 'bg-blue-25' : 'bg-white'
+              }`}
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-lg font-bold w-8 text-blue-600">
+                  {uni.rank}
+                </span>
+                <span className="text-gray-800">
+                  {uni.name}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default UniversityRankings;
