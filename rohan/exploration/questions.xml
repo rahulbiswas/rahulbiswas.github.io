@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>The Age of Exploration took place during which time period?</prompt>
+        <options>
+            <option letter="a">1200s to 1400s</option>
+            <option letter="b">1400s to 1600s</option>
+            <option letter="c">1600s to 1800s</option>
+            <option letter="d">1800s to 2000s</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Age of Exploration occurred from the 1400s to the 1600s, also known as the Age of Discovery.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Which European country was the first to begin exploring in the early 1400s?</prompt>
+        <options>
+            <option letter="a">Spain</option>
+            <option letter="b">England</option>
+            <option letter="c">Portugal</option>
+            <option letter="d">France</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Portugal began exploring in the early 1400s under Prince Henry the Navigator.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>Who was responsible for directing early Portuguese exploration?</prompt>
+        <options>
+            <option letter="a">Christopher Columbus</option>
+            <option letter="b">Prince Henry the Navigator</option>
+            <option letter="c">John Cabot</option>
+            <option letter="d">Vasco da Gama</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Prince Henry the Navigator directed early Portuguese exploration along the African coast.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What new type of ship did the Portuguese develop for exploration?</prompt>
+        <options>
+            <option letter="a">Galleon</option>
+            <option letter="b">Frigate</option>
+            <option letter="c">Caravel</option>
+            <option letter="d">Duyfken</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Portuguese developed the caravel, which was faster and easier to sail than older ships.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>The Treaty of Tordesillas was signed between which two countries?</prompt>
+        <options>
+            <option letter="a">England and France</option>
+            <option letter="b">Portugal and Spain</option>
+            <option letter="c">Holland and England</option>
+            <option letter="d">France and Spain</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Treaty of Tordesillas was signed between Portugal and Spain (Castile) in 1494.</explanation>
+    </question>
+
+    <question number="6">
+        <prompt>What was the purpose of the astrolabe?</prompt>
+        <options>
+            <option letter="a">To measure wind speed</option>
+            <option letter="b">To measure latitude</option>
+            <option letter="c">To measure depth</option>
+            <option letter="d">To measure time</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The astrolabe was used to measure the latitude of a ship at sea.</explanation>
+    </question>
+
+    <question number="7">
+        <prompt>What was one of the main reasons Europeans wanted to trade with Asia?</prompt>
+        <options>
+            <option letter="a">For spices</option>
+            <option letter="b">For weapons</option>
+            <option letter="c">For labor</option>
+            <option letter="d">For gold</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Spices were highly valued and were one of the main reasons Europeans wanted to trade with Asia.</explanation>
+    </question>
+
+    <question number="8">
+        <prompt>What is globalization?</prompt>
+        <options>
+            <option letter="a">The process of making maps</option>
+            <option letter="b">The process of different parts of the world becoming more connected</option>
+            <option letter="c">The process of creating global warming</option>
+            <option letter="d">The process of creating new countries</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Globalization is when different parts of the world become more connected through the movement of people, ideas, and goods.</explanation>
+    </question>
+
+    <question number="9">
+        <prompt>What does the term "Indigenous" mean?</prompt>
+        <options>
+            <option letter="a">Foreign or exotic</option>
+            <option letter="b">Native, local, original, or first</option>
+            <option letter="c">Nomadic or wandering</option>
+            <option letter="d">New or recent</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Indigenous means "native, local, original, or first" and refers to the first people to live in a place.</explanation>
+    </question>
+
+    <question number="10">
+        <prompt>What was the Columbian Exchange?</prompt>
+        <options>
+            <option letter="a">A trade agreement between Columbus and Native Americans</option>
+            <option letter="b">The exchange of diseases, plants, animals, and humans between the Old and New Worlds</option>
+            <option letter="c">A monetary system established by Columbus</option>
+            <option letter="d">A political alliance between European nations</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Columbian Exchange was the exchange of diseases, plants, animals, and humans between the Old World and the New World.</explanation>
+    </question>
+
+    <question number="11">
+        <prompt>Which explorer's voyage in 1492 was sponsored by Spain?</prompt>
+        <options>
+            <option letter="a">John Cabot</option>
+            <option letter="b">Vasco da Gama</option>
+            <option letter="c">Christopher Columbus</option>
+            <option letter="d">Prince Henry</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Christopher Columbus's 1492 voyage was sponsored by the Crown of Castile (Spain).</explanation>
+    </question>
+
+    <question number="12">
+        <prompt>What was mercantilism?</prompt>
+        <options>
+            <option letter="a">A type of ship</option>
+            <option letter="b">An economic philosophy emphasizing self-sufficiency and exports</option>
+            <option letter="c">A navigation tool</option>
+            <option letter="d">A type of spice trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Mercantilism was an economic philosophy that emphasized national self-sufficiency and having more exports than imports.</explanation>
+    </question>
+
+    <question number="13">
+        <prompt>Which of these crops was brought from the New World to the Old World?</prompt>
+        <options>
+            <option letter="a">Wheat</option>
+            <option letter="b">Rice</option>
+            <option letter="c">Potatoes</option>
+            <option letter="d">Bananas</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Potatoes were among the crops brought from the New World (Americas) to the Old World.</explanation>
+    </question>
+
+    <question number="14">
+        <prompt>What was the primary purpose of colonization?</prompt>
+        <options>
+            <option letter="a">Cultural exchange</option>
+            <option letter="b">Scientific research</option>
+            <option letter="c">Weather monitoring</option>
+            <option letter="d">Economic gain and territorial expansion</option>
+        </options>
+        <answer>d</answer>
+        <explanation>The primary purpose of colonization was economic gain and territorial expansion, including access to raw materials and precious metals.</explanation>
+    </question>
+
+    <question number="15">
+        <prompt>Which of these animals was brought from the Old World to the New World?</prompt>
+        <options>
+            <option letter="a">Llamas</option>
+            <option letter="b">Horses</option>
+            <option letter="c">Turkeys</option>
+            <option letter="d">Alpacas</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Horses were among the animals brought from the Old World to the New World during the Columbian Exchange.</explanation>
+    </question>
+
+    <question number="16">
+        <prompt>What was the main use of the magnetic compass during exploration?</prompt>
+        <options>
+            <option letter="a">To measure time</option>
+            <option letter="b">To measure depth</option>
+            <option letter="c">To check the direction of true north</option>
+            <option letter="d">To calculate distance</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The magnetic compass was used to check the direction of true north during navigation.</explanation>
+    </question>
+
+    <question number="17">
+        <prompt>Why were spices so valuable during the Age of Exploration?</prompt>
+        <options>
+            <option letter="a">They were used as currency</option>
+            <option letter="b">They were used for building materials</option>
+            <option letter="c">They were used for flavor, medicine, and as a status symbol</option>
+            <option letter="d">They were used for fuel</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Spices were valuable because they were used to flavor food, in medicines, and were viewed as a sign of elite status.</explanation>
+    </question>
+
+    <question number="18">
+        <prompt>What was the Silk Road?</prompt>
+        <options>
+            <option letter="a">A sea route to India</option>
+            <option letter="b">Land routes connecting Europe and Asia</option>
+            <option letter="c">A trade route in the Americas</option>
+            <option letter="d">A route across Africa</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Silk Road consisted of land routes connecting Europe and Asia for trade.</explanation>
+    </question>
+
+    <question number="19">
+        <prompt>Which country sponsored John Cabot's exploration?</prompt>
+        <options>
+            <option letter="a">Spain</option>
+            <option letter="b">Portugal</option>
+            <option letter="c">France</option>
+            <option letter="d">England</option>
+        </options>
+        <answer>d</answer>
+        <explanation>England sponsored John Cabot's voyage in 1497.</explanation>
+    </question>
+
+    <question number="20">
+        <prompt>What was one major impact of European diseases on Indigenous populations?</prompt>
+        <options>
+            <option letter="a">Minimal effect</option>
+            <option letter="b">Increased population growth</option>
+            <option letter="c">Devastating loss of life</option>
+            <option letter="d">Improved immunity</option>
+        </options>
+        <answer>c</answer>
+        <explanation>European diseases caused devastating loss of life among Indigenous populations.</explanation>
+    </question>
+
+    <question number="21">
+        <prompt>Which crop was NOT brought from the New World to the Old World?</prompt>
+        <options>
+            <option letter="a">Corn</option>
+            <option letter="b">Tomatoes</option>
+            <option letter="c">Coffee</option>
+            <option letter="d">Tobacco</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Coffee was brought from the Old World to the New World, not the other way around.</explanation>
+    </question>
+
+    <question number="22">
+        <prompt>What was the primary goal of Prince Henry the Navigator?</prompt>
+        <options>
+            <option letter="a">To find new fishing grounds</option>
+            <option letter="b">To find trade routes to Asia</option>
+            <option letter="c">To establish colonies in the Americas</option>
+            <option letter="d">To map the Mediterranean</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Prince Henry's primary goal was to find new trade routes to Asia by sailing around Africa.</explanation>
+    </question>
+
+    <question number="23">
+        <prompt>What was a key feature of the caravel ship?</prompt>
+        <options>
+            <option letter="a">It was steam-powered</option>
+            <option letter="b">It was faster and easier to sail than older ships</option>
+            <option letter="c">It could sail underwater</option>
+            <option letter="d">It was powered by engines</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The caravel was faster and easier to sail than older styles of ships.</explanation>
+    </question>
+
+    <question number="24">
+        <prompt>What did the Treaty of Tordesillas establish?</prompt>
+        <options>
+            <option letter="a">Trade regulations</option>
+            <option letter="b">A division of unexplored lands between Portugal and Spain</option>
+            <option letter="c">Military alliances</option>
+            <option letter="d">Currency exchange rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Treaty of Tordesillas established a division of unexplored lands between Portugal and Spain.</explanation>
+    </question>
+
+    <question number="25">
+        <prompt>Which of these was NOT a motivation for colonization?</prompt>
+        <options>
+            <option letter="a">Wealth from raw materials</option>
+            <option letter="b">Religious expansion</option>
+            <option letter="c">Environmental protection</option>
+            <option letter="d">Military strategy</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Environmental protection was not a motivation for colonization. The main motives were wealth, land ownership, religious expansion, and military strategy.</explanation>
+    </question>
+
+    <question number="26">
+        <prompt>What impact did colonization have on Indigenous traditions?</prompt>
+        <options>
+            <option letter="a">No impact</option>
+            <option letter="b">Strengthened traditions</option>
+            <option letter="c">Disruption of traditions</option>
+            <option letter="d">Voluntary abandonment of traditions</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Colonization resulted in the disruption of Indigenous traditions.</explanation>
+    </question>
+
+    <question number="27">
+        <prompt>Which of these diseases was brought from the Old World to the New World?</prompt>
+        <options>
+            <option letter="a">Malaria</option>
+            <option letter="b">Smallpox</option>
+            <option letter="c">Yellow fever</option>
+            <option letter="d">All of the above</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Smallpox was one of the deadly diseases brought from the Old World to the New World.</explanation>
+    </question>
+
+    <question number="28">
+        <prompt>What was a key principle of mercantilism regarding trade?</prompt>
+        <options>
+            <option letter="a">Encouraging imports</option>
+            <option letter="b">Having more exports than imports</option>
+            <option letter="c">Equal trade balance</option>
+            <option letter="d">Free trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A key principle of mercantilism was having more exports than imports.</explanation>
+    </question>
+
+    <question number="29">
+        <prompt>Which crop was brought from the Old World to the New World?</prompt>
+        <options>
+            <option letter="a">Corn</option>
+            <option letter="b">Potatoes</option>
+            <option letter="c">Wheat</option>
+            <option letter="d">Chocolate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Wheat was brought from the Ol<question number="30">
+        <prompt>Which crop was NOT brought from the Old World to the New World?</prompt>
+        <options>
+            <option letter="a">Rice</option>
+            <option letter="b">Wheat</option>
+            <option letter="c">Tomatoes</option>
+            <option letter="d">Coffee</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Tomatoes were native to the New World and were brought to the Old World, not vice versa.</explanation>
+    </question>
+
+    <question number="31">
+        <prompt>What was a significant effect of improved navigation tools?</prompt>
+        <options>
+            <option letter="a">More accurate maps</option>
+            <option letter="b">Faster ships</option>
+            <option letter="c">Better weapons</option>
+            <option letter="d">Improved farming</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Improved navigation tools allowed explorers to create more accurate maps based on latitude and magnetic directions.</explanation>
+    </question>
+
+    <question number="32">
+        <prompt>What was the main purpose of slavery during the Age of Exploration?</prompt>
+        <options>
+            <option letter="a">Cultural exchange</option>
+            <option letter="b">Educational purposes</option>
+            <option letter="c">Economic gain</option>
+            <option letter="d">Military service</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The main purpose of enslaving people was to make money through forced labor.</explanation>
+    </question>
+
+    <question number="33">
+        <prompt>Which statement about slavery is true?</prompt>
+        <options>
+            <option letter="a">It started with European colonization</option>
+            <option letter="b">It existed only in Europe</option>
+            <option letter="c">It existed around the world before European colonization</option>
+            <option letter="d">It was limited to the Americas</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Slavery existed around the world before the European colonization of the Americas.</explanation>
+    </question>
+
+    <question number="34">
+        <prompt>What aspect of colonization affected military strategy?</prompt>
+        <options>
+            <option letter="a">Establishing important military locations</option>
+            <option letter="b">Training Indigenous armies</option>
+            <option letter="c">Developing new weapons</option>
+            <option letter="d">Creating peace treaties</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Establishing important military locations was one of the motives for colonization.</explanation>
+    </question>
+
+    <question number="35">
+        <prompt>What characterized the relationship between Indigenous peoples and European colonists?</prompt>
+        <options>
+            <option letter="a">Only peaceful interactions</option>
+            <option letter="b">Only violent conflicts</option>
+            <option letter="c">Both peaceful and violent interactions</option>
+            <option letter="d">No direct contact</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Indigenous groups had both peaceful and violent interactions with European colonists.</explanation>
+    </question>
+
+    <question number="36">
+        <prompt>What did self-sufficiency mean in mercantilism?</prompt>
+        <options>
+            <option letter="a">Trading with all nations</option>
+            <option letter="b">Not relying on trade with other nations</option>
+            <option letter="c">Sharing resources equally</option>
+            <option letter="d">Avoiding economic growth</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Self-sufficiency in mercantilism meant nations did not want to rely on trading with other nations to meet their needs.</explanation>
+    </question>
+
+    <question number="37">
+        <prompt>Which animals were primarily moved during the Columbian Exchange?</prompt>
+        <options>
+            <option letter="a">From New World to Old World</option>
+            <option letter="b">From Old World to New World</option>
+            <option letter="c">Equal exchange both ways</option>
+            <option letter="d">No animal exchange occurred</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Animals like cattle, pigs, and horses were primarily brought from the Old World to the New World.</explanation>
+    </question>
+
+    <question number="38">
+        <prompt>What was the significance of the line of demarcation?</prompt>
+        <options>
+            <option letter="a">It divided North and South America</option>
+            <option letter="b">It separated Portuguese and Spanish exploration zones</option>
+            <option letter="c">It marked the equator</option>
+            <option letter="d">It defined national boundaries</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The line of demarcation divided the unexplored world between Portuguese (east) and Spanish (west) zones of exploration.</explanation>
+    </question>
+
+    <question number="39">
+        <prompt>How did other European nations respond to the Treaty of Tordesillas?</prompt>
+        <options>
+            <option letter="a">They respected it completely</option>
+            <option letter="b">They ignored it</option>
+            <option letter="c">They signed similar treaties</option>
+            <option letter="d">They declared war</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Other European nations, such as England and France, ignored the land claims made by Portugal and Spain.</explanation>
+    </question>
+
+    <question number="40">
+        <prompt>What was the primary goal of John Cabot's voyage?</prompt>
+        <options>
+            <option letter="a">To find gold</option>
+            <option letter="b">To establish colonies</option>
+            <option letter="c">To find a northwestern passage to Asia</option>
+            <option letter="d">To map the Atlantic coast</option>
+        </options>
+        <answer>c</answer>
+        <explanation>John Cabot's voyage was aimed at finding a northwestern passage to Asia.</explanation>
+    </question>
+
+    <question number="41">
+        <prompt>What role did spices play in European society?</prompt>
+        <options>
+            <option letter="a">Only for preserving food</option>
+            <option letter="b">Only for medicine</option>
+            <option letter="c">Only as status symbols</option>
+            <option letter="d">Multiple roles including food, medicine, and status</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Spices were used to flavor food, in medicines, and as status symbols in European society.</explanation>
+    </question>
+
+    <question number="42">
+        <prompt>What was the main direction of human movement in the Columbian Exchange?</prompt>
+        <options>
+            <option letter="a">New World to Old World</option>
+            <option letter="b">Old World to New World</option>
+            <option letter="c">Equal exchange both ways</option>
+            <option letter="d">No human movement occurred</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The main human movement was from the Old World to the New World, primarily Europeans and enslaved Africans.</explanation>
+    </question>
+
+    <question number="43">
+        <prompt>What effect did colonization have on Indigenous lands?</prompt>
+        <options>
+            <option letter="a">No effect</option>
+            <option letter="b">Temporary occupation</option>
+            <option letter="c">Enormous loss of lands</option>
+            <option letter="d">Increased Indigenous territory</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Colonization resulted in enormous loss of lands for Indigenous peoples.</explanation>
+    </question>
+
+    <question number="44">
+        <prompt>Which was NOT a use for the astrolabe?</prompt>
+        <options>
+            <option letter="a">Measuring latitude</option>
+            <option letter="b">Navigation at sea</option>
+            <option letter="c">Measuring wind speed</option>
+            <option letter="d">Determining position</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The astrolabe was not used to measure wind speed; it was primarily used for measuring latitude and navigation.</explanation>
+    </question>
+
+    <question number="45">
+        <prompt>What type of goods did Europeans primarily seek from Asia?</prompt>
+        <options>
+            <option letter="a">Textiles</option>
+            <option letter="b">Spices</option>
+            <option letter="c">Metals</option>
+            <option letter="d">Wood</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Europeans primarily sought spices from Asia, which were highly valued for various uses.</explanation>
+    </question>
+
+    <question number="46">
+        <prompt>What was a key feature of mercantilism regarding precious metals?</prompt>
+        <options>
+            <option letter="a">Giving them away</option>
+            <option letter="b">Using them only for decoration</option>
+            <option letter="c">Accumulating them</option>
+            <option letter="d">Avoiding their use</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Mercantilism emphasized the accumulation of precious metals as a measure of national wealth.</explanation>
+    </question>
+
+    <question number="47">
+        <prompt>Which region was referred to as the "New World"?</prompt>
+        <options>
+            <option letter="a">Asia</option>
+            <option letter="b">Africa</option>
+            <option letter="c">Europe</option>
+            <option letter="d">The Americas</option>
+        </options>
+        <answer>d</answer>
+        <explanation>The Americas were referred to as the "New World" by Europeans during the Age of Exploration.</explanation>
+    </question>
+
+    <question number="48">
+        <prompt>What impact did improved ship design have on exploration?</prompt>
+        <options>
+            <option letter="a">Made voyages more expensive</option>
+            <option letter="b">Made exploration more difficult</option>
+            <option letter="c">Made voyages faster and easier</option>
+            <option letter="d">Had no significant impact</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Improved ship designs like the caravel made voyages faster and easier, facilitating exploration.</explanation>
+    </question>
+
+    <question number="49">
+        <prompt>What role did religion play in colonization?</prompt>
+        <options>
+            <option letter="a">No role</option>
+            <option letter="b">Only economic purposes</option>
+            <option letter="c">Both spreading religion and seeking religious freedom</option>
+            <option letter="d">Only seeking religious freedom</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Religion played a role in colonization both for spreading religion and seeking religious freedom.</explanation>
+    </question>
+
+    <question number="50">
+        <prompt>What was the overall impact of the Age of Exploration on world history?</prompt>
+        <options>
+            <option letter="a">Limited to European development</option>
+            <option letter="b">Only affected trade routes</option>
+            <option letter="c">Fundamental changes to both Old and New Worlds</option>
+            <option letter="d">Temporary changes that were quickly reversed</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Age of Exploration led to fundamental changes in both the Old and New Worlds, setting the stage for the modern global economy and society.</explanation>
+    </question>
+</quiz>
