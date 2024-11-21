@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #fff0f5; /* Light pink background */
+}
+
+:root {
+    --game-size: 70;  /* Percentage as a number */
+}
+
+.game-grid {
+    background-image: url('board.svg?v=3');
+    width: min(calc(var(--game-size) * 1vw), calc(var(--game-size) * 1vh));
+    height: min(calc(var(--game-size) * 1vw), calc(var(--game-size) * 1vh));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.square.x-mark::after,
+.square.o-mark::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.square.x-mark::after {
+    background-image: url('x-piece.svg?v=3');
+}
+
+.square.o-mark::after {
+    background-image: url('o-piece.svg?v=3');
+}
+
+.winning-line {
+    position: absolute;
+    background: #ff69b4; /* Hot pink for winning line */
+    height: 4px;
+    transform-origin: left center;
+}
+
+:root {
+    --edge-margin: 0%;
+    --first-line: 16%;
+    --second-line: 50%;
+    --third-line: 84%;
+    --line-width: 100%;
+}
+
+/* Horizontal lines */
+.winning-line.h0 {
+    top: var(--first-line);
+    left: var(--edge-margin);
+    width: var(--line-width);
+}
+.winning-line.h1 {
+    top: var(--second-line);
+    left: var(--edge-margin);
+    width: var(--line-width);
+}
+.winning-line.h2 {
+    top: var(--third-line);
+    left: var(--edge-margin);
+    width: var(--line-width);
+}
+
+/* Vertical lines */
+.winning-line.v0 {
+    top: var(--edge-margin);
+    left: var(--first-line);
+    width: var(--line-width);
+    transform: rotate(90deg);
+}
+.winning-line.v1 {
+    top: var(--edge-margin);
+    left: var(--second-line);
+    width: var(--line-width);
+    transform: rotate(90deg);
+}
+.winning-line.v2 {
+    top: var(--edge-margin);
+    left: var(--third-line);
+    width: var(--line-width);
+    transform: rotate(90deg);
+}
+
+/* Diagonal lines */
+.winning-line.d0 { /* top-left to bottom-right */
+    top: 35px;
+    left: 35px;
+    width: 600px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.winning-line.d1 { /* top-right to bottom-left */
+    top: 35px;
+    right: 35px;
+    width: 600px;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    margin: 0 auto;
+}
+
+.status-text {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #db7093; /* Pink-ish text color */
+    margin-bottom: 2rem;
+}
+
+.reset-button {
+    background: #ffb6c1; /* Light pink button */
+    color: #c71585; /* Dark pink text */
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    width: 200px;
+    margin-top: 2rem;
+}
+
+.reset-button:hover {
+    background: #ffc0cb; /* Lighter pink on hover */
+}
+
+/* Utility classes */
+.min-h-screen { min-height: 100vh; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.p-4 { padding: 1rem; }

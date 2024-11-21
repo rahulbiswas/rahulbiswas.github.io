@@ -1,0 +1,38 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="paper-texture-x" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="1" />
+            <feColorMatrix type="saturate" values="0.1" />
+            <feBlend mode="multiply" in="SourceGraphic" />
+        </filter>
+        <!-- Create a clipping path using the wobbly path -->
+        <clipPath id="wobbly-clip">
+            <path d="M60 10
+                     C80 10, 100 30, 110 60
+                     C115 80, 100 100, 60 110
+                     C30 115, 10 90, 10 60
+                     C5 30, 40 10, 60 10"/>
+        </clipPath>
+    </defs>
+
+    <rect x="0" y="0" width="120" height="120" fill="transparent"/>
+
+    <!-- Background circle with texture, clipped to wobbly shape -->
+    <g clip-path="url(#wobbly-clip)">
+        <circle cx="60" cy="60" r="55" fill="#ff99cc" filter="url(#paper-texture-x)"/>
+    </g>
+
+    <!-- Organic diagonal lines using curves -->
+    <path d="M38 42 C45 45, 75 75, 82 78" stroke="#ff4444" stroke-width="4" stroke-linecap="round"/>
+    <path d="M82 42 C75 45, 45 75, 38 78" stroke="#ff4444" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Wobbly outline -->
+    <path d="M60 10
+             C80 10, 100 30, 110 60
+             C115 80, 100 100, 60 110
+             C30 115, 10 90, 10 60
+             C5 30, 40 10, 60 10"
+          fill="none"
+          stroke="#ff99cc"
+          stroke-width="4"/>
+</svg>
