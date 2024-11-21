@@ -1,91 +1,221 @@
-import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-
-const UniversityRankings = () => {
-  const universities = [
-    {rank: 1, name: "Princeton University"},
-    {rank: 2, name: "Massachusetts Institute of Technology"},
-    {rank: 3, name: "Harvard University"},
-    {rank: 4, name: "Stanford University"},
-    {rank: 5, name: "Yale University"},
-    {rank: 6, name: "California Institute of Technology"},
-    {rank: 6, name: "Duke University"},
-    {rank: 6, name: "Johns Hopkins University"},
-    {rank: 6, name: "Northwestern University"},
-    {rank: 10, name: "University of Pennsylvania"},
-    {rank: 11, name: "Cornell University"},
-    {rank: 11, name: "University of Chicago"},
-    {rank: 13, name: "Brown University"},
-    {rank: 13, name: "Columbia University"},
-    {rank: 15, name: "Dartmouth College"},
-    {rank: 15, name: "University of California, Los Angeles"},
-    {rank: 17, name: "University of California, Berkeley"},
-    {rank: 18, name: "Rice University"},
-    {rank: 18, name: "University of Notre Dame"},
-    {rank: 18, name: "Vanderbilt University"},
-    {rank: 21, name: "Carnegie Mellon University"},
-    {rank: 21, name: "University of Michigan"},
-    {rank: 21, name: "Washington University in St. Louis"},
-    {rank: 24, name: "Emory University"},
-    {rank: 24, name: "Georgetown University"},
-    {rank: 25, name: "University of Virginia"},
-    {rank: 27, name: "University of North Carolina, Chapel Hill"},
-    {rank: 27, name: "University of Southern California"},
-    {rank: 29, name: "University of California, San Diego"},
-    {rank: 30, name: "New York University"},
-    {rank: 30, name: "University of Florida"},
-    {rank: 30, name: "University of Texas at Austin"},
-    {rank: 33, name: "Georgia Institute of Technology"},
-    {rank: 33, name: "University of California, Davis"},
-    {rank: 33, name: "University of California, Irvine"},
-    {rank: 33, name: "University of Illinois Urbana-Champaign"},
-    {rank: 37, name: "Boston College"},
-    {rank: 37, name: "Tufts University"},
-    {rank: 39, name: "University of California, Santa Barbara"},
-    {rank: 39, name: "University of Wisconsin-Madison"},
-    {rank: 41, name: "Boston University"},
-    {rank: 41, name: "Ohio State University"},
-    {rank: 41, name: "Rutgers University"},
-    {rank: 44, name: "University of Maryland"},
-    {rank: 44, name: "University of Rochester"},
-    {rank: 46, name: "Lehigh University"},
-    {rank: 46, name: "Purdue University"},
-    {rank: 46, name: "University of Georgia"},
-    {rank: 46, name: "University of Washington"},
-    {rank: 46, name: "Wake Forest University"}
-  ];
-
-  return (
-    <Card className="w-full max-w-3xl">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-center">
-          2024 National University Rankings
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {universities.map((uni, index) => (
-            <div 
-              key={index}
-              className={`p-4 rounded-lg border ${
-                uni.rank <= 10 ? 'bg-blue-50' :
-                uni.rank <= 20 ? 'bg-blue-25' : 'bg-white'
-              }`}
-            >
-              <div className="flex items-center gap-4">
-                <span className="text-lg font-bold w-8 text-blue-600">
-                  {uni.rank}
-                </span>
-                <span className="text-gray-800">
-                  {uni.name}
-                </span>
-              </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC Campus Comparison</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .school-card {
+            background: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .school-name {
+            font-weight: 600;
+        }
+        .location {
+            color: #666;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .chance {
+            background: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .details {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #444;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .detail-item {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="title">UC Campus Chances 🎯</div>
+        <div class="subtitle">Based on: 4.0 UW GPA, Harker School, USACO Silver, Math major, Private Counselor</div>
+        
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Los Angeles (#15)</div>
+                    <div class="location">📍 Los Angeles, CA</div>
+                </div>
+                <div class="chance">🎯 35%</div>
             </div>
-          ))}
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 24%</div>
+                <div class="detail-item">🦁 Mascot: Joe & Josie Bruin</div>
+                <div class="detail-item">⭐ Fun Fact: The original UCLA mascot was a cub named Billy the Bear</div>
+                <div class="detail-item">🗺️ Location: In Los Angeles, heart of Westwood</div>
+            </div>
         </div>
-      </CardContent>
-    </Card>
-  );
-};
 
-export default UniversityRankings;
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Berkeley (#17)</div>
+                    <div class="location">📍 Berkeley, CA</div>
+                </div>
+                <div class="chance">🎯 42%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 22%</div>
+                <div class="detail-item">🦁 Mascot: Oski the Bear</div>
+                <div class="detail-item">⭐ Fun Fact: The campus sits directly on top of the Hayward Fault</div>
+                <div class="detail-item">🗺️ Location: San Francisco Bay Area</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC San Diego (#29)</div>
+                    <div class="location">📍 La Jolla, CA</div>
+                </div>
+                <div class="chance">🎯 58%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 25%</div>
+                <div class="detail-item">🦁 Mascot: King Triton</div>
+                <div class="detail-item">⭐ Fun Fact: Has a secret underground tunnel system from the Cold War era</div>
+                <div class="detail-item">🗺️ Location: San Diego coastal area</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Davis (#33)</div>
+                    <div class="location">📍 Davis, CA</div>
+                </div>
+                <div class="chance">🎯 75%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 21%</div>
+                <div class="detail-item">🦁 Mascot: Gunrock the Mustang</div>
+                <div class="detail-item">⭐ Fun Fact: Home to the only university-run fire department in California</div>
+                <div class="detail-item">🗺️ Location: 15 min to Sacramento</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Irvine (#33)</div>
+                    <div class="location">📍 Irvine, CA</div>
+                </div>
+                <div class="chance">🎯 68%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 28%</div>
+                <div class="detail-item">🦁 Mascot: Peter the Anteater</div>
+                <div class="detail-item">⭐ Fun Fact: Only UC with an anteater mascot, chosen by students in 1965</div>
+                <div class="detail-item">🗺️ Location: Orange County, near LA</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Santa Barbara (#39)</div>
+                    <div class="location">📍 Santa Barbara, CA</div>
+                </div>
+                <div class="chance">🎯 62%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 18%</div>
+                <div class="detail-item">🦁 Mascot: Olé the Gaucho</div>
+                <div class="detail-item">⭐ Fun Fact: Only UC campus with its own beach</div>
+                <div class="detail-item">🗺️ Location: Coastal, 2 hours to LA</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Santa Cruz</div>
+                    <div class="location">📍 Santa Cruz, CA</div>
+                </div>
+                <div class="chance">🎯 85%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 19%</div>
+                <div class="detail-item">🦁 Mascot: Sammy the Slug</div>
+                <div class="detail-item">⭐ Fun Fact: Their mascot was selected as an anti-establishment statement</div>
+                <div class="detail-item">🗺️ Location: 1.5 hours south of San Francisco</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Riverside</div>
+                    <div class="location">📍 Riverside, CA</div>
+                </div>
+                <div class="chance">🎯 90%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 32%</div>
+                <div class="detail-item">🦁 Mascot: Scotty the Bear</div>
+                <div class="detail-item">⭐ Fun Fact: Home to the largest public collection of citrus diversity</div>
+                <div class="detail-item">🗺️ Location: 60 miles east of Los Angeles</div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="header">
+                <div>
+                    <div class="school-name">UC Merced</div>
+                    <div class="location">📍 Merced, CA</div>
+                </div>
+                <div class="chance">🎯 95%</div>
+            </div>
+            <div class="details">
+                <div class="detail-item">👩 Asian Female Students: 26%</div>
+                <div class="detail-item">🦁 Mascot: Rufus the Bobcat</div>
+                <div class="detail-item">⭐ Fun Fact: Newest UC campus, opened in 2005</div>
+                <div class="detail-item">🗺️ Location: 2 hours from San Francisco Bay Area</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
