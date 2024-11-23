@@ -12,20 +12,19 @@ const PlatformGame = () => {
     highScore: parseInt(localStorage.getItem('highScore') || '0')
   });
 
+  const initialPlatforms = [
+    { x: 50, y: 300, width: 150 },
+  ]
+
   // Start with more platforms to ensure smooth beginning
-  const [platforms, setPlatforms] = React.useState([
-    { x: 50, y: 300, width: 200 },
-    { x: 300, y: 280, width: 150 },
-    { x: 500, y: 300, width: 200 },
-    { x: 750, y: 250, width: 160 }
-  ]);
+  const [platforms, setPlatforms] = React.useState(initialPlatforms);
 
   // Adjusted platform configuration for better gameplay
   const PLATFORM_CONFIG = {
-    minWidth: 120,      // Slightly wider minimum
-    maxWidth: 200,
-    minGap: 80,        // Increased minimum gap
-    maxGap: 80,        // Increased maximum gap
+    minWidth: 150,      // Slightly wider minimum
+    maxWidth: 150,
+    minGap: 90,        // Increased minimum gap
+    maxGap: 120,        // Increased maximum gap
     minY: 200,          // Adjusted height range
     maxY: 320,          // Reduced maximum height for better jumps
     viewportBuffer: 800,
@@ -95,12 +94,7 @@ const PlatformGame = () => {
       velocityY: 0,
       isJumping: false
     });
-    setPlatforms([
-      { x: 50, y: 300, width: 200 },
-      { x: 350, y: 280, width: 150 },
-      { x: 600, y: 300, width: 180 },
-      { x: 880, y: 250, width: 160 }
-    ]);
+    setPlatforms(initialPlatforms);
     setGameState(prev => ({
       ...prev,
       score: 0,
@@ -217,7 +211,7 @@ const PlatformGame = () => {
          {platforms.map((platform, index) => (
             <div
                key={index}
-               className="absolute bg-green-700 rounded"
+               className="absolute bg-amber-700 rounded"
                style={{
                  left: `${platform.x - viewportOffset}px`,
                  top: platform.y,
