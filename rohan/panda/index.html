@@ -1,47 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Panda Peekaboo</title>
-	<style>
-canvas {
-	border: 1px dashed black;
-}
-	</style>
-
-	<script>
-		var panda = new Image();
-		panda.src = "panda.png";
-		var tree = new Image();
-		tree.src = "tree.png";
-		var showTree = 0;
-		
-window.onload = function() {
-	var canvas = document.getElementById("drawingCanvas");
-	var context = canvas.getContext("2d");
-
-	canvas.onmouseup = canvasClick;
-	
-	context.drawImage(panda, 0, 0, 1000, 667);
-};
-
-function canvasClick(e) {
-	var canvas = document.getElementById("drawingCanvas");
-	var context = canvas.getContext("2d");
-	context.clearRect(0, 0, canvas.width, canvas.height);
-	showTree = 1 - showTree
-	if (showTree == 1) {
-		context.drawImage(panda, 0, 0, 1000, 667);
-		context.drawImage(tree, 0, 0, 1000, 667);
-	} else {
-		context.drawImage(panda, 0, 0, 1000, 667);
-	}
-};
-	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Platform Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-	<canvas id="drawingCanvas" width="1000"
-	 height="667"></canvas>
+    <div id="root"></div>
+    <script type="text/babel" src="app.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(<PlatformGame />, document.getElementById('root'));
+    </script>
 </body>
 </html>
