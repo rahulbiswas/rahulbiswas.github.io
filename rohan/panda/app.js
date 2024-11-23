@@ -1,118 +1,246 @@
 const PlatformGame = () => {
-  // Game states
   const [position, setPosition] = React.useState({
+    x: 100,
     y: 200,
     velocityY: 0,
     isJumping: false
   });
 
-  // Test platforms - each platform has x, y (from top), and width
-  const platforms = [
-    { x: 50, y: 300, width: 200 },  // Starting platform (wider)
-    { x: 300, y: 250, width: 100 }, // Higher platform
-    { x: 500, y: 350, width: 150 }, // Lower platform
-    { x: 700, y: 200, width: 120 }  // Highest platform
-  ];
+  const [gameState, setGameState] = React.useState({
+    score: 0,
+    isGameOver: false,
+    highScore: parseInt(localStorage.getItem('highScore') || '0')
+  });
+
+  // Start with more platforms to ensure smooth beginning
+  const [platforms, setPlatforms] = React.useState([
+    { x: 50, y: 300, width: 200 },
+    { x: 300, y: 280, width: 150 },
+    { x: 500, y: 300, width: 200 },
+    { x: 750, y: 250, width: 160 }
+  ]);
+
+  // Adjusted platform configuration for better gameplay
+  const PLATFORM_CONFIG = {
+    minWidth: 120,      // Slightly wider minimum
+    maxWidth: 200,
+    minGap: 80,        // Increased minimum gap
+    maxGap: 80,        // Increased maximum gap
+    minY: 200,          // Adjusted height range
+    maxY: 320,          // Reduced maximum height for better jumps
+    viewportBuffer: 800,
+    heightVariation: 40 // Maximum height difference between consecutive platforms
+  };
+
+  const generatePlatform = (lastPlatformX, lastPlatformY) => {
+    const width = PLATFORM_CONFIG.minWidth +
+       Math.random() * (PLATFORM_CONFIG.maxWidth - PLATFORM_CONFIG.minWidth);
+
+    const gap = PLATFORM_CONFIG.minGap +
+       Math.random() * (PLATFORM_CONFIG.maxGap - PLATFORM_CONFIG.minGap);
+
+    // Calculate new Y position relative to the last platform
+    const minHeightDiff = -PLATFORM_CONFIG.heightVariation;
+    const maxHeightDiff = PLATFORM_CONFIG.heightVariation;
+    const heightDiff = minHeightDiff + Math.random() * (maxHeightDiff - minHeightDiff);
+
+    // Ensure new Y position stays within bounds
+    let y = Math.min(
+       Math.max(
+          lastPlatformY + heightDiff,
+          PLATFORM_CONFIG.minY
+       ),
+       PLATFORM_CONFIG.maxY
+    );
+
+    return {
+      x: lastPlatformX + gap + width/2, // Add half width for better spacing
+      y,
+      width
+    };
+  };
+
+  const updatePlatforms = React.useCallback(() => {
+    setPlatforms(currentPlatforms => {
+      // Remove platforms that are too far behind
+      const validPlatforms = currentPlatforms.filter(
+         platform => platform.x > position.x - PLATFORM_CONFIG.viewportBuffer
+      );
+
+      const lastPlatform = validPlatforms[validPlatforms.length - 1];
+      if (lastPlatform.x < position.x + PLATFORM_CONFIG.viewportBuffer) {
+        const newPlatforms = [];
+        let lastX = lastPlatform.x;
+        let lastY = lastPlatform.y;
+
+        while (lastX < position.x + PLATFORM_CONFIG.viewportBuffer + 400) {
+          const newPlatform = generatePlatform(lastX, lastY);
+          newPlatforms.push(newPlatform);
+          lastX = newPlatform.x;
+          lastY = newPlatform.y;
+        }
+
+        return [...validPlatforms, ...newPlatforms];
+      }
+
+      return validPlatforms;
+    });
+  }, [position.x]);
+
+  // Rest of the code remains the same
+  const resetGame = React.useCallback(() => {
+    setPosition({
+      x: 100,
+      y: 200,
+      velocityY: 0,
+      isJumping: false
+    });
+    setPlatforms([
+      { x: 50, y: 300, width: 200 },
+      { x: 350, y: 280, width: 150 },
+      { x: 600, y: 300, width: 180 },
+      { x: 880, y: 250, width: 160 }
+    ]);
+    setGameState(prev => ({
+      ...prev,
+      score: 0,
+      isGameOver: false
+    }));
+  }, []);
 
   const gameLoopRef = React.useRef(null);
-  
-  // Physics constants
-  const gravity = 0.5;
-  const jumpForce = -12;
+  const gravity = 0.2;
+  const jumpForce = -9;
+  const scrollSpeed = 1;
 
-  // Handle jumping
+  // Jump handler
   React.useEffect(() => {
     const handleJump = (e) => {
-      if (e.code === 'Space' && !position.isJumping) {
-        setPosition(prev => ({
-          ...prev,
-          velocityY: jumpForce,
-          isJumping: true
-        }));
+      if (e.code === 'Space') {
+        if (gameState.isGameOver) {
+          resetGame();
+        } else if (!position.isJumping) {
+          setPosition(prev => ({
+            ...prev,
+            velocityY: jumpForce,
+            isJumping: true
+          }));
+        }
       }
     };
 
     window.addEventListener('keydown', handleJump);
     return () => window.removeEventListener('keydown', handleJump);
-  }, [position.isJumping]);
+  }, [position.isJumping, gameState.isGameOver, resetGame]);
 
-  // Game loop for physics
+  // Game loop
   React.useEffect(() => {
     const gameLoop = () => {
-      setPosition(prev => {
-        // Calculate new position with gravity
-        let newY = prev.y + prev.velocityY;
-        let newVelocityY = prev.velocityY + gravity;
-        let isJumping = true;
+      if (!gameState.isGameOver) {
+        setPosition(prev => {
+          const newX = prev.x + scrollSpeed;
+          let newY = prev.y + prev.velocityY;
+          let newVelocityY = prev.velocityY + gravity;
+          let isJumping = true;
 
-        // Check platform collisions
-        platforms.forEach(platform => {
-          const pandaBottom = newY + 40; // 40 is panda height
-          const onPlatformX = 100 >= platform.x && 100 <= platform.x + platform.width;
-          
-          if (onPlatformX && 
-              pandaBottom >= platform.y && 
-              pandaBottom <= platform.y + 10 && 
-              prev.velocityY >= 0) {
-            newY = platform.y - 40;
-            newVelocityY = 0;
-            isJumping = false;
+          platforms.forEach(platform => {
+            const pandaBottom = newY + 40;
+            const relativeX = 400;
+            const platformLeft = platform.x - (newX - 400);
+
+            if (relativeX >= platformLeft &&
+               relativeX <= platformLeft + platform.width &&
+               pandaBottom >= platform.y &&
+               pandaBottom <= platform.y + 10 &&
+               prev.velocityY >= 0) {
+              newY = platform.y - 40;
+              newVelocityY = 0;
+              isJumping = false;
+            }
+          });
+
+          if (newY > 450) {
+            setGameState(prev => {
+              const newHighScore = Math.max(prev.highScore, prev.score);
+              localStorage.setItem('highScore', newHighScore.toString());
+              return {
+                ...prev,
+                isGameOver: true,
+                highScore: newHighScore
+              };
+            });
           }
+
+          return {
+            x: newX,
+            y: newY,
+            velocityY: newVelocityY,
+            isJumping
+          };
         });
 
-        // Keep panda within game bounds
-        if (newY > 400) { // Ground level
-          newY = 400;
-          newVelocityY = 0;
-          isJumping = false;
-        }
+        setGameState(prev => ({
+          ...prev,
+          score: Math.floor(position.x / 100)
+        }));
 
-        return {
-          y: newY,
-          velocityY: newVelocityY,
-          isJumping
-        };
-      });
+        updatePlatforms();
+      }
 
       gameLoopRef.current = requestAnimationFrame(gameLoop);
     };
 
     gameLoopRef.current = requestAnimationFrame(gameLoop);
     return () => cancelAnimationFrame(gameLoopRef.current);
-  }, []);
+  }, [updatePlatforms, gameState.isGameOver, position.x]);
+
+  const viewportOffset = position.x - 400;
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
-      <div className="relative w-full h-96 bg-blue-100 rounded-lg overflow-hidden border-4 border-blue-300">
-        {/* Panda - fixed X position for now */}
-        <div
-          className="absolute text-4xl transform -translate-x-1/2 -translate-y-1/2"
-          style={{ 
-            left: 100, // Fixed X position
-            top: position.y
-          }}
-        >
-          🐼
-        </div>
+     <div className="w-full max-w-4xl mx-auto p-4">
+       <div className="mb-4 text-center">
+         <span className="mr-4">Score: {gameState.score}</span>
+         <span>High Score: {gameState.highScore}</span>
+       </div>
 
-        {/* Platforms */}
-        {platforms.map((platform, index) => (
-          <div
-            key={index}
-            className="absolute bg-green-700 rounded"
+       <div className="relative w-full h-96 bg-blue-100 rounded-lg overflow-hidden border-4 border-blue-300">
+         <div
+            className="absolute text-4xl transform -translate-x-1/2 -translate-y-1/2"
             style={{
-              left: platform.x,
-              top: platform.y,
-              width: platform.width,
-              height: '10px'
+              left: 400,
+              top: position.y
             }}
-          />
-        ))}
-      </div>
+         >
+           🐼
+         </div>
 
-      <div className="mt-4 text-center text-gray-600">
-        <p>Press SPACE to jump!</p>
-      </div>
-    </div>
+         {platforms.map((platform, index) => (
+            <div
+               key={index}
+               className="absolute bg-green-700 rounded"
+               style={{
+                 left: `${platform.x - viewportOffset}px`,
+                 top: platform.y,
+                 width: platform.width,
+                 height: '10px'
+               }}
+            />
+         ))}
+
+         {gameState.isGameOver && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="text-white text-center">
+                <h2 className="text-3xl mb-4">Game Over!</h2>
+                <p className="text-xl mb-2">Score: {gameState.score}</p>
+                <p className="text-lg">Press SPACE to try again</p>
+              </div>
+            </div>
+         )}
+       </div>
+
+       <div className="mt-4 text-center text-gray-600">
+         <p>{gameState.isGameOver ? 'Press SPACE to restart!' : 'Press SPACE to jump!'}</p>
+       </div>
+     </div>
   );
 };
