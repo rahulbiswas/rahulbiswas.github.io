@@ -1,10 +1,5 @@
 const PlatformGame = () => {
-  const [position, setPosition] = React.useState({
-    x: 100,
-    y: 200,
-    velocityY: 0,
-    isJumping: false
-  });
+  const [position, setPosition] = React.useState(GAME_CONSTANTS.initialPosition);
 
   const [gameState, setGameState] = React.useState({
     score: 0,
@@ -12,56 +7,10 @@ const PlatformGame = () => {
     highScore: parseInt(localStorage.getItem('highScore') || '0')
   });
 
-  const initialPlatforms = [
-    { x: 50, y: 300, width: 150 },
-  ]
-
-  // Start with more platforms to ensure smooth beginning
-  const [platforms, setPlatforms] = React.useState(initialPlatforms);
-
-  // Adjusted platform configuration for better gameplay
-  const PLATFORM_CONFIG = {
-    minWidth: 150,      // Slightly wider minimum
-    maxWidth: 150,
-    minGap: 90,        // Increased minimum gap
-    maxGap: 120,        // Increased maximum gap
-    minY: 200,          // Adjusted height range
-    maxY: 320,          // Reduced maximum height for better jumps
-    viewportBuffer: 800,
-    heightVariation: 40 // Maximum height difference between consecutive platforms
-  };
-
-  const generatePlatform = (lastPlatformX, lastPlatformY) => {
-    const width = PLATFORM_CONFIG.minWidth +
-       Math.random() * (PLATFORM_CONFIG.maxWidth - PLATFORM_CONFIG.minWidth);
-
-    const gap = PLATFORM_CONFIG.minGap +
-       Math.random() * (PLATFORM_CONFIG.maxGap - PLATFORM_CONFIG.minGap);
-
-    // Calculate new Y position relative to the last platform
-    const minHeightDiff = -PLATFORM_CONFIG.heightVariation;
-    const maxHeightDiff = PLATFORM_CONFIG.heightVariation;
-    const heightDiff = minHeightDiff + Math.random() * (maxHeightDiff - minHeightDiff);
-
-    // Ensure new Y position stays within bounds
-    let y = Math.min(
-       Math.max(
-          lastPlatformY + heightDiff,
-          PLATFORM_CONFIG.minY
-       ),
-       PLATFORM_CONFIG.maxY
-    );
-
-    return {
-      x: lastPlatformX + gap + width/2, // Add half width for better spacing
-      y,
-      width
-    };
-  };
+  const [platforms, setPlatforms] = React.useState(GAME_CONSTANTS.initialPlatforms);
 
   const updatePlatforms = React.useCallback(() => {
     setPlatforms(currentPlatforms => {
-      // Remove platforms that are too far behind
       const validPlatforms = currentPlatforms.filter(
          platform => platform.x > position.x - PLATFORM_CONFIG.viewportBuffer
       );
@@ -86,15 +35,9 @@ const PlatformGame = () => {
     });
   }, [position.x]);
 
-  // Rest of the code remains the same
   const resetGame = React.useCallback(() => {
-    setPosition({
-      x: 100,
-      y: 200,
-      velocityY: 0,
-      isJumping: false
-    });
-    setPlatforms(initialPlatforms);
+    setPosition(GAME_CONSTANTS.initialPosition);
+    setPlatforms(GAME_CONSTANTS.initialPlatforms);
     setGameState(prev => ({
       ...prev,
       score: 0,
@@ -103,11 +46,7 @@ const PlatformGame = () => {
   }, []);
 
   const gameLoopRef = React.useRef(null);
-  const gravity = 0.2;
-  const jumpForce = -9;
-  const scrollSpeed = 1;
 
-  // Jump handler
   React.useEffect(() => {
     const handleJump = (e) => {
       if (e.code === 'Space') {
@@ -116,7 +55,7 @@ const PlatformGame = () => {
         } else if (!position.isJumping) {
           setPosition(prev => ({
             ...prev,
-            velocityY: jumpForce,
+            velocityY: GAME_CONSTANTS.jumpForce,
             isJumping: true
           }));
         }
@@ -127,14 +66,13 @@ const PlatformGame = () => {
     return () => window.removeEventListener('keydown', handleJump);
   }, [position.isJumping, gameState.isGameOver, resetGame]);
 
-  // Game loop
   React.useEffect(() => {
     const gameLoop = () => {
       if (!gameState.isGameOver) {
         setPosition(prev => {
-          const newX = prev.x + scrollSpeed;
+          const newX = prev.x + GAME_CONSTANTS.scrollSpeed;
           let newY = prev.y + prev.velocityY;
-          let newVelocityY = prev.velocityY + gravity;
+          let newVelocityY = prev.velocityY + GAME_CONSTANTS.gravity;
           let isJumping = true;
 
           platforms.forEach(platform => {
