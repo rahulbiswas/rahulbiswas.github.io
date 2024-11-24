@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Chess Tests</title>
+    <style>
+        .pass { color: green; }
+        .fail { color: red; }
+        .suite { margin-left: 20px; }
+        .test { 
+            margin-left: 40px; 
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .setup {
+            background: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="testResults"></div>
+    <script src="board_constants.js"></script>
+    <script src="ui_constants.js"></script>
+    <script src="game_setup.js"></script>
+    <script src="move_validation.js"></script>
+    <script src="water_rules.js"></script>
+    <script src="piece_moves.js"></script>
+    <script src="test_framework.js"></script>
+    <script src="move_validation_tests.js"></script>
+</body>
+</html>
