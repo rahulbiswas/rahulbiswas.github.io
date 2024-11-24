@@ -3,50 +3,16 @@ class GameManager {
     const boardX = clickX - BOARD_UPPER_LEFT_X
     const boardY = clickY - BOARD_UPPER_LEFT_Y
 
-    const col = Math.floor(boardY / BOARD_SQUARE_HEIGHT)
-    const row = Math.floor(boardX / BOARD_SQUARE_WIDTH)
+    const col = Math.floor(boardX / BOARD_SQUARE_WIDTH)
+    const row = Math.floor(boardY / BOARD_SQUARE_HEIGHT)
 
-    if (row >= 0 && row < 7 && col >= 0 && col < 9) {
-      return `${row}_${col}`
+    if (col >= 0 && col < 7 && row >= 0 && row < 9) {
+      return `${col}_${row}`
     }
     return null
   }
 
-  handleMove(firstKey, secondKey, pieces, callbacks) {
-    const [fromX, fromY] = firstKey.split('_')
-    const [toX, toY] = secondKey.split('_')
-    const movingPiece = pieces[firstKey]
-
-    if (!isValidMove(fromX, fromY, toX, toY, pieces, movingPiece)) {
-      callbacks.setIsFirstClick(true)
-      callbacks.setFirstClickKey(null)
-      return
-    }
-
-    callbacks.setMovedPiece([firstKey.split('_'), secondKey.split('_')])
-    callbacks.setPieces(prev => {
-      const newPieces = {...prev}
-      delete newPieces[firstKey]
-      newPieces[secondKey] = movingPiece
-
-      const winner = checkWinCondition(newPieces)
-      if (winner !== null) {
-        callbacks.setWinner(winner)
-      }
-
-      return newPieces
-    })
-    callbacks.setIsFirstClick(true)
-    callbacks.setFirstClickKey(null)
-    callbacks.setTurn(prev => 1 - prev)
-  }
-
-  handleGameClick(clickX, clickY, gameState, callbacks) {
-    if (gameState.winner !== null) {
-      callbacks.resetGame()
-      return
-    }
-
+  handlePlayerClick(clickX, clickY, gameState, callbacks) {
     if (clickX < BOARD_UPPER_LEFT_X && clickY < 13) {
       callbacks.setCurrentWindow('home')
       callbacks.resetGame()
@@ -56,20 +22,49 @@ class GameManager {
     const clickKey = this.getClickKey(clickX, clickY)
     if (!clickKey) return
 
-    if (gameState.isFirstClick) {
+    if (!gameState.selectedPieceKey) {
       if (!gameState.pieces[clickKey]) return
-      const player = gameState.pieces[clickKey].player
-      if (player !== gameState.turn) return
-      callbacks.setFirstClickKey(clickKey)
-      callbacks.setIsFirstClick(false)
+      if (gameState.pieces[clickKey].player !== 1) return
+      callbacks.setSelectedPieceKey(clickKey)
     } else {
-      if (gameState.firstClickKey === clickKey) {
-        callbacks.setFirstClickKey(null)
-        callbacks.setIsFirstClick(true)
+      if (gameState.selectedPieceKey === clickKey) {
+        callbacks.setSelectedPieceKey(null)
         return
       }
-      this.handleMove(gameState.firstClickKey, clickKey, gameState.pieces, callbacks)
+
+      this.handleMove(
+        gameState.selectedPieceKey,
+        clickKey,
+        gameState.pieces,
+        callbacks,
+        () => callbacks.setIsPlayerTurn(false)
+      )
     }
+  }
+
+  handleMove(fromKey, toKey, pieces, callbacks, onMoveComplete) {
+    const movingPiece = pieces[fromKey]
+    if (!isValidMove(...fromKey.split('_'), ...toKey.split('_'), pieces, movingPiece)) {
+      callbacks.setSelectedPieceKey(null)
+      return
+    }
+
+    callbacks.setMovedPiece([fromKey.split('_'), toKey.split('_')])
+    callbacks.setPieces(prev => {
+      const newPieces = {...prev}
+      delete newPieces[fromKey]
+      newPieces[toKey] = movingPiece
+
+      const winner = checkWinCondition(newPieces)
+      if (winner !== null) {
+        callbacks.setWinner(winner)
+      }
+
+      return newPieces
+    })
+
+    callbacks.setSelectedPieceKey(null)
+    if (onMoveComplete) onMoveComplete()
   }
 }
 

@@ -1,20 +1,36 @@
 const JungleGame = () => {
   const [currentWindow, setCurrentWindow] = React.useState('home')
   const [pieces, setPieces] = React.useState(initialPieces)
-  const [turn, setTurn] = React.useState(1)
-  const [isFirstClick, setIsFirstClick] = React.useState(true)
-  const [firstClickKey, setFirstClickKey] = React.useState(null)
+  const [selectedPieceKey, setSelectedPieceKey] = React.useState(null)
   const [movedPiece, setMovedPiece] = React.useState(['0'])
   const [winner, setWinner] = React.useState(null)
+  const [isPlayerTurn, setIsPlayerTurn] = React.useState(true)
   const contentRef = React.useRef(null)
+
+  React.useEffect(() => {
+    if (!isPlayerTurn && !winner) {
+      const timeoutId = setTimeout(() => {
+        const aiMove = window.aiPlayer.getRandomMove(pieces, 0)
+        if (aiMove) {
+          gameManager.handleMove(
+            aiMove.from,
+            aiMove.to,
+            pieces,
+            {setPieces, setSelectedPieceKey, setMovedPiece, setWinner}
+          )
+          setIsPlayerTurn(true)
+        }
+      }, 500)
+      return () => clearTimeout(timeoutId)
+    }
+  }, [pieces, winner, isPlayerTurn])
 
   const resetGame = () => {
     setPieces(initialPieces)
-    setTurn(1)
-    setIsFirstClick(true)
-    setFirstClickKey(null)
+    setSelectedPieceKey(null)
     setMovedPiece(['0'])
     setWinner(null)
+    setIsPlayerTurn(true)
   }
 
   const handleClick = (e) => {
@@ -25,43 +41,43 @@ const JungleGame = () => {
     const clickY = (e.clientY - rect.top) * 67 / rect.height
 
     if (currentWindow === 'game') {
-      gameManager.handleGameClick(
+      if (!isPlayerTurn || winner !== null) return
+
+      gameManager.handlePlayerClick(
         clickX,
         clickY,
-        {pieces, turn, isFirstClick, firstClickKey, winner},
-        {setPieces, setTurn, setIsFirstClick, setFirstClickKey, setMovedPiece, setCurrentWindow, setWinner, resetGame}
+        {pieces, selectedPieceKey},
+        {setPieces, setSelectedPieceKey, setMovedPiece, setCurrentWindow, setWinner, setIsPlayerTurn}
       )
     } else {
       navigationManager.handleMenuNavigation(clickX, clickY, currentWindow, setCurrentWindow)
     }
   }
 
-  return (
-    React.createElement('div', {className: 'game-container'},
-      React.createElement('div', {
-          ref: contentRef,
-          className: 'game-content',
-          onClick: handleClick
-        },
-        currentWindow === 'home' && React.createElement(HomeMenu),
-        window.ruleScreens?.includes(currentWindow) &&
-        React.createElement('img', {
-          src: `images/${currentWindow}.png`,
-          alt: `${currentWindow} rules`
-        }),
-        currentWindow === 'game' && (
-          winner !== null
-            ? React.createElement(VictoryScreen, {
-              winner: winner,
-              onPlayAgain: resetGame
-            })
-            : React.createElement(GameBoard, {
-              turn: turn,
-              pieces: pieces,
-              movedPiece: movedPiece,
-              selectedPiece: firstClickKey
-            })
-        )
+  return React.createElement('div', {className: 'game-container'},
+    React.createElement('div', {
+        ref: contentRef,
+        className: 'game-content',
+        onClick: handleClick
+      },
+      currentWindow === 'home' && React.createElement(HomeMenu),
+      window.ruleScreens?.includes(currentWindow) &&
+      React.createElement('img', {
+        src: `images/${currentWindow}.png`,
+        alt: `${currentWindow} rules`
+      }),
+      currentWindow === 'game' && (
+        winner !== null
+          ? React.createElement(VictoryScreen, {
+            winner: winner,
+            onPlayAgain: resetGame
+          })
+          : React.createElement(GameBoard, {
+            pieces: pieces,
+            movedPiece: movedPiece,
+            selectedPieceKey: selectedPieceKey,
+            isPlayerTurn: isPlayerTurn
+          })
       )
     )
   )
