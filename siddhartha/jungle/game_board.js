@@ -1,12 +1,3 @@
-const DRAWING_WIDTH = 100
-const DRAWING_HEIGHT = 67
-const BOARD_UPPER_LEFT_X = 20.7
-const BOARD_UPPER_LEFT_Y = 3
-const BOARD_SQUARE_WIDTH = 8.6
-const BOARD_SQUARE_HEIGHT = 6.82
-const PIECE_SIZE = 6.5
-const POTENTIAL_MOVE_LENGTH = 2
-
 const GameBoard = ({turn, pieces, movedPiece, selectedPiece}) => {
   const getLighterShade = (baseColor) => {
     switch (baseColor) {
