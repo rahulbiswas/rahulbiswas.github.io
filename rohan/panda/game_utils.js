@@ -17,7 +17,8 @@ const GAME_CONSTANTS = {
     x: window.innerWidth * 0.25,
     y: window.innerHeight * 0.3,
     velocityY: 0,
-    isJumping: false
+    isJumping: false,
+    canJump: true
   },
   initialPlatforms: [
     {x: window.innerWidth * 0.1, y: window.innerHeight * 0.6, width: window.innerWidth * 0.3},
