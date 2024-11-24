@@ -34,6 +34,28 @@ const PLAYER_COLORS = {
   YELLOW: '#FFD700'
 }
 
+const PIECES = {
+  RAT: 1,
+  CAT: 2,
+  DOG: 3,
+  WOLF: 4,
+  LEOPARD: 5,
+  TIGER: 6,
+  LION: 7,
+  ELEPHANT: 8
+}
+
+const WATER_SQUARES = {
+  COLUMNS: [1, 2, 4, 5],
+  ROWS: [3, 4, 5]
+}
+
+const MOVEMENT = {
+  NORMAL_MOVE: 1,
+  HORIZONTAL_JUMP: 2,
+  VERTICAL_JUMP: 3
+}
+
 const ruleScreens = [
   'agilityrules',
   'eatinganimals',
@@ -46,3 +68,6 @@ const ruleScreens = [
 window.ruleScreens = ruleScreens
 window.PLAYER_COLORS = PLAYER_COLORS
 window.PLAYERS = PLAYERS
+window.PIECES = PIECES
+window.WATER_SQUARES = WATER_SQUARES
+window.MOVEMENT = MOVEMENT
