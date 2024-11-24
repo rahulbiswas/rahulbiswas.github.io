@@ -16,8 +16,8 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
     return false
   }
 
-  if ((movingPiece.player === 0 && toY === 0 && toX === 3) ||
-    (movingPiece.player === 1 && toY === 8 && toX === 3)) {
+  if ((movingPiece.player === 0 && toY === 8 && toX === 3) ||
+    (movingPiece.player === 1 && toY === 0 && toX === 3)) {
     return false
   }
 
@@ -53,7 +53,7 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
     }
 
     return true
-  } else if ((dx === 3 || dy === 4) &&
+  } else if (((dx === 2 && dy === 0) || (dx === 0 && dy === 3)) &&
     (movingPiece.animal === 6 || movingPiece.animal === 7)) {
     if (!fromWater && !toWater) {
       if (dx === 0) {

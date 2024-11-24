@@ -1,9 +1,9 @@
-const GameBoard = ({turn, pieces, movedPiece, selectedPiece}) => {
+const GameBoard = ({pieces, movedPiece, selectedPieceKey, isPlayerTurn}) => {
   return React.createElement('svg', {viewBox: '0 0 100 67'},
     React.createElement('rect', {
       width: '100',
       height: '67',
-      fill: turn === 1 ? '#C25B5B' : '#87CEEB'
+      fill: isPlayerTurn ? '#C25B5B' : '#87CEEB'
     }),
 
     React.createElement('g', {transform: `translate(${BOARD_UPPER_LEFT_X}, ${BOARD_UPPER_LEFT_Y})`},
@@ -25,7 +25,7 @@ const GameBoard = ({turn, pieces, movedPiece, selectedPiece}) => {
             fill = '#9C27B0'
           }
 
-          const isSelected = selectedPiece === `${col}_${row}`
+          const isSelected = selectedPieceKey === `${col}_${row}`
           const squareFill = isSelected ? window.boardRenderer.getLighterShade(fill) : fill
 
           return React.createElement('rect', {
