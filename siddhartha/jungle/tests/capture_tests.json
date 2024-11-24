@@ -1,5 +1,5 @@
 {
-  "description": "Capture Rules",
+  "description": "Capture",
   "tests": [
     {
       "description": "should allow capturing weaker opponent piece",
@@ -77,6 +77,23 @@
       "endPos": "3_0",
       "currentPlayer": "PLAYERS.RED",
       "expectedValid": true
+    },
+    {
+      "description": "elephant cannot eat rat",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        },
+        "1_0": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.ELEPHANT"
+        }
+      },
+      "startPos": "1_0",
+      "endPos": "0_0",
+      "currentPlayer": "PLAYERS.YELLOW",
+      "expectedValid": false
     }
   ]
 }

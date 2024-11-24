@@ -53,6 +53,13 @@ const validateNormalMove = (movingPiece, targetPiece, fromX, fromY, toX, toY, pi
     return false
   }
 
+  if (movingPiece.animal === PIECES.ELEPHANT) {
+    if (targetPiece.animal === PIECES.RAT) {
+      debug && console.log('INVALID: Elephant cannot capture rat')
+      return false
+    }
+  }
+
   debug && console.log(`Comparing strengths: Moving(${movingPiece.animal}) vs Target(${targetPiece.animal})`)
   return movingPiece.animal >= targetPiece.animal
 }

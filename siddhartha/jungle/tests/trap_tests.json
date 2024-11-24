@@ -1,5 +1,5 @@
 {
-  "description": "Trap Square Rules",
+  "description": "Trap",
   "tests": [
     {
       "description": "should allow capturing stronger piece in opponent's trap",
