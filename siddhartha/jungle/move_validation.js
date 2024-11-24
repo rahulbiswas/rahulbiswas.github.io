@@ -9,11 +9,10 @@ const isBasicMoveValid = (fromX, fromY, toX, toY, pieces, movingPiece, debug = f
     console.log(`Moving piece:`, movingPiece)
   }
 
-  // Check board boundaries
   if (fromX < 0 || fromX >= BOARD_WIDTH || fromY < 0 || fromY >= BOARD_HEIGHT ||
     toX < 0 || toX >= BOARD_WIDTH || toY < 0 || toY >= BOARD_HEIGHT) {
     debug && console.log('INVALID: Move outside board boundaries')
-    return false
+    return {isValid: false}
   }
 
   const targetKey = `${toX}_${toY}`
@@ -22,17 +21,15 @@ const isBasicMoveValid = (fromX, fromY, toX, toY, pieces, movingPiece, debug = f
     console.log('Target square occupied by:', targetPiece)
   }
 
-  // Check if trying to capture own piece
   if (targetPiece && targetPiece.player === movingPiece.player) {
     debug && console.log('INVALID: Cannot capture own piece')
-    return false
+    return {isValid: false}
   }
 
-  // Check den rules
   if ((movingPiece.player === PLAYERS.YELLOW && toY === DENS.YELLOW.Y && toX === DENS.YELLOW.X) ||
     (movingPiece.player === PLAYERS.RED && toY === DENS.RED.Y && toX === DENS.RED.X)) {
     debug && console.log('INVALID: Cannot enter own den')
-    return false
+    return {isValid: false}
   }
 
   const dx = Math.abs(toX - fromX)
@@ -42,4 +39,18 @@ const isBasicMoveValid = (fromX, fromY, toX, toY, pieces, movingPiece, debug = f
   return {isValid: true, dx, dy, targetPiece}
 }
 
+const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece, debug = false) => {
+  const basicValidation = isBasicMoveValid(fromX, fromY, toX, toY, pieces, movingPiece, debug)
+  if (!basicValidation.isValid) return false
+
+  const {dx, dy, targetPiece} = basicValidation
+
+  if (!isValidWaterMove(fromX, fromY, toX, toY, movingPiece, pieces, debug)) {
+    return false
+  }
+
+  return isValidPieceMove(fromX, fromY, toX, toY, pieces, movingPiece, targetPiece, debug)
+}
+
 window.isBasicMoveValid = isBasicMoveValid
+window.isValidMove = isValidMove
