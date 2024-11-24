@@ -16,33 +16,32 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
     return false
   }
 
-  if ((movingPiece.player === PLAYERS.YELLOW && toY === 8 && toX === 3) ||
-    (movingPiece.player === PLAYERS.RED && toY === 0 && toX === 3)) {
+  if ((movingPiece.player === PLAYERS.YELLOW && toY === BOARD_HEIGHT - 1 && toX === Math.floor(BOARD_WIDTH / 2)) ||
+    (movingPiece.player === PLAYERS.RED && toY === 0 && toX === Math.floor(BOARD_WIDTH / 2))) {
     return false
   }
 
   const isWater = (x, y) => {
-    return (x === 1 || x === 2 || x === 4 || x === 5) &&
-      (y === 3 || y === 4 || y === 5)
+    return WATER_SQUARES.COLUMNS.includes(x) && WATER_SQUARES.ROWS.includes(y)
   }
 
   const fromWater = isWater(fromX, fromY)
   const toWater = isWater(toX, toY)
 
-  if (toWater && movingPiece.animal !== 1) {
+  if (toWater && movingPiece.animal !== PIECES.RAT) {
     return false
   }
 
   const dx = Math.abs(toX - fromX)
   const dy = Math.abs(toY - fromY)
 
-  if ((dx === 0 && dy === 1) || (dx === 1 && dy === 0)) {
+  if ((dx === 0 && dy === MOVEMENT.NORMAL_MOVE) || (dx === MOVEMENT.NORMAL_MOVE && dy === 0)) {
     if (targetPiece) {
-      if (movingPiece.animal === 1) {
-        if (targetPiece.animal === 8 && !fromWater) {
+      if (movingPiece.animal === PIECES.RAT) {
+        if (targetPiece.animal === PIECES.ELEPHANT && !fromWater) {
           return true
         }
-        return targetPiece.animal === 1
+        return targetPiece.animal === PIECES.RAT
       }
 
       if (fromWater || toWater) {
@@ -53,8 +52,8 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
     }
 
     return true
-  } else if (((dx === 2 && dy === 0) || (dx === 0 && dy === 3)) &&
-    (movingPiece.animal === 6 || movingPiece.animal === 7)) {
+  } else if (((dx === MOVEMENT.HORIZONTAL_JUMP && dy === 0) || (dx === 0 && dy === MOVEMENT.VERTICAL_JUMP)) &&
+    (movingPiece.animal === PIECES.TIGER || movingPiece.animal === PIECES.LION)) {
     if (!fromWater && !toWater) {
       if (dx === 0) {
         const minY = Math.min(fromY, toY)
@@ -62,7 +61,7 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
         for (let y = minY + 1; y < maxY; y++) {
           if (!isWater(fromX, y)) return false
           const key = `${fromX}_${y}`
-          if (pieces[key] && pieces[key].animal === 1) return false
+          if (pieces[key] && pieces[key].animal === PIECES.RAT) return false
         }
       } else if (dy === 0) {
         const minX = Math.min(fromX, toX)
@@ -70,7 +69,7 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
         for (let x = minX + 1; x < maxX; x++) {
           if (!isWater(x, fromY)) return false
           const key = `${x}_${fromY}`
-          if (pieces[key] && pieces[key].animal === 1) return false
+          if (pieces[key] && pieces[key].animal === PIECES.RAT) return false
         }
       }
 
