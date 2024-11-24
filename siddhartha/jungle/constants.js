@@ -34,6 +34,13 @@ const PLAYER_COLORS = {
   YELLOW: '#FFD700'
 }
 
+const SQUARE_COLORS = {
+  REGULAR: '#4CAF50',
+  WATER: '#2196F3',
+  TRAP: '#FFC107',
+  DEN: '#9C27B0'
+}
+
 const PIECES = {
   RAT: 1,
   CAT: 2,
@@ -56,6 +63,30 @@ const MOVEMENT = {
   VERTICAL_JUMP: 3
 }
 
+const DENS = {
+  YELLOW: {
+    X: 3,
+    Y: 0
+  },
+  RED: {
+    X: 3,
+    Y: 8
+  }
+}
+
+const TRAP_SQUARES = {
+  YELLOW: [
+    {X: 2, Y: 0},
+    {X: 4, Y: 0},
+    {X: 3, Y: 1}
+  ],
+  RED: [
+    {X: 2, Y: 8},
+    {X: 4, Y: 8},
+    {X: 3, Y: 7}
+  ]
+}
+
 const ruleScreens = [
   'agilityrules',
   'eatinganimals',
@@ -71,3 +102,6 @@ window.PLAYERS = PLAYERS
 window.PIECES = PIECES
 window.WATER_SQUARES = WATER_SQUARES
 window.MOVEMENT = MOVEMENT
+window.DENS = DENS
+window.SQUARE_COLORS = SQUARE_COLORS
+window.TRAP_SQUARES = TRAP_SQUARES

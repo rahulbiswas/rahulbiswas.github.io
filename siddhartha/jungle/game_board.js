@@ -9,20 +9,21 @@ const GameBoard = ({pieces, movedPiece, selectedPieceKey, isPlayerTurn}) => {
     React.createElement('g', {transform: `translate(${BOARD_UPPER_LEFT_X}, ${BOARD_UPPER_LEFT_Y})`},
       Array.from({length: 9}, (_, row) =>
         Array.from({length: 7}, (_, col) => {
-          let fill = '#4CAF50'
+          let fill = SQUARE_COLORS.REGULAR
 
           if ((col === 1 || col === 2 || col === 4 || col === 5) &&
             (row === 3 || row === 4 || row === 5)) {
-            fill = '#2196F3'
+            fill = SQUARE_COLORS.WATER
           }
 
-          if ((row === 0 || row === 8) && (col === 2 || col === 4) ||
-            ((row === 1 || row === 7) && col === 3)) {
-            fill = '#FFC107'
+          const isTrap = TRAP_SQUARES.YELLOW.some(trap => trap.X === col && trap.Y === row) ||
+            TRAP_SQUARES.RED.some(trap => trap.X === col && trap.Y === row)
+          if (isTrap) {
+            fill = SQUARE_COLORS.TRAP
           }
 
           if ((row === 0 || row === 8) && col === 3) {
-            fill = '#9C27B0'
+            fill = SQUARE_COLORS.DEN
           }
 
           const isSelected = selectedPieceKey === `${col}_${row}`
