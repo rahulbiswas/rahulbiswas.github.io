@@ -7,11 +7,12 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
       if (e.type === 'touchstart' || e.code === 'Space') {
         if (gameState.isGameOver) {
           resetGame()
-        } else if (!position.isJumping) {
+        } else if (!position.isJumping && position.canJump) {
           setPosition(prev => ({
             ...prev,
             velocityY: GAME_CONSTANTS.jumpForce,
-            isJumping: true
+            isJumping: true,
+            canJump: false
           }))
         }
       }
@@ -26,7 +27,7 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
       window.removeEventListener('touchstart', handleJump)
       window.removeEventListener('keydown', handleJump)
     }
-  }, [position.isJumping, gameState.isGameOver, resetGame])
+  }, [position.isJumping, position.canJump, gameState.isGameOver, resetGame])
 
   React.useEffect(() => {
     const gameLoop = () => {
@@ -36,6 +37,7 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
           let newY = prev.y + prev.velocityY
           let newVelocityY = prev.velocityY + GAME_CONSTANTS.gravity
           let isJumping = true
+          let canJump = false
 
           platforms.forEach(platform => {
             const responsiveValues = getResponsiveValues(window.innerWidth)
@@ -59,6 +61,7 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
               newY = platform.y - (pandaSize * 0.8)
               newVelocityY = 0
               isJumping = false
+              canJump = true
             }
           })
 
@@ -78,7 +81,8 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
             x: newX,
             y: newY,
             velocityY: newVelocityY,
-            isJumping
+            isJumping,
+            canJump
           }
         })
 
