@@ -7,7 +7,7 @@ const testFiles = [
 
 async function loadTests() {
   for (const file of testFiles) {
-    const response = await fetch('tests/' + file)
+    const response = await fetch('tests/' + file + '?t=' + timestamp)
     const testSuite = await response.json()
 
     describe(testSuite.description, function () {

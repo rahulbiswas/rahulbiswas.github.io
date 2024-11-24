@@ -5,7 +5,7 @@
       "description": "Opposing animals in traps can be captured",
       "board": {
         "2_0": {
-          "player": "PLAYERS.TIGER",
+          "player": "PLAYERS.RED",
           "animal": "PIECES.TIGER"
         },
         "2_1": {
