@@ -46,14 +46,14 @@ const PlatformGame = () => {
             <div className="text-white text-center">
               <h2 className="text-3xl mb-4">Game Over!</h2>
               <p className="text-xl mb-2">Score: {gameState.score}</p>
-              <p className="text-lg">Tap anywhere to try again</p>
+              <p className="text-lg">Press SPACE or tap to try again</p>
             </div>
           </div>
         )}
       </div>
 
       <div className="mt-4 text-center text-gray-600">
-        <p>{gameState.isGameOver ? 'Tap anywhere to restart!' : 'Tap anywhere to jump!'}</p>
+        <p>{gameState.isGameOver ? 'Press SPACE or tap to restart!' : 'Press SPACE or tap to jump!'}</p>
       </div>
     </div>
   )
