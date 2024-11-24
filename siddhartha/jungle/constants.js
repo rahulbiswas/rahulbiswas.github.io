@@ -24,7 +24,7 @@ const BOARD_SQUARE_HEIGHT = 6.82
 const PIECE_SIZE = 6.5
 const POTENTIAL_MOVE_LENGTH = 2
 
-window.ruleScreens = [
+const ruleScreens = [
   'agilityrules',
   'eatinganimals',
   'howtowin',
@@ -32,3 +32,5 @@ window.ruleScreens = [
   'ratsarespecial',
   'traps'
 ]
+
+window.ruleScreens = ruleScreens
