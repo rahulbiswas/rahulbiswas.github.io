@@ -4,9 +4,9 @@ const PLATFORM_CONFIG = {
   minGap: window.innerWidth * 0.2,
   maxGap: window.innerWidth * 0.25,
   minY: window.innerHeight * 0.3,
-  maxY: window.innerHeight * 0.7,
+  maxY: window.innerHeight * 0.5,
   viewportBuffer: window.innerWidth,
-  heightVariation: window.innerHeight * 0.1
+  heightVariation: window.innerHeight * 0.08
 }
 
 const GAME_CONSTANTS = {
