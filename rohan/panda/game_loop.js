@@ -3,7 +3,8 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
 
   React.useEffect(() => {
     const handleJump = (e) => {
-      if (e.code === 'Space') {
+      e.preventDefault()
+      if (e.type === 'touchstart' || e.code === 'Space') {
         if (gameState.isGameOver) {
           resetGame()
         } else if (!position.isJumping) {
@@ -16,8 +17,12 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
       }
     }
 
+    window.addEventListener('touchstart', handleJump, {passive: false})
     window.addEventListener('keydown', handleJump)
-    return () => window.removeEventListener('keydown', handleJump)
+    return () => {
+      window.removeEventListener('touchstart', handleJump)
+      window.removeEventListener('keydown', handleJump)
+    }
   }, [position.isJumping, gameState.isGameOver, resetGame])
 
   React.useEffect(() => {
