@@ -103,6 +103,19 @@
       "endPos": "1_4",
       "currentPlayer": "PLAYERS.RED",
       "expectedValid": true
+    },
+    {
+      "description": "allow lion to jump vertically over water",
+      "board": {
+        "5_6": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
+      },
+      "startPos": "5_6",
+      "endPos": "5_2",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
     }
   ]
 }
