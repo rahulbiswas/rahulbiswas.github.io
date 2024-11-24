@@ -3,7 +3,7 @@ const GameBoard = ({pieces, movedPiece, selectedPieceKey, isPlayerTurn}) => {
     React.createElement('rect', {
       width: '100',
       height: '67',
-      fill: isPlayerTurn ? '#C25B5B' : '#87CEEB'
+      fill: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW
     }),
 
     React.createElement('g', {transform: `translate(${BOARD_UPPER_LEFT_X}, ${BOARD_UPPER_LEFT_Y})`},

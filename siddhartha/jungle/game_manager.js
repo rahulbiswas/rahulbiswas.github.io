@@ -24,7 +24,7 @@ class GameManager {
 
     if (!gameState.selectedPieceKey) {
       if (!gameState.pieces[clickKey]) return
-      if (gameState.pieces[clickKey].player !== 1) return
+      if (gameState.pieces[clickKey].player !== PLAYERS.RED) return
       callbacks.setSelectedPieceKey(clickKey)
     } else {
       if (gameState.selectedPieceKey === clickKey) {

@@ -9,6 +9,10 @@ class BoardRenderer {
         return '#ffd54f'
       case '#9C27B0':
         return '#ce93d8'
+      case PLAYER_COLORS.RED:
+        return '#d77373'
+      case PLAYER_COLORS.YELLOW:
+        return '#ffe14d'
       default:
         return baseColor
     }
@@ -25,12 +29,12 @@ class BoardRenderer {
           transform: `translate(${translateX}, ${translateY})`
         },
         React.createElement('image', {
-          href: `images/${piece.player === 0 ? 'a' : 'b'}piece.svg`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}piece.svg`,
           width: PIECE_SIZE,
           height: PIECE_SIZE
         }),
         React.createElement('image', {
-          href: `images/${piece.player === 0 ? 'a' : 'b'}${piece.animal}.svg`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg`,
           width: PIECE_SIZE,
           height: PIECE_SIZE
         })
