@@ -1,11 +1,8 @@
 const isWater = (x, y) => {
   const numX = parseInt(x)
   const numY = parseInt(y)
-  console.log(`Checking water square: x=${x}(${typeof x})->${numX}, y=${y}(${typeof y})->${numY}`)
   const inColumns = WATER_SQUARES.COLUMNS.includes(numX)
   const inRows = WATER_SQUARES.ROWS.includes(numY)
-  console.log(`COLUMNS check (${WATER_SQUARES.COLUMNS}): ${inColumns}`)
-  console.log(`ROWS check (${WATER_SQUARES.ROWS}): ${inRows}`)
   return inColumns && inRows
 }
 
