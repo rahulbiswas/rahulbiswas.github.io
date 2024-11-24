@@ -1,31 +1,42 @@
 const testResults = document.getElementById('testResults');
 let currentSuite;
 
+function runMoveValidation(scenario) {
+    const [fromX, fromY] = scenario.startPos.split('_').map(Number);
+    const [toX, toY] = scenario.endPos.split('_').map(Number);
+    const movingPiece = scenario.board[scenario.startPos];
+    if (movingPiece?.player !== scenario.currentPlayer) {
+        return false;
+    }
+    return isValidMove(fromX, fromY, toX, toY, scenario.board, movingPiece);
+}
+
 function describe(description, testSuite) {
     const suiteElement = document.createElement('div');
     suiteElement.className = 'suite';
     suiteElement.innerHTML = `<h2>${description}</h2>`;
     testResults.appendChild(suiteElement);
-    
     currentSuite = suiteElement;
     testSuite();
 }
 
-function it(description, setup, testCase) {
+function it(description, scenario) {
     const testElement = document.createElement('div');
     testElement.className = 'test';
     
     const setupHtml = `
         <div class="setup">
-            <div>Moving: ${setup.moving}</div>
-            <div>From: (${setup.from.x},${setup.from.y})</div>
-            <div>To: (${setup.to.x},${setup.to.y})</div>
-            <div>Other pieces: ${setup.otherPieces || 'none'}</div>
+            <div>Board:</div>
+            <pre>${JSON.stringify(scenario.board, null, 2)}</pre>
+            <div>Start: ${scenario.startPos}</div>
+            <div>End: ${scenario.endPos}</div>
+            <div>Current Player: ${scenario.currentPlayer === 0 ? 'YELLOW' : 'RED'}</div>
         </div>
     `;
     
     try {
-        testCase();
+        const isValid = runMoveValidation(scenario);
+        assert(isValid === scenario.expectedValid);
         testElement.innerHTML = `
             ${setupHtml}
             <p class="pass">✓ ${description}</p>
@@ -44,22 +55,5 @@ function it(description, setup, testCase) {
 function assert(condition, message = 'Assertion failed') {
     if (!condition) {
         throw new Error(message);
-    }
-}
-
-function assertThrows(fn, expectedError) {
-    try {
-        fn();
-        throw new Error('Expected function to throw an error');
-    } catch (error) {
-        if (expectedError && error.message !== expectedError) {
-            throw new Error(`Expected error "${expectedError}" but got "${error.message}"`);
-        }
-    }
-}
-
-function assertEqual(actual, expected) {
-    if (actual !== expected) {
-        throw new Error(`Expected ${expected} but got ${actual}`);
     }
 }
