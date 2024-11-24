@@ -1,0 +1,78 @@
+{
+  "description": "Water Movement Rules",
+  "tests": [
+    {
+      "description": "should allow rat to enter water",
+      "board": {
+        "0_2": { "player": "PLAYERS.RED", "animal": "PIECES.RAT" }
+      },
+      "startPos": "0_2",
+      "endPos": "1_3",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "should allow rat to move within water",
+      "board": {
+        "1_3": { "player": "PLAYERS.RED", "animal": "PIECES.RAT" }
+      },
+      "startPos": "1_3",
+      "endPos": "2_3",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "should prevent elephant from entering water",
+      "board": {
+        "0_2": { "player": "PLAYERS.RED", "animal": "PIECES.ELEPHANT" }
+      },
+      "startPos": "0_2",
+      "endPos": "1_3",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": false
+    },
+    {
+      "description": "should allow lion to jump across water horizontally",
+      "board": {
+        "0_3": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+      },
+      "startPos": "0_3",
+      "endPos": "3_3",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "should prevent lion jump when rat is in water path",
+      "board": {
+        "0_3": { "player": "PLAYERS.RED", "animal": "PIECES.LION" },
+        "1_3": { "player": "PLAYERS.YELLOW", "animal": "PIECES.RAT" }
+      },
+      "startPos": "0_3",
+      "endPos": "3_3",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": false
+    },
+    {
+      "description": "should prevent rat from capturing elephant while in water",
+      "board": {
+        "1_3": { "player": "PLAYERS.RED", "animal": "PIECES.RAT" },
+        "1_4": { "player": "PLAYERS.YELLOW", "animal": "PIECES.ELEPHANT" }
+      },
+      "startPos": "1_3",
+      "endPos": "1_4",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": false
+    },
+    {
+      "description": "should allow rat to capture opponent rat in water",
+      "board": {
+        "1_3": { "player": "PLAYERS.RED", "animal": "PIECES.RAT" },
+        "1_4": { "player": "PLAYERS.YELLOW", "animal": "PIECES.RAT" }
+      },
+      "startPos": "1_3",
+      "endPos": "1_4",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    }
+  ]
+}
