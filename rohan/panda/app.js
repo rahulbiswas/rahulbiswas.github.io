@@ -9,15 +9,17 @@ const PlatformGame = () => {
       </div>
 
       <div className="relative w-full h-96 bg-blue-100 rounded-lg overflow-hidden border-4 border-blue-300">
-        <div
-          className="absolute text-4xl transform -translate-x-1/2 -translate-y-1/2"
+        <img
+          src="panda.png"
+          alt="Panda"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: 400,
-            top: position.y
+            top: position.y,
+            width: '56px',
+            height: '40px'
           }}
-        >
-          🐼
-        </div>
+        />
 
         {platforms.map((platform, index) => (
           <div
