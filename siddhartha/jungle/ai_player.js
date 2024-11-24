@@ -4,10 +4,11 @@ class AIPlayer {
 
     Object.entries(pieces).forEach(([fromPos, piece]) => {
       if (piece.player === player) {
+        const [fromX, fromY] = fromPos.split('_').map(Number)
+        
         for (let toX = 0; toX < BOARD_WIDTH; toX++) {
           for (let toY = 0; toY < BOARD_HEIGHT; toY++) {
-            const [fromX, fromY] = fromPos.split('_')
-            if (isValidMove(fromX, fromY, toX, toY, pieces, piece)) {
+            if (window.isValidMove(fromX, fromY, toX, toY, pieces, piece)) {
               allMoves.push({
                 from: fromPos,
                 to: `${toX}_${toY}`
