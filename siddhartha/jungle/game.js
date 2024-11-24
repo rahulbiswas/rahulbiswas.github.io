@@ -5,7 +5,17 @@ const JungleGame = () => {
   const [isFirstClick, setIsFirstClick] = React.useState(true)
   const [firstClickKey, setFirstClickKey] = React.useState(null)
   const [movedPiece, setMovedPiece] = React.useState(['0'])
+  const [winner, setWinner] = React.useState(null)
   const contentRef = React.useRef(null)
+
+  const resetGame = () => {
+    setPieces(initialPieces)
+    setTurn(1)
+    setIsFirstClick(true)
+    setFirstClickKey(null)
+    setMovedPiece(['0'])
+    setWinner(null)
+  }
 
   const handleClick = (e) => {
     if (!contentRef.current) return
@@ -18,8 +28,8 @@ const JungleGame = () => {
       gameManager.handleGameClick(
         clickX,
         clickY,
-        {pieces, turn, isFirstClick, firstClickKey},
-        {setPieces, setTurn, setIsFirstClick, setFirstClickKey, setMovedPiece, setCurrentWindow}
+        {pieces, turn, isFirstClick, firstClickKey, winner},
+        {setPieces, setTurn, setIsFirstClick, setFirstClickKey, setMovedPiece, setCurrentWindow, setWinner, resetGame}
       )
     } else {
       navigationManager.handleMenuNavigation(clickX, clickY, currentWindow, setCurrentWindow)
@@ -39,12 +49,19 @@ const JungleGame = () => {
           src: `images/${currentWindow}.png`,
           alt: `${currentWindow} rules`
         }),
-        currentWindow === 'game' && React.createElement(GameBoard, {
-          turn: turn,
-          pieces: pieces,
-          movedPiece: movedPiece,
-          selectedPiece: firstClickKey
-        })
+        currentWindow === 'game' && (
+          winner !== null
+            ? React.createElement(VictoryScreen, {
+              winner: winner,
+              onPlayAgain: resetGame
+            })
+            : React.createElement(GameBoard, {
+              turn: turn,
+              pieces: pieces,
+              movedPiece: movedPiece,
+              selectedPiece: firstClickKey
+            })
+        )
       )
     )
   )

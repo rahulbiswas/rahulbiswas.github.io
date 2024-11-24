@@ -28,6 +28,12 @@ class GameManager {
       const newPieces = {...prev}
       delete newPieces[firstKey]
       newPieces[secondKey] = movingPiece
+
+      const winner = checkWinCondition(newPieces)
+      if (winner !== null) {
+        callbacks.setWinner(winner)
+      }
+
       return newPieces
     })
     callbacks.setIsFirstClick(true)
@@ -36,13 +42,14 @@ class GameManager {
   }
 
   handleGameClick(clickX, clickY, gameState, callbacks) {
+    if (gameState.winner !== null) {
+      callbacks.resetGame()
+      return
+    }
+
     if (clickX < BOARD_UPPER_LEFT_X && clickY < 13) {
       callbacks.setCurrentWindow('home')
-      callbacks.setPieces(initialPieces)
-      callbacks.setTurn(1)
-      callbacks.setIsFirstClick(true)
-      callbacks.setFirstClickKey(null)
-      callbacks.setMovedPiece(['0'])
+      callbacks.resetGame()
       return
     }
 
