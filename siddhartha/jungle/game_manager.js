@@ -49,7 +49,17 @@ class GameManager {
       return
     }
 
-    callbacks.setMovedPiece([fromKey.split('_'), toKey.split('_')])
+    callbacks.setLastMove({
+      from: {
+        x: parseInt(fromKey.split('_')[0]),
+        y: parseInt(fromKey.split('_')[1])
+      },
+      to: {
+        x: parseInt(toKey.split('_')[0]),
+        y: parseInt(toKey.split('_')[1])
+      }
+    })
+
     callbacks.setPieces(prev => {
       const newPieces = {...prev}
       delete newPieces[fromKey]

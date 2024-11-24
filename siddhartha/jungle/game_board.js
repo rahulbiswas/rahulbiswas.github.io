@@ -1,4 +1,4 @@
-const GameBoard = ({pieces, movedPiece, selectedPieceKey, isPlayerTurn}) => {
+const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
   return React.createElement('svg', {viewBox: '0 0 100 67'},
     React.createElement('rect', {
       width: '100',
@@ -63,6 +63,6 @@ const GameBoard = ({pieces, movedPiece, selectedPieceKey, isPlayerTurn}) => {
     ),
 
     window.boardRenderer.renderPieces(pieces),
-    window.boardRenderer.renderMoveIndicators(movedPiece)
+    window.boardRenderer.renderMoveIndicators(lastMove)
   )
 }
