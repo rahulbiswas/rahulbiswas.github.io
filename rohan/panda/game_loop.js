@@ -17,7 +17,10 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
       }
     }
 
-    window.addEventListener('touchstart', handleJump, {passive: false})
+    window.addEventListener('touchstart', handleJump, {
+      passive: false,
+      capture: true
+    })
     window.addEventListener('keydown', handleJump)
     return () => {
       window.removeEventListener('touchstart', handleJump)
@@ -35,23 +38,31 @@ const useGameLoop = ({position, setPosition, gameState, setGameState, platforms,
           let isJumping = true
 
           platforms.forEach(platform => {
-            const pandaBottom = newY + 40
-            const pandaWidth = 29
-            const relativeX = 400
-            const platformLeft = platform.x - (newX - 400)
+            const responsiveValues = getResponsiveValues(window.innerWidth)
+            const pandaSize = parseInt(responsiveValues.pandaSize)
+            const platformHeight = parseInt(responsiveValues.platformHeight)
 
-            if (relativeX - pandaWidth / 2 >= platformLeft &&
-              relativeX + pandaWidth / 2 <= platformLeft + platform.width &&
-              pandaBottom >= platform.y &&
-              pandaBottom <= platform.y + 10 &&
+            const collisionBuffer = 5
+
+            const pandaBottom = newY + (pandaSize * 0.8)
+            const pandaWidth = pandaSize * 0.6
+
+            const relativeX = window.innerWidth * 0.5
+            const platformLeft = platform.x - (newX - window.innerWidth * 0.5)
+
+            if (relativeX - pandaWidth / 2 >= platformLeft - collisionBuffer &&
+              relativeX + pandaWidth / 2 <= platformLeft + platform.width + collisionBuffer &&
+              pandaBottom >= platform.y - collisionBuffer &&
+              pandaBottom <= platform.y + platformHeight + collisionBuffer &&
               prev.velocityY >= 0) {
-              newY = platform.y - 40
+
+              newY = platform.y - (pandaSize * 0.8)
               newVelocityY = 0
               isJumping = false
             }
           })
 
-          if (newY > 450) {
+          if (newY > window.innerHeight * 0.9) {
             setGameState(prev => {
               const newHighScore = Math.max(prev.highScore, prev.score)
               localStorage.setItem('highScore', newHighScore.toString())
