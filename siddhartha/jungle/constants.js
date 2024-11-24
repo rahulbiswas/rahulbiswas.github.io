@@ -24,6 +24,16 @@ const BOARD_SQUARE_HEIGHT = 6.82
 const PIECE_SIZE = 6.5
 const POTENTIAL_MOVE_LENGTH = 2
 
+const PLAYERS = {
+  YELLOW: 0,
+  RED: 1
+}
+
+const PLAYER_COLORS = {
+  RED: '#C25B5B',
+  YELLOW: '#FFD700'
+}
+
 const ruleScreens = [
   'agilityrules',
   'eatinganimals',
@@ -34,3 +44,5 @@ const ruleScreens = [
 ]
 
 window.ruleScreens = ruleScreens
+window.PLAYER_COLORS = PLAYER_COLORS
+window.PLAYERS = PLAYERS

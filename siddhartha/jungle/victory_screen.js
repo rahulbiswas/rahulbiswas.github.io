@@ -19,7 +19,7 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
     React.createElement('rect', {
       width: '100',
       height: '67',
-      fill: winner === 1 ? '#FFD700' : '#C25B5B',
+      fill: winner === PLAYERS.RED ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
       opacity: 0.9
     }),
 
@@ -31,7 +31,7 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
       fontSize: '8',
       fontFamily: 'Impact',
       filter: 'url(#textShadow)'
-    }, `${winner === 1 ? 'YELLOW' : 'RED'} WINS!`),
+    }, `${winner === PLAYERS.RED ? 'RED' : 'YELLOW'} WINS!`),
 
     React.createElement('g', {transform: 'translate(50, 40)'},
       React.createElement('rect', {
