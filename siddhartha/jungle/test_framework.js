@@ -1,14 +1,36 @@
 const testResults = document.getElementById('testResults');
 let currentSuite;
 
+function parseEnumValue(enumString) {
+    const [enumType, enumValue] = enumString.split('.');
+    return window[enumType][enumValue];
+}
+
+function parsePiece(piece) {
+    return {
+        player: parseEnumValue(piece.player),
+        animal: parseEnumValue(piece.animal)
+    };
+}
+
+function parseBoard(board) {
+    const parsedBoard = {};
+    for (const [pos, piece] of Object.entries(board)) {
+        parsedBoard[pos] = parsePiece(piece);
+    }
+    return parsedBoard;
+}
+
 function runMoveValidation(scenario) {
     const [fromX, fromY] = scenario.startPos.split('_').map(Number);
     const [toX, toY] = scenario.endPos.split('_').map(Number);
-    const movingPiece = scenario.board[scenario.startPos];
-    if (movingPiece?.player !== scenario.currentPlayer) {
+    const parsedBoard = parseBoard(scenario.board);
+    const currentPlayer = parseEnumValue(scenario.currentPlayer);
+    const movingPiece = parsedBoard[scenario.startPos];
+    if (movingPiece?.player !== currentPlayer) {
         return false;
     }
-    return isValidMove(fromX, fromY, toX, toY, scenario.board, movingPiece);
+    return isValidMove(fromX, fromY, toX, toY, parsedBoard, movingPiece);
 }
 
 function describe(description, testSuite) {
@@ -30,7 +52,7 @@ function it(description, scenario) {
             <pre>${JSON.stringify(scenario.board, null, 2)}</pre>
             <div>Start: ${scenario.startPos}</div>
             <div>End: ${scenario.endPos}</div>
-            <div>Current Player: ${scenario.currentPlayer === 0 ? 'YELLOW' : 'RED'}</div>
+            <div>Current Player: ${scenario.currentPlayer}</div>
         </div>
     `;
     
