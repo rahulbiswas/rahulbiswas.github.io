@@ -48,7 +48,7 @@ const PlatformGame = () => {
       <div className="mb-4 text-center">
         <span className="mr-4">Score: {gameState.score}</span>
         <span className="mr-4">High Score: {gameState.highScore}</span>
-        <span>committed 1731</span>
+        <span>committed 1738</span>
       </div>
 
       <div
