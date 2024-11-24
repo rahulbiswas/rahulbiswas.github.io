@@ -8,6 +8,19 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece, debug = false)
 
   const {dx, dy, targetPiece} = basicValidation
 
+  if (targetPiece) {
+    const isInOwnTrap = (
+      (targetPiece.player === PLAYERS.YELLOW &&
+        TRAP_SQUARES.YELLOW.some(trap => trap.X === toX && trap.Y === toY)) ||
+      (targetPiece.player === PLAYERS.RED &&
+        TRAP_SQUARES.RED.some(trap => trap.X === toX && trap.Y === toY))
+    )
+    if (isInOwnTrap) {
+      debug && console.log('INVALID: Cannot capture piece in its own trap')
+      return false
+    }
+  }
+
   const fromWater = isWater(fromX, fromY)
   const toWater = isWater(toX, toY)
   debug && console.log(`Water squares - From: ${fromWater}, To: ${toWater}`)
