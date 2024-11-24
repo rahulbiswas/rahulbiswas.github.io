@@ -56,27 +56,46 @@ class AIPlayer {
     })
   }
 
-  getAIMove(pieces, player) {
-    const possibleMoves = this.getPossibleMoves(pieces, player)
-    if (possibleMoves.length === 0) return null
+  minimax(pieces, depth, isMaximizingPlayer, player) {
+    if (depth === 0 || this.isGameOver(pieces)) {
+      return [null, this.evaluatePosition(pieces, player)]
+    }
 
-    let bestScore = -Infinity
+    const possibleMoves = this.getPossibleMoves(pieces,
+      isMaximizingPlayer ? player : this.getOpponent(player))
+
     let bestMove = null
+    let bestEval = isMaximizingPlayer ? -Infinity : Infinity
+    const compareFn = isMaximizingPlayer ?
+      (a, b) => a > b :
+      (a, b) => a < b
 
-    possibleMoves.forEach(move => {
-      const newPieces = {...pieces}
-      delete newPieces[move.from]
-      newPieces[move.to] = pieces[move.from]
+    for (const move of possibleMoves) {
+      const newPieces = this.makeMove(pieces, move)
+      const [_, ev] = this.minimax(newPieces, depth - 1, !isMaximizingPlayer, player)
 
-      const score = this.evaluatePosition(newPieces, player)
-
-      if (score > bestScore) {
-        bestScore = score
+      if (compareFn(ev, bestEval)) {
+        bestEval = ev
         bestMove = move
       }
-    })
+    }
 
-    return bestMove
+    return [bestMove, bestEval]
+  }
+
+  makeMove(pieces, move) {
+    const newPieces = {...pieces}
+    delete newPieces[move.from]
+    newPieces[move.to] = pieces[move.from]
+    return newPieces
+  }
+
+  getOpponent(player) {
+    return player === PLAYERS.RED ? PLAYERS.YELLOW : PLAYERS.RED
+  }
+
+  isGameOver(pieces) {
+    return window.checkWinCondition(pieces) !== null
   }
 
   getPossibleMoves(pieces, player) {
@@ -100,6 +119,11 @@ class AIPlayer {
     })
 
     return allMoves
+  }
+
+  getAIMove(pieces, player) {
+    const [bestMove, _] = this.minimax(pieces, 3, true, player)
+    return bestMove
   }
 }
 

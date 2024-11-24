@@ -14,3 +14,5 @@ const checkWinCondition = (pieces) => {
   if (yellowWinByDen || redPieces.length === 0) return PLAYERS.YELLOW
   return null
 }
+
+window.checkWinCondition = checkWinCondition
