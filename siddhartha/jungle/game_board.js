@@ -1,10 +1,14 @@
 const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
+  const [debugMode, setDebugMode] = React.useState(false)
+
   return React.createElement('svg', {viewBox: '0 0 100 67'},
     React.createElement('rect', {
       width: '100',
       height: '67',
       fill: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW
     }),
+
+    React.createElement(DebugButton, {debugMode, setDebugMode}),
 
     React.createElement('g', {transform: `translate(${BOARD_UPPER_LEFT_X}, ${BOARD_UPPER_LEFT_Y})`},
       Array.from({length: 9}, (_, row) =>
@@ -62,6 +66,7 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       }, 'BACK')
     ),
 
+    React.createElement(DebugOverlay, {debugMode}),
     window.boardRenderer.renderPieces(pieces),
     window.boardRenderer.renderMoveIndicators(lastMove)
   )
