@@ -16,8 +16,8 @@ const isValidMove = (fromX, fromY, toX, toY, pieces, movingPiece) => {
     return false
   }
 
-  if ((movingPiece.player === PLAYERS.YELLOW && toY === BOARD_HEIGHT - 1 && toX === Math.floor(BOARD_WIDTH / 2)) ||
-    (movingPiece.player === PLAYERS.RED && toY === 0 && toX === Math.floor(BOARD_WIDTH / 2))) {
+  if ((movingPiece.player === PLAYERS.YELLOW && toY === DENS.YELLOW.Y && toX === DENS.YELLOW.X) ||
+    (movingPiece.player === PLAYERS.RED && toY === DENS.RED.Y && toX === DENS.RED.X)) {
     return false
   }
 

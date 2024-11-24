@@ -33,7 +33,11 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
       filter: 'url(#textShadow)'
     }, `${winner === PLAYERS.RED ? 'RED' : 'YELLOW'} WINS!`),
 
-    React.createElement('g', {transform: 'translate(50, 40)'},
+    React.createElement('g', {
+        transform: 'translate(50, 40)',
+        onClick: onPlayAgain,
+        style: {cursor: 'pointer'}
+      },
       React.createElement('rect', {
         x: '-20',
         y: '-6',

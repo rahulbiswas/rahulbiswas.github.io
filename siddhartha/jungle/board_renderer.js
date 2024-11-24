@@ -1,13 +1,13 @@
 class BoardRenderer {
   getLighterShade(baseColor) {
     switch (baseColor) {
-      case '#4CAF50':
+      case SQUARE_COLORS.REGULAR:
         return '#81c784'
-      case '#2196F3':
+      case SQUARE_COLORS.WATER:
         return '#64b5f6'
-      case '#FFC107':
+      case SQUARE_COLORS.TRAP:
         return '#ffd54f'
-      case '#9C27B0':
+      case SQUARE_COLORS.DEN:
         return '#ce93d8'
       case PLAYER_COLORS.RED:
         return '#d77373'
