@@ -38,6 +38,18 @@ const validateNormalMove = (movingPiece, targetPiece, fromX, fromY, toX, toY, pi
     return false
   }
 
+  const isInOpponentTrap = (
+    (targetPiece.player === PLAYERS.YELLOW &&
+      TRAP_SQUARES.RED.some(trap => trap.X === toX && trap.Y === toY)) ||
+    (targetPiece.player === PLAYERS.RED &&
+      TRAP_SQUARES.YELLOW.some(trap => trap.X === toX && trap.Y === toY))
+  )
+
+  if (isInOpponentTrap) {
+    debug && console.log('VALID: Target piece is in opponent trap and can be captured')
+    return true
+  }
+
   if (movingPiece.animal === PIECES.RAT) {
     if (targetPiece.animal === PIECES.ELEPHANT && !isWater(fromX, fromY)) {
       debug && console.log('VALID: Rat can capture elephant')
