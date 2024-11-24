@@ -8,7 +8,14 @@ const PlatformGame = () => {
         <span>High Score: {gameState.highScore}</span>
       </div>
 
-      <div className="relative w-full h-96 bg-blue-100 rounded-lg overflow-hidden border-4 border-blue-300">
+      <div
+        className="relative w-full h-96 bg-blue-100 rounded-lg overflow-hidden border-4 border-blue-300"
+        style={{
+          touchAction: 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none'
+        }}
+      >
         <img
           src="panda.png"
           alt="Panda"
@@ -39,14 +46,14 @@ const PlatformGame = () => {
             <div className="text-white text-center">
               <h2 className="text-3xl mb-4">Game Over!</h2>
               <p className="text-xl mb-2">Score: {gameState.score}</p>
-              <p className="text-lg">Press SPACE to try again</p>
+              <p className="text-lg">Tap anywhere to try again</p>
             </div>
           </div>
         )}
       </div>
 
       <div className="mt-4 text-center text-gray-600">
-        <p>{gameState.isGameOver ? 'Press SPACE to restart!' : 'Press SPACE to jump!'}</p>
+        <p>{gameState.isGameOver ? 'Tap anywhere to restart!' : 'Tap anywhere to jump!'}</p>
       </div>
     </div>
   )
