@@ -2,7 +2,7 @@ const JungleGame = () => {
   const [currentWindow, setCurrentWindow] = React.useState('home')
   const [pieces, setPieces] = React.useState(initialPieces)
   const [selectedPieceKey, setSelectedPieceKey] = React.useState(null)
-  const [movedPiece, setMovedPiece] = React.useState(['0'])
+  const [lastMove, setLastMove] = React.useState(null)
   const [winner, setWinner] = React.useState(null)
   const [isPlayerTurn, setIsPlayerTurn] = React.useState(true)
   const contentRef = React.useRef(null)
@@ -16,9 +16,9 @@ const JungleGame = () => {
             aiMove.from,
             aiMove.to,
             pieces,
-            {setPieces, setSelectedPieceKey, setMovedPiece, setWinner}
+            {setPieces, setSelectedPieceKey, setLastMove, setWinner},
+            () => setIsPlayerTurn(true)
           )
-          setIsPlayerTurn(true)
         }
       }, 500)
       return () => clearTimeout(timeoutId)
@@ -28,7 +28,7 @@ const JungleGame = () => {
   const resetGame = () => {
     setPieces(initialPieces)
     setSelectedPieceKey(null)
-    setMovedPiece(['0'])
+    setLastMove(null)
     setWinner(null)
     setIsPlayerTurn(true)
   }
@@ -47,7 +47,7 @@ const JungleGame = () => {
         clickX,
         clickY,
         {pieces, selectedPieceKey},
-        {setPieces, setSelectedPieceKey, setMovedPiece, setCurrentWindow, setWinner, setIsPlayerTurn}
+        {setPieces, setSelectedPieceKey, setLastMove, setCurrentWindow, setWinner, setIsPlayerTurn}
       )
     } else {
       navigationManager.handleMenuNavigation(clickX, clickY, currentWindow, setCurrentWindow)
@@ -74,7 +74,7 @@ const JungleGame = () => {
           })
           : React.createElement(GameBoard, {
             pieces: pieces,
-            movedPiece: movedPiece,
+            lastMove: lastMove,
             selectedPieceKey: selectedPieceKey,
             isPlayerTurn: isPlayerTurn
           })

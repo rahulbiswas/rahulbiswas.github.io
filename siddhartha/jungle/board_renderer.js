@@ -42,22 +42,22 @@ class BoardRenderer {
     })
   }
 
-  renderMoveIndicators(movedPiece) {
-    if (movedPiece[0][0] === '0') return null
+  renderMoveIndicators(lastMove) {
+    if (!lastMove) return null
 
     return [
       React.createElement('rect', {
-        key: 'move1',
-        x: movedPiece[0][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
-        y: movedPiece[0][1] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
+        key: 'moveFrom',
+        x: lastMove.from.x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+        y: lastMove.from.y * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
         width: POTENTIAL_MOVE_LENGTH,
         height: POTENTIAL_MOVE_LENGTH,
         fill: 'purple'
       }),
       React.createElement('rect', {
-        key: 'move2',
-        x: movedPiece[1][0] * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
-        y: movedPiece[1][1] * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
+        key: 'moveTo',
+        x: lastMove.to.x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+        y: lastMove.to.y * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
         width: POTENTIAL_MOVE_LENGTH,
         height: POTENTIAL_MOVE_LENGTH,
         fill: 'purple'
