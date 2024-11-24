@@ -10,7 +10,7 @@ const checkWinCondition = (pieces) => {
   const yellowPieces = Object.values(pieces).filter(piece => piece.player === PLAYERS.YELLOW)
   const redPieces = Object.values(pieces).filter(piece => piece.player === PLAYERS.RED)
 
-  if (redWinByDen || redPieces.length === 0) return PLAYERS.RED
-  if (yellowWinByDen || yellowPieces.length === 0) return PLAYERS.YELLOW
+  if (redWinByDen || yellowPieces.length === 0) return PLAYERS.RED
+  if (yellowWinByDen || redPieces.length === 0) return PLAYERS.YELLOW
   return null
 }
