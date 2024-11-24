@@ -1,5 +1,12 @@
 const isWater = (x, y) => {
-  return WATER_SQUARES.COLUMNS.includes(x) && WATER_SQUARES.ROWS.includes(y)
+  const numX = parseInt(x)
+  const numY = parseInt(y)
+  console.log(`Checking water square: x=${x}(${typeof x})->${numX}, y=${y}(${typeof y})->${numY}`)
+  const inColumns = WATER_SQUARES.COLUMNS.includes(numX)
+  const inRows = WATER_SQUARES.ROWS.includes(numY)
+  console.log(`COLUMNS check (${WATER_SQUARES.COLUMNS}): ${inColumns}`)
+  console.log(`ROWS check (${WATER_SQUARES.ROWS}): ${inRows}`)
+  return inColumns && inRows
 }
 
 const validateRatWaterMove = (fromWater, toWater, fromX, fromY, toX, toY, pieces, debug) => {
@@ -27,7 +34,7 @@ const validateJumpOverWater = (fromX, fromY, toX, toY, pieces, debug) => {
     const maxY = Math.max(fromY, toY)
     for (let y = minY + 1; y < maxY; y++) {
       if (!isWater(fromX, y)) {
-        debug && console.log(`INVALID: Non-water square in jump path at y=${y}`)
+        debug && console.log(`INVALID: Non-water square in jump path at x=${fromX} y=${y}`)
         return false
       }
       const key = `${fromX}_${y}`
@@ -57,7 +64,7 @@ const validateJumpOverWater = (fromX, fromY, toX, toY, pieces, debug) => {
 const isValidWaterMove = (fromX, fromY, toX, toY, movingPiece, pieces, debug = false) => {
   const fromWater = isWater(fromX, fromY)
   const toWater = isWater(toX, toY)
-  
+
   if (debug) {
     console.log(`Water squares - From: ${fromWater}, To: ${toWater}`)
   }
