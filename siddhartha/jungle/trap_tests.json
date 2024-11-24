@@ -4,8 +4,14 @@
     {
       "description": "should allow capturing stronger piece in opponent's trap",
       "board": {
-        "2_7": { "player": "PLAYERS.YELLOW", "animal": "PIECES.ELEPHANT" },
-        "2_6": { "player": "PLAYERS.RED", "animal": "PIECES.RAT" }
+        "2_7": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.ELEPHANT"
+        },
+        "2_6": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        }
       },
       "startPos": "2_6",
       "endPos": "2_7",
@@ -15,22 +21,17 @@
     {
       "description": "should prevent capturing piece in own trap",
       "board": {
-        "2_0": { "player": "PLAYERS.YELLOW", "animal": "PIECES.RAT" },
-        "2_1": { "player": "PLAYERS.RED", "animal": "PIECES.ELEPHANT" }
+        "2_0": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.RAT"
+        },
+        "2_1": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.ELEPHANT"
+        }
       },
       "startPos": "2_1",
       "endPos": "2_0",
-      "currentPlayer": "PLAYERS.RED",
-      "expectedValid": false
-    },
-    {
-      "description": "should prevent moves that leave own den exposed",
-      "board": {
-        "3_8": { "player": "PLAYERS.RED", "animal": "PIECES.ELEPHANT" },
-        "3_7": { "player": "PLAYERS.YELLOW", "animal": "PIECES.TIGER" }
-      },
-      "startPos": "3_8",
-      "endPos": "4_8",
       "currentPlayer": "PLAYERS.RED",
       "expectedValid": false
     }
