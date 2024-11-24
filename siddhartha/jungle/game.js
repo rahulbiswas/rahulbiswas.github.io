@@ -22,7 +22,7 @@ const JungleGame = () => {
         {setPieces, setTurn, setIsFirstClick, setFirstClickKey, setMovedPiece, setCurrentWindow}
       )
     } else {
-      gameManager.handleMenuNavigation(clickX, clickY, currentWindow, setCurrentWindow)
+      navigationManager.handleMenuNavigation(clickX, clickY, currentWindow, setCurrentWindow)
     }
   }
 
