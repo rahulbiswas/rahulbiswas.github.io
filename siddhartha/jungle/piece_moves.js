@@ -7,7 +7,7 @@ const isValidPieceMove = (fromX, fromY, toX, toY, pieces, movingPiece, targetPie
   }
 
   if (((dx === MOVEMENT.HORIZONTAL_JUMP && dy === 0) || (dx === 0 && dy === MOVEMENT.VERTICAL_JUMP)) &&
-      (movingPiece.animal === PIECES.TIGER || movingPiece.animal === PIECES.LION)) {
+    (movingPiece.animal === PIECES.TIGER || movingPiece.animal === PIECES.LION)) {
     if (targetPiece) {
       debug && console.log(`Checking capture after jump: Moving(${movingPiece.animal}) vs Target(${targetPiece.animal})`)
       return movingPiece.animal >= targetPiece.animal
@@ -34,8 +34,8 @@ const validateNormalMove = (movingPiece, targetPiece, fromX, fromY, toX, toY, pi
   )
 
   if (isInOwnTrap) {
-    debug && console.log('VALID: Target piece is in own trap')
-    return true
+    debug && console.log('INVALID: Target piece is in own trap')
+    return false
   }
 
   if (movingPiece.animal === PIECES.RAT) {
