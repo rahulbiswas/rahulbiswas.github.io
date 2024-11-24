@@ -1,10 +1,13 @@
 {
-  "description": "Basic Movement Rules",
+  "description": "Basic Move",
   "tests": [
     {
       "description": "should allow normal one-square vertical move",
       "board": {
-        "0_0": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
       },
       "startPos": "0_0",
       "endPos": "0_1",
@@ -14,7 +17,10 @@
     {
       "description": "should allow normal one-square horizontal move",
       "board": {
-        "0_0": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
       },
       "startPos": "0_0",
       "endPos": "1_0",
@@ -24,7 +30,10 @@
     {
       "description": "should reject diagonal moves",
       "board": {
-        "0_0": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
       },
       "startPos": "0_0",
       "endPos": "1_1",
@@ -34,7 +43,10 @@
     {
       "description": "should reject moves to negative x",
       "board": {
-        "0_0": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
       },
       "startPos": "0_0",
       "endPos": "-1_0",
@@ -44,7 +56,10 @@
     {
       "description": "should reject moves beyond board width",
       "board": {
-        "6_0": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+        "6_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
       },
       "startPos": "6_0",
       "endPos": "7_0",
@@ -54,7 +69,10 @@
     {
       "description": "should reject move of piece when not player's turn",
       "board": {
-        "0_0": { "player": "PLAYERS.RED", "animal": "PIECES.LION" }
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        }
       },
       "startPos": "0_0",
       "endPos": "0_1",

@@ -1,5 +1,5 @@
 {
-  "description": "Water Movement Rules",
+  "description": "Water",
   "tests": [
     {
       "description": "rat cannot enter water diagonally",
