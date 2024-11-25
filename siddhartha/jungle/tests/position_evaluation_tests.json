@@ -1,1 +1,65 @@
-{"description":"Position Evaluation Tests (using rounded scores)","tests":[{"description":"Position with red cat vs yellow cat should be neutral","board":{"1_1":{"player":"PLAYERS.RED","animal":"PIECES.CAT"},"5_7":{"player":"PLAYERS.YELLOW","animal":"PIECES.CAT"}},"evaluatingPlayer":"PLAYERS.RED","expectedScore":0},{"description":"Position with red lion vs yellow cat should favor red","board":{"1_1":{"player":"PLAYERS.RED","animal":"PIECES.LION"},"5_7":{"player":"PLAYERS.YELLOW","animal":"PIECES.CAT"}},"evaluatingPlayer":"PLAYERS.RED","expectedScore":6}]}
+{
+  "description": "Position Evaluation Tests (using rounded scores)",
+  "tests": [
+    {
+      "description": "Position with red cat vs yellow cat should be neutral",
+      "board": {
+        "1_1": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.CAT"
+        },
+        "5_7": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.CAT"
+        }
+      },
+      "evaluatingPlayer": "PLAYERS.RED",
+      "expectedScore": 0
+    },
+    {
+      "description": "Position with red lion vs yellow cat should favor red",
+      "board": {
+        "1_1": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        },
+        "5_7": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.CAT"
+        }
+      },
+      "evaluatingPlayer": "PLAYERS.RED",
+      "expectedScore": 6
+    },
+    {
+      "description": "Red piece in yellow's den should be maximum score",
+      "board": {
+        "3_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        },
+        "5_7": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.CAT"
+        }
+      },
+      "evaluatingPlayer": "PLAYERS.RED",
+      "expectedScore": 1000
+    },
+    {
+      "description": "Yellow piece in red's den should be minimum score",
+      "board": {
+        "1_1": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.LION"
+        },
+        "3_8": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.RAT"
+        }
+      },
+      "evaluatingPlayer": "PLAYERS.RED",
+      "expectedScore": -1000
+    }
+  ]
+}
