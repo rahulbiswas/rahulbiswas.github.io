@@ -33,6 +33,13 @@ function runMoveValidation(scenario) {
   return isValidMove(fromX, fromY, toX, toY, parsedBoard, movingPiece, debug = true)
 }
 
+function runPositionEvaluation(scenario) {
+  const parsedBoard = parseBoard(scenario.board)
+  const evaluatingPlayer = parseEnumValue(scenario.evaluatingPlayer)
+  const score = window.positionEvaluator.evaluatePosition(parsedBoard, evaluatingPlayer)
+  return Math.round(score)
+}
+
 function describe(description, testSuite) {
   const suiteElement = document.createElement('div')
   suiteElement.className = 'suite'
@@ -50,15 +57,24 @@ function it(description, scenario) {
         <div class="setup">
             <div>Board:</div>
             <pre>${JSON.stringify(scenario.board, null, 2)}</pre>
-            <div>Start: ${scenario.startPos}</div>
+            ${scenario.startPos ? `<div>Start: ${scenario.startPos}</div>
             <div>End: ${scenario.endPos}</div>
-            <div>Current Player: ${scenario.currentPlayer}</div>
+            <div>Current Player: ${scenario.currentPlayer}</div>` : 
+            `<div>Evaluating Player: ${scenario.evaluatingPlayer}</div>
+            <div>Expected Score: ${scenario.expectedScore}</div>`}
         </div>
     `
-  console.log(setupHtml + '\n' + description)
+  
   try {
-    const isValid = runMoveValidation(scenario)
-    assert(isValid === scenario.expectedValid)
+    const result = scenario.startPos ? 
+      runMoveValidation(scenario) : 
+      runPositionEvaluation(scenario)
+    
+    const expected = scenario.startPos ? 
+      scenario.expectedValid : 
+      scenario.expectedScore
+    
+    assert(result === expected)
     testElement.innerHTML = `
             ${setupHtml}
             <p class="pass">✓ ${description}</p>

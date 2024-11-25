@@ -2,8 +2,11 @@ const testFiles = [
   'basic_move_tests.json',
   'capture_tests.json',
   'water_tests.json',
-  'trap_tests.json'
+  'trap_tests.json',
+  'position_evaluation_tests.json'
 ]
+
+const timestamp = Date.now()
 
 async function loadTests() {
   for (const file of testFiles) {
