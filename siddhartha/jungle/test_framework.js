@@ -66,6 +66,10 @@ function describe(description, testSuite) {
         <span class="pass-count">${passCount} passed</span>, 
         <span class="fail-count">${failCount} failed</span>
     )`
+
+    if (failCount === 0) {
+        suiteElement.classList.add('collapsed')
+    }
 }
 
 function it(description, scenario) {
@@ -116,6 +120,7 @@ function it(description, scenario) {
         `
     }
 
+    testElement.classList.add('collapsed')
     testElement.insertBefore(headerElement, testElement.firstChild)
     currentSuite.appendChild(testElement)
 }
