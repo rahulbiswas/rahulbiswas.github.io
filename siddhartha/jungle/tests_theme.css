@@ -13,26 +13,13 @@
 body {
     background-color: var(--bauhaus-cream);
     color: var(--bauhaus-gray);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-.suite { 
-    margin-left: 20px;
-    margin-bottom: 30px;
 }
 
 .suite h2 {
-    cursor: pointer;
-    user-select: none;
-    padding: 8px 15px;
-    border-radius: 0;
-    transition: all 0.2s;
     background-color: var(--bauhaus-blue);
     color: var(--bauhaus-cream);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
     border-left: 5px solid var(--bauhaus-yellow);
+    transition: all 0.2s;
 }
 
 .suite h2:hover {
@@ -41,25 +28,10 @@ body {
 }
 
 .suite h2:before {
-    content: '▼';
-    display: inline-block;
-    margin-right: 10px;
     color: var(--bauhaus-yellow);
-    transition: transform 0.2s;
 }
 
-.suite.collapsed h2:before {
-    transform: rotate(-90deg);
-}
-
-.suite.collapsed .test {
-    display: none;
-}
-
-.test { 
-    margin-left: 40px; 
-    margin-bottom: 20px;
-    padding: 15px;
+.test {
     background-color: white;
     border: none;
     border-left: 4px solid var(--bauhaus-light-gray);
@@ -80,27 +52,6 @@ body {
     box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
 }
 
-.test-header {
-    cursor: pointer;
-    user-select: none;
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    border-radius: 0;
-    font-weight: 500;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    color: var(--bauhaus-gray);
-}
-
-.test-header:before {
-    content: '▼';
-    display: inline-block;
-    margin-right: 8px;
-    font-size: 0.8em;
-    transition: transform 0.2s;
-}
-
 .test.pass .test-header:before {
     color: var(--status-pass);
 }
@@ -109,28 +60,12 @@ body {
     color: var(--status-fail);
 }
 
-.test.collapsed .test-header:before {
-    transform: rotate(-90deg);
-}
-
-.test.collapsed .setup,
-.test.collapsed p {
-    display: none;
-}
-
 .setup {
     background-color: var(--bauhaus-cream);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 0;
-    font-family: 'Courier New', monospace;
     color: var(--bauhaus-gray);
 }
 
 .setup pre {
-    max-height: 300px;
-    overflow-y: auto;
-    padding: 10px;
     background-color: white;
     border-left: 3px solid var(--bauhaus-yellow);
 }
@@ -146,11 +81,7 @@ body {
 }
 
 .suite .summary {
-    font-size: 0.9em;
-    margin-left: 15px;
     color: var(--bauhaus-cream);
-    padding: 2px 8px;
-    border-radius: 0;
     background-color: rgba(255,255,255,0.1);
 }
 
@@ -180,14 +111,6 @@ body {
 }
 
 #testResults:before {
-    content: 'TEST RESULTS';
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
     color: var(--bauhaus-blue);
-    padding: 20px;
-    margin-bottom: 20px;
     border-left: 8px solid var(--bauhaus-yellow);
-    letter-spacing: 2px;
 }
