@@ -13,9 +13,9 @@ async function loadTests() {
     const response = await fetch('tests/' + file + '?t=' + timestamp)
     const testSuite = await response.json()
 
-    describe(testSuite.description, function () {
+    window.testRunner.describe(testSuite.description, function () {
       testSuite.tests.forEach(scenario => {
-        it(scenario.description, scenario)
+        window.testRunner.it(scenario.description, scenario)
       })
     })
   }
