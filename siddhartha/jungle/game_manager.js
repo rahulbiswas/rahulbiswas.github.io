@@ -44,7 +44,7 @@ class GameManager {
 
   handleMove(fromKey, toKey, pieces, callbacks, onMoveComplete) {
     const movingPiece = pieces[fromKey]
-    if (!isValidMove(...fromKey.split('_'), ...toKey.split('_'), pieces, movingPiece, true)) {
+    if (!isValidMove(...fromKey.split('_'), ...toKey.split('_'), pieces, movingPiece, false)) {
       callbacks.setSelectedPieceKey(null)
       return
     }

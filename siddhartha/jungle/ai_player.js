@@ -69,40 +69,49 @@ class AIPlayer {
   }
 
   getAIMove(pieces, player) {
-    console.group('AI Move Evaluation');
-    console.log('Evaluating moves for player:', player === PLAYERS.RED ? 'RED' : 'YELLOW');
+    console.group('AI Move Evaluation')
+    console.log('Evaluating moves for player:', player === PLAYERS.RED ? 'RED' : 'YELLOW')
     
-    const possibleMoves = this.getPossibleMoves(pieces, player);
-    const moveScores = [];
+    let bestMove = null
+    
+    for (let depth = 1; depth <= 3; depth++) {
+      console.log(`Searching to depth ${depth}...`)
+      const [move, score] = this.minimax(pieces, depth, true, player)
+      bestMove = move
+
+      if (score >= this.evaluator.WINNING_SCORE) {
+        console.log(`Found winning move at depth ${depth}`)
+        break
+      }
+    }
+
+    const moveScores = []
+    const possibleMoves = this.getPossibleMoves(pieces, player)
 
     for (const move of possibleMoves) {
-        const newPieces = this.makeMove(pieces, move);
-        const [_, score] = this.minimax(newPieces, 2, false, player);
+        const newPieces = this.makeMove(pieces, move)
+        const [_, score] = this.minimax(newPieces, 2, false, player)
         
-        const fromPiece = pieces[move.from];
+        const fromPiece = pieces[move.from]
         moveScores.push({
             from: move.from,
             to: move.to,
             piece: `${fromPiece.player === PLAYERS.RED ? 'RED' : 'YELLOW'} ${Object.keys(PIECES).find(key => PIECES[key] === fromPiece.animal)}`,
             score: score
-        });
+        })
     }
 
-    // Sort moves by score and log them
-    moveScores.sort((a, b) => b.score - a.score);
+    moveScores.sort((a, b) => b.score - a.score)
     moveScores.forEach(move => {
         console.log(
             `${move.piece} ${move.from} → ${move.to}: ${move.score}`
-        );
-    });
-
-    const bestMove = moveScores.length > 0 ? 
-        {from: moveScores[0].from, to: moveScores[0].to} : null;
+        )
+    })
     
-    console.log('Selected move:', bestMove);
-    console.groupEnd();
+    console.log('Selected move:', bestMove)
+    console.groupEnd()
     
-    return bestMove;
+    return bestMove
   }
 }
 
