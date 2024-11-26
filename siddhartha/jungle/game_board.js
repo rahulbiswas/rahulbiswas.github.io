@@ -1,5 +1,14 @@
 const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
   const [debugMode, setDebugMode] = React.useState(false)
+  const [lastMoveTime, setLastMoveTime] = React.useState(null)
+
+  React.useEffect(() => {
+    const handleAIMoveTime = (event) => {
+      setLastMoveTime(event.detail.time)
+    }
+    window.addEventListener('ai-move-time', handleAIMoveTime)
+    return () => window.removeEventListener('ai-move-time', handleAIMoveTime)
+  }, [])
 
   return React.createElement('svg', {viewBox: '0 0 100 67'},
     React.createElement('rect', {
@@ -9,6 +18,43 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
     }),
 
     React.createElement(DebugButton, {debugMode, setDebugMode}),
+
+    React.createElement('g', {transform: 'translate(3, 2)'},
+      React.createElement('rect', {
+        width: '17',
+        height: '11',
+        rx: '2',
+        fill: '#98FB98',
+        stroke: '#2F4F4F',
+        strokeWidth: '0.5'
+      }),
+      React.createElement('text', {
+        x: '8.5',
+        y: '7.5',
+        fill: '#4A4A4A',
+        fontSize: '3',
+        fontFamily: 'Impact, Arial Black, sans-serif',
+        textAnchor: 'middle'
+      }, 'BACK')
+    ),
+
+    React.createElement('text', {
+      x: '3',
+      y: '12',
+      fill: '#4A4A4A',
+      fontSize: '2',
+      fontFamily: 'Arial',
+      textAnchor: 'left'
+    }, `AI Depth: ${window.aiPlayer.maxDepth}`),
+
+    lastMoveTime && React.createElement('text', {
+      x: '3',
+      y: '16',
+      fill: '#4A4A4A',
+      fontSize: '2',
+      fontFamily: 'Arial',
+      textAnchor: 'left'
+    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`),
 
     React.createElement('g', {transform: `translate(${BOARD_UPPER_LEFT_X}, ${BOARD_UPPER_LEFT_Y})`},
       Array.from({length: 9}, (_, row) =>
@@ -46,34 +92,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
         })
       )
     ),
-
-    React.createElement('g', {transform: 'translate(3, 2)'},
-      React.createElement('rect', {
-        width: '17',
-        height: '11',
-        rx: '2',
-        fill: '#98FB98',
-        stroke: '#2F4F4F',
-        strokeWidth: '0.5'
-      }),
-      React.createElement('text', {
-        x: '8.5',
-        y: '7.5',
-        fill: '#4A4A4A',
-        fontSize: '3',
-        fontFamily: 'Impact, Arial Black, sans-serif',
-        textAnchor: 'middle'
-      }, 'BACK')
-    ),
-
-    React.createElement('text', {
-      x: '3',
-      y: '12',
-      fill: '#4A4A4A',
-      fontSize: '2',
-      fontFamily: 'Arial',
-      textAnchor: 'left'
-    }, `AI Depth: ${window.aiPlayer.maxDepth}`),
 
     React.createElement(DebugOverlay, {debugMode}),
     window.boardRenderer.renderPieces(pieces),
