@@ -3,7 +3,7 @@ class MinimaxEngine {
     this.evaluator = evaluator
   }
 
-  minimax(pieces, depth, isMaximizingPlayer, player) {
+  minimax(pieces, depth, isMaximizingPlayer, player, alpha = -Infinity, beta = Infinity) {
     if (depth === 0 || this.isGameOver(pieces)) {
       return [null, this.evaluator.evaluatePosition(pieces, player)]
     }
@@ -13,17 +13,27 @@ class MinimaxEngine {
 
     let bestMove = null
     let bestEval = isMaximizingPlayer ? -Infinity : Infinity
-    const compareFn = isMaximizingPlayer ?
-      (a, b) => a > b :
-      (a, b) => a < b
 
     for (const move of possibleMoves) {
       const newPieces = this.makeMove(pieces, move)
-      const [_, ev] = this.minimax(newPieces, depth - 1, !isMaximizingPlayer, player)
+      const [_, ev] = this.minimax(newPieces, depth - 1, !isMaximizingPlayer, player, alpha, beta)
 
-      if (compareFn(ev, bestEval)) {
-        bestEval = ev
-        bestMove = move
+      if (isMaximizingPlayer) {
+        if (ev > bestEval) {
+          bestEval = ev
+          bestMove = move
+        }
+        alpha = Math.max(alpha, bestEval)
+      } else {
+        if (ev < bestEval) {
+          bestEval = ev
+          bestMove = move
+        }
+        beta = Math.min(beta, bestEval)
+      }
+
+      if (beta <= alpha) {
+        break
       }
     }
 
