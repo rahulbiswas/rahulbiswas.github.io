@@ -66,6 +66,15 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       }, 'BACK')
     ),
 
+    React.createElement('text', {
+      x: '3',
+      y: '12',
+      fill: '#4A4A4A',
+      fontSize: '2',
+      fontFamily: 'Arial',
+      textAnchor: 'left'
+    }, `AI Depth: ${window.aiPlayer.maxDepth}`),
+
     React.createElement(DebugOverlay, {debugMode}),
     window.boardRenderer.renderPieces(pieces),
     window.boardRenderer.renderMoveIndicators(lastMove)

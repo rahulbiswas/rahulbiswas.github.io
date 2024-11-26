@@ -1,6 +1,10 @@
 class AIPlayer {
   constructor(engine) {
     this.engine = engine
+    const urlParams = new URLSearchParams(window.location.search)
+    this.maxDepth = parseInt(urlParams.get('depth')) || 3
+    this.maxDepth = Math.min(Math.max(this.maxDepth, 1), 6)
+    console.log(`AI configured with max search depth: ${this.maxDepth}`)
   }
 
   getAIMove(pieces, player) {
@@ -9,7 +13,7 @@ class AIPlayer {
     
     let bestMove = null
     
-    for (let depth = 1; depth <= 3; depth++) {
+    for (let depth = 1; depth <= this.maxDepth; depth++) {
       console.group(`Searching to depth ${depth}...`)
       
       const possibleMoves = this.engine.getPossibleMoves(pieces, player)
