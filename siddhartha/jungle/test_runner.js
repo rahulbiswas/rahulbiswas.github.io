@@ -1,44 +1,4 @@
-const testResults = document.getElementById('testResults')
 let currentSuite
-
-function parseEnumValue(enumString) {
-  const [enumType, enumValue] = enumString.split('.')
-  return window[enumType][enumValue]
-}
-
-function parsePiece(piece) {
-  return {
-    player: parseEnumValue(piece.player),
-    animal: parseEnumValue(piece.animal)
-  }
-}
-
-function parseBoard(board) {
-  const parsedBoard = {}
-  for (const [pos, piece] of Object.entries(board)) {
-    parsedBoard[pos] = parsePiece(piece)
-  }
-  return parsedBoard
-}
-
-function runMoveValidation(scenario) {
-  const [fromX, fromY] = scenario.startPos.split('_').map(Number)
-  const [toX, toY] = scenario.endPos.split('_').map(Number)
-  const parsedBoard = parseBoard(scenario.board)
-  const currentPlayer = parseEnumValue(scenario.currentPlayer)
-  const movingPiece = parsedBoard[scenario.startPos]
-  if (movingPiece?.player !== currentPlayer) {
-    return false
-  }
-  return isValidMove(fromX, fromY, toX, toY, parsedBoard, movingPiece, debug = true)
-}
-
-function runPositionEvaluation(scenario) {
-  const parsedBoard = parseBoard(scenario.board)
-  const evaluatingPlayer = parseEnumValue(scenario.evaluatingPlayer)
-  const score = window.positionEvaluator.evaluatePosition(parsedBoard, evaluatingPlayer)
-  return Math.round(score)
-}
 
 function describe(description, testSuite) {
     const suiteElement = document.createElement('div')
@@ -98,14 +58,14 @@ function it(description, scenario) {
     
     try {
         const result = scenario.startPos ? 
-            runMoveValidation(scenario) : 
-            runPositionEvaluation(scenario)
+            window.testCore.runMoveValidation(scenario) : 
+            window.testCore.runPositionEvaluation(scenario)
         
         const expected = scenario.startPos ? 
             scenario.expectedValid : 
             scenario.expectedScore
         
-        assert(result === expected)
+        window.testCore.assert(result === expected)
         testElement.classList.add('pass')
         testElement.innerHTML += `
             <p class="pass">✓ ${description}</p>
@@ -125,8 +85,7 @@ function it(description, scenario) {
     currentSuite.appendChild(testElement)
 }
 
-function assert(condition, message = 'Assertion failed') {
-  if (!condition) {
-    throw new Error(message)
-  }
+window.testRunner = {
+    describe,
+    it
 }
