@@ -10,7 +10,14 @@ const JungleGame = () => {
   React.useEffect(() => {
     if (!isPlayerTurn && !winner) {
       const timeoutId = setTimeout(() => {
+        const startTime = performance.now()
         const aiMove = window.aiPlayer.getAIMove(pieces, PLAYERS.YELLOW)
+        const moveTime = performance.now() - startTime
+        
+        window.dispatchEvent(new CustomEvent('ai-move-time', {
+          detail: { time: moveTime }
+        }))
+        
         if (aiMove) {
           gameManager.handleMove(
             aiMove.from,

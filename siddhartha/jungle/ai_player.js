@@ -12,8 +12,10 @@ class AIPlayer {
     console.log('Evaluating moves for player:', player === PLAYERS.RED ? 'RED' : 'YELLOW')
     
     let bestMove = null
+    const startTime = performance.now()
     
     for (let depth = 1; depth <= this.maxDepth; depth++) {
+      const iterationStart = performance.now()
       console.group(`Searching to depth ${depth}...`)
       
       const possibleMoves = this.engine.getPossibleMoves(pieces, player)
@@ -35,6 +37,9 @@ class AIPlayer {
       }
 
       moveScores.sort((a, b) => b.score - a.score)
+      const iterationTime = performance.now() - iterationStart
+      
+      console.log(`Depth ${depth} completed in ${iterationTime.toFixed(2)}ms`)
       moveScores.forEach(move => {
         console.log(
           `${move.piece} ${move.from} → ${move.to}: ${move.score}`
@@ -52,6 +57,8 @@ class AIPlayer {
       }
     }
     
+    const totalTime = performance.now() - startTime
+    console.log(`Total computation time: ${totalTime.toFixed(2)}ms`)
     console.log('Selected move:', bestMove)
     console.groupEnd()
     
