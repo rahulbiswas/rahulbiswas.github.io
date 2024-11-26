@@ -1,11 +1,17 @@
 class MinimaxEngine {
   constructor(evaluator) {
     this.evaluator = evaluator
+    this.cache = new Map()
   }
 
   minimax(pieces, depth, isMaximizingPlayer, player, alpha = -Infinity, beta = Infinity) {
     if (depth === 0 || this.isGameOver(pieces)) {
       return [null, this.evaluator.evaluatePosition(pieces, player)]
+    }
+
+    const cacheKey = JSON.stringify([pieces, depth, isMaximizingPlayer])
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey)
     }
 
     const possibleMoves = this.getPossibleMoves(pieces,
@@ -37,7 +43,9 @@ class MinimaxEngine {
       }
     }
 
-    return [bestMove, bestEval]
+    const result = [bestMove, bestEval]
+    this.cache.set(cacheKey, result)
+    return result
   }
 
   makeMove(pieces, move) {
