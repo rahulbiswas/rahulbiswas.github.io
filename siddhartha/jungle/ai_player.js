@@ -69,8 +69,40 @@ class AIPlayer {
   }
 
   getAIMove(pieces, player) {
-    const [bestMove, _] = this.minimax(pieces, 3, true, player)
-    return bestMove
+    console.group('AI Move Evaluation');
+    console.log('Evaluating moves for player:', player === PLAYERS.RED ? 'RED' : 'YELLOW');
+    
+    const possibleMoves = this.getPossibleMoves(pieces, player);
+    const moveScores = [];
+
+    for (const move of possibleMoves) {
+        const newPieces = this.makeMove(pieces, move);
+        const [_, score] = this.minimax(newPieces, 2, false, player);
+        
+        const fromPiece = pieces[move.from];
+        moveScores.push({
+            from: move.from,
+            to: move.to,
+            piece: `${fromPiece.player === PLAYERS.RED ? 'RED' : 'YELLOW'} ${Object.keys(PIECES).find(key => PIECES[key] === fromPiece.animal)}`,
+            score: score
+        });
+    }
+
+    // Sort moves by score and log them
+    moveScores.sort((a, b) => b.score - a.score);
+    moveScores.forEach(move => {
+        console.log(
+            `${move.piece} ${move.from} → ${move.to}: ${move.score}`
+        );
+    });
+
+    const bestMove = moveScores.length > 0 ? 
+        {from: moveScores[0].from, to: moveScores[0].to} : null;
+    
+    console.log('Selected move:', bestMove);
+    console.groupEnd();
+    
+    return bestMove;
   }
 }
 
