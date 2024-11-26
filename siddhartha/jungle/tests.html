@@ -6,15 +6,15 @@
     <title>Animal Chess Tests</title>
     <style>
         :root {
-            --bauhaus-red: #E63946;
-            --bauhaus-yellow: #F7B538;
-            --bauhaus-blue: #1D3557;
-            --bauhaus-light-blue: #457B9D;
-            --bauhaus-cream: #F1FAEE;
-            --bauhaus-gray: #2F3542;
-            --bauhaus-light-gray: #ABB2BF;
-            --status-pass: #06D6A0;
-            --status-fail: #E63946;
+            --bauhaus-red: #D91F35;
+            --bauhaus-yellow: #E6A700;
+            --bauhaus-blue: #182B47;
+            --bauhaus-light-blue: #2B557A;
+            --bauhaus-cream: #F7F3E3;
+            --bauhaus-gray: #1A1A1A;
+            --bauhaus-light-gray: #666666;
+            --status-pass: #0A8A5C;
+            --status-fail: #D91F35;
         }
 
         body {
@@ -97,6 +97,7 @@
             transition: all 0.2s;
             display: flex;
             align-items: center;
+            color: var(--bauhaus-gray);
         }
 
         .test-header:before {
@@ -130,6 +131,7 @@
             margin: 10px 0;
             border-radius: 0;
             font-family: 'Courier New', monospace;
+            color: var(--bauhaus-gray);
         }
 
         .setup pre {
@@ -160,11 +162,11 @@
         }
 
         .suite .summary .pass-count {
-            color: var(--status-pass);
+            color: #2EE59D;
         }
 
         .suite .summary .fail-count {
-            color: var(--bauhaus-red);
+            color: #FF9999;
         }
 
         ::-webkit-scrollbar {
