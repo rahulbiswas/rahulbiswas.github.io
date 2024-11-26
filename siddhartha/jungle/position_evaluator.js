@@ -10,7 +10,14 @@ class PositionEvaluator {
     [PIECES.ELEPHANT]: 7
   }
 
+  WINNING_SCORE = 1000
+
   evaluatePosition(pieces, player) {
+    const winner = window.checkWinCondition(pieces)
+    if (winner !== null) {
+      return winner === player ? this.WINNING_SCORE : -this.WINNING_SCORE
+    }
+
     let score = 0
 
     Object.entries(pieces).forEach(([pos, piece]) => {
