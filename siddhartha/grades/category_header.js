@@ -42,3 +42,5 @@ const CategoryHeader = ({category, totalEarned, totalPossible, categoryPercentag
       ]
    )
 }
+
+window.CategoryHeader = CategoryHeader
