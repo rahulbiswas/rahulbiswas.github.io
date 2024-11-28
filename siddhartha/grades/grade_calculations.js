@@ -32,15 +32,15 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
   categories.forEach((category) => {
     let assignments = [...category.assignments]
     
-    // Add hypothetical assignments if they exist
     if (hypotheticalAssignments[category.name]) {
       assignments = [...assignments, ...hypotheticalAssignments[category.name]]
     }
 
-    // Special handling for AP Microeconomics Quizzes
     if (courseName === 'AP Microeconomics' && category.name === 'Quizzes') {
-      // Find and remove the lowest non-pending quiz
-      const completedQuizzes = assignments.filter(a => a.status !== 'pending')
+      const completedQuizzes = assignments.filter(a => 
+        (a.status !== 'pending' && a.status !== 'exempt') || 
+        !('status' in a)
+      )
       if (completedQuizzes.length > 0) {
         const lowestQuiz = completedQuizzes.reduce((lowest, current) =>
           (current.score / current.total) < (lowest.score / lowest.total) ? current : lowest
