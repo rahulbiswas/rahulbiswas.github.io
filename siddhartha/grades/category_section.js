@@ -67,10 +67,10 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
           React.createElement(
             'button',
             {
-              className: 'mt-2 text-sm text-blue-500 hover:text-blue-700',
+              className: 'mt-2 text-sm text-blue-500 hover:text-blue-700 whitespace-normal text-left',
               onClick: onAddHypothetical
             },
-            `Add Hypothetical ${category.name.slice(0, -1)}`
+            `Add Item to Hypothetical ${category.name}`
           )
         ]
       ),
