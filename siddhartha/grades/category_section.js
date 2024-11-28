@@ -1,10 +1,14 @@
 const CategorySection = ({category, idx, courseName, hypotheticalAssignments, onAddHypothetical, onUpdateHypothetical, onDeleteHypothetical}) => {
   const isQuizCategory = category.name === 'Quizzes' && courseName === 'AP Microeconomics'
   let assignments = [...category.assignments]
+  let allAssignments = [...assignments, ...hypotheticalAssignments]
   let droppedQuiz = null
 
   if (isQuizCategory) {
-    const completedQuizzes = assignments.filter(a => a.status !== 'pending')
+    const completedQuizzes = allAssignments.filter(a => 
+      (a.status !== 'pending' && a.status !== 'exempt') || 
+      !('status' in a)
+    )
     if (completedQuizzes.length > 0) {
       droppedQuiz = completedQuizzes.reduce((lowest, current) =>
         (current.score / current.total) < (lowest.score / lowest.total) ? current : lowest
@@ -13,20 +17,15 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
   }
 
   const activeAssignments = isQuizCategory ?
-    assignments.filter(a => a !== droppedQuiz) :
-    assignments
+    allAssignments.filter(a => a !== droppedQuiz) :
+    allAssignments
 
-  const allAssignments = [
-    ...activeAssignments,
-    ...hypotheticalAssignments
-  ]
+  const categoryPercentage = calculateAssignmentPercentage(activeAssignments)
 
-  const categoryPercentage = calculateAssignmentPercentage(allAssignments)
-
-  const totalEarned = allAssignments
+  const totalEarned = activeAssignments
     .filter(a => a.status !== 'pending' && a.status !== 'exempt')
     .reduce((sum, a) => sum + Number(a.score), 0)
-  const totalPossible = allAssignments
+  const totalPossible = activeAssignments
     .filter(a => a.status !== 'pending' && a.status !== 'exempt')
     .reduce((sum, a) => sum + Number(a.total), 0)
 
@@ -61,7 +60,8 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
               key: `hypo-${aIdx}`,
               assignment,
               onUpdate: (updates) => onUpdateHypothetical(aIdx, updates),
-              onDelete: () => onDeleteHypothetical(aIdx)
+              onDelete: () => onDeleteHypothetical(aIdx),
+              isDropped: assignment === droppedQuiz
             })
           ),
           React.createElement(

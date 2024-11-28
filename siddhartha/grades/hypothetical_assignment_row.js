@@ -1,8 +1,8 @@
-const HypotheticalAssignmentRow = ({assignment, onUpdate, onDelete}) => {
+const HypotheticalAssignmentRow = ({assignment, onUpdate, onDelete, isDropped}) => {
    return React.createElement(
       'div',
       {
-         className: 'text-sm flex justify-between py-1 bg-blue-50 rounded px-2',
+         className: `text-sm flex justify-between py-1 bg-blue-50 rounded px-2 ${isDropped ? 'opacity-50' : ''}`,
       },
       [
          React.createElement(
@@ -10,7 +10,16 @@ const HypotheticalAssignmentRow = ({assignment, onUpdate, onDelete}) => {
             {
                className: 'text-gray-700 italic',
             },
-            assignment.name
+            [
+               assignment.name,
+               isDropped && React.createElement(
+                  'span',
+                  {
+                     className: 'ml-2 text-xs text-gray-500 no-underline',
+                  },
+                  '(Dropped - Lowest Quiz)'
+               )
+            ]
          ),
          React.createElement(
             'div',
