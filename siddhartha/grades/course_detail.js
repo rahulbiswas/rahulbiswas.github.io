@@ -68,6 +68,50 @@ class CourseDetail extends React.Component {
           `${course.name} - ${courseGrade.toFixed(2)}%`,
         ),
         React.createElement(GradeProgress, {grade: courseGrade}),
+        FINAL_EXAM_CONFIG[course.name] && React.createElement(
+          'div',
+          { className: 'mt-4 p-4 bg-gray-50 rounded-lg' },
+          [
+            React.createElement(
+              'h3',
+              { className: 'font-bold mb-3 text-lg' },
+              'Required Final Exam Scores'
+            ),
+            React.createElement(
+              'div',
+              { className: 'text-sm text-gray-600 mb-2' },
+              `Final Exam is worth ${FINAL_EXAM_CONFIG[course.name]}% of your final grade`
+            ),
+            Object.entries(GRADE_CUTOFFS).map(([grade, cutoff]) => {
+              const required = calculateRequiredFinalScore(courseGrade, cutoff, FINAL_EXAM_CONFIG[course.name])
+              return React.createElement(
+                'div',
+                { 
+                  className: 'py-1 flex justify-between items-center border-b last:border-0 border-gray-200',
+                  key: grade 
+                },
+                [
+                  React.createElement(
+                    'span',
+                    { className: 'font-medium' },
+                    `For ${grade} (${cutoff}%):`
+                  ),
+                  React.createElement(
+                    'span',
+                    { 
+                      className: required <= 100 
+                        ? 'font-mono' 
+                        : 'text-red-500 font-medium'
+                    },
+                    required <= 100 
+                      ? `${Math.max(0, required).toFixed(1)}% needed`
+                      : 'Not possible'
+                  )
+                ]
+              )
+            })
+          ]
+        ),
         React.createElement(
           'div',
           {
