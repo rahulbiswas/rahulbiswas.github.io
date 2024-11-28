@@ -1,4 +1,4 @@
-const CategorySection = ({category, idx, courseName}) => {
+const CategorySection = ({category, idx, courseName, hypotheticalAssignments, onAddHypothetical, onUpdateHypothetical, onDeleteHypothetical}) => {
   const isQuizCategory = category.name === 'Quizzes' && courseName === 'AP Microeconomics'
   let assignments = [...category.assignments]
   let droppedQuiz = null
@@ -16,15 +16,19 @@ const CategorySection = ({category, idx, courseName}) => {
     assignments.filter(a => a !== droppedQuiz) :
     assignments
 
-  const categoryPercentage = calculateAssignmentPercentage(activeAssignments)
+  const allAssignments = [
+    ...activeAssignments,
+    ...hypotheticalAssignments
+  ]
 
-  // Calculate total points earned and possible
-  const totalEarned = activeAssignments
+  const categoryPercentage = calculateAssignmentPercentage(allAssignments)
+
+  const totalEarned = allAssignments
     .filter(a => a.status !== 'pending' && a.status !== 'exempt')
-    .reduce((sum, a) => sum + a.score, 0)
-  const totalPossible = activeAssignments
+    .reduce((sum, a) => sum + Number(a.score), 0)
+  const totalPossible = allAssignments
     .filter(a => a.status !== 'pending' && a.status !== 'exempt')
-    .reduce((sum, a) => sum + a.total, 0)
+    .reduce((sum, a) => sum + Number(a.total), 0)
 
   return React.createElement(
     'div',
@@ -44,13 +48,31 @@ const CategorySection = ({category, idx, courseName}) => {
         {
           className: 'ml-4 mt-2',
         },
-        assignments.map((assignment, aIdx) =>
-          React.createElement(AssignmentRow, {
-            key: aIdx,
-            assignment,
-            isDropped: assignment === droppedQuiz
-          })
-        )
+        [
+          ...assignments.map((assignment, aIdx) =>
+            React.createElement(AssignmentRow, {
+              key: `real-${aIdx}`,
+              assignment,
+              isDropped: assignment === droppedQuiz
+            })
+          ),
+          ...hypotheticalAssignments.map((assignment, aIdx) =>
+            React.createElement(HypotheticalAssignmentRow, {
+              key: `hypo-${aIdx}`,
+              assignment,
+              onUpdate: (updates) => onUpdateHypothetical(aIdx, updates),
+              onDelete: () => onDeleteHypothetical(aIdx)
+            })
+          ),
+          React.createElement(
+            'button',
+            {
+              className: 'mt-2 text-sm text-blue-500 hover:text-blue-700',
+              onClick: onAddHypothetical
+            },
+            `Add Hypothetical ${category.name.slice(0, -1)}`
+          )
+        ]
       ),
     ],
   )

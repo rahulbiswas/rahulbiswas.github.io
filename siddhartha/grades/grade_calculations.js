@@ -13,6 +13,8 @@ const calculateAssignmentPercentage = (assignments) => {
     0
   )
 
+  if (totalPoints === 0) return 0
+
   const earnedPoints = validAssignments.reduce(
     (sum, assignment) => sum + Number(assignment.score),
     0
@@ -21,7 +23,7 @@ const calculateAssignmentPercentage = (assignments) => {
   return (earnedPoints / totalPoints) * 100
 }
 
-const calculateCourseGrade = (categories, courseName) => {
+const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = {}) => {
   if (!categories || categories.length === 0) return 0
 
   let totalWeight = 0
@@ -29,6 +31,11 @@ const calculateCourseGrade = (categories, courseName) => {
 
   categories.forEach((category) => {
     let assignments = [...category.assignments]
+    
+    // Add hypothetical assignments if they exist
+    if (hypotheticalAssignments[category.name]) {
+      assignments = [...assignments, ...hypotheticalAssignments[category.name]]
+    }
 
     // Special handling for AP Microeconomics Quizzes
     if (courseName === 'AP Microeconomics' && category.name === 'Quizzes') {
