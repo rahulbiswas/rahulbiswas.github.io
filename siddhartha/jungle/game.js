@@ -5,6 +5,7 @@ const JungleGame = () => {
   const [lastMove, setLastMove] = React.useState(null)
   const [winner, setWinner] = React.useState(null)
   const [isPlayerTurn, setIsPlayerTurn] = React.useState(true)
+  const [validMoves, setValidMoves] = React.useState(new Set())
 
   React.useEffect(() => {
     if (!isPlayerTurn && !winner) {
@@ -42,11 +43,29 @@ const JungleGame = () => {
     }
     
     const handleSelectPiece = (event) => {
-      setSelectedPieceKey(event.detail.position)
+      const position = event.detail.position
+      setSelectedPieceKey(position)
+      if (position) {
+        const [fromX, fromY] = position.split('_').map(Number)
+        const movingPiece = pieces[position]
+        const newValidMoves = new Set()
+        
+        for (let toX = 0; toX < BOARD_WIDTH; toX++) {
+          for (let toY = 0; toY < BOARD_HEIGHT; toY++) {
+            if (window.isValidMove(fromX, fromY, toX, toY, pieces, movingPiece)) {
+              newValidMoves.add(`${toX}_${toY}`)
+            }
+          }
+        }
+        setValidMoves(newValidMoves)
+      } else {
+        setValidMoves(new Set())
+      }
     }
     
     const handleDeselectPiece = () => {
       setSelectedPieceKey(null)
+      setValidMoves(new Set())
     }
     
     const handleMakeMove = (event) => {
@@ -57,6 +76,7 @@ const JungleGame = () => {
         {setPieces, setSelectedPieceKey, setLastMove, setWinner},
         () => setIsPlayerTurn(false)
       )
+      setValidMoves(new Set())
     }
 
     window.addEventListener('back-to-menu', handleBackToMenu)
@@ -87,6 +107,7 @@ const JungleGame = () => {
     setLastMove(null)
     setWinner(null)
     setIsPlayerTurn(true)
+    setValidMoves(new Set())
   }
 
   return React.createElement('div', {
@@ -103,7 +124,8 @@ const JungleGame = () => {
           pieces: pieces,
           lastMove: lastMove,
           selectedPieceKey: selectedPieceKey,
-          isPlayerTurn: isPlayerTurn
+          isPlayerTurn: isPlayerTurn,
+          validMoves: validMoves
         })
     )
   )

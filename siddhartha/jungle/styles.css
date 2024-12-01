@@ -36,6 +36,24 @@ body, html {
     filter: brightness(1.1);
 }
 
+.square.valid-move {
+    filter: brightness(1.2);
+}
+
+.square.valid-move:hover {
+    filter: brightness(1.3);
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.valid-move circle {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
 .back-button {
     position: absolute;
     top: 10px;

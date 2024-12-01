@@ -106,6 +106,25 @@ class BoardRenderer {
       })
     ]
   }
+
+  renderValidMoveIndicators(validMoves) {
+    if (!validMoves?.size) return null
+    
+    return Array.from(validMoves).map(pos => {
+      const [x, y] = pos.split('_').map(Number)
+      return React.createElement('circle', {
+        key: `move-indicator-${pos}`,
+        cx: x + 0.5,
+        cy: y + 0.5,
+        r: 0.15,
+        fill: 'rgba(255, 255, 255, 0.3)',
+        stroke: 'rgba(255, 255, 255, 0.5)',
+        strokeWidth: '0.05',
+        className: 'move-indicator',
+        pointerEvents: 'none'
+      })
+    })
+  }
 }
 
 window.boardRenderer = new BoardRenderer()
