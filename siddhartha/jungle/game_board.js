@@ -10,6 +10,9 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
     return () => window.removeEventListener('ai-move-time', handleAIMoveTime)
   }, [])
 
+  const urlParams = new URLSearchParams(window.location.search)
+  debugEnabled = parseInt(urlParams.get('debug')) || 0
+
   return React.createElement('svg', {viewBox: '0 0 100 67'},
     React.createElement('rect', {
       width: '100',
@@ -17,7 +20,7 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       fill: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW
     }),
 
-    React.createElement(DebugButton, {debugMode, setDebugMode}),
+    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null,
 
     React.createElement('g', {transform: 'translate(2, 2)'},
       React.createElement('rect', {
@@ -38,23 +41,23 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       }, 'BACK')
     ),
 
-    React.createElement('text', {
+    debugEnabled ? React.createElement('text', {
       x: '3',
       y: '12',
       fill: '#4A4A4A',
       fontSize: '2',
       fontFamily: 'Arial',
       textAnchor: 'left'
-    }, `AI Depth: ${window.aiPlayer.maxDepth}`),
+    }, `AI Depth: ${window.aiPlayer.maxDepth}`) : null,
 
-    lastMoveTime && React.createElement('text', {
+    debugEnabled ? (lastMoveTime && React.createElement('text', {
       x: '3',
       y: '16',
       fill: '#4A4A4A',
       fontSize: '2',
       fontFamily: 'Arial',
       textAnchor: 'left'
-    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`),
+    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`)) : null,
 
     React.createElement('g', {transform: `translate(${BOARD_UPPER_LEFT_X}, ${BOARD_UPPER_LEFT_Y})`},
       Array.from({length: 9}, (_, row) =>

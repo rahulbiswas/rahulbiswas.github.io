@@ -20,7 +20,7 @@ const DebugOverlay = ({debugMode}) => {
 
 const DebugButton = ({debugMode, setDebugMode}) => {
   return React.createElement('g', {
-      transform: 'translate(80, 2)',
+      transform: 'translate(82, 2)',
       onClick: () => setDebugMode(!debugMode),
       style: {cursor: 'pointer'}
     },
