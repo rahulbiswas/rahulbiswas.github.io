@@ -19,26 +19,8 @@ const DebugOverlay = ({debugMode}) => {
 }
 
 const DebugButton = ({debugMode, setDebugMode}) => {
-  return React.createElement('g', {
-      transform: 'translate(82, 2)',
-      onClick: () => setDebugMode(!debugMode),
-      style: {cursor: 'pointer'}
-    },
-    React.createElement('rect', {
-      width: '17',
-      height: '11',
-      rx: '2',
-      fill: debugMode ? '#A83232' : '#556B2F',
-      stroke: '#2F4F4F',
-      strokeWidth: '0.5'
-    }),
-    React.createElement('text', {
-      x: '8.5',
-      y: '7.5',
-      fill: '#4A4A4A',
-      fontSize: '3',
-      fontFamily: 'Impact, Arial Black, sans-serif',
-      textAnchor: 'middle'
-    }, 'DEBUG')
-  )
+  return React.createElement('button', {
+    className: `debug-button ${debugMode ? 'active' : ''}`,
+    onClick: () => setDebugMode(!debugMode)
+  }, 'DEBUG')
 }

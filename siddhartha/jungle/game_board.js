@@ -1,28 +1,9 @@
 const BackButton = ({}) => {
-  return React.createElement('g', {
-      transform: 'translate(2, 2)',
-      id: 'back-button',
-      onClick: () => window.gameManager.handleBackClick()
-    },
-    React.createElement('rect', {
-      width: '6',
-      height: '4',
-      fill: 'url(#buttonGradient)',
-      stroke: '#2F4F4F',
-      strokeWidth: '0.5',
-      style: {cursor: 'pointer'},
-      id: 'back-button-bg'
-    }),
-    React.createElement('text', {
-      x: '3',
-      y: '3',
-      fill: '#F5E6D3',
-      fontSize: '2',
-      fontFamily: 'Impact, Arial Black, sans-serif',
-      textAnchor: 'middle',
-      id: 'back-button-text'
-    }, 'BACK')
-  )
+  return React.createElement('button', {
+    id: 'back-button',
+    onClick: () => window.gameManager.handleBackClick(),
+    className: 'back-button'
+  }, 'BACK')
 }
 
 const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
@@ -34,7 +15,7 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
     x: 0,
     y: 0
   })
-  
+
   const containerRef = React.useRef(null)
   const MARGIN_PERCENT = 2
 
@@ -84,13 +65,13 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
         const containerRect = containerRef.current.getBoundingClientRect()
         const containerWidth = containerRect.width
         const containerHeight = containerRect.height
-        
+
         const marginX = containerWidth * (MARGIN_PERCENT / 100)
         const marginY = containerHeight * (MARGIN_PERCENT / 100)
         const availableWidth = containerWidth - (2 * marginX)
         const availableHeight = containerHeight - (2 * marginY)
 
-        const boardAspectRatio = 7/9
+        const boardAspectRatio = 7 / 9
         let width, height
 
         if (availableWidth / availableHeight > boardAspectRatio) {
@@ -144,54 +125,44 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
   return React.createElement('div', {
-    id: 'game-board',
-    ref: containerRef,
-    style: {
-      backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
-      transition: 'background-color 0.3s ease',
-      width: '100%',
-      height: '100%',
-      position: 'relative',
-      overflow: 'hidden'
-    }
-  },
-    React.createElement('svg', {
-      viewBox: '0 0 7 9',
+      id: 'game-board',
+      ref: containerRef,
       style: {
-        position: 'absolute',
-        left: `${boardDimensions.x}px`,
-        top: `${boardDimensions.y}px`,
-        width: `${boardDimensions.width}px`,
-        height: `${boardDimensions.height}px`,
-        transition: 'all 0.3s ease'
-      },
-      id: 'board-grid'
+        backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
+        transition: 'background-color 0.3s ease',
+        width: '100%',
+        height: '100%',
+        position: 'relative',
+        overflow: 'hidden'
+      }
     },
+    React.createElement('svg', {
+        viewBox: '0 0 7 9',
+        style: {
+          position: 'absolute',
+          left: `${boardDimensions.x}px`,
+          top: `${boardDimensions.y}px`,
+          width: `${boardDimensions.width}px`,
+          height: `${boardDimensions.height}px`,
+          transition: 'all 0.3s ease'
+        },
+        id: 'board-grid'
+      },
       renderSquares(),
       React.createElement(DebugOverlay, {debugMode}),
       window.boardRenderer.renderPieces(pieces, handleSquareClick),
       window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
     ),
 
-    debugEnabled && React.createElement(DebugButton, {debugMode, setDebugMode}),
     React.createElement(BackButton),
-    debugEnabled && React.createElement('text', {
-      x: '3',
-      y: '12',
-      fill: '#4A4A4A',
-      fontSize: '2',
-      fontFamily: 'Arial',
-      textAnchor: 'left',
+    debugEnabled ? React.createElement('div', {
+      className: 'debug-info',
       id: 'ai-depth-info'
-    }, `AI Depth: ${window.aiPlayer.maxDepth}`),
-    debugEnabled && (lastMoveTime && React.createElement('text', {
-      x: '3',
-      y: '16',
-      fill: '#4A4A4A',
-      fontSize: '2',
-      fontFamily: 'Arial',
-      textAnchor: 'left',
+    }, `AI Depth: ${window.aiPlayer.maxDepth}`) : null,
+    debugEnabled ? lastMoveTime && React.createElement('div', {
+      className: 'debug-info',
       id: 'ai-move-time'
-    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`))
+    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`) : null,
+    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null,
   )
 }
