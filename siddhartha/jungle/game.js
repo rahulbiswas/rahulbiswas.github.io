@@ -90,10 +90,7 @@ const JungleGame = () => {
   }
 
   return React.createElement('div', {
-    className: 'game-container',
-    style: {
-      backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW
-    }
+    className: 'game-container'
   },
     React.createElement('div', {
         className: 'game-content'

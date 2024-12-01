@@ -65,7 +65,14 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
   const urlParams = new URLSearchParams(window.location.search)
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
-  return React.createElement('svg', {viewBox: '0 0 100 100', id: 'game-board'},
+  return React.createElement('svg', {
+    viewBox: '0 0 100 100',
+    id: 'game-board',
+    style: {
+      backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
+      transition: 'background-color 0.3s ease'
+    }
+  },
     React.createElement('defs', {id: 'game-board-defs'},
       React.createElement('linearGradient', {id: 'buttonGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
         React.createElement('stop', {offset: '0%', style: {stopColor: '#8B4513'}, id: 'gradient-stop-1'}),
