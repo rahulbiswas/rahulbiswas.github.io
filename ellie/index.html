@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Ellie's Projects ✨</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ffd1dc, #ffb6c1, #ffc0cb);
+            min-height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #ff69b4;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            font-size: 3rem;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .project-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+            transition: all 0.3s ease;
+            border: 3px solid #ff69b4;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid #ff69b4;
+        }
+
+        .project-title {
+            margin-top: 1rem;
+            color: #ff69b4;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Add sparkles */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            animation: float 3s infinite;
+            font-size: 1.5rem;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Ellie's Projects ✨</h1>
+    <div class="grid-container">
+        <a href="ttt/">
+            <div class="project-card">
+                <img src="ttt.jpg" alt="Tic Tac Toe">
+                <div class="project-title">🎮 Tic Tac Toe 🎮</div>
+            </div>
+        </a>
+        <a href="unicorn/">
+            <div class="project-card">
+                <img src="unicorn.png" alt="Unicorn">
+                <div class="project-title">🦄 Unicorn Magic 🦄</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Add floating sparkles -->
+    <div class="sparkle" style="top: 10%; left: 10%">✨</div>
+    <div class="sparkle" style="top: 20%; left: 80%">🌟</div>
+    <div class="sparkle" style="top: 70%; left: 15%">⭐</div>
+    <div class="sparkle" style="top: 60%; left: 90%">✨</div>
+
+</body>
+</html>
