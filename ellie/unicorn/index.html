@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Magical Garden Friends</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f7ff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #6a4c93;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            background-color: #b5c7e3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: #95a7c3;
+        }
+
+        .tab-button.active {
+            background-color: #6a4c93;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #6a4c93;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .story-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .chapter-title {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-header">
+        <h1>The Magical Garden Friends</h1>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="openChapter(event, 'chapter1')">Chapter 1</button>
+        <button class="tab-button" onclick="openChapter(event, 'chapter2')">Chapter 2</button>
+        <button class="tab-button" onclick="openChapter(event, 'chapter3')">Chapter 3</button>
+    </div>
+
+    <div id="chapter1" class="tab-content active">
+        <div class="chapter-title">Chapter 1: The Magic Garden Friends</div>
+        <p>In a beautiful garden filled with rainbow flowers and sparkling butterflies lived a unicorn named Ellie. Her mane was the color of cotton candy, and her horn glowed like starlight. Ellie loved nothing more than prancing through the flowers and making them grow with her special unicorn magic.</p>
+        <p>One sunny morning, while Ellie was watering the flowers with sprinkles from her horn, she heard a small sniffling sound coming from behind a giant sunflower. Curious, she peeked around the flower and found a fluffy brown rabbit with floppy ears.</p>
+        <p>"Hello there," Ellie said softly. "Why are you crying?"</p>
+        <p>The rabbit wiped his eyes with his paw. "I'm Rohan, and I can't find my favorite carrot patch. I've looked everywhere!"</p>
+        <p>Ellie's heart filled with kindness. "Don't worry, Rohan! I can help you find it. Climb on my back, and we'll search together."</p>
+        <p>Rohan hopped onto Ellie's sparkly back, and together they began their adventure through the garden. They looked behind the rose bushes and under the mushrooms. They asked the butterflies if they had seen the carrot patch, and they checked near the bubbling stream.</p>
+        <p>As they searched, Rohan and Ellie became wonderful friends. Rohan made Ellie laugh with his silly rabbit jokes, and Ellie amazed Rohan by making flowers grow wherever she stepped.</p>
+        <p>Finally, they found the carrot patch! But there was a problem – all the carrots had disappeared!</p>
+        <p>"Oh no," said Rohan, his ears drooping sadly.</p>
+        <p>But Ellie had an idea. She touched her glowing horn to the ground and sprinkled some magic. Suddenly, dozens of orange carrots popped up from the earth! They were the biggest, most delicious-looking carrots Rohan had ever seen.</p>
+        <p>"These are magic carrots," Ellie explained. "They'll never run out, so you'll always have enough to share with your friends."</p>
+        <p>Rohan was so happy that he started hopping around Ellie in circles. "Thank you, Ellie! Will you be my best friend forever?"</p>
+        <p>"Of course!" Ellie replied, nuzzling her new friend gently.</p>
+        <p>From that day on, Ellie and Rohan spent every day together in their magical garden. They had picnics with magic carrots, played hide-and-seek with the butterflies, and made the garden even more beautiful with Ellie's sparkly magic.</p>
+        <p>And every night, when the stars came out, they would lie in the soft grass, watch the fireflies dance, and thank their lucky stars for bringing them together as the very best of friends.</p>
+    </div>
+
+    <div id="chapter2" class="tab-content">
+        <div class="chapter-title">Chapter 2: New Friends in the Garden</div>
+        <p>One breezy afternoon, while Ellie the unicorn and Rohan the rabbit were playing among the daisies, they heard a strange sound. "Meow-namaste!" came a voice from the top of the garden wall.</p>
+        <p>There sat a orange and white cat with bright green eyes and a tiny golden bell around his neck. "I'm Rahul," the cat said, doing a graceful stretch. "I've just moved into the garden next door, and I couldn't help noticing all the fun you're having."</p>
+        <p>Rohan's nose twitched nervously – rabbits were usually scared of cats – but Rahul's friendly smile made him feel safe. Ellie's horn sparkled with joy at meeting someone new.</p>
+        <p>"Would you like to join us?" Ellie asked. "We're having a magic carrot picnic!"</p>
+        <p>Just then, they heard a happy "Oink!" and saw a round pink pig rolling in a patch of soft moss. He wore a crown of yellow flowers on his head and had the kindest eyes anyone had ever seen.</p>
+        <p>"Oh hello!" the pig said cheerfully. "I'm Siddhartha. I was taking my afternoon roll when I smelled something delicious!"</p>
+        <p>Ellie used her horn to make more magic carrots grow, and soon all four friends were sharing the tasty treats. Rahul purred happily as he told stories about his travels around the world, while Siddhartha taught everyone his favorite moss-rolling technique.</p>
+        <p>"Watch this!" said Siddhartha, showing them how to roll three times and end with a twirl. Everyone tried it, even Ellie, though being a unicorn made her a bit wobbly. They all laughed together as they got dizzy and tumbled in the soft grass.</p>
+        <p>Rahul discovered he had a special talent too – he could leap high enough to catch butterflies in his paws, but instead of keeping them, he would gently release them and watch them flutter away. This gave Ellie an idea.</p>
+        <p>Using her unicorn magic, she created a rainbow bridge between all their gardens so they could visit each other whenever they wanted. Rohan jumped for joy, Rahul purred louder than ever, and Siddhartha did his happy roll.</p>
+        <p>From that day on, the four friends had the most wonderful adventures together. Rahul taught them yoga in the morning sun, Siddhartha showed them the best muddy puddles for cooling off on hot days, and Rohan shared his endless supply of magic carrots with everyone.</p>
+        <p>And every evening, as the sun set, they would gather on their rainbow bridge, watching the stars come out while Ellie made tiny flowers grow in all their favorite colors. They were different in so many ways – a unicorn, a rabbit, a cat, and a pig – but they knew that's what made their friendship so special.</p>
+        <p>Together, they made their corner of the garden the happiest place in the whole wide world.</p>
+    </div>
+
+    <div id="chapter3" class="tab-content">
+        <div class="chapter-title">Chapter 3: The Big Rain Cloud</div>
+        <p>One morning, Ellie the unicorn woke up to find a giant gray cloud hovering over the magical garden. Plip, plop, plip – raindrops began to fall!</p>
+        <p>"Oh dear," said Rohan the rabbit, his floppy ears drooping from the rain. "How will we play together today?"</p>
+        <p>"Don't worry!" called Rahul the cat, who was hiding under a big leaf. "I know! Let's have an indoor party in the old hollow tree!"</p>
+        <p>Siddhartha the pig came splashing through puddles, wearing a little rain hat made from a water lily. "Oink! I love parties!" he said, doing a happy twirl that sprayed water everywhere.</p>
+        <p>Ellie touched her horn to the hollow tree, and suddenly it grew bigger and bigger on the inside! Rainbow lights sparkled from her horn, making the inside of the tree glow with all the colors of the rainbow.</p>
+        <p>Rohan hopped around, hanging glowing flowers from the ceiling. Rahul used his excellent climbing skills to place soft moss cushions everywhere. Siddhartha rolled up balls of leaves to play with, and Ellie created a magical feast of treats for everyone – carrots for Rohan, milk pudding for Rahul, mud pies for Siddhartha, and sweet grass cakes for herself.</p>
+        <p>But the best surprise came when they discovered that the raindrops making music on the tree roof created a wonderful song. Rahul began to purr along with the rhythm, while Siddhartha tapped his hooves in time. Rohan started bouncing to the beat, and Ellie's horn glowed brighter and brighter with each note.</p>
+        <p>"Let's have a dance party!" suggested Ellie, and all her friends agreed.</p>
+        <p>They danced and sang and laughed together as the rain played their special song. Rahul taught everyone a graceful cat dance, Siddhartha showed them his famous piggy wiggle, Rohan demonstrated his best bunny hop, and Ellie pranced in circles, her mane spreading sparkles everywhere.</p>
+        <p>As they danced, something magical happened – the rain clouds began to clear, and through the tree windows, they could see a giant rainbow stretching across the sky.</p>
+        <p>"Look what our friendship did!" Rohan exclaimed. "We made the rain go away!"</p>
+        <p>"The rainbow is almost as colorful as us!" said Siddhartha happily.</p>
+        <p>Rahul purred contentedly. "Sometimes the rainy days turn out to be the most special of all."</p>
+        <p>Ellie touched her horn to the ground one more time, and a patch of new flowers grew right in the middle of their tree house – one in each of their favorite colors: pink for Ellie, blue for Rohan, orange for Rahul, and purple for Siddhartha.</p>
+        <p>From that day on, whenever it rained in the magical garden, the four friends would gather in their special tree house. They would dance and play and remind each other that grey clouds can't stop best friends from having the most wonderful time together.</p>
+        <p>And sometimes, if you listen very carefully on rainy days, you might hear the happy sounds of a unicorn, a rabbit, a cat, and a pig, all laughing and playing together in their magical garden home.</p>
+    </div>
+
+    <script>
+        function openChapter(evt, chapterName) {
+            let tabcontent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+
+            let tablinks = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(chapterName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
