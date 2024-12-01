@@ -105,6 +105,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
 
     React.createElement(DebugOverlay, {debugMode}),
     window.boardRenderer.renderPieces(pieces),
-    window.boardRenderer.renderMoveIndicators(lastMove)
+    window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
   )
 }
