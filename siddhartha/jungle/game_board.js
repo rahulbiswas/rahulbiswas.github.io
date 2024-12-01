@@ -24,7 +24,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
       Array.from({length: 7}, (_, col) => {
         let fill = SQUARE_COLORS.REGULAR
         const pos = `${col}_${row}`
-        const isValidMove = validMoves.has(pos)
 
         if ((col === 1 || col === 2 || col === 4 || col === 5) &&
           (row === 3 || row === 4 || row === 5)) {
@@ -41,32 +40,20 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
           fill = SQUARE_COLORS.DEN
         }
 
-        return React.createElement('g', {
-          key: `square-${col}-${row}`
-        },
-          React.createElement('rect', {
-            x: col,
-            y: row,
-            width: 1,
-            height: 1,
-            fill: fill,
-            stroke: '#000',
-            strokeWidth: '0.02',
-            onClick: () => handleSquareClick(col, row),
-            style: {cursor: 'pointer'},
-            id: `square-${col}-${row}`,
-            className: `square ${isValidMove ? 'valid-move' : ''}`
-          }),
-          isValidMove && React.createElement('circle', {
-            cx: col + 0.5,
-            cy: row + 0.5,
-            r: 0.15,
-            fill: 'rgba(255, 255, 255, 0.3)',
-            stroke: 'rgba(255, 255, 255, 0.5)',
-            strokeWidth: '0.05',
-            pointerEvents: 'none'
-          })
-        )
+        return React.createElement('rect', {
+          key: `square-${col}-${row}`,
+          x: col,
+          y: row,
+          width: 1,
+          height: 1,
+          fill: fill,
+          stroke: '#000',
+          strokeWidth: '0.02',
+          onClick: () => handleSquareClick(col, row),
+          style: {cursor: 'pointer'},
+          id: `square-${col}-${row}`,
+          className: `square ${validMoves.has(pos) ? 'valid-move' : ''}`
+        })
       })
     )
   }
@@ -163,6 +150,7 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
       renderSquares(),
       React.createElement(DebugOverlay, {debugMode}),
       window.boardRenderer.renderPieces(pieces, handleSquareClick),
+      window.boardRenderer.renderValidMoveIndicators(validMoves),
       window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
     ),
 
