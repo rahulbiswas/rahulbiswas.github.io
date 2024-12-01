@@ -61,27 +61,6 @@ const HomeMenu = () => React.createElement('svg', {viewBox: '0 0 100 67'},
       filter: 'url(#textShadow)'
     }, 'PLAY')
   ),
-
-  React.createElement('g', {transform: 'translate(50, 50)'},
-    React.createElement('rect', {
-      x: '-15',
-      y: '-6',
-      width: '30',
-      height: '12',
-      rx: '2',
-      fill: 'url(#buttonGradient)',
-      stroke: '#2b6cb0',
-      strokeWidth: '0.5'
-    }),
-    React.createElement('text', {
-      textAnchor: 'middle',
-      fill: 'white',
-      fontSize: '5',
-      fontFamily: 'Arial, sans-serif',
-      filter: 'url(#textShadow)'
-    }, 'RULES')
-  ),
-
   React.createElement('text', {
     x: '98',
     y: '65.5',
