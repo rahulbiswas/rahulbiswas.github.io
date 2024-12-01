@@ -28,7 +28,7 @@ const DebugButton = ({debugMode, setDebugMode}) => {
       width: '17',
       height: '11',
       rx: '2',
-      fill: debugMode ? '#ff9999' : '#98FB98',
+      fill: debugMode ? '#A83232' : '#556B2F',
       stroke: '#2F4F4F',
       strokeWidth: '0.5'
     }),

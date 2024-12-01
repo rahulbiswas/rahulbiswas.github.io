@@ -1,12 +1,12 @@
 const HomeMenu = () => React.createElement('svg', {viewBox: '0 0 100 67'},
   React.createElement('defs', null,
     React.createElement('linearGradient', {id: 'backgroundGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
-      React.createElement('stop', {offset: '0%', style: {stopColor: '#1a365d'}}),
-      React.createElement('stop', {offset: '100%', style: {stopColor: '#2c5282'}})
+      React.createElement('stop', {offset: '0%', style: {stopColor: '#2F4F4F'}}),
+      React.createElement('stop', {offset: '100%', style: {stopColor: '#3E2723'}})
     ),
     React.createElement('linearGradient', {id: 'buttonGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
-      React.createElement('stop', {offset: '0%', style: {stopColor: '#4299e1'}}),
-      React.createElement('stop', {offset: '100%', style: {stopColor: '#3182ce'}})
+      React.createElement('stop', {offset: '0%', style: {stopColor: '#8B4513'}}),
+      React.createElement('stop', {offset: '100%', style: {stopColor: '#654321'}})
     ),
     React.createElement('filter', {id: 'textShadow', x: '-20%', y: '-20%', width: '140%', height: '140%'},
       React.createElement('feDropShadow', {

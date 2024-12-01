@@ -2,23 +2,27 @@ class BoardRenderer {
   getLighterShade(baseColor) {
     switch (baseColor) {
       case SQUARE_COLORS.REGULAR:
-        return '#81c784'
+        return '#6B8E23'
       case SQUARE_COLORS.WATER:
-        return '#64b5f6'
+        return '#5F9EA0'
       case SQUARE_COLORS.TRAP:
-        return '#ffd54f'
+        return '#DEB887'
       case SQUARE_COLORS.DEN:
-        return '#ce93d8'
+        return '#8B6B4F'
       case PLAYER_COLORS.RED:
-        return '#d77373'
+        return '#CC4444'
       case PLAYER_COLORS.YELLOW:
-        return '#ffe14d'
+        return '#FFD700'
       default:
         return baseColor
     }
   }
 
   renderPieces(pieces) {
+    const urlParams = new URLSearchParams(window.location.search)
+    const debugMode = parseInt(urlParams.get('debug')) || 0
+    const timestamp = debugMode ? `?t=${Date.now()}` : ''
+
     return Object.entries(pieces).map(([position, piece]) => {
       const [x, y] = position.split('_')
       const translateX = x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + (BOARD_SQUARE_WIDTH - PIECE_SIZE) / 2
@@ -29,12 +33,12 @@ class BoardRenderer {
           transform: `translate(${translateX}, ${translateY})`
         },
         React.createElement('image', {
-          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}piece.svg`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}piece.svg${timestamp}`,
           width: PIECE_SIZE,
           height: PIECE_SIZE
         }),
         React.createElement('image', {
-          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg${timestamp}`,
           width: PIECE_SIZE,
           height: PIECE_SIZE
         })

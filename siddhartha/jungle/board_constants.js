@@ -13,15 +13,15 @@ const PLAYERS = {
 }
 
 const PLAYER_COLORS = {
-  RED: '#C25B5B',
-  YELLOW: '#FFD700'
+  RED: '#A83232',
+  YELLOW: '#E6B800'
 }
 
 const SQUARE_COLORS = {
-  REGULAR: '#4CAF50',
-  WATER: '#2196F3',
-  TRAP: '#FFC107',
-  DEN: '#9C27B0'
+  REGULAR: '#556B2F',
+  WATER: '#4682B4',
+  TRAP: '#CD853F',
+  DEN: '#6B4423'
 }
 
 const PIECES = {
