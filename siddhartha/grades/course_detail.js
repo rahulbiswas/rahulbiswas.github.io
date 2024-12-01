@@ -6,13 +6,14 @@ class CourseDetail extends React.Component {
     }
   }
 
-  addHypotheticalAssignment = (categoryName) => {
+  addHypotheticalAssignment = (courseName, categoryName) => {
     this.setState(prevState => {
-      const categoryHypotheticals = prevState.hypotheticalAssignments[categoryName] || []
+      let hypotheticalKey = courseName + categoryName
+      const categoryHypotheticals = prevState.hypotheticalAssignments[hypotheticalKey] || []
       return {
         hypotheticalAssignments: {
           ...prevState.hypotheticalAssignments,
-          [categoryName]: [...categoryHypotheticals, {
+          [hypotheticalKey]: [...categoryHypotheticals, {
             name: `Hypothetical ${categoryName} #${categoryHypotheticals.length + 1}`,
             score: 0,
             total: 0
@@ -22,27 +23,29 @@ class CourseDetail extends React.Component {
     })
   }
 
-  updateHypotheticalAssignment = (categoryName, index, updates) => {
+  updateHypotheticalAssignment = (courseName, categoryName, index, updates) => {
+    let hypotheticalKey = courseName + categoryName
     this.setState(prevState => {
-      const categoryHypotheticals = [...(prevState.hypotheticalAssignments[categoryName] || [])]
+      const categoryHypotheticals = [...(prevState.hypotheticalAssignments[hypotheticalKey] || [])]
       categoryHypotheticals[index] = {...categoryHypotheticals[index], ...updates}
       return {
         hypotheticalAssignments: {
           ...prevState.hypotheticalAssignments,
-          [categoryName]: categoryHypotheticals
+          [hypotheticalKey]: categoryHypotheticals
         }
       }
     })
   }
 
-  deleteHypotheticalAssignment = (categoryName, index) => {
+  deleteHypotheticalAssignment = (courseName, categoryName, index) => {
+    let hypotheticalKey = courseName + categoryName
     this.setState(prevState => {
-      const categoryHypotheticals = [...(prevState.hypotheticalAssignments[categoryName] || [])]
+      const categoryHypotheticals = [...(prevState.hypotheticalAssignments[hypotheticalKey] || [])]
       categoryHypotheticals.splice(index, 1)
       return {
         hypotheticalAssignments: {
           ...prevState.hypotheticalAssignments,
-          [categoryName]: categoryHypotheticals
+          [hypotheticalKey]: categoryHypotheticals
         }
       }
     })
@@ -123,12 +126,12 @@ class CourseDetail extends React.Component {
               category,
               idx,
               courseName: course.name,
-              hypotheticalAssignments: this.state.hypotheticalAssignments[category.name] || [],
-              onAddHypothetical: () => this.addHypotheticalAssignment(category.name),
+              hypotheticalAssignments: this.state.hypotheticalAssignments[course.name + category.name] || [],
+              onAddHypothetical: () => this.addHypotheticalAssignment(course.name, category.name),
               onUpdateHypothetical: (index, updates) => 
-                this.updateHypotheticalAssignment(category.name, index, updates),
+                this.updateHypotheticalAssignment(course.name, category.name, index, updates),
               onDeleteHypothetical: (index) => 
-                this.deleteHypotheticalAssignment(category.name, index)
+                this.deleteHypotheticalAssignment(course.name, category.name, index)
             })
           )
         ),
