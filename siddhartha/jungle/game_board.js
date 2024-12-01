@@ -19,7 +19,7 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
 
     React.createElement(DebugButton, {debugMode, setDebugMode}),
 
-    React.createElement('g', {transform: 'translate(3, 2)'},
+    React.createElement('g', {transform: 'translate(2, 2)'},
       React.createElement('rect', {
         width: '17',
         height: '11',
