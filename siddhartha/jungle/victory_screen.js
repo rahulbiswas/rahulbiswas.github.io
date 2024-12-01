@@ -1,5 +1,5 @@
 const VictoryScreen = ({winner, onPlayAgain}) => {
-  return React.createElement('svg', {viewBox: '0 0 100 67'},
+  return React.createElement('svg', {viewBox: '0 0 100 100'},
     React.createElement('defs', null,
       React.createElement('linearGradient', {id: 'buttonGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
         React.createElement('stop', {offset: '0%', style: {stopColor: '#8B4513'}}),
@@ -18,14 +18,14 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
 
     React.createElement('rect', {
       width: '100',
-      height: '67',
+      height: '100',
       fill: winner === PLAYERS.RED ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
       opacity: 0.9
     }),
 
     React.createElement('text', {
       x: '50',
-      y: '25',
+      y: '35',
       textAnchor: 'middle',
       fill: 'white',
       fontSize: '8',
@@ -34,7 +34,7 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
     }, `${winner === PLAYERS.RED ? 'RED' : 'YELLOW'} WINS!`),
 
     React.createElement('g', {
-        transform: 'translate(50, 40)',
+        transform: 'translate(50, 50)',
         onClick: onPlayAgain,
         style: {cursor: 'pointer'}
       },

@@ -5,7 +5,6 @@ const JungleGame = () => {
   const [lastMove, setLastMove] = React.useState(null)
   const [winner, setWinner] = React.useState(null)
   const [isPlayerTurn, setIsPlayerTurn] = React.useState(true)
-  const contentRef = React.useRef(null)
 
   React.useEffect(() => {
     if (!isPlayerTurn && !winner) {
@@ -13,11 +12,11 @@ const JungleGame = () => {
         const startTime = performance.now()
         const aiMove = window.aiPlayer.getAIMove(pieces, PLAYERS.YELLOW)
         const moveTime = performance.now() - startTime
-        
+
         window.dispatchEvent(new CustomEvent('ai-move-time', {
-          detail: { time: moveTime }
+          detail: {time: moveTime}
         }))
-        
+
         if (aiMove) {
           gameManager.handleMove(
             aiMove.from,
@@ -32,6 +31,56 @@ const JungleGame = () => {
     }
   }, [pieces, winner, isPlayerTurn])
 
+  React.useEffect(() => {
+    const handleBackToMenu = () => {
+      setCurrentWindow('home')
+      resetGame()
+    }
+    
+    const handleStartGame = () => {
+      setCurrentWindow('game')
+    }
+    
+    const handleSelectPiece = (event) => {
+      setSelectedPieceKey(event.detail.position)
+    }
+    
+    const handleDeselectPiece = () => {
+      setSelectedPieceKey(null)
+    }
+    
+    const handleMakeMove = (event) => {
+      gameManager.handleMove(
+        event.detail.from,
+        event.detail.to,
+        pieces,
+        {setPieces, setSelectedPieceKey, setLastMove, setWinner},
+        () => setIsPlayerTurn(false)
+      )
+    }
+
+    window.addEventListener('back-to-menu', handleBackToMenu)
+    window.addEventListener('start-game', handleStartGame)
+    window.addEventListener('select-piece', handleSelectPiece)
+    window.addEventListener('deselect-piece', handleDeselectPiece)
+    window.addEventListener('make-move', handleMakeMove)
+    
+    window.gameState = {
+      pieces,
+      selectedPieceKey,
+      isPlayerTurn,
+      winner
+    }
+
+    return () => {
+      window.removeEventListener('back-to-menu', handleBackToMenu)
+      window.removeEventListener('start-game', handleStartGame)
+      window.removeEventListener('select-piece', handleSelectPiece)
+      window.removeEventListener('deselect-piece', handleDeselectPiece)
+      window.removeEventListener('make-move', handleMakeMove)
+    }
+  }, [pieces, selectedPieceKey, isPlayerTurn, winner])
+
   const resetGame = () => {
     setPieces(initialPieces)
     setSelectedPieceKey(null)
@@ -40,39 +89,11 @@ const JungleGame = () => {
     setIsPlayerTurn(true)
   }
 
-  const handleClick = (e) => {
-    if (!contentRef.current) return
-
-    const rect = contentRef.current.getBoundingClientRect()
-    const clickX = (e.clientX - rect.left) * 100 / rect.width
-    const clickY = (e.clientY - rect.top) * 67 / rect.height
-
-    if (currentWindow === 'game') {
-      if (!isPlayerTurn || winner !== null) return
-
-      gameManager.handlePlayerClick(
-        clickX,
-        clickY,
-        {pieces, selectedPieceKey},
-        {setPieces, setSelectedPieceKey, setLastMove, setCurrentWindow, setWinner, setIsPlayerTurn}
-      )
-    } else {
-      navigationManager.handleMenuNavigation(clickX, clickY, currentWindow, setCurrentWindow)
-    }
-  }
-
   return React.createElement('div', {className: 'game-container'},
     React.createElement('div', {
-        ref: contentRef,
-        className: 'game-content',
-        onClick: handleClick
+        className: 'game-content'
       },
       currentWindow === 'home' && React.createElement(HomeMenu),
-      window.ruleScreens?.includes(currentWindow) &&
-      React.createElement('img', {
-        src: `images/${currentWindow}.png`,
-        alt: `${currentWindow} rules`
-      }),
       currentWindow === 'game' && (
         winner !== null
           ? React.createElement(VictoryScreen, {
