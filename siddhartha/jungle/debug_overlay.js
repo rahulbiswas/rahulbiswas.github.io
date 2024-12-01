@@ -1,15 +1,15 @@
 const DebugOverlay = ({debugMode}) => {
   if (!debugMode) return null
 
-  return React.createElement('g', {transform: 'translate(12, 2)'},
+  return React.createElement('g', null,
     Array.from({length: 9}, (_, row) =>
       Array.from({length: 7}, (_, col) =>
         React.createElement('text', {
           key: `debug-${col}-${row}`,
-          x: col * BOARD_SQUARE_SIZE + BOARD_SQUARE_SIZE / 2,
-          y: row * BOARD_SQUARE_SIZE + BOARD_SQUARE_SIZE / 2,
+          x: col + 0.5,
+          y: row + 0.5,
           fill: '#000',
-          fontSize: '2',
+          fontSize: '0.2',
           textAnchor: 'middle',
           alignmentBaseline: 'middle'
         }, `${col},${row}`)
