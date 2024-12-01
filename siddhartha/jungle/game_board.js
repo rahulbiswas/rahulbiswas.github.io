@@ -25,7 +25,19 @@ const BackButton = ({}) => {
   )
 }
 
-const BoardGrid = ({pieces, handleSquareClick, debugMode, lastMove, isPlayerTurn}) => {
+const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
+  const [debugMode, setDebugMode] = React.useState(false)
+  const [lastMoveTime, setLastMoveTime] = React.useState(null)
+  const [boardDimensions, setBoardDimensions] = React.useState({
+    width: 0,
+    height: 0,
+    x: 0,
+    y: 0
+  })
+  
+  const containerRef = React.useRef(null)
+  const MARGIN_PERCENT = 2
+
   const renderSquares = () => {
     return Array.from({length: 9}, (_, row) =>
       Array.from({length: 7}, (_, col) => {
@@ -66,24 +78,50 @@ const BoardGrid = ({pieces, handleSquareClick, debugMode, lastMove, isPlayerTurn
     )
   }
 
-  return React.createElement('svg', {
-      viewBox: '0 0 7 9',
-      x: '12',
-      y: '2',
-      width: '70',
-      height: '90',
-      id: 'board-grid',
-    },
-    renderSquares(),
-    React.createElement(DebugOverlay, {debugMode}),
-    window.boardRenderer.renderPieces(pieces, handleSquareClick),
-    window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
-  )
-}
+  React.useEffect(() => {
+    const updateBoardDimensions = () => {
+      if (containerRef.current) {
+        const containerRect = containerRef.current.getBoundingClientRect()
+        const containerWidth = containerRect.width
+        const containerHeight = containerRect.height
+        
+        const marginX = containerWidth * (MARGIN_PERCENT / 100)
+        const marginY = containerHeight * (MARGIN_PERCENT / 100)
+        const availableWidth = containerWidth - (2 * marginX)
+        const availableHeight = containerHeight - (2 * marginY)
 
-const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
-  const [debugMode, setDebugMode] = React.useState(false)
-  const [lastMoveTime, setLastMoveTime] = React.useState(null)
+        const boardAspectRatio = 7/9
+        let width, height
+
+        if (availableWidth / availableHeight > boardAspectRatio) {
+          height = availableHeight
+          width = height * boardAspectRatio
+        } else {
+          width = availableWidth
+          height = width / boardAspectRatio
+        }
+
+        const x = (containerWidth - width) / 2
+        const y = (containerHeight - height) / 2
+
+        setBoardDimensions({
+          width,
+          height,
+          x,
+          y
+        })
+      }
+    }
+
+    updateBoardDimensions()
+
+    const resizeObserver = new ResizeObserver(updateBoardDimensions)
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current)
+    }
+
+    return () => resizeObserver.disconnect()
+  }, [])
 
   React.useEffect(() => {
     const handleAIMoveTime = (event) => {
@@ -105,26 +143,39 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
   const urlParams = new URLSearchParams(window.location.search)
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
-  return React.createElement('svg', {
-      viewBox: '0 0 100 100',
-      id: 'game-board',
+  return React.createElement('div', {
+    id: 'game-board',
+    ref: containerRef,
+    style: {
+      backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
+      transition: 'background-color 0.3s ease',
+      width: '100%',
+      height: '100%',
+      position: 'relative',
+      overflow: 'hidden'
+    }
+  },
+    React.createElement('svg', {
+      viewBox: '0 0 7 9',
       style: {
-        backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
-        transition: 'background-color 0.3s ease'
-      }
+        position: 'absolute',
+        left: `${boardDimensions.x}px`,
+        top: `${boardDimensions.y}px`,
+        width: `${boardDimensions.width}px`,
+        height: `${boardDimensions.height}px`,
+        transition: 'all 0.3s ease'
+      },
+      id: 'board-grid'
     },
-    React.createElement('defs', {id: 'game-board-defs'},
-      React.createElement('linearGradient', {id: 'buttonGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
-        React.createElement('stop', {offset: '0%', style: {stopColor: '#8B4513'}, id: 'gradient-stop-1'}),
-        React.createElement('stop', {offset: '100%', style: {stopColor: '#654321'}, id: 'gradient-stop-2'})
-      )
+      renderSquares(),
+      React.createElement(DebugOverlay, {debugMode}),
+      window.boardRenderer.renderPieces(pieces, handleSquareClick),
+      window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
     ),
 
-    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null,
-
+    debugEnabled && React.createElement(DebugButton, {debugMode, setDebugMode}),
     React.createElement(BackButton),
-
-    debugEnabled ? React.createElement('text', {
+    debugEnabled && React.createElement('text', {
       x: '3',
       y: '12',
       fill: '#4A4A4A',
@@ -132,9 +183,8 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       fontFamily: 'Arial',
       textAnchor: 'left',
       id: 'ai-depth-info'
-    }, `AI Depth: ${window.aiPlayer.maxDepth}`) : null,
-
-    debugEnabled ? (lastMoveTime && React.createElement('text', {
+    }, `AI Depth: ${window.aiPlayer.maxDepth}`),
+    debugEnabled && (lastMoveTime && React.createElement('text', {
       x: '3',
       y: '16',
       fill: '#4A4A4A',
@@ -142,14 +192,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       fontFamily: 'Arial',
       textAnchor: 'left',
       id: 'ai-move-time'
-    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`)) : null,
-
-    React.createElement(BoardGrid, {
-      pieces,
-      handleSquareClick,
-      debugMode,
-      lastMove,
-      isPlayerTurn
-    })
+    }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`))
   )
 }
