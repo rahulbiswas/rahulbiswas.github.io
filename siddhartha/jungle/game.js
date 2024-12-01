@@ -92,23 +92,19 @@ const JungleGame = () => {
   return React.createElement('div', {
     className: 'game-container'
   },
-    React.createElement('div', {
-        className: 'game-content'
-      },
-      currentWindow === 'home' && React.createElement(HomeMenu),
-      currentWindow === 'game' && (
-        winner !== null
-          ? React.createElement(VictoryScreen, {
-            winner: winner,
-            onPlayAgain: resetGame
-          })
-          : React.createElement(GameBoard, {
-            pieces: pieces,
-            lastMove: lastMove,
-            selectedPieceKey: selectedPieceKey,
-            isPlayerTurn: isPlayerTurn
-          })
-      )
+    currentWindow === 'home' && React.createElement(HomeMenu),
+    currentWindow === 'game' && (
+      winner !== null
+        ? React.createElement(VictoryScreen, {
+          winner: winner,
+          onPlayAgain: resetGame
+        })
+        : React.createElement(GameBoard, {
+          pieces: pieces,
+          lastMove: lastMove,
+          selectedPieceKey: selectedPieceKey,
+          isPlayerTurn: isPlayerTurn
+        })
     )
   )
 }
