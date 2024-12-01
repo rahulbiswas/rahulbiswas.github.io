@@ -46,11 +46,11 @@ class BoardRenderer {
     })
   }
 
-  renderMoveIndicators(lastMove) {
+  renderMoveIndicators(lastMove, player) {
     if (!lastMove) return null
 
     const arrowSize = 2.5
-    const arrowColor = '#E6B800'
+    const arrowColor = player === PLAYERS.RED ? ARROW_COLORS.RED : ARROW_COLORS.YELLOW
 
     const createArrow = (x, y) => {
       const baseX = x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH / 2
@@ -94,7 +94,7 @@ class BoardRenderer {
         y: lastMove.to.y * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
         width: BOARD_SQUARE_WIDTH,
         height: BOARD_SQUARE_HEIGHT,
-        fill: '#E6B800',
+        fill: arrowColor,
         opacity: '0.3'
       })
     ]
