@@ -65,16 +65,16 @@ class BoardRenderer {
       else if (dy < 0) angle = 90
 
       const midpoint = [
-        baseX + 0.5 * arrowSize * Math.cos(angle * Math.PI / 180),
-        baseY + 0.5 * arrowSize * Math.sin(angle * Math.PI / 180)
+        baseX - arrowSize * Math.cos(angle * Math.PI / 180),
+        baseY - arrowSize * Math.sin(angle * Math.PI / 180)
       ]
       const leftTip = [
-        baseX + arrowSize * Math.cos((angle - 25) * Math.PI / 180),
-        baseY + arrowSize * Math.sin((angle - 25) * Math.PI / 180)
+        baseX - 1.5 * arrowSize * Math.cos(angle * Math.PI / 180) + arrowSize * Math.cos((angle - 25) * Math.PI / 180),
+        baseY - 1.5 * arrowSize * Math.sin(angle * Math.PI / 180) + arrowSize * Math.sin((angle - 25) * Math.PI / 180)
       ]
       const rightTip = [
-        baseX + arrowSize * Math.cos((angle + 25) * Math.PI / 180),
-        baseY + arrowSize * Math.sin((angle + 25) * Math.PI / 180)
+        baseX - 1.5 * arrowSize * Math.cos(angle * Math.PI / 180) + arrowSize * Math.cos((angle + 25) * Math.PI / 180),
+        baseY - 1.5 * arrowSize * Math.sin(angle * Math.PI / 180) + arrowSize * Math.sin((angle + 25) * Math.PI / 180)
       ]
 
       return React.createElement('path', {
