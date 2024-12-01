@@ -14,6 +14,13 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
   return React.createElement('svg', {viewBox: '0 0 100 67'},
+    React.createElement('defs', null,
+      React.createElement('linearGradient', {id: 'buttonGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
+        React.createElement('stop', {offset: '0%', style: {stopColor: '#8B4513'}}),
+        React.createElement('stop', {offset: '100%', style: {stopColor: '#654321'}})
+      )
+    ),
+
     React.createElement('rect', {
       width: '100',
       height: '67',
@@ -27,14 +34,14 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
         width: '17',
         height: '11',
         rx: '2',
-        fill: '#98FB98',
+        fill: 'url(#buttonGradient)',
         stroke: '#2F4F4F',
         strokeWidth: '0.5'
       }),
       React.createElement('text', {
         x: '8.5',
         y: '7.5',
-        fill: '#4A4A4A',
+        fill: '#F5E6D3',
         fontSize: '3',
         fontFamily: 'Impact, Arial Black, sans-serif',
         textAnchor: 'middle'
