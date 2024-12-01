@@ -114,7 +114,7 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
 
   const handleSquareClick = (x, y) => {
     const pos = `${x}_${y}`
-    if (pieces[pos]) {
+    if (pieces[pos] && !selectedPieceKey) {
       window.gameManager.handlePieceSelection(pos)
     } else {
       window.gameManager.handleSquareSelection(pos)
