@@ -49,22 +49,53 @@ class BoardRenderer {
   renderMoveIndicators(lastMove) {
     if (!lastMove) return null
 
+    const arrowSize = 2.5
+    const arrowColor = '#E6B800'
+
+    const createArrow = (x, y) => {
+      const baseX = x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH / 2
+      const baseY = y * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y + BOARD_SQUARE_HEIGHT / 2
+      const dx = lastMove.to.x - lastMove.from.x
+      const dy = lastMove.to.y - lastMove.from.y
+
+      let angle
+      if (dx > 0) angle = 180
+      else if (dx < 0) angle = 0
+      else if (dy > 0) angle = 270
+      else if (dy < 0) angle = 90
+
+      const midpoint = [
+        baseX + 0.5 * arrowSize * Math.cos(angle * Math.PI / 180),
+        baseY + 0.5 * arrowSize * Math.sin(angle * Math.PI / 180)
+      ]
+      const leftTip = [
+        baseX + arrowSize * Math.cos((angle - 25) * Math.PI / 180),
+        baseY + arrowSize * Math.sin((angle - 25) * Math.PI / 180)
+      ]
+      const rightTip = [
+        baseX + arrowSize * Math.cos((angle + 25) * Math.PI / 180),
+        baseY + arrowSize * Math.sin((angle + 25) * Math.PI / 180)
+      ]
+
+      return React.createElement('path', {
+        d: `M ${midpoint[0]},${midpoint[1]} l ${leftTip[0] - midpoint[0]},${leftTip[1] - midpoint[1]} M ${midpoint[0]},${midpoint[1]} l ${rightTip[0] - midpoint[0]},${rightTip[1] - midpoint[1]}`,
+        stroke: arrowColor,
+        strokeWidth: 0.4,
+        strokeLinecap: 'round',
+        fill: 'none'
+      })
+    }
+
     return [
-      React.createElement('rect', {
-        key: 'moveFrom',
-        x: lastMove.from.x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
-        y: lastMove.from.y * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
-        width: POTENTIAL_MOVE_LENGTH,
-        height: POTENTIAL_MOVE_LENGTH,
-        fill: 'purple'
-      }),
+      createArrow(lastMove.from.x, lastMove.from.y),
       React.createElement('rect', {
         key: 'moveTo',
-        x: lastMove.to.x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X + BOARD_SQUARE_WIDTH - POTENTIAL_MOVE_LENGTH * 1.3,
+        x: lastMove.to.x * BOARD_SQUARE_WIDTH + BOARD_UPPER_LEFT_X,
         y: lastMove.to.y * BOARD_SQUARE_HEIGHT + BOARD_UPPER_LEFT_Y,
-        width: POTENTIAL_MOVE_LENGTH,
-        height: POTENTIAL_MOVE_LENGTH,
-        fill: 'purple'
+        width: BOARD_SQUARE_WIDTH,
+        height: BOARD_SQUARE_HEIGHT,
+        fill: '#E6B800',
+        opacity: '0.3'
       })
     ]
   }
