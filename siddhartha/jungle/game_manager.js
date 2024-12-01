@@ -1,13 +1,33 @@
 class GameManager {
+  debugLog(message, data) {
+    const urlParams = new URLSearchParams(window.location.search)
+    const debugMode = parseInt(urlParams.get('debug')) || 0
+    if (debugMode && message) {
+      if (data !== undefined) {
+        console.log(message, data)
+      } else {
+        console.log(message)
+      }
+    }
+  }
+
   handleBackClick() {
     window.dispatchEvent(new CustomEvent('back-to-menu'))
   }
 
   handlePieceSelection(pos) {
-    if (!window.gameState.isPlayerTurn || window.gameState.winner) return
+    this.debugLog('Piece selection:', pos)
+    if (!window.gameState.isPlayerTurn || window.gameState.winner) {
+      this.debugLog('Cannot select piece - not player turn or game over')
+      return
+    }
     
     const piece = window.gameState.pieces[pos]
-    if (piece?.player !== PLAYERS.RED) return
+    this.debugLog('Selected piece:', piece)
+    if (piece?.player !== PLAYERS.RED) {
+      this.debugLog('Cannot select piece - not player piece')
+      return
+    }
     
     window.dispatchEvent(new CustomEvent('select-piece', {
       detail: { position: pos }
@@ -15,21 +35,34 @@ class GameManager {
   }
 
   handleSquareSelection(pos) {
-    if (!window.gameState.isPlayerTurn || window.gameState.winner) return
+    this.debugLog('Square selection:', pos)
+    if (!window.gameState.isPlayerTurn || window.gameState.winner) {
+      this.debugLog('Cannot move - not player turn or game over')
+      return
+    }
     
-    if (!window.gameState.selectedPieceKey) return
+    if (!window.gameState.selectedPieceKey) {
+      this.debugLog('No piece selected')
+      return
+    }
     
+    const [fromX, fromY] = window.gameState.selectedPieceKey.split('_').map(Number)
+    const [toX, toY] = pos.split('_').map(Number)
     const movingPiece = window.gameState.pieces[window.gameState.selectedPieceKey]
-    if (!isValidMove(
-      ...window.gameState.selectedPieceKey.split('_'),
-      ...pos.split('_'),
-      window.gameState.pieces,
-      movingPiece
-    )) {
+    
+    this.debugLog('Attempting move:', {
+      from: window.gameState.selectedPieceKey,
+      to: pos,
+      piece: movingPiece
+    })
+
+    if (!isValidMove(fromX, fromY, toX, toY, window.gameState.pieces, movingPiece)) {
+      this.debugLog('Move is invalid')
       window.dispatchEvent(new CustomEvent('deselect-piece'))
       return
     }
 
+    this.debugLog('Move is valid - executing')
     window.dispatchEvent(new CustomEvent('make-move', {
       detail: {
         from: window.gameState.selectedPieceKey,
