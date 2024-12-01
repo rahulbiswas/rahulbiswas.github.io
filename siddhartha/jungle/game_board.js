@@ -73,15 +73,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       )
     ),
 
-    React.createElement('rect', {
-      width: '120',
-      height: '120',
-      x: '-10',
-      y: '-10',
-      fill: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW,
-      id: 'board-background'
-    }),
-
     debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null,
 
     React.createElement('g', {

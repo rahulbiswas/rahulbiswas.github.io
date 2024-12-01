@@ -89,7 +89,12 @@ const JungleGame = () => {
     setIsPlayerTurn(true)
   }
 
-  return React.createElement('div', {className: 'game-container'},
+  return React.createElement('div', {
+    className: 'game-container',
+    style: {
+      backgroundColor: isPlayerTurn ? PLAYER_COLORS.RED : PLAYER_COLORS.YELLOW
+    }
+  },
     React.createElement('div', {
         className: 'game-content'
       },
