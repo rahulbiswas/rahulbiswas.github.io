@@ -44,13 +44,13 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
 
         return React.createElement('rect', {
           key: `${col}-${row}`,
-          x: col * BOARD_SQUARE_SIZE,
-          y: row * BOARD_SQUARE_SIZE,
-          width: BOARD_SQUARE_SIZE,
-          height: BOARD_SQUARE_SIZE,
+          x: col,
+          y: row,
+          width: 1,
+          height: 1,
           fill: squareFill,
           stroke: '#000',
-          strokeWidth: '0.1',
+          strokeWidth: '0.02',
           onClick: () => handleSquareClick(col, row),
           style: {cursor: 'pointer'},
           id: `square-${col}-${row}`,
@@ -127,12 +127,18 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn}) => {
       id: 'ai-move-time'
     }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`)) : null,
 
-    React.createElement('g', {transform: 'translate(12, 2)', id: 'board-grid'},
-      renderSquares()
-    ),
-
-    React.createElement(DebugOverlay, {debugMode}),
-    window.boardRenderer.renderPieces(pieces, handleSquareClick),
-    window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
+    React.createElement('svg', {
+      viewBox: '0 0 7 9',
+      x: '12',
+      y: '2',
+      width: '70',
+      height: '90',
+      id: 'board-grid',
+    },
+      renderSquares(),
+      React.createElement(DebugOverlay, {debugMode}),
+      window.boardRenderer.renderPieces(pieces, handleSquareClick),
+      window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
+    )
   )
 }

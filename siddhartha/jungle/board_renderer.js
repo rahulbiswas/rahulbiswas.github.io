@@ -25,26 +25,26 @@ class BoardRenderer {
 
     return Object.entries(pieces).map(([position, piece]) => {
       const [x, y] = position.split('_')
-      const translateX = x * BOARD_SQUARE_SIZE + (BOARD_SQUARE_SIZE - PIECE_SIZE) / 2
-      const translateY = y * BOARD_SQUARE_SIZE + (BOARD_SQUARE_SIZE - PIECE_SIZE) / 2
+      const translateX = x * 1 + 0.125
+      const translateY = y * 1 + 0.125
 
       return React.createElement('g', {
           key: position,
-          transform: `translate(${translateX + 12}, ${translateY + 2})`,
+          transform: `translate(${translateX}, ${translateY})`,
           onClick: () => onPieceClick(x, y),
           style: {cursor: 'pointer'},
           id: `piece-${position}`
         },
         React.createElement('image', {
           href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}piece.svg${timestamp}`,
-          width: PIECE_SIZE,
-          height: PIECE_SIZE,
+          width: 0.75,
+          height: 0.75,
           id: `piece-base-${position}`
         }),
         React.createElement('image', {
           href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg${timestamp}`,
-          width: PIECE_SIZE,
-          height: PIECE_SIZE,
+          width: 0.75,
+          height: 0.75,
           id: `piece-animal-${position}`
         })
       )
@@ -54,12 +54,12 @@ class BoardRenderer {
   renderMoveIndicators(lastMove, player) {
     if (!lastMove) return null
 
-    const arrowSize = 2.5
+    const arrowSize = 0.25
     const arrowColor = player === PLAYERS.RED ? ARROW_COLORS.RED : ARROW_COLORS.YELLOW
 
     const createArrow = (x, y) => {
-      const baseX = x * BOARD_SQUARE_SIZE + BOARD_SQUARE_SIZE / 2 + 12
-      const baseY = y * BOARD_SQUARE_SIZE + BOARD_SQUARE_SIZE / 2 + 2
+      const baseX = x * 1 + 0.5
+      const baseY = y * 1 + 0.5
       const dx = lastMove.to.x - lastMove.from.x
       const dy = lastMove.to.y - lastMove.from.y
 
@@ -85,7 +85,7 @@ class BoardRenderer {
       return React.createElement('path', {
         d: `M ${midpoint[0]},${midpoint[1]} l ${leftTip[0] - midpoint[0]},${leftTip[1] - midpoint[1]} M ${midpoint[0]},${midpoint[1]} l ${rightTip[0] - midpoint[0]},${rightTip[1] - midpoint[1]}`,
         stroke: arrowColor,
-        strokeWidth: 0.4,
+        strokeWidth: 0.04,
         strokeLinecap: 'round',
         fill: 'none',
         id: `move-arrow-${x}-${y}`
@@ -96,10 +96,10 @@ class BoardRenderer {
       createArrow(lastMove.from.x, lastMove.from.y),
       React.createElement('rect', {
         key: 'moveTo',
-        x: lastMove.to.x * BOARD_SQUARE_SIZE + 12,
-        y: lastMove.to.y * BOARD_SQUARE_SIZE + 2,
-        width: BOARD_SQUARE_SIZE,
-        height: BOARD_SQUARE_SIZE,
+        x: lastMove.to.x,
+        y: lastMove.to.y,
+        width: 1,
+        height: 1,
         fill: arrowColor,
         opacity: '0.3',
         id: 'move-target-highlight'
