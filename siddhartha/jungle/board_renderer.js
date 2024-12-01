@@ -20,8 +20,6 @@ class BoardRenderer {
 
   renderPieces(pieces, onPieceClick) {
     const urlParams = new URLSearchParams(window.location.search)
-    const debugMode = parseInt(urlParams.get('debug')) || 0
-    const timestamp = debugMode ? `?t=${Date.now()}` : ''
 
     return Object.entries(pieces).map(([position, piece]) => {
       const [x, y] = position.split('_')
@@ -36,13 +34,13 @@ class BoardRenderer {
           id: `piece-${position}`
         },
         React.createElement('image', {
-          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}piece.svg${timestamp}`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}piece.svg`,
           width: 0.75,
           height: 0.75,
           id: `piece-base-${position}`
         }),
         React.createElement('image', {
-          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg${timestamp}`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg`,
           width: 0.75,
           height: 0.75,
           id: `piece-animal-${position}`
@@ -109,7 +107,7 @@ class BoardRenderer {
 
   renderValidMoveIndicators(validMoves) {
     if (!validMoves?.size) return null
-    
+
     return Array.from(validMoves).map(pos => {
       const [x, y] = pos.split('_').map(Number)
       return React.createElement('circle', {
