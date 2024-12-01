@@ -92,16 +92,6 @@ class BoardRenderer {
 
     return [
       createArrow(lastMove.from.x, lastMove.from.y),
-      React.createElement('rect', {
-        key: 'moveTo',
-        x: lastMove.to.x,
-        y: lastMove.to.y,
-        width: 1,
-        height: 1,
-        fill: arrowColor,
-        opacity: '0.3',
-        id: 'move-target-highlight'
-      })
     ]
   }
 
