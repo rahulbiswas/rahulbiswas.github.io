@@ -1,12 +1,4 @@
-const BackButton = ({}) => {
-  return React.createElement('button', {
-    id: 'back-button',
-    onClick: () => window.gameManager.handleBackClick(),
-    className: 'back-button'
-  }, 'BACK')
-}
-
-const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves}) => {
+const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves}) => {
   const [debugMode, setDebugMode] = React.useState(false)
   const [lastMoveTime, setLastMoveTime] = React.useState(null)
   const [boardDimensions, setBoardDimensions] = React.useState({
@@ -18,45 +10,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
 
   const containerRef = React.useRef(null)
   const MARGIN_PERCENT = 2
-
-  const renderSquares = () => {
-    return Array.from({length: 9}, (_, row) =>
-      Array.from({length: 7}, (_, col) => {
-        let fill = SQUARE_COLORS.REGULAR
-        const pos = `${col}_${row}`
-
-        if ((col === 1 || col === 2 || col === 4 || col === 5) &&
-          (row === 3 || row === 4 || row === 5)) {
-          fill = SQUARE_COLORS.WATER
-        }
-
-        const isTrap = TRAP_SQUARES.YELLOW.some(trap => trap.X === col && trap.Y === row) ||
-          TRAP_SQUARES.RED.some(trap => trap.X === col && trap.Y === row)
-        if (isTrap) {
-          fill = SQUARE_COLORS.TRAP
-        }
-
-        if ((row === 0 || row === 8) && col === 3) {
-          fill = SQUARE_COLORS.DEN
-        }
-
-        return React.createElement('rect', {
-          key: `square-${col}-${row}`,
-          x: col,
-          y: row,
-          width: 1,
-          height: 1,
-          fill: fill,
-          stroke: '#000',
-          strokeWidth: '0.02',
-          onClick: () => handleSquareClick(col, row),
-          style: {cursor: 'pointer'},
-          id: `square-${col}-${row}`,
-          className: `square ${validMoves.has(pos) ? 'valid-move' : ''}`
-        })
-      })
-    )
-  }
 
   React.useEffect(() => {
     const updateBoardDimensions = () => {
@@ -111,15 +64,6 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
     return () => window.removeEventListener('ai-move-time', handleAIMoveTime)
   }, [])
 
-  const handleSquareClick = (x, y) => {
-    const pos = `${x}_${y}`
-    if (pieces[pos] && !selectedPieceKey) {
-      window.gameManager.handlePieceSelection(pos)
-    } else {
-      window.gameManager.handleSquareSelection(pos)
-    }
-  }
-
   const urlParams = new URLSearchParams(window.location.search)
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
@@ -135,26 +79,20 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
         overflow: 'hidden'
       }
     },
-    React.createElement('svg', {
-        viewBox: '0 0 7 9',
-        style: {
-          position: 'absolute',
-          left: `${boardDimensions.x}px`,
-          top: `${boardDimensions.y}px`,
-          width: `${boardDimensions.width}px`,
-          height: `${boardDimensions.height}px`,
-          transition: 'all 0.3s ease'
-        },
-        id: 'board-grid'
-      },
-      renderSquares(),
-      React.createElement(DebugOverlay, {debugMode}),
-      window.boardRenderer.renderPieces(pieces, handleSquareClick),
-      window.boardRenderer.renderValidMoveIndicators(validMoves),
-      window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
-    ),
-
-    React.createElement(BackButton),
+    React.createElement(GameBoardRenderer, {
+      pieces,
+      lastMove,
+      selectedPieceKey,
+      validMoves,
+      debugMode,
+      boardDimensions,
+      isPlayerTurn
+    }),
+    React.createElement('button', {
+      id: 'back-button',
+      onClick: () => window.gameManager.handleBackClick(),
+      className: 'back-button'
+    }, 'BACK'),
     debugEnabled ? React.createElement('div', {
       className: 'debug-info',
       id: 'ai-depth-info'
@@ -163,6 +101,8 @@ const GameBoard = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves
       className: 'debug-info',
       id: 'ai-move-time'
     }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`) : null,
-    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null,
+    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null
   )
 }
+
+window.GameBoardContainer = GameBoardContainer
