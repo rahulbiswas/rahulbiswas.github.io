@@ -120,7 +120,7 @@ const JungleGame = () => {
           winner: winner,
           onPlayAgain: resetGame
         })
-        : React.createElement(GameBoard, {
+        : React.createElement(GameBoardContainer, {
           pieces: pieces,
           lastMove: lastMove,
           selectedPieceKey: selectedPieceKey,
