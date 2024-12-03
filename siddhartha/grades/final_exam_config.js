@@ -3,6 +3,7 @@ const FINAL_EXAM_CONFIG = {
   'AP United States History': 10,
   'Mandarin 3': 15,
   'AP Calculus BC': 10,
+  'Honors Biology': 15,
 }
 
 function calculateRequiredFinalScore(currentGrade, targetGrade, finalWeight) {
