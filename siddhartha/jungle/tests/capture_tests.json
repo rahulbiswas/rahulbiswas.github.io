@@ -2,6 +2,23 @@
   "description": "Capture",
   "tests": [
     {
+      "description": "cat can capture rat on land",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.CAT"
+        },
+        "0_1": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.RAT"
+        }
+      },
+      "startPos": "0_0",
+      "endPos": "0_1",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
       "description": "should allow capturing weaker opponent piece",
       "board": {
         "0_0": {
