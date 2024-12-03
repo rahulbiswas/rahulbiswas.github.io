@@ -31,9 +31,10 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
 
   categories.forEach((category) => {
     let assignments = [...category.assignments]
-    
-    if (hypotheticalAssignments[category.name]) {
-      assignments = [...assignments, ...hypotheticalAssignments[category.name]]
+
+    hypotheticalKey = courseName + category.name;
+    if (hypotheticalAssignments[hypotheticalKey]) {
+      assignments = [...assignments, ...hypotheticalAssignments[hypotheticalKey]]
     }
 
     if (courseName === 'AP Microeconomics' && category.name === 'Quizzes') {
