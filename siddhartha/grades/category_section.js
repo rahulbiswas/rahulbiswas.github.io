@@ -1,24 +1,14 @@
-const CategorySection = ({category, idx, courseName, hypotheticalAssignments, onAddHypothetical, onUpdateHypothetical, onDeleteHypothetical}) => {
-  const isQuizCategory = category.name === 'Quizzes' && courseName === 'AP Microeconomics'
+const CategorySection = ({category, idx, courseName, hypotheticalAssignments, onAddHypothetical, onUpdateHypothetical, onDeleteHypothetical, droppedAssignment}) => {
   let assignments = [...category.assignments]
   let allAssignments = [...assignments, ...hypotheticalAssignments]
-  let droppedQuiz = null
-
-  if (isQuizCategory) {
-    const completedQuizzes = allAssignments.filter(a => 
-      (a.status !== 'pending' && a.status !== 'exempt') || 
-      !('status' in a)
-    )
-    if (completedQuizzes.length > 0) {
-      droppedQuiz = completedQuizzes.reduce((lowest, current) =>
-        (current.score / current.total) < (lowest.score / lowest.total) ? current : lowest
-      )
-    }
-  }
-
-  const activeAssignments = isQuizCategory ?
-    allAssignments.filter(a => a !== droppedQuiz) :
-    allAssignments
+  
+  const activeAssignments = allAssignments.filter(a => 
+    !droppedAssignment || 
+    droppedAssignment.category !== category.name ||
+    a.name !== droppedAssignment.name || 
+    a.score !== droppedAssignment.score || 
+    a.total !== droppedAssignment.total
+  )
 
   const categoryPercentage = calculateAssignmentPercentage(activeAssignments)
 
@@ -52,7 +42,11 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
             React.createElement(AssignmentRow, {
               key: `real-${aIdx}`,
               assignment,
-              isDropped: assignment === droppedQuiz
+              isDropped: droppedAssignment && 
+                droppedAssignment.category === category.name &&
+                assignment.name === droppedAssignment.name && 
+                assignment.score === droppedAssignment.score && 
+                assignment.total === droppedAssignment.total
             })
           ),
           ...hypotheticalAssignments.map((assignment, aIdx) =>
@@ -61,7 +55,11 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
               assignment,
               onUpdate: (updates) => onUpdateHypothetical(aIdx, updates),
               onDelete: () => onDeleteHypothetical(aIdx),
-              isDropped: assignment === droppedQuiz
+              isDropped: droppedAssignment && 
+                droppedAssignment.category === category.name &&
+                assignment.name === droppedAssignment.name && 
+                assignment.score === droppedAssignment.score && 
+                assignment.total === droppedAssignment.total
             })
           ),
           React.createElement(
