@@ -23,11 +23,40 @@ const calculateAssignmentPercentage = (assignments) => {
   return (earnedPoints / totalPoints) * 100
 }
 
+const findDroppedAssignment = (categories, courseName, hypotheticalAssignments = {}) => {
+  let allCompletedAssignments = []
+  categories.forEach(category => {
+    let assignments = [...category.assignments]
+    hypotheticalKey = courseName + category.name;
+    if (hypotheticalAssignments[hypotheticalKey]) {
+      assignments = [...assignments, ...hypotheticalAssignments[hypotheticalKey]]
+    }
+    const completed = assignments.filter(a => 
+      (a.status !== 'pending' && a.status !== 'exempt') || 
+      !('status' in a)
+    ).map(a => ({...a, category: category.name}))
+    allCompletedAssignments = [...allCompletedAssignments, ...completed]
+  })
+
+  const eligibleAssignments = allCompletedAssignments.filter(a => 
+    isEligibleForDropping(courseName, a.category, a)
+  )
+  
+  if (eligibleAssignments.length > 0) {
+    return eligibleAssignments.reduce((lowest, current) =>
+      (current.score / current.total) < (lowest.score / lowest.total) ? current : lowest
+    )
+  }
+  return null
+}
+
 const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = {}) => {
   if (!categories || categories.length === 0) return 0
 
   let totalWeight = 0
   let weightedSum = 0
+  
+  const droppedAssignment = findDroppedAssignment(categories, courseName, hypotheticalAssignments)
 
   categories.forEach((category) => {
     let assignments = [...category.assignments]
@@ -37,17 +66,12 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
       assignments = [...assignments, ...hypotheticalAssignments[hypotheticalKey]]
     }
 
-    if (courseName === 'AP Microeconomics' && category.name === 'Quizzes') {
-      const completedQuizzes = assignments.filter(a => 
-        (a.status !== 'pending' && a.status !== 'exempt') || 
-        !('status' in a)
+    if (droppedAssignment && droppedAssignment.category === category.name) {
+      assignments = assignments.filter(a => 
+        a.name !== droppedAssignment.name || 
+        a.score !== droppedAssignment.score || 
+        a.total !== droppedAssignment.total
       )
-      if (completedQuizzes.length > 0) {
-        const lowestQuiz = completedQuizzes.reduce((lowest, current) =>
-          (current.score / current.total) < (lowest.score / lowest.total) ? current : lowest
-        )
-        assignments = assignments.filter(a => a !== lowestQuiz)
-      }
     }
 
     const percentage = calculateAssignmentPercentage(assignments)
@@ -62,3 +86,4 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
 
 window.calculateAssignmentPercentage = calculateAssignmentPercentage
 window.calculateCourseGrade = calculateCourseGrade
+window.findDroppedAssignment = findDroppedAssignment

@@ -56,6 +56,7 @@ class CourseDetail extends React.Component {
     if (!course || !course.categories || course.categories.length === 0) return null
 
     const courseGrade = calculateCourseGrade(course.categories, course.name, this.state.hypotheticalAssignments)
+    const droppedAssignment = findDroppedAssignment(course.categories, course.name, this.state.hypotheticalAssignments)
 
     return React.createElement(
       'div',
@@ -131,7 +132,8 @@ class CourseDetail extends React.Component {
               onUpdateHypothetical: (index, updates) => 
                 this.updateHypotheticalAssignment(course.name, category.name, index, updates),
               onDeleteHypothetical: (index) => 
-                this.deleteHypotheticalAssignment(course.name, category.name, index)
+                this.deleteHypotheticalAssignment(course.name, category.name, index),
+              droppedAssignment: droppedAssignment
             })
           )
         ),
