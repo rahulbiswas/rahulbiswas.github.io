@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>Michael's prison blueprint scale is 1:48. If a cell block is 144 feet long in reality, how many inches long is it on his blueprint?</prompt>
+        <options>
+            <option letter="a">36</option>
+            <option letter="b">42</option>
+            <option letter="c">36</option>
+            <option letter="d">48</option>
+        </options>
+        <answer>a</answer>
+        <explanation>144 feet = 1728 inches. At 1:48 scale, blueprint length = 1728÷48 = 36 inches.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>In Fox River, the ratio of guards to inmates on day shift vs. night shift is 5:3. If there are 15 guards on day shift, how many are on night shift?</prompt>
+        <options>
+            <option letter="a">7</option>
+            <option letter="b">9</option>
+            <option letter="c">10</option>
+            <option letter="d">11</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Set up proportion: 5/3 = 15/x. Cross multiply: 5x = 45. Solve: x = 9 guards.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>The PI crew works in a ratio of 3 skilled workers to 5 general laborers. If there are 24 total workers, how many are skilled?</prompt>
+        <options>
+            <option letter="a">8</option>
+            <option letter="b">9</option>
+            <option letter="c">10</option>
+            <option letter="d">11</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Total parts = 8 (3+5). Each part = 24÷8 = 3. Skilled workers = 3 parts = 3×3 = 9 workers.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>Michael calculates that for every 2 hours of digging, they need 3 hours of lookout coverage. If they plan to dig for 12 hours, how many hours of lookout coverage do they need?</prompt>
+        <options>
+            <option letter="a">15</option>
+            <option letter="b">16</option>
+            <option letter="c">17</option>
+            <option letter="d">18</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Set up proportion: 2/3 = 12/x. Cross multiply: 2x = 36. Solve: x = 18 hours.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>The tunnel needs to be reinforced with steel bars in a ratio of 1 bar per 4 feet. If the tunnel is 60 feet long, how many bars are needed?</prompt>
+        <options>
+            <option letter="a">12</option>
+            <option letter="b">13</option>
+            <option letter="c">14</option>
+            <option letter="d">15</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Set up proportion: 1/4 = x/60. Cross multiply: 4x = 60. Solve: x = 15 bars.</explanation>
+    </question>
+
+    <question number="6">
+        <prompt>The infirmary's storage ratio is 3 medical supplies to 2 cleaning supplies. If there are 40 total supplies, how many are medical?</prompt>
+        <options>
+            <option letter="a">20</option>
+            <option letter="b">22</option>
+            <option letter="c">24</option>
+            <option letter="d">26</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Total parts = 5 (3+2). Each part = 40÷5 = 8. Medical supplies = 3 parts = 3×8 = 24 supplies.</explanation>
+    </question>
+
+    <question number="7">
+        <prompt>Abruzzi's escape plane uses fuel at a ratio of 5 gallons per 100 miles. If they need to fly 800 miles, how many gallons of fuel are needed?</prompt>
+        <options>
+            <option letter="a">35</option>
+            <option letter="b">40</option>
+            <option letter="c">45</option>
+            <option letter="d">50</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Set up proportion: 5/100 = x/800. Cross multiply: 100x = 4000. Solve: x = 40 gallons.</explanation>
+    </question>
+
+    <question number="8">
+        <prompt>The prison yard has a perimeter-to-area ratio of 1:6. If the perimeter is 120 yards, what is the area in square yards?</prompt>
+        <options>
+            <option letter="a">680</option>
+            <option letter="b">700</option>
+            <option letter="c">720</option>
+            <option letter="d">740</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Set up proportion: 1/6 = 120/x. Cross multiply: x = 720 square yards.</explanation>
+    </question>
+
+    <question number="9">
+        <prompt>In Cell Block A, for every 4 single cells there are 3 double cells. If there are 35 total cells, how many are single cells?</prompt>
+        <options>
+            <option letter="a">18</option>
+            <option letter="b">19</option>
+            <option letter="c">20</option>
+            <option letter="d">21</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Total parts = 7 (4+3). Each part = 35÷7 = 5. Single cells = 4 parts = 4×5 = 20 cells.</explanation>
+    </question>
+
+    <question number="10">
+        <prompt>The escape team can move through the pipe system at a ratio of 2 feet per 3 seconds. How many seconds will it take to travel 30 feet?</prompt>
+        <options>
+            <option letter="a">42</option>
+            <option letter="b">43</option>
+            <option letter="c">44</option>
+            <option letter="d">45</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Set up proportion: 2/3 = 30/x. Cross multiply: 2x = 90. Solve: x = 45 seconds.</explanation>
+    </question>
+
+    <question number="11">
+        <prompt>The surveillance cameras rotate in a ratio where every 3 minutes of west view equals 2 minutes of east view. How many minutes of east view occur in 30 minutes of west view?</prompt>
+        <options>
+            <option letter="a">18</option>
+            <option letter="b">19</option>
+            <option letter="c">20</option>
+            <option letter="d">21</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Set up proportion: 3/2 = 30/x. Cross multiply: 3x = 60. Solve: x = 20 minutes.</explanation>
+    </question>
+
+    <question number="12">
+        <prompt>For every 5 inmates in general population, there are 2 in solitary confinement. If there are 140 inmates in general population, how many are in solitary?</prompt>
+        <options>
+            <option letter="a">54</option>
+            <option letter="b">55</option>
+            <option letter="c">56</option>
+            <option letter="d">57</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Set up proportion: 5/2 = 140/x. Cross multiply: 5x = 280. Solve: x = 56 inmates.</explanation>
+    </question>
+
+    <question number="13">
+        <prompt>The maintenance tunnel stretches 300 feet, with access points every 20 feet. What is the ratio of access points to total length in simplest form?</prompt>
+        <options>
+            <option letter="a">1:15</option>
+            <option letter="b">1:20</option>
+            <option letter="c">3:20</option>
+            <option letter="d">1:25</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Number of access points = 300÷20 = 15. Ratio = 1:15 in simplest form.</explanation>
+    </question>
+
+    <question number="14">
+        <prompt>The kitchen inventory requires a ratio of 3 breakfast supplies to 4 lunch supplies to 5 dinner supplies. In a shipment of 72 total supplies, how many are for lunch?</prompt>
+        <options>
+            <option letter="a">22</option>
+            <option letter="b">24</option>
+            <option letter="c">26</option>
+            <option letter="d">28</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Total parts = 12 (3+4+5). Each part = 72÷12 = 6. Lunch supplies = 4 parts = 4×6 = 24 supplies.</explanation>
+    </question>
+
+    <question number="15">
+        <prompt>The guard tower visibility covers ground in a ratio where every 1 foot of height sees 4 feet of distance. If the tower is 75 feet tall, how many feet can it see?</prompt>
+        <options>
+            <option letter="a">275</option>
+            <option letter="b">285</option>
+            <option letter="c">295</option>
+            <option letter="d">300</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Set up proportion: 1/4 = 75/x. Cross multiply: x = 75×4 = 300 feet.</explanation>
+    </question>
+
+    <question number="16">
+        <prompt>During yard time, the ratio of inmates exercising to those not exercising is 7:3. If 200 inmates are in the yard, how many are exercising?</prompt>
+        <options>
+            <option letter="a">130</option>
+            <option letter="b">135</option>
+            <option letter="c">140</option>
+            <option letter="d">145</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Total parts = 10 (7+3). Each part = 200÷10 = 20. Exercising = 7 parts = 7×20 = 140 inmates.</explanation>
+    </question>
+
+    <question number="17">
+        <prompt>The escape route through the walls requires moving at 1 foot per 30 seconds to avoid detection. How many minutes to cover 40 feet?</prompt>
+        <options>
+            <option letter="a">18</option>
+            <option letter="b">19</option>
+            <option letter="c">20</option>
+            <option letter="d">21</option>
+        </options>
+        <answer>c</answer>
+        <explanation>40 feet × 30 seconds = 1200 seconds = 20 minutes.</explanation>
+    </question>
+
+    <question number="18">
+        <prompt>The prison laundry uses detergent and water in a ratio of 1:15. How many gallons of water are needed with 4 gallons of detergent?</prompt>
+        <options>
+            <option letter="a">55</option>
+            <option letter="b">60</option>
+            <option letter="c">65</option>
+            <option letter="d">70</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Set up proportion: 1/15 = 4/x. Cross multiply: x = 4×15 = 60 gallons.</explanation>
+    </question>
+
+    <question number="19">
+        <prompt>The visiting room has a ratio of 2 guards for every 5 inmates. If there are 8 guards on duty, how many inmates can be in the room?</prompt>
+        <options>
+            <option letter="a">15</option>
+            <option letter="b">18</option>
+            <option letter="c">20</option>
+            <option letter="d">22</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Set up proportion: 2/5 = 8/x. Cross multiply: 2x = 40. Solve: x = 20 inmates.</explanation>
+    </question>
+
+    <question number="20">
+        <prompt>The prison's budget allocates money in a ratio of 3:2:1 for security, maintenance, and programs. If security gets $300,000, what's the total budget?</prompt>
+        <options>
+            <option letter="a">$500,000</option>
+            <option letter="b">$550,000</option>
+            <option letter="c">$600,000</option>
+            <option letter="d">$650,000</option>
+        </options>
+        <answer>c</answer>
+        <explanation>If 3 parts = $300,000, then 1 part = $100,000. Total parts = 6, so total = 6×$100,000 = $600,000.</explanation>
+    </question>
+
+    <question number="21">
+        <prompt>The escape team needs to distribute weight in the escape boat in a 2:3 ratio from front to back. If the back holds 300 pounds, how much should the front hold?</prompt>
+        <options>
+            <option letter="a">180</option>
+            <option letter="b">190</option>
+            <option letter="c">200</option>
+            <option letter="d">210</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Set up proportion: 2/3 = x/300. Cross multiply: 3x = 600. Solve: x = 200 pounds.</explanation>
+    </question>
+
+    <question number="22">
+        <prompt>Cell block work assignments are split in a ratio of 4:3:2 between maintenance, kitchen, and laundry. In a group of 81 workers, how many are in kitchen?</prompt>
+        <options>
+            <option letter="a">25</option>
+            <option letter="b">27</option>
+            <option letter="c">29</option>
+            <option letter="d">31</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Total parts = 9 (4+3+2). Each part = 81÷9 = 9. Kitchen = 3 parts = 3×9 = 27 workers.</explanation>
+    </question>
+
+    <question number="23">
+        <prompt>The guard patrol schedule alternates in a ratio where 5 minutes of walking equals 3 minutes of stationary observation. How many minutes of walking in 36 minutes of observation?</prompt>
+        <options>
+            <option letter="a">55</option>
+            <option letter="b">60</option>
+            <option letter="c">65</option>
+            <option letter="d">70</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Set up proportion: 5/3 = x/36. Cross multiply: 3x = 180. Solve: x = 60 minutes.</explanation>
+    </question>
+
+    <question number="24">
+        <prompt>The escape tunnel needs support beams with a ratio of 3 vertical to 4 horizontal beams. If they have 28 horizontal beams, how many vertical beams are needed?</prompt>
+        <options>
+            <option letter="a">18</option>
+            <option letter="b">20</option>
+            <option letter="c">21</option>
+            <option letter="d">23</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Set up proportion: 3/4 = x/28. Cross multiply: 4x = 84. Solve: x = 21 vertical beams.</explanation>
+    </question>
+
+    <question number="25">
+        <prompt>During lockdown, the prison operates with a ratio of 1 guard per 12 inmates. If there are 780 inmates, how many guards are needed for one shift?</prompt>
+        <options>
+            <option letter="a">60</option>
+            <option letter="b">62</option>
+            <option letter="c">64</option>
+            <option letter="d">65</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Set up proportion: 1/12 = x/780. Cross multiply: 12x = 780. Solve: x = 65 guards.</explanation>
+    </question>
+</quiz>
