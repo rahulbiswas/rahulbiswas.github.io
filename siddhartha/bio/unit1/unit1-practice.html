@@ -4,23 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit 1 Practice Problems</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-        .show-answer {
-            margin: 10px 0;
-            padding: 5px 10px;
-            background: #ff99cc;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .show-answer:hover {
-            background: #ff66aa;
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="unit unit-1">
@@ -39,8 +23,7 @@
                         <li>c) Low density when frozen</li>
                         <li>d) Cohesion</li>
                     </ul>
-                    <button class="show-answer">Show Answer</button>
-                    <p class="answer hidden">b) High specific heat capacity - Water's hydrogen bonds require significant energy to break, allowing it to absorb heat with minimal temperature change.</p>
+                    <p class="answer">Answer: b) High specific heat capacity - Water's hydrogen bonds require significant energy to break, allowing it to absorb heat with minimal temperature change.</p>
                 </div>
 
                 <div class="question">
@@ -51,8 +34,7 @@
                         <li>c) 11.0</li>
                         <li>d) 1.0</li>
                     </ul>
-                    <button class="show-answer">Show Answer</button>
-                    <p class="answer hidden">Answer: a) 3.0 - Using pH = -log[H+] = -log(1 × 10-3) = 3.0</p>
+                    <p class="answer">Answer: a) 3.0 - Using pH = -log[H+] = -log(1 × 10-3) = 3.0</p>
                 </div>
             </div>
 
@@ -66,8 +48,18 @@
                         <li>c) Cellulose</li>
                         <li>d) Proteins</li>
                     </ul>
-                    <button class="show-answer">Show Answer</button>
-                    <p class="answer hidden">b) Phospholipids - Their amphipathic nature allows them to form bilayers.</p>
+                    <p class="answer">Answer: b) Phospholipids - Their amphipathic nature allows them to form bilayers.</p>
+                </div>
+
+                <div class="question">
+                    <p>4. What level of protein structure is maintained by hydrogen bonds?</p>
+                    <ul>
+                        <li>a) Primary</li>
+                        <li>b) Secondary</li>
+                        <li>c) Tertiary</li>
+                        <li>d) Quaternary</li>
+                    </ul>
+                    <p class="answer">Answer: b) Secondary - α-helices and β-sheets are stabilized by hydrogen bonds.</p>
                 </div>
             </div>
         </div>
@@ -84,14 +76,30 @@
                         <li>Response to added base</li>
                         <li>Biological example</li>
                     </ul>
-                    <button class="show-answer">Show Answer</button>
-                    <div class="answer hidden">
-                        <p>Key points:</p>
+                    <div class="answer">
+                        <p>Key points for answer:</p>
                         <ul>
                             <li>Buffer contains weak acid and its conjugate base</li>
                             <li>Added H+ reacts with conjugate base</li>
                             <li>Added OH- reacts with weak acid</li>
                             <li>Example: Bicarbonate buffer in blood (H2CO3/HCO3-)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Compare and contrast the structure and function of:</p>
+                    <ul>
+                        <li>Starch vs. cellulose</li>
+                        <li>DNA vs. RNA</li>
+                    </ul>
+                    <div class="answer">
+                        <p>Key points for answer:</p>
+                        <ul>
+                            <li>Starch: α1-4 linkages, energy storage, digestible</li>
+                            <li>Cellulose: β1-4 linkages, structural, indigestible</li>
+                            <li>DNA: double-stranded, thymine, deoxyribose, storage</li>
+                            <li>RNA: single-stranded, uracil, ribose, protein synthesis</li>
                         </ul>
                     </div>
                 </div>
@@ -109,8 +117,7 @@
                         <li>[OH-]</li>
                         <li>pOH</li>
                     </ul>
-                    <button class="show-answer">Show Answer</button>
-                    <div class="answer hidden">
+                    <div class="answer">
                         <p>Solution:</p>
                         <ul>
                             <li>[H+] = 10-4.5 = 3.16 × 10-5 M</li>
@@ -126,26 +133,17 @@
             <h3>💡 Problem-Solving Tips</h3>
             <ul>
                 <li>Read questions carefully</li>
+                <li>Draw structures when needed</li>
                 <li>Show all calculation steps</li>
                 <li>Check units in answers</li>
-                <li>Look for key terms</li>
+                <li>Look for key terms in questions</li>
             </ul>
         </div>
 
         <div class="navigation">
             <button onclick="location.href='unit1-summary.html'">← Unit Summary</button>
-            <button onclick="location.href='unit1-quiz.html'">Self Quiz →</button>
+            <button onclick="location.href='index.html'">Main Menu →</button>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.show-answer').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                answer.classList.toggle('hidden');
-                button.textContent = answer.classList.contains('hidden') ? 'Show Answer' : 'Hide Answer';
-            });
-        });
-    </script>
 </body>
 </html>
