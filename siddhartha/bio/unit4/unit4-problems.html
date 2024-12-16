@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4 Practice Problems ⭐️</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-4">
+        <h1>Unit 4 Practice Problems</h1>
+
+        <div class="key-concept">
+            <h2>Let's Practice! 화이팅! ✨</h2>
+            <p>Test your understanding of cell communication and signaling pathways~</p>
+        </div>
+
+        <div class="section">
+            <h2>Signal Transduction Problems</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. A cell surface receptor is activated by its ligand. Calculate the signal amplification if:</p>
+                    <ul>
+                        <li>Each receptor activates 100 G proteins</li>
+                        <li>Each G protein activates 10 enzyme molecules</li>
+                        <li>Each enzyme generates 1000 second messengers</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <p>Total amplification = 100 × 10 × 1000 = 1,000,000 molecules</p>
+                        <p>One receptor ultimately leads to one million second messenger molecules!</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Compare the response times of different signaling mechanisms:</p>
+                    <ul>
+                        <li>Ion channel opening</li>
+                        <li>GPCR activation</li>
+                        <li>Gene expression changes</li>
+                    </ul>
+                    <button class="show-answer">See Solution ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Ion channels: milliseconds</li>
+                            <li>GPCR cascade: seconds</li>
+                            <li>Gene expression: minutes to hours</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Cell Communication Analysis</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Given a signaling pathway diagram, identify:</p>
+                    <ul>
+                        <li>Signal integration points</li>
+                        <li>Feedback mechanisms</li>
+                        <li>Signal termination methods</li>
+                    </ul>
+                    <button class="show-answer">See Solution (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Integration: protein kinase nodes, transcription factors</li>
+                            <li>Feedback: phosphatase activation, receptor downregulation</li>
+                            <li>Termination: protein degradation, signal molecule breakdown</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Experimental Design</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>4. Design an experiment to determine if a receptor uses G proteins:</p>
+                    <button class="show-answer">See Solution ⭐️</button>
+                    <div class="answer hidden">
+                        <p>Approach:</p>
+                        <ul>
+                            <li>Use pertussis toxin to inhibit G proteins</li>
+                            <li>Measure downstream responses</li>
+                            <li>Compare with controls</li>
+                            <li>Test second messenger levels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Clinical Applications</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. Analyze a cell signaling disorder:</p>
+                    <ul>
+                        <li>Identify affected pathway</li>
+                        <li>Predict cellular effects</li>
+                        <li>Suggest treatment approaches</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <p>Example: EGFR mutation in cancer</p>
+                        <ul>
+                            <li>Constitutive receptor activation</li>
+                            <li>Increased cell proliferation</li>
+                            <li>Treatment: tyrosine kinase inhibitors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Problem-Solving Tips</h3>
+            <ul>
+                <li>Draw pathway diagrams</li>
+                <li>Show all calculations</li>
+                <li>Consider multiple steps</li>
+                <li>Connect to real examples</li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <button onclick="location.href='cell-adhesion.html'">← Cell Adhesion</button>
+            <button onclick="location.href='unit4-case-studies.html'">Case Studies →</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>

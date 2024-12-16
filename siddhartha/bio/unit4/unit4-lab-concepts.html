@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4 Laboratory Concepts ⭐️</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-4">
+        <h1>Unit 4 Laboratory Concepts</h1>
+
+        <div class="key-concept">
+            <h2>Lab Skills & Techniques! 화이팅! ✨</h2>
+            <p>Essential laboratory methods for studying cell signaling and communication~</p>
+        </div>
+
+        <div class="section">
+            <h2>Signal Detection Methods</h2>
+            
+            <div class="highlight">
+                <h3>Protein Phosphorylation</h3>
+                <ul>
+                    <li>Western blotting</li>
+                    <li>Phospho-specific antibodies</li>
+                    <li>Kinase activity assays</li>
+                    <li>Phosphoproteome analysis</li>
+                </ul>
+
+                <h3>Common Issues</h3>
+                <button class="show-answer">See Tips (◕‿◕✿)</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Use phosphatase inhibitors</li>
+                        <li>Handle samples quickly</li>
+                        <li>Include proper controls</li>
+                        <li>Optimize antibody conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Second Messenger Assays</h2>
+            
+            <div class="highlight">
+                <h3>Measurement Techniques</h3>
+                <ul>
+                    <li>cAMP quantification</li>
+                    <li>Calcium imaging</li>
+                    <li>IP3 assays</li>
+                    <li>Reporter systems</li>
+                </ul>
+
+                <h3>Important Considerations</h3>
+                <button class="show-answer">See Protocol ₍ᐢ. ̫ .ᐢ₎</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Time resolution is critical</li>
+                        <li>Cell viability affects results</li>
+                        <li>Signal specificity matters</li>
+                        <li>Background interference</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Receptor Studies</h2>
+            
+            <div class="highlight">
+                <h3>Analysis Methods</h3>
+                <ul>
+                    <li>Binding assays</li>
+                    <li>FRET analysis</li>
+                    <li>Surface expression</li>
+                    <li>Internalization studies</li>
+                </ul>
+
+                <h3>Key Steps</h3>
+                <button class="show-answer">See Methods (｡♥‿♥｡)</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Proper sample preparation</li>
+                        <li>Temperature control</li>
+                        <li>Time course analysis</li>
+                        <li>Data normalization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Cell-Based Assays</h2>
+            
+            <div class="highlight">
+                <h3>Common Techniques</h3>
+                <button class="show-answer">See Protocols ⭐️</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Reporter gene assays</li>
+                        <li>Cell migration studies</li>
+                        <li>Adhesion measurements</li>
+                        <li>Proliferation tests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Safety Procedures</h2>
+            
+            <div class="highlight">
+                <h3>Essential Safety</h3>
+                <button class="show-answer">See Guidelines (◠‿◠✿)</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Use proper PPE</li>
+                        <li>Handle radioisotopes carefully</li>
+                        <li>Dispose of waste properly</li>
+                        <li>Follow biosafety protocols</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Troubleshooting</h2>
+            <div class="note">
+                <p>Common issues and solutions:</p>
+                <button class="show-answer">See Solutions (づ｡◕‿‿◕｡)づ</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>High background: Optimize blocking</li>
+                        <li>Weak signals: Check reagent quality</li>
+                        <li>Variable results: Standardize protocols</li>
+                        <li>Cell death: Improve conditions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Laboratory Tips</h3>
+            <ul>
+                <li>Plan experiments carefully</li>
+                <li>Include all controls</li>
+                <li>Keep detailed notes</li>
+                <li>Follow protocols precisely</li>
+                <li>Maintain sterile technique</li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <button onclick="location.href='unit4-case-studies.html'">← Case Studies</button>
+            <button onclick="location.href='unit4-quiz.html'">Self Quiz →</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>
