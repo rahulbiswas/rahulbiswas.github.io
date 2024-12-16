@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 5 Laboratory Concepts ⭐️</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-5">
+        <h1>Unit 5 Laboratory Concepts</h1>
+
+        <div class="key-concept">
+            <h2>Lab Skills & Techniques! 화이팅! ✨</h2>
+            <p>Essential laboratory methods for studying inheritance and genetics~</p>
+        </div>
+
+        <div class="section">
+            <h2>Chromosomal Analysis</h2>
+            
+            <div class="highlight">
+                <h3>Karyotyping</h3>
+                <ul>
+                    <li>Cell culture</li>
+                    <li>Chromosome preparation</li>
+                    <li>Staining techniques</li>
+                    <li>Analysis methods</li>
+                </ul>
+
+                <h3>Common Issues</h3>
+                <button class="show-answer">See Tips (◕‿◕✿)</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Poor chromosome spread</li>
+                        <li>Inadequate staining</li>
+                        <li>Culture contamination</li>
+                        <li>Image quality</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <h3>FISH Analysis</h3>
+                <ul>
+                    <li>Probe selection</li>
+                    <li>Hybridization</li>
+                    <li>Signal detection</li>
+                    <li>Result interpretation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>DNA Analysis</h2>
+            
+            <div class="highlight">
+                <h3>PCR Techniques</h3>
+                <ul>
+                    <li>Sample preparation</li>
+                    <li>Primer design</li>
+                    <li>Thermal cycling</li>
+                    <li>Product analysis</li>
+                </ul>
+
+                <h3>Key Points</h3>
+                <button class="show-answer">See Protocol ₍ᐢ. ̫ .ᐢ₎</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Contamination control</li>
+                        <li>Temperature accuracy</li>
+                        <li>Component quality</li>
+                        <li>Controls needed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Genetic Crosses</h2>
+            
+            <div class="highlight">
+                <h3>Drosophila Studies</h3>
+                <ul>
+                    <li>Stock maintenance</li>
+                    <li>Virgin collection</li>
+                    <li>Cross setup</li>
+                    <li>Phenotype scoring</li>
+                </ul>
+
+                <h3>Important Steps</h3>
+                <button class="show-answer">See Methods (｡♥‿♥｡)</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Timing is critical</li>
+                        <li>Environment control</li>
+                        <li>Accurate records</li>
+                        <li>Statistical analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Pedigree Analysis</h2>
+            
+            <div class="highlight">
+                <h3>Techniques</h3>
+                <button class="show-answer">See Guidelines ⭐️</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>Data collection</li>
+                        <li>Symbol standardization</li>
+                        <li>Pattern recognition</li>
+                        <li>Risk assessment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Safety Procedures</h2>
+            
+            <div class="highlight">
+                <h3>Essential Safety</h3>
+                <button class="show-answer">See Rules (◠‿◠✿)</button>
+                <div class="answer hidden">
+                    <ul>
+                        <li>PPE requirements</li>
+                        <li>Chemical handling</li>
+                        <li>Biological safety</li>
+                        <li>Waste disposal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Laboratory Tips</h3>
+            <ul>
+                <li>Keep detailed records</li>
+                <li>Follow protocols exactly</li>
+                <li>Use proper controls</li>
+                <li>Maintain sterile technique</li>
+                <li>Document all results</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>
