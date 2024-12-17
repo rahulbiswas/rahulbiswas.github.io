@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which molecule is the primary energy storage form in cells?</text>
+        <option>Glucose</option>
+        <option>Glycogen</option>
+        <option>ATP</option>
+        <option>Fatty acids</option>
+        <answer>ATP</answer>
+        <explanation>ATP (adenosine triphosphate) serves as the primary energy currency in cells, storing energy in its phosphate bonds.</explanation>
+    </question>
+    <question>
+        <text>What happens to enzyme activity when pH is far from optimal?</text>
+        <option>Activity increases exponentially</option>
+        <option>Activity decreases due to denaturation</option>
+        <option>Activity remains constant</option>
+        <option>Activity oscillates randomly</option>
+        <answer>Activity decreases due to denaturation</answer>
+        <explanation>Extreme pH values alter protein structure through changes in amino acid ionization, leading to denaturation and loss of activity.</explanation>
+    </question>
+    <question>
+        <text>Which force stabilizes the hydrophobic core of globular proteins?</text>
+        <option>Hydrogen bonds</option>
+        <option>Ionic bonds</option>
+        <option>Hydrophobic interactions</option>
+        <option>Covalent bonds</option>
+        <answer>Hydrophobic interactions</answer>
+        <explanation>Hydrophobic interactions between nonpolar amino acids create and stabilize the water-excluding core of globular proteins.</explanation>
+    </question>
+    <question>
+        <text>What is the role of water in hydrolysis reactions?</text>
+        <option>Electron donor</option>
+        <option>Bond formation</option>
+        <option>Bond breaking</option>
+        <option>Catalyst</option>
+        <answer>Bond breaking</answer>
+        <explanation>In hydrolysis reactions, water molecules break chemical bonds by contributing OH- and H+ to the products.</explanation>
+    </question>
+    <question>
+        <text>Which property allows proteins to buffer pH changes?</text>
+        <option>Their primary structure</option>
+        <option>Their hydrophobic core</option>
+        <option>Their ionizable side chains</option>
+        <option>Their molecular weight</option>
+        <answer>Their ionizable side chains</answer>
+        <explanation>Proteins can buffer pH changes because their amino acid side chains can accept or donate H+ ions at different pH values.</explanation>
+    </question>
+</questions>

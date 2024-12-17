@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is feedback inhibition in metabolic pathways?</text>
+        <option>Substrate inhibits its own production</option>
+        <option>End product inhibits first enzyme</option>
+        <option>Cofactors inhibit enzymes</option>
+        <option>Temperature affects enzyme activity</option>
+        <answer>End product inhibits first enzyme</answer>
+        <explanation>Feedback inhibition occurs when the end product of a pathway inhibits the first enzyme, preventing unnecessary product accumulation.</explanation>
+    </question>
+    <question>
+        <text>Which describes uncompetitive inhibition?</text>
+        <option>Binds only to free enzyme</option>
+        <option>Binds only to enzyme-substrate complex</option>
+        <option>Binds to both forms equally</option>
+        <option>Never binds to enzyme</option>
+        <answer>Binds only to enzyme-substrate complex</answer>
+        <explanation>Uncompetitive inhibitors bind exclusively to the enzyme-substrate complex, not to the free enzyme.</explanation>
+    </question>
+    <question>
+        <text>What is the role of phosphorylation in enzyme regulation?</text>
+        <option>Energy storage</option>
+        <option>Substrate binding</option>
+        <option>Activity modification</option>
+        <option>Product release</option>
+        <answer>Activity modification</answer>
+        <explanation>Phosphorylation can activate or inhibit enzymes by adding phosphate groups to specific amino acid residues.</explanation>
+    </question>
+    <question>
+        <text>How do proteases activate zymogens?</text>
+        <option>Adding cofactors</option>
+        <option>Cleaving peptide bonds</option>
+        <option>Changing pH</option>
+        <option>Adding substrates</option>
+        <answer>Cleaving peptide bonds</answer>
+        <explanation>Proteases activate zymogens by cleaving specific peptide bonds, removing inhibitory segments to expose the active site.</explanation>
+    </question>
+    <question>
+        <text>What characterizes irreversible inhibition?</text>
+        <option>Temporary binding</option>
+        <option>Competitive binding</option>
+        <option>Covalent modification</option>
+        <option>Allosteric effects</option>
+        <answer>Covalent modification</answer>
+        <explanation>Irreversible inhibitors form permanent covalent bonds with the enzyme, permanently preventing its activity.</explanation>
+    </question>
+</questions>

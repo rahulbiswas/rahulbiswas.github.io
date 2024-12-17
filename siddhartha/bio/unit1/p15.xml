@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What characterizes non-competitive inhibition?</text>
+        <option>Binds only to active site</option>
+        <option>Changes Km only</option>
+        <option>Decreases Vmax only</option>
+        <option>Changes both Km and Vmax</option>
+        <answer>Decreases Vmax only</answer>
+        <explanation>Non-competitive inhibitors bind away from the active site and reduce Vmax without affecting Km, as they don't compete with substrate binding.</explanation>
+    </question>
+    <question>
+        <text>How does pH affect enzyme activity?</text>
+        <option>Activity always increases with pH</option>
+        <option>Activity always decreases with pH</option>
+        <option>Each enzyme has an optimal pH</option>
+        <option>pH has no effect on activity</option>
+        <answer>Each enzyme has an optimal pH</answer>
+        <explanation>Every enzyme has an optimal pH where its activity is maximal, reflecting the ionization states of catalytic amino acids.</explanation>
+    </question>
+    <question>
+        <text>What is the effect of increasing substrate concentration on reaction rate?</text>
+        <option>Linear increase</option>
+        <option>Exponential increase</option>
+        <option>Hyperbolic approach to Vmax</option>
+        <option>No effect</option>
+        <answer>Hyperbolic approach to Vmax</answer>
+        <explanation>Reaction rate increases hyperbolically with substrate concentration until reaching Vmax when enzymes are saturated.</explanation>
+    </question>
+    <question>
+        <text>What is the purpose of allosteric regulation?</text>
+        <option>Increase substrate binding</option>
+        <option>Control enzyme activity</option>
+        <option>Break down substrate</option>
+        <option>Form product</option>
+        <answer>Control enzyme activity</answer>
+        <explanation>Allosteric regulation allows cells to control enzyme activity by binding regulatory molecules at sites other than the active site.</explanation>
+    </question>
+    <question>
+        <text>What happens in substrate inhibition?</text>
+        <option>Rate increases continuously</option>
+        <option>Rate decreases at high substrate levels</option>
+        <option>Rate remains constant</option>
+        <option>Substrate has no effect</option>
+        <answer>Rate decreases at high substrate levels</answer>
+        <explanation>In substrate inhibition, excess substrate molecules bind inappropriately to the enzyme, reducing its activity at high concentrations.</explanation>
+    </question>
+</questions>

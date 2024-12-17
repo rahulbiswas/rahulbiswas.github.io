@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of the Na+/K+ ATPase pump?</text>
+        <option>Maintains ion gradients</option>
+        <option>Synthesizes proteins</option>
+        <option>Breaks down glucose</option>
+        <option>Produces ATP</option>
+        <answer>Maintains ion gradients</answer>
+        <explanation>The Na+/K+ ATPase pump maintains essential ion gradients by moving sodium out and potassium into the cell using ATP.</explanation>
+    </question>
+    <question>
+        <text>Which transport mechanism is an example of cotransport?</text>
+        <option>Na+/glucose symporter</option>
+        <option>Ion channels</option>
+        <option>Simple diffusion</option>
+        <option>Aquaporins</option>
+        <answer>Na+/glucose symporter</answer>
+        <explanation>The Na+/glucose symporter moves both sodium and glucose in the same direction, using sodium's gradient to power glucose transport.</explanation>
+    </question>
+    <question>
+        <text>What energy source drives secondary active transport?</text>
+        <option>Ion gradients</option>
+        <option>Direct ATP use</option>
+        <option>Substrate binding</option>
+        <option>Heat energy</option>
+        <answer>Ion gradients</answer>
+        <explanation>Secondary active transport uses existing ion gradients as an energy source rather than directly using ATP.</explanation>
+    </question>
+    <question>
+        <text>Which process moves large particles into cells?</text>
+        <option>Phagocytosis</option>
+        <option>Osmosis</option>
+        <option>Diffusion</option>
+        <option>Facilitated transport</option>
+        <answer>Phagocytosis</answer>
+        <explanation>Phagocytosis is a form of bulk transport that engulfs large particles or organisms into vesicles for cellular intake.</explanation>
+    </question>
+    <question>
+        <text>What characterizes antiport transport?</text>
+        <option>Opposite direction movement</option>
+        <option>Same direction movement</option>
+        <option>Random movement</option>
+        <option>Circular movement</option>
+        <answer>Opposite direction movement</answer>
+        <explanation>Antiport transporters move two different molecules in opposite directions across the membrane.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How do lipid rafts function in membranes?</text>
+        <option>Block molecule movement</option>
+        <option>Organize membrane proteins</option>
+        <option>Store energy</option>
+        <option>Transport ions</option>
+        <answer>Organize membrane proteins</answer>
+        <explanation>Lipid rafts are specialized membrane domains that organize and concentrate specific proteins for cellular processes.</explanation>
+    </question>
+    <question>
+        <text>What is the role of hydrogen bonds in protein-ligand recognition?</text>
+        <option>Energy storage</option>
+        <option>Specificity and binding</option>
+        <option>Membrane formation</option>
+        <option>Protein synthesis</option>
+        <answer>Specificity and binding</answer>
+        <explanation>Hydrogen bonds provide specificity in protein-ligand recognition by forming specific patterns of interactions.</explanation>
+    </question>
+    <question>
+        <text>How do intrinsically disordered proteins function?</text>
+        <option>They don't function</option>
+        <option>They adapt their structure upon binding</option>
+        <option>They remain permanently rigid</option>
+        <option>They only transport molecules</option>
+        <answer>They adapt their structure upon binding</answer>
+        <explanation>Intrinsically disordered proteins lack stable structure but adopt specific conformations when binding to partners.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane protein mobility?</text>
+        <option>Only temperature</option>
+        <option>Only protein size</option>
+        <option>Multiple factors including lipid composition</option>
+        <option>Only pH</option>
+        <answer>Multiple factors including lipid composition</answer>
+        <explanation>Membrane protein mobility depends on temperature, lipid composition, protein size, and membrane interactions.</explanation>
+    </question>
+    <question>
+        <text>How do molecular motors maintain directionality?</text>
+        <option>Random movement</option>
+        <option>ATP-driven conformational changes</option>
+        <option>Passive diffusion</option>
+        <option>Temperature gradients</option>
+        <answer>ATP-driven conformational changes</answer>
+        <explanation>Molecular motors use ATP-driven conformational changes to move in specific directions along cellular tracks.</explanation>
+    </question>
+</questions>

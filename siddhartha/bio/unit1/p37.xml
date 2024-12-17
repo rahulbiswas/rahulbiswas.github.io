@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How do telomeres prevent chromosome fusion?</text>
+        <option>Through DNA breakdown</option>
+        <option>Through special end structures</option>
+        <option>Through protein synthesis</option>
+        <option>Through random processes</option>
+        <answer>Through special end structures</answer>
+        <explanation>Telomeres form specialized structures that protect chromosome ends from being recognized as DNA damage and prevent fusion.</explanation>
+    </question>
+    <question>
+        <text>What determines nucleosome positioning?</text>
+        <option>Random placement</option>
+        <option>DNA sequence and regulatory factors</option>
+        <option>Only temperature</option>
+        <option>Only protein content</option>
+        <answer>DNA sequence and regulatory factors</answer>
+        <explanation>Nucleosome positioning is influenced by DNA sequence preferences and chromatin remodeling factors.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate DNA supercoiling?</text>
+        <option>They don't regulate it</option>
+        <option>Through topoisomerases</option>
+        <option>Only through temperature</option>
+        <option>Through random processes</option>
+        <answer>Through topoisomerases</answer>
+        <explanation>Cells use topoisomerases to regulate DNA supercoiling during replication, transcription, and other processes.</explanation>
+    </question>
+    <question>
+        <text>What role do histone variants play?</text>
+        <option>No role</option>
+        <option>Specialized chromatin functions</option>
+        <option>Break down DNA</option>
+        <option>Transport proteins</option>
+        <answer>Specialized chromatin functions</answer>
+        <explanation>Histone variants provide specialized functions in chromatin organization and regulation.</explanation>
+    </question>
+    <question>
+        <text>How is DNA repair coordinated with transcription?</text>
+        <option>No coordination</option>
+        <option>Through coupled mechanisms</option>
+        <option>Random timing</option>
+        <option>Only during division</option>
+        <answer>Through coupled mechanisms</answer>
+        <explanation>DNA repair is coordinated with transcription through specific mechanisms that detect and repair damage in active genes.</explanation>
+    </question>
+</questions>

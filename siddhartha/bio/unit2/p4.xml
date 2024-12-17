@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of tight junctions?</text>
+        <option>Form selective barriers</option>
+        <option>Generate energy</option>
+        <option>Produce proteins</option>
+        <option>Store nutrients</option>
+        <answer>Form selective barriers</answer>
+        <explanation>Tight junctions create selective barriers between cells, controlling what molecules can pass through the paracellular space.</explanation>
+    </question>
+    <question>
+        <text>Which structure provides mechanical strength between cells?</text>
+        <option>Desmosomes</option>
+        <option>Gap junctions</option>
+        <option>Plasmodesmata</option>
+        <option>Nuclear pores</option>
+        <answer>Desmosomes</answer>
+        <explanation>Desmosomes are strong anchoring junctions that provide mechanical strength and stability between adjacent cells.</explanation>
+    </question>
+    <question>
+        <text>What molecules can pass through gap junctions?</text>
+        <option>Small molecules and ions</option>
+        <option>Large proteins</option>
+        <option>Organelles</option>
+        <option>Viruses</option>
+        <answer>Small molecules and ions</answer>
+        <explanation>Gap junctions allow small molecules and ions to pass directly between adjacent cells for cellular communication.</explanation>
+    </question>
+    <question>
+        <text>Which protein is a major component of tight junctions?</text>
+        <option>Claudin</option>
+        <option>Actin</option>
+        <option>Myosin</option>
+        <option>Tubulin</option>
+        <answer>Claudin</answer>
+        <explanation>Claudins are essential transmembrane proteins that form the backbone of tight junction strands.</explanation>
+    </question>
+    <question>
+        <text>What is the role of adherens junctions?</text>
+        <option>Cell-cell adhesion</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Waste removal</option>
+        <answer>Cell-cell adhesion</answer>
+        <explanation>Adherens junctions provide cell-cell adhesion through cadherin proteins and are important for tissue organization.</explanation>
+    </question>
+</questions>

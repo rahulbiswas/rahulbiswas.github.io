@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of metalloenzymes?</text>
+        <option>Transport metals</option>
+        <option>Store metals</option>
+        <option>Use metals for catalysis</option>
+        <option>Remove metals</option>
+        <answer>Use metals for catalysis</answer>
+        <explanation>Metalloenzymes incorporate metal ions as cofactors essential for their catalytic activity.</explanation>
+    </question>
+    <question>
+        <text>How do isozymes differ from each other?</text>
+        <option>They catalyze different reactions</option>
+        <option>They have different amino acid sequences but same function</option>
+        <option>They are found in different species</option>
+        <option>They have different substrates</option>
+        <answer>They have different amino acid sequences but same function</answer>
+        <explanation>Isozymes are different variants of an enzyme that catalyze the same reaction but have different amino acid sequences.</explanation>
+    </question>
+    <question>
+        <text>What characterizes digestive enzymes?</text>
+        <option>Work at neutral pH</option>
+        <option>Are produced as active enzymes</option>
+        <option>Are secreted as inactive zymogens</option>
+        <option>Function inside cells</option>
+        <answer>Are secreted as inactive zymogens</answer>
+        <explanation>Digestive enzymes are typically secreted as inactive zymogens to prevent tissue damage and are activated when needed.</explanation>
+    </question>
+    <question>
+        <text>Which factor does NOT affect enzyme evolution?</text>
+        <option>Natural selection</option>
+        <option>Mutation rate</option>
+        <option>Environmental conditions</option>
+        <option>Storage temperature</option>
+        <answer>Storage temperature</answer>
+        <explanation>Storage temperature is a laboratory condition and does not affect the natural evolution of enzymes in organisms.</explanation>
+    </question>
+    <question>
+        <text>What is the advantage of having multiple enzyme isoforms?</text>
+        <option>Reduced energy use</option>
+        <option>Simplified regulation</option>
+        <option>Tissue-specific regulation</option>
+        <option>Increased protein size</option>
+        <answer>Tissue-specific regulation</answer>
+        <explanation>Multiple enzyme isoforms allow for tissue-specific regulation and adaptation to different cellular environments.</explanation>
+    </question>
+</questions>

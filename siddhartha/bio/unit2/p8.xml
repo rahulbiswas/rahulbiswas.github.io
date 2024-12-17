@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of the nuclear envelope?</text>
+        <option>Regulate nuclear transport</option>
+        <option>Produce energy</option>
+        <option>Synthesize proteins</option>
+        <option>Store lipids</option>
+        <answer>Regulate nuclear transport</answer>
+        <explanation>The nuclear envelope controls the movement of molecules between the nucleus and cytoplasm through nuclear pores.</explanation>
+    </question>
+    <question>
+        <text>Which organelle is responsible for protein modification and sorting?</text>
+        <option>Golgi apparatus</option>
+        <option>Lysosome</option>
+        <option>Peroxisome</option>
+        <option>Mitochondria</option>
+        <answer>Golgi apparatus</answer>
+        <explanation>The Golgi apparatus modifies, sorts, and packages proteins for transport to their final destinations.</explanation>
+    </question>
+    <question>
+        <text>What is the main function of mitochondria?</text>
+        <option>ATP production</option>
+        <option>Protein synthesis</option>
+        <option>Waste storage</option>
+        <option>Lipid breakdown</option>
+        <answer>ATP production</answer>
+        <explanation>Mitochondria are the primary sites of cellular energy (ATP) production through oxidative phosphorylation.</explanation>
+    </question>
+    <question>
+        <text>Which organelle contains hydrolytic enzymes?</text>
+        <option>Lysosomes</option>
+        <option>Chloroplasts</option>
+        <option>Nucleus</option>
+        <option>Ribosomes</option>
+        <answer>Lysosomes</answer>
+        <explanation>Lysosomes contain digestive enzymes that break down cellular waste and foreign materials.</explanation>
+    </question>
+    <question>
+        <text>What is the function of the rough endoplasmic reticulum?</text>
+        <option>Protein synthesis</option>
+        <option>Lipid synthesis</option>
+        <option>ATP production</option>
+        <option>Cell movement</option>
+        <answer>Protein synthesis</answer>
+        <explanation>The rough ER, with its attached ribosomes, is specialized for protein synthesis and processing.</explanation>
+    </question>
+</questions>

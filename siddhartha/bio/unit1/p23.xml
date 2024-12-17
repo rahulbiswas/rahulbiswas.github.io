@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of protein-protein interfaces?</text>
+        <option>Energy storage</option>
+        <option>Signal transmission</option>
+        <option>Molecule transport</option>
+        <option>Heat production</option>
+        <answer>Signal transmission</answer>
+        <explanation>Protein-protein interfaces allow signals to be transmitted between proteins through specific molecular interactions.</explanation>
+    </question>
+    <question>
+        <text>How do antibodies recognize specific antigens?</text>
+        <option>Random binding</option>
+        <option>Complementary shapes and chemical groups</option>
+        <option>Size matching only</option>
+        <option>Temperature detection</option>
+        <answer>Complementary shapes and chemical groups</answer>
+        <explanation>Antibodies recognize antigens through complementary shapes and chemical interactions at their binding sites.</explanation>
+    </question>
+    <question>
+        <text>What role do van der Waals forces play in molecular recognition?</text>
+        <option>No role</option>
+        <option>Primary force only</option>
+        <option>Contribute to binding specificity</option>
+        <option>Break bonds</option>
+        <answer>Contribute to binding specificity</answer>
+        <explanation>Van der Waals forces contribute to molecular recognition by providing close-range attractive forces between molecules.</explanation>
+    </question>
+    <question>
+        <text>How do allosteric proteins transmit signals?</text>
+        <option>Through heat transfer</option>
+        <option>Through conformational changes</option>
+        <option>Through membrane transport</option>
+        <option>Through energy storage</option>
+        <answer>Through conformational changes</answer>
+        <explanation>Allosteric proteins transmit signals through conformational changes that propagate from one site to another.</explanation>
+    </question>
+    <question>
+        <text>What stabilizes protein quaternary structure?</text>
+        <option>Only covalent bonds</option>
+        <option>Only hydrogen bonds</option>
+        <option>Multiple non-covalent interactions</option>
+        <option>Only ionic bonds</option>
+        <answer>Multiple non-covalent interactions</answer>
+        <explanation>Protein quaternary structure is stabilized by multiple types of non-covalent interactions between subunits.</explanation>
+    </question>
+</questions>
