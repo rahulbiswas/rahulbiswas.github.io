@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do metabolic pathways coordinate during seed germination?</text>
+        <option>Only glycolysis operates</option>
+        <option>Multiple pathways activate sequentially</option>
+        <option>No energy metabolism occurs</option>
+        <option>Only photosynthesis occurs</option>
+        <answer>Multiple pathways activate sequentially</answer>
+        <explanation>During seed germination, stored reserves are mobilized through coordinated activation of multiple metabolic pathways, starting with rapid ATP production through glycolysis and gradually transitioning to full respiratory metabolism.</explanation>
+    </question>
+    <question>
+        <text>What role does beta-oxidation play in seed energy metabolism?</text>
+        <option>It synthesizes fatty acids</option>
+        <option>It breaks down fatty acids for energy</option>
+        <option>It produces glucose</option>
+        <option>It splits water molecules</option>
+        <answer>It breaks down fatty acids for energy</answer>
+        <explanation>Beta-oxidation breaks down stored fatty acids in seeds to provide energy and carbon skeletons for growth before photosynthesis becomes established, supporting early seedling development.</explanation>
+    </question>
+    <question>
+        <text>How do glyoxysomes contribute to seedling establishment?</text>
+        <option>They perform photosynthesis</option>
+        <option>They convert fatty acids to sugars</option>
+        <option>They store proteins</option>
+        <option>They produce ATP directly</option>
+        <answer>They convert fatty acids to sugars</answer>
+        <explanation>Glyoxysomes contain enzymes of the glyoxylate cycle, which converts fatty acids to sugars through gluconeogenesis, providing essential carbohydrates for growing seedlings before photosynthesis begins.</explanation>
+    </question>
+    <question>
+        <text>What triggers the transition from stored energy to photosynthetic metabolism?</text>
+        <option>Root development only</option>
+        <option>Light exposure and chloroplast development</option>
+        <option>Temperature changes</option>
+        <option>Soil moisture</option>
+        <answer>Light exposure and chloroplast development</answer>
+        <explanation>Light exposure triggers chloroplast development and photosynthetic gene expression, gradually transitioning seedling metabolism from stored energy dependence to autotrophic photosynthetic metabolism.</explanation>
+    </question>
+    <question>
+        <text>How do energy demands change during seed development?</text>
+        <option>They remain constant</option>
+        <option>They shift from growth to storage compound synthesis</option>
+        <option>They only decrease</option>
+        <option>They only increase</option>
+        <answer>They shift from growth to storage compound synthesis</answer>
+        <explanation>During seed development, energy demands shift from supporting cell division and growth to synthesizing and accumulating storage compounds like oils, proteins, and carbohydrates for future germination.</explanation>
+    </question>
+</quiz>

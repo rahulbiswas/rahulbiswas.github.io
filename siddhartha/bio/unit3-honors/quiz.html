@@ -6,9 +6,7 @@
     <title>Unit Quiz ✿</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
         .show-answer {
             margin: 10px 0;
             padding: 5px 10px;
@@ -18,9 +16,8 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        .show-answer:hover {
-            background: #ff66aa;
-        }
+        .show-answer:hover { background: #ff66aa; }
+        .loading { color: #ff66aa; }
     </style>
 </head>
 <body>
@@ -28,139 +25,91 @@
         <h1>Unit Quiz</h1>
 
         <div class="key-concept">
-            <h2>Test Your Knowledge! 화이팅! ✨</h2>
-            <p>Let's see how much you've learned about cellular energetics~</p>
+            <h2>화이팅! Let's Test Your Knowledge! ⭐️</h2>
+            <p>Ready to show what you've learned about cellular energetics~?</p>
         </div>
 
-        <div class="section">
-            <h2>Multiple Choice</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>1. Which process requires oxygen?</p>
-                    <ul>
-                        <li>a) Glycolysis</li>
-                        <li>b) Fermentation</li>
-                        <li>c) Electron transport chain</li>
-                        <li>d) Light-dependent reactions</li>
-                    </ul>
-                    <button class="show-answer">See Answer (◕‿◕✿)</button>
-                    <div class="answer hidden">
-                        <p>c) Electron transport chain - Oxygen serves as the final electron acceptor in aerobic respiration.</p>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>2. What is produced in the light reactions?</p>
-                    <ul>
-                        <li>a) Glucose and CO2</li>
-                        <li>b) ATP and NADPH</li>
-                        <li>c) Pyruvate and NADH</li>
-                        <li>d) RuBP and G3P</li>
-                    </ul>
-                    <button class="show-answer">See Answer ₍ᐢ. ̫ .ᐢ₎</button>
-                    <div class="answer hidden">
-                        <p>b) ATP and NADPH - These energy carriers power the Calvin cycle.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Short Answer</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>3. Compare aerobic respiration and fermentation:</p>
-                    <button class="show-answer">See Answer (｡♥‿♥｡)</button>
-                    <div class="answer hidden">
-                        <ul>
-                            <li>Aerobic uses oxygen, fermentation doesn't</li>
-                            <li>Aerobic produces ~38 ATP, fermentation only 2</li>
-                            <li>Both start with glycolysis</li>
-                            <li>Different final electron acceptors</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>4. Explain how chemiosmosis works:</p>
-                    <button class="show-answer">See Answer ⭐️</button>
-                    <div class="answer hidden">
-                        <ul>
-                            <li>H+ pumped across membrane</li>
-                            <li>Creates concentration gradient</li>
-                            <li>H+ flows through ATP synthase</li>
-                            <li>Flow powers ATP production</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Diagram Analysis</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>5. Label the electron transport chain components:</p>
-                    <button class="show-answer">See Answer (◠‿◠✿)</button>
-                    <div class="answer hidden">
-                        <ul>
-                            <li>Complex I: NADH dehydrogenase</li>
-                            <li>Complex II: Succinate dehydrogenase</li>
-                            <li>Complex III: Cytochrome bc1</li>
-                            <li>Complex IV: Cytochrome oxidase</li>
-                            <li>ATP synthase (Complex V)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Environmental Connections</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>6. How does climate change affect photosynthesis?</p>
-                    <button class="show-answer">See Answer ✨</button>
-                    <div class="answer hidden">
-                        <p>Consider:</p>
-                        <ul>
-                            <li>Temperature effects on enzymes</li>
-                            <li>CO2 concentration changes</li>
-                            <li>Water availability impact</li>
-                            <li>Ecosystem adaptations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div id="quizContent">
+            <p class="loading">Loading questions... 잠시만요~</p>
         </div>
 
         <div class="study-tips">
-            <h3>💕 Review Tips</h3>
+            <h3>💕 Quiz Tips</h3>
             <ul>
-                <li>Draw out pathways</li>
-                <li>Practice calculations</li>
-                <li>Know key processes</li>
-                <li>Connect concepts</li>
-                <li>Think about real applications</li>
+                <li>Read each question carefully</li>
+                <li>Take your time - 천천히!</li>
+                <li>Review wrong answers</li>
+                <li>You can do it! 할 수 있어요!</li>
             </ul>
         </div>
-
     </div>
 
     <script>
-        document.querySelectorAll('.show-answer').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                answer.classList.toggle('hidden');
-                button.textContent = answer.classList.contains('hidden') ? 
-                    button.textContent.replace('Hide', 'See') : 
-                    button.textContent.replace('See', 'Hide');
+        const xmlFiles = Array.from({length: 40}, (_, i) => `p${i + 1}.xml`);
+
+        let allQuestions = [];
+
+        async function loadQuizData() {
+            try {
+                const questionPromises = xmlFiles.map(file => 
+                    fetch(file)
+                        .then(response => response.text())
+                        .then(str => new DOMParser().parseFromString(str, 'text/xml'))
+                );
+
+                const xmlDocs = await Promise.all(questionPromises);
+                
+                xmlDocs.forEach(doc => {
+                    const questions = doc.getElementsByTagName('question');
+                    Array.from(questions).forEach(q => {
+                        allQuestions.push({
+                            text: q.getElementsByTagName('text')[0].textContent,
+                            options: Array.from(q.getElementsByTagName('option'))
+                                        .map(opt => opt.textContent),
+                            answer: q.getElementsByTagName('answer')[0].textContent,
+                            explanation: q.getElementsByTagName('explanation')[0].textContent
+                        });
+                    });
+                });
+
+                displayQuiz();
+            } catch (error) {
+                console.error('Error loading quiz data:', error);
+                document.getElementById('quizContent').innerHTML = 
+                    '<p>아이고... Error loading quiz. Please try again! ㅠㅠ</p>';
+            }
+        }
+
+        function displayQuiz() {
+            const quizHtml = allQuestions.map((q, index) => `
+                <div class="practice">
+                    <div class="question">
+                        <p>${index + 1}. ${q.text}</p>
+                        <ul>
+                            ${q.options.map(opt => `<li>${opt}</li>`).join('')}
+                        </ul>
+                        <button class="show-answer">See Answer (◕‿◕✿)</button>
+                        <div class="answer hidden">
+                            <p><strong>Answer:</strong> ${q.answer}</p>
+                            <p><strong>Explanation:</strong> ${q.explanation}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('quizContent').innerHTML = quizHtml;
+
+            document.querySelectorAll('.show-answer').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    answer.classList.toggle('hidden');
+                    button.textContent = answer.classList.contains('hidden') ? 
+                        'See Answer (◕‿◕✿)' : 'Hide Answer (｡♥‿♥｡)';
+                });
             });
-        });
+        }
+
+        window.addEventListener('load', loadQuizData);
     </script>
 </body>
 </html>

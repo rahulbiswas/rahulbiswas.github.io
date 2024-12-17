@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do environmental pollutants affect cellular respiration?</text>
+        <option>They have no effect on respiration</option>
+        <option>They can inhibit specific electron transport complexes</option>
+        <option>They always increase ATP production</option>
+        <option>They only affect photosynthesis</option>
+        <answer>They can inhibit specific electron transport complexes</answer>
+        <explanation>Many environmental pollutants can inhibit specific complexes in the electron transport chain, disrupting energy production and potentially leading to increased reactive oxygen species formation and cellular damage.</explanation>
+    </question>
+    <question>
+        <text>What effect does acid rain have on photosynthesis?</text>
+        <option>It increases photosynthetic rate</option>
+        <option>It damages leaf tissue and reduces efficiency</option>
+        <option>It has no effect on plants</option>
+        <option>It only affects roots</option>
+        <answer>It damages leaf tissue and reduces efficiency</answer>
+        <explanation>Acid rain can damage leaf tissue, disrupt chloroplast function, and interfere with enzyme activities, leading to reduced photosynthetic efficiency and overall plant productivity.</explanation>
+    </question>
+    <question>
+        <text>How do heavy metals impact cellular energy metabolism?</text>
+        <option>They enhance ATP production</option>
+        <option>They disrupt multiple metabolic processes</option>
+        <option>They have no metabolic effects</option>
+        <option>They only affect water uptake</option>
+        <answer>They disrupt multiple metabolic processes</answer>
+        <explanation>Heavy metals can disrupt multiple aspects of cellular energy metabolism by inhibiting enzymes, damaging membrane systems, and interfering with electron transport processes in both mitochondria and chloroplasts.</explanation>
+    </question>
+    <question>
+        <text>What is the effect of ozone pollution on cellular energetics?</text>
+        <option>It improves energy production</option>
+        <option>It causes oxidative stress and membrane damage</option>
+        <option>It has no effect on cells</option>
+        <option>It only affects animals</option>
+        <answer>It causes oxidative stress and membrane damage</answer>
+        <explanation>Ozone pollution causes oxidative stress, damages cellular membranes, and disrupts both photosynthetic and respiratory processes, leading to reduced energy production and cellular damage.</explanation>
+    </question>
+    <question>
+        <text>How do pesticides affect mitochondrial function?</text>
+        <option>They improve ATP synthesis</option>
+        <option>They can disrupt electron transport and membrane integrity</option>
+        <option>They have no effect on mitochondria</option>
+        <option>They only affect chloroplasts</option>
+        <answer>They can disrupt electron transport and membrane integrity</answer>
+        <explanation>Many pesticides can interfere with mitochondrial electron transport, damage membrane integrity, and disrupt ATP production, potentially leading to cellular energy deficits and oxidative stress.</explanation>
+    </question>
+</quiz>

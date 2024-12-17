@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How does photoprotection prevent damage to photosynthetic machinery?</text>
+        <option>By stopping photosynthesis completely</option>
+        <option>By dissipating excess light energy safely</option>
+        <option>By increasing light absorption</option>
+        <option>By destroying chlorophyll</option>
+        <answer>By dissipating excess light energy safely</answer>
+        <explanation>Photoprotection mechanisms like non-photochemical quenching safely dissipate excess light energy as heat, preventing the formation of damaging reactive oxygen species and protecting photosynthetic components.</explanation>
+    </question>
+    <question>
+        <text>What role do carotenoids play in photosynthesis?</text>
+        <option>They only provide color to leaves</option>
+        <option>They absorb light and protect against photodamage</option>
+        <option>They produce ATP directly</option>
+        <option>They fix carbon dioxide</option>
+        <answer>They absorb light and protect against photodamage</answer>
+        <explanation>Carotenoids serve dual roles: they act as accessory pigments by absorbing light and transferring energy to chlorophyll, and they protect against photodamage by quenching excited chlorophyll and reactive oxygen species.</explanation>
+    </question>
+    <question>
+        <text>How do plants repair photodamage to Photosystem II?</text>
+        <option>They don't repair any damage</option>
+        <option>Through continuous D1 protein replacement</option>
+        <option>By stopping photosynthesis permanently</option>
+        <option>By producing more chlorophyll</option>
+        <answer>Through continuous D1 protein replacement</answer>
+        <explanation>Plants continuously repair photodamage to Photosystem II by replacing damaged D1 proteins, which are particularly susceptible to light-induced damage, through an efficient protein turnover system.</explanation>
+    </question>
+    <question>
+        <text>What triggers state transitions in photosynthesis?</text>
+        <option>Temperature changes only</option>
+        <option>Changes in light quality and plastoquinone redox state</option>
+        <option>Water availability</option>
+        <option>Carbon dioxide levels</option>
+        <answer>Changes in light quality and plastoquinone redox state</answer>
+        <explanation>State transitions are triggered by changes in light quality and the redox state of the plastoquinone pool, allowing plants to optimize light energy distribution between photosystems I and II.</explanation>
+    </question>
+    <question>
+        <text>How do plants adjust their antenna size?</text>
+        <option>They can't change antenna size</option>
+        <option>Through protein phosphorylation and movement</option>
+        <option>By producing new chloroplasts</option>
+        <option>By changing leaf color</option>
+        <answer>Through protein phosphorylation and movement</answer>
+        <explanation>Plants adjust their light-harvesting antenna size through protein phosphorylation and movement of light-harvesting complexes, allowing them to optimize light capture under different light conditions.</explanation>
+    </question>
+</quiz>

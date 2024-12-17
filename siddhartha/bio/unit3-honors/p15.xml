@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do antioxidants protect cellular components from damage?</text>
+        <option>By increasing free radical production</option>
+        <option>By neutralizing reactive oxygen species</option>
+        <option>By stopping electron transport</option>
+        <option>By preventing ATP synthesis</option>
+        <answer>By neutralizing reactive oxygen species</answer>
+        <explanation>Antioxidants neutralize reactive oxygen species (free radicals) produced during cellular respiration, preventing these molecules from damaging cellular components like proteins, lipids, and DNA.</explanation>
+    </question>
+    <question>
+        <text>What happens to the proton gradient if the inner mitochondrial membrane becomes leaky?</text>
+        <option>The gradient becomes stronger</option>
+        <option>ATP production increases</option>
+        <option>The gradient dissipates and ATP production decreases</option>
+        <option>Electron transport speeds up</option>
+        <answer>The gradient dissipates and ATP production decreases</answer>
+        <explanation>A leaky inner membrane allows protons to flow back into the matrix without going through ATP synthase, dissipating the proton gradient. This uncoupling reduces ATP production and converts the energy to heat.</explanation>
+    </question>
+    <question>
+        <text>How do brown fat cells generate heat?</text>
+        <option>Through increased ATP production</option>
+        <option>By uncoupling electron transport from ATP synthesis</option>
+        <option>By stopping cellular respiration</option>
+        <option>Through increased glucose uptake only</option>
+        <answer>By uncoupling electron transport from ATP synthesis</answer>
+        <explanation>Brown fat cells contain many mitochondria with uncoupling protein 1 (UCP1), which allows protons to flow across the inner membrane without producing ATP. This process generates heat instead of ATP.</explanation>
+    </question>
+    <question>
+        <text>What role do cytochromes play in cellular respiration?</text>
+        <option>They break down glucose</option>
+        <option>They transport electrons through the ETC</option>
+        <option>They produce ATP directly</option>
+        <option>They store energy as heat</option>
+        <answer>They transport electrons through the ETC</answer>
+        <explanation>Cytochromes are electron carriers in the electron transport chain that contain heme groups. They pass electrons from one complex to another, helping to establish the proton gradient needed for ATP synthesis.</explanation>
+    </question>
+    <question>
+        <text>How does exercise intensity affect cellular respiration pathways?</text>
+        <option>It has no effect on energy production</option>
+        <option>It only affects glycolysis</option>
+        <option>It shifts between aerobic and anaerobic pathways</option>
+        <option>It decreases all metabolic activities</option>
+        <answer>It shifts between aerobic and anaerobic pathways</answer>
+        <explanation>During high-intensity exercise, oxygen demand may exceed supply, causing cells to shift from aerobic respiration to anaerobic fermentation. This shift helps maintain ATP production but is less efficient and produces lactate.</explanation>
+    </question>
+</quiz>
