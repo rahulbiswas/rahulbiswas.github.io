@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of lamins in the nucleus?</text>
+        <option>Nuclear envelope support</option>
+        <option>DNA replication</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <answer>Nuclear envelope support</answer>
+        <explanation>Lamins form a structural network that supports the nuclear envelope and organizes nuclear contents.</explanation>
+    </question>
+    <question>
+        <text>How are nuclear pores stabilized?</text>
+        <option>Lamin attachment</option>
+        <option>Lipid composition</option>
+        <option>Protein synthesis</option>
+        <option>Membrane fluidity</option>
+        <answer>Lamin attachment</answer>
+        <explanation>Nuclear pore complexes are stabilized by attachment to the nuclear lamina.</explanation>
+    </question>
+    <question>
+        <text>What happens to lamins during mitosis?</text>
+        <option>Phosphorylation and disassembly</option>
+        <option>Increased synthesis</option>
+        <option>Structural reinforcement</option>
+        <option>No change</option>
+        <answer>Phosphorylation and disassembly</answer>
+        <explanation>Lamins are phosphorylated and disassembled during nuclear envelope breakdown in mitosis.</explanation>
+    </question>
+    <question>
+        <text>Which disease affects nuclear lamins?</text>
+        <option>Progeria</option>
+        <option>Diabetes</option>
+        <option>Arthritis</option>
+        <option>Hypertension</option>
+        <answer>Progeria</answer>
+        <explanation>Mutations in lamin genes cause progeria, a premature aging disorder.</explanation>
+    </question>
+    <question>
+        <text>What connects chromatin to nuclear lamina?</text>
+        <option>Lamin-binding proteins</option>
+        <option>Membrane lipids</option>
+        <option>Transport proteins</option>
+        <option>Ion channels</option>
+        <answer>Lamin-binding proteins</answer>
+        <explanation>Specific lamin-binding proteins connect chromatin to the nuclear lamina, organizing nuclear contents.</explanation>
+    </question>
+</questions>

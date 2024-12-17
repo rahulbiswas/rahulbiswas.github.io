@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of actin filaments in cell motility?</text>
+        <option>Force generation</option>
+        <option>Energy storage</option>
+        <option>Protein synthesis</option>
+        <option>Waste removal</option>
+        <answer>Force generation</answer>
+        <explanation>Actin filaments generate force for cell movement through polymerization and interaction with motor proteins.</explanation>
+    </question>
+    <question>
+        <text>How do actin filaments determine polarity?</text>
+        <option>Plus and minus ends</option>
+        <option>Random arrangement</option>
+        <option>Equal distribution</option>
+        <option>No polarity</option>
+        <answer>Plus and minus ends</answer>
+        <explanation>Actin filaments have distinct plus (barbed) and minus (pointed) ends that determine their polarity and growth direction.</explanation>
+    </question>
+    <question>
+        <text>What forms the cell cortex?</text>
+        <option>Actin network</option>
+        <option>Microtubules</option>
+        <option>Intermediate filaments</option>
+        <option>Motor proteins</option>
+        <answer>Actin network</answer>
+        <explanation>A network of actin filaments beneath the plasma membrane forms the cell cortex, providing shape and support.</explanation>
+    </question>
+    <question>
+        <text>Which structure contains both actin and myosin?</text>
+        <option>Stress fibers</option>
+        <option>Microtubules</option>
+        <option>Intermediate filaments</option>
+        <option>Membrane channels</option>
+        <answer>Stress fibers</answer>
+        <explanation>Stress fibers are bundles of actin filaments and myosin motors that provide contractile force in cells.</explanation>
+    </question>
+    <question>
+        <text>What drives actin treadmilling?</text>
+        <option>ATP hydrolysis</option>
+        <option>Passive diffusion</option>
+        <option>Osmotic pressure</option>
+        <option>Temperature changes</option>
+        <answer>ATP hydrolysis</answer>
+        <explanation>ATP hydrolysis drives the continuous assembly and disassembly of actin filaments in treadmilling.</explanation>
+    </question>
+</questions>
