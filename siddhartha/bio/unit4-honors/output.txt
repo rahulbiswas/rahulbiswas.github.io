@@ -1,48 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<questions>
-    <question>
-        <text>How do circadian rhythms affect metabolism?</text>
-        <option>They have no effect</option>
-        <option>They coordinate daily metabolic changes</option>
-        <option>They only affect sleep</option>
-        <option>They reduce metabolism</option>
-        <answer>They coordinate daily metabolic changes</answer>
-        <explanation>Circadian rhythms coordinate daily metabolic changes, influencing enzyme activities, hormone levels, and nutrient utilization patterns.</explanation>
-    </question>
-    <question>
-        <text>What role does AMPK play in metabolism?</text>
-        <option>It stores energy</option>
-        <option>It senses and responds to energy status</option>
-        <option>It produces glucose</option>
-        <option>It breaks down proteins</option>
-        <answer>It senses and responds to energy status</answer>
-        <explanation>AMPK acts as an energy sensor, activating energy-producing pathways and inhibiting energy-consuming processes when cellular energy is low.</explanation>
-    </question>
-    <question>
-        <text>How do metabolic sensors regulate pathways?</text>
-        <option>They don't regulate anything</option>
-        <option>They detect and respond to metabolic changes</option>
-        <option>They only store energy</option>
-        <option>They transport molecules</option>
-        <answer>They detect and respond to metabolic changes</answer>
-        <explanation>Metabolic sensors detect changes in nutrient levels and energy status, triggering appropriate regulatory responses to maintain homeostasis.</explanation>
-    </question>
-    <question>
-        <text>What is metabolic plasticity?</text>
-        <option>Rigid metabolism</option>
-        <option>Ability to adapt to metabolic changes</option>
-        <option>Energy storage</option>
-        <option>Protein synthesis</option>
-        <answer>Ability to adapt to metabolic changes</answer>
-        <explanation>Metabolic plasticity is the ability of cells to adapt their metabolic pathways in response to changing environmental conditions and cellular needs.</explanation>
-    </question>
-    <question>
-        <text>How do hormones coordinate metabolism?</text>
-        <option>They don't affect metabolism</option>
-        <option>They signal between tissues to regulate metabolism</option>
-        <option>They only store energy</option>
-        <option>They break down nutrients</option>
-        <answer>They signal between tissues to regulate metabolism</answer>
-        <explanation>Hormones act as signaling molecules between tissues, coordinating metabolic activities throughout the body to maintain overall homeostasis.</explanation>
-    </question>
-</questions>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Biology Unit 3 Review ✿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="unit unit-3-honors">
+        <h1>Cellular Energetics</h1>
+
+        <div class="key-concept">
+            <h2>Energy & Metabolism</h2>
+            <p>Understanding how cells capture, store, and use energy for life processes!</p>
+            <a href="quizzes/quiz.html" class="quiz-button">Take Unit Quiz ✿</a>
+        </div>
+
+        <div class="study-topics">
+            <h3>Main Topics:</h3>
+            <ul>
+                <li>Enzyme Structure & Function</li>
+                <li>Environmental Effects on Enzymes</li>
+                <li>Cellular Energy & ATP</li>
+                <li>Photosynthesis</li>
+                <li>Cellular Respiration</li>
+                <li>Metabolic Pathways</li>
+            </ul>
+        </div>
+
+        <div class="practice">
+            <h3>Practice Areas:</h3>
+            <ul>
+                <li>Energy Flow Diagrams</li>
+                <li>Metabolic Equations</li>
+                <li>Data Analysis</li>
+                <li>Scientific Modeling</li>
+            </ul>
+        </div>
+
+        <div class="study-tips">
+            <h3>Study Tips:</h3>
+            <ul>
+                <li>Review key vocabulary</li>
+                <li>Practice drawing diagrams</li>
+                <li>Connect concepts</li>
+                <li>Do practice problems</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

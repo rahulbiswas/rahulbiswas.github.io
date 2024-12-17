@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self Quiz ✿</title>
+    <title>Unit Quiz ✿</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
         .show-answer {
             margin: 10px 0;
             padding: 5px 10px;
@@ -18,148 +16,100 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        .show-answer:hover {
-            background: #ff66aa;
-        }
+        .show-answer:hover { background: #ff66aa; }
+        .loading { color: #ff66aa; }
     </style>
 </head>
 <body>
-    <div class="unit unit-4-honors">
-        <h1>Self Quiz</h1>
+    <div class="unit unit-3-honors">
+        <h1>Unit Quiz</h1>
 
         <div class="key-concept">
-            <h2>Test Your Knowledge! 화이팅! ✨</h2>
-            <p>Let's see how much you've learned about genetics and cell division~</p>
+            <h2>화이팅! Let's Test Your Knowledge! ⭐️</h2>
+            <p>Ready to show what you've learned about cellular energetics~?</p>
         </div>
 
-        <div class="section">
-            <h2>Multiple Choice</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>1. During which phase of mitosis do chromosomes line up at the cell's equator?</p>
-                    <ul>
-                        <li>a) Prophase</li>
-                        <li>b) Metaphase</li>
-                        <li>c) Anaphase</li>
-                        <li>d) Telophase</li>
-                    </ul>
-                    <button class="show-answer">See Answer (◕‿◕✿)</button>
-                    <div class="answer hidden">
-                        <p>b) Metaphase - This is the defining characteristic of metaphase, when chromosomes align at the metaphase plate.</p>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>2. Which sex chromosome combination results in Klinefelter syndrome?</p>
-                    <ul>
-                        <li>a) XO</li>
-                        <li>b) XXY</li>
-                        <li>c) XYY</li>
-                        <li>d) XXX</li>
-                    </ul>
-                    <button class="show-answer">See Answer ₍ᐢ. ̫ .ᐢ₎</button>
-                    <div class="answer hidden">
-                        <p>b) XXY - This combination results in Klinefelter syndrome, typically presenting with male anatomy but low testosterone levels.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Short Answer</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>3. Compare complete dominance, incomplete dominance, and codominance:</p>
-                    <button class="show-answer">See Answer (｡♥‿♥｡)</button>
-                    <div class="answer hidden">
-                        <ul>
-                            <li>Complete dominance: One allele masks the other</li>
-                            <li>Incomplete dominance: Blended intermediate phenotype</li>
-                            <li>Codominance: Both alleles fully expressed</li>
-                            <li>Example: ABO blood types show codominance</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>4. Explain how cancer develops at the cellular level:</p>
-                    <button class="show-answer">See Answer ⭐️</button>
-                    <div class="answer hidden">
-                        <ul>
-                            <li>Multiple mutations accumulate</li>
-                            <li>Cell cycle checkpoints fail</li>
-                            <li>Growth control is lost</li>
-                            <li>Cells divide uncontrollably</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Problem Solving</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>5. A colorblind father has a daughter with normal vision. What is her carrier status?</p>
-                    <button class="show-answer">See Answer (◠‿◠✿)</button>
-                    <div class="answer hidden">
-                        <p>The daughter must be a carrier because:</p>
-                        <ul>
-                            <li>She gets father's X chromosome (with colorblind allele)</li>
-                            <li>Mother's X must have normal allele (she has normal vision)</li>
-                            <li>Therefore she is heterozygous = carrier</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Diagram Analysis</h2>
-            
-            <div class="practice">
-                <div class="question">
-                    <p>6. Looking at this pedigree, identify the inheritance pattern:</p>
-                    <button class="show-answer">See Answer ✨</button>
-                    <div class="answer hidden">
-                        <p>Look for:</p>
-                        <ul>
-                            <li>Generation patterns</li>
-                            <li>Male/female differences</li>
-                            <li>Carrier patterns</li>
-                            <li>Transmission patterns</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div id="quizContent">
+            <p class="loading">Loading questions... 잠시만요~</p>
         </div>
 
         <div class="study-tips">
-            <h3>💕 Review Tips</h3>
+            <h3>💕 Quiz Tips</h3>
             <ul>
-                <li>Draw out processes</li>
-                <li>Practice pedigrees</li>
-                <li>Know inheritance patterns</li>
-                <li>Connect concepts</li>
-                <li>Work through examples</li>
+                <li>Read each question carefully</li>
+                <li>Take your time - 천천히!</li>
+                <li>Review wrong answers</li>
+                <li>You can do it! 할 수 있어요!</li>
             </ul>
         </div>
-
     </div>
 
     <script>
-        document.querySelectorAll('.show-answer').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                answer.classList.toggle('hidden');
-                button.textContent = answer.classList.contains('hidden') ? 
-                    button.textContent.replace('Hide', 'See') : 
-                    button.textContent.replace('See', 'Hide');
+        const xmlFiles = Array.from({length: 40}, (_, i) => `p${i + 1}.xml`);
+
+        let allQuestions = [];
+
+        async function loadQuizData() {
+            try {
+                const questionPromises = xmlFiles.map(file => 
+                    fetch(file)
+                        .then(response => response.text())
+                        .then(str => new DOMParser().parseFromString(str, 'text/xml'))
+                );
+
+                const xmlDocs = await Promise.all(questionPromises);
+                
+                xmlDocs.forEach(doc => {
+                    const questions = doc.getElementsByTagName('question');
+                    Array.from(questions).forEach(q => {
+                        allQuestions.push({
+                            text: q.getElementsByTagName('text')[0].textContent,
+                            options: Array.from(q.getElementsByTagName('option'))
+                                        .map(opt => opt.textContent),
+                            answer: q.getElementsByTagName('answer')[0].textContent,
+                            explanation: q.getElementsByTagName('explanation')[0].textContent
+                        });
+                    });
+                });
+
+                displayQuiz();
+            } catch (error) {
+                console.error('Error loading quiz data:', error);
+                document.getElementById('quizContent').innerHTML = 
+                    '<p>아이고... Error loading quiz. Please try again! ㅠㅠ</p>';
+            }
+        }
+
+        function displayQuiz() {
+            const quizHtml = allQuestions.map((q, index) => `
+                <div class="practice">
+                    <div class="question">
+                        <p>${index + 1}. ${q.text}</p>
+                        <ul>
+                            ${q.options.map(opt => `<li>${opt}</li>`).join('')}
+                        </ul>
+                        <button class="show-answer">See Answer (◕‿◕✿)</button>
+                        <div class="answer hidden">
+                            <p><strong>Answer:</strong> ${q.answer}</p>
+                            <p><strong>Explanation:</strong> ${q.explanation}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('quizContent').innerHTML = quizHtml;
+
+            document.querySelectorAll('.show-answer').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    answer.classList.toggle('hidden');
+                    button.textContent = answer.classList.contains('hidden') ? 
+                        'See Answer (◕‿◕✿)' : 'Hide Answer (｡♥‿♥｡)';
+                });
             });
-        });
+        }
+
+        window.addEventListener('load', loadQuizData);
     </script>
 </body>
 </html>
