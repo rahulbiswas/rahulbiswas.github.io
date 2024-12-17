@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Quiz ✿</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-5-honors">
+        <h1>Unit Quiz</h1>
+
+        <div class="key-concept">
+            <h2>Test Your Knowledge! 화이팅! ✨</h2>
+            <p>Let's see how much you've learned about molecular genetics~</p>
+        </div>
+
+        <div class="section">
+            <h2>Multiple Choice</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. What is the first step in gene expression?</p>
+                    <ul>
+                        <li>a) Translation</li>
+                        <li>b) Transcription</li>
+                        <li>c) Protein folding</li>
+                        <li>d) RNA processing</li>
+                    </ul>
+                    <button class="show-answer">See Answer (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <p>b) Transcription - Gene expression begins with transcribing DNA into RNA.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Which mutation type changes the reading frame?</p>
+                    <ul>
+                        <li>a) Silent mutation</li>
+                        <li>b) Missense mutation</li>
+                        <li>c) Frameshift mutation</li>
+                        <li>d) Point mutation</li>
+                    </ul>
+                    <button class="show-answer">See Answer ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <p>c) Frameshift mutation - Insertions or deletions that alter the three-letter codon grouping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Short Answer</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Compare transcription and translation:</p>
+                    <button class="show-answer">See Answer (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Transcription: DNA → RNA, occurs in nucleus</li>
+                            <li>Translation: RNA → protein, occurs in cytoplasm</li>
+                            <li>Different enzymes and machinery involved</li>
+                            <li>Different cellular locations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Explain how cells control gene expression:</p>
+                    <button class="show-answer">See Answer ⭐️</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Transcriptional control (promoters, enhancers)</li>
+                            <li>RNA processing control (splicing)</li>
+                            <li>Translation control (initiation factors)</li>
+                            <li>Protein modification and degradation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Genetic Code Practice</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. Translate this mRNA sequence: AUG CCU GAA UAA</p>
+                    <button class="show-answer">See Answer (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>AUG = Methionine (Start)</li>
+                            <li>CCU = Proline</li>
+                            <li>GAA = Glutamic acid</li>
+                            <li>UAA = Stop</li>
+                            <li>Final protein: Met-Pro-Glu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Concept Application</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>6. How might a mutation in a transcription factor affect gene expression?</p>
+                    <button class="show-answer">See Answer ✨</button>
+                    <div class="answer hidden">
+                        <p>A mutated transcription factor might:</p>
+                        <ul>
+                            <li>Fail to bind DNA properly</li>
+                            <li>Affect multiple target genes</li>
+                            <li>Disrupt developmental patterns</li>
+                            <li>Lead to disease conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Review Tips</h3>
+            <ul>
+                <li>Draw out gene expression steps</li>
+                <li>Practice using genetic code table</li>
+                <li>Think about regulation levels</li>
+                <li>Connect concepts together</li>
+                <li>Consider clinical applications</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>

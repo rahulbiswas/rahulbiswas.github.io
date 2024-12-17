@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Problems ✿</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-5-honors">
+        <h1>Practice Problems</h1>
+
+        <div class="key-concept">
+            <h2>Let's Practice! 화이팅! ✨</h2>
+            <p>Test your understanding of molecular genetics with these problems~</p>
+        </div>
+
+        <div class="section">
+            <h2>DNA & Transcription</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. If a DNA sequence reads ATGGCCTAA:</p>
+                    <ul>
+                        <li>What is the complementary DNA strand?</li>
+                        <li>What is the mRNA sequence?</li>
+                        <li>How many amino acids will the protein have?</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Complementary DNA: TACCGGATT</li>
+                            <li>mRNA: AUGGCCUAA</li>
+                            <li>Amino acids: 3 (ATG = start, GCC = Ala, TAA = stop)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Calculate the number of hydrogen bonds in this sequence:</p>
+                    <p>GCATTAGC</p>
+                    <button class="show-answer">See Solution ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <p>GC = 3 bonds, AT = 2 bonds</p>
+                        <p>G-C (3) + C-G (3) + A-T (2) + T-A (2) + T-A (2) + A-T (2) + G-C (3) + C-G (3) = 20 bonds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Translation Problems</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Using the genetic code table, translate:</p>
+                    <p>mRNA: AUG CCU GAC UAG</p>
+                    <button class="show-answer">See Solution (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>AUG = Methionine (Start)</li>
+                            <li>CCU = Proline</li>
+                            <li>GAC = Aspartic Acid</li>
+                            <li>UAG = Stop</li>
+                            <li>Final protein: Met-Pro-Asp</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. A mutation changes CUU to CUA. Is this a:</p>
+                    <ul>
+                        <li>Silent mutation?</li>
+                        <li>Missense mutation?</li>
+                        <li>Nonsense mutation?</li>
+                    </ul>
+                    <button class="show-answer">See Solution ⭐️</button>
+                    <div class="answer hidden">
+                        <p>Silent mutation - both CUU and CUA code for Leucine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Gene Expression</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. Compare gene expression in these cells:</p>
+                    <ul>
+                        <li>Active muscle cell</li>
+                        <li>Developing neuron</li>
+                        <li>Mature red blood cell</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Muscle: High expression of contractile proteins</li>
+                            <li>Neuron: Expression of neurotransmitter genes</li>
+                            <li>RBC: No nucleus, no new gene expression</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Problem-Solving Tips</h3>
+            <ul>
+                <li>Draw out DNA/RNA sequences</li>
+                <li>Use genetic code table</li>
+                <li>Show your work</li>
+                <li>Check each step</li>
+                <li>Think about biological context</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>
