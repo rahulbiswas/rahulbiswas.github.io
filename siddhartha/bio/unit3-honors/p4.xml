@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>What is the primary function of the citric acid cycle?</text>
+        <option>Directly producing large amounts of ATP</option>
+        <option>Complete oxidation of acetyl-CoA to CO2</option>
+        <option>Breaking down glucose to pyruvate</option>
+        <option>Synthesizing glucose from pyruvate</option>
+        <answer>Complete oxidation of acetyl-CoA to CO2</answer>
+        <explanation>The citric acid cycle completely oxidizes acetyl-CoA, derived from pyruvate, to CO2. During this process, it generates reduced electron carriers (NADH and FADH2) that will later drive ATP production in the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>Which molecule must be continuously regenerated for the citric acid cycle to continue?</text>
+        <option>Glucose</option>
+        <option>Pyruvate</option>
+        <option>Oxaloacetate</option>
+        <option>Acetyl-CoA</option>
+        <answer>Oxaloacetate</answer>
+        <explanation>Oxaloacetate must be regenerated in each turn of the cycle to combine with the next acetyl-CoA molecule. This regeneration makes the process cyclical and allows for continuous operation as long as acetyl-CoA is available.</explanation>
+    </question>
+    <question>
+        <text>How many NADH molecules are produced per turn of the citric acid cycle?</text>
+        <option>2 NADH</option>
+        <option>3 NADH</option>
+        <option>4 NADH</option>
+        <option>6 NADH</option>
+        <answer>3 NADH</answer>
+        <explanation>Each turn of the citric acid cycle produces 3 NADH molecules through three different dehydrogenation reactions. These NADH molecules later contribute to the electron transport chain for ATP production.</explanation>
+    </question>
+    <question>
+        <text>What regulatory molecule inhibits the citric acid cycle when cellular energy levels are high?</text>
+        <option>ADP</option>
+        <option>NAD+</option>
+        <option>ATP</option>
+        <option>NADH</option>
+        <answer>ATP</answer>
+        <explanation>High levels of ATP inhibit key enzymes in the citric acid cycle, particularly isocitrate dehydrogenase. This feedback inhibition helps prevent unnecessary operation of the cycle when cellular energy levels are sufficient.</explanation>
+    </question>
+    <question>
+        <text>Why is the citric acid cycle called an amphibolic pathway?</text>
+        <option>Because it only breaks down molecules</option>
+        <option>Because it only builds molecules</option>
+        <option>Because it can both break down and synthesize molecules</option>
+        <option>Because it occurs in both plants and animals</option>
+        <answer>Because it can both break down and synthesize molecules</answer>
+        <explanation>The citric acid cycle is amphibolic because it functions in both catabolism (breaking down molecules) and anabolism (biosynthesis). Its intermediates can be removed for biosynthetic pathways while also serving in the oxidation of acetyl-CoA.</explanation>
+    </question>
+</quiz>

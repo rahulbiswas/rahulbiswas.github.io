@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How does increased atmospheric CO2 affect plant growth?</text>
+        <option>It always increases growth proportionally</option>
+        <option>It has no effect on plant growth</option>
+        <option>It increases growth until other factors become limiting</option>
+        <option>It always decreases plant growth</option>
+        <answer>It increases growth until other factors become limiting</answer>
+        <explanation>Higher CO2 levels can enhance photosynthesis and growth (CO2 fertilization effect), but the response is limited by other factors like water availability, nutrients, and temperature. These become the limiting factors for plant growth.</explanation>
+    </question>
+    <question>
+        <text>What effect does increased temperature have on cellular respiration rates?</text>
+        <option>Rates decrease as enzymes work more slowly</option>
+        <option>Rates increase until enzyme denaturation occurs</option>
+        <option>Temperature has no effect on respiration</option>
+        <option>Rates remain constant regardless of temperature</option>
+        <answer>Rates increase until enzyme denaturation occurs</answer>
+        <explanation>As temperature rises, molecular movement increases and enzymes work faster, increasing respiration rates. However, beyond optimal temperature, enzymes denature and respiration rates decline rapidly.</explanation>
+    </question>
+    <question>
+        <text>How does ocean acidification affect marine organisms?</text>
+        <option>It only affects deep-sea creatures</option>
+        <option>It has no effect on marine life</option>
+        <option>It primarily impacts shell-forming organisms</option>
+        <option>It increases shell formation</option>
+        <answer>It primarily impacts shell-forming organisms</answer>
+        <explanation>Ocean acidification makes it harder for organisms to form calcium carbonate shells and skeletons. This particularly affects corals, mollusks, and other calcifying organisms, disrupting marine ecosystems.</explanation>
+    </question>
+    <question>
+        <text>What is the relationship between photosynthesis and cellular respiration in the carbon cycle?</text>
+        <option>They operate independently</option>
+        <option>They form a cyclical relationship exchanging CO2 and O2</option>
+        <option>Photosynthesis always exceeds respiration</option>
+        <option>Respiration always exceeds photosynthesis</option>
+        <answer>They form a cyclical relationship exchanging CO2 and O2</answer>
+        <explanation>Photosynthesis and cellular respiration form a natural cycle: photosynthesis uses CO2 and produces O2, while respiration uses O2 and produces CO2. This cycle maintains atmospheric gas balance and supports life.</explanation>
+    </question>
+    <question>
+        <text>How do C4 plants adapt to high temperatures?</text>
+        <option>By stopping photosynthesis completely</option>
+        <option>By separating initial CO2 fixation from the Calvin cycle</option>
+        <option>By increasing photorespiration</option>
+        <option>By reducing water usage</option>
+        <answer>By separating initial CO2 fixation from the Calvin cycle</answer>
+        <explanation>C4 plants spatially separate initial CO2 fixation from the Calvin cycle, reducing photorespiration at high temperatures. This adaptation makes them more efficient in hot climates compared to C3 plants.</explanation>
+    </question>
+</quiz>

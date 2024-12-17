@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>Which cellular process produces the most ATP per glucose molecule?</text>
+        <option>Glycolysis</option>
+        <option>Fermentation</option>
+        <option>Oxidative phosphorylation</option>
+        <option>Substrate-level phosphorylation</option>
+        <answer>Oxidative phosphorylation</answer>
+        <explanation>Oxidative phosphorylation in the electron transport chain produces about 34 ATP molecules per glucose, far more than glycolysis (2 ATP) or substrate-level phosphorylation in the citric acid cycle (2 ATP).</explanation>
+    </question>
+    <question>
+        <text>What distinguishes chemiosmosis in chloroplasts from that in mitochondria?</text>
+        <option>Only chloroplasts use ATP synthase</option>
+        <option>Only mitochondria pump protons</option>
+        <option>The direction of proton pumping is reversed</option>
+        <option>The basic mechanism is the same but locations differ</option>
+        <answer>The basic mechanism is the same but locations differ</answer>
+        <explanation>Both organelles use chemiosmosis similarly, pumping protons to create a gradient that drives ATP synthesis. The main difference is location: thylakoid space in chloroplasts versus intermembrane space in mitochondria.</explanation>
+    </question>
+    <question>
+        <text>How do uncoupling proteins affect cellular energy efficiency?</text>
+        <option>They increase ATP production</option>
+        <option>They decrease proton gradient and ATP synthesis</option>
+        <option>They enhance electron transport</option>
+        <option>They have no effect on energy efficiency</option>
+        <answer>They decrease proton gradient and ATP synthesis</answer>
+        <explanation>Uncoupling proteins allow protons to leak across the membrane without producing ATP, reducing the proton gradient. This decreases energy efficiency but can generate heat and regulate metabolism.</explanation>
+    </question>
+    <question>
+        <text>What role does oxygen play in both cellular respiration and photosynthesis?</text>
+        <option>It's the starting molecule for both processes</option>
+        <option>It's produced by respiration and used in photosynthesis</option>
+        <option>It's produced by photosynthesis and used in respiration</option>
+        <option>It's the final product of both processes</option>
+        <answer>It's produced by photosynthesis and used in respiration</answer>
+        <explanation>Photosynthesis produces oxygen as a byproduct of water splitting, while cellular respiration uses this oxygen as the final electron acceptor in the electron transport chain, creating a vital cycle between these processes.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate the rate of electron transport?</text>
+        <option>Only through oxygen availability</option>
+        <option>Through multiple feedback mechanisms</option>
+        <option>By changing membrane composition</option>
+        <option>Through temperature control only</option>
+        <answer>Through multiple feedback mechanisms</answer>
+        <explanation>Cells regulate electron transport through multiple mechanisms including ATP/ADP ratio, NADH levels, oxygen availability, and allosteric regulation of transport chain complexes, allowing fine-tuned control of energy production.</explanation>
+    </question>
+</quiz>

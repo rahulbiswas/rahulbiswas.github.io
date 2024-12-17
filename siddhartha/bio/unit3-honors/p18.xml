@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do metabolic pathways coordinate during strenuous exercise?</text>
+        <option>Only glycolysis operates</option>
+        <option>All pathways stop completely</option>
+        <option>Multiple pathways operate simultaneously at different rates</option>
+        <option>Only the citric acid cycle functions</option>
+        <answer>Multiple pathways operate simultaneously at different rates</answer>
+        <explanation>During exercise, cells use multiple metabolic pathways simultaneously, adjusting their relative rates based on oxygen availability and energy demands. This includes aerobic respiration, glycolysis, and potentially lactate fermentation.</explanation>
+    </question>
+    <question>
+        <text>What role does the phosphocreatine system play in energy metabolism?</text>
+        <option>It replaces glycolysis entirely</option>
+        <option>It provides rapid ATP regeneration for short bursts</option>
+        <option>It only functions during sleep</option>
+        <option>It produces glucose from fat</option>
+        <answer>It provides rapid ATP regeneration for short bursts</answer>
+        <explanation>The phosphocreatine system rapidly regenerates ATP from ADP by transferring a phosphate group from phosphocreatine, providing immediate energy for short, intense activities before other metabolic pathways fully activate.</explanation>
+    </question>
+    <question>
+        <text>How do cells prioritize glucose allocation during energy stress?</text>
+        <option>Equal distribution to all cells</option>
+        <option>Preferential delivery to brain and vital organs</option>
+        <option>Complete shutdown of glucose usage</option>
+        <option>Random distribution</option>
+        <answer>Preferential delivery to brain and vital organs</answer>
+        <explanation>During energy stress, hormonal and nervous system signals prioritize glucose delivery to essential organs, particularly the brain, which heavily depends on glucose for energy. Other tissues may switch to alternative fuel sources.</explanation>
+    </question>
+    <question>
+        <text>What happens to metabolic rate during prolonged fasting?</text>
+        <option>It stays exactly the same</option>
+        <option>It increases dramatically</option>
+        <option>It decreases to conserve energy</option>
+        <option>It becomes completely random</option>
+        <answer>It decreases to conserve energy</answer>
+        <explanation>During prolonged fasting, metabolic rate decreases to conserve energy. The body reduces non-essential energy expenditure and increases efficiency of essential processes while utilizing stored energy reserves.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain energy homeostasis?</text>
+        <option>By using only one energy pathway</option>
+        <option>Through multiple regulatory mechanisms and pathway coordination</option>
+        <option>By stopping all energy production</option>
+        <option>Through random energy generation</option>
+        <answer>Through multiple regulatory mechanisms and pathway coordination</answer>
+        <explanation>Cells maintain energy homeostasis through multiple mechanisms including metabolic pathway regulation, hormone signaling, enzyme regulation, and coordination between different energy-producing and consuming processes.</explanation>
+    </question>
+</quiz>

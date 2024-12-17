@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do marine organisms adapt their energy metabolism to ocean acidification?</text>
+        <option>They stop all energy production</option>
+        <option>They modify metabolic pathways and energy allocation</option>
+        <option>They maintain normal metabolism</option>
+        <option>They only use fermentation</option>
+        <answer>They modify metabolic pathways and energy allocation</answer>
+        <explanation>Marine organisms adapt to ocean acidification by modifying their metabolic pathways, often redirecting energy toward maintaining pH balance and essential functions while adjusting their overall energy budget.</explanation>
+    </question>
+    <question>
+        <text>What effect does increased CO2 have on coral energy metabolism?</text>
+        <option>It enhances energy production</option>
+        <option>It disrupts the coral-algae symbiosis</option>
+        <option>It has no effect</option>
+        <option>It increases calcification</option>
+        <answer>It disrupts the coral-algae symbiosis</answer>
+        <explanation>Elevated CO2 can disrupt the delicate symbiosis between corals and their algal partners, affecting energy exchange and forcing both organisms to expend more energy maintaining cellular functions.</explanation>
+    </question>
+    <question>
+        <text>How do temperature changes affect marine photosynthesis?</text>
+        <option>They have no effect</option>
+        <option>They alter enzyme kinetics and metabolic rates</option>
+        <option>They only affect respiration</option>
+        <option>They increase efficiency always</option>
+        <answer>They alter enzyme kinetics and metabolic rates</answer>
+        <explanation>Temperature changes affect marine photosynthesis by altering enzyme kinetics, membrane fluidity, and metabolic rates, requiring organisms to adjust their photosynthetic machinery for optimal function.</explanation>
+    </question>
+    <question>
+        <text>What metabolic adaptations occur in deep-sea organisms?</text>
+        <option>They use only aerobic respiration</option>
+        <option>They develop pressure-adapted metabolic systems</option>
+        <option>They don't need energy metabolism</option>
+        <option>They use only fermentation</option>
+        <answer>They develop pressure-adapted metabolic systems</answer>
+        <explanation>Deep-sea organisms have evolved pressure-adapted enzymes and metabolic systems that function efficiently under high pressure, often with modifications to maintain membrane fluidity and protein function.</explanation>
+    </question>
+    <question>
+        <text>How do marine algae adjust to changing light conditions?</text>
+        <option>They maintain constant photosynthesis</option>
+        <option>They modify their photosynthetic apparatus</option>
+        <option>They stop photosynthesis</option>
+        <option>They only use respiration</option>
+        <answer>They modify their photosynthetic apparatus</answer>
+        <explanation>Marine algae adjust their photosynthetic apparatus through changes in pigment composition, light-harvesting complexes, and electron transport components to optimize energy capture under varying light conditions.</explanation>
+    </question>
+</quiz>

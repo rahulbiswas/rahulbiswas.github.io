@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do C3 and C4 plants differ in their carbon fixation?</text>
+        <option>C4 plants skip the Calvin cycle completely</option>
+        <option>C3 plants use less energy overall</option>
+        <option>C4 plants separate initial carbon fixation spatially</option>
+        <option>C3 plants don't use RuBisCO</option>
+        <answer>C4 plants separate initial carbon fixation spatially</answer>
+        <explanation>C4 plants fix CO2 initially in mesophyll cells using PEP carboxylase, then transport it to bundle sheath cells for the Calvin cycle. This spatial separation reduces photorespiration and increases efficiency in hot conditions.</explanation>
+    </question>
+    <question>
+        <text>What advantage do CAM plants have in desert environments?</text>
+        <option>They don't need water</option>
+        <option>They open stomata at night to reduce water loss</option>
+        <option>They lack stomata completely</option>
+        <option>They perform more efficient photosynthesis</option>
+        <answer>They open stomata at night to reduce water loss</answer>
+        <explanation>CAM plants open their stomata at night to collect CO2, which they store as organic acids. During the day, stomata close to prevent water loss while stored CO2 is used in photosynthesis.</explanation>
+    </question>
+    <question>
+        <text>How does temperature affect the rate of photorespiration?</text>
+        <option>It has no effect on photorespiration</option>
+        <option>Higher temperatures decrease photorespiration</option>
+        <option>Higher temperatures increase photorespiration</option>
+        <option>Temperature only affects C4 plants</option>
+        <answer>Higher temperatures increase photorespiration</answer>
+        <explanation>Higher temperatures increase photorespiration because RuBisCO's affinity for O2 relative to CO2 increases with temperature. This makes photorespiration more likely, reducing photosynthetic efficiency.</explanation>
+    </question>
+    <question>
+        <text>What is the primary advantage of C4 photosynthesis over C3?</text>
+        <option>It requires less water</option>
+        <option>It reduces photorespiration</option>
+        <option>It produces more glucose</option>
+        <option>It uses less energy</option>
+        <answer>It reduces photorespiration</answer>
+        <explanation>C4 photosynthesis concentrates CO2 around RuBisCO, minimizing photorespiration. While this process requires more energy, it makes photosynthesis more efficient in hot conditions where photorespiration would otherwise be high.</explanation>
+    </question>
+    <question>
+        <text>How do plants respond to prolonged darkness?</text>
+        <option>They continue photosynthesis normally</option>
+        <option>They switch to using stored energy reserves</option>
+        <option>They immediately die</option>
+        <option>They produce more chlorophyll</option>
+        <answer>They switch to using stored energy reserves</answer>
+        <explanation>During prolonged darkness, plants cannot photosynthesize and must rely on stored energy reserves like starch. They break down these reserves through respiration to maintain essential cellular functions.</explanation>
+    </question>
+</quiz>
