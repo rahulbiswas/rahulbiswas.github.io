@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of leptin in metabolism?</text>
+        <option>To stimulate hunger</option>
+        <option>To signal satiety</option>
+        <option>To store fat</option>
+        <option>To break down glucose</option>
+        <answer>To signal satiety</answer>
+        <explanation>Leptin is produced by adipose tissue and signals to the brain about body fat stores, helping to suppress appetite when fat stores are sufficient.</explanation>
+    </question>
+    <question>
+        <text>How does insulin affect metabolism?</text>
+        <option>It increases blood glucose</option>
+        <option>It promotes glucose uptake and storage</option>
+        <option>It breaks down glycogen</option>
+        <option>It increases gluconeogenesis</option>
+        <answer>It promotes glucose uptake and storage</answer>
+        <explanation>Insulin promotes glucose uptake into cells and stimulates the storage of excess nutrients as glycogen and fat.</explanation>
+    </question>
+    <question>
+        <text>What is the function of adiponectin?</text>
+        <option>To store fat</option>
+        <option>To increase insulin sensitivity</option>
+        <option>To stimulate hunger</option>
+        <option>To break down proteins</option>
+        <answer>To increase insulin sensitivity</answer>
+        <explanation>Adiponectin is secreted by adipose tissue and increases insulin sensitivity, promoting glucose uptake and fatty acid oxidation.</explanation>
+    </question>
+    <question>
+        <text>What triggers ghrelin release?</text>
+        <option>Eating a meal</option>
+        <option>An empty stomach</option>
+        <option>Exercise</option>
+        <option>Sleep</option>
+        <answer>An empty stomach</answer>
+        <explanation>Ghrelin is released by the empty stomach and stimulates hunger, promoting food intake and meal initiation.</explanation>
+    </question>
+    <question>
+        <text>How does cortisol affect metabolism?</text>
+        <option>It only affects sleep</option>
+        <option>It increases blood glucose</option>
+        <option>It stores glucose</option>
+        <option>It decreases protein breakdown</option>
+        <answer>It increases blood glucose</answer>
+        <explanation>Cortisol increases blood glucose through gluconeogenesis and glycogen breakdown, while also promoting protein breakdown and fat mobilization.</explanation>
+    </question>
+</questions>

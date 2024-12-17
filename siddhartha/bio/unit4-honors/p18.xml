@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of succinate dehydrogenase in cellular respiration?</text>
+        <option>To produce ATP</option>
+        <option>To oxidize succinate to fumarate</option>
+        <option>To break down glucose</option>
+        <option>To transport electrons</option>
+        <answer>To oxidize succinate to fumarate</answer>
+        <explanation>Succinate dehydrogenase (Complex II) catalyzes the oxidation of succinate to fumarate in the citric acid cycle while transferring electrons directly to the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>What distinguishes Complex II from other electron transport chain complexes?</text>
+        <option>It uses more oxygen</option>
+        <option>It is part of both the citric acid cycle and ETC</option>
+        <option>It produces more ATP</option>
+        <option>It only functions in the ETC</option>
+        <answer>It is part of both the citric acid cycle and ETC</answer>
+        <explanation>Complex II is unique because it functions both as an enzyme in the citric acid cycle and as an electron carrier in the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>How does Complex II contribute to the proton gradient?</text>
+        <option>It pumps many protons</option>
+        <option>It doesn't pump protons</option>
+        <option>It pumps fewer protons than other complexes</option>
+        <option>It only pumps protons sometimes</option>
+        <answer>It doesn't pump protons</answer>
+        <explanation>Unlike other ETC complexes, Complex II does not pump protons across the membrane; it only transfers electrons to ubiquinone.</explanation>
+    </question>
+    <question>
+        <text>What is the relationship between FAD and Complex II?</text>
+        <option>FAD inhibits Complex II</option>
+        <option>FAD is covalently bound to Complex II</option>
+        <option>FAD competes with Complex II</option>
+        <option>FAD has no relationship with Complex II</option>
+        <answer>FAD is covalently bound to Complex II</answer>
+        <explanation>FAD is covalently bound to Complex II as a prosthetic group, allowing it to accept electrons from succinate and transfer them to the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>Why is Complex II important for cellular efficiency?</text>
+        <option>It produces the most ATP</option>
+        <option>It connects two major energy pathways</option>
+        <option>It uses the least energy</option>
+        <option>It works the fastest</option>
+        <answer>It connects two major energy pathways</answer>
+        <explanation>Complex II increases cellular efficiency by directly connecting the citric acid cycle to the electron transport chain, allowing immediate electron transfer without intermediate carriers.</explanation>
+    </question>
+</questions>

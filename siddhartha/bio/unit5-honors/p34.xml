@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of PRDM9?</text>
+        <option>Process RNA</option>
+        <option>Mark recombination sites</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Mark recombination sites</answer>
+        <explanation>PRDM9 methylates H3K4 to mark DNA sites where meiotic recombination will occur.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex processes pre-piRNAs?</text>
+        <option>Zucchini</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>Zucchini</answer>
+        <explanation>Zucchini is an endonuclease that processes precursor piRNAs into mature piRNAs.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of HMGB1?</text>
+        <option>Transcribe genes</option>
+        <option>Bend DNA</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Bend DNA</answer>
+        <explanation>HMGB1 is a DNA-bending protein that helps regulate transcription and chromatin structure.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme resolves Holliday junctions?</text>
+        <option>GEN1</option>
+        <option>TOP1</option>
+        <option>FEN1</option>
+        <option>DNase I</option>
+        <answer>GEN1</answer>
+        <explanation>GEN1 is a resolvase that cleaves Holliday junctions during homologous recombination.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of DAXX?</text>
+        <option>Process RNA</option>
+        <option>H3.3 chaperone</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>H3.3 chaperone</answer>
+        <explanation>DAXX acts as a histone chaperone that specifically deposits the H3.3 variant at certain genomic regions.</explanation>
+    </question>
+</questions>

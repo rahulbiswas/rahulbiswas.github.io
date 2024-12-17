@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of glutamine synthetase?</text>
+        <option>To break down glutamine</option>
+        <option>To synthesize glutamine from glutamate</option>
+        <option>To store nitrogen</option>
+        <option>To produce energy</option>
+        <answer>To synthesize glutamine from glutamate</answer>
+        <explanation>Glutamine synthetase catalyzes the ATP-dependent formation of glutamine from glutamate and ammonia, serving as a key enzyme in nitrogen metabolism.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate protein turnover?</text>
+        <option>Through temperature only</option>
+        <option>Through ubiquitin-proteasome system</option>
+        <option>By random degradation</option>
+        <option>Through passive processes</option>
+        <answer>Through ubiquitin-proteasome system</answer>
+        <explanation>Cells regulate protein turnover through the ubiquitin-proteasome system, which marks and degrades specific proteins in a controlled manner.</explanation>
+    </question>
+    <question>
+        <text>What is protein ubiquitination?</text>
+        <option>Protein synthesis</option>
+        <option>Protein marking for degradation</option>
+        <option>Protein storage</option>
+        <option>Protein transport</option>
+        <answer>Protein marking for degradation</answer>
+        <explanation>Ubiquitination is the process of attaching ubiquitin molecules to proteins, typically marking them for degradation by the proteasome.</explanation>
+    </question>
+    <question>
+        <text>What determines protein half-life?</text>
+        <option>Size only</option>
+        <option>N-end rule and structural features</option>
+        <option>Location in cell</option>
+        <option>Temperature</option>
+        <answer>N-end rule and structural features</answer>
+        <explanation>Protein half-life is determined by various factors including the N-terminal amino acid (N-end rule) and other structural features that affect stability.</explanation>
+    </question>
+    <question>
+        <text>What is autophagy's role in protein turnover?</text>
+        <option>To synthesize proteins</option>
+        <option>To degrade cellular components</option>
+        <option>To store proteins</option>
+        <option>To transport proteins</option>
+        <answer>To degrade cellular components</answer>
+        <explanation>Autophagy is a process that degrades cellular components including proteins and organelles, particularly during stress or nutrient deprivation.</explanation>
+    </question>
+</questions>

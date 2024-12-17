@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of metabolic feedback inhibition?</text>
+        <option>To increase enzyme activity</option>
+        <option>To regulate metabolic pathways</option>
+        <option>To speed up reactions</option>
+        <option>To produce more products</option>
+        <answer>To regulate metabolic pathways</answer>
+        <explanation>Feedback inhibition regulates metabolic pathways by having the end product of a pathway inhibit an enzyme early in that pathway, preventing excess product accumulation.</explanation>
+    </question>
+    <question>
+        <text>What is allosteric regulation?</text>
+        <option>Breaking down of molecules</option>
+        <option>Control of enzyme activity by molecules binding to sites other than active site</option>
+        <option>Production of energy</option>
+        <option>Storage of glucose</option>
+        <answer>Control of enzyme activity by molecules binding to sites other than active site</answer>
+        <explanation>Allosteric regulation occurs when molecules bind to sites other than the enzyme's active site, causing conformational changes that affect enzyme activity.</explanation>
+    </question>
+    <question>
+        <text>How does phosphofructokinase-1 (PFK-1) regulate glycolysis?</text>
+        <option>By breaking down glucose</option>
+        <option>By responding to ATP/AMP levels</option>
+        <option>By producing more glucose</option>
+        <option>By storing energy</option>
+        <answer>By responding to ATP/AMP levels</answer>
+        <explanation>PFK-1 is inhibited by high ATP levels and activated by high AMP levels, helping to regulate glycolysis based on the cell's energy status.</explanation>
+    </question>
+    <question>
+        <text>What is the function of AMP-activated protein kinase (AMPK)?</text>
+        <option>To store energy</option>
+        <option>To sense cellular energy status</option>
+        <option>To break down proteins</option>
+        <option>To produce glucose</option>
+        <answer>To sense cellular energy status</answer>
+        <explanation>AMPK acts as an energy sensor, activated by high AMP levels to promote ATP-producing pathways and inhibit ATP-consuming processes.</explanation>
+    </question>
+    <question>
+        <text>How do cells coordinate multiple metabolic pathways?</text>
+        <option>They don't coordinate pathways</option>
+        <option>Through hormonal and allosteric regulation</option>
+        <option>By using only one pathway at a time</option>
+        <option>Through random processes</option>
+        <answer>Through hormonal and allosteric regulation</answer>
+        <explanation>Cells coordinate metabolic pathways through complex systems of hormonal signals and allosteric regulation of key enzymes to maintain homeostasis.</explanation>
+    </question>
+</questions>

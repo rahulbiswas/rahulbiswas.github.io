@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the purpose of gluconeogenesis during fasting?</text>
+        <option>To store glucose</option>
+        <option>To maintain blood glucose levels</option>
+        <option>To break down proteins</option>
+        <option>To produce ketones</option>
+        <answer>To maintain blood glucose levels</answer>
+        <explanation>Gluconeogenesis produces glucose from non-carbohydrate sources during fasting to maintain blood glucose levels, especially for glucose-dependent tissues like the brain.</explanation>
+    </question>
+    <question>
+        <text>Which amino acids can be converted to glucose?</text>
+        <option>Only essential amino acids</option>
+        <option>Only nonessential amino acids</option>
+        <option>Most amino acids</option>
+        <option>No amino acids</option>
+        <answer>Most amino acids</answer>
+        <explanation>Most amino acids are glucogenic, meaning they can be converted to glucose through gluconeogenesis, except for leucine and lysine which are strictly ketogenic.</explanation>
+    </question>
+    <question>
+        <text>What is the role of pyruvate carboxylase?</text>
+        <option>To break down pyruvate</option>
+        <option>To convert pyruvate to oxaloacetate</option>
+        <option>To produce ATP</option>
+        <option>To store glucose</option>
+        <answer>To convert pyruvate to oxaloacetate</answer>
+        <explanation>Pyruvate carboxylase converts pyruvate to oxaloacetate, a crucial step in gluconeogenesis that requires biotin and ATP.</explanation>
+    </question>
+    <question>
+        <text>What regulates PEPCK expression?</text>
+        <option>Only temperature</option>
+        <option>Glucagon and glucocorticoids</option>
+        <option>Vitamin D</option>
+        <option>Cell size</option>
+        <answer>Glucagon and glucocorticoids</answer>
+        <explanation>PEPCK (phosphoenolpyruvate carboxykinase) expression is increased by glucagon and glucocorticoids during fasting to promote gluconeogenesis.</explanation>
+    </question>
+    <question>
+        <text>Why is gluconeogenesis energy expensive?</text>
+        <option>It requires many enzymes</option>
+        <option>It uses multiple ATP molecules</option>
+        <option>It takes a long time</option>
+        <option>It needs special conditions</option>
+        <answer>It uses multiple ATP molecules</answer>
+        <explanation>Gluconeogenesis requires significant energy input in the form of ATP and GTP to convert pyruvate and other precursors back into glucose.</explanation>
+    </question>
+</questions>

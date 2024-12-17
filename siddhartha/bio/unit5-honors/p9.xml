@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of nucleotide excision repair?</text>
+        <option>Fix mismatched bases</option>
+        <option>Remove damaged DNA segments</option>
+        <option>Join Okazaki fragments</option>
+        <option>Add nucleotides</option>
+        <answer>Remove damaged DNA segments</answer>
+        <explanation>Nucleotide excision repair removes and replaces sections of DNA containing damaged nucleotides, especially UV damage.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein complex reads histone modifications?</text>
+        <option>Ribosome</option>
+        <option>Chromatin readers</option>
+        <option>DNA polymerase</option>
+        <option>Spliceosome</option>
+        <answer>Chromatin readers</answer>
+        <explanation>Chromatin reader proteins recognize specific histone modifications and recruit other factors to affect gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of the shine-dalgarno sequence?</text>
+        <option>End translation</option>
+        <option>Guide ribosome binding</option>
+        <option>Signal splicing</option>
+        <option>Start transcription</option>
+        <answer>Guide ribosome binding</answer>
+        <explanation>The shine-dalgarno sequence in bacterial mRNA helps position ribosomes at the correct start codon for translation.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires the cap-binding complex?</text>
+        <option>DNA replication</option>
+        <option>mRNA export</option>
+        <option>Protein degradation</option>
+        <option>DNA repair</option>
+        <answer>mRNA export</answer>
+        <explanation>The cap-binding complex recognizes the 5' cap of mRNA and helps transport it from the nucleus to the cytoplasm.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of DNA glycosylase?</text>
+        <option>Add sugars to proteins</option>
+        <option>Remove damaged bases</option>
+        <option>Join DNA strands</option>
+        <option>Synthesize DNA</option>
+        <answer>Remove damaged bases</answer>
+        <explanation>DNA glycosylase removes damaged or incorrect bases from DNA during base excision repair.</explanation>
+    </question>
+</questions>

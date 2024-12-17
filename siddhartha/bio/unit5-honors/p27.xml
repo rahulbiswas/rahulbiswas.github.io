@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of DNMT1?</text>
+        <option>Create new methylation</option>
+        <option>Maintain methylation patterns</option>
+        <option>Remove methylation</option>
+        <option>Modify histones</option>
+        <answer>Maintain methylation patterns</answer>
+        <explanation>DNMT1 is a maintenance methyltransferase that copies DNA methylation patterns during DNA replication.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex deposits H2A.Z?</text>
+        <option>SWR1</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>SWR1</answer>
+        <explanation>The SWR1 complex specifically exchanges canonical H2A for the H2A.Z variant in nucleosomes.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of TET enzymes?</text>
+        <option>Add methylation</option>
+        <option>Remove DNA methylation</option>
+        <option>Process RNA</option>
+        <option>Modify histones</option>
+        <answer>Remove DNA methylation</answer>
+        <explanation>TET enzymes oxidize methylated DNA bases, leading to DNA demethylation through active or passive mechanisms.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein recognizes DNA mismatches?</text>
+        <option>MSH2</option>
+        <option>DNase</option>
+        <option>Ligase</option>
+        <option>Helicase</option>
+        <answer>MSH2</answer>
+        <explanation>MSH2 is part of the MutS complex that recognizes mismatched base pairs during DNA mismatch repair.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of AGO2?</text>
+        <option>Process RNA</option>
+        <option>Cleave target mRNAs</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Cleave target mRNAs</answer>
+        <explanation>AGO2 is the catalytic component of RISC that cleaves target mRNAs during RNA interference.</explanation>
+    </question>
+</questions>

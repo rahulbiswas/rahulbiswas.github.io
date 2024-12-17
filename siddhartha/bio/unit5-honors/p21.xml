@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of COMPASS complex?</text>
+        <option>Repair DNA</option>
+        <option>Methylate H3K4</option>
+        <option>Process RNA</option>
+        <option>Degrade proteins</option>
+        <answer>Methylate H3K4</answer>
+        <explanation>The COMPASS complex methylates histone H3 at lysine 4, creating marks associated with active transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein removes H3K27me3?</text>
+        <option>JMJD3</option>
+        <option>DNA ligase</option>
+        <option>RNA polymerase</option>
+        <option>Helicase</option>
+        <answer>JMJD3</answer>
+        <explanation>JMJD3 is a demethylase that specifically removes the repressive H3K27me3 modification from histones.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of CTCF?</text>
+        <option>Repair DNA</option>
+        <option>Organize chromatin domains</option>
+        <option>Synthesize proteins</option>
+        <option>Process RNA</option>
+        <answer>Organize chromatin domains</answer>
+        <explanation>CTCF is an insulator protein that helps organize chromatin into functional domains and regulate gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex removes H2B ubiquitination?</text>
+        <option>SAGA</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>SAGA</answer>
+        <explanation>The SAGA complex contains deubiquitinating enzymes that remove ubiquitin from histone H2B.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of LSD1?</text>
+        <option>Process RNA</option>
+        <option>Remove histone methylation</option>
+        <option>Repair DNA</option>
+        <option>Synthesize proteins</option>
+        <answer>Remove histone methylation</answer>
+        <explanation>LSD1 is a histone demethylase that removes methyl groups from H3K4 and H3K9, affecting gene expression.</explanation>
+    </question>
+</questions>

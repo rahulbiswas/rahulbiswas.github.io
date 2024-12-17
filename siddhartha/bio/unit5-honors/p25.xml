@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of SUV39H1?</text>
+        <option>Repair DNA</option>
+        <option>Methylate H3K9</option>
+        <option>Process RNA</option>
+        <option>Degrade proteins</option>
+        <answer>Methylate H3K9</answer>
+        <explanation>SUV39H1 is a histone methyltransferase that specifically adds methyl groups to histone H3 at lysine 9.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex reads H3K9me3?</text>
+        <option>HP1</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>HP1</answer>
+        <explanation>Heterochromatin Protein 1 (HP1) specifically binds to H3K9me3 marks to establish heterochromatin.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of BRCA1?</text>
+        <option>Repair DNA</option>
+        <option>Homologous recombination</option>
+        <option>Process RNA</option>
+        <option>Modify histones</option>
+        <answer>Homologous recombination</answer>
+        <explanation>BRCA1 plays a crucial role in DNA repair through homologous recombination and maintains genome stability.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme removes m6A from RNA?</text>
+        <option>FTO</option>
+        <option>DNMTs</option>
+        <option>HDACs</option>
+        <option>HATs</option>
+        <answer>FTO</answer>
+        <explanation>FTO is an m6A demethylase that removes m6A modifications from RNA molecules.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of EZH2?</text>
+        <option>Process RNA</option>
+        <option>Methylate H3K27</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Methylate H3K27</answer>
+        <explanation>EZH2 is the catalytic component of PRC2 that methylates histone H3 at lysine 27 to repress genes.</explanation>
+    </question>
+</questions>

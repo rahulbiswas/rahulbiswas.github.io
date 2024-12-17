@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the Pasteur effect?</text>
+        <option>Increased fermentation</option>
+        <option>Inhibition of glycolysis by oxygen</option>
+        <option>Enhanced protein synthesis</option>
+        <option>Glucose storage</option>
+        <answer>Inhibition of glycolysis by oxygen</answer>
+        <explanation>The Pasteur effect is the inhibition of glycolysis by oxygen, where cells shift from fermentation to more efficient aerobic respiration in the presence of oxygen.</explanation>
+    </question>
+    <question>
+        <text>What is metabolic channeling?</text>
+        <option>Random molecule movement</option>
+        <option>Direct transfer between enzymes</option>
+        <option>Waste removal</option>
+        <option>Energy storage</option>
+        <answer>Direct transfer between enzymes</answer>
+        <explanation>Metabolic channeling is the direct transfer of metabolic intermediates between sequential enzymes in a pathway, increasing efficiency and reducing side reactions.</explanation>
+    </question>
+    <question>
+        <text>How do enzyme complexes enhance metabolism?</text>
+        <option>By slowing reactions</option>
+        <option>By increasing efficiency</option>
+        <option>By using more energy</option>
+        <option>By random processes</option>
+        <answer>By increasing efficiency</answer>
+        <explanation>Enzyme complexes enhance metabolism by bringing sequential enzymes together, facilitating substrate channeling and improving reaction efficiency.</explanation>
+    </question>
+    <question>
+        <text>What is the role of metabolons?</text>
+        <option>To store energy</option>
+        <option>To organize metabolic enzymes</option>
+        <option>To break down proteins</option>
+        <option>To transport glucose</option>
+        <answer>To organize metabolic enzymes</answer>
+        <explanation>Metabolons are temporary complexes of sequential metabolic enzymes that organize to increase pathway efficiency and regulate metabolic flux.</explanation>
+    </question>
+    <question>
+        <text>What affects metabolic pathway direction?</text>
+        <option>Temperature only</option>
+        <option>Substrate and product concentrations</option>
+        <option>Cell size</option>
+        <option>Time of day</option>
+        <answer>Substrate and product concentrations</answer>
+        <explanation>The direction of metabolic pathways is influenced by substrate and product concentrations, along with regulatory mechanisms that respond to cellular needs.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the end product of glycolysis?</text>
+        <option>Acetyl-CoA</option>
+        <option>Pyruvate</option>
+        <option>Glucose</option>
+        <option>Citric acid</option>
+        <answer>Pyruvate</answer>
+        <explanation>Glycolysis breaks down one glucose molecule into two pyruvate molecules, producing a net gain of 2 ATP and 2 NADH in the process.</explanation>
+    </question>
+    <question>
+        <text>Which molecule carries electrons from glycolysis to the electron transport chain?</text>
+        <option>ATP</option>
+        <option>Glucose</option>
+        <option>NADH</option>
+        <option>Oxygen</option>
+        <answer>NADH</answer>
+        <explanation>NADH carries high-energy electrons from glycolysis to the electron transport chain, where they contribute to the proton gradient for ATP synthesis.</explanation>
+    </question>
+    <question>
+        <text>What happens during substrate-level phosphorylation?</text>
+        <option>Electrons are transferred through the ETC</option>
+        <option>A phosphate group is directly transferred to ADP</option>
+        <option>Protons are pumped across a membrane</option>
+        <option>Water is split into hydrogen and oxygen</option>
+        <answer>A phosphate group is directly transferred to ADP</answer>
+        <explanation>Substrate-level phosphorylation involves the direct transfer of a phosphate group from a phosphorylated intermediate to ADP, forming ATP without using the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>How many ATP molecules are produced from one glucose molecule through glycolysis alone?</text>
+        <option>2 ATP</option>
+        <option>4 ATP</option>
+        <option>32 ATP</option>
+        <option>36 ATP</option>
+        <answer>2 ATP</answer>
+        <explanation>Glycolysis produces a net gain of 2 ATP molecules per glucose molecule, as it uses 2 ATP in the initial steps but produces 4 ATP in later steps.</explanation>
+    </question>
+    <question>
+        <text>What happens to NADH when oxygen is not available?</text>
+        <option>It accumulates in the cell</option>
+        <option>It is converted back to NAD+ through fermentation</option>
+        <option>It enters the electron transport chain</option>
+        <option>It is converted to ATP</option>
+        <answer>It is converted back to NAD+ through fermentation</answer>
+        <explanation>During anaerobic conditions, fermentation regenerates NAD+ from NADH so that glycolysis can continue to produce ATP.</explanation>
+    </question>
+</questions>

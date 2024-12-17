@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of carrier proteins in the electron transport chain?</text>
+        <option>To produce ATP directly</option>
+        <option>To transport electrons between complexes</option>
+        <option>To break down glucose</option>
+        <option>To synthesize proteins</option>
+        <answer>To transport electrons between complexes</answer>
+        <explanation>Carrier proteins like ubiquinone and cytochrome c shuttle electrons between the major protein complexes in the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>Which complex in the ETC produces no proton gradient?</text>
+        <option>Complex I</option>
+        <option>Complex II</option>
+        <option>Complex III</option>
+        <option>Complex IV</option>
+        <answer>Complex II</answer>
+        <explanation>Complex II (succinate dehydrogenase) transfers electrons from FADH2 to the ETC but does not pump protons across the membrane.</explanation>
+    </question>
+    <question>
+        <text>What determines the strength of the proton gradient?</text>
+        <option>The amount of glucose available</option>
+        <option>The concentration difference of H+ across the membrane</option>
+        <option>The temperature of the cell</option>
+        <option>The amount of oxygen present</option>
+        <answer>The concentration difference of H+ across the membrane</answer>
+        <explanation>The proton gradient strength depends on the difference in H+ concentration between the intermembrane space and the matrix.</explanation>
+    </question>
+    <question>
+        <text>How do uncoupling proteins affect cellular respiration?</text>
+        <option>They increase ATP production</option>
+        <option>They decrease the proton gradient</option>
+        <option>They block electron transport</option>
+        <option>They enhance oxygen consumption</option>
+        <answer>They decrease the proton gradient</answer>
+        <explanation>Uncoupling proteins allow protons to leak across the membrane without producing ATP, reducing the proton gradient and generating heat instead.</explanation>
+    </question>
+    <question>
+        <text>What happens when electron transport is blocked by cyanide?</text>
+        <option>ATP production increases</option>
+        <option>Oxygen consumption continues</option>
+        <option>ATP production stops</option>
+        <option>Glucose breakdown increases</option>
+        <answer>ATP production stops</answer>
+        <explanation>Cyanide blocks Complex IV, preventing oxygen from accepting electrons, which stops electron transport and ATP production through oxidative phosphorylation.</explanation>
+    </question>
+</questions>

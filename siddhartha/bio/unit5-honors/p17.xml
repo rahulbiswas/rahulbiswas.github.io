@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of Pol I in eukaryotes?</text>
+        <option>Transcribe mRNA</option>
+        <option>Synthesize rRNA</option>
+        <option>Make tRNA</option>
+        <option>Replicate DNA</option>
+        <answer>Synthesize rRNA</answer>
+        <explanation>RNA Polymerase I specifically transcribes ribosomal RNA genes in eukaryotic cells.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein recognizes the branch point sequence?</text>
+        <option>U1 snRNP</option>
+        <option>U2 snRNP</option>
+        <option>U4 snRNP</option>
+        <option>U5 snRNP</option>
+        <answer>U2 snRNP</answer>
+        <explanation>U2 snRNP specifically recognizes and binds to the branch point sequence during pre-mRNA splicing.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of PCNA in replication?</text>
+        <option>Unwind DNA</option>
+        <option>Act as sliding clamp</option>
+        <option>Join DNA fragments</option>
+        <option>Add primers</option>
+        <answer>Act as sliding clamp</answer>
+        <explanation>PCNA forms a sliding clamp around DNA that keeps DNA polymerase attached during replication.</explanation>
+    </question>
+    
+    <question>
+        <text>Which modification is added by TGS1?</text>
+        <option>DNA methylation</option>
+        <option>TMG cap on snRNAs</option>
+        <option>Histone acetylation</option>
+        <option>Poly-A tail</option>
+        <answer>TMG cap on snRNAs</answer>
+        <explanation>TGS1 adds the trimethylguanosine cap modification to small nuclear RNAs (snRNAs).</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of RNase H?</text>
+        <option>Process tRNA</option>
+        <option>Degrade RNA in RNA-DNA hybrids</option>
+        <option>Cut DNA</option>
+        <option>Modify proteins</option>
+        <answer>Degrade RNA in RNA-DNA hybrids</answer>
+        <explanation>RNase H specifically degrades the RNA portion of RNA-DNA hybrids during DNA replication and repair.</explanation>
+    </question>
+</questions>
