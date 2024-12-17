@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of RNA polymerase during transcription?</text>
+        <option>Adds amino acids to growing protein chain</option>
+        <option>Synthesizes RNA using DNA template</option>
+        <option>Joins DNA fragments together</option>
+        <option>Removes introns from RNA</option>
+        <answer>Synthesizes RNA using DNA template</answer>
+        <explanation>RNA polymerase catalyzes the synthesis of RNA by adding complementary ribonucleotides while reading the DNA template strand.</explanation>
+    </question>
+    
+    <question>
+        <text>Which structure allows DNA to be efficiently packaged in the nucleus?</text>
+        <option>Ribosome</option>
+        <option>Nucleosome</option>
+        <option>Centrosome</option>
+        <option>Telomere</option>
+        <answer>Nucleosome</answer>
+        <explanation>Nucleosomes are the basic unit of DNA packaging, consisting of DNA wrapped around histone proteins to form a compact structure.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of enhancers in gene regulation?</text>
+        <option>Block transcription factor binding</option>
+        <option>Increase gene expression from distant sites</option>
+        <option>Remove introns from mRNA</option>
+        <option>Add poly-A tail to mRNA</option>
+        <answer>Increase gene expression from distant sites</answer>
+        <explanation>Enhancers are DNA sequences that can increase gene expression by binding transcription factors, even when located far from the gene's promoter.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process removes introns from pre-mRNA?</text>
+        <option>Translation</option>
+        <option>Splicing</option>
+        <option>Capping</option>
+        <option>Polyadenylation</option>
+        <answer>Splicing</answer>
+        <explanation>Splicing is the process that removes non-coding intron sequences and joins coding exons together in pre-mRNA processing.</explanation>
+    </question>
+    
+    <question>
+        <text>What type of RNA carries amino acids to the ribosome?</text>
+        <option>mRNA</option>
+        <option>tRNA</option>
+        <option>rRNA</option>
+        <option>snRNA</option>
+        <answer>tRNA</answer>
+        <explanation>Transfer RNA (tRNA) molecules carry specific amino acids to the ribosome during protein synthesis, matching them to the appropriate codons.</explanation>
+    </question>
+</questions>

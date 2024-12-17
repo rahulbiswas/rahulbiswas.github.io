@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of DOT1L?</text>
+        <option>Repair DNA</option>
+        <option>Methylate H3K79</option>
+        <option>Process RNA</option>
+        <option>Degrade proteins</option>
+        <answer>Methylate H3K79</answer>
+        <explanation>DOT1L is a histone methyltransferase that specifically methylates histone H3 at lysine 79 in the globular domain.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex recognizes DNA double-strand breaks?</text>
+        <option>MRN complex</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>MRN complex</answer>
+        <explanation>The MRN (Mre11-Rad50-Nbs1) complex recognizes and helps repair DNA double-strand breaks.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of PAF complex?</text>
+        <option>Repair DNA</option>
+        <option>Facilitate transcription elongation</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Facilitate transcription elongation</answer>
+        <explanation>The PAF complex promotes transcription elongation and coordinates histone modifications during transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein prevents rereplication?</text>
+        <option>Geminin</option>
+        <option>Helicase</option>
+        <option>Polymerase</option>
+        <option>Ligase</option>
+        <answer>Geminin</answer>
+        <explanation>Geminin prevents DNA rereplication by binding to and inhibiting the replication licensing factor Cdt1.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of RNase P?</text>
+        <option>Process mRNA</option>
+        <option>Process tRNA</option>
+        <option>Degrade proteins</option>
+        <option>Repair DNA</option>
+        <answer>Process tRNA</answer>
+        <explanation>RNase P processes the 5' end of precursor tRNAs during tRNA maturation.</explanation>
+    </question>
+</questions>

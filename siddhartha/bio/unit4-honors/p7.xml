@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of accessory pigments in photosynthesis?</text>
+        <option>To split water molecules</option>
+        <option>To absorb additional wavelengths of light</option>
+        <option>To produce ATP directly</option>
+        <option>To fix carbon dioxide</option>
+        <answer>To absorb additional wavelengths of light</answer>
+        <explanation>Accessory pigments like carotenoids expand the range of light wavelengths that can be used for photosynthesis by absorbing different colors than chlorophyll.</explanation>
+    </question>
+    <question>
+        <text>What molecule does Photosystem I pass its electrons to during non-cyclic electron flow?</text>
+        <option>Water</option>
+        <option>NADP+</option>
+        <option>Oxygen</option>
+        <option>ATP</option>
+        <answer>NADP+</answer>
+        <explanation>In non-cyclic electron flow, Photosystem I transfers electrons to NADP+, which becomes reduced to NADPH for use in the Calvin cycle.</explanation>
+    </question>
+    <question>
+        <text>What is the first stable product of carbon fixation?</text>
+        <option>Glucose</option>
+        <option>Pyruvate</option>
+        <option>3-phosphoglycerate</option>
+        <option>RuBP</option>
+        <answer>3-phosphoglycerate</answer>
+        <explanation>When RuBisCO fixes CO2 to RuBP, it forms two molecules of 3-phosphoglycerate (3-PGA), which is the first stable product of carbon fixation.</explanation>
+    </question>
+    <question>
+        <text>How many carbon dioxide molecules are needed to complete one turn of the Calvin cycle?</text>
+        <option>1</option>
+        <option>3</option>
+        <option>6</option>
+        <option>12</option>
+        <answer>3</answer>
+        <explanation>The Calvin cycle requires three CO2 molecules to be fixed to produce one three-carbon sugar molecule (G3P) that can be used to make glucose.</explanation>
+    </question>
+    <question>
+        <text>What happens to G3P produced in the Calvin cycle?</text>
+        <option>It is always converted to glucose</option>
+        <option>It can be used to regenerate RuBP or make glucose</option>
+        <option>It is converted back to CO2</option>
+        <option>It is used to make ATP</option>
+        <answer>It can be used to regenerate RuBP or make glucose</answer>
+        <explanation>G3P (glyceraldehyde 3-phosphate) can either be used to regenerate RuBP to continue the Calvin cycle or be exported to make glucose and other organic molecules.</explanation>
+    </question>
+</questions>

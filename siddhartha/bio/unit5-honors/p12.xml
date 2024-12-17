@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of RISC in gene regulation?</text>
+        <option>Repair DNA damage</option>
+        <option>Cleave target mRNA</option>
+        <option>Synthesize proteins</option>
+        <option>Modify histones</option>
+        <answer>Cleave target mRNA</answer>
+        <explanation>The RNA-induced silencing complex (RISC) uses small RNAs to identify and cleave complementary target mRNAs, silencing gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires the CAP protein in bacteria?</text>
+        <option>DNA repair</option>
+        <option>Glucose regulation</option>
+        <option>Protein folding</option>
+        <option>RNA splicing</option>
+        <answer>Glucose regulation</answer>
+        <explanation>The catabolite activator protein (CAP) regulates gene expression in response to glucose levels in bacterial cells.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of polycomb proteins?</text>
+        <option>Activate genes</option>
+        <option>Repress gene expression</option>
+        <option>Repair DNA</option>
+        <option>Synthesize RNA</option>
+        <answer>Repress gene expression</answer>
+        <explanation>Polycomb proteins maintain gene silencing by modifying histones and creating repressive chromatin structures.</explanation>
+    </question>
+    
+    <question>
+        <text>Which factor is required for transcription termination?</text>
+        <option>Sigma factor</option>
+        <option>Rho protein</option>
+        <option>Start factors</option>
+        <option>Primase</option>
+        <answer>Rho protein</answer>
+        <explanation>Rho protein is a termination factor that helps end transcription in bacteria by unwinding the RNA-DNA hybrid.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of aminoacyl-tRNA synthetases?</text>
+        <option>Break down proteins</option>
+        <option>Attach amino acids to tRNA</option>
+        <option>Synthesize DNA</option>
+        <option>Process RNA</option>
+        <answer>Attach amino acids to tRNA</answer>
+        <explanation>Aminoacyl-tRNA synthetases specifically attach the correct amino acids to their corresponding tRNA molecules.</explanation>
+    </question>
+</questions>

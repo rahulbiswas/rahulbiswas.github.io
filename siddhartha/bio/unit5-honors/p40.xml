@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of SIRT1?</text>
+        <option>Process RNA</option>
+        <option>Remove histone acetylation</option>
+        <option>Repair DNA</option>
+        <option>Add methyl groups</option>
+        <answer>Remove histone acetylation</answer>
+        <explanation>SIRT1 is a NAD+-dependent deacetylase that removes acetyl groups from histones and other proteins.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex protects telomeres?</text>
+        <option>Shelterin</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>Shelterin</answer>
+        <explanation>The shelterin complex protects telomere ends and prevents them from being recognized as DNA damage.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of SETD7?</text>
+        <option>Repair DNA</option>
+        <option>Methylate H3K4</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Methylate H3K4</answer>
+        <explanation>SETD7 is a histone methyltransferase that specifically adds a single methyl group to H3K4.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein coordinates DNA repair choice?</text>
+        <option>53BP1</option>
+        <option>RAD51</option>
+        <option>BRCA1</option>
+        <option>KU70</option>
+        <answer>53BP1</answer>
+        <explanation>53BP1 helps determine whether DNA double-strand breaks are repaired by NHEJ or homologous recombination.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of PHF20?</text>
+        <option>Process RNA</option>
+        <option>Read histone marks</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Read histone marks</answer>
+        <explanation>PHF20 recognizes and binds to specific histone modifications to regulate gene expression.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do cells regulate mitochondrial DNA replication?</text>
+        <option>They don't control mitochondrial DNA</option>
+        <option>Through multiple signaling pathways and factors</option>
+        <option>Only during cell division</option>
+        <option>Random replication occurs</option>
+        <answer>Through multiple signaling pathways and factors</answer>
+        <explanation>Cells regulate mitochondrial DNA replication through complex signaling pathways involving nuclear and mitochondrial factors, coordinating replication with cellular energy demands and cell cycle status.</explanation>
+    </question>
+    <question>
+        <text>What controls chloroplast division in plants?</text>
+        <option>Random events only</option>
+        <option>Coordinated nuclear and plastid signals</option>
+        <option>Light levels only</option>
+        <option>Cell size only</option>
+        <answer>Coordinated nuclear and plastid signals</answer>
+        <explanation>Chloroplast division is controlled by coordinated signals from both nuclear and plastid genomes, ensuring appropriate chloroplast numbers and distribution for optimal photosynthetic capacity.</explanation>
+    </question>
+    <question>
+        <text>How do organelle genomes coordinate with nuclear genes?</text>
+        <option>They function independently</option>
+        <option>Through complex signaling networks</option>
+        <option>Only during stress</option>
+        <option>No coordination occurs</option>
+        <answer>Through complex signaling networks</answer>
+        <explanation>Organelle and nuclear genomes coordinate through elaborate signaling networks that regulate gene expression, protein import/export, and metabolic activities to maintain cellular energy homeostasis.</explanation>
+    </question>
+    <question>
+        <text>What triggers organelle genome replication?</text>
+        <option>Cell division only</option>
+        <option>Multiple cellular and environmental signals</option>
+        <option>Random events</option>
+        <option>Age of the organelle</option>
+        <answer>Multiple cellular and environmental signals</answer>
+        <explanation>Organelle genome replication is triggered by various signals including cellular energy status, developmental cues, environmental conditions, and metabolic demands.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain organelle DNA quality?</text>
+        <option>They don't maintain it</option>
+        <option>Through repair systems and quality control</option>
+        <option>By preventing mutations</option>
+        <option>Through rapid division only</option>
+        <answer>Through repair systems and quality control</answer>
+        <explanation>Cells maintain organelle DNA quality through specialized repair systems, quality control mechanisms, and selective elimination of damaged organelles through processes like mitophagy.</explanation>
+    </question>
+</quiz>

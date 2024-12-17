@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of RAD51?</text>
+        <option>Process RNA</option>
+        <option>Homology search</option>
+        <option>Modify histones</option>
+        <option>Degrade proteins</option>
+        <answer>Homology search</answer>
+        <explanation>RAD51 performs homology searching and strand invasion during homologous recombination repair.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex deposits MacroH2A?</text>
+        <option>ATRX/DAXX</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>ATRX/DAXX</answer>
+        <explanation>The ATRX/DAXX complex helps deposit the histone variant macroH2A at specific chromatin regions.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of XPF-ERCC1?</text>
+        <option>Transcribe genes</option>
+        <option>Cut damaged DNA</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Cut damaged DNA</answer>
+        <explanation>XPF-ERCC1 is a structure-specific endonuclease that cuts damaged DNA during nucleotide excision repair.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein recognizes DNA ICLs?</text>
+        <option>FANCM</option>
+        <option>RAD51</option>
+        <option>XPA</option>
+        <option>MLH1</option>
+        <answer>FANCM</answer>
+        <explanation>FANCM recognizes DNA interstrand crosslinks (ICLs) and initiates the Fanconi anemia repair pathway.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of TRIM28?</text>
+        <option>Process RNA</option>
+        <option>Silence retrotransposons</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>Silence retrotransposons</answer>
+        <explanation>TRIM28 (KAP1) helps silence retrotransposons by recruiting repressive chromatin modifiers.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of PABP?</text>
+        <option>Process DNA</option>
+        <option>Bind poly(A) tail</option>
+        <option>Modify histones</option>
+        <option>Repair DNA</option>
+        <answer>Bind poly(A) tail</answer>
+        <explanation>Poly(A) Binding Protein (PABP) binds to mRNA poly(A) tails to protect mRNA and promote translation.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex removes H3K4me3?</text>
+        <option>KDM5</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>KDM5</answer>
+        <explanation>KDM5 family proteins are histone demethylases that specifically remove H3K4 methylation marks.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of TFIIIC?</text>
+        <option>Process mRNA</option>
+        <option>Transcribe tRNA genes</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Transcribe tRNA genes</answer>
+        <explanation>TFIIIC recognizes specific sequences in tRNA genes and helps recruit RNA polymerase III for transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme phosphorylates serine 5 on Pol II CTD?</text>
+        <option>CDK7</option>
+        <option>CDK9</option>
+        <option>CDK12</option>
+        <option>CDK1</option>
+        <answer>CDK7</answer>
+        <explanation>CDK7, as part of TFIIH, phosphorylates serine 5 on RNA Polymerase II CTD during transcription initiation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of SAFB?</text>
+        <option>Repair DNA</option>
+        <option>Organize nuclear structure</option>
+        <option>Synthesize proteins</option>
+        <option>Process RNA</option>
+        <answer>Organize nuclear structure</answer>
+        <explanation>Scaffold Attachment Factor B (SAFB) helps organize chromatin structure and nuclear architecture.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of ATP synthase in cellular respiration?</text>
+        <option>To break down glucose</option>
+        <option>To pump protons across the membrane</option>
+        <option>To synthesize ATP using proton gradient energy</option>
+        <option>To transfer electrons between carriers</option>
+        <answer>To synthesize ATP using proton gradient energy</answer>
+        <explanation>ATP synthase uses the energy from protons flowing down their concentration gradient to mechanically rotate and combine ADP and phosphate to form ATP.</explanation>
+    </question>
+    <question>
+        <text>What happens during oxidative phosphorylation?</text>
+        <option>Glucose is broken down into pyruvate</option>
+        <option>Electrons flow through ETC to produce ATP</option>
+        <option>Pyruvate is converted to acetyl-CoA</option>
+        <option>Carbon dioxide is fixed into glucose</option>
+        <answer>Electrons flow through ETC to produce ATP</answer>
+        <explanation>During oxidative phosphorylation, electrons flow through the electron transport chain, creating a proton gradient that drives ATP synthesis.</explanation>
+    </question>
+    <question>
+        <text>Which process produces the most ATP per glucose molecule?</text>
+        <option>Glycolysis</option>
+        <option>Fermentation</option>
+        <option>Oxidative phosphorylation</option>
+        <option>Substrate-level phosphorylation</option>
+        <answer>Oxidative phosphorylation</answer>
+        <explanation>Oxidative phosphorylation produces the majority of ATP molecules during cellular respiration, generating about 34 of the total 36-38 ATP per glucose.</explanation>
+    </question>
+    <question>
+        <text>What is the role of oxygen in cellular respiration?</text>
+        <option>It provides energy directly to cells</option>
+        <option>It serves as the final electron acceptor</option>
+        <option>It splits water molecules</option>
+        <option>It produces glucose</option>
+        <answer>It serves as the final electron acceptor</answer>
+        <explanation>Oxygen serves as the final electron acceptor in the electron transport chain, combining with electrons and hydrogen ions to form water.</explanation>
+    </question>
+    <question>
+        <text>Which molecule carries electrons from the Krebs cycle to the electron transport chain?</text>
+        <option>ATP</option>
+        <option>Glucose</option>
+        <option>NADH and FADH2</option>
+        <option>Pyruvate</option>
+        <answer>NADH and FADH2</answer>
+        <explanation>Both NADH and FADH2 carry high-energy electrons from the Krebs cycle to the electron transport chain for ATP production through oxidative phosphorylation.</explanation>
+    </question>
+</questions>

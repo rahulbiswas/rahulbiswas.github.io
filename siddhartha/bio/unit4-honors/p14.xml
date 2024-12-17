@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of insulin in metabolism?</text>
+        <option>To increase blood glucose</option>
+        <option>To promote glucose uptake and storage</option>
+        <option>To break down glycogen</option>
+        <option>To stimulate gluconeogenesis</option>
+        <answer>To promote glucose uptake and storage</answer>
+        <explanation>Insulin is a hormone that promotes the uptake of glucose from blood into cells and stimulates the storage of excess glucose as glycogen.</explanation>
+    </question>
+    <question>
+        <text>What is the role of glucagon in metabolism?</text>
+        <option>To lower blood glucose</option>
+        <option>To store glucose as glycogen</option>
+        <option>To increase blood glucose levels</option>
+        <option>To inhibit gluconeogenesis</option>
+        <answer>To increase blood glucose levels</answer>
+        <explanation>Glucagon raises blood glucose levels by promoting glycogen breakdown and gluconeogenesis when blood glucose levels are low.</explanation>
+    </question>
+    <question>
+        <text>What is glycogenesis?</text>
+        <option>The breakdown of glycogen</option>
+        <option>The synthesis of glycogen from glucose</option>
+        <option>The production of glucose</option>
+        <option>The breakdown of glucose</option>
+        <answer>The synthesis of glycogen from glucose</answer>
+        <explanation>Glycogenesis is the process of converting excess glucose into glycogen for storage, primarily in liver and muscle cells.</explanation>
+    </question>
+    <question>
+        <text>What triggers glycogenolysis?</text>
+        <option>High blood glucose</option>
+        <option>Low blood glucose</option>
+        <option>High insulin levels</option>
+        <option>Excess glycogen storage</option>
+        <answer>Low blood glucose</answer>
+        <explanation>Glycogenolysis is triggered by low blood glucose levels, breaking down stored glycogen to release glucose and maintain blood sugar levels.</explanation>
+    </question>
+    <question>
+        <text>Which hormone inhibits gluconeogenesis?</text>
+        <option>Glucagon</option>
+        <option>Insulin</option>
+        <option>Epinephrine</option>
+        <option>Cortisol</option>
+        <answer>Insulin</answer>
+        <explanation>Insulin inhibits gluconeogenesis by suppressing the expression of key enzymes involved in the gluconeogenic pathway.</explanation>
+    </question>
+</questions>

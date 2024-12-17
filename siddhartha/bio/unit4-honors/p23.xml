@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of desaturases in fatty acid metabolism?</text>
+        <option>To add carbons to fatty acids</option>
+        <option>To introduce double bonds</option>
+        <option>To break down fatty acids</option>
+        <option>To store fatty acids</option>
+        <answer>To introduce double bonds</answer>
+        <explanation>Desaturases introduce double bonds into fatty acid chains, creating unsaturated fatty acids from saturated ones.</explanation>
+    </question>
+    <question>
+        <text>What is the significance of essential fatty acids?</text>
+        <option>They provide the most energy</option>
+        <option>They cannot be synthesized by humans</option>
+        <option>They are easily stored</option>
+        <option>They break down quickly</option>
+        <answer>They cannot be synthesized by humans</answer>
+        <explanation>Essential fatty acids must be obtained from the diet because humans lack the enzymes needed to synthesize them.</explanation>
+    </question>
+    <question>
+        <text>How are fatty acids elongated?</text>
+        <option>By adding single carbons</option>
+        <option>By adding two carbons at a time</option>
+        <option>By combining two fatty acids</option>
+        <option>By breaking and reforming</option>
+        <answer>By adding two carbons at a time</answer>
+        <explanation>Fatty acid elongation occurs in the endoplasmic reticulum by adding two-carbon units from malonyl-CoA to existing fatty acids.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane fluidity?</text>
+        <option>Only temperature</option>
+        <option>Degree of fatty acid saturation</option>
+        <option>Amount of cholesterol</option>
+        <option>Protein content</option>
+        <answer>Degree of fatty acid saturation</answer>
+        <explanation>The degree of fatty acid saturation in membrane phospholipids largely determines membrane fluidity, with more unsaturated fatty acids increasing fluidity.</explanation>
+    </question>
+    <question>
+        <text>Why can't humans synthesize linoleic acid?</text>
+        <option>We lack the needed enzymes</option>
+        <option>We don't need it</option>
+        <option>It requires too much energy</option>
+        <option>It's toxic to produce</option>
+        <answer>We lack the needed enzymes</answer>
+        <explanation>Humans lack the delta-12 desaturase enzyme needed to create linoleic acid, making it an essential fatty acid that must be obtained from diet.</explanation>
+    </question>
+</questions>

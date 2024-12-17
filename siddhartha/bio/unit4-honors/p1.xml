@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which process converts light energy into chemical energy in the form of glucose?</text>
+        <option>Cellular respiration</option>
+        <option>Photosynthesis</option>
+        <option>Fermentation</option>
+        <option>Chemiosmosis</option>
+        <answer>Photosynthesis</answer>
+        <explanation>Photosynthesis is the process where plants use sunlight, water, and CO2 to produce glucose and oxygen. This is the primary way that light energy is converted to chemical energy that can be used by living things.</explanation>
+    </question>
+    <question>
+        <text>What is the primary energy carrier molecule in cells?</text>
+        <option>Glucose</option>
+        <option>ATP</option>
+        <option>NADH</option>
+        <option>Pyruvate</option>
+        <answer>ATP</answer>
+        <explanation>ATP (adenosine triphosphate) is the main energy currency of cells, storing energy in its phosphate bonds that can be readily used for cellular processes.</explanation>
+    </question>
+    <question>
+        <text>Where does the light-dependent reaction of photosynthesis occur?</text>
+        <option>Stroma</option>
+        <option>Thylakoid membrane</option>
+        <option>Cell wall</option>
+        <option>Cytoplasm</option>
+        <answer>Thylakoid membrane</answer>
+        <explanation>The light-dependent reactions occur in the thylakoid membrane of chloroplasts, where chlorophyll and other photosynthetic pigments are embedded.</explanation>
+    </question>
+    <question>
+        <text>What molecule captures light energy in photosynthesis?</text>
+        <option>Chlorophyll</option>
+        <option>Glucose</option>
+        <option>Water</option>
+        <option>Carbon dioxide</option>
+        <answer>Chlorophyll</answer>
+        <explanation>Chlorophyll is the green pigment in plants that absorbs light energy, particularly red and blue wavelengths, initiating the photosynthetic process.</explanation>
+    </question>
+    <question>
+        <text>Which of these is NOT a product of the light-dependent reactions?</text>
+        <option>ATP</option>
+        <option>NADPH</option>
+        <option>Oxygen</option>
+        <option>Glucose</option>
+        <answer>Glucose</answer>
+        <explanation>Glucose is produced in the light-independent reactions (Calvin cycle). The light-dependent reactions produce ATP, NADPH, and oxygen as a byproduct.</explanation>
+    </question>
+</questions>

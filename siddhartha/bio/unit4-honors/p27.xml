@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of brown adipose tissue?</text>
+        <option>To store energy</option>
+        <option>To generate heat</option>
+        <option>To produce hormones</option>
+        <option>To absorb nutrients</option>
+        <answer>To generate heat</answer>
+        <explanation>Brown adipose tissue contains many mitochondria with uncoupling proteins that convert metabolic energy directly into heat through non-shivering thermogenesis.</explanation>
+    </question>
+    <question>
+        <text>How do uncoupling proteins generate heat?</text>
+        <option>By breaking down ATP</option>
+        <option>By allowing proton leak</option>
+        <option>By burning glucose</option>
+        <option>By storing energy</option>
+        <answer>By allowing proton leak</answer>
+        <explanation>Uncoupling proteins allow protons to leak across the mitochondrial membrane without producing ATP, dissipating the energy as heat.</explanation>
+    </question>
+    <question>
+        <text>What triggers brown fat activation?</text>
+        <option>High temperatures</option>
+        <option>Cold exposure</option>
+        <option>Exercise</option>
+        <option>Eating</option>
+        <answer>Cold exposure</answer>
+        <explanation>Cold exposure stimulates the sympathetic nervous system to activate brown fat, increasing heat production through non-shivering thermogenesis.</explanation>
+    </question>
+    <question>
+        <text>What gives brown fat its color?</text>
+        <option>Special pigments</option>
+        <option>High mitochondrial content</option>
+        <option>Blood vessels</option>
+        <option>Stored lipids</option>
+        <answer>High mitochondrial content</answer>
+        <explanation>Brown fat gets its color from the large number of iron-containing mitochondria present in the cells.</explanation>
+    </question>
+    <question>
+        <text>What is the role of UCP1 in brown fat?</text>
+        <option>To store energy</option>
+        <option>To uncouple respiration from ATP synthesis</option>
+        <option>To break down fats</option>
+        <option>To produce glucose</option>
+        <answer>To uncouple respiration from ATP synthesis</answer>
+        <explanation>UCP1 (uncoupling protein 1) allows protons to leak across the inner mitochondrial membrane, uncoupling respiration from ATP synthesis to generate heat.</explanation>
+    </question>
+</questions>

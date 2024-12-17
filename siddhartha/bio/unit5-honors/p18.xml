@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of FEN1 in DNA replication?</text>
+        <option>Join DNA fragments</option>
+        <option>Remove RNA primers</option>
+        <option>Add nucleotides</option>
+        <option>Unwind DNA</option>
+        <answer>Remove RNA primers</answer>
+        <explanation>FEN1 (Flap Endonuclease 1) removes RNA primers and overlapping DNA during Okazaki fragment processing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex modifies snRNAs in the cytoplasm?</text>
+        <option>Spliceosome</option>
+        <option>SMN complex</option>
+        <option>Ribosome</option>
+        <option>Proteasome</option>
+        <answer>SMN complex</answer>
+        <explanation>The Survival Motor Neuron (SMN) complex helps assemble and modify snRNPs in the cytoplasm.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of ATM kinase?</text>
+        <option>Synthesize proteins</option>
+        <option>Signal DNA damage</option>
+        <option>Process RNA</option>
+        <option>Replicate DNA</option>
+        <answer>Signal DNA damage</answer>
+        <explanation>ATM kinase is activated by DNA double-strand breaks and initiates DNA damage response pathways.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein regulates AUF1 activity?</text>
+        <option>Helicase</option>
+        <option>p14ARF</option>
+        <option>Polymerase</option>
+        <option>Ligase</option>
+        <answer>p14ARF</answer>
+        <explanation>p14ARF regulates AUF1, which affects mRNA stability and protein expression levels.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of Drosha?</text>
+        <option>Process mRNA</option>
+        <option>Process microRNAs</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Process microRNAs</answer>
+        <explanation>Drosha processes primary microRNAs in the nucleus during microRNA biogenesis.</explanation>
+    </question>
+</questions>

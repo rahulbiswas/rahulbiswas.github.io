@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do cells regulate energy use during differentiation?</text>
+        <option>Energy use remains constant</option>
+        <option>They modify metabolic programs for specific functions</option>
+        <option>They stop using energy</option>
+        <option>Only glycolysis operates</option>
+        <answer>They modify metabolic programs for specific functions</answer>
+        <explanation>During differentiation, cells adjust their metabolic programs to support specific cellular functions, often involving major changes in energy pathway regulation and substrate utilization.</explanation>
+    </question>
+    <question>
+        <text>What metabolic changes occur during stem cell activation?</text>
+        <option>Metabolism stays the same</option>
+        <option>Energy metabolism shifts to support proliferation</option>
+        <option>All metabolism stops</option>
+        <option>Only lipids are used</option>
+        <answer>Energy metabolism shifts to support proliferation</answer>
+        <explanation>When stem cells activate, their metabolism shifts from a quiescent state to support increased energy demands of proliferation, including enhanced glycolysis and mitochondrial activity.</explanation>
+    </question>
+    <question>
+        <text>How do neurons adapt their energy metabolism?</text>
+        <option>They use only glucose</option>
+        <option>They optimize energy systems for sustained function</option>
+        <option>They don't need energy</option>
+        <option>They use only fatty acids</option>
+        <answer>They optimize energy systems for sustained function</answer>
+        <explanation>Neurons adapt their energy metabolism to maintain continuous ATP supply for synaptic transmission and maintenance, often relying on multiple fuel sources and efficient mitochondrial function.</explanation>
+    </question>
+    <question>
+        <text>What metabolic changes support muscle development?</text>
+        <option>No changes are needed</option>
+        <option>Enhanced energy production and storage systems</option>
+        <option>Reduced metabolism only</option>
+        <option>Random metabolic changes</option>
+        <answer>Enhanced energy production and storage systems</answer>
+        <explanation>Muscle development requires enhanced energy production systems, including increased mitochondrial capacity, improved substrate utilization, and development of energy storage systems.</explanation>
+    </question>
+    <question>
+        <text>How do immune cells modify their metabolism during activation?</text>
+        <option>They maintain constant metabolism</option>
+        <option>They rapidly increase metabolic activity</option>
+        <option>They reduce all metabolism</option>
+        <option>They only use fatty acids</option>
+        <answer>They rapidly increase metabolic activity</answer>
+        <explanation>Activated immune cells dramatically increase their metabolic activity, particularly glycolysis and glutamine metabolism, to support rapid proliferation and effector functions.</explanation>
+    </question>
+</quiz>

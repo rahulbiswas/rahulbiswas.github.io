@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of transaldolase in metabolism?</text>
+        <option>To break down glucose</option>
+        <option>To transfer three-carbon units between sugars</option>
+        <option>To produce ATP</option>
+        <option>To synthesize proteins</option>
+        <answer>To transfer three-carbon units between sugars</answer>
+        <explanation>Transaldolase catalyzes the transfer of a three-carbon unit between sugar phosphates in the non-oxidative phase of the pentose phosphate pathway.</explanation>
+    </question>
+    <question>
+        <text>What is the function of transketolase?</text>
+        <option>To transfer single carbons</option>
+        <option>To transfer two-carbon units between sugars</option>
+        <option>To break down sugars</option>
+        <option>To synthesize glucose</option>
+        <answer>To transfer two-carbon units between sugars</answer>
+        <explanation>Transketolase catalyzes the transfer of two-carbon units between sugar phosphates in the non-oxidative phase of the pentose phosphate pathway.</explanation>
+    </question>
+    <question>
+        <text>Why do red blood cells need the pentose phosphate pathway?</text>
+        <option>For ATP production</option>
+        <option>To generate NADPH for protection against oxidative stress</option>
+        <option>To make proteins</option>
+        <option>To store glucose</option>
+        <answer>To generate NADPH for protection against oxidative stress</answer>
+        <explanation>Red blood cells rely on NADPH from the pentose phosphate pathway to maintain glutathione in its reduced form, protecting against oxidative damage.</explanation>
+    </question>
+    <question>
+        <text>What connects the pentose phosphate pathway to glycolysis?</text>
+        <option>ATP</option>
+        <option>Glucose-6-phosphate</option>
+        <option>Pyruvate</option>
+        <option>NADH</option>
+        <answer>Glucose-6-phosphate</answer>
+        <explanation>Glucose-6-phosphate is the connecting point between glycolysis and the pentose phosphate pathway, serving as the initial substrate for both pathways.</explanation>
+    </question>
+    <question>
+        <text>Which cells have particularly high pentose phosphate pathway activity?</text>
+        <option>Muscle cells</option>
+        <option>Liver and adipose cells</option>
+        <option>Nerve cells</option>
+        <option>Bone cells</option>
+        <answer>Liver and adipose cells</answer>
+        <explanation>Liver and adipose tissues have high pentose phosphate pathway activity because they need NADPH for fatty acid and cholesterol synthesis.</explanation>
+    </question>
+</questions>

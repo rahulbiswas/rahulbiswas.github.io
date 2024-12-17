@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of mitochondrial dynamics?</text>
+        <option>Only energy storage</option>
+        <option>Adapting to cellular energy needs</option>
+        <option>Protein synthesis</option>
+        <option>Glucose transport</option>
+        <answer>Adapting to cellular energy needs</answer>
+        <explanation>Mitochondrial dynamics, including fusion and fission, help cells adapt their energy production capacity to changing metabolic demands.</explanation>
+    </question>
+    <question>
+        <text>How do peroxisomes contribute to metabolism?</text>
+        <option>They only store lipids</option>
+        <option>They perform specialized oxidation reactions</option>
+        <option>They produce glucose</option>
+        <option>They synthesize proteins</option>
+        <answer>They perform specialized oxidation reactions</answer>
+        <explanation>Peroxisomes perform specialized oxidation reactions, including fatty acid oxidation and breakdown of hydrogen peroxide.</explanation>
+    </question>
+    <question>
+        <text>What is metabolic compartmentalization?</text>
+        <option>Random distribution</option>
+        <option>Organization of pathways in specific locations</option>
+        <option>Energy storage</option>
+        <option>Waste removal</option>
+        <answer>Organization of pathways in specific locations</answer>
+        <explanation>Metabolic compartmentalization is the organization of metabolic pathways in specific cellular locations to improve efficiency and regulation.</explanation>
+    </question>
+    <question>
+        <text>How do oxidative stress affect metabolism?</text>
+        <option>It has no effect</option>
+        <option>It disrupts normal metabolic functions</option>
+        <option>It improves metabolism</option>
+        <option>It only affects storage</option>
+        <answer>It disrupts normal metabolic functions</answer>
+        <explanation>Oxidative stress can damage cellular components and disrupt normal metabolic functions, requiring adaptive responses to maintain homeostasis.</explanation>
+    </question>
+    <question>
+        <text>What is the purpose of metabolic cycles?</text>
+        <option>To waste energy</option>
+        <option>To enable reversible reactions and regulation</option>
+        <option>To slow metabolism</option>
+        <option>To store nutrients</option>
+        <answer>To enable reversible reactions and regulation</answer>
+        <explanation>Metabolic cycles enable reversible reactions and provide multiple points for regulation, allowing fine-tuned control of metabolic pathways.</explanation>
+    </question>
+</questions>

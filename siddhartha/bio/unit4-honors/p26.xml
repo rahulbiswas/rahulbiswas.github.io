@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of bile salts?</text>
+        <option>To digest proteins</option>
+        <option>To emulsify fats</option>
+        <option>To absorb vitamins</option>
+        <option>To store energy</option>
+        <answer>To emulsify fats</answer>
+        <explanation>Bile salts emulsify dietary fats into small droplets, increasing their surface area and making them more accessible to lipases for digestion.</explanation>
+    </question>
+    <question>
+        <text>Where are bile salts produced?</text>
+        <option>Stomach</option>
+        <option>Liver</option>
+        <option>Pancreas</option>
+        <option>Small intestine</option>
+        <answer>Liver</answer>
+        <explanation>Bile salts are produced in the liver from cholesterol and stored in the gallbladder before being released into the small intestine.</explanation>
+    </question>
+    <question>
+        <text>What happens to fatty acids in the small intestine?</text>
+        <option>They are converted to glucose</option>
+        <option>They are absorbed into micelles</option>
+        <option>They are excreted</option>
+        <option>They are stored directly</option>
+        <answer>They are absorbed into micelles</answer>
+        <explanation>Fatty acids and other lipids are packaged into micelles in the small intestine, allowing them to be absorbed by intestinal cells.</explanation>
+    </question>
+    <question>
+        <text>What is the role of pancreatic lipase?</text>
+        <option>To produce bile</option>
+        <option>To break down triglycerides</option>
+        <option>To absorb cholesterol</option>
+        <option>To store fats</option>
+        <answer>To break down triglycerides</answer>
+        <explanation>Pancreatic lipase breaks down dietary triglycerides into fatty acids and monoglycerides, making them available for absorption.</explanation>
+    </question>
+    <question>
+        <text>How are dietary lipids transported from intestinal cells?</text>
+        <option>Through the blood directly</option>
+        <option>As chylomicrons via lymph</option>
+        <option>Through active transport</option>
+        <option>By diffusion only</option>
+        <answer>As chylomicrons via lymph</answer>
+        <explanation>Dietary lipids are packaged into chylomicrons in intestinal cells and transported through the lymphatic system before entering the bloodstream.</explanation>
+    </question>
+</questions>

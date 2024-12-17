@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which process requires ATP during protein synthesis?</text>
+        <option>Peptide bond formation</option>
+        <option>tRNA charging with amino acids</option>
+        <option>Stop codon recognition</option>
+        <option>Ribosome assembly</option>
+        <answer>tRNA charging with amino acids</answer>
+        <explanation>Loading amino acids onto tRNA molecules (aminoacylation) requires energy in the form of ATP.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of histone acetylation?</text>
+        <option>Compacts chromatin</option>
+        <option>Loosens chromatin structure</option>
+        <option>Breaks DNA strands</option>
+        <option>Blocks transcription</option>
+        <answer>Loosens chromatin structure</answer>
+        <explanation>Histone acetylation reduces the positive charge on histones, loosening DNA-histone interactions and making genes more accessible.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme joins Okazaki fragments during DNA replication?</text>
+        <option>DNA polymerase</option>
+        <option>DNA ligase</option>
+        <option>Helicase</option>
+        <option>Primase</option>
+        <answer>DNA ligase</answer>
+        <explanation>DNA ligase joins the Okazaki fragments on the lagging strand by forming phosphodiester bonds between them.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of a polyadenylation signal?</text>
+        <option>Start translation</option>
+        <option>Signal RNA cleavage</option>
+        <option>Begin transcription</option>
+        <option>Initiate splicing</option>
+        <answer>Signal RNA cleavage</answer>
+        <explanation>The polyadenylation signal sequence indicates where the pre-mRNA should be cut before adding the poly-A tail.</explanation>
+    </question>
+    
+    <question>
+        <text>Which molecule recognizes the start codon during translation initiation?</text>
+        <option>Release factor</option>
+        <option>Initiator tRNA</option>
+        <option>DNA polymerase</option>
+        <option>RNA primase</option>
+        <answer>Initiator tRNA</answer>
+        <explanation>The initiator tRNA carrying methionine recognizes the AUG start codon to begin protein synthesis.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do exercise adaptations affect mitochondrial function?</text>
+        <option>They reduce mitochondrial numbers</option>
+        <option>They increase mitochondrial density and efficiency</option>
+        <option>They have no effect</option>
+        <option>They damage mitochondria</option>
+        <answer>They increase mitochondrial density and efficiency</answer>
+        <explanation>Regular exercise stimulates mitochondrial biogenesis and improves mitochondrial function, leading to increased energy production capacity and better metabolic efficiency in trained muscles.</explanation>
+    </question>
+    <question>
+        <text>What metabolic changes occur during endurance training?</text>
+        <option>Decreased fat oxidation</option>
+        <option>Enhanced aerobic capacity and substrate utilization</option>
+        <option>Reduced glucose use only</option>
+        <option>No metabolic changes</option>
+        <answer>Enhanced aerobic capacity and substrate utilization</answer>
+        <explanation>Endurance training enhances aerobic capacity, improves fat and carbohydrate utilization efficiency, and increases mitochondrial density to support prolonged exercise performance.</explanation>
+    </question>
+    <question>
+        <text>How does strength training affect energy metabolism?</text>
+        <option>It only affects muscle size</option>
+        <option>It alters both immediate and long-term energy systems</option>
+        <option>It reduces metabolic rate</option>
+        <option>It has no metabolic effects</option>
+        <answer>It alters both immediate and long-term energy systems</answer>
+        <explanation>Strength training modifies both immediate energy systems (ATP-PC) and long-term metabolic adaptations, improving energy storage, utilization, and overall metabolic efficiency.</explanation>
+    </question>
+    <question>
+        <text>What role does metabolic flexibility play in exercise?</text>
+        <option>It isn't important for exercise</option>
+        <option>It allows efficient substrate switching during activity</option>
+        <option>It only affects rest periods</option>
+        <option>It reduces performance</option>
+        <answer>It allows efficient substrate switching during activity</answer>
+        <explanation>Metabolic flexibility enables efficient switching between energy substrates (fats and carbohydrates) based on exercise intensity and duration, optimizing energy availability during activity.</explanation>
+    </question>
+    <question>
+        <text>How do recovery processes affect cellular energetics?</text>
+        <option>They have no effect</option>
+        <option>They restore and enhance energy systems</option>
+        <option>They only affect muscle tissue</option>
+        <option>They reduce energy capacity</option>
+        <answer>They restore and enhance energy systems</answer>
+        <explanation>Recovery processes restore and enhance cellular energy systems through protein synthesis, mitochondrial adaptation, and metabolic pathway optimization, preparing for future exercise demands.</explanation>
+    </question>
+</quiz>
