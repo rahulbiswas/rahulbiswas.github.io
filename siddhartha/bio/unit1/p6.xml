@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of disulfide bridges in protein structure?</text>
+        <option>To form the primary structure</option>
+        <option>To create hydrogen bonds</option>
+        <option>To stabilize tertiary structure</option>
+        <option>To facilitate enzyme activity</option>
+        <answer>To stabilize tertiary structure</answer>
+        <explanation>Disulfide bridges form covalent bonds between cysteine residues, helping stabilize the tertiary structure of proteins.</explanation>
+    </question>
+    <question>
+        <text>Which type of fatty acid has the lowest melting point?</text>
+        <option>Saturated fatty acid</option>
+        <option>Trans unsaturated fatty acid</option>
+        <option>Cis unsaturated fatty acid</option>
+        <option>All have the same melting point</option>
+        <answer>Cis unsaturated fatty acid</answer>
+        <explanation>Cis unsaturated fatty acids have bent structures that prevent tight packing, resulting in lower melting points.</explanation>
+    </question>
+    <question>
+        <text>What determines the specificity of enzyme-substrate binding?</text>
+        <option>Temperature of the solution</option>
+        <option>pH of the environment</option>
+        <option>Complementary shapes and chemical groups</option>
+        <option>Concentration of substrate</option>
+        <answer>Complementary shapes and chemical groups</answer>
+        <explanation>Enzyme specificity results from the complementary shape and chemical properties of the active site and substrate.</explanation>
+    </question>
+    <question>
+        <text>How do competitive inhibitors affect enzyme kinetics?</text>
+        <option>Decrease Vmax only</option>
+        <option>Increase Km only</option>
+        <option>Decrease both Km and Vmax</option>
+        <option>Increase Vmax only</option>
+        <answer>Increase Km only</answer>
+        <explanation>Competitive inhibitors increase Km (more substrate needed for half-maximal velocity) but don't affect Vmax.</explanation>
+    </question>
+    <question>
+        <text>Which structure is NOT stabilized by hydrogen bonds?</text>
+        <option>DNA double helix</option>
+        <option>Protein alpha helix</option>
+        <option>Phospholipid bilayer</option>
+        <option>Water crystal structure</option>
+        <answer>Phospholipid bilayer</answer>
+        <explanation>Phospholipid bilayers are primarily stabilized by hydrophobic interactions between fatty acid tails, not hydrogen bonds.</explanation>
+    </question>
+</questions>

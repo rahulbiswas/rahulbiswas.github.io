@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What effect does increasing temperature have on enzyme activity?</text>
+        <option>Activity always increases</option>
+        <option>Activity increases until optimal temperature, then decreases</option>
+        <option>Activity steadily decreases</option>
+        <option>Temperature has no effect</option>
+        <answer>Activity increases until optimal temperature, then decreases</answer>
+        <explanation>Enzyme activity increases with temperature up to an optimum, after which the enzyme denatures and loses activity.</explanation>
+    </question>
+    <question>
+        <text>How many hydrogen bonds form between guanine and cytosine?</text>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+        <option>Four</option>
+        <answer>Three</answer>
+        <explanation>G-C base pairs form three hydrogen bonds, making them more stable than A-T pairs which form only two bonds.</explanation>
+    </question>
+    <question>
+        <text>What determines the primary structure of a protein?</text>
+        <option>Hydrogen bonds</option>
+        <option>Sequence of amino acids</option>
+        <option>Alpha helix formation</option>
+        <option>Beta sheet arrangement</option>
+        <answer>Sequence of amino acids</answer>
+        <explanation>The primary structure of a protein is determined by the linear sequence of amino acids linked by peptide bonds.</explanation>
+    </question>
+    <question>
+        <text>Which process requires the breaking of hydrogen bonds in DNA?</text>
+        <option>Translation</option>
+        <option>Replication</option>
+        <option>Protein folding</option>
+        <option>Glycolysis</option>
+        <answer>Replication</answer>
+        <explanation>DNA replication requires breaking the hydrogen bonds between base pairs to separate the strands and create new copies.</explanation>
+    </question>
+    <question>
+        <text>What type of interaction causes proteins to denature in high salt concentrations?</text>
+        <option>Covalent bond disruption</option>
+        <option>Hydrogen bond disruption</option>
+        <option>Ionic interaction disruption</option>
+        <option>Peptide bond disruption</option>
+        <answer>Ionic interaction disruption</answer>
+        <explanation>High salt concentrations disrupt ionic interactions in proteins, affecting their tertiary structure and leading to denaturation.</explanation>
+    </question>
+</questions>

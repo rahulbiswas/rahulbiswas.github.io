@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of SNARE proteins in exocytosis?</text>
+        <option>Membrane fusion</option>
+        <option>Protein synthesis</option>
+        <option>ATP production</option>
+        <option>Lipid breakdown</option>
+        <answer>Membrane fusion</answer>
+        <explanation>SNARE proteins facilitate the fusion of secretory vesicles with the plasma membrane during exocytosis.</explanation>
+    </question>
+    <question>
+        <text>Which process releases neurotransmitters?</text>
+        <option>Synaptic vesicle exocytosis</option>
+        <option>Endocytosis</option>
+        <option>Diffusion</option>
+        <option>Active transport</option>
+        <answer>Synaptic vesicle exocytosis</answer>
+        <explanation>Neurotransmitters are released through calcium-triggered exocytosis of synaptic vesicles.</explanation>
+    </question>
+    <question>
+        <text>What triggers regulated secretion?</text>
+        <option>Specific signals</option>
+        <option>Random events</option>
+        <option>Constant flow</option>
+        <option>Passive diffusion</option>
+        <answer>Specific signals</answer>
+        <explanation>Regulated secretion occurs in response to specific cellular signals or stimuli.</explanation>
+    </question>
+    <question>
+        <text>Which process occurs continuously?</text>
+        <option>Constitutive secretion</option>
+        <option>Regulated secretion</option>
+        <option>Bulk transport</option>
+        <option>Active transport</option>
+        <answer>Constitutive secretion</answer>
+        <explanation>Constitutive secretion is a continuous process that occurs without specific triggering signals.</explanation>
+    </question>
+    <question>
+        <text>What role does calcium play in exocytosis?</text>
+        <option>Trigger release</option>
+        <option>Energy source</option>
+        <option>Membrane component</option>
+        <option>Protein synthesis</option>
+        <answer>Trigger release</answer>
+        <explanation>Calcium ions serve as a trigger for vesicle fusion and content release during regulated exocytosis.</explanation>
+    </question>
+</questions>

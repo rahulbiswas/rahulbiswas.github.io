@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of phospholipids in cells?</text>
+        <option>Energy storage</option>
+        <option>Membrane formation</option>
+        <option>Protein synthesis</option>
+        <option>DNA replication</option>
+        <answer>Membrane formation</answer>
+        <explanation>Phospholipids form bilayers that serve as the structural foundation of cell membranes due to their amphipathic nature.</explanation>
+    </question>
+    <question>
+        <text>Which chemical bonds are involved in peptide bond formation?</text>
+        <option>Ionic bonds</option>
+        <option>Hydrogen bonds</option>
+        <option>Covalent bonds</option>
+        <option>Van der Waals forces</option>
+        <answer>Covalent bonds</answer>
+        <explanation>Peptide bonds are covalent bonds formed between the carboxyl group of one amino acid and the amino group of another.</explanation>
+    </question>
+    <question>
+        <text>What type of bond holds complementary DNA base pairs together?</text>
+        <option>Phosphodiester bonds</option>
+        <option>Hydrogen bonds</option>
+        <option>Glycosidic bonds</option>
+        <option>Ionic bonds</option>
+        <answer>Hydrogen bonds</answer>
+        <explanation>Hydrogen bonds between complementary base pairs (A-T and G-C) hold the two DNA strands together in the double helix.</explanation>
+    </question>
+    <question>
+        <text>Which interaction is most important in stabilizing hydrophobic regions of proteins?</text>
+        <option>Hydrogen bonds</option>
+        <option>Ionic bonds</option>
+        <option>Van der Waals forces</option>
+        <option>Covalent bonds</option>
+        <answer>Van der Waals forces</answer>
+        <explanation>Van der Waals forces are the primary interactions that stabilize hydrophobic regions of proteins in their folded state.</explanation>
+    </question>
+    <question>
+        <text>What type of bond links monosaccharides in a polysaccharide?</text>
+        <option>Peptide bond</option>
+        <option>Hydrogen bond</option>
+        <option>Glycosidic bond</option>
+        <option>Ionic bond</option>
+        <answer>Glycosidic bond</answer>
+        <explanation>Glycosidic bonds are the covalent bonds that connect monosaccharides together to form polysaccharides.</explanation>
+    </question>
+</questions>

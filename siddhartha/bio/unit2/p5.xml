@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of glycoproteins in the cell membrane?</text>
+        <option>Cell recognition</option>
+        <option>Energy storage</option>
+        <option>Protein synthesis</option>
+        <option>Waste disposal</option>
+        <answer>Cell recognition</answer>
+        <explanation>Membrane glycoproteins serve as recognition sites for cell-cell interactions and cellular identification.</explanation>
+    </question>
+    <question>
+        <text>Which structure forms the protective outer coating of cells?</text>
+        <option>Glycocalyx</option>
+        <option>Cytoskeleton</option>
+        <option>Nucleolus</option>
+        <option>Peroxisome</option>
+        <answer>Glycocalyx</answer>
+        <explanation>The glycocalyx is a carbohydrate-rich layer on the cell surface that provides protection and recognition functions.</explanation>
+    </question>
+    <question>
+        <text>What type of linkage connects carbohydrates to membrane proteins?</text>
+        <option>N-linked glycosylation</option>
+        <option>Peptide bonds</option>
+        <option>Ionic bonds</option>
+        <option>Hydrogen bonds</option>
+        <answer>N-linked glycosylation</answer>
+        <explanation>N-linked glycosylation is the primary method of attaching carbohydrates to asparagine residues in membrane proteins.</explanation>
+    </question>
+    <question>
+        <text>Which membrane component determines blood type?</text>
+        <option>Surface glycoproteins</option>
+        <option>Phospholipids</option>
+        <option>Cholesterol</option>
+        <option>Ion channels</option>
+        <answer>Surface glycoproteins</answer>
+        <explanation>Blood type antigens are specific glycoproteins on red blood cell membranes that determine blood type.</explanation>
+    </question>
+    <question>
+        <text>What role do membrane carbohydrates play in the immune system?</text>
+        <option>Cell identification</option>
+        <option>Energy production</option>
+        <option>Protein synthesis</option>
+        <option>Water transport</option>
+        <answer>Cell identification</answer>
+        <explanation>Membrane carbohydrates serve as identification markers that help the immune system distinguish self from non-self cells.</explanation>
+    </question>
+</questions>

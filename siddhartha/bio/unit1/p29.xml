@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of cholesterol in membranes?</text>
+        <option>Energy storage</option>
+        <option>Fluidity regulation</option>
+        <option>Protein synthesis</option>
+        <option>Ion transport</option>
+        <answer>Fluidity regulation</answer>
+        <explanation>Cholesterol regulates membrane fluidity by inserting between phospholipids and modulating membrane properties.</explanation>
+    </question>
+    <question>
+        <text>How do proton gradients drive ATP synthesis?</text>
+        <option>Through passive diffusion</option>
+        <option>Through chemiosmosis</option>
+        <option>Through active transport</option>
+        <option>Through osmosis</option>
+        <answer>Through chemiosmosis</answer>
+        <explanation>Proton gradients drive ATP synthesis through chemiosmosis, where proton flow through ATP synthase powers ATP production.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane protein distribution?</text>
+        <option>Random movement only</option>
+        <option>Multiple factors including targeting signals</option>
+        <option>Temperature only</option>
+        <option>pH only</option>
+        <answer>Multiple factors including targeting signals</answer>
+        <explanation>Membrane protein distribution is determined by targeting signals, lipid interactions, and cellular sorting mechanisms.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate membrane composition?</text>
+        <option>They don't regulate it</option>
+        <option>Through controlled synthesis and breakdown</option>
+        <option>Through temperature only</option>
+        <option>Through random processes</option>
+        <answer>Through controlled synthesis and breakdown</answer>
+        <explanation>Cells regulate membrane composition through controlled synthesis and breakdown of membrane components.</explanation>
+    </question>
+    <question>
+        <text>What role do membrane microdomains play?</text>
+        <option>No role</option>
+        <option>Organize membrane proteins and lipids</option>
+        <option>Store energy</option>
+        <option>Transport ions</option>
+        <answer>Organize membrane proteins and lipids</answer>
+        <explanation>Membrane microdomains organize specific proteins and lipids into functional domains for cellular processes.</explanation>
+    </question>
+</questions>

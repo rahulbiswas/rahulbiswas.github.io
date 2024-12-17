@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How does osmotic pressure affect cell membranes?</text>
+        <option>Has no effect</option>
+        <option>Causes membrane expansion or shrinkage</option>
+        <option>Only affects proteins</option>
+        <option>Changes membrane color</option>
+        <answer>Causes membrane expansion or shrinkage</answer>
+        <explanation>Osmotic pressure differences cause cells to swell or shrink as water moves across the membrane to equalize solute concentrations.</explanation>
+    </question>
+    <question>
+        <text>What determines the selective permeability of membranes?</text>
+        <option>Only lipid composition</option>
+        <option>Only protein channels</option>
+        <option>Both lipids and membrane proteins</option>
+        <option>Only temperature</option>
+        <answer>Both lipids and membrane proteins</answer>
+        <explanation>Membrane selective permeability results from both lipid bilayer properties and specific transport proteins.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain ion gradients?</text>
+        <option>Passive diffusion</option>
+        <option>Active transport proteins</option>
+        <option>Random movement</option>
+        <option>Osmosis alone</option>
+        <answer>Active transport proteins</answer>
+        <explanation>Cells use ATP-powered transport proteins like Na+/K+ ATPase to maintain ion gradients across membranes.</explanation>
+    </question>
+    <question>
+        <text>What affects membrane fluidity?</text>
+        <option>Only temperature</option>
+        <option>Only cholesterol</option>
+        <option>Multiple factors including lipid composition</option>
+        <option>Only protein content</option>
+        <answer>Multiple factors including lipid composition</answer>
+        <explanation>Membrane fluidity is affected by temperature, cholesterol content, and the degree of fatty acid saturation.</explanation>
+    </question>
+    <question>
+        <text>How do transport proteins achieve specificity?</text>
+        <option>Random selection</option>
+        <option>Size exclusion only</option>
+        <option>Specific binding sites</option>
+        <option>No specificity exists</option>
+        <answer>Specific binding sites</answer>
+        <explanation>Transport proteins have specific binding sites that recognize particular molecules or ions based on size, shape, and charge.</explanation>
+    </question>
+</questions>

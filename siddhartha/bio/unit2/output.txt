@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of the Golgi apparatus?</text>
+        <option>Protein modification and sorting</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Lipid breakdown</option>
+        <answer>Protein modification and sorting</answer>
+        <explanation>The Golgi apparatus modifies, sorts, and packages proteins for delivery to their final destinations.</explanation>
+    </question>
+    <question>
+        <text>Which side of the Golgi receives vesicles from the ER?</text>
+        <option>Cis face</option>
+        <option>Trans face</option>
+        <option>Medial region</option>
+        <option>Peripheral edge</option>
+        <answer>Cis face</answer>
+        <explanation>The cis face of the Golgi receives transport vesicles containing proteins from the ER.</explanation>
+    </question>
+    <question>
+        <text>What type of modification occurs in the Golgi?</text>
+        <option>Glycosylation</option>
+        <option>Translation</option>
+        <option>Transcription</option>
+        <option>DNA replication</option>
+        <answer>Glycosylation</answer>
+        <explanation>The Golgi apparatus adds and modifies carbohydrate groups on proteins through glycosylation.</explanation>
+    </question>
+    <question>
+        <text>How are proteins sorted in the trans-Golgi network?</text>
+        <option>Signal sequences</option>
+        <option>Size exclusion</option>
+        <option>Random distribution</option>
+        <option>Charge separation</option>
+        <answer>Signal sequences</answer>
+        <explanation>Specific signal sequences on proteins determine their sorting and destination in the trans-Golgi network.</explanation>
+    </question>
+    <question>
+        <text>What maintains Golgi structure?</text>
+        <option>Matrix proteins</option>
+        <option>Membrane lipids</option>
+        <option>Cytoskeleton</option>
+        <option>Chemical bonds</option>
+        <answer>Matrix proteins</answer>
+        <explanation>Golgi matrix proteins help maintain the characteristic stacked structure of Golgi cisternae.</explanation>
+    </question>
+</questions>

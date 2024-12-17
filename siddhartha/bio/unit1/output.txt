@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How do cells repair double-strand breaks?</text>
+        <option>They don't repair them</option>
+        <option>Through multiple repair pathways</option>
+        <option>Only during division</option>
+        <option>Random repair</option>
+        <answer>Through multiple repair pathways</answer>
+        <explanation>Cells repair double-strand breaks through homologous recombination and non-homologous end joining pathways.</explanation>
+    </question>
+    <question>
+        <text>What role do cohesin proteins play?</text>
+        <option>Break down DNA</option>
+        <option>Hold sister chromatids together</option>
+        <option>Synthesize proteins</option>
+        <option>Transport molecules</option>
+        <answer>Hold sister chromatids together</answer>
+        <explanation>Cohesin proteins hold sister chromatids together until cell division and help organize chromosome structure.</explanation>
+    </question>
+    <question>
+        <text>How is DNA methylation maintained?</text>
+        <option>It isn't maintained</option>
+        <option>Through specific methyltransferases</option>
+        <option>Random processes</option>
+        <option>Only during replication</option>
+        <answer>Through specific methyltransferases</answer>
+        <explanation>DNA methylation patterns are maintained by specific methyltransferases during DNA replication and repair.</explanation>
+    </question>
+    <question>
+        <text>What determines chromosome territories?</text>
+        <option>Random organization</option>
+        <option>Specific nuclear organization</option>
+        <option>Only cell size</option>
+        <option>Only protein content</option>
+        <answer>Specific nuclear organization</answer>
+        <explanation>Chromosome territories are determined by specific nuclear organization patterns and regulatory mechanisms.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate histone modifications?</text>
+        <option>They don't regulate them</option>
+        <option>Through enzymes and regulatory proteins</option>
+        <option>Only during division</option>
+        <option>Random processes</option>
+        <answer>Through enzymes and regulatory proteins</answer>
+        <explanation>Cells regulate histone modifications through specific enzymes and regulatory proteins that add or remove modifications.</explanation>
+    </question>
+</questions>

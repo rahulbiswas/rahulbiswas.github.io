@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of thylakoids in chloroplasts?</text>
+        <option>Light absorption</option>
+        <option>Protein synthesis</option>
+        <option>Lipid storage</option>
+        <option>Waste disposal</option>
+        <answer>Light absorption</answer>
+        <explanation>Thylakoid membranes contain chlorophyll and other pigments for light absorption during photosynthesis.</explanation>
+    </question>
+    <question>
+        <text>Where does the Calvin cycle occur?</text>
+        <option>Stroma</option>
+        <option>Thylakoid space</option>
+        <option>Outer membrane</option>
+        <option>Inner membrane</option>
+        <answer>Stroma</answer>
+        <explanation>The Calvin cycle takes place in the stroma, the fluid-filled space outside the thylakoids.</explanation>
+    </question>
+    <question>
+        <text>What molecules are produced in the light reactions?</text>
+        <option>ATP and NADPH</option>
+        <option>Glucose and oxygen</option>
+        <option>Carbon dioxide and water</option>
+        <option>Amino acids and lipids</option>
+        <answer>ATP and NADPH</answer>
+        <explanation>Light reactions produce ATP and NADPH, which power the Calvin cycle reactions.</explanation>
+    </question>
+    <question>
+        <text>What structure forms stacks in chloroplasts?</text>
+        <option>Grana</option>
+        <option>Stroma</option>
+        <option>Matrix</option>
+        <option>Cristae</option>
+        <answer>Grana</answer>
+        <explanation>Grana are stacks of thylakoid membranes in chloroplasts that increase surface area for light absorption.</explanation>
+    </question>
+    <question>
+        <text>Which process releases oxygen in photosynthesis?</text>
+        <option>Water splitting</option>
+        <option>Carbon fixation</option>
+        <option>Glucose synthesis</option>
+        <option>Electron transport</option>
+        <answer>Water splitting</answer>
+        <explanation>Oxygen is released when water molecules are split during the light-dependent reactions of photosynthesis.</explanation>
+    </question>
+</questions>

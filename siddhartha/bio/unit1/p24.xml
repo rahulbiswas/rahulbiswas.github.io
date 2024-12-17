@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of water in protein-ligand binding?</text>
+        <option>No role</option>
+        <option>Only structural support</option>
+        <option>Mediates interactions and solvation</option>
+        <option>Blocks binding</option>
+        <answer>Mediates interactions and solvation</answer>
+        <explanation>Water molecules mediate protein-ligand interactions and influence binding through solvation effects and hydrogen bonding networks.</explanation>
+    </question>
+    <question>
+        <text>How do membrane proteins respond to hydrophobic mismatch?</text>
+        <option>They denature</option>
+        <option>They adapt their structure</option>
+        <option>They leave the membrane</option>
+        <option>They remain unchanged</option>
+        <answer>They adapt their structure</answer>
+        <explanation>Membrane proteins can adapt their structure to match membrane thickness through tilting or local deformation.</explanation>
+    </question>
+    <question>
+        <text>What determines the strength of molecular interactions?</text>
+        <option>Size only</option>
+        <option>Temperature only</option>
+        <option>Multiple physical and chemical factors</option>
+        <option>pH only</option>
+        <answer>Multiple physical and chemical factors</answer>
+        <explanation>The strength of molecular interactions depends on distance, orientation, chemical properties, and environmental conditions.</explanation>
+    </question>
+    <question>
+        <text>How do molecular chaperones recognize misfolded proteins?</text>
+        <option>By sequence only</option>
+        <option>By exposed hydrophobic regions</option>
+        <option>By charge only</option>
+        <option>By size only</option>
+        <answer>By exposed hydrophobic regions</answer>
+        <explanation>Molecular chaperones recognize misfolded proteins primarily through exposed hydrophobic regions that are normally buried.</explanation>
+    </question>
+    <question>
+        <text>What role do salt bridges play in protein stability?</text>
+        <option>No role</option>
+        <option>Only structural</option>
+        <option>Stabilize specific conformations</option>
+        <option>Destabilize structure</option>
+        <answer>Stabilize specific conformations</answer>
+        <explanation>Salt bridges form between oppositely charged amino acids and help stabilize specific protein conformations.</explanation>
+    </question>
+</questions>

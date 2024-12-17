@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What distinguishes monosaccharides from other carbohydrates?</text>
+        <option>They contain phosphate groups</option>
+        <option>They cannot be broken down into simpler sugars</option>
+        <option>They only exist in linear form</option>
+        <option>They are polymers</option>
+        <answer>They cannot be broken down into simpler sugars</answer>
+        <explanation>Monosaccharides are the simplest carbohydrates and cannot be hydrolyzed into smaller sugar units.</explanation>
+    </question>
+    <question>
+        <text>Which bond connects glucose molecules in cellulose?</text>
+        <option>α-1,4 glycosidic bond</option>
+        <option>β-1,4 glycosidic bond</option>
+        <option>Peptide bond</option>
+        <option>Hydrogen bond</option>
+        <answer>β-1,4 glycosidic bond</answer>
+        <explanation>Cellulose consists of glucose molecules connected by β-1,4 glycosidic bonds, creating its characteristic linear structure.</explanation>
+    </question>
+    <question>
+        <text>What is the main storage form of glucose in animal cells?</text>
+        <option>Cellulose</option>
+        <option>Glycogen</option>
+        <option>Starch</option>
+        <option>Chitin</option>
+        <answer>Glycogen</answer>
+        <explanation>Glycogen is the primary storage form of glucose in animal cells, particularly in liver and muscle tissue.</explanation>
+    </question>
+    <question>
+        <text>Which process converts glucose to glucose-6-phosphate?</text>
+        <option>Phosphorylation</option>
+        <option>Hydrolysis</option>
+        <option>Oxidation</option>
+        <option>Reduction</option>
+        <answer>Phosphorylation</answer>
+        <explanation>The addition of a phosphate group to glucose, catalyzed by hexokinase or glucokinase, produces glucose-6-phosphate.</explanation>
+    </question>
+    <question>
+        <text>What determines if a sugar is a reducing sugar?</text>
+        <option>Its molecular weight</option>
+        <option>Its solubility in water</option>
+        <option>The presence of a free aldehyde or ketone group</option>
+        <option>Its ability to form polymers</option>
+        <answer>The presence of a free aldehyde or ketone group</answer>
+        <explanation>Reducing sugars have a free aldehyde or ketone group that can reduce other compounds, particularly in Benedict's test.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What happens to membrane fluidity when cholesterol content increases?</text>
+        <option>Always increases</option>
+        <option>Always decreases</option>
+        <option>Becomes more moderate</option>
+        <option>Remains unchanged</option>
+        <answer>Becomes more moderate</answer>
+        <explanation>Cholesterol moderates membrane fluidity by preventing fatty acid crystallization at low temperatures and reducing excessive fluidity at high temperatures.</explanation>
+    </question>
+    <question>
+        <text>Which type of bond requires the most energy to break?</text>
+        <option>Hydrogen bond</option>
+        <option>Van der Waals force</option>
+        <option>Covalent bond</option>
+        <option>Ionic bond</option>
+        <answer>Covalent bond</answer>
+        <explanation>Covalent bonds involve shared electrons and require the most energy to break compared to other types of chemical bonds.</explanation>
+    </question>
+    <question>
+        <text>What is the main function of carrier proteins in membranes?</text>
+        <option>Structural support</option>
+        <option>Selective transport</option>
+        <option>Energy production</option>
+        <option>Signal reception</option>
+        <answer>Selective transport</answer>
+        <explanation>Carrier proteins facilitate selective transport of specific molecules across biological membranes.</explanation>
+    </question>
+    <question>
+        <text>Which factor does NOT affect protein stability?</text>
+        <option>Temperature</option>
+        <option>pH</option>
+        <option>Molecular weight</option>
+        <option>Salt concentration</option>
+        <answer>Molecular weight</answer>
+        <explanation>Molecular weight alone does not determine protein stability, while temperature, pH, and salt concentration directly affect protein structure.</explanation>
+    </question>
+    <question>
+        <text>What is the primary role of ATP synthase?</text>
+        <option>Break down glucose</option>
+        <option>Synthesize proteins</option>
+        <option>Produce ATP</option>
+        <option>Transport ions</option>
+        <answer>Produce ATP</answer>
+        <explanation>ATP synthase uses the energy from proton gradients to synthesize ATP from ADP and inorganic phosphate.</explanation>
+    </question>
+</questions>

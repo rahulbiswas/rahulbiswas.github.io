@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How do enhancers regulate gene expression?</text>
+        <option>Block transcription</option>
+        <option>Increase specific gene expression</option>
+        <option>Break down DNA</option>
+        <option>Transport proteins</option>
+        <answer>Increase specific gene expression</answer>
+        <explanation>Enhancers are DNA sequences that increase gene expression by binding specific regulatory proteins.</explanation>
+    </question>
+    <question>
+        <text>What role does DNA methylation play?</text>
+        <option>Increase gene expression</option>
+        <option>Usually represses gene expression</option>
+        <option>Repair DNA damage</option>
+        <option>Transport DNA</option>
+        <answer>Usually represses gene expression</answer>
+        <explanation>DNA methylation typically leads to gene silencing and plays a role in epigenetic regulation.</explanation>
+    </question>
+    <question>
+        <text>How do cells package DNA into chromosomes?</text>
+        <option>Random arrangement</option>
+        <option>Hierarchical organization</option>
+        <option>No organization</option>
+        <option>Only through proteins</option>
+        <answer>Hierarchical organization</answer>
+        <explanation>DNA is packaged into chromosomes through hierarchical levels of organization, from nucleosomes to higher-order structures.</explanation>
+    </question>
+    <question>
+        <text>What determines the stability of RNA structures?</text>
+        <option>Only temperature</option>
+        <option>Multiple factors including base pairing</option>
+        <option>Only pH</option>
+        <option>Random factors</option>
+        <answer>Multiple factors including base pairing</answer>
+        <explanation>RNA structure stability is determined by base pairing, sequence composition, and environmental conditions.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate DNA repair?</text>
+        <option>They don't regulate it</option>
+        <option>Through multiple checkpoints</option>
+        <option>Only during division</option>
+        <option>Random repair</option>
+        <answer>Through multiple checkpoints</answer>
+        <explanation>Cells regulate DNA repair through multiple checkpoints and signaling pathways to maintain genome integrity.</explanation>
+    </question>
+</questions>

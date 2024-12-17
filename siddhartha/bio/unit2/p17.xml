@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of cristae in mitochondria?</text>
+        <option>Increase surface area</option>
+        <option>Store calcium</option>
+        <option>Synthesize proteins</option>
+        <option>Transport molecules</option>
+        <answer>Increase surface area</answer>
+        <explanation>Cristae increase the surface area of the inner mitochondrial membrane for enhanced ATP production.</explanation>
+    </question>
+    <question>
+        <text>Where does the electron transport chain occur?</text>
+        <option>Inner membrane</option>
+        <option>Outer membrane</option>
+        <option>Matrix</option>
+        <option>Intermembrane space</option>
+        <answer>Inner membrane</answer>
+        <explanation>The electron transport chain is located in the inner mitochondrial membrane.</explanation>
+    </question>
+    <question>
+        <text>What process occurs in the mitochondrial matrix?</text>
+        <option>Citric acid cycle</option>
+        <option>Glycolysis</option>
+        <option>Photosynthesis</option>
+        <option>Protein export</option>
+        <answer>Citric acid cycle</answer>
+        <explanation>The citric acid cycle (Krebs cycle) occurs in the mitochondrial matrix.</explanation>
+    </question>
+    <question>
+        <text>How are mitochondrial proteins imported?</text>
+        <option>Through translocator complexes</option>
+        <option>By simple diffusion</option>
+        <option>Through channels</option>
+        <option>By endocytosis</option>
+        <answer>Through translocator complexes</answer>
+        <explanation>Specific translocator complexes import proteins into mitochondria using targeting sequences.</explanation>
+    </question>
+    <question>
+        <text>What is unique about mitochondrial DNA?</text>
+        <option>Maternal inheritance</option>
+        <option>Nuclear location</option>
+        <option>Linear structure</option>
+        <option>Protein coating</option>
+        <answer>Maternal inheritance</answer>
+        <explanation>Mitochondrial DNA is inherited only from the mother through the egg cell.</explanation>
+    </question>
+</questions>
