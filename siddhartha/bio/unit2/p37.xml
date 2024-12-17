@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of the cytoskeleton?</text>
+        <option>Cell organization</option>
+        <option>Energy production</option>
+        <option>Protein synthesis</option>
+        <option>Waste removal</option>
+        <answer>Cell organization</answer>
+        <explanation>The cytoskeleton organizes cellular contents and provides structural support.</explanation>
+    </question>
+    <question>
+        <text>Which cytoskeletal element is most dynamic?</text>
+        <option>Microtubules</option>
+        <option>Intermediate filaments</option>
+        <option>Stress fibers</option>
+        <option>Focal adhesions</option>
+        <answer>Microtubules</answer>
+        <explanation>Microtubules undergo rapid assembly and disassembly through dynamic instability.</explanation>
+    </question>
+    <question>
+        <text>What connects the cytoskeleton to ECM?</text>
+        <option>Focal adhesions</option>
+        <option>Gap junctions</option>
+        <option>Tight junctions</option>
+        <option>Desmosomes</option>
+        <answer>Focal adhesions</answer>
+        <explanation>Focal adhesions link the actin cytoskeleton to the extracellular matrix through integrin proteins.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain shape?</text>
+        <option>Multiple cytoskeletal elements</option>
+        <option>Membrane proteins only</option>
+        <option>Lipids only</option>
+        <option>External pressure</option>
+        <answer>Multiple cytoskeletal elements</answer>
+        <explanation>Different cytoskeletal elements work together to maintain cell shape and structure.</explanation>
+    </question>
+    <question>
+        <text>What role do crosslinking proteins play?</text>
+        <option>Connect filaments</option>
+        <option>Break down proteins</option>
+        <option>Generate energy</option>
+        <option>Transport ions</option>
+        <answer>Connect filaments</answer>
+        <explanation>Crosslinking proteins connect cytoskeletal filaments to form networks and bundles.</explanation>
+    </question>
+</questions>

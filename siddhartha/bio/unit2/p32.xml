@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of matrix metalloproteinases?</text>
+        <option>ECM degradation</option>
+        <option>ECM synthesis</option>
+        <option>Protein transport</option>
+        <option>Energy production</option>
+        <answer>ECM degradation</answer>
+        <explanation>Matrix metalloproteinases (MMPs) break down ECM components during tissue remodeling.</explanation>
+    </question>
+    <question>
+        <text>How do growth factors interact with ECM?</text>
+        <option>Bind and store</option>
+        <option>Break down</option>
+        <option>Synthesize</option>
+        <option>Transport</option>
+        <answer>Bind and store</answer>
+        <explanation>The ECM can bind and store growth factors, releasing them when needed for signaling.</explanation>
+    </question>
+    <question>
+        <text>What role does fibronectin play?</text>
+        <option>Cell adhesion</option>
+        <option>Matrix destruction</option>
+        <option>Energy storage</option>
+        <option>Waste removal</option>
+        <answer>Cell adhesion</answer>
+        <explanation>Fibronectin connects cells to the ECM through specific binding domains.</explanation>
+    </question>
+    <question>
+        <text>Which process involves ECM remodeling?</text>
+        <option>Wound healing</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Ion transport</option>
+        <answer>Wound healing</answer>
+        <explanation>Wound healing requires extensive ECM remodeling to repair damaged tissue.</explanation>
+    </question>
+    <question>
+        <text>What characterizes basal lamina structure?</text>
+        <option>Sheet-like network</option>
+        <option>Loose fibers</option>
+        <option>Random arrangement</option>
+        <option>Cellular composition</option>
+        <answer>Sheet-like network</answer>
+        <explanation>The basal lamina forms a thin, sheet-like network beneath epithelial tissues.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of caveolae?</text>
+        <option>Endocytosis</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Waste storage</option>
+        <answer>Endocytosis</answer>
+        <explanation>Caveolae are membrane invaginations that participate in endocytosis and cell signaling.</explanation>
+    </question>
+    <question>
+        <text>Which protein is essential for caveolae formation?</text>
+        <option>Caveolin</option>
+        <option>Clathrin</option>
+        <option>Dynamin</option>
+        <option>Actin</option>
+        <answer>Caveolin</answer>
+        <explanation>Caveolin proteins are required for the formation and stability of caveolae structures.</explanation>
+    </question>
+    <question>
+        <text>What characterizes lipid rafts?</text>
+        <option>Ordered domains</option>
+        <option>Random structure</option>
+        <option>Uniform composition</option>
+        <option>Static arrangement</option>
+        <answer>Ordered domains</answer>
+        <explanation>Lipid rafts are ordered membrane domains enriched in specific lipids and proteins.</explanation>
+    </question>
+    <question>
+        <text>How do rafts affect protein function?</text>
+        <option>Concentrate signaling molecules</option>
+        <option>Block protein activity</option>
+        <option>Prevent interactions</option>
+        <option>Inhibit movement</option>
+        <answer>Concentrate signaling molecules</answer>
+        <explanation>Lipid rafts concentrate signaling molecules to facilitate cellular responses.</explanation>
+    </question>
+    <question>
+        <text>What disrupts lipid rafts?</text>
+        <option>Cholesterol depletion</option>
+        <option>Protein addition</option>
+        <option>Temperature decrease</option>
+        <option>pH changes</option>
+        <answer>Cholesterol depletion</answer>
+        <explanation>Removing cholesterol disrupts lipid raft structure and function.</explanation>
+    </question>
+</questions>

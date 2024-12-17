@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of vesicle trafficking?</text>
+        <option>Material transport</option>
+        <option>Energy production</option>
+        <option>DNA replication</option>
+        <option>Protein synthesis</option>
+        <answer>Material transport</answer>
+        <explanation>Vesicle trafficking moves materials between cellular compartments in membrane-bound containers.</explanation>
+    </question>
+    <question>
+        <text>Which protein coats form transport vesicles?</text>
+        <option>Clathrin and COPI</option>
+        <option>Actin and myosin</option>
+        <option>Tubulin and kinesin</option>
+        <option>Keratin and vimentin</option>
+        <answer>Clathrin and COPI</answer>
+        <explanation>Clathrin and COPI proteins form coats around vesicles during their formation.</explanation>
+    </question>
+    <question>
+        <text>What ensures vesicle targeting specificity?</text>
+        <option>SNARE proteins</option>
+        <option>Lipid composition</option>
+        <option>Vesicle size</option>
+        <option>Membrane fluidity</option>
+        <answer>SNARE proteins</answer>
+        <explanation>SNARE proteins ensure vesicles fuse with the correct target membrane.</explanation>
+    </question>
+    <question>
+        <text>How do vesicles move through cytoplasm?</text>
+        <option>Motor proteins</option>
+        <option>Diffusion</option>
+        <option>Osmosis</option>
+        <option>Membrane flow</option>
+        <answer>Motor proteins</answer>
+        <explanation>Motor proteins transport vesicles along cytoskeletal tracks through the cytoplasm.</explanation>
+    </question>
+    <question>
+        <text>What role does Rab GTPase play?</text>
+        <option>Vesicle targeting</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Waste disposal</option>
+        <answer>Vesicle targeting</answer>
+        <explanation>Rab GTPases help regulate vesicle targeting and fusion with specific membranes.</explanation>
+    </question>
+</questions>

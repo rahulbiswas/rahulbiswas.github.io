@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is unique about the plasma membrane of archaea?</text>
+        <option>Ether-linked lipids</option>
+        <option>Peptidoglycan wall</option>
+        <option>Cellulose structure</option>
+        <option>Protein coating</option>
+        <answer>Ether-linked lipids</answer>
+        <explanation>Archaeal membranes contain unique ether-linked lipids instead of the ester-linked lipids found in bacteria and eukaryotes.</explanation>
+    </question>
+    <question>
+        <text>How do extremophiles protect their membranes?</text>
+        <option>Modified lipid composition</option>
+        <option>Thick cell walls</option>
+        <option>Protein shields</option>
+        <option>Water barriers</option>
+        <answer>Modified lipid composition</answer>
+        <explanation>Extremophiles modify their membrane lipid composition to maintain stability in extreme conditions.</explanation>
+    </question>
+    <question>
+        <text>What structure helps archaea survive high temperatures?</text>
+        <option>Monolayer membrane</option>
+        <option>Thick cell wall</option>
+        <option>Protein coat</option>
+        <option>Capsule</option>
+        <answer>Monolayer membrane</answer>
+        <explanation>Some archaea have specialized monolayer membranes that remain stable at high temperatures.</explanation>
+    </question>
+    <question>
+        <text>Which feature is common to both bacteria and archaea?</text>
+        <option>Circular DNA</option>
+        <option>Peptidoglycan wall</option>
+        <option>Membrane lipids</option>
+        <option>Cell size</option>
+        <answer>Circular DNA</answer>
+        <explanation>Both bacteria and archaea have circular DNA in a nucleoid region without a nuclear membrane.</explanation>
+    </question>
+    <question>
+        <text>What distinguishes archaeal cell walls?</text>
+        <option>No peptidoglycan</option>
+        <option>Thick peptidoglycan</option>
+        <option>Cellulose structure</option>
+        <option>Chitin composition</option>
+        <answer>No peptidoglycan</answer>
+        <explanation>Archaeal cell walls lack peptidoglycan and are composed of different materials like pseudomurein or S-layers.</explanation>
+    </question>
+</questions>
