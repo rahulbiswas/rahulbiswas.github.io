@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was the Magna Carta?</prompt>
+        <options>
+            <option letter="a">A colonial trade agreement</option>
+            <option letter="b">A document limiting royal power</option>
+            <option letter="c">A religious declaration</option>
+            <option letter="d">A map of the colonies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Magna Carta (1215) was a document that limited royal power and established the principle that everyone, including the king, was subject to the law.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did the Magna Carta influence colonial government?</prompt>
+        <options>
+            <option letter="a">It established the right to representative government</option>
+            <option letter="b">It created the position of colonial governor</option>
+            <option letter="c">It granted independence to the colonies</option>
+            <option letter="d">It established trade regulations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Magna Carta's principles of representative government and rule of law influenced colonial governmental structures.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>Which right from the Magna Carta was most important to colonists?</prompt>
+        <options>
+            <option letter="a">Right to bear arms</option>
+            <option letter="b">Trial by jury</option>
+            <option letter="c">Freedom of religion</option>
+            <option letter="d">Right to vote</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The right to trial by jury was one of the most important Magna Carta principles that colonists brought to America.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What principle of the Magna Carta appears in the U.S. Constitution?</prompt>
+        <options>
+            <option letter="a">Due process of law</option>
+            <option letter="b">State religion</option>
+            <option letter="c">Absolute monarchy</option>
+            <option letter="d">Noble privileges</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The principle of due process of law from the Magna Carta was incorporated into the U.S. Constitution and Bill of Rights.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What was a key legacy of the Magna Carta in colonial America?</prompt>
+        <options>
+            <option letter="a">The idea of divine right of kings</option>
+            <option letter="b">The concept of no taxation without representation</option>
+            <option letter="c">The establishment of slavery</option>
+            <option letter="d">The creation of political parties</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Magna Carta's principle that taxation required consent influenced the colonial belief in "no taxation without representation."</explanation>
+    </question>
+</quiz>

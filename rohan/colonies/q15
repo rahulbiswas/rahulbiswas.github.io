@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What role did colonists play in mercantilism?</prompt>
+        <options>
+            <option letter="a">They were independent traders</option>
+            <option letter="b">They provided raw materials and markets</option>
+            <option letter="c">They competed with European markets</option>
+            <option letter="d">They created their own economic system</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonists were essential to mercantilism by providing raw materials to the mother country and serving as a market for manufactured goods.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did colonists contribute to the mercantile system?</prompt>
+        <options>
+            <option letter="a">By trading freely with all nations</option>
+            <option letter="b">By following trade restrictions</option>
+            <option letter="c">By developing manufacturing</option>
+            <option letter="d">By avoiding commerce</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonists contributed to mercantilism by following trade restrictions that directed colonial commerce through the mother country.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What crops did colonists grow to support mercantilism?</prompt>
+        <options>
+            <option letter="a">Only food for local consumption</option>
+            <option letter="b">Cash crops like tobacco and cotton</option>
+            <option letter="c">Only manufactured goods</option>
+            <option letter="d">Whatever they chose</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonists grew cash crops like tobacco, cotton, and sugar that were in demand in Europe, supporting the mercantile system.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>How did mercantilism restrict colonial manufacturing?</prompt>
+        <options>
+            <option letter="a">It didn't restrict manufacturing</option>
+            <option letter="b">It prohibited advanced manufacturing</option>
+            <option letter="c">It encouraged all manufacturing</option>
+            <option letter="d">It only allowed military production</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Mercantilism restricted colonial manufacturing of finished goods to prevent competition with the mother country's industries.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What colonial products were most valuable to mercantilism?</prompt>
+        <options>
+            <option letter="a">Manufactured goods</option>
+            <option letter="b">Raw materials and agricultural products</option>
+            <option letter="c">Military supplies</option>
+            <option letter="d">Finished textiles</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Raw materials and agricultural products from the colonies were most valuable to the mercantile system as they supplied European industries.</explanation>
+    </question>
+</quiz>

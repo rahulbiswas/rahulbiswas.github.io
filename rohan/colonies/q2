@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was the House of Burgesses?</prompt>
+        <options>
+            <option letter="a">A colonial governor's mansion</option>
+            <option letter="b">The first representative assembly in colonial America</option>
+            <option letter="c">A British parliament building</option>
+            <option letter="d">A colonial trading post</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The House of Burgesses, established in 1619, was the first elected representative assembly in colonial America.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Who could vote for members of the House of Burgesses?</prompt>
+        <options>
+            <option letter="a">All colonial residents</option>
+            <option letter="b">Property-owning white males</option>
+            <option letter="c">Only British citizens</option>
+            <option letter="d">Women and men equally</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Only free, property-owning white males could vote for representatives in the House of Burgesses.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What was a primary function of the House of Burgesses?</prompt>
+        <options>
+            <option letter="a">Military leadership</option>
+            <option letter="b">Religious governance</option>
+            <option letter="c">Passing local laws and taxes</option>
+            <option letter="d">International trade</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The House of Burgesses passed local laws and levied taxes for the colony of Virginia.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>Where did the House of Burgesses meet?</prompt>
+        <options>
+            <option letter="a">Boston</option>
+            <option letter="b">Philadelphia</option>
+            <option letter="c">Jamestown</option>
+            <option letter="d">New York</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The House of Burgesses initially met in Jamestown, Virginia's first capital, before later moving to Williamsburg.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>How did the House of Burgesses end?</prompt>
+        <options>
+            <option letter="a">It was dissolved by Lord Dunmore in 1776</option>
+            <option letter="b">It voted to disband itself</option>
+            <option letter="c">It merged with Parliament</option>
+            <option letter="d">It continues to exist today</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Virginia's last royal governor, Lord Dunmore, dissolved the House of Burgesses in 1776 during the American Revolution.</explanation>
+    </question>
+</quiz>

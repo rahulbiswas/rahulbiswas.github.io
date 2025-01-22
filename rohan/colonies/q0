@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was mercantilism's main goal?</prompt>
+        <options>
+            <option letter="a">Maximize exports and minimize imports</option>
+            <option letter="b">Promote free trade between nations</option>
+            <option letter="c">Develop international cooperation</option>
+            <option letter="d">Support colonial independence</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mercantilism aimed to create wealth through a favorable balance of trade by maximizing exports and minimizing imports.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did colonies fit into the mercantilist system?</prompt>
+        <options>
+            <option letter="a">They were independent trading partners</option>
+            <option letter="b">They provided raw materials and bought finished goods</option>
+            <option letter="c">They competed with the mother country</option>
+            <option letter="d">They traded freely with other nations</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Under mercantilism, colonies provided raw materials to the mother country and served as markets for manufactured goods.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What role did gold and silver play in mercantilism?</prompt>
+        <options>
+            <option letter="a">They were used only for jewelry</option>
+            <option letter="b">They measured national wealth</option>
+            <option letter="c">They were considered worthless</option>
+            <option letter="d">They were only used in religious ceremonies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In mercantilism, a nation's wealth was measured by its supply of gold and silver (bullion).</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>Which best describes mercantilist trade restrictions?</prompt>
+        <options>
+            <option letter="a">Colonies could only trade with the mother country</option>
+            <option letter="b">Colonies had complete trading freedom</option>
+            <option letter="c">Trade was banned entirely</option>
+            <option letter="d">Only luxury goods were restricted</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mercantilist policies required colonies to trade exclusively with their mother country through strict Navigation Acts.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>How did mercantilism affect colonial manufacturing?</prompt>
+        <options>
+            <option letter="a">It encouraged unlimited manufacturing</option>
+            <option letter="b">It restricted colonial manufacturing</option>
+            <option letter="c">It had no effect on manufacturing</option>
+            <option letter="d">It focused on luxury goods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Mercantilism restricted colonial manufacturing to prevent competition with the mother country's industries.</explanation>
+    </question>
+</quiz>

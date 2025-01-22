@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What role did trading companies play in colonization?</prompt>
+        <options>
+            <option letter="a">Military defense only</option>
+            <option letter="b">Establishing and managing colonies</option>
+            <option letter="c">Religious conversion</option>
+            <option letter="d">Scientific research</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Trading companies were crucial in establishing and managing early colonies, combining private enterprise with colonial governance.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did trading companies fund colonial ventures?</prompt>
+        <options>
+            <option letter="a">Government grants only</option>
+            <option letter="b">Selling shares to investors</option>
+            <option letter="c">Religious donations</option>
+            <option letter="d">Personal wealth only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Trading companies funded colonial ventures by selling shares to investors through the joint-stock company model.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What distinguished successful trading companies?</prompt>
+        <options>
+            <option letter="a">Military strength only</option>
+            <option letter="b">Effective management and trade</option>
+            <option letter="c">Religious affiliation</option>
+            <option letter="d">Government ownership</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Successful trading companies combined effective management of colonial settlements with profitable trade operations.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What happened to most trading companies over time?</prompt>
+        <options>
+            <option letter="a">They became modern corporations</option>
+            <option letter="b">They were dissolved or nationalized</option>
+            <option letter="c">They still operate today</option>
+            <option letter="d">They became banks</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Most colonial trading companies were eventually dissolved or converted into government-controlled entities.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What power did trading companies typically have?</prompt>
+        <options>
+            <option letter="a">Religious authority only</option>
+            <option letter="b">Broad governmental powers</option>
+            <option letter="c">Military control only</option>
+            <option letter="d">No real authority</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Trading companies typically held broad governmental powers, including the authority to make laws, establish courts, and manage trade.</explanation>
+    </question>
+</quiz>

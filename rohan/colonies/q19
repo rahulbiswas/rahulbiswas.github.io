@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was unique about the Jamestown colony?</prompt>
+        <options>
+            <option letter="a">It was the first successful English settlement</option>
+            <option letter="b">It was established by Puritans</option>
+            <option letter="c">It was a Spanish colony</option>
+            <option letter="d">It was founded by French explorers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Jamestown, established in 1607, was the first permanent English settlement in North America.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Why was the location of Jamestown problematic?</prompt>
+        <options>
+            <option letter="a">Too far inland</option>
+            <option letter="b">Swampy and unhealthy environment</option>
+            <option letter="c">Too close to Spanish settlements</option>
+            <option letter="d">Too mountainous</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Jamestown's location in a swampy area led to disease, contaminated water, and difficult living conditions.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What saved the Jamestown colony economically?</prompt>
+        <options>
+            <option letter="a">Gold mining</option>
+            <option letter="b">Tobacco cultivation</option>
+            <option letter="c">Fishing industry</option>
+            <option letter="d">Textile production</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The cultivation of tobacco as a cash crop, introduced by John Rolfe, saved Jamestown economically.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What significant event occurred in Jamestown in 1619?</prompt>
+        <options>
+            <option letter="a">The first Thanksgiving</option>
+            <option letter="b">The first representative assembly</option>
+            <option letter="c">The colony's abandonment</option>
+            <option letter="d">A peace treaty with Spain</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In 1619, Jamestown established the House of Burgesses, the first representative assembly in colonial America.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What early challenge did Jamestown face?</prompt>
+        <options>
+            <option letter="a">Too many skilled workers</option>
+            <option letter="b">The "starving time" period</option>
+            <option letter="c">Excessive wealth</option>
+            <option letter="d">Overpopulation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The "starving time" of 1609-1610 nearly destroyed Jamestown, with many colonists dying from starvation and disease.</explanation>
+    </question>
+</quiz>

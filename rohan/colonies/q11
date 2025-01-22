@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was representative government in colonial America?</prompt>
+        <options>
+            <option letter="a">Direct democracy</option>
+            <option letter="b">Elected officials making laws</option>
+            <option letter="c">Rule by monarchy</option>
+            <option letter="d">Military leadership</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Representative government in colonial America meant colonists elected officials to represent their interests and make laws on their behalf.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Which colony first established representative government?</prompt>
+        <options>
+            <option letter="a">Massachusetts</option>
+            <option letter="b">Virginia</option>
+            <option letter="c">Pennsylvania</option>
+            <option letter="d">New York</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Virginia established the first representative assembly in 1619 with the House of Burgesses.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What requirements typically existed for voting in colonial assemblies?</prompt>
+        <options>
+            <option letter="a">Universal suffrage</option>
+            <option letter="b">Property ownership and being male</option>
+            <option letter="c">Religious affiliation only</option>
+            <option letter="d">Military service</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonial voting rights were typically limited to property-owning white males, reflecting the period's social and economic restrictions.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What role did colonial governors play in representative government?</prompt>
+        <options>
+            <option letter="a">They were elected by colonists</option>
+            <option letter="b">They represented royal authority</option>
+            <option letter="c">They had no real power</option>
+            <option letter="d">They were religious leaders</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonial governors represented royal authority and could veto legislation passed by colonial assemblies.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>How did colonial assemblies exercise power?</prompt>
+        <options>
+            <option letter="a">Through control of colonial taxes</option>
+            <option letter="b">Through military force</option>
+            <option letter="c">Through religious authority</option>
+            <option letter="d">Through foreign diplomacy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Colonial assemblies exercised power primarily through their control of local taxes and spending, known as the "power of the purse."</explanation>
+    </question>
+</quiz>

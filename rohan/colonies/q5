@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was the Church of England?</prompt>
+        <options>
+            <option letter="a">A Catholic church</option>
+            <option letter="b">The official state church of England</option>
+            <option letter="c">A Puritan congregation</option>
+            <option letter="d">A Protestant sect in America</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Church of England was established as the official state church by Henry VIII when he broke from the Roman Catholic Church.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Who was the head of the Church of England?</prompt>
+        <options>
+            <option letter="a">The Pope</option>
+            <option letter="b">The English monarch</option>
+            <option letter="c">The Archbishop of Canterbury</option>
+            <option letter="d">The Prime Minister</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The English monarch was (and still is) the Supreme Governor of the Church of England.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>How did the Church of England influence colonial migration?</prompt>
+        <options>
+            <option letter="a">It encouraged Catholic settlement</option>
+            <option letter="b">It drove religious dissenters to the colonies</option>
+            <option letter="c">It prevented all migration</option>
+            <option letter="d">It only allowed clergy to migrate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Religious persecution by the Church of England drove many Puritans, Separatists, and other dissenters to seek freedom in the colonies.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What was the Church of England's status in most American colonies?</prompt>
+        <options>
+            <option letter="a">The official church in all colonies</option>
+            <option letter="b">The official church in some southern colonies</option>
+            <option letter="c">Completely banned</option>
+            <option letter="d">The only allowed religion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Church of England was the established church in several southern colonies, including Virginia, but not throughout all colonies.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What happened to the Church of England in America after the Revolution?</prompt>
+        <options>
+            <option letter="a">It remained unchanged</option>
+            <option letter="b">It became the Episcopal Church</option>
+            <option letter="c">It was abolished</option>
+            <option letter="d">It merged with other churches</option>
+        </options>
+        <answer>b</answer>
+        <explanation>After the American Revolution, the American branch of the Church of England became the independent Episcopal Church.</explanation>
+    </question>
+</quiz>

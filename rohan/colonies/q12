@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What were joint-stock companies?</prompt>
+        <options>
+            <option letter="a">Government agencies</option>
+            <option letter="b">Religious organizations</option>
+            <option letter="c">Private investment companies</option>
+            <option letter="d">Military organizations</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Joint-stock companies were private businesses where investors bought shares to fund colonial ventures while sharing risks and potential profits.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did joint-stock companies raise capital?</prompt>
+        <options>
+            <option letter="a">Through government funding</option>
+            <option letter="b">By selling shares to investors</option>
+            <option letter="c">Through religious donations</option>
+            <option letter="d">By taxing colonists</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Joint-stock companies raised money by selling shares to multiple investors who became partial owners of the company.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What was the main advantage of the joint-stock company structure?</prompt>
+        <options>
+            <option letter="a">Government control</option>
+            <option letter="b">Religious authority</option>
+            <option letter="c">Shared risk among investors</option>
+            <option letter="d">Military protection</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The joint-stock structure spread financial risk among many investors, making large colonial ventures possible while limiting individual losses.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>Which was NOT a major joint-stock company in colonial America?</prompt>
+        <options>
+            <option letter="a">Virginia Company</option>
+            <option letter="b">Dutch West India Company</option>
+            <option letter="c">Plymouth Company</option>
+            <option letter="d">Colonial Freedom Company</option>
+        </options>
+        <answer>d</answer>
+        <explanation>The Colonial Freedom Company is fictional; the Virginia Company, Dutch West India Company, and Plymouth Company were real joint-stock companies.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What happened to most colonial joint-stock companies?</prompt>
+        <options>
+            <option letter="a">They became modern corporations</option>
+            <option letter="b">They failed or lost their charters</option>
+            <option letter="c">They were bought by the government</option>
+            <option letter="d">They still operate today</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Most colonial joint-stock companies eventually failed or had their charters revoked due to financial problems or mismanagement.</explanation>
+    </question>
+</quiz>
