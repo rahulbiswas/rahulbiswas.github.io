@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of Plessy v. Ferguson (1896)?</prompt>
+        <options>
+            <option letter="a">It ended segregation</option>
+            <option letter="b">It legalized "separate but equal"</option>
+            <option letter="c">It granted voting rights</option>
+            <option letter="d">It banned discrimination</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Plessy v. Ferguson established the "separate but equal" doctrine, legally validating racial segregation for the next half-century.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was Homer Plessy's act of civil disobedience?</prompt>
+        <options>
+            <option letter="a">Refusing to pay taxes</option>
+            <option letter="b">Sitting in a whites-only rail car</option>
+            <option letter="c">Leading a protest march</option>
+            <option letter="d">Registering to vote</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Homer Plessy deliberately sat in a whites-only railway car to challenge Louisiana's Separate Car Act of 1890.</explanation>
+    </question>
+
+    <question>
+        <prompt>Justice John Marshall Harlan was significant in Plessy v. Ferguson because:</prompt>
+        <options>
+            <option letter="a">He wrote the majority opinion</option>
+            <option letter="b">He wrote the lone dissenting opinion</option>
+            <option letter="c">He represented Plessy</option>
+            <option letter="d">He was the trial judge</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Justice Harlan wrote the lone dissenting opinion, arguing that the Constitution was "color-blind" and opposing segregation.</explanation>
+    </question>
+
+    <question>
+        <prompt>What immediate effect did Plessy v. Ferguson have on Southern states?</prompt>
+        <options>
+            <option letter="a">They abolished segregation</option>
+            <option letter="b">They expanded segregation laws</option>
+            <option letter="c">They ignored the ruling</option>
+            <option letter="d">They protested the decision</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Southern states used the Plessy decision to expand segregation laws, creating comprehensive Jim Crow systems.</explanation>
+    </question>
+
+    <question>
+        <prompt>The Plessy decision specifically addressed segregation in:</prompt>
+        <options>
+            <option letter="a">Schools</option>
+            <option letter="b">Restaurants</option>
+            <option letter="c">Railroad cars</option>
+            <option letter="d">Voting places</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The case specifically addressed segregation in railroad cars, though its principle was applied to many other public facilities.</explanation>
+    </question>
+</quiz>

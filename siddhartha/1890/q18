@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was Jane Addams' Hull House?</prompt>
+        <options>
+            <option letter="a">A factory</option>
+            <option letter="b">A settlement house</option>
+            <option letter="c">A prison</option>
+            <option letter="d">A church</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hull House was a settlement house in Chicago founded by Jane Addams to help immigrants adjust to American life and improve their living conditions.</explanation>
+    </question>
+
+    <question>
+        <prompt>What services did settlement houses typically provide?</prompt>
+        <options>
+            <option letter="a">Only religious services</option>
+            <option letter="b">Multiple social services and education</option>
+            <option letter="c">Only medical care</option>
+            <option letter="d">Only employment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Settlement houses provided various services including education, childcare, English classes, job training, and cultural programs.</explanation>
+    </question>
+
+    <question>
+        <prompt>Who typically worked in settlement houses?</prompt>
+        <options>
+            <option letter="a">Only immigrants</option>
+            <option letter="b">Educated middle-class women</option>
+            <option letter="c">Government workers</option>
+            <option letter="d">Factory owners</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Settlement houses were typically staffed by educated middle-class women who lived in immigrant neighborhoods to provide social services.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the "Americanization" movement?</prompt>
+        <options>
+            <option letter="a">A political party</option>
+            <option letter="b">An assimilation program</option>
+            <option letter="c">A religious movement</option>
+            <option letter="d">An economic policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Americanization movement sought to assimilate immigrants into American culture through education in English, civic values, and American customs.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did settlement houses view immigrant cultures?</prompt>
+        <options>
+            <option letter="a">They rejected them completely</option>
+            <option letter="b">They showed some appreciation</option>
+            <option letter="c">They ignored them</option>
+            <option letter="d">They banned cultural practices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>While promoting adaptation to American life, many settlement houses showed appreciation for immigrant cultures and helped preserve cultural traditions.</explanation>
+    </question>
+</quiz>
