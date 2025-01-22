@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was early capitalism in the colonial period?</prompt>
+        <options>
+            <option letter="a">A socialist system</option>
+            <option letter="b">A market-based economic system</option>
+            <option letter="c">A barter system only</option>
+            <option letter="d">A government-controlled economy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Early capitalism was a market-based economic system where private individuals and companies controlled trade and industry for profit.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did joint-stock companies demonstrate early capitalism?</prompt>
+        <options>
+            <option letter="a">They were government-owned</option>
+            <option letter="b">They allowed shared investment and risk</option>
+            <option letter="c">They prohibited private ownership</option>
+            <option letter="d">They operated as charities</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Joint-stock companies demonstrated capitalist principles by allowing multiple investors to share both risks and potential profits.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What role did private property play in colonial capitalism?</prompt>
+        <options>
+            <option letter="a">It was prohibited</option>
+            <option letter="b">It was fundamental to economic development</option>
+            <option letter="c">It was only allowed for churches</option>
+            <option letter="d">It was controlled by England</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Private property rights were fundamental to colonial capitalism, encouraging investment and economic development.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>How did capitalism affect colonial trade?</prompt>
+        <options>
+            <option letter="a">It eliminated all trade</option>
+            <option letter="b">It encouraged profit-driven commerce</option>
+            <option letter="c">It required government ownership</option>
+            <option letter="d">It banned private trading</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Capitalism encouraged profit-driven commerce and trade, leading to extensive networks of exchange in the colonies.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What distinguished colonial capitalism from mercantilism?</prompt>
+        <options>
+            <option letter="a">Capitalism focused on individual enterprise</option>
+            <option letter="b">Capitalism required government control</option>
+            <option letter="c">Capitalism prohibited trade</option>
+            <option letter="d">Capitalism eliminated private property</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Colonial capitalism emphasized individual enterprise and market forces, while mercantilism relied on strict government control of the economy.</explanation>
+    </question>
+</quiz>

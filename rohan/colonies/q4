@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>Who were the Pilgrims?</prompt>
+        <options>
+            <option letter="a">English merchants seeking profit</option>
+            <option letter="b">Separatists seeking religious freedom</option>
+            <option letter="c">Professional soldiers</option>
+            <option letter="d">Government officials</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Pilgrims were English Separatists who sought religious freedom by breaking away from the Church of England.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Where did the Pilgrims first go before coming to America?</prompt>
+        <options>
+            <option letter="a">France</option>
+            <option letter="b">Spain</option>
+            <option letter="c">Holland</option>
+            <option letter="d">Germany</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Pilgrims first fled to Holland (the Netherlands) in 1608 before deciding to journey to America in 1620.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What ship brought the Pilgrims to America?</prompt>
+        <options>
+            <option letter="a">The Santa Maria</option>
+            <option letter="b">The Mayflower</option>
+            <option letter="c">The Discovery</option>
+            <option letter="d">The Godspeed</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mayflower carried 102 passengers, including the Pilgrims, across the Atlantic in 1620.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>Why did the Pilgrims leave Holland for America?</prompt>
+        <options>
+            <option letter="a">They were expelled by Dutch authorities</option>
+            <option letter="b">They feared losing their English identity</option>
+            <option letter="c">Holland became Catholic</option>
+            <option letter="d">The Dutch economy collapsed</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Pilgrims worried their children were becoming too Dutch and wanted to preserve their English culture while practicing their religion freely.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>Where did the Pilgrims intend to land in America?</prompt>
+        <options>
+            <option letter="a">Plymouth</option>
+            <option letter="b">Virginia Territory</option>
+            <option letter="c">Massachusetts Bay</option>
+            <option letter="d">Maine Coast</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Pilgrims intended to settle in the Virginia Territory but were blown off course, landing instead at Cape Cod.</explanation>
+    </question>
+</quiz>

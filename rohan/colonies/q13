@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was a colonial charter?</prompt>
+        <options>
+            <option letter="a">A ship's navigation document</option>
+            <option letter="b">A royal grant of rights and privileges</option>
+            <option letter="c">A religious declaration</option>
+            <option letter="d">A trade agreement</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A colonial charter was a document from the English monarch granting rights, privileges, and lands to individuals or companies for establishing colonies.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>What did colonial charters typically specify?</prompt>
+        <options>
+            <option letter="a">Colony boundaries and governmental structure</option>
+            <option letter="b">Religious requirements only</option>
+            <option letter="c">Military obligations only</option>
+            <option letter="d">Trading routes only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Colonial charters specified geographic boundaries, governmental structures, and rights of the colonists and proprietors.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What were the three types of colonial charters?</prompt>
+        <options>
+            <option letter="a">Royal, proprietary, and corporate</option>
+            <option letter="b">Military, religious, and trade</option>
+            <option letter="c">Northern, southern, and middle</option>
+            <option letter="d">Maritime, land, and religious</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The three types of colonial charters were royal (direct crown control), proprietary (individual owner), and corporate (joint-stock company).</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>How could a colonial charter be revoked?</prompt>
+        <options>
+            <option letter="a">By colonial vote</option>
+            <option letter="b">By royal decree</option>
+            <option letter="c">By religious leaders</option>
+            <option letter="d">By military force</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonial charters could be revoked by royal decree if the colony failed to meet its obligations or the crown's expectations.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What happened to a colony's government if its charter was revoked?</prompt>
+        <options>
+            <option letter="a">It became independent</option>
+            <option letter="b">It became a royal colony</option>
+            <option letter="c">It joined another colony</option>
+            <option letter="d">It ceased to exist</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When a charter was revoked, the colony typically became a royal colony under direct control of the crown.</explanation>
+    </question>
+</quiz>

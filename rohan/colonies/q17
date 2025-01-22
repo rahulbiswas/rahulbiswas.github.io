@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What motivated European exploration of the Americas?</prompt>
+        <options>
+            <option letter="a">Scientific curiosity only</option>
+            <option letter="b">Economic and religious reasons</option>
+            <option letter="c">Population reduction</option>
+            <option letter="d">Military expansion only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>European exploration was primarily motivated by economic interests (trade routes, resources) and religious missionary goals.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>What role did technology play in exploration?</prompt>
+        <options>
+            <option letter="a">It was not important</option>
+            <option letter="b">It enabled long-distance navigation</option>
+            <option letter="c">It prevented exploration</option>
+            <option letter="d">It was used only for warfare</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Technological advances in navigation, shipbuilding, and map-making made long-distance exploration possible.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What was the main goal of English exploration?</prompt>
+        <options>
+            <option letter="a">Scientific research</option>
+            <option letter="b">Economic competition with Spain</option>
+            <option letter="c">Religious conversion</option>
+            <option letter="d">Military conquest</option>
+        </options>
+        <answer>b</answer>
+        <explanation>England's main exploration goal was economic competition with Spain and other European powers for wealth and resources.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>How did exploration change European society?</prompt>
+        <options>
+            <option letter="a">It had no effect</option>
+            <option letter="b">It transformed economy and culture</option>
+            <option letter="c">It reduced trade</option>
+            <option letter="d">It ended monarchy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Exploration transformed European society through new wealth, products, ideas, and cultural exchanges.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What was a negative consequence of exploration?</prompt>
+        <options>
+            <option letter="a">Decreased trade</option>
+            <option letter="b">Impact on Indigenous peoples</option>
+            <option letter="c">Better navigation</option>
+            <option letter="d">Improved technology</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Exploration had devastating consequences for Indigenous peoples through disease, displacement, and colonization.</explanation>
+    </question>
+</quiz>

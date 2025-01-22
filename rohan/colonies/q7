@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>How did France establish its early colonial presence?</prompt>
+        <options>
+            <option letter="a">Through religious missions and fur trading</option>
+            <option letter="b">Through large-scale farming settlements</option>
+            <option letter="c">Through military conquest</option>
+            <option letter="d">Through mining operations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>French colonization was characterized by fur trading posts and Jesuit missions along waterways.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>What was New France's primary economic activity?</prompt>
+        <options>
+            <option letter="a">Agriculture</option>
+            <option letter="b">Fur trading</option>
+            <option letter="c">Manufacturing</option>
+            <option letter="d">Fishing</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The fur trade was the economic backbone of New France, with beaver pelts being particularly valuable.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>Which region was NOT part of New France?</prompt>
+        <options>
+            <option letter="a">Quebec</option>
+            <option letter="b">Louisiana Territory</option>
+            <option letter="c">New England</option>
+            <option letter="d">Acadia</option>
+        </options>
+        <answer>c</answer>
+        <explanation>New England was controlled by British colonies, while Quebec, Louisiana, and Acadia were part of New France.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>How did French colonial policy differ from English policy?</prompt>
+        <options>
+            <option letter="a">French focused on permanent settlements</option>
+            <option letter="b">French emphasized trade over settlement</option>
+            <option letter="c">French prohibited religious missions</option>
+            <option letter="d">French encouraged independent governance</option>
+        </options>
+        <answer>b</answer>
+        <explanation>French colonial policy emphasized trade and alliances with Native Americans rather than establishing large permanent settlements.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What ended French colonial control in North America?</prompt>
+        <options>
+            <option letter="a">American Revolution</option>
+            <option letter="b">French Revolution</option>
+            <option letter="c">French and Indian War</option>
+            <option letter="d">Louisiana Purchase</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The French and Indian War (1754-1763) ended French colonial control in North America, with most territories ceded to Britain.</explanation>
+    </question>
+</quiz>

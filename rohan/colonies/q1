@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What type of company was the Virginia Company of London?</prompt>
+        <options>
+            <option letter="a">A government agency</option>
+            <option letter="b">A joint-stock company</option>
+            <option letter="c">A private family business</option>
+            <option letter="d">A religious organization</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Virginia Company was a joint-stock company where investors bought shares hoping to profit from colonial ventures.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>When was the Virginia Company chartered by King James I?</prompt>
+        <options>
+            <option letter="a">1600</option>
+            <option letter="b">1606</option>
+            <option letter="c">1612</option>
+            <option letter="d">1620</option>
+        </options>
+        <answer>b</answer>
+        <explanation>King James I granted the Virginia Company its charter in 1606, authorizing it to establish colonies in North America.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What was the primary purpose of the Virginia Company?</prompt>
+        <options>
+            <option letter="a">Religious freedom</option>
+            <option letter="b">Military defense</option>
+            <option letter="c">Profit through colonization</option>
+            <option letter="d">Scientific research</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Virginia Company's primary purpose was to make money for its investors through establishing profitable colonies.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What settlement did the Virginia Company establish in 1607?</prompt>
+        <options>
+            <option letter="a">Plymouth</option>
+            <option letter="b">Jamestown</option>
+            <option letter="c">Roanoke</option>
+            <option letter="d">Boston</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Virginia Company established Jamestown in 1607, the first permanent English settlement in North America.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What happened to the Virginia Company in 1624?</prompt>
+        <options>
+            <option letter="a">It became very profitable</option>
+            <option letter="b">It merged with another company</option>
+            <option letter="c">Its charter was revoked</option>
+            <option letter="d">It expanded to other colonies</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Virginia Company's charter was revoked in 1624 due to financial problems and high colonist mortality rates, making Virginia a royal colony.</explanation>
+    </question>
+</quiz>

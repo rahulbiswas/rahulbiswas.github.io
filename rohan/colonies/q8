@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What characterized Dutch colonial activities in North America?</prompt>
+        <options>
+            <option letter="a">Large-scale farming settlements</option>
+            <option letter="b">Trading and commercial focus</option>
+            <option letter="c">Religious missions</option>
+            <option letter="d">Military expansion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Dutch focused primarily on trade and commerce in their colony of New Netherland, with New Amsterdam as their main trading port.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>What was New Amsterdam?</prompt>
+        <options>
+            <option letter="a">A Dutch military base</option>
+            <option letter="b">The future New York City</option>
+            <option letter="c">A religious settlement</option>
+            <option letter="d">A Native American village</option>
+        </options>
+        <answer>b</answer>
+        <explanation>New Amsterdam was the Dutch colonial settlement that later became New York City after English acquisition in 1664.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>Which company controlled Dutch colonial activities?</prompt>
+        <options>
+            <option letter="a">Dutch East India Company</option>
+            <option letter="b">Dutch West India Company</option>
+            <option letter="c">Amsterdam Trading Company</option>
+            <option letter="d">Netherlands Colonial Company</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Dutch West India Company (WIC) managed Dutch colonial activities in North America and the Atlantic trade.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What distinguished Dutch colonial policy from other European powers?</prompt>
+        <options>
+            <option letter="a">Religious intolerance</option>
+            <option letter="b">Military aggression</option>
+            <option letter="c">Religious tolerance</option>
+            <option letter="d">Isolation policy</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Dutch colonies were known for religious tolerance and accepting diverse groups of settlers, unlike many other colonial powers.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>How did Dutch rule in North America end?</prompt>
+        <options>
+            <option letter="a">They sold their colonies</option>
+            <option letter="b">English military conquest</option>
+            <option letter="c">Colonial rebellion</option>
+            <option letter="d">Natural disaster</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Dutch rule ended when England seized New Netherland in 1664, renaming it New York after the Duke of York.</explanation>
+    </question>
+</quiz>

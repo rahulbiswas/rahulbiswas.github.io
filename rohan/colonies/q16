@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What defined the Middle Ages in Europe?</prompt>
+        <options>
+            <option letter="a">Democracy and equality</option>
+            <option letter="b">Feudalism and manorialism</option>
+            <option letter="c">Industrial production</option>
+            <option letter="d">Modern capitalism</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Middle Ages were characterized by feudalism and manorialism, with society organized around land ownership and mutual obligations.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>How did the Middle Ages influence colonial America?</prompt>
+        <options>
+            <option letter="a">It had no influence</option>
+            <option letter="b">Through legal and social traditions</option>
+            <option letter="c">Through technology only</option>
+            <option letter="d">Through language only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Medieval English legal and social traditions, including common law and property rights, influenced colonial American society.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What medieval institution influenced colonial land ownership?</prompt>
+        <options>
+            <option letter="a">Free market system</option>
+            <option letter="b">Primogeniture</option>
+            <option letter="c">Communist collective</option>
+            <option letter="d">Tribal ownership</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Primogeniture, the medieval practice of eldest sons inheriting all land, influenced colonial property laws and social structure.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>How did medieval guild system influence colonial craft work?</prompt>
+        <options>
+            <option letter="a">It was completely rejected</option>
+            <option letter="b">It influenced apprenticeship systems</option>
+            <option letter="c">It had no effect</option>
+            <option letter="d">It was legally required</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The medieval guild system influenced colonial craft work through apprenticeship practices and skill transmission.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What medieval political concept influenced colonial government?</prompt>
+        <options>
+            <option letter="a">Absolute monarchy</option>
+            <option letter="b">Representative assemblies</option>
+            <option letter="c">Direct democracy</option>
+            <option letter="d">Military dictatorship</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Medieval representative assemblies, like England's Parliament, influenced the development of colonial legislative bodies.</explanation>
+    </question>
+</quiz>

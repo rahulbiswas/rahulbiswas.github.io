@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What was the Mayflower Compact?</prompt>
+        <options>
+            <option letter="a">A ship's manifest</option>
+            <option letter="b">A colonial trade agreement</option>
+            <option letter="c">The first written framework for self-government in America</option>
+            <option letter="d">A peace treaty with Native Americans</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Mayflower Compact was the first written framework for self-government in the colonies, signed aboard the Mayflower in 1620.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>Why was the Mayflower Compact written?</prompt>
+        <options>
+            <option letter="a">To declare independence from England</option>
+            <option letter="b">To establish rules for governing the Plymouth colony</option>
+            <option letter="c">To create trade regulations</option>
+            <option letter="d">To set religious doctrine</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mayflower Compact was written to establish legitimate governance after the ship landed outside its intended Virginia destination.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>Who signed the Mayflower Compact?</prompt>
+        <options>
+            <option letter="a">Only Pilgrim leaders</option>
+            <option letter="b">All adult male passengers</option>
+            <option letter="c">All passengers including women</option>
+            <option letter="d">Only religious members</option>
+        </options>
+        <answer>b</answer>
+        <explanation>41 adult male passengers, both Separatists and non-Separatists, signed the Mayflower Compact.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What principle was established by the Mayflower Compact?</prompt>
+        <options>
+            <option letter="a">Complete independence from England</option>
+            <option letter="b">Government by consent of the governed</option>
+            <option letter="c">Religious freedom for all</option>
+            <option letter="d">Women's suffrage</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mayflower Compact established the principle of self-government through mutual consent of the governed.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>What was a key feature of the government created by the Mayflower Compact?</prompt>
+        <options>
+            <option letter="a">Direct democracy</option>
+            <option letter="b">Rule by clergy</option>
+            <option letter="c">Just and equal laws</option>
+            <option letter="d">Complete religious freedom</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Mayflower Compact called for creating just and equal laws for the general good of the colony.</explanation>
+    </question>
+</quiz>
