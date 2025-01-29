@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The real balance effect explains why:</prompt>
+        <options>
+            <option letter="a">Higher prices increase aggregate demand</option>
+            <option letter="b">Lower prices increase aggregate demand</option>
+            <option letter="c">Higher prices increase aggregate supply</option>
+            <option letter="d">Lower prices decrease aggregate demand</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The real balance effect states that lower prices increase the real value of money holdings, making people wealthier in real terms and increasing aggregate demand.</explanation>
+    </question>
+
+    <question>
+        <prompt>In an open economy, the size of the fiscal multiplier is reduced by:</prompt>
+        <options>
+            <option letter="a">A lower marginal propensity to import</option>
+            <option letter="b">A higher marginal propensity to save</option>
+            <option letter="c">Lower tax rates</option>
+            <option letter="d">Higher government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A higher marginal propensity to save creates a larger leakage from the circular flow of income, reducing the fiscal multiplier's impact on national income.</explanation>
+    </question>
+
+    <question>
+        <prompt>Hysteresis in unemployment suggests that:</prompt>
+        <options>
+            <option letter="a">Cyclical unemployment becomes structural</option>
+            <option letter="b">Unemployment is always temporary</option>
+            <option letter="c">The natural rate is constant</option>
+            <option letter="d">Inflation reduces unemployment</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Hysteresis occurs when temporary cyclical unemployment becomes permanent structural unemployment as workers lose skills and become detached from the labor force.</explanation>
+    </question>
+
+    <question>
+        <prompt>The impossible trinity suggests that a country cannot simultaneously have:</prompt>
+        <options>
+            <option letter="a">Low inflation, high employment, and economic growth</option>
+            <option letter="b">Fixed exchange rates, independent monetary policy, and free capital flows</option>
+            <option letter="c">Balanced trade, full employment, and price stability</option>
+            <option letter="d">High savings, high investment, and low interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The impossible trinity (trilemma) states that a country cannot simultaneously maintain fixed exchange rates, independent monetary policy, and free capital movement.</explanation>
+    </question>
+</quiz>

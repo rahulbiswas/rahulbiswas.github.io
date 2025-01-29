@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The primary purpose of holding precautionary money balances is to:</prompt>
+        <options>
+            <option letter="a">Earn interest</option>
+            <option letter="b">Make planned purchases</option>
+            <option letter="c">Handle unexpected expenses</option>
+            <option letter="d">Conduct daily transactions</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Precautionary money balances are held as a buffer against unexpected expenses or emergencies, distinct from transaction balances used for planned purchases.</explanation>
+    </question>
+
+    <question>
+        <prompt>A sustained increase in productivity would:</prompt>
+        <options>
+            <option letter="a">Shift only the SRAS curve right</option>
+            <option letter="b">Shift only the LRAS curve right</option>
+            <option letter="c">Shift both SRAS and LRAS curves right</option>
+            <option letter="d">Shift the AD curve right</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Increased productivity enhances the economy's ability to produce in both short and long run, shifting both SRAS and LRAS curves rightward.</explanation>
+    </question>
+
+    <question>
+        <prompt>Real GDP per capita is best used to measure:</prompt>
+        <options>
+            <option letter="a">Price stability</option>
+            <option letter="b">Economic growth</option>
+            <option letter="c">Income inequality</option>
+            <option letter="d">Standard of living</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Real GDP per capita, by accounting for both population and inflation, provides the best basic measure of average standard of living in an economy.</explanation>
+    </question>
+
+    <question>
+        <prompt>The credit multiplier will be larger when:</prompt>
+        <options>
+            <option letter="a">Required reserve ratios increase</option>
+            <option letter="b">Banks hold more excess reserves</option>
+            <option letter="c">The currency drain ratio increases</option>
+            <option letter="d">Required reserve ratios decrease</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Lower required reserve ratios allow banks to create more credit from each dollar of deposits, increasing the credit multiplier.</explanation>
+    </question>
+</quiz>

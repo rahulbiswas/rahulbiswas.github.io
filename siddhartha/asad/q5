@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If nominal GDP is $800 billion and real GDP is $500 billion, what is the GDP deflator?</prompt>
+        <options>
+            <option letter="a">60</option>
+            <option letter="b">120</option>
+            <option letter="c">160</option>
+            <option letter="d">200</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The GDP deflator is calculated as (Nominal GDP/Real GDP) × 100. Therefore, ($800 billion/$500 billion) × 100 = 160.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which would most likely cause the natural rate of unemployment to increase?</prompt>
+        <options>
+            <option letter="a">A decrease in aggregate demand</option>
+            <option letter="b">An increase in the minimum wage</option>
+            <option letter="c">A decrease in government spending</option>
+            <option letter="d">An increase in the money supply</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the minimum wage can increase structural unemployment by creating a price floor in the labor market, thus raising the natural rate of unemployment.</explanation>
+    </question>
+
+    <question>
+        <prompt>When the Fed engages in expansionary open market operations, it:</prompt>
+        <options>
+            <option letter="a">Sells government securities</option>
+            <option letter="b">Buys government securities</option>
+            <option letter="c">Raises the discount rate</option>
+            <option letter="d">Increases reserve requirements</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In expansionary open market operations, the Fed buys government securities, increasing the money supply and putting downward pressure on interest rates.</explanation>
+    </question>
+
+    <question>
+        <prompt>Real GDP will be less than potential GDP when there is:</prompt>
+        <options>
+            <option letter="a">Only frictional unemployment</option>
+            <option letter="b">Only structural unemployment</option>
+            <option letter="c">Cyclical unemployment</option>
+            <option letter="d">Full employment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The presence of cyclical unemployment indicates the economy is operating below its potential, meaning real GDP is less than potential GDP.</explanation>
+    </question>
+</quiz>

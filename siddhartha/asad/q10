@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>According to Okun's Law, a 1% increase in unemployment above the natural rate leads to approximately:</prompt>
+        <options>
+            <option letter="a">A 1% decrease in real GDP</option>
+            <option letter="b">A 2% decrease in real GDP</option>
+            <option letter="c">A 3% decrease in real GDP</option>
+            <option letter="d">A 4% decrease in real GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Okun's Law states that for every 1 percentage point increase in unemployment above the natural rate, real GDP falls by approximately 2 percent below potential GDP.</explanation>
+    </question>
+
+    <question>
+        <prompt>The Monetary Base consists of:</prompt>
+        <options>
+            <option letter="a">Currency in circulation plus bank deposits</option>
+            <option letter="b">Currency in circulation plus bank reserves</option>
+            <option letter="c">Total deposits plus required reserves</option>
+            <option letter="d">Total reserves plus excess reserves</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Monetary Base (high-powered money) consists of currency in circulation plus bank reserves (both required and excess reserves).</explanation>
+    </question>
+
+    <question>
+        <prompt>In a floating exchange rate system, a trade surplus will cause:</prompt>
+        <options>
+            <option letter="a">The domestic currency to appreciate</option>
+            <option letter="b">The domestic currency to depreciate</option>
+            <option letter="c">Interest rates to rise</option>
+            <option letter="d">The money supply to decrease</option>
+        </options>
+        <answer>a</answer>
+        <explanation>A trade surplus increases foreign demand for domestic currency to pay for exports, causing the domestic currency to appreciate in a floating exchange rate system.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which of the following would increase aggregate supply in both the short run and long run?</prompt>
+        <options>
+            <option letter="a">An increase in the money supply</option>
+            <option letter="b">An improvement in technology</option>
+            <option letter="c">A decrease in taxes</option>
+            <option letter="d">An increase in government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Technological improvement increases productivity and productive capacity, shifting both the short-run and long-run aggregate supply curves to the right.</explanation>
+    </question>
+</quiz>
