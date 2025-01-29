@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the long run, an economy operating above potential GDP will experience:</prompt>
+        <options>
+            <option letter="a">Increasing price levels only</option>
+            <option letter="b">Decreasing output only</option>
+            <option letter="c">Both increasing prices and decreasing output</option>
+            <option letter="d">Neither increasing prices nor decreasing output</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Above potential GDP, upward pressure on wages and prices will eventually reduce output back to potential GDP level, resulting in both higher prices and lower output.</explanation>
+    </question>
+
+    <question>
+        <prompt>The J-curve effect suggests that following currency depreciation:</prompt>
+        <options>
+            <option letter="a">The trade balance immediately improves</option>
+            <option letter="b">The trade balance initially worsens before improving</option>
+            <option letter="c">The trade balance continuously worsens</option>
+            <option letter="d">The trade balance remains unchanged</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The J-curve shows that after currency depreciation, the trade balance initially worsens due to sticky prices and contracts, before improving as quantities adjust.</explanation>
+    </question>
+
+    <question>
+        <prompt>When the Fed engages in quantitative easing, it:</prompt>
+        <options>
+            <option letter="a">Raises the federal funds rate</option>
+            <option letter="b">Purchases long-term government securities</option>
+            <option letter="c">Increases the required reserve ratio</option>
+            <option letter="d">Reduces the money supply</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Quantitative easing involves the Federal Reserve purchasing long-term government securities to lower long-term interest rates and increase the money supply.</explanation>
+    </question>
+
+    <question>
+        <prompt>A decrease in business taxes would most directly affect:</prompt>
+        <options>
+            <option letter="a">Short-run aggregate supply</option>
+            <option letter="b">Long-run aggregate supply</option>
+            <option letter="c">Aggregate demand</option>
+            <option letter="d">Both SRAS and AD</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Lower business taxes increase both aggregate supply (by reducing costs) and aggregate demand (by increasing business investment spending).</explanation>
+    </question>
+</quiz>

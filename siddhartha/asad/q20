@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The term "liquidity trap" describes a situation where:</prompt>
+        <options>
+            <option letter="a">Interest rates are too high</option>
+            <option letter="b">Banks have excess reserves</option>
+            <option letter="c">Monetary policy becomes ineffective at zero interest rates</option>
+            <option letter="d">The money supply grows too quickly</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A liquidity trap occurs when interest rates are near zero and monetary policy becomes ineffective because people prefer holding money to bonds.</explanation>
+    </question>
+
+    <question>
+        <prompt>Purchasing power parity implies that:</prompt>
+        <options>
+            <option letter="a">All countries have the same price level</option>
+            <option letter="b">Exchange rates adjust to equalize prices across countries</option>
+            <option letter="c">Trade balances must be zero</option>
+            <option letter="d">Interest rates are equal across countries</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Purchasing power parity theory suggests exchange rates will adjust so that the same good costs the same amount in different countries when converted to the same currency.</explanation>
+    </question>
+
+    <question>
+        <prompt>The sacrifice ratio measures the:</prompt>
+        <options>
+            <option letter="a">Trade-off between unemployment and economic growth</option>
+            <option letter="b">Cost of reducing inflation in terms of lost output</option>
+            <option letter="c">Relationship between interest rates and investment</option>
+            <option letter="d">Trade-off between consumption and investment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The sacrifice ratio measures how much output must be sacrificed (in percentage terms) to reduce inflation by one percentage point.</explanation>
+    </question>
+
+    <question>
+        <prompt>If the marginal propensity to consume is 0.75, the tax multiplier will be:</prompt>
+        <options>
+            <option letter="a">-4.0</option>
+            <option letter="b">-3.0</option>
+            <option letter="c">-2.0</option>
+            <option letter="d">-1.0</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The tax multiplier equals -MPC/(1-MPC). With MPC = 0.75, the tax multiplier is -0.75/(1-0.75) = -3.0.</explanation>
+    </question>
+</quiz>

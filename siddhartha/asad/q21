@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Rational expectations theory suggests that government policies are less effective because:</prompt>
+        <options>
+            <option letter="a">People don't understand economic policy</option>
+            <option letter="b">People anticipate policy effects and adjust behavior</option>
+            <option letter="c">Government policies are unpredictable</option>
+            <option letter="d">Markets are inefficient</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Rational expectations theory argues that people anticipate the effects of economic policies and adjust their behavior accordingly, reducing policy effectiveness.</explanation>
+    </question>
+
+    <question>
+        <prompt>The Ricardian equivalence theorem suggests that deficit spending:</prompt>
+        <options>
+            <option letter="a">Always stimulates the economy</option>
+            <option letter="b">May not stimulate the economy due to increased private saving</option>
+            <option letter="c">Increases interest rates</option>
+            <option letter="d">Decreases aggregate supply</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Ricardian equivalence suggests people may save more in response to government deficits, anticipating future tax increases, thus offsetting the stimulative effect.</explanation>
+    </question>
+
+    <question>
+        <prompt>In the Mundell-Fleming model with perfect capital mobility and flexible exchange rates, monetary policy is:</prompt>
+        <options>
+            <option letter="a">Completely ineffective</option>
+            <option letter="b">Highly effective</option>
+            <option letter="c">Only effective if coordinated internationally</option>
+            <option letter="d">Only effective in the long run</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With flexible exchange rates and perfect capital mobility, monetary policy is highly effective because exchange rate changes amplify its impact on aggregate demand.</explanation>
+    </question>
+
+    <question>
+        <prompt>Cost-push inflation is most likely to be accompanied by:</prompt>
+        <options>
+            <option letter="a">Rising real GDP</option>
+            <option letter="b">Falling unemployment</option>
+            <option letter="c">Rising unemployment</option>
+            <option letter="d">Increasing aggregate demand</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Cost-push inflation typically occurs with rising unemployment because higher costs reduce production and employment while raising prices, creating stagflation.</explanation>
+    </question>
+</quiz>
