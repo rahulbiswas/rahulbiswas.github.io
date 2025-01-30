@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The American Beauty rose can be produced in its splendor and fragrance only by sacrificing the early buds which grow up around it... This is not an evil tendency in business. It is merely the working-out of a law of nature and a law of God."
+- John D. Rockefeller defending monopolies, 1902</stimulus>
+        <prompt>This statement most directly conflicted with which Progressive Era belief?</prompt>
+        <options>
+            <option letter="a">Government should regulate business</option>
+            <option letter="b">Cities needed reform</option>
+            <option letter="c">Women should have voting rights</option>
+            <option letter="d">Education should be mandatory</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Rockefeller's defense of monopolies as natural and beneficial directly opposed Progressive beliefs that government should regulate business to protect public interests.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photographs comparing immigrant neighborhoods before and after settlement house programs, showing improved housing conditions and community facilities]</stimulus>
+        <prompt>These images most clearly demonstrate the Progressive Era emphasis on:</prompt>
+        <options>
+            <option letter="a">Environmental determinism</option>
+            <option letter="b">Political machines</option>
+            <option letter="c">Nativism</option>
+            <option letter="d">Prohibition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The before-and-after photos reflect Progressive beliefs in environmental determinism - that improving living conditions would lead to social improvement and immigrant assimilation.</explanation>
+    </question>
+    <question>
+        <stimulus>"The temperance movement is not simply about drinking; it is about the elevation of home life, the protection of children, and the advancement of society's morals."
+- Frances Willard, WCTU Speech, 1889</stimulus>
+        <prompt>This argument most directly connected prohibition to which other Progressive Era movement?</prompt>
+        <options>
+            <option letter="a">Women's rights</option>
+            <option letter="b">Labor reform</option>
+            <option letter="c">Trust busting</option>
+            <option letter="d">Conservation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Willard's argument linked prohibition to women's rights by emphasizing women's role in protecting home and family, a common Progressive Era connection.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a figure labeled "Direct Primary" breaking chains labeled "Boss Rule" while voters cheer]</stimulus>
+        <prompt>The reform depicted in this cartoon was designed to:</prompt>
+        <options>
+            <option letter="a">Reduce party boss influence</option>
+            <option letter="b">Increase voter turnout</option>
+            <option letter="c">Limit campaign spending</option>
+            <option letter="d">Expand suffrage rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The direct primary was designed to reduce the influence of party bosses by allowing voters, rather than party leaders, to select candidates for office.</explanation>
+    </question>
+</quiz>

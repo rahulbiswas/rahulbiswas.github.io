@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The growth of a large business is merely survival of the fittest... The American Beauty rose can be produced in the splendor and fragrance which bring cheer to its beholder only by sacrificing the early buds which grow up around it."
+- John D. Rockefeller, 1902</stimulus>
+        <prompt>Which Progressive Era policy most directly challenged this view?</prompt>
+        <options>
+            <option letter="a">The Sherman Antitrust Act</option>
+            <option letter="b">The Pure Food and Drug Act</option>
+            <option letter="c">The Federal Reserve Act</option>
+            <option letter="d">The Adamson Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Sherman Antitrust Act directly challenged Rockefeller's defense of monopolies by declaring them illegal and subject to government regulation.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photographs showing children working in textile mills alongside newspaper headlines about state-level child labor laws, 1900-1916]</stimulus>
+        <prompt>These images most directly contributed to:</prompt>
+        <options>
+            <option letter="a">The Keating-Owen Act</option>
+            <option letter="b">The Federal Reserve Act</option>
+            <option letter="c">The Clayton Antitrust Act</option>
+            <option letter="d">The Hepburn Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Photographs documenting child labor conditions helped build public support for the Keating-Owen Act of 1916, the first federal child labor law.</explanation>
+    </question>
+    <question>
+        <stimulus>"The real enemies of social justice are not the radicals who openly advocate violence, but the so-called conservatives who deny that any reforms are needed and who block every attempt at progress."
+- Florence Kelley, Speech to National Consumers League, 1905</stimulus>
+        <prompt>Kelley's work most directly led to:</prompt>
+        <options>
+            <option letter="a">State labor laws</option>
+            <option letter="b">Immigration quotas</option>
+            <option letter="c">Voting reforms</option>
+            <option letter="d">Banking regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Florence Kelley's advocacy led to state-level labor laws protecting women and children workers, including maximum hours and minimum wage legislation.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing increase in public high schools and decrease in private academies, 1890-1920, with correlation to social mobility rates]</stimulus>
+        <prompt>This trend most directly reflected Progressive beliefs about:</prompt>
+        <options>
+            <option letter="a">Education as social reform</option>
+            <option letter="b">Business regulation</option>
+            <option letter="c">Political corruption</option>
+            <option letter="d">Urban planning</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The growth of public high schools reflected Progressive beliefs in education as a means of social reform and economic mobility.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"If we can secure mothers' pensions, regulate the hours of women's work, establish juvenile courts and industrial education... all within ten years of women's suffrage in these states, is there any doubt that women's votes count for social welfare?"
+- Carrie Chapman Catt, Speech to NAWSA, 1915</stimulus>
+        <prompt>This argument most directly supported:</prompt>
+        <options>
+            <option letter="a">National women's suffrage</option>
+            <option letter="b">Labor legislation</option>
+            <option letter="c">Educational reform</option>
+            <option letter="d">Municipal reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Catt used evidence of women voters' impact on social welfare legislation in suffrage states to argue for national women's suffrage.</explanation>
+    </question>
+    <question>
+        <stimulus>[Chart showing decline in political machine control of cities following adoption of commission and city manager forms of government, 1900-1920]</stimulus>
+        <prompt>This trend most directly reflected the Progressive Era goal of:</prompt>
+        <options>
+            <option letter="a">Efficient government</option>
+            <option letter="b">Economic regulation</option>
+            <option letter="c">Social justice</option>
+            <option letter="d">Moral reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The decline of political machines following government reorganization reflected the Progressive goal of making government more efficient and professional.</explanation>
+    </question>
+    <question>
+        <stimulus>"The age of Jackson was the age of the common man. This is the age of the uncommon man - the specialist, the expert, the trained administrator... Democracy must be guided by expertise."
+- Herbert Croly, The Promise of American Life, 1909</stimulus>
+        <prompt>This view most directly influenced which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">Professional bureaucracies</option>
+            <option letter="b">Direct primaries</option>
+            <option letter="c">Initiative process</option>
+            <option letter="d">Recall elections</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Croly's emphasis on expertise influenced the Progressive creation of professional bureaucracies staffed by trained experts rather than political appointees.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photographs comparing urban housing conditions before and after tenement reform laws, showing improvements in ventilation, fire safety, and sanitation]</stimulus>
+        <prompt>These changes most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Housing regulation</option>
+            <option letter="b">Immigration restriction</option>
+            <option letter="c">Labor legislation</option>
+            <option letter="d">Prohibition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The improvements shown resulted from Progressive Era housing regulations like the Tenement House Act, which set standards for urban housing conditions.</explanation>
+    </question>
+</quiz>

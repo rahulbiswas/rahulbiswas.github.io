@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The effect of the initiative and referendum is to restore to the people their proper share in government, to give them absolute control of those who make and execute the laws under which we must live."
+- William S. U'Ren, Oregon reformer, 1902</stimulus>
+        <prompt>This statement best reflects the Progressive Era emphasis on:</prompt>
+        <options>
+            <option letter="a">Direct democracy</option>
+            <option letter="b">Social welfare</option>
+            <option letter="c">Economic regulation</option>
+            <option letter="d">Conservation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>U'Ren's advocacy for the initiative and referendum reflected the Progressive movement's emphasis on direct democracy and returning political power to the people.</explanation>
+    </question>
+    <question>
+        <stimulus>[Chart showing increase in government regulation of business: Interstate Commerce Commission (1887), Sherman Antitrust Act (1890), Federal Trade Commission (1914), Clayton Antitrust Act (1914)]</stimulus>
+        <prompt>This sequence of legislation most directly reflected:</prompt>
+        <options>
+            <option letter="a">Growing federal economic power</option>
+            <option letter="b">Declining business influence</option>
+            <option letter="c">Labor union dominance</option>
+            <option letter="d">State government authority</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The progression of regulatory legislation shows the growing power of the federal government to regulate business during the Progressive Era.</explanation>
+    </question>
+    <question>
+        <stimulus>"The most powerful force in the progress of the world is the woman walking alone... until all the women of the world have won liberty, no real liberty can exist anywhere."
+- Alice Paul, The Suffragist, 1913</stimulus>
+        <prompt>Which tactic most distinguished Paul's approach to women's suffrage?</prompt>
+        <options>
+            <option letter="a">Militant protest</option>
+            <option letter="b">State-by-state campaigns</option>
+            <option letter="c">Educational programs</option>
+            <option letter="d">Economic boycotts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Alice Paul's militant tactics, including picketing the White House and hunger strikes, distinguished her approach from the more moderate NAWSA strategy.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of a city commission meeting, showing professional administrators replacing political appointees, with caption describing the city manager system]</stimulus>
+        <prompt>This change in municipal government most directly reflected Progressive beliefs about:</prompt>
+        <options>
+            <option letter="a">Scientific management</option>
+            <option letter="b">Social justice</option>
+            <option letter="c">Moral reform</option>
+            <option letter="d">Economic equality</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The shift to professional city managers reflected Progressive beliefs in scientific management and the need for trained experts rather than political appointees in government.</explanation>
+    </question>
+</quiz>

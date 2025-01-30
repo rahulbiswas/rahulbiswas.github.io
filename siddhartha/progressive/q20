@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The object of government is the welfare of the people... You cannot give a man genuine independence and self-respect by taking away his job, conquering his union, and reducing him to starvation."
+- Theodore Roosevelt, New Nationalism Speech, 1910</stimulus>
+        <prompt>This statement most directly supported:</prompt>
+        <options>
+            <option letter="a">Labor union rights</option>
+            <option letter="b">Immigration restriction</option>
+            <option letter="c">Women's suffrage</option>
+            <option letter="d">Prohibition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Roosevelt's New Nationalism supported labor union rights and government protection of workers, marking a shift from earlier Republican positions on labor issues.</explanation>
+    </question>
+    <question>
+        <stimulus>[Chart showing the growth of state public utility commissions: 1907: 2 states, 1910: 12 states, 1915: 30 states, 1920: 42 states]</stimulus>
+        <prompt>This trend most directly reflected Progressive Era emphasis on:</prompt>
+        <options>
+            <option letter="a">Government regulation</option>
+            <option letter="b">Social welfare</option>
+            <option letter="c">Direct democracy</option>
+            <option letter="d">Moral reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The spread of public utility commissions reflected the Progressive emphasis on government regulation of business to protect public interests.</explanation>
+    </question>
+    <question>
+        <stimulus>"The city is the crucible of our civilization... If we would have a democracy, we must democratize our cities; if we would have efficiency, we must make our cities efficient."
+- Frederic Howe, The Modern City and Its Problems, 1915</stimulus>
+        <prompt>Which Progressive reform most directly addressed these concerns?</prompt>
+        <options>
+            <option letter="a">Commission government</option>
+            <option letter="b">Direct primary</option>
+            <option letter="c">Initiative process</option>
+            <option letter="d">Recall provision</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The commission form of city government was designed to increase both democracy and efficiency in urban administration, addressing Howe's concerns about city governance.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photographs comparing immigrant children in public schools vs. factories, with statistics on literacy rates and economic mobility]</stimulus>
+        <prompt>These images most directly supported Progressive arguments for:</prompt>
+        <options>
+            <option letter="a">Compulsory education</option>
+            <option letter="b">Immigration restriction</option>
+            <option letter="c">Prohibition</option>
+            <option letter="d">Women's suffrage</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The comparison supported Progressive arguments for compulsory education laws by showing education's role in immigrant assimilation and economic advancement versus child labor's limiting effects.</explanation>
+    </question>
+</quiz>
