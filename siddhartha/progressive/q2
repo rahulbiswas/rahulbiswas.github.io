@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"To do away with the grade crossing evil, to institute measures for the safety and protection of employees, to establish an adequate and a uniform system of accounting... to provide for full and fair reports of all railroad operations... to correct secret rebating and other abuses of interstate commerce." 
+- President Theodore Roosevelt, Annual Message to Congress, 1905</stimulus>
+        <prompt>This excerpt best reflects Roosevelt's policy of:</prompt>
+        <options>
+            <option letter="a">Conservation</option>
+            <option letter="b">Railroad regulation</option>
+            <option letter="c">Trust busting</option>
+            <option letter="d">Civil service reform</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt's message outlines the need for federal regulation of railroads, which led to the Hepburn Act of 1906 strengthening the Interstate Commerce Commission's authority.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of children working in a textile mill, taken by Lewis Hine in 1908, showing young children operating dangerous machinery]</stimulus>
+        <prompt>This type of photography most directly contributed to the passage of which Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">The Federal Reserve Act</option>
+            <option letter="b">The Keating-Owen Child Labor Act</option>
+            <option letter="c">The Meat Inspection Act</option>
+            <option letter="d">The Sherman Antitrust Act</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Lewis Hine's photographs documenting child labor conditions were instrumental in building public support for the Keating-Owen Child Labor Act of 1916, the first federal law regulating child labor.</explanation>
+    </question>
+    <question>
+        <stimulus>"The really significant thing about the American woman's movement is that it is a movement that proceeded from the woman's consciousness of herself, of her dignity as a human being, and of her rights as a member of society."
+- Carrie Chapman Catt, Speech to the National American Woman Suffrage Association, 1902</stimulus>
+        <prompt>Which Progressive Era development most directly influenced this perspective?</prompt>
+        <options>
+            <option letter="a">The Settlement House Movement</option>
+            <option letter="b">The Rise of Higher Education for Women</option>
+            <option letter="c">The Temperance Movement</option>
+            <option letter="d">The Triangle Shirtwaist Factory Fire</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The increasing access to higher education for women in the late 19th century fostered a new consciousness of women's capabilities and rights, fueling the suffrage movement.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing the growth of urban population in the United States: 1880: 28%, 1890: 35%, 1900: 40%, 1910: 46%, 1920: 51%]</stimulus>
+        <prompt>This demographic trend most directly contributed to which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">The rise of political machines</option>
+            <option letter="b">The expansion of national parks</option>
+            <option letter="c">The adoption of the income tax</option>
+            <option letter="d">The creation of the Federal Reserve</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Rapid urbanization led to the rise of political machines in major cities, as these organizations provided services and support to growing immigrant populations in exchange for political loyalty.</explanation>
+    </question>
+</quiz>

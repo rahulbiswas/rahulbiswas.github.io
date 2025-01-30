@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"In the grand march of mankind toward the realization of its divine destiny... there must be perfect equality in all civil, political, social, and economic rights between men and women."
+- Susan B. Anthony and Elizabeth Cady Stanton, Declaration of Rights of the Women of the United States, 1876</stimulus>
+        <prompt>This declaration most influenced which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">Formation of the NAWSA</option>
+            <option letter="b">Creation of settlement houses</option>
+            <option letter="c">Passage of protective labor laws</option>
+            <option letter="d">Implementation of municipal reforms</option>
+        </options>
+        <answer>a</answer>
+        <explanation>This declaration's principles formed the ideological foundation for the National American Woman Suffrage Association (NAWSA), which united different suffrage groups to pursue women's voting rights.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing the growth of trusts: 1895: 40 trusts controlling $1 billion in capital, 1904: 318 trusts controlling $7 billion in capital]</stimulus>
+        <prompt>This economic trend most directly motivated which Progressive Era president's actions?</prompt>
+        <options>
+            <option letter="a">William McKinley's monetary policies</option>
+            <option letter="b">Theodore Roosevelt's trust-busting</option>
+            <option letter="c">William Taft's foreign policy</option>
+            <option letter="d">Woodrow Wilson's banking reforms</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The rapid growth of trusts prompted Theodore Roosevelt's "trust-busting" campaign, leading to increased enforcement of the Sherman Antitrust Act and regulation of monopolies.</explanation>
+    </question>
+    <question>
+        <stimulus>"The city is the nerve center of our civilization... Where the city is bad, the country must suffer; and where the city is good, the country must gain."
+- Frederic C. Howe, The City: The Hope of Democracy, 1905</stimulus>
+        <prompt>This perspective most directly influenced which Progressive reform movement?</prompt>
+        <options>
+            <option letter="a">Municipal reform movement</option>
+            <option letter="b">Conservation movement</option>
+            <option letter="c">Temperance movement</option>
+            <option letter="d">Women's suffrage movement</option>
+        </options>
+        <answer>a</answer>
+        <explanation>This urban-focused ideology sparked the municipal reform movement, which sought to eliminate corruption in city governments and improve urban services through professional management.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a figure labeled "Muckraker" using a microscope to examine documents labeled "Corporate Corruption" while business leaders cower in the background]</stimulus>
+        <prompt>Which publication best exemplified the role depicted in this cartoon?</prompt>
+        <options>
+            <option letter="a">McClure's Magazine</option>
+            <option letter="b">The Liberator</option>
+            <option letter="c">The Crisis</option>
+            <option letter="d">The Masses</option>
+        </options>
+        <answer>a</answer>
+        <explanation>McClure's Magazine was the leading muckraking journal, publishing investigative articles exposing corporate corruption and social problems, including Ida Tarbell's exposé of Standard Oil.</explanation>
+    </question>
+</quiz>

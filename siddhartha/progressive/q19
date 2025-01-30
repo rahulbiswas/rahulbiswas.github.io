@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The conservation of our natural resources is the fundamental question before this nation, and our first and greatest task is to set our house in order and begin to live within our means."
+- Gifford Pinchot, The Fight for Conservation, 1910</stimulus>
+        <prompt>Pinchot's conservation philosophy most emphasized:</prompt>
+        <options>
+            <option letter="a">Preservation of wilderness</option>
+            <option letter="b">Efficient resource management</option>
+            <option letter="c">States' rights</option>
+            <option letter="d">Native American rights</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Pinchot advocated for efficient, scientific management of natural resources for sustainable use rather than pure preservation, reflecting Progressive Era emphasis on scientific management.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a woman with a "Votes for Women" banner sweeping away figures labeled "Child Labor," "White Slave Traffic," and "Political Corruption"]</stimulus>
+        <prompt>The cartoonist most directly supported which Progressive Era argument?</prompt>
+        <options>
+            <option letter="a">Women would be effective reformers</option>
+            <option letter="b">Prohibition would solve social problems</option>
+            <option letter="c">Immigration caused urban problems</option>
+            <option letter="d">Business needed more regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The cartoon supported the argument that women voters would effectively address social problems, a key justification for women's suffrage during the Progressive Era.</explanation>
+    </question>
+    <question>
+        <stimulus>"The initiative and referendum are not substitutes for representative government, but means of correcting it when it becomes misrepresentative... They are the safeguard of democracy, not its channel."
+- William Allen White, 1911</stimulus>
+        <prompt>This statement best reflects Progressive attitudes toward:</prompt>
+        <options>
+            <option letter="a">Direct democracy</option>
+            <option letter="b">Labor unions</option>
+            <option letter="c">Immigration policy</option>
+            <option letter="d">Business regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>White's statement reflects Progressive views of direct democracy tools as means to correct problems in representative government rather than replace it entirely.</explanation>
+    </question>
+    <question>
+        <stimulus>[Statistics showing increase in settlement house programs: 1889: 2 houses, 1900: 100 houses, 1910: 400 houses, with data on services provided]</stimulus>
+        <prompt>The growth of settlement houses most directly reflected Progressive beliefs about:</prompt>
+        <options>
+            <option letter="a">Social environment's influence</option>
+            <option letter="b">Political corruption</option>
+            <option letter="c">Economic regulation</option>
+            <option letter="d">Women's rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The expansion of settlement houses reflected Progressive beliefs that improving social environments through education and services would lead to individual and social improvement.</explanation>
+    </question>
+</quiz>

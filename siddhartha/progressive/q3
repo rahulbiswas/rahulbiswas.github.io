@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"We stand at Armageddon, and we battle for the Lord... To destroy this invisible Government, to dissolve the unholy alliance between corrupt business and corrupt politics is the first task of the statesmanship of the day."
+- Theodore Roosevelt, Progressive Party Convention Speech, 1912</stimulus>
+        <prompt>Roosevelt's speech most directly reflects which Progressive Era goal?</prompt>
+        <options>
+            <option letter="a">Women's suffrage</option>
+            <option letter="b">Conservation of natural resources</option>
+            <option letter="c">Political reform and anti-corruption</option>
+            <option letter="d">Labor rights protection</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Roosevelt's "New Nationalism" platform emphasized fighting political corruption and breaking up the alliance between big business and government, central goals of Progressive reform.</explanation>
+    </question>
+    <question>
+        <stimulus>[Statistics showing settlement house growth: 1891: 6 houses, 1897: 74 houses, 1905: 204 houses, 1910: 413 houses, with 70% of residents being immigrant families]</stimulus>
+        <prompt>These statistics best demonstrate the Progressive Era's emphasis on:</prompt>
+        <options>
+            <option letter="a">Trust busting</option>
+            <option letter="b">Social welfare reform</option>
+            <option letter="c">Conservation</option>
+            <option letter="d">Political reform</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The rapid growth of settlement houses reflects Progressives' emphasis on social welfare reform, particularly in addressing urban poverty and immigrant integration through direct community service.</explanation>
+    </question>
+    <question>
+        <stimulus>"The masters of the government of the United States are the combined capitalists and manufacturers of the United States... The government of the United States at present is a foster-child of the special interests."
+- Woodrow Wilson, The New Freedom, 1913</stimulus>
+        <prompt>Wilson's criticism most directly led to which Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">The Federal Reserve Act</option>
+            <option letter="b">The Clayton Antitrust Act</option>
+            <option letter="c">The Pure Food and Drug Act</option>
+            <option letter="d">The Adamson Act</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Wilson's criticism of business control over government led to the Clayton Antitrust Act of 1914, which strengthened federal power to break up monopolies and protect competition.</explanation>
+    </question>
+    <question>
+        <stimulus>[Map showing states with women's suffrage before 1920: Western states colored, Eastern states uncolored, with dates of state-level suffrage adoption]</stimulus>
+        <prompt>The pattern shown on this map most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Greater urban development in the West</option>
+            <option letter="b">Western states' desire to attract women settlers</option>
+            <option letter="c">Lower immigrant populations in the East</option>
+            <option letter="d">Different religious traditions by region</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Western states were the first to grant women's suffrage, largely to attract women settlers to their territories and newly-formed states, where women were scarce and seen as civilizing influences.</explanation>
+    </question>
+</quiz>

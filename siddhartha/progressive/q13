@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The masters of the government of the United States are the combined capitalists and manufacturers of the United States... There was no place they could occupy in our great American industries they did not already hold. They were apparently not satisfied with that. They wanted to occupy the seat of government to determine what our laws should be."
+- Woodrow Wilson, The New Freedom, 1913</stimulus>
+        <prompt>This criticism most directly led to the passage of which Progressive Era legislation?</prompt>
+        <options>
+            <option letter="a">The Federal Reserve Act</option>
+            <option letter="b">The Clayton Antitrust Act</option>
+            <option letter="c">The Adamson Act</option>
+            <option letter="d">The Federal Trade Commission Act</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Wilson's criticism of business control over government led to the Clayton Antitrust Act of 1914, which strengthened antitrust regulations and protected labor unions from antitrust prosecution.</explanation>
+    </question>
+    <question>
+        <stimulus>[Series of photographs showing improvements in urban sanitation, including new sewer systems, garbage collection, and street cleaning programs, 1890-1920]</stimulus>
+        <prompt>These urban reforms most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Federal mandates</option>
+            <option letter="b">Public health campaigns</option>
+            <option letter="c">Corporate philanthropy</option>
+            <option letter="d">Labor union demands</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Progressive Era public health campaigns, supported by scientific understanding of disease transmission, led to improved urban sanitation systems and public health measures.</explanation>
+    </question>
+    <question>
+        <stimulus>"The industrial situation is acute, characterized by the most numerous and extensive strikes that have ever occurred... There is great unrest among the workers of the nation."
+- Report of the Commission on Industrial Relations, 1915</stimulus>
+        <prompt>Which Progressive Era development most directly addressed these concerns?</prompt>
+        <options>
+            <option letter="a">The Square Deal</option>
+            <option letter="b">The New Freedom</option>
+            <option letter="c">The New Nationalism</option>
+            <option letter="d">The New Democracy</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Roosevelt's New Nationalism platform specifically addressed labor unrest by advocating stronger federal regulation of business and protection of labor rights.</explanation>
+    </question>
+    <question>
+        <stimulus>[Map showing the spread of women's suffrage across states, with dates of adoption, revealing a clear west-to-east pattern]</stimulus>
+        <prompt>This pattern of adoption most directly reflected:</prompt>
+        <options>
+            <option letter="a">Population density differences</option>
+            <option letter="b">Economic development levels</option>
+            <option letter="c">Western states' political culture</option>
+            <option letter="d">Immigration patterns</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Western states' more progressive political culture, including greater openness to reform and women's rights, led them to adopt women's suffrage earlier than eastern states.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The white man needs to be saved from himself, from his greed, his selfishness... The establishment of a National Forest Service, the preservation of national resources... these are all manifestations of this movement."
+- Gifford Pinchot, The Fight for Conservation, 1910</stimulus>
+        <prompt>This excerpt best reflects the Progressive Era belief that:</prompt>
+        <options>
+            <option letter="a">Government should actively manage natural resources</option>
+            <option letter="b">States should control federal lands</option>
+            <option letter="c">Private industry should regulate itself</option>
+            <option letter="d">Native Americans should control their territories</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Pinchot's conservation philosophy emphasized active government management of natural resources for sustainable use, a key Progressive Era reform principle.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a woman wearing a sash labeled "Votes for Women" standing between a saloon keeper and a corrupt politician, both looking worried]</stimulus>
+        <prompt>This cartoon most directly reflects the connection between which two Progressive Era movements?</prompt>
+        <options>
+            <option letter="a">Women's suffrage and temperance</option>
+            <option letter="b">Labor reform and education</option>
+            <option letter="c">Conservation and urban reform</option>
+            <option letter="d">Immigration restriction and civil service reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The cartoon illustrates the alliance between the women's suffrage and temperance movements, as many suffragists believed women's votes would help achieve prohibition.</explanation>
+    </question>
+    <question>
+        <stimulus>"The Negro needs neither segregated schools nor mixed schools. What he needs is Education... The Negro needs neither black leaders nor white leaders. What he needs is Justice."
+- Kelly Miller, Race Adjustment, 1908</stimulus>
+        <prompt>This perspective most directly challenged which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">Jim Crow laws</option>
+            <option letter="b">Settlement houses</option>
+            <option letter="c">Municipal reform</option>
+            <option letter="d">Trust regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Miller's argument directly challenged the expansion of Jim Crow segregation laws, which many self-proclaimed Progressives either supported or failed to oppose.</explanation>
+    </question>
+    <question>
+        <stimulus>[Table showing growth of city manager governments: 1908: 1 city, 1914: 25 cities, 1920: 143 cities, showing significant increases in efficiency measures]</stimulus>
+        <prompt>This trend most directly reflected the Progressive Era emphasis on:</prompt>
+        <options>
+            <option letter="a">Scientific management in government</option>
+            <option letter="b">Direct democracy</option>
+            <option letter="c">Social welfare programs</option>
+            <option letter="d">Labor rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The adoption of city manager governments reflected the Progressive emphasis on applying scientific management principles to make government more efficient and professional.</explanation>
+    </question>
+</quiz>
