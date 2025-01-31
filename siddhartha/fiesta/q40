@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in productivity growth affect the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Always increases the natural rate</option>
+            <option letter="b">Tends to decrease the natural rate</option>
+            <option letter="c">Has no effect on the natural rate</option>
+            <option letter="d">Only affects cyclical unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased productivity growth tends to decrease the natural rate of unemployment by creating more job opportunities and reducing structural unemployment as the economy becomes more efficient.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the aggregate price level when the economy corrects from an inflationary gap?</prompt>
+        <options>
+            <option letter="a">Price level rises continuously</option>
+            <option letter="b">Price level falls</option>
+            <option letter="c">Price level remains constant</option>
+            <option letter="d">Price level becomes more volatile</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When an inflationary gap corrects, the price level falls as wages and prices adjust downward, bringing actual GDP back to potential GDP and reducing inflationary pressures.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in government transfer payments affect the size of automatic stabilizers?</prompt>
+        <options>
+            <option letter="a">Reduces the impact of automatic stabilizers</option>
+            <option letter="b">Increases the impact of automatic stabilizers</option>
+            <option letter="c">Has no effect on automatic stabilizers</option>
+            <option letter="d">Only affects discretionary policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in government transfer payments increases the impact of automatic stabilizers because more income support is automatically provided during economic downturns.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the foreign trade effect when domestic prices rise relative to foreign prices?</prompt>
+        <options>
+            <option letter="a">Domestic exports increase</option>
+            <option letter="b">Net exports decrease</option>
+            <option letter="c">Trade balance improves</option>
+            <option letter="d">Has no effect on trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When domestic prices rise relative to foreign prices, net exports decrease because domestic goods become relatively more expensive, reducing exports and increasing imports.</explanation>
+    </question>
+</quiz>

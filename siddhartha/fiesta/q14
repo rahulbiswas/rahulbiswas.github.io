@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which best describes the relationship between real GDP and standard of living?</prompt>
+        <options>
+            <option letter="a">They are exactly the same thing</option>
+            <option letter="b">Real GDP per capita is a rough proxy for standard of living</option>
+            <option letter="c">Standard of living determines real GDP</option>
+            <option letter="d">They are inversely related</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP per capita provides a rough measure of living standards, as it shows average output per person, but it doesn't capture non-economic factors like leisure time, environmental quality, or income distribution.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in net exports affect aggregate demand?</prompt>
+        <options>
+            <option letter="a">Shifts AD left</option>
+            <option letter="b">Shifts AD right</option>
+            <option letter="c">Moves along the AD curve</option>
+            <option letter="d">Has no effect on AD</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in net exports (exports minus imports) represents increased spending on domestic goods and services, shifting the aggregate demand curve to the right.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the natural rate of unemployment when structural unemployment increases?</prompt>
+        <options>
+            <option letter="a">Natural rate decreases</option>
+            <option letter="b">Natural rate increases</option>
+            <option letter="c">Natural rate stays the same</option>
+            <option letter="d">Natural rate becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The natural rate of unemployment increases when structural unemployment rises because structural unemployment is a component of the natural rate, along with frictional unemployment.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which is a limitation of using GDP to measure economic well-being?</prompt>
+        <options>
+            <option letter="a">It doesn't measure intermediate goods</option>
+            <option letter="b">It doesn't include imported goods</option>
+            <option letter="c">It doesn't account for environmental damage</option>
+            <option letter="d">It doesn't measure government spending</option>
+        </options>
+        <answer>c</answer>
+        <explanation>GDP doesn't account for environmental damage or resource depletion caused by economic activity. These negative externalities can reduce well-being even as GDP grows.</explanation>
+    </question>
+</quiz>

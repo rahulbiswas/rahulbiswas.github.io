@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which would be classified as an injection in the circular flow model?</prompt>
+        <options>
+            <option letter="a">Household savings</option>
+            <option letter="b">Tax payments</option>
+            <option letter="c">Import purchases</option>
+            <option letter="d">Export sales</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Export sales represent an injection into the circular flow because they bring new spending into the domestic economy from foreign buyers, increasing the flow of money in the domestic economy.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in the capital stock affect potential GDP?</prompt>
+        <options>
+            <option letter="a">Decreases potential GDP</option>
+            <option letter="b">Increases potential GDP</option>
+            <option letter="c">Has no effect on potential GDP</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital stock (machines, buildings, equipment) increases potential GDP by expanding the economy's productive capacity, shifting the LRAS curve to the right.</explanation>
+    </question>
+
+    <question>
+        <prompt>What distinguishes expansionary fiscal policy from expansionary monetary policy?</prompt>
+        <options>
+            <option letter="a">Only fiscal policy affects interest rates</option>
+            <option letter="b">Only monetary policy affects aggregate demand</option>
+            <option letter="c">Fiscal policy uses government spending and taxes, while monetary policy uses money supply and interest rates</option>
+            <option letter="d">Fiscal policy is always more effective</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Expansionary fiscal policy uses increased government spending or decreased taxes, while expansionary monetary policy uses increased money supply or decreased interest rates to stimulate the economy.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an appreciation of the domestic currency affect net exports?</prompt>
+        <options>
+            <option letter="a">Increases exports and decreases imports</option>
+            <option letter="b">Decreases exports and increases imports</option>
+            <option letter="c">Increases both exports and imports</option>
+            <option letter="d">Decreases both exports and imports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Currency appreciation makes domestic goods more expensive for foreigners (reducing exports) and foreign goods cheaper for domestic buyers (increasing imports), thus reducing net exports.</explanation>
+    </question>
+</quiz>

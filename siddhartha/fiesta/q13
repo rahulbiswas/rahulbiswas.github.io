@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What characterizes the adjustment process in a recessionary gap without government intervention?</prompt>
+        <options>
+            <option letter="a">Immediate price increases to restore equilibrium</option>
+            <option letter="b">Gradual wage and price decreases until full employment</option>
+            <option letter="c">Rapid increase in government spending</option>
+            <option letter="d">Immediate return to potential GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In a recessionary gap, wages and prices gradually decrease due to high unemployment and excess capacity. This process continues until lower production costs lead to increased output and employment.</explanation>
+    </question>
+
+    <question>
+        <prompt>If the labor force is 160 million and the number of unemployed is 8 million, what is the unemployment rate?</prompt>
+        <options>
+            <option letter="a">5%</option>
+            <option letter="b">8%</option>
+            <option letter="c">20%</option>
+            <option letter="d">95%</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The unemployment rate is (Number of Unemployed/Labor Force) × 100 = (8 million/160 million) × 100 = 5%. This represents the percentage of the labor force that is unemployed.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which group is most likely to benefit from unexpected deflation?</prompt>
+        <options>
+            <option letter="a">Borrowers with fixed-rate loans</option>
+            <option letter="b">People with fixed nominal wages</option>
+            <option letter="c">People with large cash savings</option>
+            <option letter="d">Exporters selling goods abroad</option>
+        </options>
+        <answer>c</answer>
+        <explanation>People with large cash savings benefit from unexpected deflation because their money's purchasing power increases as prices fall, while the nominal value of their savings remains constant.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to potential GDP when there is an increase in the quality of education?</prompt>
+        <options>
+            <option letter="a">Decreases as costs rise</option>
+            <option letter="b">Increases due to higher productivity</option>
+            <option letter="c">Stays the same</option>
+            <option letter="d">Changes only if actual GDP changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in education quality improves human capital and worker productivity, which increases the economy's potential GDP by shifting the Long-Run Aggregate Supply curve to the right.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the natural rate of unemployment when job search efficiency increases?</prompt>
+        <options>
+            <option letter="a">Natural rate increases</option>
+            <option letter="b">Natural rate decreases</option>
+            <option letter="c">Natural rate stays the same</option>
+            <option letter="d">Natural rate becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When job search efficiency increases (through better technology or information), the natural rate of unemployment decreases because frictional unemployment falls as people find jobs more quickly.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does the interest rate effect contribute to the downward slope of the AD curve?</prompt>
+        <options>
+            <option letter="a">Higher prices increase interest rates, reducing investment and consumption</option>
+            <option letter="b">Higher prices decrease interest rates, increasing investment and consumption</option>
+            <option letter="c">Higher prices have no effect on interest rates</option>
+            <option letter="d">Interest rates only affect government spending</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Higher prices increase money demand, raising interest rates, which reduces investment and interest-sensitive consumption spending, contributing to the inverse relationship between price level and aggregate demand.</explanation>
+    </question>
+
+    <question>
+        <prompt>What determines the steepness of the Short-Run Aggregate Supply curve?</prompt>
+        <options>
+            <option letter="a">The unemployment rate</option>
+            <option letter="b">The inflation rate</option>
+            <option letter="c">The degree of wage and price stickiness</option>
+            <option letter="d">The size of the money supply</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The degree of wage and price stickiness determines how steep the SRAS curve is. More sticky wages and prices make the curve steeper because output responds less to price level changes.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in labor productivity affect unit labor costs?</prompt>
+        <options>
+            <option letter="a">Unit labor costs increase</option>
+            <option letter="b">Unit labor costs decrease</option>
+            <option letter="c">Unit labor costs stay the same</option>
+            <option letter="d">Effect depends on wage changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor productivity decreases unit labor costs because more output is produced per worker, spreading labor costs over more units of output, assuming wages don't increase proportionally.</explanation>
+    </question>
+</quiz>

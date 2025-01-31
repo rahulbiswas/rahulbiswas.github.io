@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in transfer payments affect GDP?</prompt>
+        <options>
+            <option letter="a">Directly increases GDP by the amount of the payments</option>
+            <option letter="b">Directly decreases GDP by the amount of the payments</option>
+            <option letter="c">Has no direct effect on GDP</option>
+            <option letter="d">Always increases GDP by more than the payment amount</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Transfer payments (like Social Security or unemployment benefits) are not included in GDP calculations because they don't represent current production. They may indirectly affect GDP through increased consumer spending.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which factor would cause the Long-Run Aggregate Supply curve to shift left?</prompt>
+        <options>
+            <option letter="a">An increase in the capital stock</option>
+            <option letter="b">A decrease in the labor force</option>
+            <option letter="c">Technological advancement</option>
+            <option letter="d">Improved education and training</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A decrease in the labor force reduces the economy's productive capacity, shifting the LRAS curve left as the economy's potential output decreases at all price levels.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to cyclical unemployment during an economic boom?</prompt>
+        <options>
+            <option letter="a">Increases above the natural rate</option>
+            <option letter="b">Decreases below zero</option>
+            <option letter="c">Approaches zero</option>
+            <option letter="d">Remains at the natural rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During an economic boom, cyclical unemployment approaches zero as aggregate demand is high and firms hire more workers. Only frictional and structural unemployment remain.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which economic indicator most directly measures changes in the cost of living?</prompt>
+        <options>
+            <option letter="a">GDP deflator</option>
+            <option letter="b">Consumer Price Index</option>
+            <option letter="c">Producer Price Index</option>
+            <option letter="d">Nominal GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Consumer Price Index (CPI) most directly measures changes in the cost of living because it tracks price changes in a fixed basket of consumer goods and services commonly purchased by households.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What is the primary difference between a recession and a growth recession?</prompt>
+        <options>
+            <option letter="a">A recession shows negative GDP growth, a growth recession shows slow positive growth</option>
+            <option letter="b">A recession affects GDP, a growth recession affects only employment</option>
+            <option letter="c">A recession is longer, a growth recession is shorter</option>
+            <option letter="d">A recession is domestic, a growth recession is international</option>
+        </options>
+        <answer>a</answer>
+        <explanation>A recession involves negative GDP growth (declining real GDP), while a growth recession involves positive but slower-than-normal GDP growth that may still lead to rising unemployment.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in productivity growth affect the Phillips Curve in the long run?</prompt>
+        <options>
+            <option letter="a">Shifts it right</option>
+            <option letter="b">Shifts it left</option>
+            <option letter="c">Makes it more vertical</option>
+            <option letter="d">Has no effect on long-run Phillips Curve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased productivity growth shifts the long-run Phillips Curve left because it allows for lower unemployment at any given inflation rate by improving the economy's productive efficiency.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the money multiplier when banks become more risk-averse?</prompt>
+        <options>
+            <option letter="a">Increases as banks seek more profits</option>
+            <option letter="b">Decreases as banks hold more excess reserves</option>
+            <option letter="c">Stays the same despite bank behavior</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When banks become more risk-averse, they hold more excess reserves and lend less, reducing the money multiplier as each dollar of reserves creates less money in the banking system.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in income taxes affect the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Has no effect on the multiplier</option>
+            <option letter="d">Reverses the multiplier's direction</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in income taxes reduces the government spending multiplier because it decreases the amount of additional income that gets spent in each round, acting as an automatic stabilizer.</explanation>
+    </question>
+</quiz>

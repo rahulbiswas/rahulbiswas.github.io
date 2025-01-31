@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The aggregate demand curve slopes downward primarily because of:</prompt>
+        <options>
+            <option letter="a">The law of diminishing returns</option>
+            <option letter="b">The wealth effect, interest rate effect, and foreign trade effect</option>
+            <option letter="c">Sticky wages and prices</option>
+            <option letter="d">Resource mobility</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The aggregate demand curve slopes downward due to three effects: the wealth effect (real balances), the interest rate effect, and the foreign trade effect (exchange rate), all occurring when the price level changes.</explanation>
+    </question>
+
+    <question>
+        <prompt>A recessionary gap occurs when:</prompt>
+        <options>
+            <option letter="a">Actual real GDP exceeds potential real GDP</option>
+            <option letter="b">Actual real GDP equals potential real GDP</option>
+            <option letter="c">Actual real GDP is less than potential real GDP</option>
+            <option letter="d">The price level is too high</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A recessionary gap exists when actual real GDP is below potential real GDP, indicating the economy is operating below its full employment level and resources are being underutilized.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which of the following would cause the Long-Run Aggregate Supply curve to shift right?</prompt>
+        <options>
+            <option letter="a">An increase in the minimum wage</option>
+            <option letter="b">A decrease in the labor force</option>
+            <option letter="c">Technological advancement</option>
+            <option letter="d">A decrease in capital investment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Technological advancement increases the economy's productive capacity and potential GDP, shifting the Long-Run Aggregate Supply curve to the right as the economy can produce more output at any price level.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does the economy self-correct from an inflationary gap without government intervention?</prompt>
+        <options>
+            <option letter="a">Through immediate price increases</option>
+            <option letter="b">Through falling wages and prices as workers lose jobs</option>
+            <option letter="c">Through flexible wages adjusting upward to reduce output</option>
+            <option letter="d">Through increasing interest rates automatically</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In an inflationary gap, excess demand for labor pushes wages up, increasing production costs. This eventually reduces output and employment until the economy returns to its potential GDP level.</explanation>
+    </question>
+</quiz>

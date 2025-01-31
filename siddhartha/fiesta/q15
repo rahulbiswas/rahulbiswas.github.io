@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in business confidence affect the economy?</prompt>
+        <options>
+            <option letter="a">Shifts only the LRAS curve right</option>
+            <option letter="b">Shifts only the SRAS curve right</option>
+            <option letter="c">Shifts the AD curve right</option>
+            <option letter="d">Has no effect on any curve</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Increased business confidence leads to more investment spending, which is a component of aggregate demand. This shifts the AD curve to the right as businesses invest more in capital and inventory.</explanation>
+    </question>
+
+    <question>
+        <prompt>If an economy has 100 million adults, 60 million employed, and 6 million unemployed, what is the labor force participation rate?</prompt>
+        <options>
+            <option letter="a">60%</option>
+            <option letter="b">66%</option>
+            <option letter="c">6%</option>
+            <option letter="d">94%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Labor force = Employed + Unemployed = 66 million. Labor force participation rate = (Labor Force/Adult Population) × 100 = (66 million/100 million) × 100 = 66%</explanation>
+    </question>
+
+    <question>
+        <prompt>What is the main reason the aggregate demand curve slopes downward?</prompt>
+        <options>
+            <option letter="a">The law of diminishing returns</option>
+            <option letter="b">The wealth effect, interest rate effect, and foreign trade effect</option>
+            <option letter="c">Sticky wages and prices</option>
+            <option letter="d">Government regulations</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The AD curve slopes downward due to three effects when prices change: the wealth effect (real balances), the interest rate effect, and the foreign trade effect (exchange rates).</explanation>
+    </question>
+
+    <question>
+        <prompt>Which type of unemployment would increase during a recession?</prompt>
+        <options>
+            <option letter="a">Frictional unemployment</option>
+            <option letter="b">Structural unemployment</option>
+            <option letter="c">Cyclical unemployment</option>
+            <option letter="d">Natural unemployment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Cyclical unemployment increases during recessions as businesses lay off workers due to decreased aggregate demand. This type of unemployment is above and beyond the natural rate.</explanation>
+    </question>
+</quiz>

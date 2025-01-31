@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the civilian adult population is 200 million and the labor force is 140 million, what is the labor force participation rate?</prompt>
+        <options>
+            <option letter="a">60%</option>
+            <option letter="b">70%</option>
+            <option letter="c">30%</option>
+            <option letter="d">40%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The labor force participation rate is (Labor Force/Adult Population) × 100 = (140 million/200 million) × 100 = 70%. This shows the percentage of adults who are either working or looking for work.</explanation>
+    </question>
+
+    <question>
+        <prompt>When the economy self-corrects from a recessionary gap, what happens to wages?</prompt>
+        <options>
+            <option letter="a">Wages rise immediately</option>
+            <option letter="b">Wages remain constant</option>
+            <option letter="c">Wages fall, leading to increased employment</option>
+            <option letter="d">Wages become more rigid</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In a recessionary gap, excess unemployment puts downward pressure on wages. As wages fall, firms hire more workers and increase production, moving the economy back toward potential GDP.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which component of aggregate demand is most sensitive to interest rate changes?</prompt>
+        <options>
+            <option letter="a">Consumer spending</option>
+            <option letter="b">Investment spending</option>
+            <option letter="c">Government spending</option>
+            <option letter="d">Net exports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Investment spending is most sensitive to interest rate changes because businesses carefully evaluate borrowing costs when deciding on capital investments like new equipment or facilities.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the unemployment rate if discouraged workers re-enter the labor force?</prompt>
+        <options>
+            <option letter="a">It decreases</option>
+            <option letter="b">It increases</option>
+            <option letter="c">It stays the same</option>
+            <option letter="d">It cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When discouraged workers re-enter the labor force looking for work, they are counted as unemployed, causing the unemployment rate to increase even though economic conditions might be improving.</explanation>
+    </question>
+</quiz>

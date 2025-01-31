@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which best describes the relationship between the CPI and GDP deflator?</prompt>
+        <options>
+            <option letter="a">They always move in opposite directions</option>
+            <option letter="b">They measure exactly the same thing</option>
+            <option letter="c">CPI includes imported goods, GDP deflator only includes domestic production</option>
+            <option letter="d">GDP deflator includes imported goods, CPI only includes domestic goods</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The CPI includes imported consumer goods and excludes exports, while the GDP deflator only includes goods produced domestically and excludes imports but includes exports.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to aggregate demand when there is a negative wealth effect?</prompt>
+        <options>
+            <option letter="a">AD curve shifts right</option>
+            <option letter="b">AD curve shifts left</option>
+            <option letter="c">Movement along the AD curve</option>
+            <option letter="d">AD curve becomes steeper</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A negative wealth effect (such as falling asset prices) makes people feel poorer, causing them to reduce spending, which shifts the aggregate demand curve to the left.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in income tax rates affect the consumption function?</prompt>
+        <options>
+            <option letter="a">Shifts the consumption function up</option>
+            <option letter="b">Shifts the consumption function down</option>
+            <option letter="c">Makes the consumption function steeper</option>
+            <option letter="d">Makes the consumption function flatter</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in income tax rates reduces disposable income at every level of GDP, shifting the consumption function downward as people have less income available for consumption.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the labor force participation rate during a strong economic expansion?</prompt>
+        <options>
+            <option letter="a">Always decreases</option>
+            <option letter="b">Tends to increase</option>
+            <option letter="c">Remains constant</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a strong economic expansion, the labor force participation rate tends to increase as higher wages and better job prospects encourage more people to enter the labor force.</explanation>
+    </question>
+</quiz>

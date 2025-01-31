@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What is the main difference between seasonal and cyclical unemployment?</prompt>
+        <options>
+            <option letter="a">Seasonal follows a predictable pattern, cyclical depends on business cycles</option>
+            <option letter="b">Seasonal is permanent, cyclical is temporary</option>
+            <option letter="c">Seasonal affects all industries, cyclical affects only some</option>
+            <option letter="d">Seasonal is included in the natural rate, cyclical is not</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Seasonal unemployment follows predictable patterns based on time of year (like retail after holidays), while cyclical unemployment varies with unpredictable business cycle fluctuations in overall economic activity.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does accelerating inflation affect the relationship between nominal and real interest rates?</prompt>
+        <options>
+            <option letter="a">The gap between them narrows</option>
+            <option letter="b">The gap between them widens</option>
+            <option letter="c">They become equal</option>
+            <option letter="d">Their relationship becomes inverse</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Accelerating inflation causes the gap between nominal and real interest rates to widen because higher inflation rates lead to a larger difference between the nominal rate and the real return after accounting for inflation.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which best describes the short-run Phillips Curve?</prompt>
+        <options>
+            <option letter="a">A vertical line showing no relationship between inflation and unemployment</option>
+            <option letter="b">A downward-sloping curve showing a tradeoff between inflation and unemployment</option>
+            <option letter="c">An upward-sloping curve showing inflation and unemployment move together</option>
+            <option letter="d">A horizontal line showing constant inflation regardless of unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The short-run Phillips Curve is downward-sloping, showing a tradeoff between inflation and unemployment in the short run due to sticky wages and prices and imperfect information.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to velocity of money when people hold more precautionary balances?</prompt>
+        <options>
+            <option letter="a">Velocity increases</option>
+            <option letter="b">Velocity decreases</option>
+            <option letter="c">Velocity stays constant</option>
+            <option letter="d">Velocity becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When people hold more precautionary balances (keep more money for emergencies), the velocity of money decreases because money changes hands less frequently as people hold onto it longer.</explanation>
+    </question>
+</quiz>

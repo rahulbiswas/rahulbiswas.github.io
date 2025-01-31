@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which type of unemployment is most directly related to minimum wage laws?</prompt>
+        <options>
+            <option letter="a">Cyclical unemployment</option>
+            <option letter="b">Frictional unemployment</option>
+            <option letter="c">Structural unemployment</option>
+            <option letter="d">Seasonal unemployment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Structural unemployment is most directly related to minimum wage laws because these laws can create a mismatch between workers willing to work and employers willing to hire at the mandated wage rate.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the SRAS curve when worker productivity increases?</prompt>
+        <options>
+            <option letter="a">Shifts right</option>
+            <option letter="b">Shifts left</option>
+            <option letter="c">Moves along the curve</option>
+            <option letter="d">Becomes steeper</option>
+        </options>
+        <answer>a</answer>
+        <explanation>When worker productivity increases, firms can produce more output at any given price level, causing the Short-Run Aggregate Supply curve to shift right.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does the wealth effect influence aggregate demand?</prompt>
+        <options>
+            <option letter="a">Higher prices increase real wealth and spending</option>
+            <option letter="b">Higher prices reduce real wealth and spending</option>
+            <option letter="c">Higher prices have no effect on real wealth</option>
+            <option letter="d">Only affects international trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The wealth effect shows that higher prices reduce the real value (purchasing power) of people's wealth, causing them to spend less and contributing to the downward slope of the AD curve.</explanation>
+    </question>
+
+    <question>
+        <prompt>What determines the size of an inflationary gap?</prompt>
+        <options>
+            <option letter="a">The difference between actual and potential GDP</option>
+            <option letter="b">The difference between exports and imports</option>
+            <option letter="c">The difference between savings and investment</option>
+            <option letter="d">The difference between taxes and government spending</option>
+        </options>
+        <answer>a</answer>
+        <explanation>An inflationary gap is measured by the difference between actual GDP and potential GDP when actual GDP exceeds potential GDP, indicating the economy is operating above its full-employment level.</explanation>
+    </question>
+</quiz>
