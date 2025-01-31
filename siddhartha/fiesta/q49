@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in the required reserve ratio affect the money supply?</prompt>
+        <options>
+            <option letter="a">Increases the money supply</option>
+            <option letter="b">Decreases the money supply</option>
+            <option letter="c">Has no effect on money supply</option>
+            <option letter="d">Only affects the price level</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the required reserve ratio decreases the money supply because banks must hold more reserves against deposits, reducing their ability to create money through the lending process.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to potential GDP when the participation rate decreases?</prompt>
+        <options>
+            <option letter="a">Potential GDP increases</option>
+            <option letter="b">Potential GDP decreases</option>
+            <option letter="c">Potential GDP stays constant</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A decrease in the labor force participation rate reduces potential GDP because fewer workers are available to produce goods and services, lowering the economy's productive capacity.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in expected inflation affect investment spending?</prompt>
+        <options>
+            <option letter="a">Always increases investment</option>
+            <option letter="b">Tends to decrease investment</option>
+            <option letter="c">Has no effect on investment</option>
+            <option letter="d">Only affects consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Higher expected inflation tends to decrease investment spending because it typically leads to higher nominal interest rates and increases uncertainty about future returns on investment.</explanation>
+    </question>
+
+    <question>
+        <prompt>What effect does increased price flexibility have on macroeconomic adjustment?</prompt>
+        <options>
+            <option letter="a">Slows adjustment to shocks</option>
+            <option letter="b">Speeds adjustment to shocks</option>
+            <option letter="c">Has no effect on adjustment speed</option>
+            <option letter="d">Only affects wage adjustment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased price flexibility speeds up macroeconomic adjustment to shocks because prices can change more quickly to restore equilibrium in various markets.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in the money supply affect real GDP in the long run?</prompt>
+        <options>
+            <option letter="a">Increases real GDP proportionally</option>
+            <option letter="b">Decreases real GDP proportionally</option>
+            <option letter="c">Has no effect on real GDP</option>
+            <option letter="d">Effect depends on the inflation rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In the long run, money is neutral, meaning changes in the money supply affect nominal variables (like prices) but not real variables like real GDP, due to price and wage adjustment.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the purchasing power of fixed-income payments during periods of deflation?</prompt>
+        <options>
+            <option letter="a">Purchasing power decreases</option>
+            <option letter="b">Purchasing power increases</option>
+            <option letter="c">Purchasing power stays the same</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During deflation, the purchasing power of fixed-income payments increases because the same nominal amount of money can buy more goods and services as prices fall.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in government spending affect private investment in the short run?</prompt>
+        <options>
+            <option letter="a">Always increases private investment</option>
+            <option letter="b">May crowd out private investment</option>
+            <option letter="c">Has no effect on private investment</option>
+            <option letter="d">Only affects public investment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in government spending may crowd out private investment in the short run by raising interest rates, making it more expensive for private firms to borrow and invest.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to frictional unemployment when job matching technology improves?</prompt>
+        <options>
+            <option letter="a">Increases frictional unemployment</option>
+            <option letter="b">Decreases frictional unemployment</option>
+            <option letter="c">Has no effect on frictional unemployment</option>
+            <option letter="d">Only affects structural unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Improved job matching technology (like online job boards) decreases frictional unemployment by making it easier and faster for workers to find suitable job openings.</explanation>
+    </question>
+</quiz>

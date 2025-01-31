@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What is the relationship between real GDP and nominal GDP when the GDP deflator is 100?</prompt>
+        <options>
+            <option letter="a">Real GDP is greater than nominal GDP</option>
+            <option letter="b">Real GDP is less than nominal GDP</option>
+            <option letter="c">Real GDP equals nominal GDP</option>
+            <option letter="d">No relationship exists between them</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When the GDP deflator is 100 (base year), real GDP equals nominal GDP because prices in the current year are the same as in the base year, meaning no price level adjustment is needed.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which factor would most likely cause cost-push inflation?</prompt>
+        <options>
+            <option letter="a">An increase in consumer confidence</option>
+            <option letter="b">A decrease in government spending</option>
+            <option letter="c">A significant increase in raw material prices</option>
+            <option letter="d">An increase in exports</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A significant increase in raw material prices would cause cost-push inflation by increasing production costs, shifting the aggregate supply curve left and raising the price level even as output falls.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in net foreign investment affect the market for loanable funds?</prompt>
+        <options>
+            <option letter="a">Decreases demand for loanable funds</option>
+            <option letter="b">Increases demand for loanable funds</option>
+            <option letter="c">Increases supply of loanable funds</option>
+            <option letter="d">Has no effect on loanable funds</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in net foreign investment increases the demand for loanable funds because foreign investors need to borrow in domestic financial markets to fund their investments.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the government spending multiplier when the marginal propensity to save increases?</prompt>
+        <options>
+            <option letter="a">The multiplier increases</option>
+            <option letter="b">The multiplier decreases</option>
+            <option letter="c">The multiplier stays the same</option>
+            <option letter="d">The multiplier becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the marginal propensity to save increases, the government spending multiplier decreases because people save more of each additional dollar of income, reducing the amount that gets respent in subsequent rounds.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which of these is counted in GDP calculations?</prompt>
+        <options>
+            <option letter="a">The sale of a used car between private individuals</option>
+            <option letter="b">A stock market transaction</option>
+            <option letter="c">The production of a new factory machine</option>
+            <option letter="d">Social Security payments to retirees</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The production of a new factory machine is counted in GDP as investment spending because it represents new production of capital goods. Used goods, financial transactions, and transfer payments are not included in GDP.</explanation>
+    </question>
+
+    <question>
+        <prompt>What causes stagflation?</prompt>
+        <options>
+            <option letter="a">Only a decrease in aggregate demand</option>
+            <option letter="b">Only an increase in aggregate demand</option>
+            <option letter="c">A decrease in aggregate supply while aggregate demand remains stable</option>
+            <option letter="d">An increase in aggregate supply while aggregate demand remains stable</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Stagflation typically occurs when aggregate supply decreases (shifts left), causing both higher prices (inflation) and lower output (stagnation) simultaneously while aggregate demand remains relatively stable.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in the minimum wage affect the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Decreases the natural rate</option>
+            <option letter="b">Increases the natural rate</option>
+            <option letter="c">Has no effect on the natural rate</option>
+            <option letter="d">Only affects cyclical unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the minimum wage tends to increase the natural rate of unemployment by creating structural unemployment, as some workers' productivity may be worth less to employers than the higher mandated wage.</explanation>
+    </question>
+
+    <question>
+        <prompt>When the economy is at full employment, which type of unemployment exists?</prompt>
+        <options>
+            <option letter="a">Only cyclical unemployment</option>
+            <option letter="b">Only structural unemployment</option>
+            <option letter="c">Frictional and structural unemployment</option>
+            <option letter="d">No unemployment exists</option>
+        </options>
+        <answer>c</answer>
+        <explanation>At full employment, the economy experiences the natural rate of unemployment, which consists of frictional unemployment (normal job transitions) and structural unemployment (skill mismatches), but no cyclical unemployment.</explanation>
+    </question>
+</quiz>

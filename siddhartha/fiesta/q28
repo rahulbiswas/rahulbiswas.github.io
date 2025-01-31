@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to consumer spending when the wealth effect is positive?</prompt>
+        <options>
+            <option letter="a">Consumer spending decreases</option>
+            <option letter="b">Consumer spending increases</option>
+            <option letter="c">Consumer spending stays constant</option>
+            <option letter="d">Consumer spending becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A positive wealth effect occurs when consumers feel wealthier (due to rising asset values, for example), leading them to increase their spending as they perceive their wealth has increased.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does increased foreign investment affect domestic interest rates?</prompt>
+        <options>
+            <option letter="a">Always decreases interest rates</option>
+            <option letter="b">Always increases interest rates</option>
+            <option letter="c">Tends to lower interest rates by increasing loanable funds</option>
+            <option letter="d">Has no effect on interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Increased foreign investment tends to lower domestic interest rates by increasing the supply of loanable funds in the domestic financial market.</explanation>
+    </question>
+
+    <question>
+        <prompt>What characterizes a depression compared to a recession?</prompt>
+        <options>
+            <option letter="a">A depression is shorter but more severe</option>
+            <option letter="b">A depression is longer and more severe</option>
+            <option letter="c">A depression affects fewer sectors of the economy</option>
+            <option letter="d">A depression has higher inflation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A depression is characterized by a longer duration and more severe decline in economic activity than a recession, typically involving a GDP decline of more than 10% or lasting more than two years.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in government transfer payments affect the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Does not affect the multiplier</option>
+            <option letter="d">Reverses the multiplier's direction</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Transfer payments do not directly affect the government spending multiplier because they are not part of government purchases. They may indirectly affect aggregate demand through their impact on consumer spending.</explanation>
+    </question>
+</quiz>

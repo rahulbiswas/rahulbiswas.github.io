@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What is the primary difference between M1 and M2 money supply?</prompt>
+        <options>
+            <option letter="a">M1 includes credit cards while M2 doesn't</option>
+            <option letter="b">M1 is currency and checking accounts, M2 includes savings accounts and small time deposits</option>
+            <option letter="c">M1 is just coins while M2 includes paper money</option>
+            <option letter="d">M1 is international currency while M2 is domestic only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>M1 consists of the most liquid forms of money (currency and checking accounts), while M2 includes M1 plus less liquid forms like savings accounts and small time deposits.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does increased automation in production affect the LRAS curve?</prompt>
+        <options>
+            <option letter="a">Shifts LRAS left due to job losses</option>
+            <option letter="b">Shifts LRAS right due to increased productivity</option>
+            <option letter="c">Moves along the existing LRAS curve</option>
+            <option letter="d">Has no effect on LRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased automation represents technological advancement that increases productivity and productive capacity, shifting the Long-Run Aggregate Supply curve to the right.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the money multiplier when banks increase their excess reserves?</prompt>
+        <options>
+            <option letter="a">The multiplier increases</option>
+            <option letter="b">The multiplier decreases</option>
+            <option letter="c">The multiplier stays the same</option>
+            <option letter="d">The multiplier becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When banks hold more excess reserves, they loan out less money, reducing the money multiplier. This means each dollar of reserves creates fewer dollars of money supply.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which would most likely result in demand-pull inflation?</prompt>
+        <options>
+            <option letter="a">An increase in oil prices</option>
+            <option letter="b">A decrease in worker productivity</option>
+            <option letter="c">A large increase in government spending</option>
+            <option letter="d">An increase in business taxes</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A large increase in government spending would shift aggregate demand to the right, potentially causing demand-pull inflation as total spending in the economy increases relative to its productive capacity.</explanation>
+    </question>
+</quiz>

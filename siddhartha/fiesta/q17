@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which is an example of a leakage in the circular flow model?</prompt>
+        <options>
+            <option letter="a">Government spending</option>
+            <option letter="b">Investment by firms</option>
+            <option letter="c">Imports</option>
+            <option letter="d">Exports</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Imports represent a leakage from the circular flow because they are spending that flows out of the domestic economy to other countries. Other leakages include savings and taxes.</explanation>
+    </question>
+
+    <question>
+        <prompt>What typically happens to frictional unemployment during rapid economic growth?</prompt>
+        <options>
+            <option letter="a">Increases significantly</option>
+            <option letter="b">Decreases significantly</option>
+            <option letter="c">Remains relatively stable</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Frictional unemployment typically remains relatively stable even during economic growth because it represents normal job transitions and job searches that occur in any economy.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in productivity affect unit labor costs?</prompt>
+        <options>
+            <option letter="a">Increases unit labor costs</option>
+            <option letter="b">Decreases unit labor costs</option>
+            <option letter="c">Has no effect on unit labor costs</option>
+            <option letter="d">Effects cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in productivity decreases unit labor costs because more output is produced per unit of labor input, reducing the labor cost per unit of output.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the purchasing power of money during deflation?</prompt>
+        <options>
+            <option letter="a">Decreases proportionally</option>
+            <option letter="b">Increases proportionally</option>
+            <option letter="c">Stays the same</option>
+            <option letter="d">Becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During deflation (falling prices), the purchasing power of money increases because each unit of currency can buy more goods and services than before.</explanation>
+    </question>
+</quiz>

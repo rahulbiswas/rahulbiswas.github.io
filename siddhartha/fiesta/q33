@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in the capital stock affect labor productivity?</prompt>
+        <options>
+            <option letter="a">Decreases labor productivity</option>
+            <option letter="b">Increases labor productivity</option>
+            <option letter="c">Has no effect on labor productivity</option>
+            <option letter="d">Only affects capital productivity</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital stock increases labor productivity because workers have more or better equipment to work with, allowing them to produce more output per hour of work.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the aggregate price level when the economy moves from a recessionary gap to potential GDP?</prompt>
+        <options>
+            <option letter="a">Price level must decrease</option>
+            <option letter="b">Price level tends to increase</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Price level becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As the economy moves from a recessionary gap to potential GDP, the price level tends to increase because rising aggregate demand and resource utilization put upward pressure on prices.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in government transfer payments affect the labor force participation rate?</prompt>
+        <options>
+            <option letter="a">Always increases participation</option>
+            <option letter="b">Tends to decrease participation</option>
+            <option letter="c">Has no effect on participation</option>
+            <option letter="d">Only affects employed workers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in government transfer payments tends to decrease the labor force participation rate because higher benefits can reduce the incentive to work or search for employment.</explanation>
+    </question>
+
+    <question>
+        <prompt>What distinguishes demand-pull inflation from cost-push inflation?</prompt>
+        <options>
+            <option letter="a">Demand-pull affects prices, cost-push affects wages</option>
+            <option letter="b">Demand-pull comes from AD increases, cost-push from SRAS decreases</option>
+            <option letter="c">Demand-pull is temporary, cost-push is permanent</option>
+            <option letter="d">Demand-pull affects some sectors, cost-push affects all</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Demand-pull inflation results from increases in aggregate demand pulling up prices, while cost-push inflation results from decreases in aggregate supply pushing up prices due to higher production costs.</explanation>
+    </question>
+</quiz>
