@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the Arkansas Constitution of 1868?</prompt>
+        <options>
+            <option letter="a">Established universal male suffrage and public education</option>
+            <option letter="b">Restored Confederate control</option>
+            <option letter="c">Banned African American voting</option>
+            <option letter="d">Created segregation laws</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Arkansas Constitution of 1868 established universal male suffrage and created the state's first system of public education during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Brooks-Baxter War affect Arkansas?</prompt>
+        <options>
+            <option letter="a">Led to the end of Reconstruction in Arkansas</option>
+            <option letter="b">Strengthened Republican control</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Created economic prosperity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Brooks-Baxter War of 1874 resulted in the end of Reconstruction in Arkansas and the return of conservative Democratic control.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Iron Clad Oath"?</prompt>
+        <options>
+            <option letter="a">To prevent former Confederates from holding office</option>
+            <option letter="b">To support Confederate veterans</option>
+            <option letter="c">To regulate voting rights</option>
+            <option letter="d">To control labor contracts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Iron Clad Oath required individuals to swear they had never supported the Confederacy before holding public office, limiting former Confederates' political power.</explanation>
+    </question>
+    <question>
+        <prompt>What role did the "Pine Knot" strategy play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Intimidated African American voters through night raids</option>
+            <option letter="b">Protected freed slaves</option>
+            <option letter="c">Supported education reform</option>
+            <option letter="d">Promoted economic development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Pine Knot strategy involved night raids by white supremacists using burning pine knots to intimidate African American voters and Republican supporters.</explanation>
+    </question>
+</quiz>

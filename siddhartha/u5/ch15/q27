@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Union Leagues" in the South?</prompt>
+        <options>
+            <option letter="a">Organizations that helped freedmen exercise political rights</option>
+            <option letter="b">Confederate veteran groups</option>
+            <option letter="c">Northern business associations</option>
+            <option letter="d">Agricultural cooperatives</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union Leagues were organizations that helped freedmen exercise their new political rights, providing protection and education about voting and citizenship.</explanation>
+    </question>
+    <question>
+        <prompt>What impact did President Johnson's veto of the Freedmen's Bureau Bill have?</prompt>
+        <options>
+            <option letter="a">Increased conflict between Congress and the President</option>
+            <option letter="b">Strengthened Reconstruction efforts</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Expanded federal programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Johnson's veto of the Freedmen's Bureau Bill in 1866 intensified conflict between Congress and the President, leading to more radical Reconstruction measures.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Compromise of 1877 affect Northern Republicans?</prompt>
+        <options>
+            <option letter="a">Led them to abandon civil rights enforcement</option>
+            <option letter="b">Strengthened their commitment to reform</option>
+            <option letter="c">Increased their Southern support</option>
+            <option letter="d">Improved party unity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 marked Northern Republicans' abandonment of civil rights enforcement in favor of economic development and national reconciliation.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Dante's Defeat" campaign in Mississippi?</prompt>
+        <options>
+            <option letter="a">To intimidate African American voters through violence</option>
+            <option letter="b">To promote economic reform</option>
+            <option letter="c">To support education initiatives</option>
+            <option letter="d">To organize labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "Dante's Defeat" campaign used violence and intimidation to prevent African Americans from voting in Mississippi elections during Reconstruction.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the purpose of "apprenticeship" laws passed by Southern states after the Civil War?</prompt>
+        <options>
+            <option letter="a">To force African American children into labor contracts</option>
+            <option letter="b">To provide job training for freedmen</option>
+            <option letter="c">To establish technical schools</option>
+            <option letter="d">To create industrial programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Apprenticeship laws were part of the Black Codes, allowing courts to force African American children into labor contracts, often returning them to their former masters.</explanation>
+    </question>
+    <question>
+        <prompt>What role did P.B.S. Pinchback play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Served as the first African American governor in U.S. history</option>
+            <option letter="b">Led the Freedmen's Bureau</option>
+            <option letter="c">Commanded Union military forces</option>
+            <option letter="d">Headed the Republican Party</option>
+        </options>
+        <answer>a</answer>
+        <explanation>P.B.S. Pinchback became the first African American governor in U.S. history when he briefly served as Louisiana's governor during Reconstruction in 1872-73.</explanation>
+    </question>
+    <question>
+        <prompt>What was the "Mississippi Plan" of 1875?</prompt>
+        <options>
+            <option letter="a">A campaign of violence and intimidation to suppress black voting</option>
+            <option letter="b">An economic development program</option>
+            <option letter="c">A public education initiative</option>
+            <option letter="d">A land redistribution scheme</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Mississippi Plan was a coordinated campaign of violence, intimidation, and fraud used by Democrats to suppress black voting and restore white Democratic control.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the "Exodusters" movement?</prompt>
+        <options>
+            <option letter="a">Mass migration of African Americans to Kansas</option>
+            <option letter="b">Return of Confederate soldiers home</option>
+            <option letter="c">Movement of carpetbaggers to the South</option>
+            <option letter="d">Relocation of Native Americans</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Exodusters were African Americans who fled violence and oppression in the South, migrating to Kansas in 1879-80 in search of freedom and opportunity.</explanation>
+    </question>
+</quiz>

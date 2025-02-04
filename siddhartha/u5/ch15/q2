@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the purpose of the Freedmen's Bureau created in 1865?</prompt>
+        <options>
+            <option letter="a">To provide aid and education to former slaves and poor whites</option>
+            <option letter="b">To enforce military rule in the South</option>
+            <option letter="c">To collect Confederate war debts</option>
+            <option letter="d">To organize Southern political parties</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau was established to assist former slaves and poor whites with food, housing, education, and legal assistance during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was a major provision of the First Reconstruction Act of 1867?</prompt>
+        <options>
+            <option letter="a">Divided the South into five military districts</option>
+            <option letter="b">Granted immediate citizenship to all former slaves</option>
+            <option letter="c">Redistributed plantation lands to former slaves</option>
+            <option letter="d">Restored voting rights to Confederate leaders</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The First Reconstruction Act divided the former Confederacy into five military districts, each under the command of a Union general.</explanation>
+    </question>
+    <question>
+        <prompt>What was required of Southern states to be readmitted to the Union under Congressional Reconstruction?</prompt>
+        <options>
+            <option letter="a">Ratify the 14th Amendment and guarantee black male suffrage</option>
+            <option letter="b">Pay reparations to Northern states</option>
+            <option letter="c">Reject all former Confederate officials</option>
+            <option letter="d">Maintain a Union military presence indefinitely</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Southern states had to ratify the 14th Amendment and guarantee voting rights to black males before being readmitted to the Union under Congressional Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the Civil Rights Act of 1866?</prompt>
+        <options>
+            <option letter="a">It defined citizenship and guaranteed equal protection under the law</option>
+            <option letter="b">It established public education in the South</option>
+            <option letter="c">It provided land grants to former slaves</option>
+            <option letter="d">It created the Freedmen's Bureau</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Act of 1866 defined citizenship rights and made it illegal to deny these rights based on race, setting the foundation for the 14th Amendment.</explanation>
+    </question>
+</quiz>

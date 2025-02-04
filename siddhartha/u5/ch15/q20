@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Kirk-Holden War" in North Carolina?</prompt>
+        <options>
+            <option letter="a">Led to the first impeachment of a Southern governor</option>
+            <option letter="b">Resulted in Union victory</option>
+            <option letter="c">Established new voting rights</option>
+            <option letter="d">Created economic reforms</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Kirk-Holden War led to the impeachment of Governor William Holden after he used militia to combat Klan violence, marking the first impeachment of a state governor in U.S. history.</explanation>
+    </question>
+    <question>
+        <prompt>What was the primary purpose of the Reconstruction Act's requirement for new state constitutions?</prompt>
+        <options>
+            <option letter="a">To guarantee universal male suffrage and ratify the 14th Amendment</option>
+            <option letter="b">To restore Confederate leadership</option>
+            <option letter="c">To limit federal control</option>
+            <option letter="d">To reduce state debts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Reconstruction Act required Southern states to write new constitutions guaranteeing universal male suffrage and ratify the 14th Amendment before readmission to the Union.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Compromise of 1877 affect President Hayes's policies?</prompt>
+        <options>
+            <option letter="a">Led to reduced federal intervention in Southern affairs</option>
+            <option letter="b">Increased military presence in the South</option>
+            <option letter="c">Strengthened civil rights enforcement</option>
+            <option letter="d">Expanded Reconstruction programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 led Hayes to reduce federal intervention in Southern affairs, effectively ending Reconstruction and federal protection of civil rights.</explanation>
+    </question>
+    <question>
+        <prompt>What was the impact of the "Readjuster" movement in Virginia?</prompt>
+        <options>
+            <option letter="a">Created a biracial political coalition focused on debt reduction</option>
+            <option letter="b">Restored Confederate control</option>
+            <option letter="c">Increased state debt</option>
+            <option letter="d">Expanded slavery</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Readjuster movement created a successful biracial political coalition in Virginia focused on reducing state debt and supporting public education.</explanation>
+    </question>
+</quiz>

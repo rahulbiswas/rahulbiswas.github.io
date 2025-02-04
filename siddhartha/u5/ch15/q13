@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the outcome of the Supreme Court's decision in United States v. Cruikshank (1876)?</prompt>
+        <options>
+            <option letter="a">Limited federal power to protect civil rights against private citizens</option>
+            <option letter="b">Strengthened federal civil rights enforcement</option>
+            <option letter="c">Established voting rights protections</option>
+            <option letter="d">Banned racial segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Cruikshank decision severely limited federal power by ruling that the 14th Amendment only restricted state actions, not those of private citizens, weakening civil rights protection.</explanation>
+    </question>
+    <question>
+        <prompt>What was the primary purpose of Southern "Redeemer" governments?</prompt>
+        <options>
+            <option letter="a">To restore white Democratic control and reduce taxes</option>
+            <option letter="b">To promote racial equality</option>
+            <option letter="c">To support Reconstruction policies</option>
+            <option letter="d">To industrialize the South</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Redeemer governments sought to restore white Democratic control, reduce taxes and government spending, and limit the political rights gained by African Americans during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the Slaughterhouse Cases (1873)?</prompt>
+        <options>
+            <option letter="a">Limited the scope of the 14th Amendment's protection of civil rights</option>
+            <option letter="b">Expanded federal civil rights enforcement</option>
+            <option letter="c">Protected labor union rights</option>
+            <option letter="d">Regulated interstate commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Slaughterhouse Cases narrowly interpreted the 14th Amendment's privileges and immunities clause, limiting federal protection of civil rights and strengthening state powers.</explanation>
+    </question>
+    <question>
+        <prompt>What role did African American women play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Established mutual aid societies and schools</option>
+            <option letter="b">Served in Congress</option>
+            <option letter="c">Led military units</option>
+            <option letter="d">Owned large plantations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>African American women played crucial roles in establishing mutual aid societies, schools, and churches, while also working to support their families and communities during Reconstruction.</explanation>
+    </question>
+</quiz>
