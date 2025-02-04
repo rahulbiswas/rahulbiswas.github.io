@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Military Reconstruction Acts"?</prompt>
+        <options>
+            <option letter="a">Divided the South into military districts for federal control</option>
+            <option letter="b">Ended military presence</option>
+            <option letter="c">Supported Confederate authority</option>
+            <option letter="d">Restricted federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Military Reconstruction Acts divided the South into five military districts, placing them under federal military control to enforce Reconstruction policies.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Amnesty Act" of 1872 affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Restored political rights to former Confederates</option>
+            <option letter="b">Strengthened civil rights</option>
+            <option letter="c">Increased military control</option>
+            <option letter="d">Protected African Americans</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Amnesty Act of 1872 restored political rights to most former Confederates, weakening Republican control in the South.</explanation>
+    </question>
+    <question>
+        <prompt>What role did "Carpetbaggers" play in Southern politics?</prompt>
+        <options>
+            <option letter="a">Northerners who supported Republican Reconstruction</option>
+            <option letter="b">Confederate supporters</option>
+            <option letter="c">Democratic leaders</option>
+            <option letter="d">Southern businessmen</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Carpetbaggers were Northerners who moved South to support Republican Reconstruction policies and often held political positions.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Registration Boards"?</prompt>
+        <options>
+            <option letter="a">To register voters and enforce voting requirements</option>
+            <option letter="b">To restrict all voting</option>
+            <option letter="c">To support Confederate veterans</option>
+            <option letter="d">To manage property records</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Registration Boards were established to register voters and enforce voting requirements under Congressional Reconstruction policies.</explanation>
+    </question>
+</quiz>

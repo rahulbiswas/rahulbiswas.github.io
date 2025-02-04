@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the primary purpose of "Redemption Constitutions"?</prompt>
+        <options>
+            <option letter="a">To restrict African American rights and reduce state spending</option>
+            <option letter="b">To protect civil rights</option>
+            <option letter="c">To expand public education</option>
+            <option letter="d">To increase voter participation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Redemption Constitutions were adopted by Southern states to restrict African American rights and reduce state spending on public services after Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Labor Contract Laws" affect freed people?</prompt>
+        <options>
+            <option letter="a">Required annual labor contracts and restricted mobility</option>
+            <option letter="b">Provided fair labor conditions</option>
+            <option letter="c">Increased wages</option>
+            <option letter="d">Protected worker rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Labor Contract Laws required freedmen to sign annual labor contracts and restricted their mobility, effectively limiting their economic freedom.</explanation>
+    </question>
+    <question>
+        <prompt>What role did the "Knights of the White Camelia" play?</prompt>
+        <options>
+            <option letter="a">Terrorized African Americans and Republicans</option>
+            <option letter="b">Supported Reconstruction policies</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Promoted economic development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Knights of the White Camelia was a secret society that terrorized African Americans and Republicans to oppose Reconstruction policies.</explanation>
+    </question>
+    <question>
+        <prompt>What impact did the "Charleston Convention" of 1867 have?</prompt>
+        <options>
+            <option letter="a">Organized African American political participation</option>
+            <option letter="b">Supported Confederate interests</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Limited voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Charleston Convention of 1867 organized African American political participation and helped establish Republican control in South Carolina during Reconstruction.</explanation>
+    </question>
+</quiz>

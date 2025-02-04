@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the Compromise of 1877?</prompt>
+        <options>
+            <option letter="a">It ended Reconstruction by removing federal troops from the South</option>
+            <option letter="b">It established new civil rights legislation</option>
+            <option letter="c">It created the Freedmen's Bureau</option>
+            <option letter="d">It granted women's suffrage</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 resolved the disputed presidential election of 1876 and effectively ended Reconstruction by withdrawing federal troops from the South.</explanation>
+    </question>
+    <question>
+        <prompt>Who were the major candidates in the disputed presidential election of 1876?</prompt>
+        <options>
+            <option letter="a">Rutherford B. Hayes and Samuel Tilden</option>
+            <option letter="b">Ulysses S. Grant and Horace Greeley</option>
+            <option letter="c">James Garfield and Winfield Hancock</option>
+            <option letter="d">Abraham Lincoln and George McClellan</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Republican Rutherford B. Hayes and Democrat Samuel Tilden were the candidates in the disputed 1876 election, which was ultimately resolved by the Compromise of 1877.</explanation>
+    </question>
+    <question>
+        <prompt>What was promised to the South in the Compromise of 1877?</prompt>
+        <options>
+            <option letter="a">Federal aid for railroad construction and economic development</option>
+            <option letter="b">Continued military occupation</option>
+            <option letter="c">Expansion of civil rights protection</option>
+            <option letter="d">New public education funding</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise included promises of federal aid for Southern railroad construction and economic development, along with a cabinet position for a Southerner.</explanation>
+    </question>
+    <question>
+        <prompt>How many electoral votes were disputed in the 1876 election?</prompt>
+        <options>
+            <option letter="a">20 electoral votes</option>
+            <option letter="b">15 electoral votes</option>
+            <option letter="c">25 electoral votes</option>
+            <option letter="d">30 electoral votes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>20 electoral votes from four states (Florida, Louisiana, South Carolina, and one from Oregon) were disputed in the 1876 election.</explanation>
+    </question>
+</quiz>
