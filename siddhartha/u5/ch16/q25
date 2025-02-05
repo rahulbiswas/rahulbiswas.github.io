@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="97">
+        <prompt>What impact did the "air brake" have on railroad safety?</prompt>
+        <options>
+            <option letter="a">Dramatically reduced train accidents and increased efficiency</option>
+            <option letter="b">Increased operating costs</option>
+            <option letter="c">Limited train speeds</option>
+            <option letter="d">Reduced cargo capacity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Westinghouse's air brake system dramatically improved railroad safety by providing reliable braking power to all cars simultaneously, reducing accidents and enabling longer trains.</explanation>
+    </question>
+    <question number="98">
+        <prompt>How did the "company magazine" affect worker relations?</prompt>
+        <options>
+            <option letter="a">Promoted company loyalty and corporate culture</option>
+            <option letter="b">Increased worker dissent</option>
+            <option letter="c">Improved labor conditions</option>
+            <option letter="d">Protected worker rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Company magazines promoted corporate culture and worker loyalty while serving as a management tool to shape employee behavior and attitudes.</explanation>
+    </question>
+    <question number="99">
+        <prompt>What was the significance of the "block signal" system?</prompt>
+        <options>
+            <option letter="a">Improved railroad safety through traffic control</option>
+            <option letter="b">Reduced train speeds</option>
+            <option letter="c">Increased operating costs</option>
+            <option letter="d">Limited rail service</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The block signal system improved railroad safety by dividing tracks into sections and controlling train access through signal lights, reducing collisions.</explanation>
+    </question>
+    <question number="100">
+        <prompt>How did the "retail installment plan" change consumer behavior?</prompt>
+        <options>
+            <option letter="a">Made expensive goods accessible through payment plans</option>
+            <option letter="b">Reduced consumer spending</option>
+            <option letter="c">Limited product access</option>
+            <option letter="d">Increased product costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Retail installment plans made expensive goods accessible to average consumers by allowing payment over time, revolutionizing consumer culture and retail practices.</explanation>
+    </question></quiz>

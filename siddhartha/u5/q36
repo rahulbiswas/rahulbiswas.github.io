@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="141">
+        <prompt>What impact did the "gas light" have on urban life?</prompt>
+        <options>
+            <option letter="a">Extended business hours and improved public safety</option>
+            <option letter="b">Reduced urban activity</option>
+            <option letter="c">Increased fire hazards</option>
+            <option letter="d">Limited nighttime commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Gas lighting extended business hours and improved public safety in cities, transforming urban nightlife and commercial activities.</explanation>
+    </question>
+    <question number="142">
+        <prompt>How did the "time clock" affect labor management?</prompt>
+        <options>
+            <option letter="a">Standardized work hours and wage calculations</option>
+            <option letter="b">Reduced workplace efficiency</option>
+            <option letter="c">Increased worker autonomy</option>
+            <option letter="d">Limited production tracking</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Time clocks standardized work hours and wage calculations, increasing management control over labor and productivity tracking.</explanation>
+    </question>
+    <question number="143">
+        <prompt>What was the significance of the "circular saw"?</prompt>
+        <options>
+            <option letter="a">Increased lumber production efficiency</option>
+            <option letter="b">Reduced wood quality</option>
+            <option letter="c">Limited construction options</option>
+            <option letter="d">Raised production costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The circular saw dramatically increased lumber production efficiency, supporting the growth of construction and manufacturing industries.</explanation>
+    </question>
+    <question number="144">
+        <prompt>How did the "credit rating" system affect business?</prompt>
+        <options>
+            <option letter="a">Standardized assessment of business creditworthiness</option>
+            <option letter="b">Limited business growth</option>
+            <option letter="c">Increased borrowing costs</option>
+            <option letter="d">Reduced trade opportunities</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Credit rating systems standardized the assessment of business creditworthiness, facilitating commerce and financial transactions across distances.</explanation>
+    </question></quiz>

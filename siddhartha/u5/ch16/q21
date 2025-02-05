@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="81">
+        <prompt>What impact did the "gold standard" have on the economy?</prompt>
+        <options>
+            <option letter="a">Created monetary stability but limited money supply</option>
+            <option letter="b">Increased inflation rates</option>
+            <option letter="c">Expanded money supply</option>
+            <option letter="d">Reduced international trade</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The gold standard provided monetary stability but limited the money supply, leading to deflation and contributing to economic tensions between debtors and creditors.</explanation>
+    </question>
+    <question number="82">
+        <prompt>How did the "copy press" affect business communication?</prompt>
+        <options>
+            <option letter="a">Enabled efficient duplication of business documents</option>
+            <option letter="b">Slowed office work</option>
+            <option letter="c">Reduced document accuracy</option>
+            <option letter="d">Increased communication costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The copy press revolutionized business communication by allowing efficient duplication of letters and documents, improving record-keeping and correspondence.</explanation>
+    </question>
+    <question number="83">
+        <prompt>What was the significance of the "tank car" system?</prompt>
+        <options>
+            <option letter="a">Revolutionized bulk liquid transportation</option>
+            <option letter="b">Increased shipping costs</option>
+            <option letter="c">Limited oil distribution</option>
+            <option letter="d">Reduced transport efficiency</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Tank cars revolutionized the transportation of oil and other liquid products, enabling the efficient distribution of petroleum products nationwide.</explanation>
+    </question>
+    <question number="84">
+        <prompt>How did the "time clock" affect worker management?</prompt>
+        <options>
+            <option letter="a">Standardized work hours and wage calculation</option>
+            <option letter="b">Improved worker autonomy</option>
+            <option letter="c">Reduced productivity</option>
+            <option letter="d">Increased labor costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The time clock standardized the measurement of work hours and wage calculation, increasing management control over labor while reducing wage disputes.</explanation>
+    </question></quiz>

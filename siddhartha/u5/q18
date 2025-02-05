@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="69">
+        <prompt>What effect did the "pool system" have on railroad competition?</prompt>
+        <options>
+            <option letter="a">Reduced competition through market division agreements</option>
+            <option letter="b">Increased railway efficiency</option>
+            <option letter="c">Lowered shipping rates</option>
+            <option letter="d">Improved service quality</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Railroad pools divided markets and shared profits among competing lines, reducing competition and maintaining high rates despite their questionable legality.</explanation>
+    </question>
+    <question number="70">
+        <prompt>How did the "putting-out system" affect industrial production?</prompt>
+        <options>
+            <option letter="a">Transitioned manufacturing from homes to factories</option>
+            <option letter="b">Increased home production</option>
+            <option letter="c">Improved worker autonomy</option>
+            <option letter="d">Reduced production costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The decline of the putting-out system marked the transition from home-based manufacturing to centralized factory production, fundamentally changing industrial organization.</explanation>
+    </question>
+    <question number="71">
+        <prompt>What was the significance of "vertical farming" in cities?</prompt>
+        <options>
+            <option letter="a">Created multi-story commercial buildings</option>
+            <option letter="b">Developed urban agriculture</option>
+            <option letter="c">Reduced urban density</option>
+            <option letter="d">Improved housing conditions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Vertical development in cities, using new building technologies like steel frames and elevators, created modern commercial districts and transformed urban landscapes.</explanation>
+    </question>
+    <question number="72">
+        <prompt>How did the "scrip system" affect worker compensation?</prompt>
+        <options>
+            <option letter="a">Forced workers to use company currency</option>
+            <option letter="b">Increased worker wages</option>
+            <option letter="c">Improved purchasing power</option>
+            <option letter="d">Protected worker rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The scrip system forced workers to use company-issued currency at company stores, creating a cycle of debt and dependency on employers.</explanation>
+    </question></quiz>

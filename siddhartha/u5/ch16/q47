@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did urban parks have on city life?</prompt>
+        <options>
+            <option letter="a">They provided public recreation spaces and improved urban living conditions</option>
+            <option letter="b">They served only wealthy residents</option>
+            <option letter="c">They decreased property values</option>
+            <option letter="d">They had minimal social impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Urban parks like Central Park provided public recreation spaces, improved living conditions, and influenced urban planning and public health.</explanation>
+    </question>
+    <question>
+        <prompt>How did public libraries affect urban culture?</prompt>
+        <options>
+            <option letter="a">They provided free access to knowledge and promoted literacy</option>
+            <option letter="b">They served only educated elites</option>
+            <option letter="c">They decreased reading</option>
+            <option letter="d">They had minimal educational impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Public libraries provided free access to books and knowledge, promoted literacy, and created new public spaces for learning and culture.</explanation>
+    </question>
+    <question>
+        <prompt>What role did museums play in urban cultural life?</prompt>
+        <options>
+            <option letter="a">They established cultural institutions and provided public education</option>
+            <option letter="b">They served private collectors</option>
+            <option letter="c">They limited public access</option>
+            <option letter="d">They had minimal cultural impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Museums established important cultural institutions, provided public education, and helped create standards of artistic and cultural knowledge.</explanation>
+    </question>
+    <question>
+        <prompt>How did public markets affect urban food distribution?</prompt>
+        <options>
+            <option letter="a">They provided fresh food access and created community gathering spaces</option>
+            <option letter="b">They served only wealthy customers</option>
+            <option letter="c">They decreased food access</option>
+            <option letter="d">They had minimal community impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Public markets provided access to fresh food, created community gathering spaces, and played important roles in urban food distribution networks.</explanation>
+    </question>
+</quiz>

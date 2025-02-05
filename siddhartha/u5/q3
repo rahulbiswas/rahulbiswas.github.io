@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="9">
+        <prompt>What impact did the Grangers have on railroad regulation?</prompt>
+        <options>
+            <option letter="a">Successfully pushed for state regulation of railroad rates</option>
+            <option letter="b">Built competing railroad lines</option>
+            <option letter="c">Opposed all railroad development</option>
+            <option letter="d">Created private shipping companies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Granger movement successfully advocated for state laws regulating railroad rates, leading to the Supreme Court case Munn v. Illinois which upheld states' right to regulate business in the public interest.</explanation>
+    </question>
+    <question number="10">
+        <prompt>What was the significance of the "Long Drive" in the 1870s?</prompt>
+        <options>
+            <option letter="a">Connected cattle ranches to railroad shipping points</option>
+            <option letter="b">Established new farming techniques</option>
+            <option letter="c">Created transcontinental mail routes</option>
+            <option letter="d">Built new highways</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Long Drive cattle trails connected Texas ranches to railroad shipping points in Kansas, enabling the growth of the western cattle industry and meat-packing business.</explanation>
+    </question>
+    <question number="11">
+        <prompt>How did the invention of barbed wire affect the American West?</prompt>
+        <options>
+            <option letter="a">Ended the open range system of cattle ranching</option>
+            <option letter="b">Improved railroad construction</option>
+            <option letter="c">Created new mining techniques</option>
+            <option letter="d">Protected buffalo herds</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Barbed wire allowed farmers to cheaply fence large areas, ending the open range system and leading to conflict between farmers and ranchers in the West.</explanation>
+    </question>
+    <question number="12">
+        <prompt>What was the primary goal of the Knights of Labor?</prompt>
+        <options>
+            <option letter="a">To unite all workers in one large union</option>
+            <option letter="b">To support business owners</option>
+            <option letter="c">To promote racial segregation</option>
+            <option letter="d">To oppose immigration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Knights of Labor aimed to unite all workers, skilled and unskilled, into one large union, regardless of race, gender, or skill level - a radical idea for its time.</explanation>
+    </question></quiz>
