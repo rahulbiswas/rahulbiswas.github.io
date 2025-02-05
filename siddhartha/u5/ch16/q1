@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="1">
+        <prompt>What was the significance of the Bessemer process in the 1870s?</prompt>
+        <options>
+            <option letter="a">Made steel production faster and cheaper</option>
+            <option letter="b">Improved railroad construction techniques</option>
+            <option letter="c">Created new farming methods</option>
+            <option letter="d">Developed telegraph systems</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Bessemer process revolutionized steel production by making it significantly faster and cheaper, enabling the rapid growth of American industry and railroad construction.</explanation>
+    </question>
+    <question number="2">
+        <prompt>What sparked the Great Railroad Strike of 1877?</prompt>
+        <options>
+            <option letter="a">Wage cuts by the Baltimore & Ohio Railroad</option>
+            <option letter="b">Poor working conditions in factories</option>
+            <option letter="c">Immigration restrictions</option>
+            <option letter="d">New railroad regulations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Great Railroad Strike of 1877 began when the B&O Railroad cut wages by 10%, leading to the first major national strike in U.S. history.</explanation>
+    </question>
+    <question number="3">
+        <prompt>How did John D. Rockefeller create Standard Oil's monopoly?</prompt>
+        <options>
+            <option letter="a">Through horizontal and vertical integration</option>
+            <option letter="b">Government subsidies</option>
+            <option letter="c">Foreign investments</option>
+            <option letter="d">Railroad construction</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Rockefeller built Standard Oil's monopoly through horizontal integration (buying competitors) and vertical integration (controlling all aspects of production and distribution).</explanation>
+    </question>
+    <question number="4">
+        <prompt>What was the purpose of the Pendleton Civil Service Act of 1883?</prompt>
+        <options>
+            <option letter="a">To end the spoils system in federal hiring</option>
+            <option letter="b">To regulate railroad rates</option>
+            <option letter="c">To break up monopolies</option>
+            <option letter="d">To protect labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Pendleton Act established the civil service system, replacing the spoils system with merit-based hiring for federal jobs.</explanation>
+    </question></quiz>

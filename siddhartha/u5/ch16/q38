@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did the development of electrically powered factories have on industry?</prompt>
+        <options>
+            <option letter="a">They enabled more flexible factory design and increased productivity</option>
+            <option letter="b">They increased production costs</option>
+            <option letter="c">They decreased worker safety</option>
+            <option letter="d">They had minimal industrial impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Electric-powered factories enabled more flexible machinery placement, improved lighting, and increased productivity while reducing power transmission losses.</explanation>
+    </question>
+    <question>
+        <prompt>How did steam turbines change industrial power generation?</prompt>
+        <options>
+            <option letter="a">They provided more efficient and reliable power for large factories</option>
+            <option letter="b">They decreased power output</option>
+            <option letter="c">They increased fuel consumption</option>
+            <option letter="d">They had minimal energy impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Steam turbines provided more efficient and reliable power generation for large industrial operations, enabling expanded manufacturing capabilities.</explanation>
+    </question>
+    <question>
+        <prompt>What role did hydraulic power systems play in manufacturing?</prompt>
+        <options>
+            <option letter="a">They enabled new manufacturing processes and powered heavy machinery</option>
+            <option letter="b">They decreased industrial capability</option>
+            <option letter="c">They were limited to small tools</option>
+            <option letter="d">They had minimal production impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Hydraulic power systems enabled new manufacturing processes and powered heavy machinery, particularly in industries requiring precise force application.</explanation>
+    </question>
+    <question>
+        <prompt>How did compressed air systems affect industrial tools?</prompt>
+        <options>
+            <option letter="a">They created new portable power tools and improved manufacturing efficiency</option>
+            <option letter="b">They decreased tool effectiveness</option>
+            <option letter="c">They were too expensive</option>
+            <option letter="d">They had minimal tool impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Compressed air systems enabled the development of powerful portable tools and improved manufacturing efficiency through pneumatic power transmission.</explanation>
+    </question>
+</quiz>

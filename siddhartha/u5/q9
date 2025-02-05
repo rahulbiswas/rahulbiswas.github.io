@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="33">
+        <prompt>How did the "Great Upheaval" of 1877 change American labor relations?</prompt>
+        <options>
+            <option letter="a">Demonstrated the power of organized labor strikes</option>
+            <option letter="b">Led to immediate worker benefits</option>
+            <option letter="c">Created new labor laws</option>
+            <option letter="d">Unified all workers permanently</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Great Upheaval showed the potential power of organized labor through widespread strikes, though it also revealed the willingness of government to use force against strikers.</explanation>
+    </question>
+    <question number="34">
+        <prompt>What was the significance of the "Molly Maguires"?</prompt>
+        <options>
+            <option letter="a">Secret labor organization in Pennsylvania coal fields</option>
+            <option letter="b">Railroad workers union</option>
+            <option letter="c">Women's rights group</option>
+            <option letter="d">Political reform movement</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Molly Maguires were a secret organization of Irish coal miners who used violence to protest working conditions, leading to controversial trials and executions.</explanation>
+    </question>
+    <question number="35">
+        <prompt>How did the development of time zones affect American business?</prompt>
+        <options>
+            <option letter="a">Standardized railroad schedules and business operations</option>
+            <option letter="b">Complicated business transactions</option>
+            <option letter="c">Reduced working hours</option>
+            <option letter="d">Increased transportation costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The adoption of standard time zones in 1883, pushed by railroads, helped standardize business operations and transportation schedules across the country.</explanation>
+    </question>
+    <question number="36">
+        <prompt>What role did the Grange movement play in American agriculture?</prompt>
+        <options>
+            <option letter="a">Organized farmers to fight economic exploitation</option>
+            <option letter="b">Supported large corporations</option>
+            <option letter="c">Promoted urban development</option>
+            <option letter="d">Opposed railroad construction</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Grange organized farmers to fight economic exploitation by railroads and middlemen, leading to significant regulatory legislation in several states.</explanation>
+    </question></quiz>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="61">
+        <prompt>What was the impact of the "credit report" system?</prompt>
+        <options>
+            <option letter="a">Standardized business credit evaluation</option>
+            <option letter="b">Restricted business growth</option>
+            <option letter="c">Increased bankruptcy rates</option>
+            <option letter="d">Limited trade opportunities</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Credit reporting agencies like R.G. Dun & Company standardized business credit evaluation, facilitating long-distance trade and commercial expansion.</explanation>
+    </question>
+    <question number="62">
+        <prompt>How did the "chain store" system change retail?</prompt>
+        <options>
+            <option letter="a">Created standardized national retail networks</option>
+            <option letter="b">Increased product prices</option>
+            <option letter="c">Limited product availability</option>
+            <option letter="d">Reduced market competition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Chain stores created standardized retail networks across the country, offering consistent products and prices while achieving economies of scale.</explanation>
+    </question>
+    <question number="63">
+        <prompt>What effect did the "company doctor" system have?</prompt>
+        <options>
+            <option letter="a">Maintained worker health while extending company control</option>
+            <option letter="b">Improved medical care</option>
+            <option letter="c">Reduced workplace injuries</option>
+            <option letter="d">Protected worker rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The company doctor system provided basic medical care but also extended company control over workers' lives and often prioritized company interests over worker health.</explanation>
+    </question>
+    <question number="64">
+        <prompt>How did the "futures market" affect agriculture?</prompt>
+        <options>
+            <option letter="a">Created price speculation and risk management tools</option>
+            <option letter="b">Stabilized crop prices</option>
+            <option letter="c">Protected farmer interests</option>
+            <option letter="d">Reduced market volatility</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The futures market allowed for price speculation and risk management in agricultural commodities, though it often increased price volatility and farmer vulnerability.</explanation>
+    </question></quiz>

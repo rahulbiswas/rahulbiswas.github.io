@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="21">
+        <prompt>What was the significance of the "watered stock" practice?</prompt>
+        <options>
+            <option letter="a">Artificially inflated stock values</option>
+            <option letter="b">Improved company efficiency</option>
+            <option letter="c">Increased railroad safety</option>
+            <option letter="d">Protected investor interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Watered stock was the practice of artificially inflating stock values above their actual worth, allowing railroad companies to deceive investors and increase profits.</explanation>
+    </question>
+    <question number="22">
+        <prompt>How did the development of refrigerated rail cars change the meat industry?</prompt>
+        <options>
+            <option letter="a">Enabled nationwide distribution of fresh meat</option>
+            <option letter="b">Reduced meat consumption</option>
+            <option letter="c">Increased local butcher shops</option>
+            <option letter="d">Promoted vegetarianism</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Refrigerated rail cars allowed meat to be shipped long distances, leading to the rise of centralized meat-packing industries in cities like Chicago.</explanation>
+    </question>
+    <question number="23">
+        <prompt>What was the primary goal of the National Labor Union?</prompt>
+        <options>
+            <option letter="a">To establish an eight-hour workday</option>
+            <option letter="b">To prevent immigration</option>
+            <option letter="c">To support business owners</option>
+            <option letter="d">To promote racial segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Labor Union, founded in 1866, focused primarily on achieving an eight-hour workday for American workers through political action.</explanation>
+    </question>
+    <question number="24">
+        <prompt>How did the "rebate" system affect railroad competition?</prompt>
+        <options>
+            <option letter="a">Gave large shippers unfair advantages</option>
+            <option letter="b">Reduced shipping costs for all</option>
+            <option letter="c">Improved railroad efficiency</option>
+            <option letter="d">Protected small businesses</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The rebate system gave secret discounts to large shippers, allowing big businesses to undercut competitors and contributing to the formation of monopolies.</explanation>
+    </question></quiz>

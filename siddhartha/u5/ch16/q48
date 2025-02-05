@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did vaudeville theaters have on urban entertainment?</prompt>
+        <options>
+            <option letter="a">They created popular entertainment venues and mixed social classes</option>
+            <option letter="b">They served only elite audiences</option>
+            <option letter="c">They decreased entertainment options</option>
+            <option letter="d">They had minimal cultural impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Vaudeville theaters created popular entertainment venues that attracted diverse audiences and helped establish mass entertainment culture.</explanation>
+    </question>
+    <question>
+        <prompt>How did amusement parks affect urban recreation?</prompt>
+        <options>
+            <option letter="a">They provided mass entertainment and new forms of public leisure</option>
+            <option letter="b">They served wealthy patrons only</option>
+            <option letter="c">They decreased recreation options</option>
+            <option letter="d">They had minimal social impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Amusement parks created new forms of mass entertainment, provided affordable recreation, and established new patterns of public leisure.</explanation>
+    </question>
+    <question>
+        <prompt>What role did saloons play in working-class life?</prompt>
+        <options>
+            <option letter="a">They served as social centers and provided important community spaces</option>
+            <option letter="b">They only served alcohol</option>
+            <option letter="c">They decreased social interaction</option>
+            <option letter="d">They had minimal community impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Saloons served as important social centers for working-class communities, providing spaces for socializing, political organizing, and mutual aid.</explanation>
+    </question>
+    <question>
+        <prompt>How did penny arcades affect urban entertainment?</prompt>
+        <options>
+            <option letter="a">They created affordable entertainment and new forms of commercial leisure</option>
+            <option letter="b">They served only children</option>
+            <option letter="c">They decreased entertainment options</option>
+            <option letter="d">They had minimal social impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Penny arcades provided affordable entertainment, introduced new technologies like kinetoscopes, and helped establish commercial leisure culture.</explanation>
+    </question>
+</quiz>

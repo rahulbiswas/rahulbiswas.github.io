@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="157">
+        <prompt>What impact did the "cylinder press" have on publishing?</prompt>
+        <options>
+            <option letter="a">Increased printing speed and publication volume</option>
+            <option letter="b">Reduced print quality</option>
+            <option letter="c">Limited paper sizes</option>
+            <option letter="d">Raised production costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The cylinder press dramatically increased printing speed and publication volume, enabling the growth of mass-circulation newspapers and magazines.</explanation>
+    </question>
+    <question number="158">
+        <prompt>How did the "mercantile agency" affect business credit?</prompt>
+        <options>
+            <option letter="a">Provided standardized credit reporting services</option>
+            <option letter="b">Limited business lending</option>
+            <option letter="c">Increased credit costs</option>
+            <option letter="d">Reduced financial trust</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mercantile agencies provided standardized credit reporting services, helping businesses make informed decisions about potential business partners and customers.</explanation>
+    </question>
+    <question number="159">
+        <prompt>What was the significance of the "mechanical stoker"?</prompt>
+        <options>
+            <option letter="a">Automated coal feeding in industrial boilers</option>
+            <option letter="b">Reduced energy efficiency</option>
+            <option letter="c">Increased fuel costs</option>
+            <option letter="d">Limited power output</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mechanical stokers automated the feeding of coal into industrial boilers, improving efficiency and reducing labor costs in power generation.</explanation>
+    </question>
+    <question number="160">
+        <prompt>How did the "slide rule" affect engineering work?</prompt>
+        <options>
+            <option letter="a">Enabled quick complex calculations</option>
+            <option letter="b">Increased calculation errors</option>
+            <option letter="c">Limited design options</option>
+            <option letter="d">Reduced accuracy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The slide rule enabled engineers to perform complex calculations quickly and accurately, facilitating industrial design and construction projects.</explanation>
+    </question></quiz>

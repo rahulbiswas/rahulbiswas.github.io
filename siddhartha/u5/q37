@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="145">
+        <prompt>What effect did the "pneumatic tube" have on business communication?</prompt>
+        <options>
+            <option letter="a">Enabled rapid document delivery within buildings</option>
+            <option letter="b">Slowed information transfer</option>
+            <option letter="c">Increased delivery costs</option>
+            <option letter="d">Limited communication range</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Pneumatic tubes enabled rapid delivery of documents and small items within office buildings and between nearby buildings, improving business communication efficiency.</explanation>
+    </question>
+    <question number="146">
+        <prompt>How did the "rolling mill" affect steel production?</prompt>
+        <options>
+            <option letter="a">Increased production speed and product consistency</option>
+            <option letter="b">Reduced steel quality</option>
+            <option letter="c">Limited manufacturing options</option>
+            <option letter="d">Raised production costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Rolling mills increased steel production speed and product consistency, enabling mass production of steel rails and other products.</explanation>
+    </question>
+    <question number="147">
+        <prompt>What was the significance of the "punch clock"?</prompt>
+        <options>
+            <option letter="a">Automated worker time tracking and payroll</option>
+            <option letter="b">Reduced workplace efficiency</option>
+            <option letter="c">Increased labor costs</option>
+            <option letter="d">Limited management control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Punch clocks automated worker time tracking and payroll calculations, improving accuracy and reducing disputes over work hours.</explanation>
+    </question>
+    <question number="148">
+        <prompt>How did the "commercial traveler" affect business distribution?</prompt>
+        <options>
+            <option letter="a">Extended market reach and product distribution</option>
+            <option letter="b">Limited sales territories</option>
+            <option letter="c">Increased distribution costs</option>
+            <option letter="d">Reduced product availability</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Commercial travelers (traveling salesmen) extended market reach and product distribution networks, connecting manufacturers with distant retailers.</explanation>
+    </question></quiz>

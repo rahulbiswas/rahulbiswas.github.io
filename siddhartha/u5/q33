@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="129">
+        <prompt>What effect did the "automatic coupler" have on railroads?</prompt>
+        <options>
+            <option letter="a">Reduced accidents and improved efficiency</option>
+            <option letter="b">Increased operating costs</option>
+            <option letter="c">Limited train length</option>
+            <option letter="d">Decreased safety</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The automatic coupler dramatically reduced railroad accidents and injuries while improving operational efficiency in train assembly and movement.</explanation>
+    </question>
+    <question number="130">
+        <prompt>How did the "adding machine" change office work?</prompt>
+        <options>
+            <option letter="a">Increased accounting accuracy and speed</option>
+            <option letter="b">Reduced office efficiency</option>
+            <option letter="c">Limited data processing</option>
+            <option letter="d">Increased errors</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The adding machine improved accounting accuracy and speed, revolutionizing office work and financial record-keeping practices.</explanation>
+    </question>
+    <question number="131">
+        <prompt>What was the significance of the "dynamo"?</prompt>
+        <options>
+            <option letter="a">Enabled efficient electrical power generation</option>
+            <option letter="b">Reduced industrial capacity</option>
+            <option letter="c">Increased energy costs</option>
+            <option letter="d">Limited power distribution</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The dynamo enabled efficient electrical power generation, making widespread electrification of industry and cities possible.</explanation>
+    </question>
+    <question number="132">
+        <prompt>How did the "price list" affect retail business?</prompt>
+        <options>
+            <option letter="a">Standardized pricing and reduced haggling</option>
+            <option letter="b">Increased price variation</option>
+            <option letter="c">Limited consumer choice</option>
+            <option letter="d">Reduced sales volume</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Price lists standardized retail pricing and reduced haggling, contributing to the development of modern retail practices and consumer trust.</explanation>
+    </question></quiz>
