@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="65">
+        <prompt>What was the main purpose of the White Man's Burden ideology?</prompt>
+        <options>
+            <option letter="a">To justify American imperialism as a civilizing mission</option>
+            <option letter="b">To promote racial equality</option>
+            <option letter="c">To oppose colonialism</option>
+            <option letter="d">To support independence movements</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Rudyard Kipling's poem "The White Man's Burden" promoted the idea that white Americans and Europeans had a duty to civilize and Christianize "inferior" peoples, justifying imperialism.</explanation>
+    </question>
+    <question number="66">
+        <prompt>What was the primary effect of the merger movement of the 1890s?</prompt>
+        <options>
+            <option letter="a">It created large industrial corporations through consolidation</option>
+            <option letter="b">It increased business competition</option>
+            <option letter="c">It protected small businesses</option>
+            <option letter="d">It reduced industrial efficiency</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The merger movement resulted in the consolidation of many smaller companies into large corporations, creating industrial giants that dominated their respective industries.</explanation>
+    </question>
+    <question number="67">
+        <prompt>What was the main goal of Eugene V. Debs's Social Democratic Party?</prompt>
+        <options>
+            <option letter="a">To promote socialist policies and worker ownership</option>
+            <option letter="b">To support big business</option>
+            <option letter="c">To maintain capitalism</option>
+            <option letter="d">To oppose labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Debs's Social Democratic Party, later the Socialist Party of America, advocated for worker ownership of the means of production and other socialist policies.</explanation>
+    </question>
+    <question number="68">
+        <prompt>What was the significance of the de Lôme letter incident?</prompt>
+        <options>
+            <option letter="a">It increased public support for war with Spain</option>
+            <option letter="b">It improved Spanish-American relations</option>
+            <option letter="c">It prevented war</option>
+            <option letter="d">It supported Spanish policy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The publication of Spanish diplomat de Lôme's letter criticizing President McKinley increased anti-Spanish sentiment and public support for war with Spain.</explanation>
+    </question>
+</quiz>

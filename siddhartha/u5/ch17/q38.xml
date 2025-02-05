@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="149">
+        <prompt>What was the main purpose of the League of American Wheelmen?</prompt>
+        <options>
+            <option letter="a">To promote cycling and advocate for better roads</option>
+            <option letter="b">To restrict bicycle use</option>
+            <option letter="c">To increase bicycle prices</option>
+            <option letter="d">To oppose transportation reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The League of American Wheelmen promoted cycling and advocated for road improvements, contributing to the Good Roads Movement of the 1890s.</explanation>
+    </question>
+    <question number="150">
+        <prompt>What was the significance of the United Confederate Veterans?</prompt>
+        <options>
+            <option letter="a">To promote the Lost Cause interpretation of the Civil War</option>
+            <option letter="b">To support reconstruction</option>
+            <option letter="c">To advocate civil rights</option>
+            <option letter="d">To oppose segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The United Confederate Veterans promoted the Lost Cause interpretation of the Civil War, helping to justify segregation and white supremacy in the South.</explanation>
+    </question>
+    <question number="151">
+        <prompt>What was the main effect of the Warehouse Act of 1892?</prompt>
+        <options>
+            <option letter="a">It attempted to help farmers store and market their crops</option>
+            <option letter="b">It benefited large corporations</option>
+            <option letter="c">It restricted grain storage</option>
+            <option letter="d">It increased storage costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Warehouse Act attempted to help farmers by providing facilities to store their crops until prices improved, though it had limited success.</explanation>
+    </question>
+    <question number="152">
+        <prompt>What was the primary goal of the American Railway Union?</prompt>
+        <options>
+            <option letter="a">To unite all railroad workers in one industrial union</option>
+            <option letter="b">To protect company interests</option>
+            <option letter="c">To prevent strikes</option>
+            <option letter="d">To support management</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Eugene V. Debs's American Railway Union attempted to unite all railroad workers in one industrial union, challenging the craft union model of the era.</explanation>
+    </question>
+</quiz>

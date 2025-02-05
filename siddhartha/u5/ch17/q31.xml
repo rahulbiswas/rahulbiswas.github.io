@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="121">
+        <prompt>What was the main purpose of the Sub-Treasury Plan?</prompt>
+        <options>
+            <option letter="a">To provide government loans to farmers using crops as collateral</option>
+            <option letter="b">To support private banks</option>
+            <option letter="c">To reduce farm production</option>
+            <option letter="d">To increase interest rates</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Populist Sub-Treasury Plan proposed that the government establish warehouses where farmers could store crops and receive low-interest loans using them as collateral.</explanation>
+    </question>
+    <question number="122">
+        <prompt>What was the significance of the Haymarket Square bombing?</prompt>
+        <options>
+            <option letter="a">It discredited the labor movement by associating it with violence</option>
+            <option letter="b">It strengthened union support</option>
+            <option letter="c">It improved working conditions</option>
+            <option letter="d">It united workers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Haymarket Square bombing and subsequent trial discredited the labor movement by associating it with anarchism and violence in the public mind.</explanation>
+    </question>
+    <question number="123">
+        <prompt>What was the main effect of Henry George's single tax proposal?</prompt>
+        <options>
+            <option letter="a">It sparked debate about land ownership and economic inequality</option>
+            <option letter="b">It was implemented nationally</option>
+            <option letter="c">It reduced property taxes</option>
+            <option letter="d">It increased land values</option>
+        </options>
+        <answer>a</answer>
+        <explanation>George's proposal to tax land values sparked widespread debate about land ownership, speculation, and economic inequality, though it was never implemented.</explanation>
+    </question>
+    <question number="124">
+        <prompt>What was the primary purpose of the First International American Conference?</prompt>
+        <options>
+            <option letter="a">To establish U.S. economic leadership in the Western Hemisphere</option>
+            <option letter="b">To oppose European influence</option>
+            <option letter="c">To promote democracy</option>
+            <option letter="d">To reduce tariffs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The First International American Conference aimed to establish U.S. economic leadership in the Western Hemisphere through trade agreements and monetary cooperation.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="85">
+        <prompt>What was the main goal of William Randolph Hearst's journalism?</prompt>
+        <options>
+            <option letter="a">To increase circulation through sensationalized news</option>
+            <option letter="b">To provide objective reporting</option>
+            <option letter="c">To support peace with Spain</option>
+            <option letter="d">To promote political reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Hearst pioneered yellow journalism, using sensationalized stories, dramatic headlines, and manufactured crises to increase newspaper circulation and influence public opinion.</explanation>
+    </question>
+    <question number="86">
+        <prompt>What was the primary effect of the Sherman Silver Purchase Act's repeal?</prompt>
+        <options>
+            <option letter="a">It worsened the depression of 1893</option>
+            <option letter="b">It improved the economy</option>
+            <option letter="c">It helped silver miners</option>
+            <option letter="d">It increased inflation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The repeal of the Sherman Silver Purchase Act in 1893 worsened the depression by further contracting the money supply and damaging silver mining communities.</explanation>
+    </question>
+    <question number="87">
+        <prompt>What was the significance of the Massachusetts Board of Railroad Commissioners?</prompt>
+        <options>
+            <option letter="a">It pioneered regulatory commission oversight of railroads</option>
+            <option letter="b">It nationalized railroads</option>
+            <option letter="c">It increased railroad rates</option>
+            <option letter="d">It prevented regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Massachusetts Board pioneered the regulatory commission approach to railroad oversight, serving as a model for the Interstate Commerce Commission and other regulatory bodies.</explanation>
+    </question>
+    <question number="88">
+        <prompt>What was the main purpose of Jacob Riis's How the Other Half Lives?</prompt>
+        <options>
+            <option letter="a">To expose urban poverty through photojournalism</option>
+            <option letter="b">To celebrate city life</option>
+            <option letter="c">To promote immigration</option>
+            <option letter="d">To support tenement owners</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Riis used photographs and journalism to expose the harsh conditions of urban poverty, particularly in New York's tenements, helping spark progressive reform efforts.</explanation>
+    </question>
+</quiz>

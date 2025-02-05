@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="113">
+        <prompt>What was the main impact of Benjamin Harrison's foreign policy?</prompt>
+        <options>
+            <option letter="a">It expanded American influence in the Pacific and Latin America</option>
+            <option letter="b">It promoted isolation</option>
+            <option letter="c">It reduced naval power</option>
+            <option letter="d">It avoided foreign conflicts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Harrison's foreign policy expanded American influence through naval expansion, the Pan-American Conference, and attempts to acquire Pacific bases like Pearl Harbor.</explanation>
+    </question>
+    <question number="114">
+        <prompt>What was the significance of the Farmers' Mutual Benefit Association?</prompt>
+        <options>
+            <option letter="a">It organized farmers for economic cooperation and political action</option>
+            <option letter="b">It supported industrial interests</option>
+            <option letter="c">It opposed agricultural reform</option>
+            <option letter="d">It promoted urbanization</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Farmers' Mutual Benefit Association organized farmers for economic cooperation and political action, contributing to the broader agrarian reform movement.</explanation>
+    </question>
+    <question number="115">
+        <prompt>What was the main purpose of the Lodge Force Bill?</prompt>
+        <options>
+            <option letter="a">To protect African American voting rights through federal supervision</option>
+            <option letter="b">To restrict voting rights</option>
+            <option letter="c">To support state control</option>
+            <option letter="d">To limit federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Lodge Force Bill attempted to protect African American voting rights through federal supervision of elections, but failed to pass due to Southern opposition.</explanation>
+    </question>
+    <question number="116">
+        <prompt>What was the primary effect of the Ocala Demands?</prompt>
+        <options>
+            <option letter="a">It unified farmer organizations behind a common reform program</option>
+            <option letter="b">It divided agricultural interests</option>
+            <option letter="c">It supported big business</option>
+            <option letter="d">It opposed political action</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Ocala Demands united various farmer organizations behind a common program of reform, including government ownership of railroads and free silver coinage.</explanation>
+    </question>
+</quiz>

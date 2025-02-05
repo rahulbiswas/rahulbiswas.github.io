@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="165">
+        <prompt>What was the main purpose of the Anti-Trust League?</prompt>
+        <options>
+            <option letter="a">To promote enforcement of the Sherman Anti-Trust Act</option>
+            <option letter="b">To protect monopolies</option>
+            <option letter="c">To support big business</option>
+            <option letter="d">To oppose regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Anti-Trust League worked to promote enforcement of the Sherman Anti-Trust Act and raise public awareness about the dangers of monopolies.</explanation>
+    </question>
+    <question number="166">
+        <prompt>What was the significance of the Battle of Adwa?</prompt>
+        <options>
+            <option letter="a">It demonstrated resistance to European imperialism</option>
+            <option letter="b">It supported colonization</option>
+            <option letter="c">It expanded American power</option>
+            <option letter="d">It united European nations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Ethiopia's victory over Italy at Adwa in 1896 demonstrated successful resistance to European imperialism and influenced anti-imperialist thought.</explanation>
+    </question>
+    <question number="167">
+        <prompt>What was the main effect of the Agricultural Wheel movement?</prompt>
+        <options>
+            <option letter="a">It organized farmers for economic and political action</option>
+            <option letter="b">It supported big business</option>
+            <option letter="c">It opposed reform</option>
+            <option letter="d">It promoted industrialization</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Agricultural Wheel organized farmers for cooperative economic action and political reform, contributing to the broader agrarian protest movement.</explanation>
+    </question>
+    <question number="168">
+        <prompt>What was the primary purpose of the Good Roads Movement?</prompt>
+        <options>
+            <option letter="a">To improve rural transportation infrastructure</option>
+            <option letter="b">To limit road construction</option>
+            <option letter="c">To oppose government spending</option>
+            <option letter="d">To support railroads</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Good Roads Movement advocated for improved rural roads and highways, uniting farmers, cyclists, and urban reformers in support of better transportation infrastructure.</explanation>
+    </question>
+</quiz>

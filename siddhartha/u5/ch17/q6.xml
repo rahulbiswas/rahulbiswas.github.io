@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="21">
+        <prompt>What was the primary impact of the Lost Cause ideology in the 1890s?</prompt>
+        <options>
+            <option letter="a">It romanticized the Confederate cause and justified segregation</option>
+            <option letter="b">It promoted racial reconciliation</option>
+            <option letter="c">It supported civil rights legislation</option>
+            <option letter="d">It encouraged Northern immigration to the South</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Lost Cause ideology glorified the Confederate cause, portrayed slavery as benign, and helped justify Jim Crow laws and racial segregation in the South.</explanation>
+    </question>
+    <question number="22">
+        <prompt>What was the main feature of the "New Immigration" of the 1890s?</prompt>
+        <options>
+            <option letter="a">Most immigrants came from Southern and Eastern Europe</option>
+            <option letter="b">Immigration rates decreased significantly</option>
+            <option letter="c">Most immigrants were skilled laborers</option>
+            <option letter="d">Immigrants settled primarily in rural areas</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "New Immigration" was characterized by large numbers of immigrants from Southern and Eastern Europe, marking a shift from earlier patterns of Northern European immigration.</explanation>
+    </question>
+    <question number="23">
+        <prompt>What was the significance of Eugene V. Debs's role in the Pullman Strike?</prompt>
+        <options>
+            <option letter="a">His leadership transformed him into a national labor figure</option>
+            <option letter="b">He successfully negotiated with Pullman</option>
+            <option letter="c">He prevented federal intervention</option>
+            <option letter="d">He won concessions for the workers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Though the strike failed, Debs's leadership of the American Railway Union during the Pullman Strike established him as a prominent national labor leader and led to his conversion to socialism.</explanation>
+    </question>
+    <question number="24">
+        <prompt>What was the main effect of the overthrow of Queen Liliuokalani?</prompt>
+        <options>
+            <option letter="a">It led to Hawaii's eventual annexation by the United States</option>
+            <option letter="b">It restored Hawaiian independence</option>
+            <option letter="c">It strengthened the Hawaiian monarchy</option>
+            <option letter="d">It resulted in British control of Hawaii</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 1893 overthrow of Queen Liliuokalani by American business interests and marines led directly to the establishment of a pro-American republic and eventual U.S. annexation in 1898.</explanation>
+    </question>
+</quiz>

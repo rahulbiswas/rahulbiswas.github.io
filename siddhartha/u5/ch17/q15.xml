@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="57">
+        <prompt>What was the primary goal of the Teller Amendment?</prompt>
+        <options>
+            <option letter="a">To promise Cuba's independence after Spanish defeat</option>
+            <option letter="b">To annex Cuba permanently</option>
+            <option letter="c">To establish a military base</option>
+            <option letter="d">To protect Spanish interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Teller Amendment promised that the United States would not annex Cuba after defeating Spain, though the later Platt Amendment would limit Cuban independence.</explanation>
+    </question>
+    <question number="58">
+        <prompt>What was the main impact of the McKinley Tariff of 1890?</prompt>
+        <options>
+            <option letter="a">It raised tariff rates to their highest peacetime level</option>
+            <option letter="b">It reduced import taxes</option>
+            <option letter="c">It promoted free trade</option>
+            <option letter="d">It decreased consumer prices</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The McKinley Tariff raised import duties to their highest peacetime level, protecting American industry but contributing to higher consumer prices and international trade tensions.</explanation>
+    </question>
+    <question number="59">
+        <prompt>What was the primary purpose of the Indian Citizenship Act of 1890?</prompt>
+        <options>
+            <option letter="a">To promote Native American assimilation through land allotment</option>
+            <option letter="b">To protect tribal sovereignty</option>
+            <option letter="c">To preserve Native culture</option>
+            <option letter="d">To expand tribal lands</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Act aimed to assimilate Native Americans by breaking up tribal lands into individual allotments and granting citizenship to those who adopted European-American farming practices.</explanation>
+    </question>
+    <question number="60">
+        <prompt>What was the main goal of the National Association of Colored Women?</prompt>
+        <options>
+            <option letter="a">To promote racial advancement through education and social service</option>
+            <option letter="b">To focus solely on suffrage</option>
+            <option letter="c">To support segregation</option>
+            <option letter="d">To oppose women's rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The NACW worked to promote racial advancement through education, social services, and civil rights activism, adopting the motto "Lifting as We Climb."</explanation>
+    </question>
+</quiz>
