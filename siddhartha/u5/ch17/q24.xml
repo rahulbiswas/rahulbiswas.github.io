@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="93">
+        <prompt>What was the main purpose of the Cuban Reconcentration Policy?</prompt>
+        <options>
+            <option letter="a">To suppress Cuban independence by relocating civilians</option>
+            <option letter="b">To protect Cuban civilians</option>
+            <option letter="c">To provide humanitarian aid</option>
+            <option letter="d">To promote Cuban autonomy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Spain's reconcentration policy forced Cuban civilians into camps to deny support to rebels, resulting in widespread death from disease and starvation.</explanation>
+    </question>
+    <question number="94">
+        <prompt>What was the significance of the Supreme Court's E.C. Knight decision?</prompt>
+        <options>
+            <option letter="a">It limited the government's ability to break up manufacturing monopolies</option>
+            <option letter="b">It strengthened antitrust enforcement</option>
+            <option letter="c">It protected worker rights</option>
+            <option letter="d">It regulated interstate commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 1895 E.C. Knight decision limited the Sherman Antitrust Act by ruling that manufacturing was not interstate commerce, protecting many monopolies from federal regulation.</explanation>
+    </question>
+    <question number="95">
+        <prompt>What was the main goal of the National Consumers League?</prompt>
+        <options>
+            <option letter="a">To improve working conditions through consumer pressure</option>
+            <option letter="b">To reduce consumer prices</option>
+            <option letter="c">To oppose labor unions</option>
+            <option letter="d">To promote free trade</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Consumers League worked to improve working conditions and end child labor by educating and mobilizing consumers to support businesses with good labor practices.</explanation>
+    </question>
+    <question number="96">
+        <prompt>What was the primary purpose of Ellis Island?</prompt>
+        <options>
+            <option letter="a">To process and inspect European immigrants</option>
+            <option letter="b">To restrict immigration</option>
+            <option letter="c">To deport immigrants</option>
+            <option letter="d">To provide housing</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Ellis Island served as the main processing center for European immigrants, where they underwent medical and legal inspections before being allowed to enter the United States.</explanation>
+    </question>
+</quiz>

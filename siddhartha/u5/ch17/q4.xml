@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="13">
+        <prompt>What was the main argument of the Anti-Imperialist League?</prompt>
+        <options>
+            <option letter="a">Imperialism violated American democratic principles</option>
+            <option letter="b">Colonial expansion was too expensive</option>
+            <option letter="c">The military was too weak for empire</option>
+            <option letter="d">Other powers would object to U.S. expansion</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Anti-Imperialist League, which included prominent figures like Mark Twain, argued that imperialism contradicted American values of self-determination and consent of the governed.</explanation>
+    </question>
+    <question number="14">
+        <prompt>What was the significance of the Gold Standard Act of 1900?</prompt>
+        <options>
+            <option letter="a">It officially placed the United States on the gold standard</option>
+            <option letter="b">It established a bimetallic currency system</option>
+            <option letter="c">It created the Federal Reserve System</option>
+            <option letter="d">It eliminated paper currency</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Gold Standard Act of 1900 officially placed U.S. currency on the gold standard, ending the long debate over silver coinage and bimetallism.</explanation>
+    </question>
+    <question number="15">
+        <prompt>What was the primary purpose of grandfather clauses in Southern state constitutions?</prompt>
+        <options>
+            <option letter="a">To allow poor whites to vote while excluding African Americans</option>
+            <option letter="b">To protect voting rights for all citizens</option>
+            <option letter="c">To increase voter registration</option>
+            <option letter="d">To simplify the voting process</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Grandfather clauses exempted those whose ancestors could vote before 1867 from literacy tests and poll taxes, effectively allowing poor whites to vote while excluding African Americans.</explanation>
+    </question>
+    <question number="16">
+        <prompt>What was the main focus of Alfred T. Mahan's The Influence of Sea Power upon History?</prompt>
+        <options>
+            <option letter="a">The importance of naval power for national greatness</option>
+            <option letter="b">The history of maritime trade</option>
+            <option letter="c">Naval battle tactics</option>
+            <option letter="d">Shipbuilding technology</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mahan argued that control of the seas through a strong navy was essential for national power and imperial expansion, significantly influencing American naval and foreign policy.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="173">
+        <prompt>What was the main purpose of the National Consumers League?</prompt>
+        <options>
+            <option letter="a">To improve working conditions through consumer pressure</option>
+            <option letter="b">To lower product prices</option>
+            <option letter="c">To support businesses</option>
+            <option letter="d">To oppose labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Consumers League used consumer pressure and product labeling to improve working conditions and end child labor in manufacturing.</explanation>
+    </question>
+    <question number="174">
+        <prompt>What was the significance of the Billion Dollar Congress?</prompt>
+        <options>
+            <option letter="a">It set new records for government spending</option>
+            <option letter="b">It reduced federal expenses</option>
+            <option letter="c">It balanced the budget</option>
+            <option letter="d">It eliminated programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 51st Congress earned its nickname by setting new records for government spending, leading to public criticism and Republican electoral losses.</explanation>
+    </question>
+    <question number="175">
+        <prompt>What was the main effect of Eugene V. Debs's imprisonment?</prompt>
+        <options>
+            <option letter="a">It transformed him into a socialist leader</option>
+            <option letter="b">It ended labor activism</option>
+            <option letter="c">It strengthened unions</option>
+            <option letter="d">It reduced strikes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Debs's imprisonment after the Pullman Strike led to his conversion to socialism and transformation into America's leading socialist political figure.</explanation>
+    </question>
+    <question number="176">
+        <prompt>What was the primary purpose of the Farmers' Institutes?</prompt>
+        <options>
+            <option letter="a">To provide agricultural education and community organizing</option>
+            <option letter="b">To support big business</option>
+            <option letter="c">To oppose reform</option>
+            <option letter="d">To promote urbanization</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Farmers' Institutes provided agricultural education and served as centers for community organizing, helping spread agricultural knowledge and reform ideas.</explanation>
+    </question>
+</quiz>

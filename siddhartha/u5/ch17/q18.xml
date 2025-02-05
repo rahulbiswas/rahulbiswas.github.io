@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="69">
+        <prompt>What was the main effect of the Populist Party's fusion with Democrats in 1896?</prompt>
+        <options>
+            <option letter="a">It led to the decline of the Populist movement</option>
+            <option letter="b">It strengthened both parties</option>
+            <option letter="c">It secured victory in the election</option>
+            <option letter="d">It promoted radical reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The fusion with Democrats in support of William Jennings Bryan led to the decline of the independent Populist movement, as the party lost its distinctive identity.</explanation>
+    </question>
+    <question number="70">
+        <prompt>What was the primary purpose of Jim Crow etiquette?</prompt>
+        <options>
+            <option letter="a">To reinforce black subordination through daily social interactions</option>
+            <option letter="b">To promote racial harmony</option>
+            <option letter="c">To protect civil rights</option>
+            <option letter="d">To improve race relations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Jim Crow etiquette enforced black subordination through detailed rules governing daily interactions between races, reinforcing white supremacy through social customs.</explanation>
+    </question>
+    <question number="71">
+        <prompt>What was the main argument of Henry George's Progress and Poverty?</prompt>
+        <options>
+            <option letter="a">Poverty resulted from private land ownership and speculation</option>
+            <option letter="b">Industrial growth caused prosperity</option>
+            <option letter="c">Free trade eliminated poverty</option>
+            <option letter="d">Government regulation was needed</option>
+        </options>
+        <answer>a</answer>
+        <explanation>George argued that poverty persisted amid progress because private land ownership and speculation allowed landowners to unfairly profit from society's advancement.</explanation>
+    </question>
+    <question number="72">
+        <prompt>What was the significance of the Buffalo Soldiers in the 1890s?</prompt>
+        <options>
+            <option letter="a">They served as elite African American cavalry units in the West</option>
+            <option letter="b">They led civil rights protests</option>
+            <option letter="c">They opposed U.S. expansion</option>
+            <option letter="d">They supported Native American rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Buffalo Soldiers were elite African American cavalry units that served in the West and later in the Spanish-American War, despite facing racial discrimination.</explanation>
+    </question>
+</quiz>

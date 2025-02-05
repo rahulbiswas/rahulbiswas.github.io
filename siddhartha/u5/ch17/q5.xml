@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="17">
+        <prompt>What was the significance of the Woman's Christian Temperance Union in the 1890s?</prompt>
+        <options>
+            <option letter="a">It combined temperance reform with women's rights advocacy</option>
+            <option letter="b">It focused solely on prohibiting alcohol</option>
+            <option letter="c">It opposed women's suffrage</option>
+            <option letter="d">It promoted religious education only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Under Frances Willard's leadership, the WCTU combined its temperance mission with advocacy for women's suffrage and other social reforms, becoming the largest women's organization of its time.</explanation>
+    </question>
+    <question number="18">
+        <prompt>What was the key provision of the Platt Amendment of 1901?</prompt>
+        <options>
+            <option letter="a">It gave the United States the right to intervene in Cuban affairs</option>
+            <option letter="b">It granted Cuba full independence</option>
+            <option letter="c">It established free trade with Cuba</option>
+            <option letter="d">It protected Cuban sovereignty</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Platt Amendment made Cuba a U.S. protectorate by giving the United States the right to intervene in Cuban affairs and establish naval bases on the island.</explanation>
+    </question>
+    <question number="19">
+        <prompt>What was the main outcome of the Philippine War (1899-1902)?</prompt>
+        <options>
+            <option letter="a">The United States established control over the Philippines</option>
+            <option letter="b">The Philippines gained immediate independence</option>
+            <option letter="c">Spain retained control of the islands</option>
+            <option letter="d">Japan acquired the territory</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Despite fierce Filipino resistance, the United States established control over the Philippines, resulting in American colonial rule that would last until 1946.</explanation>
+    </question>
+    <question number="20">
+        <prompt>What was the significance of the National Association of Colored Women's formation in 1896?</prompt>
+        <options>
+            <option letter="a">It united black women's clubs nationwide for racial advancement</option>
+            <option letter="b">It focused exclusively on suffrage rights</option>
+            <option letter="c">It promoted segregation policies</option>
+            <option letter="d">It opposed women's education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The NACW united black women's clubs across the country, working for racial advancement through education, social services, and civil rights activism under the motto "Lifting as We Climb."</explanation>
+    </question>
+</quiz>

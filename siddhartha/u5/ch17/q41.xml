@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="161">
+        <prompt>What was the main purpose of the Populist Omaha Platform of 1892?</prompt>
+        <options>
+            <option letter="a">To present a comprehensive program of economic and political reform</option>
+            <option letter="b">To support big business</option>
+            <option letter="c">To promote conservatism</option>
+            <option letter="d">To oppose labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Omaha Platform presented the Populists' comprehensive reform program, including government ownership of railroads, free silver, and direct election of senators.</explanation>
+    </question>
+    <question number="162">
+        <prompt>What was the significance of Hull House Maps and Papers?</prompt>
+        <options>
+            <option letter="a">It documented urban poverty through social science research</option>
+            <option letter="b">It promoted business interests</option>
+            <option letter="c">It supported segregation</option>
+            <option letter="d">It opposed reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Hull House Maps and Papers documented urban poverty conditions through pioneering social science research, influencing progressive reform efforts.</explanation>
+    </question>
+    <question number="163">
+        <prompt>What was the main effect of the Cuban Reconcentration Policy?</prompt>
+        <options>
+            <option letter="a">It increased American support for war with Spain</option>
+            <option letter="b">It stabilized Cuba</option>
+            <option letter="c">It helped Cuban civilians</option>
+            <option letter="d">It reduced conflict</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Spain's brutal reconcentration policy, which led to widespread civilian deaths, increased American public support for intervention in Cuba.</explanation>
+    </question>
+    <question number="164">
+        <prompt>What was the primary goal of the National Association of Manufacturers?</prompt>
+        <options>
+            <option letter="a">To promote business interests and oppose labor unions</option>
+            <option letter="b">To support worker rights</option>
+            <option letter="c">To increase regulation</option>
+            <option letter="d">To promote reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Association of Manufacturers formed to promote business interests, oppose labor unions, and advocate for high tariffs and gold standard policies.</explanation>
+    </question>
+</quiz>
