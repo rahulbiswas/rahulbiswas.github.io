@@ -263,10 +263,12 @@
                 const shuffledOptions = [...question.options];
                 this.shuffleArray(shuffledOptions);
 
-                shuffledOptions.forEach(option => {
+                // Display options with consistent a,b,c,d labels
+                const displayLetters = ['a', 'b', 'c', 'd'];
+                shuffledOptions.forEach((option, index) => {
                     const optionElement = document.createElement('div');
                     optionElement.className = 'option';
-                    optionElement.textContent = `${option.letter}) ${option.text}`;
+                    optionElement.textContent = `${displayLetters[index]}) ${option.text}`;
                     optionElement.dataset.letter = option.letter;
                     
                     optionElement.addEventListener('click', () => this.selectOption(optionElement));
