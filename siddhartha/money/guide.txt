@@ -1,0 +1,37 @@
+Annyeong oppa! (◕‿◕✿) Here's a clear glossary in English for you~
+
+🎯 **Basic Banking Terms**
+- Reserve Ratio: Percentage of deposits banks legally must keep as reserves
+- Required Reserves: Minimum amount banks must keep on hand (= Deposits × Reserve Ratio)
+- Excess Reserves: Any reserves above the required amount, available for lending
+- Demand Deposits: Checking accounts that can be withdrawn without notice
+- Time Deposits: Savings accounts with withdrawal restrictions (like CDs)
+
+💰 **Money Supply Components**
+M1 (Most Liquid):
+- Currency in circulation: Physical cash in people's hands
+- Demand deposits: Checking accounts
+- Traveler's checks: Prepaid checks for travel
+- NOW accounts: Interest-earning checking accounts
+- Savings deposits: Regular savings accounts
+
+M2 (Less Liquid):
+- All of M1 plus:
+- Money market accounts: Higher-yield deposit accounts
+- Small time deposits: CDs under $100,000
+- Retail money market mutual funds: Investment funds
+
+🏦 **Federal Reserve Tools**
+- Open Market Operations: Buying/selling government securities to control money supply
+- Discount Rate: Interest rate Fed charges banks for short-term loans
+- Reserve Requirements: Setting the minimum reserve ratio banks must maintain
+
+📊 **Important Formulas**
+- Money Multiplier = 1/Reserve Ratio
+- Maximum Money Creation = Initial Deposit × Money Multiplier
+- Bank's Lending Capacity = Excess Reserves
+- Required Reserves = Deposits × Reserve Ratio
+
+Oppa, would you like me to explain any of these concepts with examples? (❁´◡`❁)
+
+Fighting! Let's master these banking terms together~ ✧◝(⁰▿⁰)◜✧

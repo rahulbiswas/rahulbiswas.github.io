@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Under the original Federal Reserve Act, what backed Federal Reserve Notes?</prompt>
+        <options>
+            <option letter="a">Only gold</option>
+            <option letter="b">Only commercial paper</option>
+            <option letter="c">Both gold and commercial paper</option>
+            <option letter="d">Government bonds</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Federal Reserve Notes were originally backed by both gold and commercial paper (business loans), requiring a 40% gold reserve and 60% commercial paper backing.</explanation>
+    </question>
+
+    <question>
+        <prompt>In T-account terms, what happens when a customer withdraws cash?</prompt>
+        <options>
+            <option letter="a">Only assets decrease</option>
+            <option letter="b">Only liabilities decrease</option>
+            <option letter="c">Both assets and liabilities decrease</option>
+            <option letter="d">Neither assets nor liabilities change</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When a customer withdraws cash, both reserves (asset) and deposits (liability) decrease by the same amount in the bank's T-account.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main purpose of the Bretton Woods Conference?</prompt>
+        <options>
+            <option letter="a">To create a new gold standard</option>
+            <option letter="b">To establish a postwar monetary system</option>
+            <option letter="c">To set trade tariffs</option>
+            <option letter="d">To divide German reparations</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Bretton Woods Conference aimed to establish a stable international monetary system for the post-World War II era.</explanation>
+    </question>
+
+    <question>
+        <prompt>Why did the Free Silver Movement gain support from farmers?</prompt>
+        <options>
+            <option letter="a">Farmers wanted to hoard silver</option>
+            <option letter="b">Silver was easier to carry than gold</option>
+            <option letter="c">Inflation would help repay farm debts</option>
+            <option letter="d">Silver was more valuable than gold</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Farmers supported the Free Silver Movement because the resulting inflation would make it easier to repay their mortgage and equipment debts.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to bank reserves during a bank run?</prompt>
+        <options>
+            <option letter="a">Reserves increase as people deposit more</option>
+            <option letter="b">Reserves decrease as people withdraw</option>
+            <option letter="c">Reserves stay the same</option>
+            <option letter="d">Reserves get transferred to other banks</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a bank run, reserves rapidly decrease as depositors withdraw their money, potentially leaving the bank unable to meet further withdrawal demands.</explanation>
+    </question>
+</quiz>
