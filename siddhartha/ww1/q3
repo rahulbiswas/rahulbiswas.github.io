@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the main achievement of the NAACP during this period?</prompt>
+        <options>
+            <option letter="a">Winning voting rights for all Americans</option>
+            <option letter="b">Fighting segregation through legal challenges</option>
+            <option letter="c">Creating the first Black political party</option>
+            <option letter="d">Organizing labor unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The NAACP, founded in 1909, primarily fought racial discrimination through legal challenges in courts, conducting research, and running education campaigns to combat segregation and racial injustice.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the primary goal of the American Protective League during WWI?</prompt>
+        <options>
+            <option letter="a">Protecting American borders</option>
+            <option letter="b">Spying on fellow citizens for "un-American" activities</option>
+            <option letter="c">Organizing war bond drives</option>
+            <option letter="d">Protecting government buildings</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The American Protective League was a volunteer organization that worked with the Justice Department to spy on and report fellow citizens suspected of "un-American" activities during WWI.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of the Panama Canal Zone acquisition?</prompt>
+        <options>
+            <option letter="a">It provided oil resources</option>
+            <option letter="b">It connected Atlantic and Pacific shipping</option>
+            <option letter="c">It created a new US state</option>
+            <option letter="d">It established a military base only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Panama Canal Zone, acquired in 1903, was crucial for connecting Atlantic and Pacific shipping routes, significantly improving naval mobility and international trade capabilities.</explanation>
+    </question>
+
+    <question>
+        <prompt>What characterized Woodrow Wilson's foreign policy of "moral diplomacy"?</prompt>
+        <options>
+            <option letter="a">Complete isolation from world affairs</option>
+            <option letter="b">Military intervention in all conflicts</option>
+            <option letter="c">Spreading democracy through intervention</option>
+            <option letter="d">Focusing only on trade relations</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Wilson's moral diplomacy focused on spreading American democratic values and intervening in other nations to promote what he saw as moral international behavior and democracy.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main impact of the Espionage Act of 1917?</prompt>
+        <options>
+            <option letter="a">It promoted free speech</option>
+            <option letter="b">It restricted civil liberties during wartime</option>
+            <option letter="c">It regulated business practices</option>
+            <option letter="d">It improved worker safety</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Espionage Act of 1917 significantly restricted civil liberties by making it illegal to interfere with military operations or support enemies during wartime, leading to many arrests and prosecutions.</explanation>
+    </question>
+</quiz>
