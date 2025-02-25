@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was General John Pershing's main contribution to WWI?</prompt>
+        <options>
+            <option letter="a">He negotiated the peace treaty</option>
+            <option letter="b">He commanded American forces in Europe</option>
+            <option letter="c">He developed new weapons</option>
+            <option letter="d">He organized war funding</option>
+        </options>
+        <answer>b</answer>
+        <explanation>General John Pershing commanded the American Expeditionary Forces in Europe during WWI, insisting on keeping US forces independent and leading them in major battles like the Meuse-Argonne Offensive.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Supreme Court's decision in Schenck v. United States affect free speech?</prompt>
+        <options>
+            <option letter="a">It expanded free speech protections</option>
+            <option letter="b">It limited speech during wartime</option>
+            <option letter="c">It only affected newspapers</option>
+            <option letter="d">It protected all political speech</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In Schenck v. United States (1919), the Supreme Court established the "clear and present danger" test, limiting free speech during wartime and upholding the Espionage Act.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the primary impact of the Clayton Anti-Trust Act?</prompt>
+        <options>
+            <option letter="a">It created new monopolies</option>
+            <option letter="b">It strengthened anti-trust regulation</option>
+            <option letter="c">It regulated food safety</option>
+            <option letter="d">It controlled immigration</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Clayton Anti-Trust Act (1914) strengthened anti-trust regulation by clarifying and expanding the Sherman Act, specifically addressing practices like price discrimination and interlocking directorates.</explanation>
+    </question>
+
+    <question>
+        <prompt>What characterized the Progressive Era approach to reform?</prompt>
+        <options>
+            <option letter="a">Reliance on private charity only</option>
+            <option letter="b">Government regulation and scientific efficiency</option>
+            <option letter="c">Complete economic revolution</option>
+            <option letter="d">Return to traditional values</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Progressive Era reforms emphasized using government regulation and scientific efficiency to address social and economic problems, believing that expertise and rational planning could solve society's issues.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of Louis Brandeis's Supreme Court appointment?</prompt>
+        <options>
+            <option letter="a">He was the first Catholic justice</option>
+            <option letter="b">He was the first Jewish justice</option>
+            <option letter="c">He was the youngest justice</option>
+            <option letter="d">He was the first minority justice</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Louis Brandeis became the first Jewish Supreme Court Justice in 1916, breaking a significant barrier and bringing progressive legal thought to the Court through his detailed factual analysis approach.</explanation>
+    </question>
+</quiz>

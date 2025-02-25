@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How did the Spanish Flu pandemic affect military operations in WWI?</prompt>
+        <options>
+            <option letter="a">It had no effect on military operations</option>
+            <option letter="b">It killed more troops than combat</option>
+            <option letter="c">It only affected civilian populations</option>
+            <option letter="d">It improved military medicine</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Spanish Flu severely impacted military operations, killing more American troops than combat deaths in WWI, affecting troop movements and military effectiveness on both sides.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was significant about Theodore Roosevelt's conservation policies?</prompt>
+        <options>
+            <option letter="a">They eliminated all logging</option>
+            <option letter="b">They greatly expanded protected federal lands</option>
+            <option letter="c">They focused only on urban parks</option>
+            <option letter="d">They privatized all public lands</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt's conservation policies dramatically expanded protected federal lands, establishing 150 national forests, 51 federal bird reserves, 4 national game preserves, and 5 national parks.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Palmer Raids affect civil liberties?</prompt>
+        <options>
+            <option letter="a">They protected immigrant rights</option>
+            <option letter="b">They violated constitutional rights</option>
+            <option letter="c">They expanded voting rights</option>
+            <option letter="d">They had no legal impact</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Palmer Raids during the Red Scare violated constitutional rights through mass arrests and deportations of suspected radicals without due process, setting dangerous precedents for civil liberties.</explanation>
+    </question>
+
+    <question>
+        <prompt>What distinguished Progressive Era journalism?</prompt>
+        <options>
+            <option letter="a">Focus on entertainment news</option>
+            <option letter="b">Investigative reporting of social issues</option>
+            <option letter="c">Support for big business</option>
+            <option letter="d">Avoiding controversial topics</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Progressive Era journalism was characterized by muckraking - investigative reporting that exposed social problems, corporate corruption, and political scandals to drive reform.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did American cities change during this period?</prompt>
+        <options>
+            <option letter="a">They became smaller</option>
+            <option letter="b">They grew rapidly with immigration</option>
+            <option letter="c">They eliminated poverty</option>
+            <option letter="d">They banned industry</option>
+        </options>
+        <answer>b</answer>
+        <explanation>American cities grew rapidly during this period due to immigration and industrialization, leading to both new opportunities and social challenges like overcrowding and poverty.</explanation>
+    </question>
+</quiz>
