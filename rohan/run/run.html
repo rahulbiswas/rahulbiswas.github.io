@@ -46,11 +46,14 @@
                 
                 // Apply the new color
                 yellowBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-                
+
                 // Add a little animation
                 yellowBox.style.transition = 'background-color 0.5s ease';
+
+				// Log to console that color changed
+				console.log('Yellow box changed color');
             });
-            
+		
             // Log to console that our box is ready
             console.log('Yellow box initialized and ready for interaction!');
         });
