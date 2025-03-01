@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #yellow-box {
+            width: 200px;
+            height: 200px;
+            background-color: #FFD700; /* Yellow */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="yellow-box">Yellow Box</div>
+
+    <script>
+        // JavaScript to create and manipulate the yellow box
+        document.addEventListener('DOMContentLoaded', function() {
+            // Reference to our yellow box
+            const yellowBox = document.getElementById('yellow-box');
+            
+            // Add a click event to change the shade of yellow
+            yellowBox.addEventListener('click', function() {
+                // Generate a random shade of yellow
+                const r = 255;
+                const g = Math.floor(Math.random() * 56) + 200; // Between 200-255
+                const b = Math.floor(Math.random() * 100); // Between 0-99
+                
+                // Apply the new color
+                yellowBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                
+                // Add a little animation
+                yellowBox.style.transition = 'background-color 0.5s ease';
+            });
+            
+            // Log to console that our box is ready
+            console.log('Yellow box initialized and ready for interaction!');
+        });
+    </script>
+</body>
+</html>
