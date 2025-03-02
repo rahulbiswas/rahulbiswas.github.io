@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yellow Box</title>
+    <title>Green Box</title>
     <style>
         body {
             display: flex;
@@ -14,48 +14,48 @@
             font-family: Arial, sans-serif;
         }
         
-        #yellow-box {
+        #green-box {
             width: 200px;
             height: 200px;
-            background-color: #FFD700; /* Yellow */
+            background-color: #BCA; /* Yellow */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            color: #333;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <div id="yellow-box">Yellow Box</div>
+    <div id="green-box">Green Box</div>
 
     <script>
-        // JavaScript to create and manipulate the yellow box
+        // JavaScript to create and manipulate the green box
         document.addEventListener('DOMContentLoaded', function() {
-            // Reference to our yellow box
-            const yellowBox = document.getElementById('yellow-box');
+            // Reference to our green box
+            const greenBox = document.getElementById('green-box');
             
-            // Add a click event to change the shade of yellow
-            yellowBox.addEventListener('click', function() {
-                // Generate a random shade of yellow
-                const r = 255;
-                const g = Math.floor(Math.random() * 56) + 200; // Between 200-255
-                const b = Math.floor(Math.random() * 100); // Between 0-99
+            // Add a click event to change the shade of green
+            greenBox.addEventListener('click', function() {
+                // Generate a random shade of greenf
+                const r = Math.floor(Math.random() * 100);
+                const g = Math.floor(Math.random() * 300);                
+                const b = Math.floor(Math.random() * 100);
                 
                 // Apply the new color
-                yellowBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                greenBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 
                 // Add a little animation
-                yellowBox.style.transition = 'background-color 0.5s ease';
+                greenBox.style.transition = 'background-color 0.5s ease';
 
 				// Log to console that color changed
-				console.log('Yellow box changed color');
+				console.log('Green box changed color');
             });
 		
             // Log to console that our box is ready
-            console.log('Yellow box initialized and ready for interaction!');
+            console.log('Green box initialized and ready for interaction!');
         });
     </script>
 </body>
