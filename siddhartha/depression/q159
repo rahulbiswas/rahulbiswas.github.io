@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Meyer v. Nebraska (1923) established:</prompt>
+        <options>
+            <option letter="a">English-only education requirements</option>
+            <option letter="b">The right to teach foreign languages</option>
+            <option letter="c">Mandatory public education</option>
+            <option letter="d">Federal control of schools</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Meyer v. Nebraska established that states could not prohibit the teaching of foreign languages in schools. The Supreme Court ruled that Nebraska's law banning foreign language instruction violated the Fourteenth Amendment's due process clause, protecting teachers' right to teach and parents' right to control their children's education. This decision significantly limited states' power to restrict educational and cultural rights.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Milo Reno's Farmers' Holiday Movement advocated:</prompt>
+        <options>
+            <option letter="a">Increased farm subsidies</option>
+            <option letter="b">Withholding farm products to raise prices</option>
+            <option letter="c">Supporting government policies</option>
+            <option letter="d">Reducing agricultural production</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Milo Reno's Farmers' Holiday Movement advocated withholding farm products from market to force higher agricultural prices during the early Depression. The movement organized strikes and direct action, including blocking roads to prevent farm products from reaching markets. These actions reflected farmers' desperate economic situation and their organized resistance to low agricultural prices during the Depression.</explanation>
+    </question>
+</quiz>

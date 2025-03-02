@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The significance of Charles Lindbergh's transatlantic flight was its:</prompt>
+        <options>
+            <option letter="a">Military importance</option>
+            <option letter="b">Symbolism of American technological achievement</option>
+            <option letter="c">Economic benefits</option>
+            <option letter="d">Political impact</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Lindbergh's 1927 solo flight across the Atlantic symbolized American technological achievement and captured the public imagination. His success represented the spirit of innovation and individual achievement characteristic of the 1920s. The flight made him an international celebrity, sparked widespread interest in aviation, and helped stimulate the growth of commercial aviation, embodying America's technological progress.</explanation>
+    </question>
+</quiz>

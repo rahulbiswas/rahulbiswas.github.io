@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The role of Andrew Mellon as Treasury Secretary was marked by:</prompt>
+        <options>
+            <option letter="a">Support for progressive taxation</option>
+            <option letter="b">Tax cuts favoring wealthy Americans</option>
+            <option letter="c">Increased government spending</option>
+            <option letter="d">Opposition to business interests</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Andrew Mellon's tenure as Treasury Secretary (1921-1932) was marked by his "scientific taxation" policy that dramatically reduced taxes on wealthy Americans and corporations. He argued that lower taxes on the rich would stimulate economic growth and increase government revenue. His policies exemplified the pro-business orientation of Republican administrations during the 1920s.</explanation>
+    </question>
+</quiz>

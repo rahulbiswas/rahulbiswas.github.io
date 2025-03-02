@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The German reparations crisis of the early 1930s led to:</prompt>
+        <options>
+            <option letter="a">Economic recovery</option>
+            <option letter="b">International banking crisis</option>
+            <option letter="c">Increased trade</option>
+            <option letter="d">Political stability</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Germany's inability to pay World War I reparations in the early 1930s triggered an international banking crisis. When Germany defaulted on payments, it caused bank failures in Austria and Germany that spread to other European banks. This banking crisis affected American banks that had made loans to European nations, contributing to the international financial crisis and deepening the Great Depression.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The impact of Carlos Montezuma's activism included:</prompt>
+        <options>
+            <option letter="a">Supporting the reservation system</option>
+            <option letter="b">Advocating Native American self-determination</option>
+            <option letter="c">Promoting assimilation policies</option>
+            <option letter="d">Expanding federal control</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Carlos Montezuma's activism significantly impacted Native American rights through his advocacy for self-determination and sovereignty. Through his newsletter "Wassaja" and other efforts, he strongly criticized the Bureau of Indian Affairs, fought for improved healthcare and education in Native communities, and challenged federal paternalism. His work influenced later Native American rights movements and their push for self-governance.</explanation>
+    </question>
+</quiz>

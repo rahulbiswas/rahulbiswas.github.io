@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Scopes Trial's media coverage demonstrated:</prompt>
+        <options>
+            <option letter="a">Unbiased reporting of events</option>
+            <option letter="b">The growing urban-rural cultural divide</option>
+            <option letter="c">Support for fundamentalism</option>
+            <option letter="d">Scientific consensus</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The extensive media coverage of the 1925 Scopes Trial, particularly H.L. Mencken's satirical reporting, highlighted the growing cultural divide between urban and rural America. Urban newspapers often portrayed the trial as a conflict between modern scientific thinking and rural religious fundamentalism, mocking small-town values and religious beliefs while emphasizing the cultural gap between metropolitan and rural communities.</explanation>
+    </question>
+</quiz>

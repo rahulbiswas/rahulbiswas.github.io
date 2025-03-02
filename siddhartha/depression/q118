@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Carlos Montezuma's activism focused on:</prompt>
+        <options>
+            <option letter="a">Supporting the reservation system</option>
+            <option letter="b">Native American self-determination and rights</option>
+            <option letter="c">Promoting assimilation policies</option>
+            <option letter="d">Expanding federal control</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Carlos Montezuma's activism focused on promoting Native American self-determination and rights. Through his newsletter "Wassaja" and other advocacy efforts, he strongly criticized the Bureau of Indian Affairs, fought for improved healthcare and education in Native communities, and advocated for Indigenous sovereignty. His work challenged federal paternalism and influenced later Native American rights movements.</explanation>
+    </question>
+</quiz>
