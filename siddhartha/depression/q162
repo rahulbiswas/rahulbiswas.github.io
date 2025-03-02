@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Wickersham Commission's findings on Prohibition:</prompt>
+        <options>
+            <option letter="a">Supported continued enforcement</option>
+            <option letter="b">Documented failures while opposing repeal</option>
+            <option letter="c">Recommended immediate repeal</option>
+            <option letter="d">Praised enforcement methods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Wickersham Commission's 1931 report documented widespread problems with Prohibition enforcement, including corruption, increased crime, and public resistance. However, despite acknowledging these serious issues, the commission paradoxically opposed repeal of the 18th Amendment. This contradictory position reflected the growing recognition of Prohibition's failure while maintaining official support for the policy.</explanation>
+    </question>
+</quiz>

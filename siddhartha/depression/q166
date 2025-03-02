@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Hays Code's impact on Hollywood films included:</prompt>
+        <options>
+            <option letter="a">Increased artistic freedom</option>
+            <option letter="b">Strict moral guidelines for content</option>
+            <option letter="c">Greater political expression</option>
+            <option letter="d">Support for controversial themes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Hays Code significantly impacted Hollywood films by establishing strict moral guidelines that restricted content deemed objectionable. Developed in the 1920s and strictly enforced from 1934, the code prohibited or limited depictions of violence, sexual content, drug use, and challenges to authority. This self-imposed censorship system shaped Hollywood film content for several decades.</explanation>
+    </question>
+</quiz>

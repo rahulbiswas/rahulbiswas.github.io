@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The ACLU's role in the 1920s focused on:</prompt>
+        <options>
+            <option letter="a">Supporting Prohibition</option>
+            <option letter="b">Defending constitutional rights</option>
+            <option letter="c">Promoting business interests</option>
+            <option letter="d">Restricting immigration</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The American Civil Liberties Union focused on defending constitutional rights and civil liberties during the 1920s. Through involvement in significant cases like the Scopes Trial and defense of free speech rights, the ACLU challenged government restrictions on personal freedoms. Their work was particularly important during a period of increased government suppression of dissent and restrictions on individual rights.</explanation>
+    </question>
+</quiz>
