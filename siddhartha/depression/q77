@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Modern liberalism in the 1920s differed from Progressive Era reforms by:</prompt>
+        <options>
+            <option letter="a">Opposing government regulation</option>
+            <option letter="b">Emphasizing civil liberties and individual rights</option>
+            <option letter="c">Supporting business interests</option>
+            <option letter="d">Promoting prohibition</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Modern liberalism in the 1920s shifted focus from the Progressive Era's emphasis on economic regulation and social reform to a greater concern with civil liberties and individual rights. Organizations like the ACLU exemplified this new liberalism by defending free speech, religious freedom, and minority rights. This transformation laid the groundwork for New Deal liberalism's combination of economic reform and civil rights protection.</explanation>
+    </question>
+</quiz>

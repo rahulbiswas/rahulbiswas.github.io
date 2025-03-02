@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Herbert Hoover's response to the Great Depression in 1930 that "Nobody has starved" demonstrated:</prompt>
+        <options>
+            <option letter="a">His successful policies in addressing hunger</option>
+            <option letter="b">His connection with average Americans' suffering</option>
+            <option letter="c">His misunderstanding of the crisis's severity</option>
+            <option letter="d">His support for direct federal aid</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Hoover's statement that "Nobody has starved" revealed his fundamental disconnect from the reality of the Depression. This quote exemplified his failure to recognize the depth of suffering among Americans and contributed to public perception that he was indifferent to their hardships, damaging his political reputation.</explanation>
+    </question>
+</quiz>

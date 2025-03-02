@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Sheppard-Towner Act's repeal in 1929 reflected:</prompt>
+        <options>
+            <option letter="a">The success of the program</option>
+            <option letter="b">Conservative opposition to federal welfare programs</option>
+            <option letter="c">Improved maternal health conditions</option>
+            <option letter="d">Support for women's rights</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Sheppard-Towner Act's repeal, despite its success in reducing maternal and infant mortality, demonstrated growing conservative opposition to federal welfare programs in the 1920s. Critics labeled it "socialistic" and an intrusion into states' rights. The repeal exemplified the decade's resistance to government social welfare initiatives and marked a setback for progressive reform efforts.</explanation>
+    </question>
+</quiz>

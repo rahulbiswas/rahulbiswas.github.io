@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Countee Cullen's significance in the Harlem Renaissance was his:</prompt>
+        <options>
+            <option letter="a">Political leadership</option>
+            <option letter="b">Poetry addressing racial identity and experience</option>
+            <option letter="c">Jazz compositions</option>
+            <option letter="d">Economic theories</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Countee Cullen was one of the most important poets of the Harlem Renaissance, known for works that explored racial identity and African American experience while using traditional poetic forms. His poetry, including famous works like "Heritage" and "Yet Do I Marvel," addressed the complexities of being black in America while maintaining classical literary structures, making him a unique voice in the cultural movement.</explanation>
+    </question>
+</quiz>

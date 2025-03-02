@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The resurgence of the Ku Klux Klan in the 1920s was characterized by:</prompt>
+        <options>
+            <option letter="a">Support for civil rights</option>
+            <option letter="b">Opposition to immigrants, Catholics, Jews, and African Americans</option>
+            <option letter="c">Focus solely on economic issues</option>
+            <option letter="d">Promotion of international cooperation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The KKK's revival in the 1920s expanded its targets beyond African Americans to include immigrants, Catholics, Jews, and others perceived as threatening "traditional" American values. The organization reached its peak membership of several million in the mid-1920s, promoting nationalism, Protestant fundamentalism, and white supremacy, before declining due to internal scandals and public opposition.</explanation>
+    </question>
+</quiz>

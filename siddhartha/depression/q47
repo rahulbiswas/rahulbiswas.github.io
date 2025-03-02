@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Langston Hughes's contribution to the Harlem Renaissance included:</prompt>
+        <options>
+            <option letter="a">Political organizing</option>
+            <option letter="b">Poetry celebrating African American life and culture</option>
+            <option letter="c">Scientific research</option>
+            <option letter="d">Economic reform proposals</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Langston Hughes was a central figure of the Harlem Renaissance, writing poetry that celebrated African American life, culture, and experience. His works, including "The Negro Speaks of Rivers" and "The Weary Blues," incorporated jazz rhythms and black vernacular while addressing themes of racial pride, the African American experience, and social justice. His accessible style and profound impact made him known as the "Poet Laureate of Harlem."</explanation>
+    </question>
+</quiz>
