@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Teapot Dome scandal revealed:</prompt>
+        <options>
+            <option letter="a">Foreign policy failures</option>
+            <option letter="b">Corruption in leasing naval oil reserves</option>
+            <option letter="c">Labor union corruption</option>
+            <option letter="d">Stock market manipulation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Teapot Dome scandal revealed corruption in the Harding administration when Secretary of the Interior Albert Fall secretly leased naval oil reserves in Wyoming (Teapot Dome) and California to private oil companies in exchange for bribes. The scandal resulted in Fall's conviction and imprisonment, marking the first time a U.S. cabinet member was sent to prison, and symbolized the corruption of the Harding administration.</explanation>
+    </question>
+</quiz>

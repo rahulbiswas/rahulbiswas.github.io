@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The impact of Hoover's statement "prosperity is just around the corner" was:</prompt>
+        <options>
+            <option letter="a">Restoring public confidence</option>
+            <option letter="b">Damaging his credibility during the Depression</option>
+            <option letter="c">Stimulating economic growth</option>
+            <option letter="d">Encouraging international trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hoover's optimistic statement that "prosperity is just around the corner" severely damaged his credibility as the Depression worsened. Like his similar assertion that "the tide has turned," this statement demonstrated his failure to recognize the Depression's severity and contributed to public perception that he was out of touch with the suffering of ordinary Americans during the economic crisis.</explanation>
+    </question>
+</quiz>

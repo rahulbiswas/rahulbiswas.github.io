@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The term "Lost Generation" referred to:</prompt>
+        <options>
+            <option letter="a">Immigrants who couldn't find work</option>
+            <option letter="b">Writers and artists disillusioned by World War I</option>
+            <option letter="c">Children orphaned during the Spanish Flu</option>
+            <option letter="d">Factory workers displaced by automation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The "Lost Generation" described the post-World War I generation, particularly writers and artists like Ernest Hemingway and F. Scott Fitzgerald, who were disillusioned by the war's brutality. Their works often reflected themes of alienation, disillusionment with traditional values, and the search for meaning in a changed world.</explanation>
+    </question>
+</quiz>

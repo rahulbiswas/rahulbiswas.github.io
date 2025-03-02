@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The term "Lost Generation" was popularized by:</prompt>
+        <options>
+            <option letter="a">World War I veterans</option>
+            <option letter="b">Gertrude Stein and Ernest Hemingway</option>
+            <option letter="c">Political leaders</option>
+            <option letter="d">Labor unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The term "Lost Generation" was popularized through Ernest Hemingway's "The Sun Also Rises," where he quoted Gertrude Stein. It referred to the generation that came of age during World War I, particularly writers and artists who felt disillusioned by the war's brutality. The term captured their sense of moral loss, disorientation, and rejection of traditional American values in the post-war period.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Milo Reno was significant in the early 1930s because he:</prompt>
+        <options>
+            <option letter="a">Led the Farmers' Holiday Movement</option>
+            <option letter="b">Supported bank reforms</option>
+            <option letter="c">Promoted international trade</option>
+            <option letter="d">Advocated for urban development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Milo Reno led the Farmers' Holiday Movement during the Great Depression, organizing farmers to withhold their products from market in protest of low agricultural prices. The movement, which began in 1932, included direct action such as blocking roads to prevent farm products from reaching markets, reflecting the desperate situation of American farmers during the Depression.</explanation>
+    </question>
+</quiz>

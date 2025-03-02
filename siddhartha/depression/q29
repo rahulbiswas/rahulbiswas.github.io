@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Richard Whitney's role in the Stock Market Crash of 1929 was:</prompt>
+        <options>
+            <option letter="a">Successfully preventing the crash</option>
+            <option letter="b">Attempting to stop the panic through stock purchases</option>
+            <option letter="c">Predicting and warning about the crash</option>
+            <option letter="d">Regulating trading practices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Richard Whitney, vice president of the New York Stock Exchange, attempted to halt the market panic on October 24, 1929 ("Black Thursday") by dramatically purchasing large blocks of U.S. Steel shares at above-market prices. While this temporarily boosted confidence, it ultimately failed to prevent the crash, which continued through "Black Tuesday" and led to the Great Depression.</explanation>
+    </question>
+</quiz>
