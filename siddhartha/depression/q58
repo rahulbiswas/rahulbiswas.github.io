@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The ACLU's role in the Scopes Trial demonstrated its commitment to:</prompt>
+        <options>
+            <option letter="a">Religious fundamentalism</option>
+            <option letter="b">Defending civil liberties and academic freedom</option>
+            <option letter="c">Supporting state laws</option>
+            <option letter="d">Opposing scientific education</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The American Civil Liberties Union's involvement in the 1925 Scopes "Monkey" Trial, where they defended a teacher's right to teach evolution, exemplified their mission to protect civil liberties and academic freedom. By providing legal support and bringing in Clarence Darrow as defense attorney, the ACLU used the trial to challenge restrictions on intellectual freedom and separation of church and state.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Herbert Hoover's response to the Bonus Army demonstrated:</prompt>
+        <options>
+            <option letter="a">Sympathy for veterans' needs</option>
+            <option letter="b">Willingness to use force against protesters</option>
+            <option letter="c">Successful negotiation skills</option>
+            <option letter="d">Support for veterans' benefits</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hoover's response to the Bonus Army in 1932, authorizing the use of military force to evict peaceful WWI veterans and their families from Washington D.C., demonstrated his willingness to use force against protesters. The violent removal of veterans by troops under General MacArthur, including the use of tanks and tear gas, severely damaged Hoover's public image and highlighted his administration's harsh response to Depression-era protests.</explanation>
+    </question>
+</quiz>

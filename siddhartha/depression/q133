@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The KKK's revival in the 1920s was marked by:</prompt>
+        <options>
+            <option letter="a">Support for civil rights</option>
+            <option letter="b">Expanded targets including immigrants and Catholics</option>
+            <option letter="c">Opposition to Protestant values</option>
+            <option letter="d">Promotion of racial equality</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The KKK's 1920s revival expanded its targets beyond African Americans to include immigrants, Catholics, Jews, and others perceived as threatening "traditional" American values. This broader focus reflected post-WWI nativism and cultural anxieties. The organization gained millions of members nationwide and significant political influence before declining due to internal scandals and public opposition.</explanation>
+    </question>
+</quiz>

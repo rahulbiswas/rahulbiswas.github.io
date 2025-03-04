@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The fundamentalist movement of the 1920s was primarily a reaction against:</prompt>
+        <options>
+            <option letter="a">Economic policies</option>
+            <option letter="b">Modernism and social change</option>
+            <option letter="c">Immigration laws</option>
+            <option letter="d">Foreign policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The fundamentalist movement represented a conservative Protestant reaction against modernism, including scientific theories like evolution, changing social values, and liberal religious interpretations of the Bible. This cultural and religious movement opposed what it saw as threats to traditional Christian beliefs and moral values, exemplified in conflicts like the Scopes Trial and campaigns against teaching evolution.</explanation>
+    </question>
+</quiz>

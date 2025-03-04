@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Immigration Act of 1924 was significant because it:</prompt>
+        <options>
+            <option letter="a">Eliminated all immigration restrictions</option>
+            <option letter="b">Established quotas based on national origins</option>
+            <option letter="c">Encouraged immigration from Asia</option>
+            <option letter="d">Created an open border with Mexico</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Immigration Act of 1924 established strict quotas based on national origins, severely limiting immigration from Southern and Eastern Europe and completely excluding immigrants from Asia. This law reflected the nativist sentiments and racial prejudices of the 1920s, marking a significant shift toward restrictive immigration policy.</explanation>
+    </question>
+</quiz>

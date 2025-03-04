@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The impact of the flappers on American society included:</prompt>
+        <options>
+            <option letter="a">Supporting traditional values</option>
+            <option letter="b">Challenging gender roles and social norms</option>
+            <option letter="c">Promoting political conservatism</option>
+            <option letter="d">Reinforcing Victorian morality</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Flappers significantly impacted American society by challenging traditional gender roles and social norms. Through their distinctive fashion (short skirts, bobbed hair), behavior (smoking, drinking, dancing), and attitudes toward traditional morality, they symbolized changing roles for women and broader cultural shifts. Their lifestyle choices represented a visible challenge to Victorian-era restrictions on women's behavior.</explanation>
+    </question>
+</quiz>

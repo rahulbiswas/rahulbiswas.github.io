@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Warren G. Harding's "return to normalcy" policy involved:</prompt>
+        <options>
+            <option letter="a">Progressive reforms and regulations</option>
+            <option letter="b">Reducing government's role in the economy</option>
+            <option letter="c">Expanding federal programs</option>
+            <option letter="d">Supporting labor unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Harding's "return to normalcy" policy meant scaling back the federal government's role in the economy after World War I's extensive government intervention. This included lowering taxes, reducing regulations on business, limiting immigration, and generally promoting a pro-business environment. However, this hands-off approach also enabled corruption within his administration, leading to scandals like Teapot Dome.</explanation>
+    </question>
+</quiz>

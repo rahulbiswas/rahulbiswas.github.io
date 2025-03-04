@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>John W. Davis's role in the 1924 presidential election was as:</prompt>
+        <options>
+            <option letter="a">The Republican nominee</option>
+            <option letter="b">The Democratic nominee after 103 ballots</option>
+            <option letter="c">A third-party candidate</option>
+            <option letter="d">The vice presidential nominee</option>
+        </options>
+        <answer>b</answer>
+        <explanation>John W. Davis became the Democratic presidential nominee in 1924 after a bitter convention fight that required 103 ballots to reach a decision. As a compromise candidate between the party's conservative and progressive wings, he represented neither faction effectively. His campaign struggled against incumbent Calvin Coolidge, resulting in a decisive Republican victory.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The German reparations crisis of the early 1930s contributed to:</prompt>
+        <options>
+            <option letter="a">Increased international trade</option>
+            <option letter="b">Global financial instability and bank failures</option>
+            <option letter="c">American economic growth</option>
+            <option letter="d">Stronger European economies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Germany's inability to pay World War I reparations led to a series of international financial crises. When Germany defaulted on payments, it triggered bank failures in Austria and Germany, which then spread to other European banks. This banking crisis affected American banks that had made loans to European nations, contributing to the global spread and intensity of the Great Depression.</explanation>
+    </question>
+</quiz>

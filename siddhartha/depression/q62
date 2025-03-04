@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Immigration Act of 1924's quota system was designed to:</prompt>
+        <options>
+            <option letter="a">Promote cultural diversity</option>
+            <option letter="b">Favor Northern European immigrants</option>
+            <option letter="c">Increase Asian immigration</option>
+            <option letter="d">Welcome Southern Europeans</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Immigration Act of 1924's quota system was specifically designed to favor immigrants from Northern and Western Europe while severely restricting immigration from Southern and Eastern Europe. It completely excluded immigrants from Asia and set quotas based on 2% of each nationality's population in the 1890 census, deliberately choosing a year before large-scale immigration from Southern and Eastern Europe began.</explanation>
+    </question>
+</quiz>

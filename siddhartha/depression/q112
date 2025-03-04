@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The cultural significance of flappers in the 1920s was their:</prompt>
+        <options>
+            <option letter="a">Support for traditional values</option>
+            <option letter="b">Challenge to conventional gender roles</option>
+            <option letter="c">Political activism</option>
+            <option letter="d">Religious devotion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Flappers symbolized a challenge to conventional gender roles and traditional social norms of the 1920s. Through their distinctive fashion (short skirts, bobbed hair), behavior (smoking, drinking, dancing), and attitudes toward traditional morality, they represented the changing role of women in society. Their lifestyle choices challenged Victorian-era restrictions on women's behavior and symbolized the broader cultural changes of the "Roaring Twenties."</explanation>
+    </question>
+</quiz>

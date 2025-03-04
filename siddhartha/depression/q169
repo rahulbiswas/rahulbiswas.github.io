@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Adkins v. Children's Hospital decision demonstrated:</prompt>
+        <options>
+            <option letter="a">Support for labor rights</option>
+            <option letter="b">The Supreme Court's pro-business stance</option>
+            <option letter="c">Protection of women workers</option>
+            <option letter="d">Progressive reform success</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1923 Adkins v. Children's Hospital decision demonstrated the Supreme Court's pro-business stance by striking down a minimum wage law for women workers in Washington D.C. The Court ruled it unconstitutional under the Fifth Amendment's due process clause, reflecting its commitment to "freedom of contract" and opposition to government regulation of business. This decision exemplified the conservative Court's protection of business interests.</explanation>
+    </question>
+</quiz>

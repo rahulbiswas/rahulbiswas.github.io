@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Calvin Coolidge's statement "the business of America is business" reflected:</prompt>
+        <options>
+            <option letter="a">Support for labor unions</option>
+            <option letter="b">Pro-business, laissez-faire policies</option>
+            <option letter="c">Opposition to capitalism</option>
+            <option letter="d">Progressive reform agenda</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Coolidge's famous statement encapsulated his administration's pro-business, hands-off approach to government. This philosophy manifested in policies that reduced regulations, lowered taxes on businesses and wealthy individuals, and limited government intervention in the economy. His presidency (1923-1929) exemplified the conservative, business-friendly political climate of the "Roaring Twenties."</explanation>
+    </question>
+</quiz>
