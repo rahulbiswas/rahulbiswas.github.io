@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Box with Canvas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial,;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></canvas>
+
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        drawBoxes();
+        canvas.addEventListener('click', function() {
+            drawBoxes();
+            console.log('Green box changed color');
+        });
+		
+        function drawBoxes() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw a simple rectangle
+            ctx.fillStyle = yellow();
+            ctx.fillRect(0, 0, 450, 900);
+	    
+		    ctx.fillStyle = green();
+	        ctx.fillRect(450, 0, 450, 900);
+        }
+        
+		// Returns a number in [min,max].
+		function randInt(min, max) {
+			return Math.floor(min + (max - min) * Math.random())
+		}
+		
+		function green() {
+			const r = randInt(0,255);
+			const g = randInt(0, 255);
+			const b = randInt(0, 255);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}
+		
+		function yellow() {
+			const r = randInt(0,255);
+			const g = randInt(0, 255);
+			const b = randInt(0, 255);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}
+    </script>
+</body>
+</html>
