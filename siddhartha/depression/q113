@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Indian Citizenship Act of 1924 was limited by:</prompt>
+        <options>
+            <option letter="a">Federal restrictions on implementation</option>
+            <option letter="b">State denial of voting rights</option>
+            <option letter="c">Tribal opposition</option>
+            <option letter="d">Constitutional challenges</option>
+        </options>
+        <answer>b</answer>
+        <explanation>While the Indian Citizenship Act granted U.S. citizenship to all Native Americans born within U.S. territory, its practical impact was severely limited by state-level restrictions on voting rights. Many states continued to deny Native Americans the right to vote through various measures including literacy tests, poll taxes, and other discriminatory practices. Full voting rights for Native Americans were not achieved in all states until the 1950s.</explanation>
+    </question>
+</quiz>

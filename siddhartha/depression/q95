@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Herbert Hoover's response to the Depression was limited by his belief in:</prompt>
+        <options>
+            <option letter="a">Direct government aid to individuals</option>
+            <option letter="b">Voluntary cooperation and individualism</option>
+            <option letter="c">Socialist economic principles</option>
+            <option letter="d">Federal control of industry</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hoover's response to the Depression was constrained by his belief in voluntary cooperation and individualism. His philosophy of "American Individualism" emphasized private charity, local initiative, and business leadership rather than direct federal intervention. This ideological commitment prevented him from implementing more aggressive federal relief measures, even as the economic crisis worsened.</explanation>
+    </question>
+</quiz>

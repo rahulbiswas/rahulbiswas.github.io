@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Calvin Coolidge's famous statement "the chief business of the American people is business" reflected:</prompt>
+        <options>
+            <option letter="a">Support for labor unions</option>
+            <option letter="b">Pro-business, hands-off government philosophy</option>
+            <option letter="c">Opposition to capitalism</option>
+            <option letter="d">Progressive reform agenda</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Coolidge's statement epitomized his administration's pro-business, laissez-faire philosophy. It reflected his belief that government should maintain a hands-off approach to business, reduce regulations, and lower taxes. This approach characterized the Republican administrations of the 1920s, promoting what they saw as a partnership between government and business that emphasized minimal interference in the economy.</explanation>
+    </question>
+</quiz>

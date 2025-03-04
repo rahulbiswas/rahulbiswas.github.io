@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>William Doak's deportation campaigns targeted:</prompt>
+        <options>
+            <option letter="a">European immigrants</option>
+            <option letter="b">Mexican and Mexican-American residents</option>
+            <option letter="c">Asian immigrants</option>
+            <option letter="d">Political dissidents</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As Hoover's Secretary of Labor, William Doak initiated aggressive deportation campaigns primarily targeting Mexican and Mexican-American residents. Claiming this would create jobs for American citizens during the Depression, his actions led to the forced repatriation of hundreds of thousands of people of Mexican descent, including many U.S. citizens, demonstrating the era's xenophobia and economic nationalism.</explanation>
+    </question>
+</quiz>

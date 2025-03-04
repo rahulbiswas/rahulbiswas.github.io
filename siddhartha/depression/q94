@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The term "Hooverville" emerged as:</prompt>
+        <options>
+            <option letter="a">A government housing project</option>
+            <option letter="b">A bitter reference to makeshift shanty towns</option>
+            <option letter="c">A planned community development</option>
+            <option letter="d">A veterans' settlement program</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The term "Hooverville" emerged as a bitter, ironic reference to the makeshift shanty towns built by homeless and unemployed Americans during the Great Depression. Named mockingly after President Hoover, whom many blamed for the crisis, these settlements of cardboard boxes and scrap materials became powerful symbols of the Depression's human toll and Hoover's perceived inability to address the economic crisis effectively.</explanation>
+    </question>
+</quiz>

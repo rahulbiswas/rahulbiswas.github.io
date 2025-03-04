@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Reconstruction Finance Corporation under Hoover was limited by its:</prompt>
+        <options>
+            <option letter="a">Excessive spending</option>
+            <option letter="b">Focus on indirect aid to institutions</option>
+            <option letter="c">Support for individual relief</option>
+            <option letter="d">State-level implementation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The RFC's effectiveness was limited by its focus on indirect aid through loans to banks, railroads, and corporations rather than direct assistance to individuals. This approach reflected Hoover's belief in "trickle-down" economics and voluntary cooperation, but proved inadequate for addressing the immediate needs of millions of Americans suffering during the Depression.</explanation>
+    </question>
+</quiz>

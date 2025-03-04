@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Lost Generation writers were characterized by their:</prompt>
+        <options>
+            <option letter="a">Patriotic themes</option>
+            <option letter="b">Disillusionment with traditional values</option>
+            <option letter="c">Support for war</option>
+            <option letter="d">Religious devotion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Lost Generation writers, including Ernest Hemingway and F. Scott Fitzgerald, were characterized by their disillusionment with traditional American values following World War I. Their works expressed themes of alienation, loss of faith in conventional morality, and rejection of pre-war idealism. This literary movement reflected broader cultural changes and questioning of traditional beliefs in post-war American society.</explanation>
+    </question>
+</quiz>

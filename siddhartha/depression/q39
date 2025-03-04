@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The failure of German reparation payments in the early 1930s:</prompt>
+        <options>
+            <option letter="a">Had no effect on the U.S. economy</option>
+            <option letter="b">Contributed to the international financial crisis</option>
+            <option letter="c">Strengthened European economies</option>
+            <option letter="d">Led to increased U.S. exports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Germany's inability to make reparation payments in the early 1930s triggered a chain reaction in the international financial system. This default contributed to banking crises in Europe, particularly in Austria and Germany, which in turn affected American banks that had made loans to European nations. The resulting international financial crisis deepened and prolonged the Great Depression.</explanation>
+    </question>
+</quiz>

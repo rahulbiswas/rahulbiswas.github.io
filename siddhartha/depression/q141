@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Hoover's statement that "prosperity is just around the corner" demonstrated:</prompt>
+        <options>
+            <option letter="a">Accurate economic forecasting</option>
+            <option letter="b">Misunderstanding of the Depression's severity</option>
+            <option letter="c">Effective crisis management</option>
+            <option letter="d">Support for direct relief</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hoover's statement that "prosperity is just around the corner" demonstrated his fundamental misunderstanding of the Great Depression's severity. This optimistic prediction, made as economic conditions continued to worsen, damaged his credibility and contributed to public perception that he was out of touch with the suffering of ordinary Americans during the crisis.</explanation>
+    </question>
+</quiz>

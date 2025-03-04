@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Schenck v. United States decision's "clear and present danger" test:</prompt>
+        <options>
+            <option letter="a">Protected all forms of political speech</option>
+            <option letter="b">Limited First Amendment protections during wartime</option>
+            <option letter="c">Expanded press freedoms</option>
+            <option letter="d">Banned all government censorship</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Supreme Court's "clear and present danger" test, established in Schenck v. United States (1919), allowed restrictions on speech that posed an immediate threat to national security. Justice Holmes argued that free speech protections did not cover words that created a clear and present danger, using the famous example that falsely shouting "fire" in a crowded theater was not protected speech.</explanation>
+    </question>
+</quiz>

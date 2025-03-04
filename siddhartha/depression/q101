@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Bonus Army's treatment by the Hoover administration demonstrated:</prompt>
+        <options>
+            <option letter="a">Government support for veterans</option>
+            <option letter="b">Military force against peaceful protesters</option>
+            <option letter="c">Successful negotiation tactics</option>
+            <option letter="d">Economic relief measures</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Hoover administration's violent response to the Bonus Army, using military forces led by General MacArthur to evict peaceful WWI veterans and their families from Washington D.C., demonstrated the government's harsh approach to protest during the Depression. The use of tanks and troops against veterans seeking early payment of their service bonuses severely damaged Hoover's public image and symbolized his administration's insensitivity to suffering Americans.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Adkins v. Children's Hospital decision reflected:</prompt>
+        <options>
+            <option letter="a">Support for worker protection</option>
+            <option letter="b">Conservative support for business interests</option>
+            <option letter="c">Progressive reform efforts</option>
+            <option letter="d">Labor union influence</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1923 Adkins v. Children's Hospital decision reflected the Supreme Court's conservative support for business interests. By striking down a minimum wage law for women workers in Washington D.C., the Court demonstrated its commitment to "freedom of contract" and opposition to government regulation of business. This decision exemplified the pro-business orientation of the Supreme Court during the 1920s.</explanation>
+    </question>
+</quiz>

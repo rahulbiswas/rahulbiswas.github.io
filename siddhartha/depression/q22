@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Indian Citizenship Act of 1924:</prompt>
+        <options>
+            <option letter="a">Granted U.S. citizenship to all Native Americans</option>
+            <option letter="b">Restricted Native Americans to reservations</option>
+            <option letter="c">Provided voting rights in all states</option>
+            <option letter="d">Established tribal sovereignty</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Indian Citizenship Act of 1924 granted U.S. citizenship to all Native Americans born within U.S. territory. While this represented a significant change in federal Indian policy, it did not automatically guarantee voting rights, which remained under state control. Many states continued to deny Native Americans voting rights through various restrictions until the 1950s.</explanation>
+    </question>
+</quiz>
