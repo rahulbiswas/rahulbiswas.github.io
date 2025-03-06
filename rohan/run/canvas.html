@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></canvas>
+    <canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);"></canvas>
 
     <script>
         // Get the canvas element and its context
@@ -28,17 +28,23 @@
             drawBoxes();
             console.log('Green box changed color');
         });
-		
+
         function drawBoxes() {
             // Clear the canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             // Draw a simple rectangle
-            ctx.fillStyle = yellow();
-            ctx.fillRect(0, 0, 450, 900);
-	    
-		    ctx.fillStyle = green();
-	        ctx.fillRect(450, 0, 450, 900);
+            ctx.fillStyle = color();
+            ctx.fillRect(0, 0, 450, 450);
+				    
+		    ctx.fillStyle = color();
+	        ctx.fillRect(0, 450, 450, 450);
+			
+		    ctx.fillStyle = color();
+	        ctx.fillRect(450, 0, 450, 450);
+		    
+			ctx.fillStyle = color();
+	        ctx.fillRect(450, 450, 450, 450);
         }
         
 		// Returns a number in [min,max].
@@ -46,17 +52,10 @@
 			return Math.floor(min + (max - min) * Math.random())
 		}
 		
-		function green() {
-			const r = randInt(0,100);
-			const g = randInt(200, 255);
-			const b = randInt(0, 100);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}
-		
-		function yellow() {
-			const r = randInt(200,255);
-			const g = randInt(200, 255);
-			const b = randInt(0, 100);
+		function color() {
+			const r = randInt(100, 200);
+			const g = randInt(100, 200);
+			const b = randInt(100, 200);
             return `rgb(${r}, ${g}, ${b})`;			
 		}
     </script>
