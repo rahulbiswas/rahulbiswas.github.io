@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the first round of the money creation process with a 20% reserve requirement, if a bank receives a $5000 deposit, what happens in the first three rounds?</prompt>
+        <options>
+            <option letter="a">First: lend $4000, Second: lend $3200, Third: lend $2560</option>
+            <option letter="b">First: lend $4500, Second: lend $4050, Third: lend $3645</option>
+            <option letter="c">First: lend $4000, Second: lend $2000, Third: lend $1000</option>
+            <option letter="d">First: lend $3500, Second: lend $2500, Third: lend $1500</option>
+        </options>
+        <answer>a</answer>
+        <explanation>With 20% reserve requirement: First bank keeps $1000, lends $4000. Second bank keeps $800 (20% of $4000), lends $3200. Third bank keeps $640 (20% of $3200), lends $2560. Each new loan is 80% of the previous deposit, following the reserve requirement pattern.</explanation>
+    </question>
+</quiz>
