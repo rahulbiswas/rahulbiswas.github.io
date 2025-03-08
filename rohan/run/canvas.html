@@ -34,28 +34,92 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             // Draw a simple rectangle
-            ctx.fillStyle = color();
-            ctx.fillRect(0, 0, 450, 450);
+            ctx.fillStyle = red();
+            ctx.fillRect(0, 0, 290, 290);
 				    
-		    ctx.fillStyle = color();
-	        ctx.fillRect(0, 450, 450, 450);
+		    ctx.fillStyle = orange();
+	        ctx.fillRect(300, 0, 290, 290);
 			
-		    ctx.fillStyle = color();
-	        ctx.fillRect(450, 0, 450, 450);
+		    ctx.fillStyle = yellow();
+	        ctx.fillRect(600, 0, 290, 290);
 		    
-			ctx.fillStyle = color();
-	        ctx.fillRect(450, 450, 450, 450);
-        }
+			ctx.fillStyle = green();
+	        ctx.fillRect(0, 300, 290, 290);
+			
+			ctx.fillStyle = blue();
+	        ctx.fillRect(300, 300, 290, 290);
+    		
+			ctx.fillStyle = indigo();
+	        ctx.fillRect(600, 300, 290, 290);
+			
+			ctx.fillStyle = violet();
+	        ctx.fillRect(0, 600, 290, 300);
+			
+			ctx.fillStyle = gray();
+	        ctx.fillRect(300, 600, 290, 0);
+			
+			ctx.fillStyle = brown();
+	        ctx.fillRect(600, 600, 290, 290);
+	    }
+	
         
 		// Returns a number in [min,max].
 		function randInt(min, max) {
 			return Math.floor(min + (max - min) * Math.random())
 		}
 		
-		function color() {
-			const r = randInt(100, 200);
-			const g = randInt(100, 200);
-			const b = randInt(100, 200);
+		function red() {
+			const r = randInt(255, 255);
+			const g = randInt(0, 0);
+			const b = randInt(0, 0);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function orange() {
+			const r = randInt(255, 255);
+			const g = randInt(165, 165);
+			const b = randInt(0, 0);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function yellow() {
+			const r = randInt(255, 255);
+			const g = randInt(255, 255);
+			const b = randInt(0, 0);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function green() {
+			const r = randInt(0, 0);
+			const g = randInt(255, 255);
+			const b = randInt(0, 0);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function blue() {
+			const r = randInt(0, 0);
+			const g = randInt(0, 0);
+			const b = randInt(255, 255);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function indigo() {
+			const r = randInt(75, 75);
+			const g = randInt(0, 0);
+			const b = randInt(130, 130);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function violet() {
+			const r = randInt(127, 127);
+			const g = randInt(0, 0);
+			const b = randInt(255, 255);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function gray() {
+			const r = randInt(128, 128);
+			const g = randInt(128, 128);
+			const b = randInt(128, 128);
+            return `rgb(${r}, ${g}, ${b})`;			
+		}	
+		function brown() {
+			const r = randInt(150, 150);
+			const g = randInt(75, 75);
+			const b = randInt(0, 0);
             return `rgb(${r}, ${g}, ${b})`;			
 		}
     </script>
