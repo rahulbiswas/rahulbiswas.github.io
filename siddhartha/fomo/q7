@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What shifts the supply curve in the loanable funds market to the right?</prompt>
+        <options>
+            <option letter="a">A decrease in household savings rates</option>
+            <option letter="b">An increase in foreign investment in domestic markets</option>
+            <option letter="c">A decrease in expected future business opportunities</option>
+            <option letter="d">An increase in government borrowing</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The supply of loanable funds increases (shifts right) when foreign investors put more money into domestic markets, when domestic savings rates increase, or when banks become more willing to lend. This increased supply of loanable funds puts downward pressure on real interest rates.</explanation>
+    </question>
+</quiz>

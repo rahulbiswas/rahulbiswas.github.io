@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in expected inflation affect the nominal interest rate in the loanable funds market?</prompt>
+        <options>
+            <option letter="a">It has no effect on nominal interest rates</option>
+            <option letter="b">It decreases nominal interest rates</option>
+            <option letter="c">It increases nominal interest rates by the same amount</option>
+            <option letter="d">It makes nominal interest rates more volatile</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When expected inflation increases, lenders demand higher nominal interest rates to maintain their real return. The nominal rate increases by approximately the same amount as the increase in expected inflation, following the Fisher equation where nominal rate equals real rate plus expected inflation.</explanation>
+    </question>
+</quiz>

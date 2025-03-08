@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the required reserve ratio is 10% and banks hold 5% excess reserves, how much will $2000 in new deposits add to the money supply?</prompt>
+        <options>
+            <option letter="a">$20,000</option>
+            <option letter="b">$13,333</option>
+            <option letter="c">$10,000</option>
+            <option letter="d">$15,000</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With 10% required reserves plus 5% excess reserves, the total reserve ratio is 15%. The money multiplier is 1/0.15 = 6.67. Therefore, $2000 in new deposits can create a maximum of $2000 × 6.67 = $13,333 in new money, less than if banks held no excess reserves.</explanation>
+    </question>
+</quiz>

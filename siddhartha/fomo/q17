@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the economy is experiencing both high unemployment and high inflation, this scenario is known as:</prompt>
+        <options>
+            <option letter="a">Deflation</option>
+            <option letter="b">Hyperinflation</option>
+            <option letter="c">Stagflation</option>
+            <option letter="d">Reflation</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Stagflation occurs when the economy experiences both high unemployment (stagnation) and high inflation simultaneously. This challenges the traditional Phillips Curve relationship and often results from negative supply shocks, such as rising oil prices, that both reduce output and increase prices.</explanation>
+    </question>
+</quiz>

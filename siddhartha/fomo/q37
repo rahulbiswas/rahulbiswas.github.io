@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What explains why the Marginal Propensity to Consume (MPC) plus the Marginal Propensity to Save (MPS) must equal 1?</prompt>
+        <options>
+            <option letter="a">Government regulations require it</option>
+            <option letter="b">The Fed maintains this ratio</option>
+            <option letter="c">Each additional dollar must be either spent or saved</option>
+            <option letter="d">Banks ensure this balance through lending</option>
+        </options>
+        <answer>c</answer>
+        <explanation>MPC + MPS = 1 because each additional dollar of income must be either consumed (spent) or saved. Since these are the only two options for using additional income, their marginal propensities must sum to 100% or 1. This is a fundamental accounting identity.</explanation>
+    </question>
+</quiz>

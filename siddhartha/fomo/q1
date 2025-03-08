@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>When the Federal Reserve conducts open market operations by selling government securities, what sequence occurs in the economy?</prompt>
+        <options>
+            <option letter="a">Money supply increases → Interest rates decrease → Investment spending increases → Aggregate Demand increases</option>
+            <option letter="b">Money supply decreases → Interest rates increase → Investment spending decreases → Aggregate Demand decreases</option>
+            <option letter="c">Money supply increases → Interest rates decrease → Investment spending decreases → Aggregate Demand decreases</option>
+            <option letter="d">Money supply decreases → Interest rates increase → Investment spending increases → Aggregate Demand increases</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the Fed sells securities, it takes money out of circulation, reducing the money supply. This makes money more scarce, pushing interest rates up. Higher interest rates discourage borrowing and investment spending, which leads to lower Aggregate Demand.</explanation>
+    </question>
+</quiz>

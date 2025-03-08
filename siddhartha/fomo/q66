@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the reserve requirement is 10% and banks hold no excess reserves, what is the money multiplier, and how much new money can be created from $1000 in new deposits?</prompt>
+        <options>
+            <option letter="a">Multiplier = 10, New money = $10,000</option>
+            <option letter="b">Multiplier = 5, New money = $5,000</option>
+            <option letter="c">Multiplier = 0.1, New money = $100</option>
+            <option letter="d">Multiplier = 1, New money = $1,000</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The money multiplier equals 1/reserve requirement ratio. With a 10% (0.1) requirement, the multiplier is 1/0.1 = 10. Therefore, $1000 in new deposits can create up to $1000 × 10 = $10,000 in new money through the banking system's lending process.</explanation>
+    </question>
+</quiz>
