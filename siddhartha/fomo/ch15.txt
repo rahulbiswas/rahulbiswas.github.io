@@ -1,0 +1,18 @@
+MV = PY
+- Called equation of exchange
+- M = money supply
+- V = velocity
+- P = price level
+- Y = real GDP
+- Quantity theory of money = Theory of monetary neutrality = V,Y tend to be sticky so changes to M affect P roughly proportionately
+- In the short term, expanding the money supply can boost AD
+
+Loanable Funds
+- Nominal interest rate = Real interest rate + Inflation
+- Normal supply demand curve with real interest rate in lieu of price
+- Factors affecting supply: People change saving, Foreigners change investment, Incentives, Income changes
+- Factors affecting demand: Opportunities, Future sales expectations, Technology, Fiscal policy
+
+Money Market
+- Normal demand curve but supply is vertical; Interest rate in lieu of price
+- Factors affecting demand: price level, income
