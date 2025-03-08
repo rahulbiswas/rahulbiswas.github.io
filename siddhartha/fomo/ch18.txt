@@ -1,0 +1,13 @@
+FiPo
+- Gov spending part of AD
+- Gov borrowing crowds out private borrowing
+- MPC = marginal propensity to consume
+- MPS = 1 - MPC
+- Balanced budget multiplier = Tax and spend $x to increase AD by $x
+- Automatic stabilizers = TANF, Income tax
+- TANF = Temporary Aid to Needy Families
+
+Government Loans
+- < 1 year, Treasury bill
+- 1 - 5 years, Treasury note
+- > 5 year, Treasury bond
