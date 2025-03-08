@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If velocity (V) is constant at 5, the money supply (M) grows by 8%, and real GDP (Y) grows by 3%, what happens to the price level (P)?</prompt>
+        <options>
+            <option letter="a">P increases by 3%</option>
+            <option letter="b">P increases by 5%</option>
+            <option letter="c">P increases by 8%</option>
+            <option letter="d">P increases by 11%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Using MV = PY with constant V, if M increases by 8% and Y by 3%, then P must increase by 5% for the equation to balance. This is because the left side increases by 8%, so with Y increasing by 3%, P must increase by the remaining 5% to maintain the equality.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the demand for money when the price level in the economy increases?</prompt>
+        <options>
+            <option letter="a">Money demand decreases due to inflation expectations</option>
+            <option letter="b">Money demand increases as more money is needed for transactions</option>
+            <option letter="c">Money demand stays constant regardless of price level</option>
+            <option letter="d">Money demand becomes perfectly elastic</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the price level increases, people need to hold more money to conduct the same amount of real transactions. This causes the money demand curve to shift to the right, as more money is demanded at every interest rate to maintain the same purchasing power.</explanation>
+    </question>
+</quiz>

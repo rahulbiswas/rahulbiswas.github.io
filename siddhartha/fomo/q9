@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which best describes the relationship between the discount rate and the federal funds rate?</prompt>
+        <options>
+            <option letter="a">The discount rate is typically lower than the federal funds rate</option>
+            <option letter="b">The discount rate is typically higher than the federal funds rate</option>
+            <option letter="c">The discount rate and federal funds rate are always equal</option>
+            <option letter="d">The discount rate and federal funds rate move in opposite directions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The discount rate (rate at which banks borrow from the Fed) is typically kept higher than the federal funds rate (rate at which banks borrow from each other) to encourage banks to borrow from each other first before turning to the Fed as a lender of last resort.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If MPC = 0.75 and government spending increases by $200 billion, what is the total change in GDP?</prompt>
+        <options>
+            <option letter="a">$200 billion</option>
+            <option letter="b">$400 billion</option>
+            <option letter="c">$600 billion</option>
+            <option letter="d">$800 billion</option>
+        </options>
+        <answer>d</answer>
+        <explanation>With MPC = 0.75, the spending multiplier is 1/(1-0.75) = 1/0.25 = 4. When government spending increases by $200 billion, the total change in GDP is $200 billion × 4 = $800 billion, as the initial spending creates multiple rounds of additional spending.</explanation>
+    </question>
+</quiz>

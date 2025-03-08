@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the MPC (Marginal Propensity to Consume) is 0.75, what is the MPS (Marginal Propensity to Save)?</prompt>
+        <options>
+            <option letter="a">0.75</option>
+            <option letter="b">1.75</option>
+            <option letter="c">0.25</option>
+            <option letter="d">1.25</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Marginal Propensity to Save (MPS) equals 1 minus the Marginal Propensity to Consume (MPC). Since MPC = 0.75, MPS = 1 - 0.75 = 0.25. This means for each additional dollar of income, 75 cents is consumed and 25 cents is saved.</explanation>
+    </question>
+</quiz>

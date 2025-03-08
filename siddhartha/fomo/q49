@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which describes the main difference between fiscal and monetary policy in affecting aggregate demand?</prompt>
+        <options>
+            <option letter="a">Fiscal policy works through interest rates, monetary policy through government spending</option>
+            <option letter="b">Fiscal policy works through government spending and taxes, monetary policy through interest rates</option>
+            <option letter="c">Fiscal policy only affects inflation, monetary policy only affects unemployment</option>
+            <option letter="d">Fiscal policy only works in the short run, monetary policy only in the long run</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Fiscal policy affects aggregate demand directly through changes in government spending and taxes, while monetary policy works indirectly by changing interest rates, which then affect private spending decisions like consumption and investment.</explanation>
+    </question>
+</quiz>

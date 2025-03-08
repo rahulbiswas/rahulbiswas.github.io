@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the required reserve ratio is 20% and banks keep 5% excess reserves, what is the actual money multiplier?</prompt>
+        <options>
+            <option letter="a">5</option>
+            <option letter="b">4</option>
+            <option letter="c">3.33</option>
+            <option letter="d">4.5</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When banks hold excess reserves, the money multiplier is 1/(required ratio + excess ratio). In this case, it's 1/(0.20 + 0.05) = 1/0.25 = 4. The multiplier is smaller than it would be with just required reserves (1/0.20 = 5) because excess reserves reduce lending capacity.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>With MPC = 0.75, by how much must taxes change to offset a $200 billion decrease in government spending?</prompt>
+        <options>
+            <option letter="a">Taxes must decrease by $200 billion</option>
+            <option letter="b">Taxes must decrease by $150 billion</option>
+            <option letter="c">Taxes must decrease by $250 billion</option>
+            <option letter="d">Taxes must decrease by $300 billion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With MPC = 0.75, spending multiplier = 4 and tax multiplier = -3. A $200B spending decrease reduces GDP by $800B (4 × -$200B). To offset this, tax change × -3 must equal +$800B. Therefore, taxes must decrease by $800B ÷ 3 = $150B to restore GDP to its original level.</explanation>
+    </question>
+</quiz>

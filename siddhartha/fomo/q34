@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the short-run Phillips Curve, what causes movement along the curve rather than a shift of the curve?</prompt>
+        <options>
+            <option letter="a">Changes in expected inflation</option>
+            <option letter="b">Changes in aggregate supply</option>
+            <option letter="c">Changes in aggregate demand</option>
+            <option letter="d">Changes in productivity</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Movement along the short-run Phillips Curve occurs when changes in aggregate demand cause unemployment and inflation to move in opposite directions. Changes in expected inflation or aggregate supply would shift the entire curve, while changes in AD create the trade-off represented by the curve.</explanation>
+    </question>
+</quiz>
