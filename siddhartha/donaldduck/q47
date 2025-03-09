@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What did the National Industrial Recovery Act establish?</prompt>
+    <options>
+        <option letter="a">Industry codes</option>
+        <option letter="b">Farm subsidies</option>
+        <option letter="c">Social Security</option>
+        <option letter="d">Bank reform</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The NIRA created codes of fair competition for different industries, setting standards for wages, hours, and working conditions.</explanation>
+</question>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the main criticism of the PWA?</prompt>
+    <options>
+        <option letter="a">Too slow to start</option>
+        <option letter="b">Wasted money</option>
+        <option letter="c">Hired too many</option>
+        <option letter="d">Projects too small</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Critics called the Public Works Administration too cautious and slow, as Harold Ickes' careful oversight delayed the start of many projects.</explanation>
+</question>

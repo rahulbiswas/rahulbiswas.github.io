@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does the long-run Phillips Curve differ from the short-run Phillips Curve?</prompt>
+        <options>
+            <option letter="a">The long-run curve is horizontal while the short-run slopes downward</option>
+            <option letter="b">The long-run curve is vertical while the short-run slopes downward</option>
+            <option letter="c">The long-run curve slopes upward while the short-run slopes downward</option>
+            <option letter="d">Both curves slope downward but at different angles</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The long-run Phillips Curve is vertical at the natural rate of unemployment, showing no permanent trade-off between inflation and unemployment. The short-run curve slopes downward, showing a temporary trade-off as changes in aggregate demand move the economy along the curve.</explanation>
+    </question>
+</quiz>

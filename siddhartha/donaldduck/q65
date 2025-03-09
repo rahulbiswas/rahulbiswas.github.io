@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>Why did Congress pass the Smith Act?</prompt>
+    <options>
+        <option letter="a">Fear of subversion</option>
+        <option letter="b">Labor protection</option>
+        <option letter="c">Economic reform</option>
+        <option letter="d">Military defense</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Congress passed the Smith Act in 1940 due to fears of communist and fascist subversion as World War II approached in Europe.</explanation>
+</question>

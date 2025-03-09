@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did Alfred Landon campaign against FDR in 1936?</prompt>
+    <options>
+        <option letter="a">Accept some New Deal programs</option>
+        <option letter="b">Demand total repeal</option>
+        <option letter="c">Support more spending</option>
+        <option letter="d">Promote isolation</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Landon ran a moderate campaign that accepted some New Deal programs while criticizing their administration and cost.</explanation>
+</question>

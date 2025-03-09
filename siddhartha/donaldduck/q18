@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the significance of the Scottsboro case?</prompt>
+    <options>
+        <option letter="a">Showed racial injustice</option>
+        <option letter="b">Changed labor laws</option>
+        <option letter="c">Reformed education</option>
+        <option letter="d">Protected voting</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Scottsboro case highlighted racial discrimination in the justice system when nine young Black men were falsely accused and convicted in Alabama.</explanation>
+</question>

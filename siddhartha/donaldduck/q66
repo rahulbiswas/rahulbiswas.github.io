@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the purpose of bank holidays?</prompt>
+    <options>
+        <option letter="a">Stop panic withdrawals</option>
+        <option letter="b">Train new staff</option>
+        <option letter="c">Install equipment</option>
+        <option letter="d">Count deposits</option>
+    </options>
+    <answer>a</answer>
+    <explanation>FDR declared bank holidays to stop panic withdrawals and give officials time to inspect banks before allowing stable ones to reopen.</explanation>
+</question>

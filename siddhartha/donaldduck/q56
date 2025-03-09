@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>Why did FDR appoint Joseph Kennedy to head the SEC?</prompt>
+    <options>
+        <option letter="a">He knew Wall Street tricks</option>
+        <option letter="b">He had political support</option>
+        <option letter="c">He wrote banking laws</option>
+        <option letter="d">He managed relief programs</option>
+    </options>
+    <answer>a</answer>
+    <explanation>FDR appointed Kennedy because his experience in stock manipulation would help him identify and prevent Wall Street corruption.</explanation>
+</question>
