@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Why is velocity (V) in the equation of exchange (MV = PY) considered "sticky" in the short run?</prompt>
+        <options>
+            <option letter="a">It changes quickly with interest rates</option>
+            <option letter="b">It's directly controlled by the Fed</option>
+            <option letter="c">It depends on relatively stable payment habits and financial technology</option>
+            <option letter="d">It varies with the money supply</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Velocity is considered "sticky" because it depends on established payment habits, financial institutions, and technology, which change slowly over time. People's patterns of holding and spending money tend to be stable in the short run, making V relatively constant.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was John Collier's main contribution to the New Deal?</prompt>
+    <options>
+        <option letter="a">He managed the TVA dams</option>
+        <option letter="b">He reformed Native American policy</option>
+        <option letter="c">He organized labor unions</option>
+        <option letter="d">He regulated the stock market</option>
+    </options>
+    <answer>b</answer>
+    <explanation>As Commissioner of Indian Affairs, John Collier created the Indian New Deal, ending the policy of land allotment and promoting tribal self-government.</explanation>
+</question>

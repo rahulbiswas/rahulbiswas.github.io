@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What economic theory did John Maynard Keynes promote?</prompt>
+    <options>
+        <option letter="a">Free market capitalism</option>
+        <option letter="b">Government spending in depression</option>
+        <option letter="c">Balanced budgets only</option>
+        <option letter="d">Gold standard return</option>
+    </options>
+    <answer>b</answer>
+    <explanation>Keynes argued that government deficit spending during economic downturns could stimulate recovery by increasing consumer demand.</explanation>
+</question>

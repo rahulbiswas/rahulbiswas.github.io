@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which best describes how the Marginal Propensity to Consume (MPC) affects the size of the spending multiplier?</prompt>
+        <options>
+            <option letter="a">A larger MPC leads to a smaller multiplier</option>
+            <option letter="b">A larger MPC leads to a larger multiplier</option>
+            <option letter="c">The MPC has no effect on the multiplier</option>
+            <option letter="d">The multiplier depends only on government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A larger MPC creates a larger multiplier because when people spend more of each additional dollar (higher MPC), it creates more rounds of spending. The multiplier formula is 1/(1-MPC), so as MPC increases, the denominator gets smaller, making the multiplier larger.</explanation>
+    </question>
+</quiz>

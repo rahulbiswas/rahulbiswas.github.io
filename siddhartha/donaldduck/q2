@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>Which New Deal agency was responsible for rural electrification?</prompt>
+    <options>
+        <option letter="a">Tennessee Valley Authority</option>
+        <option letter="b">Rural Electrification Agency</option>
+        <option letter="c">Public Works Administration</option>
+        <option letter="d">Federal Power Commission</option>
+    </options>
+    <answer>b</answer>
+    <explanation>The Rural Electrification Agency (REA) provided loans to rural cooperatives to bring electricity to American farms and rural areas.</explanation>
+</question>

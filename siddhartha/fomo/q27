@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which is an example of an automatic stabilizer during a recession?</prompt>
+        <options>
+            <option letter="a">Congress passing a new stimulus package</option>
+            <option letter="b">The Fed lowering interest rates</option>
+            <option letter="c">Progressive income tax collecting less revenue</option>
+            <option letter="d">The President proposing new spending programs</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Progressive income tax acts as an automatic stabilizer because during a recession, as incomes fall, people automatically pay less in taxes due to the progressive tax structure. This happens without requiring any new legislation, helping to maintain disposable income and consumer spending.</explanation>
+    </question>
+</quiz>

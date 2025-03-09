@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What made Justice Louis Brandeis significant?</prompt>
+    <options>
+        <option letter="a">Used social science evidence</option>
+        <option letter="b">Supported big business</option>
+        <option letter="c">Opposed all regulation</option>
+        <option letter="d">Favored central control</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Brandeis pioneered the use of social and economic evidence in legal decisions, advocating for state-level experimentation in regulation.</explanation>
+</question>

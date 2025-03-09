@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the main purpose of the Townsend Plan?</prompt>
+    <options>
+        <option letter="a">To provide elderly pensions</option>
+        <option letter="b">To create youth jobs</option>
+        <option letter="c">To build highways</option>
+        <option letter="d">To fund education</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Dr. Francis Townsend proposed giving every person over 60 a monthly pension of $200, provided they spent it within 30 days to stimulate the economy.</explanation>
+</question>

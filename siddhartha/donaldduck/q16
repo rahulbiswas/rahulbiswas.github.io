@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was Harry Hopkins' main role in the New Deal?</prompt>
+    <options>
+        <option letter="a">Running relief programs</option>
+        <option letter="b">Managing agriculture</option>
+        <option letter="c">Regulating banks</option>
+        <option letter="d">Building highways</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Harry Hopkins directed major relief and jobs programs including FERA, CWA, and WPA, becoming one of FDR's closest advisers.</explanation>
+</question>

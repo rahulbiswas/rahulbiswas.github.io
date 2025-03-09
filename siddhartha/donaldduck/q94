@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What distinguished the WPA from other programs?</prompt>
+    <options>
+        <option letter="a">Cultural projects</option>
+        <option letter="b">Private contracts</option>
+        <option letter="c">State control</option>
+        <option letter="d">High wages</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Works Progress Administration was unique in funding arts, theater, writing, and music projects alongside construction work.</explanation>
+</question>

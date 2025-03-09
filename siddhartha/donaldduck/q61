@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What impact did the CCC have on the environment?</prompt>
+    <options>
+        <option letter="a">Planted billions of trees</option>
+        <option letter="b">Built urban parks</option>
+        <option letter="c">Cleaned waterways</option>
+        <option letter="d">Protected wildlife</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Civilian Conservation Corps planted over three billion trees and developed soil conservation practices that helped prevent future dust bowls.</explanation>
+</question>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What did the Grand Coulee Dam provide?</prompt>
+    <options>
+        <option letter="a">Hydroelectric power</option>
+        <option letter="b">Drinking water</option>
+        <option letter="c">Transportation</option>
+        <option letter="d">Recreation</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Grand Coulee Dam on the Columbia River provided massive hydroelectric power for the Pacific Northwest and irrigation for farming.</explanation>
+</question>

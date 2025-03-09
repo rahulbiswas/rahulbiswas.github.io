@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did the Wagner Act affect union membership?</prompt>
+    <options>
+        <option letter="a">Dramatic increase</option>
+        <option letter="b">Slight decrease</option>
+        <option letter="c">No change</option>
+        <option letter="d">Total collapse</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Wagner Act led to a dramatic increase in union membership, from about 3 million workers in 1935 to 15 million by the end of World War II.</explanation>
+</question>

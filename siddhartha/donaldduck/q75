@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What distinguished the National Labor Relations Board?</prompt>
+    <options>
+        <option letter="a">Enforced union rights</option>
+        <option letter="b">Set minimum wage</option>
+        <option letter="c">Managed relief work</option>
+        <option letter="d">Regulated hours</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The NLRB was the first federal agency specifically created to protect workers' rights to unionize and engage in collective bargaining.</explanation>
+</question>

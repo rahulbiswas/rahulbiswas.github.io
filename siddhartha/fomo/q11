@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does TANF (Temporary Aid to Needy Families) function as an automatic stabilizer?</prompt>
+        <options>
+            <option letter="a">It automatically increases taxes during economic booms</option>
+            <option letter="b">It automatically provides more benefits when unemployment rises</option>
+            <option letter="c">It automatically adjusts interest rates with inflation</option>
+            <option letter="d">It automatically increases government spending on infrastructure</option>
+        </options>
+        <answer>b</answer>
+        <explanation>TANF works as an automatic stabilizer because during economic downturns, more families become eligible for benefits without requiring new legislation. This automatic increase in government transfers helps maintain consumption levels and stabilize aggregate demand when the economy weakens.</explanation>
+    </question>
+</quiz>

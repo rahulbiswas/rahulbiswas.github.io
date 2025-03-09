@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which describes a recessionary gap in terms of Potential GDP?</prompt>
+        <options>
+            <option letter="a">Actual GDP equals Potential GDP</option>
+            <option letter="b">Actual GDP exceeds Potential GDP</option>
+            <option letter="c">Actual GDP is less than Potential GDP</option>
+            <option letter="d">Potential GDP is growing faster than Actual GDP</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A recessionary gap occurs when actual GDP falls below potential GDP, indicating the economy is operating below its full employment level. This gap represents unused productive capacity and higher-than-natural unemployment, suggesting the economy is performing below its capabilities.</explanation>
+    </question>
+</quiz>

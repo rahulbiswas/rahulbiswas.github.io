@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What crisis led to the Emergency Banking Act?</prompt>
+    <options>
+        <option letter="a">Bank runs and closures</option>
+        <option letter="b">Stock market crash</option>
+        <option letter="c">Foreign debt crisis</option>
+        <option letter="d">Trade imbalance</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Emergency Banking Act responded to a nationwide banking crisis where panic led to widespread bank runs and closures.</explanation>
+</question>

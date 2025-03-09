@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did the New Deal affect Native American tribes?</prompt>
+    <options>
+        <option letter="a">Mixed results</option>
+        <option letter="b">Complete success</option>
+        <option letter="c">Total failure</option>
+        <option letter="d">No impact</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Indian New Deal ended forced assimilation but also included controversial policies like livestock reduction on Navajo lands.</explanation>
+</question>

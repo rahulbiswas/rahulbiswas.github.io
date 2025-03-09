@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was significant about FDR's first inaugural address?</prompt>
+    <options>
+        <option letter="a">Fear itself quote</option>
+        <option letter="b">Declaration of war</option>
+        <option letter="c">Tax policy details</option>
+        <option letter="d">Foreign aid plans</option>
+    </options>
+    <answer>a</answer>
+    <explanation>FDR's first inaugural address included his famous quote "the only thing we have to fear is fear itself," helping restore public confidence.</explanation>
+</question>

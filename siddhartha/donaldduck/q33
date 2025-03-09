@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What did the Fair Labor Standards Act establish?</prompt>
+    <options>
+        <option letter="a">Minimum wage</option>
+        <option letter="b">Union rights</option>
+        <option letter="c">Social Security</option>
+        <option letter="d">Bank insurance</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Fair Labor Standards Act of 1938 established the first national minimum wage, overtime pay requirements, and restrictions on child labor.</explanation>
+</question>
