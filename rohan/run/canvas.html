@@ -34,34 +34,17 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             // Draw a simple rectangle
-            ctx.fillStyle = red();
-            ctx.fillRect(0, 0, 290, 290);
-				    
-		    ctx.fillStyle = orange();
-	        ctx.fillRect(300, 0, 290, 290);
-			
-		    ctx.fillStyle = yellow();
-	        ctx.fillRect(600, 0, 290, 290);
-		    
-			ctx.fillStyle = green();
-	        ctx.fillRect(0, 300, 290, 290);
-			
-			ctx.fillStyle = blue();
-	        ctx.fillRect(300, 300, 290, 290);
-    		
-			ctx.fillStyle = indigo();
-	        ctx.fillRect(600, 300, 290, 290);
-			
-			ctx.fillStyle = violet();
-	        ctx.fillRect(0, 600, 290, 300);
-			
-			ctx.fillStyle = gray();
-	        ctx.fillRect(300, 600, 290, 0);
-			
-			ctx.fillStyle = brown();
-	        ctx.fillRect(600, 600, 290, 290);
+            ctx.fillStyle = green();
+			for (x = 0; x < 5; x++) {
+				for (y = 0; y < 5; y++) {
+					console.log('x=' + x + ',y=' + y)
+					if ((x>0) && (x<4) && (y>0) && (y<4)) {
+						continue;
+					}
+					ctx.fillRect(y*180+5,x*180+5,170,170)
+				}
+			}
 	    }
-	
         
 		// Returns a number in [min,max].
 		function randInt(min, max) {
@@ -107,7 +90,7 @@
 		function violet() {
 			const r = randInt(127, 127);
 			const g = randInt(0, 0);
-			const b = randInt(255, 255);
+			const b = randInt(55, 255);
             return `rgb(${r}, ${g}, ${b})`;			
 		}	
 		function gray() {
