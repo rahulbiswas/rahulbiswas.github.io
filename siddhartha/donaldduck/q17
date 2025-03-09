@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What did the 21st Amendment accomplish?</prompt>
+    <options>
+        <option letter="a">Ended Prohibition</option>
+        <option letter="b">Gave women votes</option>
+        <option letter="c">Limited presidents</option>
+        <option letter="d">Changed voting age</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The 21st Amendment repealed the 18th Amendment, ending the national ban on alcohol known as Prohibition in 1933.</explanation>
+</question>

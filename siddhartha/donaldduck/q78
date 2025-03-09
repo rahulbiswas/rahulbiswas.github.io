@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What led to the end of the NRA?</prompt>
+    <options>
+        <option letter="a">Supreme Court ruling</option>
+        <option letter="b">Public opposition</option>
+        <option letter="c">Budget cuts</option>
+        <option letter="d">Business pressure</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Supreme Court unanimously struck down the National Recovery Administration in Schechter v. United States in 1935.</explanation>
+</question>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What happened to Huey Long in 1935?</prompt>
+    <options>
+        <option letter="a">He was assassinated</option>
+        <option letter="b">He joined FDR</option>
+        <option letter="c">He left politics</option>
+        <option letter="d">He won election</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Huey Long was assassinated in Louisiana in September 1935, ending his potential challenge to FDR in the 1936 presidential election.</explanation>
+</question>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>Why did FDR win the 1936 election by a landslide?</prompt>
+    <options>
+        <option letter="a">New Deal popularity</option>
+        <option letter="b">Weak opponent</option>
+        <option letter="c">Foreign crisis</option>
+        <option letter="d">Party unity</option>
+    </options>
+    <answer>a</answer>
+    <explanation>FDR's landslide victory in 1936 reflected widespread public support for New Deal programs and economic improvements since 1932.</explanation>
+</question>
