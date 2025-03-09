@@ -81,13 +81,23 @@
 		// Add this after your existing event listeners
 		document.addEventListener('keydown', function(event) {
 		    console.log('Key pressed:', event.key);
-		    if (event.key === 'ArrowUp') {
+			if (event.key === 'ArrowUp') {
+				if (px != 1) {
+					px = px - 1
+				}	
 		    } else if (event.key === 'ArrowDown') {
+				if (px != 3) {
+					px = px + 1
+				}
 		    } else if (event.key === 'ArrowLeft') {
+				if (py != 1) {
+					py = py - 1
+				}
 		    } else if (event.key === 'ArrowRight') {
+				if (py != 3) {
+					py = py + 1
+				}
 		    }
-    
-		    // Redraw after movement
 		    drawBoxes();
 		});
     </script>
