@@ -20,6 +20,9 @@
     <canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);"></canvas>
 
     <script>
+		px = 1
+		py = 1
+		
         // Get the canvas element and its context
         const canvas = document.getElementById('myCanvas');
         const ctx = canvas.getContext('2d');
@@ -29,21 +32,26 @@
             console.log('Green box changed color');
         });
 
+		function drawBox(color, x, y) {
+			ctx.fillStyle = color;
+			ctx.fillRect(y*180+5,x*180+5,170,170)
+		}
+
         function drawBoxes() {
-            // Clear the canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Draw a simple rectangle
-            ctx.fillStyle = green();
+            ctx.fillStyle = white();
+			ctx.fillRect(0,0,900,900)
+
 			for (x = 0; x < 5; x++) {
 				for (y = 0; y < 5; y++) {
-					console.log('x=' + x + ',y=' + y)
 					if ((x>0) && (x<4) && (y>0) && (y<4)) {
 						continue;
 					}
-					ctx.fillRect(y*180+5,x*180+5,170,170)
+					drawBox(blue(),x,y)
 				}
 			}
+			
+			drawBox(yellow(),px,py)
 	    }
         
 		// Returns a number in [min,max].
@@ -51,60 +59,37 @@
 			return Math.floor(min + (max - min) * Math.random())
 		}
 		
-		function red() {
-			const r = randInt(255, 255);
-			const g = randInt(0, 0);
-			const b = randInt(0, 0);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}	
-		function orange() {
-			const r = randInt(255, 255);
-			const g = randInt(165, 165);
-			const b = randInt(0, 0);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}	
 		function yellow() {
-			const r = randInt(255, 255);
-			const g = randInt(255, 255);
-			const b = randInt(0, 0);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}	
-		function green() {
-			const r = randInt(0, 0);
-			const g = randInt(255, 255);
-			const b = randInt(0, 0);
+			const r = 249;
+			const g = 183;
+			const b = 1;
             return `rgb(${r}, ${g}, ${b})`;			
 		}	
 		function blue() {
-			const r = randInt(0, 0);
-			const g = randInt(0, 0);
-			const b = randInt(255, 255);
+			const r = 23;
+			const g = 23;
+			const b = 56;
             return `rgb(${r}, ${g}, ${b})`;			
 		}	
-		function indigo() {
-			const r = randInt(75, 75);
-			const g = randInt(0, 0);
-			const b = randInt(130, 130);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}	
-		function violet() {
-			const r = randInt(127, 127);
-			const g = randInt(0, 0);
-			const b = randInt(55, 255);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}	
-		function gray() {
-			const r = randInt(128, 128);
-			const g = randInt(128, 128);
-			const b = randInt(128, 128);
-            return `rgb(${r}, ${g}, ${b})`;			
-		}	
-		function brown() {
-			const r = randInt(150, 150);
-			const g = randInt(75, 75);
-			const b = randInt(0, 0);
+		function white() {
+			const r = 240;
+			const g = 247;
+			const b = 238;
             return `rgb(${r}, ${g}, ${b})`;			
 		}
+		
+		// Add this after your existing event listeners
+		document.addEventListener('keydown', function(event) {
+		    console.log('Key pressed:', event.key);
+		    if (event.key === 'ArrowUp') {
+		    } else if (event.key === 'ArrowDown') {
+		    } else if (event.key === 'ArrowLeft') {
+		    } else if (event.key === 'ArrowRight') {
+		    }
+    
+		    // Redraw after movement
+		    drawBoxes();
+		});
     </script>
 </body>
 </html>
