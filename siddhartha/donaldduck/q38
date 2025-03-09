@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the purpose of HUAC?</prompt>
+    <options>
+        <option letter="a">Investigate radicals</option>
+        <option letter="b">Reform housing</option>
+        <option letter="c">Regulate trade</option>
+        <option letter="d">Manage relief</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The House Un-American Activities Committee investigated suspected communists and other radical political groups in America.</explanation>
+</question>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the purpose of the Tennessee Valley Authority?</prompt>
+    <options>
+        <option letter="a">Regional development</option>
+        <option letter="b">Military defense</option>
+        <option letter="c">Urban housing</option>
+        <option letter="d">Farm pricing</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The TVA was created to develop the Tennessee Valley region through flood control, hydroelectric power, and economic modernization programs.</explanation>
+</question>

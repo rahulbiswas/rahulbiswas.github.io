@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What did the National Recovery Administration regulate?</prompt>
+    <options>
+        <option letter="a">Industry codes</option>
+        <option letter="b">Farm prices</option>
+        <option letter="c">Bank loans</option>
+        <option letter="d">Stock trades</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The NRA established codes of fair competition for different industries, setting wages, hours, prices, and production standards.</explanation>
+</question>

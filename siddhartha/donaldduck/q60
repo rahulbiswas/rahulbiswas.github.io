@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What distinguished Harold Ickes as PWA administrator?</prompt>
+    <options>
+        <option letter="a">Careful spending oversight</option>
+        <option letter="b">Rapid project completion</option>
+        <option letter="c">Political connections</option>
+        <option letter="d">Union support</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Harold Ickes was known as "Honest Harold" for his careful oversight of PWA spending, ensuring projects were completed without corruption.</explanation>
+</question>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was Theodore Roosevelt's "Square Deal" policy primarily focused on?</prompt>
+        <options>
+            <option letter="a">Foreign military intervention</option>
+            <option letter="b">Consumer protection and business regulation</option>
+            <option letter="c">Women's suffrage rights</option>
+            <option letter="d">Immigration restrictions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt's Square Deal focused on consumer protection, business regulation, and conservation efforts, including the Pure Food and Drug Act and meat inspection reforms.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main purpose of the Federal Reserve Act of 1913?</prompt>
+        <options>
+            <option letter="a">To create Social Security</option>
+            <option letter="b">To establish a central banking system</option>
+            <option letter="c">To regulate food and drugs</option>
+            <option letter="d">To break up monopolies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Reserve Act, passed under Wilson, created America's central banking system to stabilize the nation's monetary and financial system.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which event directly led to the United States entering World War I?</prompt>
+        <options>
+            <option letter="a">The sinking of the Lusitania</option>
+            <option letter="b">The assassination of Archduke Franz Ferdinand</option>
+            <option letter="c">Germany's unrestricted submarine warfare</option>
+            <option letter="d">The Russian Revolution</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Germany's resumption of unrestricted submarine warfare in 1917 was the direct cause of U.S. entry into WWI, though the Lusitania sinking had built public anger earlier.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the Tulsa Massacre of 1921 primarily about?</prompt>
+        <options>
+            <option letter="a">A labor union dispute</option>
+            <option letter="b">The destruction of a prosperous Black community</option>
+            <option letter="c">A prohibition-related riot</option>
+            <option letter="d">An anti-war protest</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Tulsa Massacre involved the destruction of the prosperous Black community of Greenwood (known as "Black Wall Street") by a white mob, resulting in hundreds of deaths and widespread destruction.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was William Howard Taft's "Dollar Diplomacy"?</prompt>
+        <options>
+            <option letter="a">Using military force in foreign affairs</option>
+            <option letter="b">Using economic investment to gain influence abroad</option>
+            <option letter="c">Isolationist foreign policy</option>
+            <option letter="d">Giving foreign aid to allies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Dollar Diplomacy was Taft's foreign policy of using American economic power and private investment to further U.S. interests abroad, particularly in Latin America and Asia.</explanation>
+    </question>
+</quiz>
