@@ -1,0 +1,153 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Editor</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 0 5px;
+            padding: 8px 16px;
+        }
+        textarea {
+            width: 900px;
+            height: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maze Editor</h1>
+    
+    <div class="controls">
+        <button id="newMazeBtn">New Maze</button>
+        <button id="clearMazeBtn">Clear Maze</button>
+        <button id="fillBorderBtn">Fill Border</button>
+        <button id="generateCodeBtn">Generate Code</button>
+    </div>
+    
+    <canvas id="editorCanvas" width="900" height="900"></canvas>
+    
+    <textarea id="outputCode" placeholder="Generated code will appear here"></textarea>
+    
+    <script>
+        const SIZE = 20;
+        const canvas = document.getElementById('editorCanvas');
+        const ctx = canvas.getContext('2d');
+        const output = document.getElementById('outputCode');
+        
+        // Initialize empty maze
+        let MAZE = Array(SIZE).fill().map(() => Array(SIZE).fill(0));
+        
+        // Fill border with walls
+        document.getElementById('fillBorderBtn').addEventListener('click', function() {
+            for (let i = 0; i < SIZE; i++) {
+                for (let j = 0; j < SIZE; j++) {
+                    if (i === 0 || i === SIZE-1 || j === 0 || j === SIZE-1) {
+                        MAZE[i][j] = 1;
+                    }
+                }
+            }
+            drawMaze();
+        });
+        
+        // Clear maze
+        document.getElementById('clearMazeBtn').addEventListener('click', function() {
+            MAZE = Array(SIZE).fill().map(() => Array(SIZE).fill(0));
+            drawMaze();
+        });
+        
+        // New maze (reset to a fresh bordered maze)
+        document.getElementById('newMazeBtn').addEventListener('click', function() {
+            MAZE = Array(SIZE).fill().map(() => Array(SIZE).fill(0));
+            for (let i = 0; i < SIZE; i++) {
+                for (let j = 0; j < SIZE; j++) {
+                    if (i === 0 || i === SIZE-1 || j === 0 || j === SIZE-1) {
+                        MAZE[i][j] = 1;
+                    }
+                }
+            }
+            drawMaze();
+        });
+        
+        // Generate code
+        document.getElementById('generateCodeBtn').addEventListener('click', function() {
+            let code = 'const MAZE = [\n';
+            for (let i = 0; i < SIZE; i++) {
+                code += '    [' + MAZE[i].join(', ') + '],\n';
+            }
+            code += '];';
+            output.value = code;
+        });
+        
+        // Draw maze
+        function drawMaze() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw background
+            ctx.fillStyle = 'rgb(240, 247, 238)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw grid lines
+            ctx.strokeStyle = '#ddd';
+            const cellSize = canvas.width / SIZE;
+            for (let i = 0; i <= SIZE; i++) {
+                ctx.beginPath();
+                ctx.moveTo(0, i * cellSize);
+                ctx.lineTo(canvas.width, i * cellSize);
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.moveTo(i * cellSize, 0);
+                ctx.lineTo(i * cellSize, canvas.height);
+                ctx.stroke();
+            }
+            
+            // Draw walls
+            for (let x = 0; x < SIZE; x++) {
+                for (let y = 0; y < SIZE; y++) {
+                    if (MAZE[x][y] === 1) {
+                        ctx.fillStyle = 'rgb(23, 23, 56)';
+                        ctx.fillRect(y * cellSize + 1, x * cellSize + 1, cellSize - 2, cellSize - 2);
+                    }
+                }
+            }
+        }
+        
+        // Handle clicks to toggle walls
+        canvas.addEventListener('click', function(event) {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
+            
+            const cellSize = canvas.width / SIZE;
+            const gridX = Math.floor(mouseY / cellSize);
+            const gridY = Math.floor(mouseX / cellSize);
+            
+            if (gridX >= 0 && gridX < SIZE && gridY >= 0 && gridY < SIZE) {
+                MAZE[gridX][gridY] = MAZE[gridX][gridY] === 1 ? 0 : 1;
+                drawMaze();
+            }
+        });
+        
+        // Initialize
+        drawMaze();
+    </script>
+</body>
+</html>
+```
