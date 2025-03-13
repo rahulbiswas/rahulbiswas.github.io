@@ -1,0 +1,234 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial;
+            touch-action: manipulation;
+        }
+        
+        #gameContainer {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-top: 15px;
+        }
+        
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            border: 2px solid #333;
+            touch-action: manipulation;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="myCanvas" width="900" height="900"></canvas>
+    </div>
+    
+    <div id="controls">
+        <div class="row">
+            <button id="upBtn">↑</button>
+        </div>
+        <div class="row">
+            <button id="leftBtn">←</button>
+            <button id="rightBtn">→</button>
+        </div>
+        <div class="row">
+            <button id="downBtn">↓</button>
+        </div>
+    </div>
+
+    <script>
+        // Player position
+        let px = 1;
+        let py = 1;
+        
+        // Maze definition
+        const MAZE = [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+            [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+            [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+            [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+            [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        ];
+        const SIZE = MAZE.length;
+        
+        // Get the canvas element and its context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Adjust canvas size for mobile screens
+        function resizeCanvas() {
+            const gameContainer = document.getElementById('gameContainer');
+            const maxSize = Math.min(window.innerWidth - 20, window.innerHeight - 200);
+            canvas.style.width = maxSize + 'px';
+            canvas.style.height = maxSize + 'px';
+        }
+        
+        // Call resize on load and window resize
+        window.addEventListener('load', resizeCanvas);
+        window.addEventListener('resize', resizeCanvas);
+        
+        // Draw functions
+        function drawBox(color, x, y) {
+            ctx.fillStyle = color;
+            ctx.fillRect(y*900/SIZE+5, x*900/SIZE+5, 900/SIZE-10, 900/SIZE-10);
+        }
+        
+        function drawBoxes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = white();
+            ctx.fillRect(0, 0, 900, 900);
+            
+            for (let x = 0; x < SIZE; x++) {
+                for (let y = 0; y < SIZE; y++) {
+                    if (MAZE[x][y] === 1) {
+                        drawBox(blue(), x, y);
+                    }
+                }
+            }
+            
+            drawBox(yellow(), px, py);
+        }
+        
+        // Color functions
+        function yellow() {
+            return 'rgb(249, 183, 1)';
+        }
+        
+        function blue() {
+            return 'rgb(23, 23, 56)';
+        }
+        
+        function white() {
+            return 'rgb(240, 247, 238)';
+        }
+        
+        // Returns a number in [min,max]
+        function randInt(min, max) {
+            return Math.floor(min + (max - min) * Math.random());
+        }
+        
+        // Movement function
+        function movePlayer(direction) {
+            console.log('Direction:', direction);
+            
+            if (direction === 'ArrowUp') {
+                if (px > 1) {
+                    px = px - 1;
+                }
+            } else if (direction === 'ArrowDown') {
+                if (px < SIZE - 2) {
+                    px = px + 1;
+                }
+            } else if (direction === 'ArrowLeft') {
+                if (py > 1) {
+                    py = py - 1;
+                }
+            } else if (direction === 'ArrowRight') {
+                if (py < SIZE - 2) {
+                    py = py + 1;
+                }
+            }
+            
+            drawBoxes();
+        }
+        
+        // Event listeners for keyboard and touch
+        document.addEventListener('keydown', function(event) {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+                movePlayer(event.key);
+                event.preventDefault();
+            }
+        });
+        
+        // Touch controls
+        document.getElementById('upBtn').addEventListener('touchstart', function(e) {
+            movePlayer('ArrowUp');
+            e.preventDefault();
+        });
+        
+        document.getElementById('downBtn').addEventListener('touchstart', function(e) {
+            movePlayer('ArrowDown');
+            e.preventDefault();
+        });
+        
+        document.getElementById('leftBtn').addEventListener('touchstart', function(e) {
+            movePlayer('ArrowLeft');
+            e.preventDefault();
+        });
+        
+        document.getElementById('rightBtn').addEventListener('touchstart', function(e) {
+            movePlayer('ArrowRight');
+            e.preventDefault();
+        });
+        
+        // Also handle mouse clicks for testing on desktop
+        document.getElementById('upBtn').addEventListener('click', function() {
+            movePlayer('ArrowUp');
+        });
+        
+        document.getElementById('downBtn').addEventListener('click', function() {
+            movePlayer('ArrowDown');
+        });
+        
+        document.getElementById('leftBtn').addEventListener('click', function() {
+            movePlayer('ArrowLeft');
+        });
+        
+        document.getElementById('rightBtn').addEventListener('click', function() {
+            movePlayer('ArrowRight');
+        });
+        
+        // Initialize the game
+        drawBoxes();
+    </script>
+</body>
+</html>
+```
