@@ -107,23 +107,21 @@
 		// Add this after your existing event listeners
 		document.addEventListener('keydown', function(event) {
 		    console.log('Key pressed:', event.key);
+			nx = px
+			ny = py
 			if (event.key === 'ArrowUp') {
-				if (px != 1) {
-					px = px - 1
-				}	
+				nx = nx - 1
 		    } else if (event.key === 'ArrowDown') {
-				if (px != SIZE - 2) {
-					px = px + 1
-				}
+				nx = nx + 1
 		    } else if (event.key === 'ArrowLeft') {
-				if (py != 1) {
-					py = py - 1
-				}
+				ny = ny - 1
 		    } else if (event.key === 'ArrowRight') {
-				if (py != SIZE - 2) {
-					py = py + 1
-				}
+				ny = ny + 1
 		    }
+			if (MAZE[nx][ny] === 0) {
+				px = nx
+				py = ny
+			}
 		    drawBoxes();
 		});
     </script>
