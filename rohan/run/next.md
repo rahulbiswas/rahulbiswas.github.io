@@ -1,4 +1,4 @@
-# Day 3: Adding a Simple Ghost
+ # Day 3: Adding a Simple Ghost
 
 ## Goal
 Today we'll add a red ghost square to our maze that just sits in one spot.
