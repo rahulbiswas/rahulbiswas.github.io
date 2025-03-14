@@ -20,8 +20,10 @@
     <canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);"></canvas>
 
     <script>
+		moveCount = 0;
 		px = 1
 		py = 1
+		moves = 0
 		const MAZE = [
 		    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 		    [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1],
@@ -58,13 +60,14 @@
 
 		function drawBox(color, x, y) {
 			ctx.fillStyle = color;
-			ctx.fillRect(y*900/SIZE+5,x*900/SIZE+5,900/SIZE-10,900/SIZE-10)
+			ctx.fillRect(15+y*870/SIZE+5,30 + x*870/SIZE+5,870/SIZE-10,870/SIZE-10)
 		}
 
         function drawBoxes() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = white();
 			ctx.fillRect(0,0,900,900)
+			
 
 			for (x = 0; x < SIZE; x++) {
 				for (y = 0; y < SIZE; y++) {
@@ -78,6 +81,9 @@
 			
 			
 			drawBox(yellow(),px,py)
+		    ctx.fillStyle = 'black';
+		    ctx.font = '24px Arial';
+		    ctx.fillText('move count ' + moveCount, 0, 20);
 	    }
         
 		// Returns a number in [min,max].
@@ -90,7 +96,7 @@
 			const g = 183;
 			const b = 1;
             return `rgb(${r}, ${g}, ${b})`;			
-		}	
+		}
 		function blue() {
 			const r = 23;
 			const g = 23;
@@ -117,10 +123,13 @@
 				ny = ny - 1
 		    } else if (event.key === 'ArrowRight') {
 				ny = ny + 1
+		    } else {
+		    	return
 		    }
 			if (MAZE[nx][ny] === 0) {
 				px = nx
 				py = ny
+				moveCount = moveCount + 1
 			}
 		    drawBoxes();
 		});
