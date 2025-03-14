@@ -50,7 +50,6 @@ console.log("What's at this position?", MAZE[px][py]);
 
 Create a move counter with these features:
 1. Add a variable at the top of your script: `let moveCount = 0;`
-2. Increment it only when a valid move is made
 3. Display it on the canvas using ctx.fillText()
 4. Bonus: Add a "reset" button that sets the counter and player position back to the start
 
