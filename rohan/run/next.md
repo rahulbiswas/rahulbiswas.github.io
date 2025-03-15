@@ -18,8 +18,6 @@ Splitting your code into separate files is an important practice in web developm
    - Need to change how the game looks? Edit the CSS.
    - Need to change how the game behaves? Edit the JavaScript.
 
-3. **Collaboration**: If you work with others, different people can work on different files.
-
 4. **Reusability**: You can reuse your CSS and JavaScript files across multiple HTML pages.
 
 5. **Loading Performance**: Browsers can cache separate files, potentially making your website load faster.

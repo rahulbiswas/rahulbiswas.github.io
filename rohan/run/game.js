@@ -1,0 +1,136 @@
+gx = 18
+gy = 18 
+moveCount = 0;
+px = 1
+py = 1
+moves = 0
+const MAZE = [
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1],
+    [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
+    [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1],
+    [1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1],
+    [1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1],
+    [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1],
+    [0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1],
+    [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1],
+    [0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1],
+    [0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1],
+    [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1],
+    [1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+];
+SIZE = MAZE.length
+
+// Get the canvas element and its context
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+drawBoxes();
+canvas.addEventListener('click', function() {
+    drawBoxes();
+    console.log('Green box changed color');
+});
+
+function drawBox(color, x, y) {
+	ctx.fillStyle = color;
+	ctx.fillRect(15+y*870/SIZE+5,30 + x*870/SIZE+5,870/SIZE-10,870/SIZE-10)
+}
+
+function drawBoxes() {
+	// Start with an off white board.
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = white();
+	ctx.fillRect(0,0,900,900)
+
+	// Draw walls.
+	for (x = 0; x < SIZE; x++) {
+		for (y = 0; y < SIZE; y++) {
+			if (MAZE[x][y] === 1) {
+				drawBox(blue(),x,y)
+			}
+		}
+	}
+	
+	// Draw ghost.
+	drawBox(red(),gx,gy)
+
+	// Draw pacman.
+	drawBox(yellow(),px,py)
+
+	// Show move count.
+    ctx.fillStyle = 'black';
+    ctx.font = '24px Arial';
+    ctx.fillText('move count ' + moveCount, 0, 20);
+}
+
+// Returns a number in [min,max].
+function randInt(min, max) {
+	return Math.floor(min + (max - min) * Math.random())
+}
+
+function yellow() {
+	const r = 249;
+	const g = 183;
+	const b = 1;
+    return `rgb(${r}, ${g}, ${b})`;			
+}
+
+function blue() {
+	const r = 23;
+	const g = 23;
+	const b = 56;
+    return `rgb(${r}, ${g}, ${b})`;			
+}
+
+function red() {
+	const r = 255;
+	const g = 0;
+	const b = 0;
+    return `rgb(${r}, ${g}, ${b})`;			
+}
+
+function white() {
+	const r = 240;
+	const g = 247;
+	const b = 238;
+    return `rgb(${r}, ${g}, ${b})`;			
+}
+
+function checkEaten() {
+	if ((gx === px) && (gy === py)) {
+		px = 1
+		py = 1
+		moveCount = 0
+	}
+}
+
+// Add this after your existing event listeners
+document.addEventListener('keydown', function(event) {
+    console.log('Key pressed:', event.key);
+	nx = px
+	ny = py
+	if (event.key === 'ArrowUp') {
+		nx = nx - 1
+    } else if (event.key === 'ArrowDown') {
+		nx = nx + 1
+    } else if (event.key === 'ArrowLeft') {
+		ny = ny - 1
+    } else if (event.key === 'ArrowRight') {
+		ny = ny + 1
+    } else {
+    	return
+    }
+	if (MAZE[nx][ny] === 0) {
+		px = nx
+		py = ny
+		moveCount = moveCount + 1
+		checkEaten()
+	}
+    drawBoxes()
+});
