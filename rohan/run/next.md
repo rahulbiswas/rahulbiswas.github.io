@@ -1,79 +1,51 @@
-# Refactoring Code into Separate Files: Instructions
+# Adding Ghost Movement: Instructions
 
 ## Overview
-Today you'll be refactoring your maze game by splitting your code into three separate files:
-1. HTML (index.html)
-2. CSS (styles.css)
-3. JavaScript (game.js)
+Today you'll make the ghost move around the maze by implementing a random movement system. This will make the game more challenging and fun!
 
-## Why We Do This
-Splitting your code into separate files is an important practice in web development for several reasons:
+## Why We Add Ghost Movement
+Adding movement to the ghost makes your game more dynamic:
+1. **Challenge**: A moving ghost gives the player something to avoid
+2. **Gameplay**: It creates excitement as the player tries to navigate while avoiding the ghost
+3. **Game Logic**: You'll learn to use timers to create continuous action in your game
 
-1. **Organization**: Each file has a specific purpose, making your codebase easier to navigate.
-   - HTML: Structure of the page
-   - CSS: Styling and appearance
-   - JavaScript: Game logic and behavior
+## Understanding the Current Timer
+You already have a timer set up in your code that runs every 1 second, but right now it only outputs a message to the console. You'll add your ghost movement code inside this timer function.
 
-2. **Maintenance**: When you need to change something, you'll know exactly which file to edit.
-   - Need to change how the game looks? Edit the CSS.
-   - Need to change how the game behaves? Edit the JavaScript.
+## Steps for Implementing Ghost Movement
 
-4. **Reusability**: You can reuse your CSS and JavaScript files across multiple HTML pages.
+1. **Find where the ghost can move**
+   - For each move, check all four possible directions (up, down, left, right)
+   - Only move into spaces where MAZE[x][y] equals 0 (open path)
+   - Create an array to store all possible moves
 
-5. **Loading Performance**: Browsers can cache separate files, potentially making your website load faster.
+2. **Choose a random direction**
+   - Use `randInt()` or `Math.random()` to select a random direction from your array of possible moves
+   - This will make the ghost's movement unpredictable
 
-## Steps to Take
+3. **Move the ghost**
+   - Update the ghost's position (gx, gy) based on the chosen direction
+   - Remember: moving up decreases x, moving down increases x
+   - Moving left decreases y, moving right increases y
 
-1. Create three new files:
-   - index.html
-   - styles.css
-   - game.js
+4. **Check if the player is caught**
+   - Use the `checkEaten()` function that's already in your code
+   - This resets the player if the ghost catches them
 
-2. For the HTML file:
-   - Keep only the basic structure of the page
-   - Add a link to the CSS file in the `<head>` section
-   - Add a script tag linking to the JavaScript file at the end of the `<body>` section
+5. **Redraw the game**
+   - Call `drawBoxes()` to update the display with the new positions
 
-3. For the CSS file:
-   - Move all style-related code (everything inside the `<style>` tags) here
+## Extension Ideas
+After you've implemented random movement, consider these improvements:
+1. Make the ghost smarter by having it move toward the player
+2. Add multiple ghosts with different colors
+3. Make the ghost move faster as the game progresses
 
-4. For the JavaScript file:
-   - Move all JavaScript code (everything inside the `<script>` tags) here
+## Testing Your Game
+After implementing ghost movement:
+1. Reload your game in the browser
+2. Watch how the ghost moves around
+3. Try to avoid the ghost while navigating the maze
+4. Check that the player resets when caught by the ghost
 
-5. Test your game to make sure everything still works after the refactoring
-
-## After Refactoring
-
-Once you've completed this refactoring, you'll have a more organized project that will be easier to expand as you add more features to your game. This is how professional web developers structure their projects!
-
-# Introduction to JavaScript Timers
-
-## Overview
-JavaScript timers allow you to schedule code to run at specific times - either once after a delay or repeatedly at intervals. You'll use these to control ghost movement in future lessons.
-
-## Two Main Types of Timers
-
-
-
-2. **setInterval** - Runs code repeatedly at a specified interval
-   - Example use: Moving a ghost every second
-   - Like a ticking clock
-
-
-## How to Use setInterval
-
-```javascript
-// Basic structure
-let timerName = setInterval(function() {
-    // Code to run repeatedly
-}, timeInMilliseconds);
-
-// To stop the timer later
-clearInterval(timerName);
-```
-
-## Experiment with Timers
-
-After refactoring your code, try adding some simple timer examples to your game.js file. Use console.log statements to see them working (press F12 to open the console in your browser).
-
-These timer concepts will be the foundation for adding movement to your ghost in future lessons!
+Good luck with your programming!
