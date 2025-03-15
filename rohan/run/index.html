@@ -20,6 +20,8 @@
     <canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);"></canvas>
 
     <script>
+		gx = 18
+		gy = 18 
 		moveCount = 0;
 		px = 1
 		py = 1
@@ -48,7 +50,6 @@
 		];
 		SIZE = MAZE.length
 
-		
         // Get the canvas element and its context
         const canvas = document.getElementById('myCanvas');
         const ctx = canvas.getContext('2d');
@@ -62,12 +63,11 @@
 			ctx.fillStyle = color;
 			ctx.fillRect(15+y*870/SIZE+5,30 + x*870/SIZE+5,870/SIZE-10,870/SIZE-10)
 		}
-
+		
         function drawBoxes() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = white();
 			ctx.fillRect(0,0,900,900)
-			
 
 			for (x = 0; x < SIZE; x++) {
 				for (y = 0; y < SIZE; y++) {
@@ -78,9 +78,8 @@
 				}
 			}
 			
-			
-			
 			drawBox(yellow(),px,py)
+
 		    ctx.fillStyle = 'black';
 		    ctx.font = '24px Arial';
 		    ctx.fillText('move count ' + moveCount, 0, 20);
@@ -97,19 +96,28 @@
 			const b = 1;
             return `rgb(${r}, ${g}, ${b})`;			
 		}
+		
 		function blue() {
 			const r = 23;
 			const g = 23;
 			const b = 56;
             return `rgb(${r}, ${g}, ${b})`;			
-		}	
+		}
+		
+		function red() {
+			const r = 255;
+			const g = 0;
+			const b = 0;
+            return `rgb(${r}, ${g}, ${b})`;			
+		}
+		
 		function white() {
 			const r = 240;
 			const g = 247;
 			const b = 238;
             return `rgb(${r}, ${g}, ${b})`;			
 		}
-		
+
 		// Add this after your existing event listeners
 		document.addEventListener('keydown', function(event) {
 		    console.log('Key pressed:', event.key);
