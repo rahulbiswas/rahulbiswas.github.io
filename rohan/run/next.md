@@ -1,36 +1,91 @@
- # Day 3: Adding a Simple Ghost
+# Refactoring Code into Separate Files: Instructions
 
-## Goal
-Today we'll add a red ghost square to our maze that just sits in one spot.
+## Overview
+Today you'll be refactoring your maze game by splitting your code into three separate files:
+1. HTML (index.html)
+2. CSS (styles.css)
+3. JavaScript (game.js)
 
-## What You'll Learn
-- How to add another object to the game
-- How to check for collisions between the player and the ghost
+## Why We Do This
+Splitting your code into separate files is an important practice in web development for several reasons:
 
-## Instructions
+1. **Organization**: Each file has a specific purpose, making your codebase easier to navigate.
+   - HTML: Structure of the page
+   - CSS: Styling and appearance
+   - JavaScript: Game logic and behavior
 
-1. First, let's add variables for the ghost's position:
-   - Create two variables `gx` and `gy` at the top of your script to track the ghost's position
-   - Set their initial values to place the ghost near the bottom-right of the maze (around 18, 18)
+2. **Maintenance**: When you need to change something, you'll know exactly which file to edit.
+   - Need to change how the game looks? Edit the CSS.
+   - Need to change how the game behaves? Edit the JavaScript.
 
-2. Update your `drawBoxes` function to draw the ghost:
-   - Use your existing `drawBox` function to draw the ghost
-   - Choose 'red' as the color for the ghost
-   - Use the ghost's position (gx, gy) to place it
+3. **Collaboration**: If you work with others, different people can work on different files.
 
-3. Create a function called `checkEaten`:
-   - This function should check if the player's position (px, py) is the same as the ghost's position (gx, gy)
-   - If they're the same, the player has been eaten by the ghost
-   - When this happens:
-     - Reset the player position to the start (1, 1)
-     - Reset the move counter if you have one
-     - Redraw the game
+4. **Reusability**: You can reuse your CSS and JavaScript files across multiple HTML pages.
 
-4. Update your key press handler:
-   - After the player moves and before you call drawBoxes(), call your new checkEaten function
-   - This will check if the player has run into the ghost after every move
+5. **Loading Performance**: Browsers can cache separate files, potentially making your website load faster.
 
-## Remember
-- Take it slow and make sure each part works before moving on
-- Use console.log to check values if something isn't working
-- Test your game after each change​​​​​​​​​​​​​​​​
+## Steps to Take
+
+1. Create three new files:
+   - index.html
+   - styles.css
+   - game.js
+
+2. For the HTML file:
+   - Keep only the basic structure of the page
+   - Add a link to the CSS file in the `<head>` section
+   - Add a script tag linking to the JavaScript file at the end of the `<body>` section
+
+3. For the CSS file:
+   - Move all style-related code (everything inside the `<style>` tags) here
+
+4. For the JavaScript file:
+   - Move all JavaScript code (everything inside the `<script>` tags) here
+
+5. Test your game to make sure everything still works after the refactoring
+
+## After Refactoring
+
+Once you've completed this refactoring, you'll have a more organized project that will be easier to expand as you add more features to your game. This is how professional web developers structure their projects!
+
+# Introduction to JavaScript Timers
+
+## Overview
+JavaScript timers allow you to schedule code to run at specific times - either once after a delay or repeatedly at intervals. You'll use these to control ghost movement in future lessons.
+
+## Two Main Types of Timers
+
+1. **setTimeout** - Runs code once after a specified delay
+   - Example use: Making something happen after the player does something
+   - Like a time bomb with a fuse
+
+2. **setInterval** - Runs code repeatedly at a specified interval
+   - Example use: Moving a ghost every second
+   - Like a ticking clock
+
+## How to Use setTimeout
+
+```javascript
+// Basic structure
+setTimeout(function() {
+    // Code to run after delay
+}, timeInMilliseconds);
+```
+
+## How to Use setInterval
+
+```javascript
+// Basic structure
+let timerName = setInterval(function() {
+    // Code to run repeatedly
+}, timeInMilliseconds);
+
+// To stop the timer later
+clearInterval(timerName);
+```
+
+## Experiment with Timers
+
+After refactoring your code, try adding some simple timer examples to your game.js file. Use console.log statements to see them working (press F12 to open the console in your browser).
+
+These timer concepts will be the foundation for adding movement to your ghost in future lessons!
