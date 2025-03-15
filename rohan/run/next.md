@@ -53,22 +53,12 @@ JavaScript timers allow you to schedule code to run at specific times - either o
 
 ## Two Main Types of Timers
 
-1. **setTimeout** - Runs code once after a specified delay
-   - Example use: Making something happen after the player does something
-   - Like a time bomb with a fuse
+
 
 2. **setInterval** - Runs code repeatedly at a specified interval
    - Example use: Moving a ghost every second
    - Like a ticking clock
 
-## How to Use setTimeout
-
-```javascript
-// Basic structure
-setTimeout(function() {
-    // Code to run after delay
-}, timeInMilliseconds);
-```
 
 ## How to Use setInterval
 
