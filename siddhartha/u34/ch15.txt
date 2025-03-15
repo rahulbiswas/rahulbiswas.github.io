@@ -1,0 +1,26 @@
+MV = PY
+M = Money supply
+V = velocity
+P = price level
+Y = real GDP
+
+Theory of Monetary Neutrality
+- aka Classical Dichotomy
+- V, Y won't change
+- Money doesn't matter
+- May help in the short run
+
+Loanable Funds
+- Y axis real interest rate
+- Financial intermediation = connecting borrowers and lenders
+- Lenders: ppl, business, gov, foreign
+- Savers: same
+- Influenced by changes in prefs, tax rates on interest
+- More income -> more lending
+- Business opportunities -> more borrowing
+- Crowding out from gov deficit spending
+
+Money Market
+- Y axis nominal interest rate
+- Supply is vertical line
+- Affected by income, price level
