@@ -65,21 +65,27 @@
 		}
 		
         function drawBoxes() {
+			// Start with an off white board.
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = white();
 			ctx.fillRect(0,0,900,900)
 
+			// Draw walls.
 			for (x = 0; x < SIZE; x++) {
 				for (y = 0; y < SIZE; y++) {
-					if (MAZE[x][y] === 0) {
-						continue;
+					if (MAZE[x][y] === 1) {
+						drawBox(blue(),x,y)
 					}
-					drawBox(blue(),x,y)
 				}
 			}
 			
+			// Draw ghost.
+			drawBox(red(),gx,gy)
+		
+			// Draw pacman.
 			drawBox(yellow(),px,py)
 
+			// Show move count.
 		    ctx.fillStyle = 'black';
 		    ctx.font = '24px Arial';
 		    ctx.fillText('move count ' + moveCount, 0, 20);
@@ -118,6 +124,14 @@
             return `rgb(${r}, ${g}, ${b})`;			
 		}
 
+		function checkEaten() {
+			if ((gx === px) && (gy === py)) {
+				px = 1
+				py = 1
+				moveCount = 0
+			}
+		}
+
 		// Add this after your existing event listeners
 		document.addEventListener('keydown', function(event) {
 		    console.log('Key pressed:', event.key);
@@ -138,8 +152,9 @@
 				px = nx
 				py = ny
 				moveCount = moveCount + 1
+				checkEaten()
 			}
-		    drawBoxes();
+		    drawBoxes()
 		});
     </script>
 </body>
