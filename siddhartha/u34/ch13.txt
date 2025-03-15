@@ -1,0 +1,31 @@
+Problems with unemployment
+- Lowered production
+- Unemployed suffer
+
+Problems with inflation
+- People with fixed incomes suffer
+- Inefficiencies from adjustment, e.g. menu costs
+- Borrowers benefit at expense of lenders
+- Discourages savings
+
+Measuring inflation
+- Consumer price index (CPI)
+- Created by Bureau of Labor Statistics (BLS)
+- Basket of goods
+- Calculating inflation rates
+- CPI does not account for quality
+- Nominal interest rate = Real interest rate + Expected inflation
+
+GDP Deflator
+- GDP deflator = (GDP / Real GDP) * 100
+- Ignores import prices
+- Includes non-consumer items
+
+Types of Unemployment
+- Discouraged workers (gave up)
+- Structural (mismatch location, occupation)
+- Seasonal (winter)
+- Cyclical (recession)
+- Frictional (in between jobs)
+
+Unemployment Rate = # Unemployed / Civilian Labor Force
