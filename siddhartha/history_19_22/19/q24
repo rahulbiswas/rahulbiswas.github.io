@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which political development of the Progressive Era had the MOST significant impact on democracy?</prompt>
+        <options>
+            <option letter="a">The Australian ballot system</option>
+            <option letter="b">Primary election reforms</option>
+            <option letter="c">Women's suffrage</option>
+            <option letter="d">Municipal reform movements</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The ratification of the 19th Amendment granting women's suffrage represented the single largest expansion of democracy in American history, doubling the electorate and fundamentally changing American politics. While the Australian ballot made voting more secure, primary reforms reduced party boss control, and municipal reforms improved local government, women's suffrage had the most far-reaching effects on American democratic participation and representation.</explanation>
+    </question>
+</quiz>
