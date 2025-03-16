@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the main purpose of Roosevelt's addition of the Roosevelt Corollary to the Monroe Doctrine?</prompt>
+        <options>
+            <option letter="a">To justify U.S. military intervention in Latin America</option>
+            <option letter="b">To establish trade agreements with European nations</option>
+            <option letter="c">To promote democracy in Asian countries</option>
+            <option letter="d">To create military alliances with Latin American nations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Roosevelt Corollary (1904) extended the Monroe Doctrine by declaring that the United States had the right to intervene in Latin American countries to prevent European intervention. This effectively established the U.S. as the "police power" of the Western Hemisphere and was used to justify numerous American interventions in Latin America.</explanation>
+    </question>
+</quiz>

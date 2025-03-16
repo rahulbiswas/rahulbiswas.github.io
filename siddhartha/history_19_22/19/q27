@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which constitutional amendment was ratified FIRST?</prompt>
+        <options>
+            <option letter="a">The direct election of senators</option>
+            <option letter="b">The federal income tax</option>
+            <option letter="c">The prohibition of alcohol</option>
+            <option letter="d">Women's suffrage</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 16th Amendment authorizing a federal income tax was ratified in February 1913, preceding the others. The 17th Amendment establishing direct election of senators was ratified in April 1913, the 18th Amendment implementing prohibition was ratified in 1919, and the 19th Amendment granting women's suffrage was ratified in 1920.</explanation>
+    </question>
+</quiz>

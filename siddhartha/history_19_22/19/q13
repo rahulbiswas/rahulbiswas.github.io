@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Who had the GREATEST impact on American war mobilization during World War I?</prompt>
+        <options>
+            <option letter="a">Bernard Baruch through the War Industries Board</option>
+            <option letter="b">George Creel through the Committee on Public Information</option>
+            <option letter="c">General John Pershing through military leadership</option>
+            <option letter="d">Herbert Hoover through the Food Administration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>As head of the War Industries Board, Bernard Baruch's coordination of industrial production, resource allocation, and price controls was crucial to America's war effort. While Creel shaped public opinion, Pershing led troops, and Hoover managed food supplies, Baruch's organization of the entire industrial economy had the most fundamental impact on America's ability to support both its own forces and its allies with essential war materials.</explanation>
+    </question>
+</quiz>

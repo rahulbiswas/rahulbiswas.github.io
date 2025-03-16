@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Who had the MOST direct influence on American foreign policy in World War I?</prompt>
+        <options>
+            <option letter="a">Edward House</option>
+            <option letter="b">William Jennings Bryan</option>
+            <option letter="c">Robert Lansing</option>
+            <option letter="d">George Creel</option>
+        </options>
+        <answer>a</answer>
+        <explanation>As President Wilson's closest advisor, Edward House shaped American diplomacy before and during World War I through his personal diplomacy in Europe and influence on Wilson's decisions. While Bryan resigned in protest over Wilson's policies, Lansing implemented rather than shaped policy as Secretary of State, and Creel focused on domestic propaganda, House's direct access to Wilson and European leaders made him the most influential voice in American wartime diplomacy.</explanation>
+    </question>
+</quiz>

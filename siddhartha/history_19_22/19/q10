@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which factor MOST influenced the start of the Great Migration of African Americans?</prompt>
+        <options>
+            <option letter="a">The boll weevil's destruction of cotton crops</option>
+            <option letter="b">Labor shortages in northern factories due to WWI</option>
+            <option letter="c">The spread of Jim Crow laws in the South</option>
+            <option letter="d">The rise of the Ku Klux Klan</option>
+        </options>
+        <answer>b</answer>
+        <explanation>While racial oppression and agricultural problems were long-term factors, the immediate trigger was the severe labor shortage in northern industries caused by World War I. The cut-off of European immigration combined with wartime production demands led northern employers to actively recruit southern Black workers, offering significantly higher wages and paying transportation costs. This created the first large-scale economic opportunity for mass migration.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the loanable funds market when household saving rates increase?</prompt>
+        <options>
+            <option letter="a">Supply shifts right, interest rates fall, quantity of loans increases</option>
+            <option letter="b">Supply shifts left, interest rates rise, quantity of loans decreases</option>
+            <option letter="c">Demand shifts right, interest rates rise, quantity of loans increases</option>
+            <option letter="d">Demand shifts left, interest rates fall, quantity of loans decreases</option>
+        </options>
+        <answer>a</answer>
+        <explanation>When households save more, the supply of loanable funds increases (shifts right) at every interest rate. This increased supply leads to lower equilibrium interest rates and a larger quantity of loans in the market as more funds are available for lending.</explanation>
+    </question>
+</quiz>

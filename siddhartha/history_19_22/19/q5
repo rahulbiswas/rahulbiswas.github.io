@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the PRIMARY reason for the success of the Niagara Movement and early NAACP?</prompt>
+        <options>
+            <option letter="a">Support from President Wilson's administration</option>
+            <option letter="b">Cooperation with Booker T. Washington's followers</option>
+            <option letter="c">Financial backing from wealthy African Americans</option>
+            <option letter="d">Alliance between Black and white progressive reformers</option>
+        </options>
+        <answer>d</answer>
+        <explanation>The Niagara Movement's transformation into the NAACP succeeded largely because of the alliance between African American leaders like W.E.B. Du Bois and white progressive reformers like Mary White Ovington. This interracial cooperation provided broader support and resources than previous civil rights organizations had achieved. Wilson opposed their efforts, Washington's followers generally opposed them, and they didn't rely primarily on African American funding.</explanation>
+    </question>
+</quiz>

@@ -11,4 +11,4 @@ Monetary Policy
 - Liquidity trap = fed funds rate already close to 0
 - Phillips curve; x unemployment ; y inflation
 - AD + -> Inflation +
-- AS + -> Curve moves away from origin
+- AS + -> Curve moves towards origin

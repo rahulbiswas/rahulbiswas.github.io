@@ -13,7 +13,7 @@ Theory of Monetary Neutrality
 Loanable Funds
 - Y axis real interest rate
 - Financial intermediation = connecting borrowers and lenders
-- Lenders: ppl, business, gov, foreign
+- Borrowers: ppl, business, gov, foreign
 - Savers: same
 - Influenced by changes in prefs, tax rates on interest
 - More income -> more lending
