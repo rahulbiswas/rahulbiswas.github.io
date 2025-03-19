@@ -1,10 +1,11 @@
+PELLETS = []
 gx = 9
 gy = 10
 gx2 = 18
 gy2 = 18
 gx3 = 1
 gy3 = 18
-moveCount = 0;
+moveCount = 0
 px = 1
 py = 1
 moves = 0
@@ -35,6 +36,7 @@ SIZE = MAZE.length
 // Get the canvas element and its context
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
+addSomePellets();
 drawBoxes();
 canvas.addEventListener('click', function() {
 	drawBoxes();
@@ -44,6 +46,31 @@ canvas.addEventListener('click', function() {
 function drawBox(color, x, y) {
 	ctx.fillStyle = color;
 	ctx.fillRect(15 + y * 870 / SIZE + 5, 30 + x * 870 / SIZE + 5, 870 / SIZE - 10, 870 / SIZE - 10)
+}
+
+// This creates an empty pellets array with the same size as the maze
+function initEmptyPellets() {
+  PELLETS = [];
+  for (let x = 0; x < SIZE; x++) {
+    PELLETS[x] = [];
+    for (let y = 0; y < SIZE; y++) {
+      PELLETS[x][y] = 0;  // 0 means no pellet here
+    }
+  }
+}
+
+// This adds a few pellets to specific locations
+function addSomePellets() {
+  // First create empty pellets array
+  initEmptyPellets();
+  
+  // Now add pellets at specific positions
+  PELLETS[3][3] = 1;
+  PELLETS[3][5] = 1;
+  PELLETS[6][3] = 1;
+  PELLETS[5][5] = 1;
+  PELLETS[10][11] = 1;
+  PELLETS[15][15] = 1;
 }
 
 function drawBoxes() {
@@ -57,6 +84,9 @@ function drawBoxes() {
 		for (y = 0; y < SIZE; y++) {
 			if (MAZE[x][y] === 1) {
 				drawBox(green(), x, y)
+			}
+			if (PELLETS[x][y] === 1) {
+				drawBox(orange(), x, y)
 			}
 		}
 	}
@@ -86,6 +116,13 @@ function yellow() {
 	const r = 249;
 	const g = 183;
 	const b = 1;
+	return `rgb(${r}, ${g}, ${b})`;
+}
+ 
+function orange() {
+	const r = 255;
+	const g = 165;
+	const b = 0;
 	return `rgb(${r}, ${g}, ${b})`;
 }
 
