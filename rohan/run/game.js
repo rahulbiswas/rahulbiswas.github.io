@@ -1,5 +1,9 @@
-gx = 18
-gy = 18
+gx = 9
+gy = 10
+gx2 = 18
+gy2 = 18
+gx3 = 1
+gy3 = 18
 moveCount = 0;
 px = 1
 py = 1
@@ -52,19 +56,23 @@ function drawBoxes() {
 	for (x = 0; x < SIZE; x++) {
 		for (y = 0; y < SIZE; y++) {
 			if (MAZE[x][y] === 1) {
-				drawBox(blue(), x, y)
+				drawBox(green(), x, y)
 			}
 		}
 	}
 
 	// Draw ghost.
 	drawBox(red(), gx, gy)
+	
+	drawBox(yellow(), gx2, gy2)
+
+	drawBox(purple(), gx3, gy3)
 
 	// Draw pacman.
-	drawBox(yellow(), px, py)
+	drawBox(blue(), px, py)
 
 	// Show move count.
-	ctx.fillStyle = 'green';
+	ctx.fillStyle = 'purple';
 	ctx.font = '24px Arial';
 	ctx.fillText('move count ' + moveCount, 0, 20);
 }
@@ -81,10 +89,24 @@ function yellow() {
 	return `rgb(${r}, ${g}, ${b})`;
 }
 
+function purple() {
+	const r = 157;
+	const g = 0;
+	const b = 255;
+	return `rgb(${r}, ${g}, ${b})`;
+}
+
+function green() {
+	const r = 0;
+	const g = 255;
+	const b = 0;
+	return `rgb(${r}, ${g}, ${b})`;
+}
+
 function blue() {
-	const r = 23;
-	const g = 23;
-	const b = 56;
+	const r = 0;
+	const g = 0;
+	const b = 255;
 	return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -101,11 +123,29 @@ function white() {
 	const b = 238;
 	return `rgb(${r}, ${g}, ${b})`;
 }
-
-function checkEaten() {
-	if ((gx === px) && (gy === py)) {
+function checkEaten1() {
+	if ((px === gx) && (py === gy)) {
 		px = 1
 		py = 1
+		gy = 10
+		gx = 9
+		gy2 = 18
+		gx2 = 18
+		gx3 = 1
+		gy3 = 18
+		moveCount = 0
+	}
+}
+function checkEaten() {
+	if (((gx === px) && (gy === py)) || ((gx2 === px) && (gy2 === py)) || ((gx3 === px) && (gy3 ===py))) {
+		px = 1
+		py = 1
+		gy = 10
+		gx = 9
+		gy2 = 18
+		gx2 = 18
+		gx3 = 1
+		gy3 = 18
 		moveCount = 0
 	}
 }
@@ -138,5 +178,108 @@ document.addEventListener('keydown', function(event) {
 // Basic structure
 let timerName = setInterval(function() {
 	console.log('ae oh ah');
-	// Code to run repeatedly
-}, 2000);
+	switch(Math.floor(Math.random() * 3)) {
+	case 0:
+		console.log("It's not that easy")
+		gx = gx - 1
+		break
+	case 1:
+		console.log("I like unicorns")
+		gx = gx + 1
+		break
+	case 2:
+		console.log("Fast is slow and slow is fast")
+		gy = gy - 1
+		break
+	case 3:
+		console.log("Winning is the only thing")
+		gy = gy + 1
+		break
+	case 4:
+		console.log("what")
+		break	
+	}
+	checkEaten()
+	drawBoxes()
+	if (gx === 19) { 
+		gx = gx - 1
+	} else if (gy === 19) {
+		gy = gy - 1
+	} else if (gx === 0) {
+		gx = gx + 1
+	} else if (gy === 0) {
+		gy = gy + 1
+	}
+}, 1000);
+
+let timerName2 = setInterval(function() {
+	console.log('ae oh ah');
+	switch(Math.floor(Math.random() * 3)) {
+	case 0:
+		console.log("It's not that easy")
+		gx2 = gx2 - 1
+		break
+	case 1:
+		console.log("I like unicorns")
+		gx2 = gx2 + 1
+		break
+	case 2:
+		console.log("Fast is slow and slow is fast")
+		gy2 = gy2 - 1
+		break
+	case 3:
+		console.log("Winning is the only thing")
+		gy2 = gy2 + 1
+		break
+	case 4:
+		console.log("what")
+		break	
+	}
+	checkEaten()
+	drawBoxes()
+	if (gx2 === 19) { 
+		gx2 = gx2 - 1
+	} else if (gy2 === 19) {
+		gy2 = gy2 - 1
+	} else if (gx2 === 0) {
+		gx2 = gx2 + 1
+	} else if (gy2 === 0) {
+		gy2 = gy2 + 1
+	}
+}, 1000);
+
+let timerName3 = setInterval(function() {
+	console.log('ae oh ah');
+	switch(Math.floor(Math.random() * 3)) {
+	case 0:
+		console.log("It's not that easy")
+		gx3 = gx3 - 1
+		break
+	case 1:
+		console.log("I like unicorns")
+		gx3 = gx3 + 1
+		break
+	case 2:
+		console.log("Fast is slow and slow is fast")
+		gy3 = gy3 - 1
+		break
+	case 3:
+		console.log("Winning is the only thing")
+		gy3 = gy3 + 1
+		break
+	case 4:
+		console.log("what")
+		break	
+	}
+	checkEaten()
+	drawBoxes()
+	if (gx3 === 19) { 
+		gx3 = gx3 - 1
+	} else if (gy3 === 19) {
+		gy3 = gy3 - 1
+	} else if (gx3 === 0) {
+		gx3 = gx3 + 1
+	} else if (gy3 === 0) {
+		gy3 = gy3 + 1
+	}
+}, 1000);
