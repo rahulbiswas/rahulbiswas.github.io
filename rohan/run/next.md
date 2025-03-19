@@ -1,51 +1,62 @@
-# Adding Ghost Movement: Instructions
+# Adding Pellets: Getting Started
 
-## Overview
-Today you'll make the ghost move around the maze by implementing a random movement system. This will make the game more challenging and fun!
+## Today's Goal
+Today you'll create a simple way to track pellets in your maze. Then you'll try drawing them yourself.
 
-## Why We Add Ghost Movement
-Adding movement to the ghost makes your game more dynamic:
-1. **Challenge**: A moving ghost gives the player something to avoid
-2. **Gameplay**: It creates excitement as the player tries to navigate while avoiding the ghost
-3. **Game Logic**: You'll learn to use timers to create continuous action in your game
+## Step 1: Create the Pellet Variable
+Add this with your other variables at the top:
+```javascript
+let PELLETS = [];  // This will store where our pellets are
+```
 
-## Understanding the Current Timer
-You already have a timer set up in your code that runs every 1 second, but right now it only outputs a message to the console. You'll add your ghost movement code inside this timer function.
+## Step 2: Create an Empty Pellets Array
+Add this function to your code:
+```javascript
+// This creates an empty pellets array with the same size as the maze
+function initEmptyPellets() {
+  PELLETS = [];
+  for (let x = 0; x < SIZE; x++) {
+    PELLETS[x] = [];
+    for (let y = 0; y < SIZE; y++) {
+      PELLETS[x][y] = 0;  // 0 means no pellet here
+    }
+  }
+}
+```
 
-## Steps for Implementing Ghost Movement
+## Step 3: Add Some Pellets by Hand
+Add this function to your code:
+```javascript
+// This adds a few pellets to specific locations
+function addSomePellets() {
+  // First create empty pellets array
+  initEmptyPellets();
+  
+  // Now add pellets at specific positions
+  PELLETS[3][3] = 1;
+  PELLETS[3][5] = 1;
+  PELLETS[5][3] = 1;
+  PELLETS[5][5] = 1;
+  PELLETS[10][10] = 1;
+  PELLETS[15][15] = 1;
+}
+```
 
-1. **Find where the ghost can move**
-   - For each move, check all four possible directions (up, down, left, right)
-   - Only move into spaces where MAZE[x][y] equals 0 (open path)
-   - Create an array to store all possible moves
+## Step 4: Initialize Pellets When Game Starts
+Add this near the beginning of your code, after you set up the canvas:
+```javascript
+// Add this pellets to the game
+addSomePellets();
+```
 
-2. **Choose a random direction**
-   - Use `randInt()` or `Math.random()` to select a random direction from your array of possible moves
-   - This will make the ghost's movement unpredictable
+## Your Challenge
+Now you need to figure out how to draw the pellets on the screen!
 
-3. **Move the ghost**
-   - Update the ghost's position (gx, gy) based on the chosen direction
-   - Remember: moving up decreases x, moving down increases x
-   - Moving left decreases y, moving right increases y
+Think about:
+- How can you use the `drawBox` function to draw the pellets?
+- What color should the pellets be?
+- Where in your code should you add the pellet drawing?
 
-4. **Check if the player is caught**
-   - Use the `checkEaten()` function that's already in your code
-   - This resets the player if the ghost catches them
+Hint: Look at how the walls are drawn and do something similar for pellets.
 
-5. **Redraw the game**
-   - Call `drawBoxes()` to update the display with the new positions
-
-## Extension Ideas
-After you've implemented random movement, consider these improvements:
-1. Make the ghost smarter by having it move toward the player
-2. Add multiple ghosts with different colors
-3. Make the ghost move faster as the game progresses
-
-## Testing Your Game
-After implementing ghost movement:
-1. Reload your game in the browser
-2. Watch how the ghost moves around
-3. Try to avoid the ghost while navigating the maze
-4. Check that the player resets when caught by the ghost
-
-Good luck with your programming!
+Good luck! Let me know if you need more hints.
