@@ -1,18 +1,12 @@
-# Collecting Pellets: Making Them Disappear
+# More Pellets: Filling the Maze
 
 ## Today's Goal
-Let's make pacman collect pellets when moving over them! When pacman moves to a spot with a pellet, that pellet should disappear.
+Let's fill all the empty spaces in our maze with pellets, just like classic Pac-Man! 
 
 ## The Plan
-In your movement code, after confirming a valid move and updating pacman's position:
-1. Check if there's a pellet at pacman's new position in the PELLETS array
-2. If there is a pellet there, set that spot in PELLETS to 0 to "collect" it
-3. Make sure the display updates to show the pellet is gone
+Modify addSomePellets() to fill all empty spaces:
+- Loop through the maze
+- Add pellets (1) wherever there's an empty space (0)
+- Skip walls (they stay as 1 in MAZE)
 
-## Your Challenge
-Once basic pellet collection is working, think about adding:
-- A collection animation
-- A sound effect
-- A pellet counter
-
-Hint: Think carefully about when to check for pellets - after the move is confirmed but before drawing!
+힌트: Remember to initialize the pellets array first before filling it! 화이팅!
