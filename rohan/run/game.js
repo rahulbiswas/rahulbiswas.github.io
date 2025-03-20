@@ -5,7 +5,7 @@ gx2 = 18
 gy2 = 18
 gx3 = 1
 gy3 = 18
-moveCount = 0
+score = 0
 px = 1
 py = 1
 moves = 0
@@ -37,6 +37,9 @@ SIZE = MAZE.length
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 addSomePellets();
+
+console.log (PELLETS)
+
 drawBoxes();
 canvas.addEventListener('click', function() {
 	drawBoxes();
@@ -104,7 +107,7 @@ function drawBoxes() {
 	// Show move count.
 	ctx.fillStyle = 'purple';
 	ctx.font = '24px Arial';
-	ctx.fillText('move count ' + moveCount, 0, 20);
+	ctx.fillText('score ' + score, 0, 20);
 }
 
 // Returns a number in [min,max].
@@ -170,7 +173,7 @@ function checkEaten1() {
 		gx2 = 18
 		gx3 = 1
 		gy3 = 18
-		moveCount = 0
+		score = 0
 	}
 }
 function checkEaten() {
@@ -183,7 +186,7 @@ function checkEaten() {
 		gx2 = 18
 		gx3 = 1
 		gy3 = 18
-		moveCount = 0
+		score = 0
 	}
 }
 
@@ -206,8 +209,11 @@ document.addEventListener('keydown', function(event) {
 	if (MAZE[nx][ny] === 0) {
 		px = nx
 		py = ny
-		moveCount = moveCount + 1
 		checkEaten()
+		if (PELLETS[px][py] === 1) {
+			score = score + 1 
+		}
+		PELLETS[px][py] = 0
 	}
 	drawBoxes()
 });
