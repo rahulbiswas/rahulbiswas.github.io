@@ -68,12 +68,13 @@ function addSomePellets() {
   initEmptyPellets();
   
   // Now add pellets at specific positions
-  PELLETS[3][3] = 1;
-  PELLETS[3][5] = 1;
-  PELLETS[6][3] = 1;
-  PELLETS[5][5] = 1;
-  PELLETS[10][11] = 1;
-  PELLETS[15][15] = 1;
+	for (x = 0; x < SIZE; x++) {
+		for (y = 0; y < SIZE; y++) {
+			if (MAZE[x][y] === 0) {
+				PELLETS[x][y] = 1
+			}
+		}
+	}
 }
 
 function drawBoxes() {
@@ -97,7 +98,7 @@ function drawBoxes() {
 	// Draw ghost.
 	drawBox(red(), gx, gy)
 	
-	drawBox(yellow(), gx2, gy2)
+	drawBox(indigo(), gx2, gy2)
 
 	drawBox(purple(), gx3, gy3)
 
@@ -115,10 +116,10 @@ function randInt(min, max) {
 	return Math.floor(min + (max - min) * Math.random())
 }
 
-function yellow() {
-	const r = 249;
-	const g = 183;
-	const b = 1;
+function indigo() {
+	const r = 75;
+	const g = 0;
+	const b = 130;
 	return `rgb(${r}, ${g}, ${b})`;
 }
  
@@ -163,19 +164,7 @@ function white() {
 	const b = 238;
 	return `rgb(${r}, ${g}, ${b})`;
 }
-function checkEaten1() {
-	if ((px === gx) && (py === gy)) {
-		px = 1
-		py = 1
-		gy = 10
-		gx = 9
-		gy2 = 18
-		gx2 = 18
-		gx3 = 1
-		gy3 = 18
-		score = 0
-	}
-}
+
 function checkEaten() {
 	if (((gx === px) && (gy === py)) || ((gx2 === px) && (gy2 === py)) || ((gx3 === px) && (gy3 ===py))) {
 		px = 1
@@ -187,6 +176,7 @@ function checkEaten() {
 		gx3 = 1
 		gy3 = 18
 		score = 0
+		addSomePellets()
 	}
 }
 
@@ -221,7 +211,7 @@ document.addEventListener('keydown', function(event) {
 // Basic structure
 let timerName = setInterval(function() {
 	console.log('ae oh ah');
-	switch(Math.floor(Math.random() * 3)) {
+	switch(Math.floor(Math.random() * 4)) {
 	case 0:
 		console.log("It's not that easy")
 		gx = gx - 1
@@ -242,8 +232,6 @@ let timerName = setInterval(function() {
 		console.log("what")
 		break	
 	}
-	checkEaten()
-	drawBoxes()
 	if (gx === 19) { 
 		gx = gx - 1
 	} else if (gy === 19) {
@@ -253,11 +241,13 @@ let timerName = setInterval(function() {
 	} else if (gy === 0) {
 		gy = gy + 1
 	}
+	checkEaten()
+	drawBoxes()
 }, 1000);
 
 let timerName2 = setInterval(function() {
 	console.log('ae oh ah');
-	switch(Math.floor(Math.random() * 3)) {
+	switch(Math.floor(Math.random() * 4)) {
 	case 0:
 		console.log("It's not that easy")
 		gx2 = gx2 - 1
@@ -278,8 +268,6 @@ let timerName2 = setInterval(function() {
 		console.log("what")
 		break	
 	}
-	checkEaten()
-	drawBoxes()
 	if (gx2 === 19) { 
 		gx2 = gx2 - 1
 	} else if (gy2 === 19) {
@@ -289,11 +277,13 @@ let timerName2 = setInterval(function() {
 	} else if (gy2 === 0) {
 		gy2 = gy2 + 1
 	}
+	checkEaten()
+	drawBoxes()
 }, 1000);
 
 let timerName3 = setInterval(function() {
 	console.log('ae oh ah');
-	switch(Math.floor(Math.random() * 3)) {
+	switch(Math.floor(Math.random() * 4)) {
 	case 0:
 		console.log("It's not that easy")
 		gx3 = gx3 - 1
@@ -314,8 +304,6 @@ let timerName3 = setInterval(function() {
 		console.log("what")
 		break	
 	}
-	checkEaten()
-	drawBoxes()
 	if (gx3 === 19) { 
 		gx3 = gx3 - 1
 	} else if (gy3 === 19) {
@@ -325,4 +313,6 @@ let timerName3 = setInterval(function() {
 	} else if (gy3 === 0) {
 		gy3 = gy3 + 1
 	}
+	checkEaten()
+	drawBoxes()
 }, 1000);
