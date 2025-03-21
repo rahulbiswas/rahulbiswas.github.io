@@ -1,12 +1,13 @@
-# More Pellets: Filling the Maze
+# Next Level: More Mazes
 
 ## Today's Goal
-Let's fill all the empty spaces in our maze with pellets, just like classic Pac-Man! 
+Players need more levels to keep themselves entertained. 
 
 ## The Plan
-Modify addSomePellets() to fill all empty spaces:
-- Loop through the maze
-- Add pellets (1) wherever there's an empty space (0)
-- Skip walls (they stay as 1 in MAZE)
+- Create a second maze
+- Be able to switch between mazes in the game by changing the code
+- Be able to switch mazes with a URL parameter
 
-힌트: Remember to initialize the pellets array first before filling it! 화이팅!
+## Challenge
+- Add additional mazes
+   
