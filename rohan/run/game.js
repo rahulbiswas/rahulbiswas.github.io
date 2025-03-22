@@ -148,7 +148,6 @@ console.log (PELLETS)
 drawBoxes();
 canvas.addEventListener('click', function() {
 	drawBoxes();
-	console.log('Green box changed color');
 });
 
 function drawBox(color, x, y) {
@@ -185,33 +184,33 @@ function addSomePellets() {
 function drawBoxes() {
 	// Start with an off white board.
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = white();
+	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
 	// Draw walls.
 	for (x = 0; x < SIZE; x++) {
 		for (y = 0; y < SIZE; y++) {
 			if (MAZE[x][y] === 1) {
-				drawBox(green(), x, y)
+				drawBox(getColor('wall'), x, y)
 			}
 			if (PELLETS[x][y] === 1) {
-				drawBox(orange(), x, y)
+				drawBox(getColor('pellet'), x, y)
 			}
 		}
 	}
 
 	// Draw ghost.
-	drawBox(red(), gx, gy)
+	drawBox(getColor('blinky'), gx, gy)
 	
-	drawBox(indigo(), gx2, gy2)
+	drawBox(getColor('pinky'), gx2, gy2)
 
-	drawBox(purple(), gx3, gy3)
+	drawBox(getColor('inky'), gx3, gy3)
 
 	// Draw pacman.
-	drawBox(blue(), px, py)
+	drawBox(getColor('pacman'), px, py)
 
 	// Show move count.
-	ctx.fillStyle = 'purple';
+	ctx.fillStyle = 'white';
 	ctx.font = '24px Arial';
 	ctx.fillText('score ' + score, 0, 20);
 }
@@ -221,53 +220,114 @@ function randInt(min, max) {
 	return Math.floor(min + (max - min) * Math.random())
 }
 
-function indigo() {
-	const r = 75;
-	const g = 0;
-	const b = 130;
-	return `rgb(${r}, ${g}, ${b})`;
-}
- 
-function orange() {
-	const r = 255;
-	const g = 165;
-	const b = 0;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function purple() {
-	const r = 157;
-	const g = 0;
-	const b = 255;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function green() {
-	const r = 0;
-	const g = 255;
-	const b = 0;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function blue() {
-	const r = 0;
-	const g = 0;
-	const b = 255;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function red() {
-	const r = 255;
-	const g = 0;
-	const b = 0;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function white() {
-	const r = 240;
-	const g = 247;
-	const b = 238;
-	return `rgb(${r}, ${g}, ${b})`;
+function getColor(str) {
+	const color = urlParams.get('color');
+	if (color === 'earth') {
+	  return {
+	    'blinky': '#FF6B6B', // coral red
+	    'pinky': '#4ECDC4', // teal
+	    'pacman': '#FFD166', // golden yellow
+	    'inky': '#6B5CA5', // purple
+	    'wall': '#2F4858', // navy blue
+	    'pellet': '#72B01D', // green
+	    'background': '#333333'
+	  }[str]
+	}
+	if (color === 'water') {
+		return {
+     'blinky': '#D44D5C',   // coral red
+     'pinky': '#5E8B7E',    // sea foam
+     'pacman': '#F2D7B6',   // sand
+     'inky': '#1E3D59',     // deep ocean blue
+     'wall': '#091F36',     // abyss blue
+     'pellet': '#A7C5EB',   // pale water blue
+     'background': '#020A18' // deep sea
+   }[str];
+	}
+	if (color === 'orange') {
+		return {
+	     'background': '#F0A202',
+	     'wall': '#270722',
+	     'blinky': '#47FF47',
+	     'pinky': '#FFFF7A',
+	     'pacman': '#DD4444',
+	     'inky': '#E3FF35',
+	     'pellet': '#999999'
+	   }[str];
+	}
+	if (color === 'wind') {
+		return {
+		     'blinky': '#9D7EA7',   // windswept lavender
+		     'pinky': '#5D4954',    // pale sky blue
+		     'pacman': '#FFE66D',   // dandelion yellow
+		     'inky': '#7D6167',     // sage green
+		     'wall': '#30475E',     // storm blue
+		     'pellet': '#F0F8FF',   // breath white
+		     'background': '#121420' // night wind
+		   }[str];
+	}
+	if (color === 'cyberpunk') {
+		return {
+		     'blinky': '#FF003C',   // neon red
+		     'pinky': '#FF00A0',    // hot pink
+		     'pacman': '#FFE600',   // bright yellow
+		     'inky': '#00FFF0',     // cyan
+		     'wall': '#290661',     // deep purple
+		     'pellet': '#6EE2FF',   // electric blue
+		     'background': '#0D0221' // near-black purple
+		   }[str];
+	}
+	if (color === 'retrowave') {
+		return {
+  'blinky': '#FE4A49',   // coral red
+    'pinky': '#FF00FF',    // magenta
+    'pacman': '#FFF64F',   // bright yellow
+    'inky': '#00FEFF',     // bright cyan/turquoise
+    'wall': '#2D1973',     // midnight purple
+    'pellet': '#F736FF',   // neon purple-pink
+    'background': '#16082E' // deep purple-black
+		   }[str];
+	}
+	if (color === 'brightcolor') {
+		return {
+  'blinky': '#FE4A49',   
+    'pinky': '#6EEB83',    
+    'pacman': '#FFF64F',  
+    'inky': '#00FEFF',    
+    'wall': '#2D1973',     
+    'pellet': '#EE6123',   
+    'background': '#54C6EB', 
+		   }[str];
+	}
+	if (color === 'water') {
+		return {
+     'blinky': '#D44D5C',   // coral red
+     'pinky': '#5E8B7E',    // sea foam
+     'pacman': '#F2D7B6',   // sand
+     'inky': '#1E3D59',     // deep ocean blue
+     'wall': '#091F36',     // abyss blue
+     'pellet': '#A7C5EB',   // pale water blue
+     'background': '#020A18' // deep sea
+   }[str];
+	}
+  return {
+	    'blinky': '#9C2C77',   // ghost - burgundy purple
+	    'pinky': '#FFCF96',    // ghost - peach
+	    'pacman': '#FFDE59',   // golden yellow (same as fire theme)
+	    'inky': '#3FA796',     // ghost - teal
+	    'wall': '#4A0C04',     // charred wood (same as fire theme)
+	    'pellet': '#FFAA00',   // orange flame (same as fire theme)
+	    'background': '#0F0702' // ash black (same as fire theme)
+	  }[str];
+	return {
+    'blinky': '#FF6700',   // pumpkin orange
+    'pinky': '#8A00C2',    // witch purple
+    'pacman': '#CCFF00',   // slime green
+    'inky': '#19A78B',     // teal 
+    'wall': '#2C1B2E',     // eerie purple-black
+    'pellet': '#EADF00',   // sickly yellow
+    'background': '#121113' // near-black
+  }[str];
 }
 
 function checkEaten() {
