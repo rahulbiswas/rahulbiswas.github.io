@@ -118,95 +118,6 @@ function randInt(min, max) {
 }
 
 function getColor(str) {
-	color = ''
-	if (color === 'earth') {
-	  return {
-	    'blinky': '#FF6B6B', // coral red
-	    'pinky': '#4ECDC4', // teal
-	    'pacman': '#FFD166', // golden yellow
-	    'inky': '#6B5CA5', // purple
-	    'wall': '#2F4858', // navy blue
-	    'pellet': '#72B01D', // green
-	    'background': '#333333'
-	  }[str]
-	}
-	if (color === 'water') {
-		return {
-     'blinky': '#D44D5C',   // coral red
-     'pinky': '#5E8B7E',    // sea foam
-     'pacman': '#F2D7B6',   // sand
-     'inky': '#1E3D59',     // deep ocean blue
-     'wall': '#091F36',     // abyss blue
-     'pellet': '#A7C5EB',   // pale water blue
-     'background': '#020A18' // deep sea
-   }[str];
-	}
-	if (color === 'orange') {
-		return {
-	     'background': '#F0A202',
-	     'wall': '#270722',
-	     'blinky': '#47FF47',
-	     'pinky': '#FFFF7A',
-	     'pacman': '#DD4444',
-	     'inky': '#E3FF35',
-	     'pellet': '#999999'
-	   }[str];
-	}
-	if (color === 'wind') {
-		return {
-		     'blinky': '#9D7EA7',   // windswept lavender
-		     'pinky': '#5D4954',    // pale sky blue
-		     'pacman': '#FFE66D',   // dandelion yellow
-		     'inky': '#7D6167',     // sage green
-		     'wall': '#30475E',     // storm blue
-		     'pellet': '#F0F8FF',   // breath white
-		     'background': '#121420' // night wind
-		   }[str];
-	}
-	if (color === 'cyberpunk') {
-		return {
-		     'blinky': '#FF003C',   // neon red
-		     'pinky': '#FF00A0',    // hot pink
-		     'pacman': '#FFE600',   // bright yellow
-		     'inky': '#00FFF0',     // cyan
-		     'wall': '#290661',     // deep purple
-		     'pellet': '#6EE2FF',   // electric blue
-		     'background': '#0D0221' // near-black purple
-		   }[str];
-	}
-	if (color === 'retrowave') {
-		return {
-  'blinky': '#FE4A49',   // coral red
-    'pinky': '#FF00FF',    // magenta
-    'pacman': '#FFF64F',   // bright yellow
-    'inky': '#00FEFF',     // bright cyan/turquoise
-    'wall': '#2D1973',     // midnight purple
-    'pellet': '#F736FF',   // neon purple-pink
-    'background': '#16082E' // deep purple-black
-		   }[str];
-	}
-	if (color === 'brightcolor') {
-		return {
-  'blinky': '#FE4A49',   
-    'pinky': '#6EEB83',    
-    'pacman': '#FFF64F',  
-    'inky': '#00FEFF',    
-    'wall': '#2D1973',     
-    'pellet': '#EE6123',   
-    'background': '#54C6EB', 
-		   }[str];
-	}
-	if (color === 'water') {
-		return {
-     'blinky': '#D44D5C',   // coral red
-     'pinky': '#5E8B7E',    // sea foam
-     'pacman': '#F2D7B6',   // sand
-     'inky': '#1E3D59',     // deep ocean blue
-     'wall': '#091F36',     // abyss blue
-     'pellet': '#A7C5EB',   // pale water blue
-     'background': '#020A18' // deep sea
-   }[str];
-	}
   return {
 	    'blinky': '#9C2C77',   // ghost - burgundy purple
 	    'pinky': '#FFCF96',    // ghost - peach
@@ -216,15 +127,6 @@ function getColor(str) {
 	    'pellet': '#FFAA00',   // orange flame (same as fire theme)
 	    'background': '#0F0702' // ash black (same as fire theme)
 	  }[str];
-	return {
-    'blinky': '#FF6700',   // pumpkin orange
-    'pinky': '#8A00C2',    // witch purple
-    'pacman': '#CCFF00',   // slime green
-    'inky': '#19A78B',     // teal 
-    'wall': '#2C1B2E',     // eerie purple-black
-    'pellet': '#EADF00',   // sickly yellow
-    'background': '#121113' // near-black
-  }[str];
 }
 
 function checkEaten() {
@@ -241,31 +143,3 @@ function checkEaten() {
 		addSomePellets()
 	}
 }
-
-// Add this after your existing event listeners
-document.addEventListener('keydown', function(event) {
-	console.log('Key pressed:', event.key);
-	nx = px
-	ny = py
-	if (event.key === 'ArrowUp') {
-		nx = nx - 1
-	} else if (event.key === 'ArrowDown') {
-		nx = nx + 1
-	} else if (event.key === 'ArrowLeft') {
-		ny = ny - 1
-	} else if (event.key === 'ArrowRight') {
-		ny = ny + 1
-	} else {
-		return
-	}
-	if (MAZE[nx][ny] === 0) {
-		px = nx
-		py = ny
-		checkEaten()
-		if (PELLETS[px][py] === 1) {
-			score = score + 1 
-		}
-		PELLETS[px][py] = 0
-	}
-	drawBoxes()
-});
