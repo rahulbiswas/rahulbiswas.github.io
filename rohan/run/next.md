@@ -10,4 +10,3 @@ Players need more levels to keep themselves entertained.
 
 ## Challenge
 - Add additional mazes
-   
