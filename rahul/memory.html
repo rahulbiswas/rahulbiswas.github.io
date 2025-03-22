@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    
+    .game-container {
+      width: 90%;
+      max-width: 500px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    
+    .game-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    
+    #moves-counter {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    #game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .card {
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: #2c3e50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+    
+    .card.matched {
+      background-color: #27ae60;
+      cursor: default;
+    }
+    
+    .card.flipped {
+      background-color: #3498db;
+    }
+    
+    @media (max-width: 500px) {
+      .card {
+        height: 60px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <h1>Memory Game</h1>
+      <div id="moves-counter">Moves: 0</div>
+      <button onclick="restartGame()">Restart Game</button>
+    </div>
+    <div id="game-board"></div>
+  </div>
+
+  <script>
+    // Game state variables
+    let cards = [];
+    let flippedCards = [];
+    let matchedPairs = 0;
+    let isProcessing = false;
+    let moves = 0;
+    let gameStarted = false;
+
+    // Initialize the game
+    function initGame() {
+      // Reset game state
+      cards = [];
+      flippedCards = [];
+      matchedPairs = 0;
+      isProcessing = false;
+      moves = 0;
+      gameStarted = false;
+      
+      // Create card values (0-7, two of each)
+      const cardValues = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7];
+      
+      // Shuffle the cards using Fisher-Yates algorithm
+      const shuffledCards = shuffleArray(cardValues);
+      
+      // Create the card objects
+      cards = shuffledCards.map((value, index) => ({
+        id: index,
+        value: value,
+        isFlipped: false,
+        isMatched: false
+      }));
+      
+      // Render the game board
+      renderBoard();
+      
+      // Update the moves counter
+      updateMovesCounter();
+    }
+
+    // Shuffle array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+    }
+
+    // Render the game board
+    function renderBoard() {
+      const gameBoard = document.getElementById('game-board');
+      gameBoard.innerHTML = '';
+      
+      // Add cards to the board
+      cards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.className = 'card';
+        if (card.isMatched) cardElement.classList.add('matched');
+        if (card.isFlipped) cardElement.classList.add('flipped');
+        cardElement.dataset.id = card.id;
+        
+        // Set the card content based on its state
+        if (card.isMatched || card.isFlipped) {
+          cardElement.textContent = card.value;
+        } else {
+          cardElement.textContent = '?';
+        }
+        
+        // Add click event listener
+        cardElement.addEventListener('click', () => handleCardClick(card.id));
+        
+        // Add the card to the game board
+        gameBoard.appendChild(cardElement);
+      });
+    }
+
+    // Handle card click
+    function handleCardClick(cardId) {
+      // Don't allow clicks while processing a pair or if the card is already flipped/matched
+      if (isProcessing || flippedCards.length >= 2) return;
+      
+      const card = cards.find(c => c.id === parseInt(cardId));
+      
+      // Don't allow clicking the same card or matched cards
+      if (card.isFlipped || card.isMatched) return;
+      
+      // Start tracking game
+      if (!gameStarted) {
+        gameStarted = true;
+      }
+      
+      // Flip the card
+      card.isFlipped = true;
+      flippedCards.push(card);
+      
+      // Update the board
+      renderBoard();
+      
+      // If two cards are flipped, check for a match
+      if (flippedCards.length === 2) {
+        moves++;
+        updateMovesCounter();
+        
+        isProcessing = true;
+        
+        // Check after a short delay to let the player see the second card
+        setTimeout(() => {
+          checkForMatch();
+          isProcessing = false;
+        }, 1000);
+      }
+    }
+
+    // Check if the flipped cards match
+    function checkForMatch() {
+      const [firstCard, secondCard] = flippedCards;
+      
+      if (firstCard.value === secondCard.value) {
+        // Cards match
+        firstCard.isMatched = true;
+        secondCard.isMatched = true;
+        matchedPairs++;
+        
+        // Check if the game is complete
+        if (matchedPairs === 8) {
+          setTimeout(() => {
+            alert(`Congratulations! You completed the game in ${moves} moves.`);
+          }, 500);
+        }
+      } else {
+        // Cards don't match, flip them back
+        firstCard.isFlipped = false;
+        secondCard.isFlipped = false;
+      }
+      
+      // Clear the flipped cards array
+      flippedCards = [];
+      
+      // Update the board
+      renderBoard();
+    }
+
+    // Update the moves counter display
+    function updateMovesCounter() {
+      const movesCounter = document.getElementById('moves-counter');
+      if (movesCounter) {
+        movesCounter.textContent = `Moves: ${moves}`;
+      }
+    }
+
+    // Restart the game
+    function restartGame() {
+      initGame();
+    }
+
+    // Initialize the game when the page loads
+    document.addEventListener('DOMContentLoaded', initGame);
+  </script>
+</body>
+</html>
