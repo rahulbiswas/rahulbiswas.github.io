@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mermaid Flowchart Example</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .mermaid {
+      margin: 30px 0;
+    }
+    .controls {
+      margin: 20px 0;
+    }
+    select, button {
+      padding: 8px 12px;
+      margin-right: 10px;
+    }
+    .example-code {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    pre {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mermaid Flowchart Example</h1>
+  
+  <div class="controls">
+    <select id="themeSelector">
+      <option value="default">Default Theme</option>
+      <option value="forest">Forest Theme</option>
+      <option value="dark">Dark Theme</option>
+      <option value="neutral">Neutral Theme</option>
+    </select>
+    <button id="renderBtn">Re-render</button>
+  </div>
+  
+  <div class="example-code">
+    <pre id="mermaidCode">flowchart TD
+    A[Start] --> B{Decision?}
+    B -->|Yes| C[Process Task]
+    B -->|No| D[Skip Task]
+    C --> E[Review]
+    D --> E
+    E --> F[End]</pre>
+  </div>
+  
+  <div class="mermaid" id="mermaidChart">
+    flowchart TD
+      A[Start] --> B{Decision?}
+      B -->|Yes| C[Process Task]
+      B -->|No| D[Skip Task]
+      C --> E[Review]
+      D --> E
+      E --> F[End]
+  </div>
+  
+  <h2>Try Editing the Code</h2>
+  <p>Edit the code above and click "Re-render" to see your changes.</p>
+  
+  <script>
+    // Initialize mermaid
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default'
+    });
+    
+    // Theme selector
+    document.getElementById('themeSelector').addEventListener('change', function() {
+      const theme = this.value;
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: theme
+      });
+      renderChart();
+    });
+    
+    // Re-render button
+    document.getElementById('renderBtn').addEventListener('click', function() {
+      renderChart();
+    });
+    
+    // Function to render chart
+    function renderChart() {
+      const codeElement = document.getElementById('mermaidCode');
+      const chartElement = document.getElementById('mermaidChart');
+      const code = codeElement.textContent;
+      
+      // Update the chart div
+      chartElement.innerHTML = code;
+      
+      // Re-render mermaid
+      mermaid.init(undefined, '.mermaid');
+    }
+  </script>
+</body>
+</html>
