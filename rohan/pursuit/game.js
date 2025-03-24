@@ -5,6 +5,8 @@ gx2 = 18
 gy2 = 18
 gx3 = 1
 gy3 = 18
+gx4 = 6
+gy4 = 1
 score = 0
 px = 1
 py = 1
@@ -205,6 +207,8 @@ function drawBoxes() {
 	drawBox(getColor('pinky'), gx2, gy2)
 
 	drawBox(getColor('inky'), gx3, gy3)
+	
+	drawBox(getColor('clinky'), gx4, gy4)
 
 	// Draw pacman.
 	drawBox(getColor('pacman'), px, py)
@@ -308,9 +312,32 @@ function getColor(str) {
      'wall': '#091F36',     // abyss blue
      'pellet': '#A7C5EB',   // pale water blue
      'background': '#020A18' // deep sea
-   }[str];
+  	 		}[str];
 	}
-  return {
+ 
+	if (color === 'halloween') {
+		return {
+    'blinky': '#EADF00',   // pumpkin orange
+    'pinky': '#8A00C2',    // witch purple
+    'pacman': '#CCFF00',   // slime green
+    'inky': '#19A78B',     // teal 
+    'wall': '#121113',     // eerie purple-black
+    'pellet': '#FF6700',   // sickly yellow
+    'background': '#2C1B2E' // near-black
+				}[str];
+	}
+	if (color === 'sunset') {
+		return {
+'blinky': '#FF5E5B',   // coral red
+    'pinky': '#FF9E7A',    // light coral/peach
+    'pacman': '#FFDB00',   // golden yellow
+    'inky': '#9649CB',     // twilight purple
+    'wall': '#2D3A87',     // deep blue
+    'pellet': '#FFBD59',   // orange gold
+    'background': '#1A1B47' // night blue
+				}[str];
+	}
+	 return {
 	    'blinky': '#9C2C77',   // ghost - burgundy purple
 	    'pinky': '#FFCF96',    // ghost - peach
 	    'pacman': '#FFDE59',   // golden yellow (same as fire theme)
@@ -319,17 +346,7 @@ function getColor(str) {
 	    'pellet': '#FFAA00',   // orange flame (same as fire theme)
 	    'background': '#0F0702' // ash black (same as fire theme)
 	  }[str];
-	return {
-    'blinky': '#FF6700',   // pumpkin orange
-    'pinky': '#8A00C2',    // witch purple
-    'pacman': '#CCFF00',   // slime green
-    'inky': '#19A78B',     // teal 
-    'wall': '#2C1B2E',     // eerie purple-black
-    'pellet': '#EADF00',   // sickly yellow
-    'background': '#121113' // near-black
-  }[str];
-}
-
+	}
 function checkEaten() {
 	if (((gx === px) && (gy === py)) || ((gx2 === px) && (gy2 === py)) || ((gx3 === px) && (gy3 ===py))) {
 		px = 1
@@ -340,6 +357,8 @@ function checkEaten() {
 		gx2 = 18
 		gx3 = 1
 		gy3 = 18
+		gx4 = 6
+		gy4 = 1
 		score = 0
 		addSomePellets()
 	}
@@ -477,6 +496,42 @@ let timerName3 = setInterval(function() {
 		gx3 = gx3 + 1
 	} else if (gy3 === 0) {
 		gy3 = gy3 + 1
+	}
+	checkEaten()
+	drawBoxes()
+}, 1000);
+// Basic structure
+let timerName = setInterval(function() {
+	console.log('ae oh ah');
+	switch(Math.floor(Math.random() * 4)) {
+	case 0:
+		console.log("It's not that easy")
+		gx4 = gx4 - 1
+		break
+	case 1:
+		console.log("I like unicorns")
+		gx4 = gx4 + 1
+		break
+	case 2:
+		console.log("Fast is slow and slow is fast")
+		gy4 = gy4 - 1
+		break
+	case 3:
+		console.log("Winning is the only thing")
+		gy4 = gy4 + 1
+		break
+	case 4:
+		console.log("what")
+		break	
+	}
+	if (g4x === 19) { 
+		gx4 = gx4 - 1
+	} else if (gy4 === 19) {
+		gy4 = gy4 - 1
+	} else if (gx4 === 0) {
+		gx4 = gx4 + 1
+	} else if (gy === 0) {
+		gy4 = gy4 + 1
 	}
 	checkEaten()
 	drawBoxes()
