@@ -5,6 +5,8 @@ gx2 = 18
 gy2 = 18
 gx3 = 1
 gy3 = 18
+gx4 = 6
+gy4 = 1
 score = 0
 px = 1
 py = 1
@@ -32,26 +34,92 @@ const MAZE0 = [
 	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 const MAZE1 = [
-	[1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-	[1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1],
-	[1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1],
-	[1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1],
-	[1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1],
-	[1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1],
-	[1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
-	[1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1],
-	[1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1],
-	[1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1],
-	[1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1],
-	[1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1],
-	[0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1],
-	[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1],
-	[0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1],
-	[0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1],
-	[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1],
-	[1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1],
-	[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1],
-	[1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1],
+    [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1],
+    [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1],
+    [1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+];
+const MAZE2 = [
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+];
+const MAZE3 = [
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+];
+const MAZE4 = [
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1],
+    [1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1],
+    [1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1],
+    [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 MAZE = MAZE0
 
@@ -59,6 +127,15 @@ const urlParams = new URLSearchParams(window.location.search);
 const maze = urlParams.get('maze');
 if (maze === '1') {
 	MAZE = MAZE1
+}
+if (maze === '2') {
+	MAZE = MAZE2
+}
+if (maze === '3') {
+	MAZE = MAZE3
+}
+if (maze === '4') {
+	MAZE = MAZE4
 }
 
 SIZE = MAZE.length
@@ -73,7 +150,6 @@ console.log (PELLETS)
 drawBoxes();
 canvas.addEventListener('click', function() {
 	drawBoxes();
-	console.log('Green box changed color');
 });
 
 function drawBox(color, x, y) {
@@ -110,33 +186,35 @@ function addSomePellets() {
 function drawBoxes() {
 	// Start with an off white board.
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = white();
+	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
 	// Draw walls.
 	for (x = 0; x < SIZE; x++) {
 		for (y = 0; y < SIZE; y++) {
 			if (MAZE[x][y] === 1) {
-				drawBox(green(), x, y)
+				drawBox(getColor('wall'), x, y)
 			}
 			if (PELLETS[x][y] === 1) {
-				drawBox(orange(), x, y)
+				drawBox(getColor('pellet'), x, y)
 			}
 		}
 	}
 
 	// Draw ghost.
-	drawBox(red(), gx, gy)
+	drawBox(getColor('blinky'), gx, gy)
 	
-	drawBox(indigo(), gx2, gy2)
+	drawBox(getColor('pinky'), gx2, gy2)
 
-	drawBox(purple(), gx3, gy3)
+	drawBox(getColor('inky'), gx3, gy3)
+	
+	drawBox(getColor('clinky'), gx4, gy4)
 
 	// Draw pacman.
-	drawBox(blue(), px, py)
+	drawBox(getColor('pacman'), px, py)
 
 	// Show move count.
-	ctx.fillStyle = 'purple';
+	ctx.fillStyle = 'white';
 	ctx.font = '24px Arial';
 	ctx.fillText('score ' + score, 0, 20);
 }
@@ -146,55 +224,129 @@ function randInt(min, max) {
 	return Math.floor(min + (max - min) * Math.random())
 }
 
-function indigo() {
-	const r = 75;
-	const g = 0;
-	const b = 130;
-	return `rgb(${r}, ${g}, ${b})`;
-}
+function getColor(str) {
+	const color = urlParams.get('color');
+	if (color === 'earth') {
+	  return {
+	    'blinky': '#FF6B6B', // coral red
+	    'pinky': '#4ECDC4', // teal
+	    'pacman': '#FFD166', // golden yellow
+	    'inky': '#6B5CA5', // purple
+	    'wall': '#2F4858', // navy blue
+	    'pellet': '#72B01D', // green
+	    'background': '#333333'
+	  }[str]
+	}
+	if (color === 'water') {
+		return {
+     'blinky': '#D44D5C',   // coral red
+     'pinky': '#5E8B7E',    // sea foam
+     'pacman': '#F2D7B6',   // sand
+     'inky': '#1E3D59',     // deep ocean blue
+     'wall': '#091F36',     // abyss blue
+     'pellet': '#A7C5EB',   // pale water blue
+     'background': '#020A18' // deep sea
+   }[str];
+	}
+	if (color === 'orange') {
+		return {
+	     'background': '#F0A202',
+	     'wall': '#270722',
+	     'blinky': '#47FF47',
+	     'pinky': '#FFFF7A',
+	     'pacman': '#DD4444',
+	     'inky': '#E3FF35',
+	     'pellet': '#999999'
+	   }[str];
+	}
+	if (color === 'wind') {
+		return {
+		     'blinky': '#9D7EA7',   // windswept lavender
+		     'pinky': '#5D4954',    // pale sky blue
+		     'pacman': '#FFE66D',   // dandelion yellow
+		     'inky': '#7D6167',     // sage green
+		     'wall': '#30475E',     // storm blue
+		     'pellet': '#F0F8FF',   // breath white
+		     'background': '#121420' // night wind
+		   }[str];
+	}
+	if (color === 'cyberpunk') {
+		return {
+		     'blinky': '#FF003C',   // neon red
+		     'pinky': '#FF00A0',    // hot pink
+		     'pacman': '#FFE600',   // bright yellow
+		     'inky': '#00FFF0',     // cyan
+		     'wall': '#290661',     // deep purple
+		     'pellet': '#6EE2FF',   // electric blue
+		     'background': '#0D0221' // near-black purple
+		   }[str];
+	}
+	if (color === 'retrowave') {
+		return {
+  'blinky': '#FE4A49',   // coral red
+    'pinky': '#FF00FF',    // magenta
+    'pacman': '#FFF64F',   // bright yellow
+    'inky': '#00FEFF',     // bright cyan/turquoise
+    'wall': '#2D1973',     // midnight purple
+    'pellet': '#F736FF',   // neon purple-pink
+    'background': '#16082E' // deep purple-black
+		   }[str];
+	}
+	if (color === 'brightcolor') {
+		return {
+  'blinky': '#FE4A49',   
+    'pinky': '#6EEB83',    
+    'pacman': '#FFF64F',  
+    'inky': '#00FEFF',    
+    'wall': '#2D1973',     
+    'pellet': '#EE6123',   
+    'background': '#54C6EB', 
+		   }[str];
+	}
+	if (color === 'water') {
+		return {
+     'blinky': '#D44D5C',   // coral red
+     'pinky': '#5E8B7E',    // sea foam
+     'pacman': '#F2D7B6',   // sand
+     'inky': '#1E3D59',     // deep ocean blue
+     'wall': '#091F36',     // abyss blue
+     'pellet': '#A7C5EB',   // pale water blue
+     'background': '#020A18' // deep sea
+  	 		}[str];
+	}
  
-function orange() {
-	const r = 255;
-	const g = 165;
-	const b = 0;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function purple() {
-	const r = 157;
-	const g = 0;
-	const b = 255;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function green() {
-	const r = 0;
-	const g = 255;
-	const b = 0;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function blue() {
-	const r = 0;
-	const g = 0;
-	const b = 255;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function red() {
-	const r = 255;
-	const g = 0;
-	const b = 0;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
-function white() {
-	const r = 240;
-	const g = 247;
-	const b = 238;
-	return `rgb(${r}, ${g}, ${b})`;
-}
-
+	if (color === 'halloween') {
+		return {
+    'blinky': '#EADF00',   // pumpkin orange
+    'pinky': '#8A00C2',    // witch purple
+    'pacman': '#CCFF00',   // slime green
+    'inky': '#19A78B',     // teal 
+    'wall': '#121113',     // eerie purple-black
+    'pellet': '#FF6700',   // sickly yellow
+    'background': '#2C1B2E' // near-black
+				}[str];
+	}
+	if (color === 'sunset') {
+		return {
+'blinky': '#FF5E5B',   // coral red
+    'pinky': '#FF9E7A',    // light coral/peach
+    'pacman': '#FFDB00',   // golden yellow
+    'inky': '#9649CB',     // twilight purple
+    'wall': '#2D3A87',     // deep blue
+    'pellet': '#FFBD59',   // orange gold
+    'background': '#1A1B47' // night blue
+				}[str];
+	}
+	 return {
+	    'blinky': '#9C2C77',   // ghost - burgundy purple
+	    'pinky': '#FFCF96',    // ghost - peach
+	    'pacman': '#FFDE59',   // golden yellow (same as fire theme)
+	    'inky': '#3FA796',     // ghost - teal
+	    'wall': '#4A0C04',     // charred wood (same as fire theme)
+	    'pellet': '#FFAA00',   // orange flame (same as fire theme)
+	    'background': '#0F0702' // ash black (same as fire theme)
+	  }[str];
+	}
 function checkEaten() {
 	if (((gx === px) && (gy === py)) || ((gx2 === px) && (gy2 === py)) || ((gx3 === px) && (gy3 ===py))) {
 		px = 1
@@ -205,6 +357,8 @@ function checkEaten() {
 		gx2 = 18
 		gx3 = 1
 		gy3 = 18
+		gx4 = 6
+		gy4 = 1
 		score = 0
 		addSomePellets()
 	}
@@ -342,6 +496,42 @@ let timerName3 = setInterval(function() {
 		gx3 = gx3 + 1
 	} else if (gy3 === 0) {
 		gy3 = gy3 + 1
+	}
+	checkEaten()
+	drawBoxes()
+}, 1000);
+// Basic structure
+let timerName = setInterval(function() {
+	console.log('ae oh ah');
+	switch(Math.floor(Math.random() * 4)) {
+	case 0:
+		console.log("It's not that easy")
+		gx4 = gx4 - 1
+		break
+	case 1:
+		console.log("I like unicorns")
+		gx4 = gx4 + 1
+		break
+	case 2:
+		console.log("Fast is slow and slow is fast")
+		gy4 = gy4 - 1
+		break
+	case 3:
+		console.log("Winning is the only thing")
+		gy4 = gy4 + 1
+		break
+	case 4:
+		console.log("what")
+		break	
+	}
+	if (g4x === 19) { 
+		gx4 = gx4 - 1
+	} else if (gy4 === 19) {
+		gy4 = gy4 - 1
+	} else if (gx4 === 0) {
+		gx4 = gx4 + 1
+	} else if (gy === 0) {
+		gy4 = gy4 + 1
 	}
 	checkEaten()
 	drawBoxes()
