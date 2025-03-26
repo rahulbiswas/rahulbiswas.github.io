@@ -1,7 +1,5 @@
-gx = 9
-gy = 10
 score = 0
-SIZE = 20
+SIZE = 5
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
@@ -31,7 +29,11 @@ function drawBoxes() {
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
-	drawBox(getColor('blinky'), gx, gy)
+	for (x = 0; x < 4; x++) {
+		for (y = 0; y < 3; y++) {
+			drawBox(getColor('cards'), x, y)
+		}
+	}
 
 	ctx.fillStyle = 'white';
 	ctx.font = '24px Arial';
@@ -40,8 +42,9 @@ function drawBoxes() {
 
 function getColor(str) {
   return {
-	    'blinky': '#9C2C77',
-			'background': '#050A30'
+	  'blinky': '#9C2C77',
+		'background': '#050A30',
+		'cards': '#f00'
   }[str];
 }
 
