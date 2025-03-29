@@ -3,12 +3,6 @@ SIZE = 5
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
-
-drawBoxes();
-canvas.addEventListener('click', function() {
-	drawBoxes();
-});
-
 PAIRS = 6
 pieces = []
 for (i = 0; i < PAIRS*2; i++) {
@@ -16,6 +10,10 @@ for (i = 0; i < PAIRS*2; i++) {
 }
 pieces = shuffleArray(pieces);
 console.log(pieces)
+drawBoxes();
+canvas.addEventListener('click', function() {
+	drawBoxes();
+});
 
 console.log('Can I keep doing the pacman')
 
@@ -31,7 +29,14 @@ function drawBoxes() {
 
 	for (x = 0; x < 4; x++) {
 		for (y = 0; y < 3; y++) {
-			drawBox(getColor('cards'), x, y)
+			// x = 0,1,2,3
+			// y = 0,1,2
+			// q = 0 if x = 0, y = 0
+			// q = 5 if x = 1, y = 1
+			// q = 4 if x = 0, y = 1
+			q = 3*x+y
+			p = pieces[q]
+			drawBox(getColor('card' + p), x, y)
 		}
 	}
 
@@ -44,7 +49,12 @@ function getColor(str) {
   return {
 	  'blinky': '#9C2C77',
 		'background': '#050A30',
-		'cards': '#f00'
+		'card0': '#e4ff1a',
+		'card1': '#e8aa14',
+		'card2': '#f21b3f',
+		'card3': '#00bbf9',
+		'card4': '#00f5d4',
+		'card5': '#ffc07f',
   }[str];
 }
 
