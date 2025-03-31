@@ -1,75 +1,91 @@
-score = 0
-SIZE = 5
+let score = 0;
+let coordinate = 0;
+const SIZE = 4; // Adjusted to match the number of rows in drawBoxes()
 
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
-PAIRS = 6
-pieces = []
-for (i = 0; i < PAIRS*2; i++) {
-	pieces.push(i % PAIRS)
-}
-pieces = shuffleArray(pieces);
-console.log(pieces)
-drawBoxes();
-canvas.addEventListener('click', function() {
-	drawBoxes();
-});
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 
-console.log('Can I keep doing the pacman')
+document.addEventListener("DOMContentLoaded", () => {
+    const element = document.querySelector(".container");
 
-function drawBox(color, x, y) {
-	ctx.fillStyle = color;
-	ctx.fillRect(15 + y * 870 / SIZE + 5, 30 + x * 870 / SIZE + 5, 870 / SIZE - 10, 870 / SIZE - 10)
-}
+    function updateCanvas() {
+        // Set canvas size dynamically
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
 
-function drawBoxes() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = getColor('background');
-	ctx.fillRect(0, 0, 900, 900)
+    function drawBoxes() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = getColor('background');
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-	for (x = 0; x < 4; x++) {
-		for (y = 0; y < 3; y++) {
-			// x = 0,1,2,3
-			// y = 0,1,2
-			// q = 0 if x = 0, y = 0
-			// q = 5 if x = 1, y = 1
-			// q = 4 if x = 0, y = 1
-			q = 3*x+y
-			p = pieces[q]
-			drawBox(getColor('card' + p), x, y)
-		}
-	}
+        const boxSize = 100; // Set a fixed box size for now
 
-	ctx.fillStyle = 'white';
-	ctx.font = '24px Arial';
-	ctx.fillText('score ' + score, 0, 20);
-}
+        for (let x = 0; x < 3; x++) {
+            for (let y = 0; y < 4; y++) {
+                let q = 3 * x + y;
+                let p = pieces[q];
+                drawBox(getColor('card' + p), x * boxSize, y * boxSize);
+            }
+        }
 
-function getColor(str) {
-  return {
-	  'blinky': '#9C2C77',
-		'background': '#050A30',
-		'card0': '#e4ff1a',
-		'card1': '#e8aa14',
-		'card2': '#f21b3f',
-		'card3': '#00bbf9',
-		'card4': '#00f5d4',
-		'card5': '#ffc07f',
-  }[str];
-}
+        ctx.fillStyle = 'white';
+        ctx.font = '24px Arial';
+        ctx.fillText('Score: ' + score, 10, 30);
+    }
 
-function shuffleArray(array) {
-  // Create a copy of the original array to avoid modifying it directly
-  const shuffled = [...array];
-  
-  // Fisher-Yates shuffle algorithm
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    // Generate a random index from 0 to i
-    const j = Math.floor(Math.random() * (i + 1));
+    function drawBox(color, x, y) {
+        ctx.fillStyle = color;
+        ctx.fillRect(x + 15, y + 30, 80, 80); // Adjusted for better visibility
+    }
+
+    function getColor(str) {
+        return {
+            'blinky': '#9C2C77',
+            'background': '#050A30',
+            'card0': '#e4ff1a',
+            'card1': '#e8aa14',
+            'card2': '#f21b3f',
+            'card3': '#00bbf9',
+            'card4': '#00f5d4',
+            'card5': '#ffc07f',
+        }[str];
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    const PAIRS = 6;
+    let pieces = [];
+    for (let i = 0; i < PAIRS * 2; i++) {
+        pieces.push(i % PAIRS);
+    }
     
-    // Swap elements at indices i and j
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  
-  return shuffled;
-}
+	pieces = shuffleArray(pieces);
+    console.log(pieces);
+
+    drawBoxes();
+    
+    canvas.addEventListener('click', function(event) {
+		drawBoxes();
+		x = event.clientX;
+		y = event.clientY;
+		
+		xreal = Math.trunc((x-15) / (80 + 15))
+		yreal = Math.trunc((y-30) / (80 + 15))
+		
+		console.log(xreal,yreal)
+    });
+
+    window.addEventListener("resize", () => {
+        updateCanvas();
+        drawBoxes();
+    });
+
+    updateCanvas();
+});

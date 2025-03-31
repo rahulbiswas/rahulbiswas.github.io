@@ -1,9 +1,12 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f5f5f5;
-  font-family: Arial;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars */
+    background-color: black;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

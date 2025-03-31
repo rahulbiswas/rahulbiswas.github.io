@@ -26,27 +26,49 @@ sinusoidal = 0
 sign = 0
 e = 1
 d = 1
+	
+function updateFormula() {
+	var f1 = document.getElementById('f1')
+	var f2 = document.getElementById('f2')
+	var f3 = document.getElementById('f3')
+	var f4 = document.getElementById('f4')
+	f1.hidden = true
+	f2.hidden = true
+	f3.hidden = true
+	f4.hidden = true
+	if (sinusoidal == 0 && sign == 0) {
+		f1.hidden = false
+	} else if (sinusoidal == 1 && sign == 0) {
+		f2.hidden = false
+	} else if (sinusoidal == 0 && sign == 1) {
+		f3.hidden = false
+	} else if (sinusoidal == 1 && sign == 1) {
+		f4.hidden = false
+	}
+}
 
 function SwitchSigns(page) {
 	var resultElement = document.getElementById('result')
-	resultElement.innerHTML = "sign " + page
 	sign = page;
+	updateFormula();
 }
 
 function SwitchCosSin(page) {
 	var resultElement = document.getElementById('result2')
-	resultElement.innerHTML = "function " + page
 	sinusoidal = page;
+	updateFormula();
 }
 
 function eValue() {
   var x = document.getElementById("myText").value;
 	e = x;
+	updateFormula();
 }
 
 function dValue() {
   var x = document.getElementById("myText2").value;
 	d = x;
+	updateFormula();
 }
 
 function drawGraph() {
@@ -111,7 +133,10 @@ function drawGraph() {
 		<tr>
 			<td><canvas id="drawingCanvas" width="500" height="500"></canvas></td>
 			<td>
-				  \[r=\frac{e\cdot d}{1+e\cdot cos(\theta)}\]
+				<p id="f1">\[r=\frac{e\cdot d}{1+e\cdot cos(\theta)}\]</p>
+				<p id="f2">\[r=\frac{e\cdot d}{1+e\cdot sin(\theta)}\]</p>
+				<p id="f3">\[r=\frac{e\cdot d}{1-e\cdot cos(\theta)}\]</p>
+				<p id="f4">\[r=\frac{e\cdot d}{1-e\cdot sin(\theta)}\]</p>
 			</td>
 		</tr>
 	<table>
