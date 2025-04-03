@@ -18,11 +18,16 @@ function drawBoxes() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
-
+	
 	for (x = 0; x < SIZE; x++) {
 		p = pieces[x]
-		color = getColor('card' + p)
-		drawBox(color, x, 0)
+		if (p === false)	{
+			color = getColor('black')
+			 }
+			if (p === true) {	
+				color = getColor('green')
+				drawBox(color, x, 0)
+		}
 	}
 }
 
@@ -52,7 +57,7 @@ canvas.addEventListener('click', function(event) {
 
 function getColor(str) {
   return {
-		'background': '#050A30',
+		'background': '#00f',
 		'black': '#000',
 		'green': '#0f0',
   }[str];
