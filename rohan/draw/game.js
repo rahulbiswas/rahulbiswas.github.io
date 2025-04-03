@@ -12,7 +12,7 @@ drawBoxes();
 
 function drawBox(color, x, y) {
 	ctx.fillStyle = color;
-	ctx.fillRect(20 + y * 870 / SIZE, 35 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
+	ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
 }
 
 function drawBoxes() {
@@ -30,16 +30,14 @@ function drawBoxes() {
 }
 
 canvas.addEventListener('click', function(event) {
-  // Get the canvas position
   const rect = canvas.getBoundingClientRect();
   
-  // Calculate mouse position relative to the canvas
   const px = event.clientX - rect.left;
   const py = event.clientY - rect.top;
   
   console.log('Click coordinates:', px, py);
 	
-	x = Math.floor((py - 35) * SIZE / 870);
+	x = Math.floor((py - 20) * SIZE / 870);
 	y = Math.floor((px - 20) * SIZE / 870);
 
 	if ((x < 0) || (y < 0) || (x > 3) || (y > 2)) {
