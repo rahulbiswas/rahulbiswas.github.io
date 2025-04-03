@@ -3,9 +3,8 @@ SIZE = 5
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 pieces = []
-hidden = []
 for (i = 0; i < SIZE; i++) {
-	pieces.push(0)
+	pieces.push(false)
 }
 console.log(pieces)
 drawBoxes();
@@ -21,7 +20,7 @@ function drawBoxes() {
 	ctx.fillRect(0, 0, 900, 900)
 
 	for (x = 0; x < SIZE; x++) {
-		p = pieces[0]
+		p = pieces[x]
 		color = getColor('card' + p)
 		drawBox(color, x, 0)
 	}
@@ -41,11 +40,12 @@ canvas.addEventListener('click', function(event) {
 		return
 	}
 
-	oldValue = hidden[0]
+	oldValue = pieces[x]
 	newValue = !oldValue
-	hidden[0] = newValue
+	pieces[x] = newValue
 
   console.log('Click coordinates:', x);
+	console.log(pieces)
 	
 	drawBoxes()
 });
@@ -53,7 +53,7 @@ canvas.addEventListener('click', function(event) {
 function getColor(str) {
   return {
 		'background': '#050A30',
-		'card0': '#000',
-		'card1': '#0f0',
+		'black': '#000',
+		'green': '#0f0',
   }[str];
 }
