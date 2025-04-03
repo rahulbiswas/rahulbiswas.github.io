@@ -36,9 +36,8 @@ canvas.addEventListener('click', function(event) {
   console.log('Click coordinates:', px, py);
 	
 	x = Math.floor((py - 20) * SIZE / 870);
-	y = Math.floor((px - 20) * SIZE / 870);
 
-	if ((x < 0) || (y < 0) || (x > 3) || (y > 2)) {
+	if ((x < 0) || (x >= SIZE)) {
 		return
 	}
 
