@@ -60,7 +60,6 @@ canvas.addEventListener('click', function(event) {
 	hidden[q] = newValue
 
   console.log('Click coordinates:', x, y);
-	console.log('Hidden: ' + hidden)
 	
 	drawBoxes()
 });
