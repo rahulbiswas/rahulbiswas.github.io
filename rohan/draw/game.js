@@ -11,8 +11,6 @@ pieces = shuffleArray(pieces);
 console.log(pieces)
 drawBoxes();
 
-console.log('Can I keep doing the pacman')
-
 function drawBox(color, x, y) {
 	ctx.fillStyle = color;
 	ctx.fillRect(20 + y * 870 / SIZE, 35 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
@@ -60,7 +58,7 @@ canvas.addEventListener('click', function(event) {
 
 function getColor(str) {
   return {
-	  'blinky': '#9C2C77',
+	 // 'blinky': '#9C2C77',
 		'background': '#050A30',
 		'card0': '#f00',
 		'card1': '#0f0',
