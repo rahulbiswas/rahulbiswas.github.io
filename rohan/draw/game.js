@@ -6,7 +6,7 @@ PAIRS = 6
 pieces = []
 hidden = []
 for (i = 0; i < PAIRS*2; i++) {
-	pieces.push(i % PAIRS)
+	pieces.push(0)
 	hidden.push(true)
 }
 pieces = shuffleArray(pieces);
