@@ -21,9 +21,9 @@ function drawBoxes() {
 	ctx.fillRect(0, 0, 900, 900)
 
 	for (x = 0; x < SIZE; x++) {
-			p = pieces[0]
-			color = getColor('card' + p)
-			drawBox(color, x, 0)
+		p = pieces[0]
+		color = getColor('card' + p)
+		drawBox(color, x, 0)
 	}
 }
 
@@ -43,9 +43,9 @@ canvas.addEventListener('click', function(event) {
 
 	oldValue = hidden[0]
 	newValue = !oldValue
-	hidden[q] = newValue
+	hidden[0] = newValue
 
-  console.log('Click coordinates:', x, y);
+  console.log('Click coordinates:', x);
 	
 	drawBoxes()
 });
@@ -53,11 +53,7 @@ canvas.addEventListener('click', function(event) {
 function getColor(str) {
   return {
 		'background': '#050A30',
-		'card0': '#f00',
+		'card0': '#000',
 		'card1': '#0f0',
-		'card2': '#00f',
-		'card3': '#ff0',
-		'card4': '#f0f',
-		'card5': '#0ff',
   }[str];
 }
