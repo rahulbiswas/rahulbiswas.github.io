@@ -32,10 +32,10 @@ function drawBoxes() {
 			q = coordinatesToIndex(x,y)
 			p = pieces[q]
 			color = getColor('card' + p)
-			isHidden = hidden[q]
-			if (isHidden) {
-				color = getColor('hidden')
-			}
+		//	isHidden = hidden[q]
+			// if (isHidden) {
+// 				color = getColor('hidden')
+// 			}
 			drawBox(color, x, y)
 		}
 	}
