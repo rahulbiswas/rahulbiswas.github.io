@@ -18,10 +18,6 @@ function drawBox(color, x, y) {
 	ctx.fillRect(20 + y * 870 / SIZE, 35 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
 }
 
-function coordinatesToIndex(x, y) {
-	return 3*x+y
-}
-
 function drawBoxes() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = getColor('background');
@@ -29,8 +25,7 @@ function drawBoxes() {
 
 	for (x = 0; x < 4; x++) {
 		for (y = 0; y < 3; y++) {
-			q = coordinatesToIndex(x,y)
-			p = pieces[q]
+			p = pieces[0]
 			color = getColor('card' + p)
 			drawBox(color, x, y)
 		}
@@ -54,8 +49,7 @@ canvas.addEventListener('click', function(event) {
 		return
 	}
 
-	q = coordinatesToIndex(x,y)
-	oldValue = hidden[q]
+	oldValue = hidden[0]
 	newValue = !oldValue
 	hidden[q] = newValue
 
@@ -74,7 +68,6 @@ function getColor(str) {
 		'card3': '#ff0',
 		'card4': '#f0f',
 		'card5': '#0ff',
-		'hidden': '#333'
   }[str];
 }
 
