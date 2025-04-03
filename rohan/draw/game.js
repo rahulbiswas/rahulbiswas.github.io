@@ -7,7 +7,6 @@ hidden = []
 for (i = 0; i < SIZE; i++) {
 	pieces.push(0)
 }
-pieces = shuffleArray(pieces);
 console.log(pieces)
 drawBoxes();
 
@@ -58,7 +57,6 @@ canvas.addEventListener('click', function(event) {
 
 function getColor(str) {
   return {
-	 // 'blinky': '#9C2C77',
 		'background': '#050A30',
 		'card0': '#f00',
 		'card1': '#0f0',
@@ -67,20 +65,4 @@ function getColor(str) {
 		'card4': '#f0f',
 		'card5': '#0ff',
   }[str];
-}
-
-function shuffleArray(array) {
-  // Create a copy of the original array to avoid modifying it directly
-  const shuffled = [...array];
-  
-  // Fisher-Yates shuffle algorithm
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    // Generate a random index from 0 to i
-    const j = Math.floor(Math.random() * (i + 1));
-    
-    // Swap elements at indices i and j
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  
-  return shuffled;
 }
