@@ -20,12 +20,10 @@ function drawBoxes() {
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
-	for (x = 0; x < 4; x++) {
-		for (y = 0; y < 3; y++) {
+	for (x = 0; x < SIZE; x++) {
 			p = pieces[0]
 			color = getColor('card' + p)
-			drawBox(color, x, y)
-		}
+			drawBox(color, x, 0)
 	}
 }
 
