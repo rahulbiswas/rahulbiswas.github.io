@@ -2,12 +2,10 @@ SIZE = 5
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
-PAIRS = 6
 pieces = []
 hidden = []
 for (i = 0; i < SIZE; i++) {
 	pieces.push(0)
-	hidden.push(true)
 }
 pieces = shuffleArray(pieces);
 console.log(pieces)
