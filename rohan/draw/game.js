@@ -1,9 +1,10 @@
-SIZE = 5
+WIDTH = 6
+HEIGHT = 5
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 pieces = []
-for (i = 0; i < SIZE; i++) {
+for (i = 0; i < WIDTH*HEIGHT; i++) {
 	pieces.push(false)
 }
 console.log(pieces)
@@ -11,7 +12,8 @@ drawBoxes();
 
 function drawBox(color, x, y) {
 	ctx.fillStyle = color;
-	ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
+	SIZE = Math.max(WIDTH, HEIGHT)
+	ctx.fillRect(20 + x * 870 / SIZE, 20 + y * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
 }
 
 function drawBoxes() {
@@ -19,15 +21,13 @@ function drawBoxes() {
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
-	for (x = 0; x < SIZE; x++) {
+	for (x = 0; x < WIDTH; x++) {
 		p = pieces[x]
-		if (p === false) {
-			color = getColor('black')
-		}
+		color = getColor('black')
 		if (p === true) {
 			color = getColor('green')
-			drawBox(color, x, 0)
 		}
+		drawBox(color, x, 0)
 	}
 }
 
@@ -39,17 +39,18 @@ canvas.addEventListener('click', function(event) {
 
 	console.log('Click coordinates:', px, py);
 
-	x = Math.floor((py - 20) * SIZE / 870);
+	SIZE = Math.max(WIDTH, HEIGHT)
+	y = Math.floor((py - 20) * SIZE / 870);
 
-	if ((x < 0) || (x >= SIZE)) {
+	if ((y < 0) || (y >= HEIGHT)) {
 		return
 	}
 
-	oldValue = pieces[x]
+	oldValue = pieces[y]
 	newValue = !oldValue
-	pieces[x] = newValue
+	pieces[y] = newValue
 
-	console.log('Click coordinates:', x);
+	console.log('Click coordinates:', y);
 	console.log(pieces)
 
 	drawBoxes()
