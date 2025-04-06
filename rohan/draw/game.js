@@ -1,5 +1,5 @@
-WIDTH = 20
-HEIGHT = 20
+WIDTH = 4
+HEIGHT = 3
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
@@ -7,6 +7,7 @@ pieces = []
 for (i = 0; i < WIDTH*HEIGHT; i++) {
 	pieces.push(false)
 }
+stringToPieces('{"pieces":[true,false,true,false,false,false,false,false,false,true,false,true],"width":4,"height":3}')
 console.log(pieces)
 drawBoxes();
 
@@ -18,6 +19,20 @@ function drawBox(color, x, y) {
 
 function xyToIndex(x, y) {
 	return HEIGHT * x + y
+}
+
+function piecesToString() {
+	data = {'pieces' : pieces, 'width' : WIDTH, 'height' : HEIGHT}
+	const jsonString = JSON.stringify(data);
+	console.log(jsonString);
+	return jsonString
+}
+
+function stringToPieces(jsonString) {
+	const data = JSON.parse(jsonString);
+	pieces = data.pieces
+	WIDTH = data.width
+	HEIGHT = data.height
 }
 
 function drawBoxes() {
@@ -62,8 +77,7 @@ canvas.addEventListener('click', function(event) {
 	pieces[i] = newValue
 
 	console.log('Click coordinates:', y);
-	console.log(pieces)
-
+	piecesToString()
 	drawBoxes()
 });
 
