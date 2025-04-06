@@ -18,27 +18,27 @@ function drawBoxes() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
-	
+
 	for (x = 0; x < SIZE; x++) {
 		p = pieces[x]
-		if (p === false)	{
+		if (p === false) {
 			color = getColor('black')
-			 }
-			if (p === true) {	
-				color = getColor('green')
-				drawBox(color, x, 0)
+		}
+		if (p === true) {
+			color = getColor('green')
+			drawBox(color, x, 0)
 		}
 	}
 }
 
 canvas.addEventListener('click', function(event) {
-  const rect = canvas.getBoundingClientRect();
-  
-  const px = event.clientX - rect.left;
-  const py = event.clientY - rect.top;
-  
-  console.log('Click coordinates:', px, py);
-	
+	const rect = canvas.getBoundingClientRect();
+
+	const px = event.clientX - rect.left;
+	const py = event.clientY - rect.top;
+
+	console.log('Click coordinates:', px, py);
+
 	x = Math.floor((py - 20) * SIZE / 870);
 
 	if ((x < 0) || (x >= SIZE)) {
@@ -49,16 +49,16 @@ canvas.addEventListener('click', function(event) {
 	newValue = !oldValue
 	pieces[x] = newValue
 
-  console.log('Click coordinates:', x);
+	console.log('Click coordinates:', x);
 	console.log(pieces)
-	
+
 	drawBoxes()
 });
 
 function getColor(str) {
-  return {
+	return {
 		'background': '#00f',
 		'black': '#000',
 		'green': '#0f0',
-  }[str];
+	} [str];
 }
