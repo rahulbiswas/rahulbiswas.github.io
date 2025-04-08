@@ -1,13 +1,14 @@
-const CategorySection = ({category, idx, courseName, hypotheticalAssignments, onAddHypothetical, onUpdateHypothetical, onDeleteHypothetical, droppedAssignment}) => {
+const CategorySection = ({category, idx, courseName, hypotheticalAssignments, onAddHypothetical, onUpdateHypothetical, onDeleteHypothetical, droppedAssignments}) => {
   let assignments = [...category.assignments]
   let allAssignments = [...assignments, ...hypotheticalAssignments]
   
   const activeAssignments = allAssignments.filter(a => 
-    !droppedAssignment || 
-    droppedAssignment.category !== category.name ||
-    a.name !== droppedAssignment.name || 
-    a.score !== droppedAssignment.score || 
-    a.total !== droppedAssignment.total
+    !droppedAssignments.some(dropped => 
+      dropped.category === category.name &&
+      a.name === dropped.name &&
+      a.score === dropped.score &&
+      a.total === dropped.total
+    )
   )
 
   const categoryPercentage = calculateAssignmentPercentage(activeAssignments)
@@ -38,30 +39,36 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
           className: 'ml-4 mt-2',
         },
         [
-          ...assignments.map((assignment, aIdx) =>
-            React.createElement(AssignmentRow, {
+          ...assignments.map((assignment, aIdx) => {
+            const dropIndex = droppedAssignments.findIndex(dropped => 
+              dropped.category === category.name &&
+              assignment.name === dropped.name &&
+              assignment.score === dropped.score &&
+              assignment.total === dropped.total
+            )
+            return React.createElement(AssignmentRow, {
               key: `real-${aIdx}`,
               assignment,
-              isDropped: droppedAssignment && 
-                droppedAssignment.category === category.name &&
-                assignment.name === droppedAssignment.name && 
-                assignment.score === droppedAssignment.score && 
-                assignment.total === droppedAssignment.total
+              isDropped: dropIndex !== -1,
+              dropNumber: dropIndex + 1
             })
-          ),
-          ...hypotheticalAssignments.map((assignment, aIdx) =>
-            React.createElement(HypotheticalAssignmentRow, {
+          }),
+          ...hypotheticalAssignments.map((assignment, aIdx) => {
+            const dropIndex = droppedAssignments.findIndex(dropped => 
+              dropped.category === category.name &&
+              assignment.name === dropped.name &&
+              assignment.score === dropped.score &&
+              assignment.total === dropped.total
+            )
+            return React.createElement(HypotheticalAssignmentRow, {
               key: `hypo-${aIdx}`,
               assignment,
               onUpdate: (updates) => onUpdateHypothetical(aIdx, updates),
               onDelete: () => onDeleteHypothetical(aIdx),
-              isDropped: droppedAssignment && 
-                droppedAssignment.category === category.name &&
-                assignment.name === droppedAssignment.name && 
-                assignment.score === droppedAssignment.score && 
-                assignment.total === droppedAssignment.total
+              isDropped: dropIndex !== -1,
+              dropNumber: dropIndex + 1
             })
-          ),
+          }),
           React.createElement(
             'button',
             {

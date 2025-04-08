@@ -1,4 +1,4 @@
-const HypotheticalAssignmentRow = ({assignment, onUpdate, onDelete, isDropped}) => {
+const HypotheticalAssignmentRow = ({assignment, onUpdate, onDelete, isDropped, dropNumber}) => {
    return React.createElement(
       'div',
       {
@@ -17,7 +17,7 @@ const HypotheticalAssignmentRow = ({assignment, onUpdate, onDelete, isDropped}) 
                   {
                      className: 'ml-2 text-xs text-gray-500 no-underline',
                   },
-                  '(Dropped - Lowest Quiz)'
+                  `(Dropped - Lowest Quiz #${dropNumber})`
                )
             ]
          ),
