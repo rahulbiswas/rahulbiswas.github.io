@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>
-			Rohan's drawing program
-		</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<canvas id="myCanvas" width="900" height="900" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></canvas>
-		<script src="game.js"></script>
-	</body>
+<html>
+<head>
+    <title>Firebase Canvas Grid</title>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-app-compat.min.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-firestore-compat.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Interactive Grid with Firebase</h1>
+    <div id="controls">
+        <button id="saveBtn">Save to Firebase</button>
+        <button id="loadBtn">Load from Firebase</button>
+        <input type="text" id="gridId" placeholder="Grid ID (optional)">
+    </div>
+    <div id="status">Status: Ready</div>
+    <canvas id="myCanvas" width="900" height="900"></canvas>
+
+    <script src="game.js"></script>
+</body>
 </html>
