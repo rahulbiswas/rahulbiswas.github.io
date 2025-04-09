@@ -1,4 +1,4 @@
-const AssignmentRow = ({assignment, isDropped}) => {
+const AssignmentRow = ({assignment, isDropped, dropNumber}) => {
    return React.createElement(
       'div',
       {
@@ -17,7 +17,7 @@ const AssignmentRow = ({assignment, isDropped}) => {
                   {
                      className: 'ml-2 text-xs text-gray-500 no-underline',
                   },
-                  '(Dropped - Lowest Quiz)'
+                  `(Dropped - Lowest Quiz #${dropNumber})`
                )
             ],
          ),
@@ -53,3 +53,5 @@ const AssignmentRow = ({assignment, isDropped}) => {
       ],
    )
 }
+
+window.AssignmentRow = AssignmentRow
