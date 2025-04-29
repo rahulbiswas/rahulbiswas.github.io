@@ -12,9 +12,6 @@ const getNumDrops = (course) => {
   if (course === 'AP Macroeconomics') {
     return 1
   }
-  if (course === 'AP United States History') {
-    return 2
-  }
   return 0
 }
 
