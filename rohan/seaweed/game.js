@@ -1,5 +1,4 @@
-score = 0
-SIZE = 5
+SIZE = 10
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
@@ -24,11 +23,11 @@ function drawBoxes() {
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
-	for (x = 0; x < 4; x++) {
-		for (y = 0; y < 3; y++) {
+	for (x = 0; x < 8; x++) {
+		for (y = 0; y < 7; y++) {
 			q = coordinatesToIndex(x,y)
 			p = pieces[q]
-			color = getColor('card' + p)
+			color = getColor('water')
 			drawBox(color, x, y)
 		}
 	}
@@ -53,13 +52,7 @@ canvas.addEventListener('click', function(event) {
 
 function getColor(str) {
   return {
-	  'blinky': '#9C2C77',
 		'background': '#050A30',
-		'card0': '#f00',
-		'card1': '#0f0',
-		'card2': '#00f',
-		'card3': '#ff0',
-		'card4': '#f0f',
-		'card5': '#0ff',
+		'water': '#00f',
   }[str];
 }
