@@ -5,16 +5,10 @@ const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 PAIRS = 6
 pieces = []
-hidden = []
 for (i = 0; i < PAIRS*2; i++) {
 	pieces.push(i % PAIRS)
-	hidden.push(true)
 }
-pieces = shuffleArray(pieces);
-console.log(pieces)
 drawBoxes();
-
-console.log('Can I keep doing the pacman')
 
 function drawBox(color, x, y) {
 	ctx.fillStyle = color;
@@ -35,29 +29,17 @@ function drawBoxes() {
 			q = coordinatesToIndex(x,y)
 			p = pieces[q]
 			color = getColor('card' + p)
-			isHidden = hidden[q]
-			if (isHidden) {
-				color = getColor('hidden')
-			}
 			drawBox(color, x, y)
 		}
 	}
-
-	ctx.fillStyle = 'white';
-	ctx.font = '24px Arial';
-	ctx.fillText('score ' + score, 0, 20);
 }
 
 canvas.addEventListener('click', function(event) {
-  // Get the canvas position
   const rect = canvas.getBoundingClientRect();
   
-  // Calculate mouse position relative to the canvas
   const px = event.clientX - rect.left;
   const py = event.clientY - rect.top;
-  
-  console.log('Click coordinates:', px, py);
-	
+  	
 	x = Math.floor((py - 35) * SIZE / 870);
 	y = Math.floor((px - 20) * SIZE / 870);
 
@@ -66,13 +48,6 @@ canvas.addEventListener('click', function(event) {
 	}
 
 	q = coordinatesToIndex(x,y)
-	oldValue = hidden[q]
-	newValue = !oldValue
-	hidden[q] = newValue
-
-  console.log('Click coordinates:', x, y);
-	console.log('Hidden: ' + hidden)
-	
 	drawBoxes()
 });
 
@@ -86,22 +61,5 @@ function getColor(str) {
 		'card3': '#ff0',
 		'card4': '#f0f',
 		'card5': '#0ff',
-		'hidden': '#333'
   }[str];
-}
-
-function shuffleArray(array) {
-  // Create a copy of the original array to avoid modifying it directly
-  const shuffled = [...array];
-  
-  // Fisher-Yates shuffle algorithm
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    // Generate a random index from 0 to i
-    const j = Math.floor(Math.random() * (i + 1));
-    
-    // Swap elements at indices i and j
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  
-  return shuffled;
 }
