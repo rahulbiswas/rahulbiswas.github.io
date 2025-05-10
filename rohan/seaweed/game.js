@@ -2,16 +2,72 @@ SIZE = 10
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
-PAIRS = 6
-pieces = []
-for (i = 0; i < PAIRS*2; i++) {
-	pieces.push(i % PAIRS)
-}
+const board = createBoard([{x: 6, y: 6}, {x: 1, y: 1}], [{x: 6, y: 1}, {x: 6, y: 3}])
 drawBoxes();
+
+function createBoard(fishLocations, seaweedLocations) {
+  const board = []
+  const SIDE = 10
+  for (let i = 0; i < SIDE; i++) {
+    const row = []
+    for (let j = 0; j < SIDE; j++) {
+      row.push('x')
+    }
+    board.push(row)
+  }
+  for (fishLocation of fishLocations) {
+    board[fishLocation.x][fishLocation.y] = 'f'
+  }
+  for (seaweedLocation of seaweedLocations) {
+    board[seaweedLocation.x][seaweedLocation.y] = 's'
+  }
+
+  for (fishLocation of fishLocations) {
+    fx = fishLocation.x
+    fy = fishLocation.y
+
+    // left
+    for (y = fy - 1; y >= 0; y--) {
+      c = board[fx][y]
+      if ((c === 's') || (c === 'f')) {
+        break
+      }
+      board[fx][y] = '.'
+    }
+
+    // up
+    for (x = fx - 1; x >= 0; x--) {
+      c = board[x][fy]
+      if ((c === 's') || (c === 'f')) {
+        break
+      }
+      board[x][fy] = '.'
+    }
+
+    // right
+    for (let y = fy + 1; y <= 9; y++) {
+      c = board[fx][y]
+      if ((c === 's') || (c === 'f')) {
+        break
+      }
+      board[fx][y] = '.'
+    }
+
+    // down
+    for (let x = fx + 1; x <= 9; x++) {
+      c = board[x][fy]
+      if ((c === 's') || (c === 'f')) {
+        break
+      }
+      board[x][fy] = '.'
+    }
+  }
+  return board
+}
 
 function drawBox(color, x, y) {
 	ctx.fillStyle = color;
-	ctx.fillRect(20 + y * 870 / SIZE, 35 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
+	ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
 }
 
 function coordinatesToIndex(x, y) {
@@ -23,11 +79,9 @@ function drawBoxes() {
 	ctx.fillStyle = getColor('background');
 	ctx.fillRect(0, 0, 900, 900)
 
-	for (x = 0; x < 8; x++) {
-		for (y = 0; y < 7; y++) {
-			q = coordinatesToIndex(x,y)
-			p = pieces[q]
-			color = getColor('water')
+	for (x = 0; x < SIZE; x++) {
+		for (y = 0; y < SIZE; y++) {
+			color = getColor(board[x][y])
 			drawBox(color, x, y)
 		}
 	}
@@ -53,6 +107,7 @@ canvas.addEventListener('click', function(event) {
 function getColor(str) {
   return {
 		'background': '#050A30',
-		'water': '#00f',
+		'x': '#00f',
+		'.': '#77f'
   }[str];
 }
