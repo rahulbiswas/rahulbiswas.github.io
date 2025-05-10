@@ -3,6 +3,7 @@ SIZE = 10
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const board = createBoard([{x: 6, y: 6}, {x: 1, y: 1}], [{x: 6, y: 1}, {x: 6, y: 3}])
+console.log(board)
 drawBoxes();
 
 function createBoard(fishLocations, seaweedLocations) {
@@ -81,7 +82,8 @@ function drawBoxes() {
 
 	for (x = 0; x < SIZE; x++) {
 		for (y = 0; y < SIZE; y++) {
-			color = getColor(board[x][y])
+			piece = board[x][y]
+			color = getColor(piece)
 			drawBox(color, x, y)
 		}
 	}
@@ -93,21 +95,23 @@ canvas.addEventListener('click', function(event) {
   const px = event.clientX - rect.left;
   const py = event.clientY - rect.top;
   	
-	x = Math.floor((py - 35) * SIZE / 870);
+	x = Math.floor((py - 20) * SIZE / 870);
 	y = Math.floor((px - 20) * SIZE / 870);
 
-	if ((x < 0) || (y < 0) || (x > 3) || (y > 2)) {
+	if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
 		return
 	}
 
-	q = coordinatesToIndex(x,y)
+	console.log('x=' + x + ', y=' + y)
 	drawBoxes()
 });
 
 function getColor(str) {
   return {
-		'background': '#050A30',
-		'x': '#00f',
-		'.': '#77f'
+		'background': '#0D3B66',
+		'x': '#05668D',
+		'.': '#13B6F6',
+		'f': '#E9724C',
+		's': '#3CCD65'
   }[str];
 }
