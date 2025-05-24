@@ -1,0 +1,5 @@
+DONE 1. Make fishLocations variable
+DONE 2. Make seaweedLocations variable
+DONE 3. Call createboard on click and add fish
+4. If seaweed, stop
+5. Kill fish
