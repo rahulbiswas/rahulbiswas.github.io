@@ -1,8 +1,9 @@
 SIZE = 10
-
+fishLocations = [{x: 6, y: 6}, {x: 1, y: 1}, {x: 9, y:9}],
+seaweedLocations = [{x: 6, y: 1}, {x: 6, y: 3}]
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
-const board = createBoard([{x: 6, y: 6}, {x: 1, y: 1}], [{x: 6, y: 1}, {x: 6, y: 3}])
+board = createBoard(fishLocations, seaweedLocations)
 console.log(board)
 drawBoxes();
 
@@ -97,11 +98,16 @@ canvas.addEventListener('click', function(event) {
   	
 	x = Math.floor((py - 20) * SIZE / 870);
 	y = Math.floor((px - 20) * SIZE / 870);
-
+	
 	if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
 		return
 	}
-
+	
+	console.log('fish coming')
+	console.log('prev ' + JSON.stringify(fishLocations, null, 2))
+	fishLocations.push({x: x, y: y})
+	board = createBoard(fishLocations, seaweedLocations)
+	console.log('new  ' + JSON.stringify(fishLocations, null, 2))
 	console.log('x=' + x + ', y=' + y)
 	drawBoxes()
 });
