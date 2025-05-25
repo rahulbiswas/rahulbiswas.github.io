@@ -103,12 +103,17 @@ canvas.addEventListener('click', function(event) {
 		return
 	}
 	
-	console.log('fish coming')
-	console.log('prev ' + JSON.stringify(fishLocations, null, 2))
+  for (seaweedLocation of seaweedLocations) {
+		console.log('seaweed coming ' + JSON.stringify(seaweedLocation, null, 2))
+		if (seaweedLocation.x === x) {
+			if (seaweedLocation.y === y) {
+				console.log('fish do not come')
+				return
+			}
+		}
+	}
 	fishLocations.push({x: x, y: y})
 	board = createBoard(fishLocations, seaweedLocations)
-	console.log('new  ' + JSON.stringify(fishLocations, null, 2))
-	console.log('x=' + x + ', y=' + y)
 	drawBoxes()
 });
 
