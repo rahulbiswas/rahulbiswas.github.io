@@ -1,5 +1,9 @@
 DONE 1. Make fishLocations variable
 DONE 2. Make seaweedLocations variable
 DONE 3. Call createboard on click and add fish
-4. If seaweed, stop
+DONE 4. If seaweed, stop
 5. Kill fish
+6. Random initial seaweed configuration
+7. Min fish tracker
+8. Random button
+9. Random timer
