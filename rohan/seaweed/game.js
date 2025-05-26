@@ -104,15 +104,26 @@ canvas.addEventListener('click', function(event) {
 	}
 	
   for (seaweedLocation of seaweedLocations) {
-		console.log('seaweed coming ' + JSON.stringify(seaweedLocation, null, 2))
 		if (seaweedLocation.x === x) {
 			if (seaweedLocation.y === y) {
-				console.log('fish do not come')
 				return
 			}
 		}
 	}
-	fishLocations.push({x: x, y: y})
+	fishExists = false
+  for (fishLocation of fishLocations) {
+		if (fishLocation.x === x) {
+			if (fishLocation.y === y) {
+				fishExists = true
+			}
+		}
+	}
+		
+	if (fishExists) {
+		fishLocations = fishLocations.filter(fish => !(fish.x === x && fish.y === y));
+	} else {	
+		fishLocations.push({x: x, y: y})
+	}
 	board = createBoard(fishLocations, seaweedLocations)
 	drawBoxes()
 });
