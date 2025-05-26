@@ -1,5 +1,5 @@
 SIZE = 10
-fishLocations = [{x: 6, y: 6}, {x: 1, y: 1}, {x: 9, y:9}],
+fishLocations = [],
 seaweedLocations = [{x: 6, y: 1}, {x: 6, y: 3}]
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
