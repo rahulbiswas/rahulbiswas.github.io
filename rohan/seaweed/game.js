@@ -1,11 +1,24 @@
 SIZE = 10
-fishLocations = [],
-seaweedLocations = [{x: 6, y: 1}, {x: 6, y: 3}]
+NUM_SEAWEEDS = 9
+fishLocations = []
+// seaweedLocations = [
+// 	{x: 0,y:1}, {x: 0,y:0}, {x: 0,y:2}, {x: 0,y:3}, {x: 0,y:4}, {x: 0,y:5}, {x: 0,y:6}, {x: 0,y:7}, {x: 0,y:8},
+// 	{x: 0,y:9}, {x: 1,y:2}, {x: 1,y:3}, {x: 1,y:4}, {x: 1,y:5}, {x: 1,y:6}, {x: 1,y:7}]
+seaweedLocations = growSeaweed()
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 board = createBoard(fishLocations, seaweedLocations)
 console.log(board)
 drawBoxes();
+
+function growSeaweed() {
+	seaweedLocations = []
+	for (let i = 0; i < NUM_SEAWEEDS; i++) {
+		coordinates = {x: Math.floor(Math.random() * SIZE), y:Math.floor(Math.random() * SIZE)} 
+		seaweedLocations.push(coordinates);
+	}
+	return seaweedLocations	
+}
 
 function createBoard(fishLocations, seaweedLocations) {
   const board = []
