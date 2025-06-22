@@ -1,11 +1,23 @@
 SIZE = 10
-fishLocations = [],
-seaweedLocations = [{x: 6, y: 1}, {x: 6, y: 3}]
+fishLocations = []
+seaweedLocations = createSeaweeds()
+minFish = -1
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 board = createBoard(fishLocations, seaweedLocations)
 console.log(board)
 drawBoxes();
+
+function createSeaweeds() {
+	seaweedLocations = []
+	numSeaweeds = 1 + Math.floor(Math.random() * 19);
+	for (let seaweedIndex = 0; seaweedIndex < numSeaweeds; seaweedIndex++) {
+		seaweedX = Math.floor(Math.random() * 9);
+		seaweedY = Math.floor(Math.random() * 9);
+		seaweedLocations.push({x:seaweedX, y:seaweedY})
+	}
+	return seaweedLocations
+}
 
 function createBoard(fishLocations, seaweedLocations) {
   const board = []
@@ -64,6 +76,20 @@ function createBoard(fishLocations, seaweedLocations) {
       board[x][fy] = '.'
     }
   }
+	
+	isSolved = true
+	for (let x = 0; x < SIZE; x++) {
+		for (let y = 0; y < SIZE; y++) {
+		 	if (board[x][y] === 'x') {
+				isSolved = false
+		 	}
+	  }
+	}
+	if (isSolved) {
+		if ((fishLocations.length < minFish) || (minFish == -1)) {
+			minFish = fishLocations.length
+		}
+	}	
   return board
 }
 
@@ -88,6 +114,11 @@ function drawBoxes() {
 			drawBox(color, x, y)
 		}
 	}
+	
+	ctx.fillStyle = "black";
+  ctx.font = "24px Arial";
+  ctx.textAlign = "right";
+  ctx.fillText(minFish, 950, 30);  // 880 is 20px from right edge of 900px canvas
 }
 
 canvas.addEventListener('click', function(event) {
