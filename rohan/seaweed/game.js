@@ -2,6 +2,7 @@ import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish }
 
 const urlParams = new URLSearchParams(window.location.search);
 const mcmcIterations = parseInt(urlParams.get('iterations')) || 500000;
+const numGames = parseInt(urlParams.get('games')) || 100;
 
 let fishLocations = []
 let seaweedLocations = createSeaweeds()
@@ -41,14 +42,13 @@ mcmcWorker.onmessage = function(e) {
     } else if (e.data.type === 'complete') {
         savedConfigs.push({
             seaweedLocations: seaweedLocations,
-            fishLocations: e.data.fishLocations,
-            minFish: e.data.score,
-            timestamp: new Date().toISOString()
+            minFish: e.data.score
         });
         
         currentConfig++;
-        if (currentConfig < 100) {
+        if (currentConfig < numGames) {
             seaweedLocations = createSeaweeds();
+            minFish = -1;
             mcmcWorker.postMessage({
                 type: 'start',
                 seaweedLocations: seaweedLocations,
@@ -81,6 +81,7 @@ function mcmcButtonClick() {
 function bookButtonClick() {
     savedConfigs = [];
     currentConfig = 0;
+    minFish = -1;
     seaweedLocations = createSeaweeds();
     mcmcWorker.postMessage({
         type: 'start',
