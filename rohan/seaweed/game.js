@@ -9,6 +9,52 @@ console.log(board)
 iteration = -1
 drawBoxes();
 
+function countUnseen(board) {
+    let count = 0;
+    for (let x = 0; x < SIZE; x++) {
+        for (let y = 0; y < SIZE; y++) {
+            if (board[x][y] === 'x') count++;
+        }
+    }
+    return count;
+}
+
+function calculateBenefit(x, y) {
+    let before = countUnseen(board);
+    let tempFishLocations = [...fishLocations, {x: x, y: y}];
+    let newBoard = createBoard(tempFishLocations, seaweedLocations);
+    let after = countUnseen(newBoard);
+    return before - after;
+}
+
+async function greedyButtonClick() {
+    fishLocations = [];
+    board = createBoard(fishLocations, seaweedLocations);
+    
+    while (countUnseen(board) > 0) {
+        let bestX = -1, bestY = -1, maxBenefit = -1;
+        
+        for (let x = 0; x < SIZE; x++) {
+            for (let y = 0; y < SIZE; y++) {
+                if (board[x][y] !== 'x') continue;
+                let benefit = calculateBenefit(x, y);
+                if (benefit > maxBenefit) {
+                    maxBenefit = benefit;
+                    bestX = x;
+                    bestY = y;
+                }
+            }
+        }
+        
+        if (bestX === -1) break;
+        
+        fishLocations.push({x: bestX, y: bestY});
+        board = createBoard(fishLocations, seaweedLocations);
+        drawBoxes();
+        await sleep(1000);
+    }
+}
+
 function createSeaweeds() {
 	seaweedLocations = []
 	numSeaweeds = 1 + Math.floor(Math.random() * 19);
@@ -119,8 +165,8 @@ function drawBoxes() {
 	ctx.fillStyle = "black";
   ctx.font = "24px Arial";
   ctx.textAlign = "right";
-  ctx.fillText(minFish, 950, 30);  // 880 is 20px from right edge of 900px canvas
-  ctx.fillText(iteration, 950, 60);  // 880 is 20px from right edge of 900px canvas
+  ctx.fillText(minFish, 950, 30);
+  ctx.fillText(iteration, 950, 60);
 }
 
 canvas.addEventListener('click', function(event) {
