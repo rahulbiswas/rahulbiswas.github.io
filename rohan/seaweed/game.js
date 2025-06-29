@@ -9,6 +9,23 @@ console.log(board)
 iteration = -1
 drawBoxes();
 
+console.log('Creating MCMC worker');
+const mcmcWorker = new Worker('mcmc-worker.js');
+
+mcmcWorker.onmessage = function(e) {
+    console.log('Received message from worker:', e.data);
+    if (e.data.type === 'progress') {
+        iteration = e.data.iteration;
+        drawBoxes();
+    } else if (e.data.type === 'newBest') {
+        console.log('New best solution found:', e.data.score);
+        fishLocations = e.data.fishLocations;
+        board = createBoard(fishLocations, seaweedLocations);
+        drawBoxes();
+        sleep(3000);
+    }
+};
+
 function countUnseen(board) {
     let count = 0;
     for (let x = 0; x < SIZE; x++) {
@@ -19,12 +36,16 @@ function countUnseen(board) {
     return count;
 }
 
-function calculateBenefit(x, y) {
-    let before = countUnseen(board);
-    let tempFishLocations = [...fishLocations, {x: x, y: y}];
-    let newBoard = createBoard(tempFishLocations, seaweedLocations);
-    let after = countUnseen(newBoard);
-    return before - after;
+function isSeaweed(x, y) {
+    return seaweedLocations.some(s => s.x === x && s.y === y);
+}
+
+function mcmcButtonClick() {
+    console.log('Starting MCMC with seaweed locations:', seaweedLocations);
+    mcmcWorker.postMessage({
+        type: 'start',
+        seaweedLocations: seaweedLocations
+    });
 }
 
 async function greedyButtonClick() {
@@ -37,7 +58,13 @@ async function greedyButtonClick() {
         for (let x = 0; x < SIZE; x++) {
             for (let y = 0; y < SIZE; y++) {
                 if (board[x][y] !== 'x') continue;
-                let benefit = calculateBenefit(x, y);
+                
+                let before = countUnseen(board);
+                let tempFishLocations = [...fishLocations, {x: x, y: y}];
+                let tempBoard = createBoard(tempFishLocations, seaweedLocations);
+                let after = countUnseen(tempBoard);
+                let benefit = before - after;
+                
                 if (benefit > maxBenefit) {
                     maxBenefit = benefit;
                     bestX = x;
@@ -51,7 +78,7 @@ async function greedyButtonClick() {
         fishLocations.push({x: bestX, y: bestY});
         board = createBoard(fishLocations, seaweedLocations);
         drawBoxes();
-        await sleep(1000);
+        await sleep(100);
     }
 }
 
@@ -165,8 +192,8 @@ function drawBoxes() {
 	ctx.fillStyle = "black";
   ctx.font = "24px Arial";
   ctx.textAlign = "right";
-  ctx.fillText(minFish, 950, 30);
-  ctx.fillText(iteration, 950, 60);
+  ctx.fillText(minFish, 1080, 30);
+  ctx.fillText(iteration, 1080, 60);
 }
 
 canvas.addEventListener('click', function(event) {
