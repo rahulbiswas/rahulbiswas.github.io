@@ -1,10 +1,10 @@
 import { SIZE, countUnseen, isSeaweed, createBoard } from './board.js';
 
-async function runMCMC(seaweedLocations) {
+async function runMCMC(seaweedLocations, iterations) {
     let bestScore = SIZE * SIZE;
     let bestFishLocations = [];
     
-    for (let trial = 0; trial < 500000; trial++) {
+    for (let trial = 0; trial < iterations; trial++) {
         let fishLocations = [];
         let board = createBoard(fishLocations, seaweedLocations);
         
@@ -35,10 +35,16 @@ async function runMCMC(seaweedLocations) {
             });
         }
     }
+
+    postMessage({
+        type: 'complete',
+        fishLocations: bestFishLocations,
+        score: bestScore
+    });
 }
 
 onmessage = function(e) {
     if (e.data.type === 'start') {
-        runMCMC(e.data.seaweedLocations);
+        runMCMC(e.data.seaweedLocations, e.data.iterations);
     }
 }

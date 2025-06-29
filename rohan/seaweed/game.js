@@ -1,5 +1,8 @@
 import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish } from './board.js';
 
+const urlParams = new URLSearchParams(window.location.search);
+const mcmcIterations = parseInt(urlParams.get('iterations')) || 500000;
+
 let fishLocations = []
 let seaweedLocations = createSeaweeds()
 let minFish = -1
@@ -8,6 +11,8 @@ const ctx = canvas.getContext('2d');
 let board = createBoard(fishLocations, seaweedLocations)
 console.log(board)
 let iteration = -1
+let savedConfigs = [];
+let currentConfig = 0;
 drawBoxes();
 
 function checkAndUpdateMinFish(fishLocations) {
@@ -33,14 +38,54 @@ mcmcWorker.onmessage = function(e) {
         checkAndUpdateMinFish(fishLocations);
         drawBoxes();
         sleep(3000);
+    } else if (e.data.type === 'complete') {
+        savedConfigs.push({
+            seaweedLocations: seaweedLocations,
+            fishLocations: e.data.fishLocations,
+            minFish: e.data.score,
+            timestamp: new Date().toISOString()
+        });
+        
+        currentConfig++;
+        if (currentConfig < 100) {
+            seaweedLocations = createSeaweeds();
+            mcmcWorker.postMessage({
+                type: 'start',
+                seaweedLocations: seaweedLocations,
+                iterations: mcmcIterations
+            });
+        } else {
+            downloadConfigs();
+        }
     }
 };
+
+function downloadConfigs() {
+    const blob = new Blob([JSON.stringify(savedConfigs, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'seaweed-configs.json';
+    a.click();
+}
 
 function mcmcButtonClick() {
     console.log('Starting MCMC with seaweed locations:', seaweedLocations);
     mcmcWorker.postMessage({
         type: 'start',
-        seaweedLocations: seaweedLocations
+        seaweedLocations: seaweedLocations,
+        iterations: mcmcIterations
+    });
+}
+
+function bookButtonClick() {
+    savedConfigs = [];
+    currentConfig = 0;
+    seaweedLocations = createSeaweeds();
+    mcmcWorker.postMessage({
+        type: 'start',
+        seaweedLocations: seaweedLocations,
+        iterations: mcmcIterations
     });
 }
 
@@ -100,8 +145,9 @@ function drawBoxes() {
 	ctx.fillStyle = "black";
     ctx.font = "24px Arial";
     ctx.textAlign = "right";
-    ctx.fillText(minFish, 1080, 30);
-    ctx.fillText(iteration, 1080, 60);
+    ctx.fillText("Min Fish: " + minFish, 1120, 30);
+    ctx.fillText("Iteration: " + iteration, 1120, 80);
+    ctx.fillText("Config #: " + currentConfig, 1120, 130);
 }
 
 canvas.addEventListener('click', function(event) {
@@ -154,3 +200,4 @@ async function randomNButtonClick(numIterations) {
 window.greedyButtonClick = greedyButtonClick;
 window.mcmcButtonClick = mcmcButtonClick;
 window.randomNButtonClick = randomNButtonClick;
+window.bookButtonClick = bookButtonClick;
