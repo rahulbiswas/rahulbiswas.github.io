@@ -6,6 +6,7 @@ const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 board = createBoard(fishLocations, seaweedLocations)
 console.log(board)
+iteration = -1
 drawBoxes();
 
 function createSeaweeds() {
@@ -119,6 +120,7 @@ function drawBoxes() {
   ctx.font = "24px Arial";
   ctx.textAlign = "right";
   ctx.fillText(minFish, 950, 30);  // 880 is 20px from right edge of 900px canvas
+  ctx.fillText(iteration, 950, 60);  // 880 is 20px from right edge of 900px canvas
 }
 
 canvas.addEventListener('click', function(event) {
@@ -133,7 +135,11 @@ canvas.addEventListener('click', function(event) {
 	if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
 		return
 	}
-	
+
+	toggleFish(x, y)
+});
+
+function toggleFish(x, y) {
   for (seaweedLocation of seaweedLocations) {
 		if (seaweedLocation.x === x) {
 			if (seaweedLocation.y === y) {
@@ -157,7 +163,7 @@ canvas.addEventListener('click', function(event) {
 	}
 	board = createBoard(fishLocations, seaweedLocations)
 	drawBoxes()
-});
+}
 
 function getColor(str) {
   return {
@@ -167,4 +173,19 @@ function getColor(str) {
 		'f': '#E9724C',
 		's': '#3CCD65'
   }[str];
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function randomNButtonClick(numIterations) {
+  for (n = 0; n < numIterations; n++) {
+    x = Math.floor(Math.random() * 9);
+    y = Math.floor(Math.random() * 9);	
+    console.log('randomButtonClick', n, x, y);
+		iteration = n
+    toggleFish(x, y);
+    await sleep(1000);
+  }
 }
