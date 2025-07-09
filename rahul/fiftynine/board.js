@@ -2,7 +2,6 @@ class ColorBoard {
   constructor(containerId) {
     console.log('Creating new ColorBoard!');
     this.tiles = [];
-    this.emptyPosition = { x: 3, y: 3 };
     this.container = document.getElementById(containerId);
     this.pastelColors = [
       '#FFD1DC',  // pink
@@ -16,6 +15,15 @@ class ColorBoard {
     const style = getComputedStyle(document.documentElement);
     this.tileSize = parseInt(style.getPropertyValue('--tile-size'));
     this.gap = parseInt(style.getPropertyValue('--tile-gap'));
+    const spacePerTile = this.tileSize + this.gap;
+    const containerSize = window.innerHeight * 0.95;
+    this.gridSize = Math.floor(containerSize / spacePerTile);
+    
+    const totalSize = (this.gridSize * this.tileSize) + ((this.gridSize - 1) * this.gap);
+    this.container.style.width = `${totalSize}px`;
+    this.container.style.height = `${totalSize}px`;
+    
+    this.emptyPosition = { x: this.gridSize - 1, y: this.gridSize - 1 };
     
     this.initializeTiles();
     this.render();
@@ -23,8 +31,8 @@ class ColorBoard {
 
   initializeTiles() {
     let colorIndex = 0;
-    for (let y = 0; y < 4; y++) {
-      for (let x = 0; x < 4; x++) {
+    for (let y = 0; y < this.gridSize; y++) {
+      for (let x = 0; x < this.gridSize; x++) {
         if (x === this.emptyPosition.x && y === this.emptyPosition.y) {
           console.log(`Skipping empty position at x:${x}, y:${y}`);
           continue;
