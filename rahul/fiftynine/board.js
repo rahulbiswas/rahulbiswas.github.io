@@ -13,6 +13,10 @@ class ColorBoard {
       '#FFFACD'   // yellow
     ];
     
+    const style = getComputedStyle(document.documentElement);
+    this.tileSize = parseInt(style.getPropertyValue('--tile-size'));
+    this.gap = parseInt(style.getPropertyValue('--tile-gap'));
+    
     this.initializeTiles();
     this.render();
   }
@@ -37,25 +41,21 @@ class ColorBoard {
   }
 
   render() {
-    const tileSize = 88;
-    const gap = 8;
-    const padding = 16;
-    
     if (this.container.children.length === 0) {
       this.tiles.forEach(tile => {
         const tileElement = document.createElement('div');
         tileElement.className = 'tile';
         tileElement.style.backgroundColor = tile.color;
-        tileElement.style.left = `${tile.position.x * (tileSize + gap) + padding}px`;
-        tileElement.style.top = `${tile.position.y * (tileSize + gap) + padding}px`;
+        tileElement.style.left = `${tile.position.x * (this.tileSize + this.gap)}px`;
+        tileElement.style.top = `${tile.position.y * (this.tileSize + this.gap)}px`;
         tileElement.addEventListener('click', () => this.moveTile(tile));
         this.container.appendChild(tileElement);
       });
     } else {
       this.tiles.forEach((tile, index) => {
         const tileElement = this.container.children[index];
-        tileElement.style.left = `${tile.position.x * (tileSize + gap) + padding}px`;
-        tileElement.style.top = `${tile.position.y * (tileSize + gap) + padding}px`;
+        tileElement.style.left = `${tile.position.x * (this.tileSize + this.gap)}px`;
+        tileElement.style.top = `${tile.position.y * (this.tileSize + this.gap)}px`;
       });
     }
     console.log('Rendered board. Empty position:', this.emptyPosition);
