@@ -4,14 +4,14 @@ class ColorBoard {
     this.tiles = [];
     this.emptyPosition = { x: 3, y: 3 };
     this.container = document.getElementById(containerId);
-    this.pastelColors = {
-      pink: '#FFD1DC',
-      mint: '#98FF98',
-      lavender: '#E6E6FA',
-      babyBlue: '#89CFF0',
-      peach: '#FFDAB9',
-      yellow: '#FFFACD'
-    };
+    this.pastelColors = [
+      '#FFD1DC',  // pink
+      '#98FF98',  // mint
+      '#E6E6FA',  // lavender
+      '#89CFF0',  // baby blue
+      '#FFDAB9',  // peach
+      '#FFFACD'   // yellow
+    ];
     
     this.initializeTiles();
     this.render();
@@ -27,7 +27,7 @@ class ColorBoard {
         }
         
         this.tiles.push({
-          color: Object.values(this.pastelColors)[colorIndex % 6],
+          color: this.pastelColors[colorIndex % 6],
           position: { x, y }
         });
         colorIndex++;
