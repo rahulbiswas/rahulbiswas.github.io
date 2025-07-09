@@ -15,6 +15,7 @@ class ColorBoard {
     const style = getComputedStyle(document.documentElement);
     this.tileSize = parseInt(style.getPropertyValue('--tile-size'));
     this.gap = parseInt(style.getPropertyValue('--tile-gap'));
+    this.moveDelay = parseInt(style.getPropertyValue('--move-delay'));
     const spacePerTile = this.tileSize + this.gap;
     
     this.columns = Math.floor((window.innerWidth * 0.95) / spacePerTile);
@@ -25,18 +26,20 @@ class ColorBoard {
     this.container.style.width = `${totalWidth}px`;
     this.container.style.height = `${totalHeight}px`;
     
-    this.emptyPosition = { x: this.columns - 1, y: this.rows - 1 };
-    
     this.initializeTiles();
     this.render();
+    this.startAutoMove();
   }
 
   initializeTiles() {
+    const style = getComputedStyle(document.documentElement);
+    const emptyPercent = parseInt(style.getPropertyValue('--empty-percent'));
+    
     let colorIndex = 0;
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.columns; x++) {
-        if (x === this.emptyPosition.x && y === this.emptyPosition.y) {
-          console.log(`Skipping empty position at x:${x}, y:${y}`);
+        if (Math.random() * 100 < emptyPercent) {
+          console.log(`Skipping position at x:${x}, y:${y}`);
           continue;
         }
         
@@ -68,27 +71,56 @@ class ColorBoard {
         tileElement.style.top = `${tile.position.y * (this.tileSize + this.gap)}px`;
       });
     }
-    console.log('Rendered board. Empty position:', this.emptyPosition);
   }
 
-  isNextToEmpty(position) {
-    const isNext = (
-      (Math.abs(position.x - this.emptyPosition.x) === 1 && position.y === this.emptyPosition.y) ||
-      (Math.abs(position.y - this.emptyPosition.y) === 1 && position.x === this.emptyPosition.x)
+  isPositionEmpty(x, y) {
+    return !this.tiles.some(tile => 
+      tile.position.x === x && tile.position.y === y
     );
-    console.log('Checking if position', position, 'is next to empty:', isNext);
-    return isNext;
+  }
+
+  getEmptyNeighbor(position) {
+    const adjacentPositions = [
+      {x: position.x - 1, y: position.y},
+      {x: position.x + 1, y: position.y},
+      {x: position.x, y: position.y - 1},
+      {x: position.x, y: position.y + 1}
+    ];
+    
+    const validEmptyPositions = adjacentPositions.filter(pos => 
+      pos.x >= 0 && pos.x < this.columns &&
+      pos.y >= 0 && pos.y < this.rows &&
+      this.isPositionEmpty(pos.x, pos.y)
+    );
+    
+    if (validEmptyPositions.length > 0) {
+      return validEmptyPositions[Math.floor(Math.random() * validEmptyPositions.length)];
+    }
+    return null;
   }
 
   moveTile(tile) {
-    console.log('Attempting to move tile:', tile);
-    if (this.isNextToEmpty(tile.position)) {
-      console.log('Moving tile from', tile.position, 'to', this.emptyPosition);
-      const oldPosition = {...tile.position};
-      tile.position = {...this.emptyPosition};
-      this.emptyPosition = oldPosition;
+    const emptyNeighbor = this.getEmptyNeighbor(tile.position);
+    if (emptyNeighbor) {
+      tile.position = {...emptyNeighbor};
       this.render();
     }
+  }
+
+  autoMove() {
+    const movableTiles = this.tiles.filter(tile => this.getEmptyNeighbor(tile.position));
+    if (movableTiles.length > 0) {
+      const randomTile = movableTiles[Math.floor(Math.random() * movableTiles.length)];
+      this.moveTile(randomTile);
+    }
+  }
+
+  startAutoMove() {
+    this.autoMoveInterval = setInterval(() => this.autoMove(), this.moveDelay);
+  }
+
+  stopAutoMove() {
+    clearInterval(this.autoMoveInterval);
   }
 }
 
