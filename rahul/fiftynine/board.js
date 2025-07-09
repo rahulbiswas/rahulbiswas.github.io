@@ -16,14 +16,16 @@ class ColorBoard {
     this.tileSize = parseInt(style.getPropertyValue('--tile-size'));
     this.gap = parseInt(style.getPropertyValue('--tile-gap'));
     const spacePerTile = this.tileSize + this.gap;
-    const containerSize = window.innerHeight * 0.95;
-    this.gridSize = Math.floor(containerSize / spacePerTile);
     
-    const totalSize = (this.gridSize * this.tileSize) + ((this.gridSize - 1) * this.gap);
-    this.container.style.width = `${totalSize}px`;
-    this.container.style.height = `${totalSize}px`;
+    this.columns = Math.floor((window.innerWidth * 0.95) / spacePerTile);
+    this.rows = Math.floor((window.innerHeight * 0.95) / spacePerTile);
     
-    this.emptyPosition = { x: this.gridSize - 1, y: this.gridSize - 1 };
+    const totalWidth = (this.columns * this.tileSize) + ((this.columns - 1) * this.gap);
+    const totalHeight = (this.rows * this.tileSize) + ((this.rows - 1) * this.gap);
+    this.container.style.width = `${totalWidth}px`;
+    this.container.style.height = `${totalHeight}px`;
+    
+    this.emptyPosition = { x: this.columns - 1, y: this.rows - 1 };
     
     this.initializeTiles();
     this.render();
@@ -31,8 +33,8 @@ class ColorBoard {
 
   initializeTiles() {
     let colorIndex = 0;
-    for (let y = 0; y < this.gridSize; y++) {
-      for (let x = 0; x < this.gridSize; x++) {
+    for (let y = 0; y < this.rows; y++) {
+      for (let x = 0; x < this.columns; x++) {
         if (x === this.emptyPosition.x && y === this.emptyPosition.y) {
           console.log(`Skipping empty position at x:${x}, y:${y}`);
           continue;
