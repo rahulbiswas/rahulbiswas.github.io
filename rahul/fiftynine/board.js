@@ -12,6 +12,49 @@ class ColorBoard {
       '#FFFACD'   // yellow
     ];
     
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#puzzle-container') && !e.target.closest('#controls')) {
+        this.toggleControls();
+      }
+    });
+
+    this.setupControls();
+    this.initializeBoard();
+  }
+
+  toggleControls() {
+    const controls = document.getElementById('controls');
+    controls.style.display = controls.style.display === 'none' ? 'block' : 'none';
+  }
+
+  setupControls() {
+    const controls = {
+      'tile-size': '--tile-size',
+      'tile-gap': '--tile-gap',
+      'move-delay': '--move-delay',
+      'transition-speed': '--transition-speed',
+      'empty-percent': '--empty-percent'
+    };
+
+    for (const [inputId, cssVar] of Object.entries(controls)) {
+      const input = document.getElementById(inputId);
+      const span = input.nextElementSibling;
+      
+      input.addEventListener('input', () => {
+        const value = input.value;
+        const unit = cssVar.includes('delay') || cssVar.includes('speed') ? 'ms' : 
+                    cssVar.includes('percent') ? '' : 'px';
+        document.documentElement.style.setProperty(cssVar, value + unit);
+        span.textContent = value + unit;
+        
+        if (!cssVar.includes('speed')) {
+          this.resetBoard();
+        }
+      });
+    }
+  }
+
+  initializeBoard() {
     const style = getComputedStyle(document.documentElement);
     this.tileSize = parseInt(style.getPropertyValue('--tile-size'));
     this.gap = parseInt(style.getPropertyValue('--tile-gap'));
@@ -31,6 +74,13 @@ class ColorBoard {
     this.startAutoMove();
   }
 
+  resetBoard() {
+    this.stopAutoMove();
+    this.tiles = [];
+    this.container.innerHTML = '';
+    this.initializeBoard();
+  }
+
   initializeTiles() {
     const style = getComputedStyle(document.documentElement);
     const emptyPercent = parseInt(style.getPropertyValue('--empty-percent'));
@@ -38,6 +88,15 @@ class ColorBoard {
     let colorIndex = 0;
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.columns; x++) {
+        if (x === 0 && y === 0) {
+          this.tiles.push({
+            color: this.pastelColors[colorIndex % 6],
+            position: { x, y }
+          });
+          colorIndex++;
+          continue;
+        }
+        
         if (Math.random() * 100 < emptyPercent) {
           console.log(`Skipping position at x:${x}, y:${y}`);
           continue;
@@ -61,7 +120,6 @@ class ColorBoard {
         tileElement.style.backgroundColor = tile.color;
         tileElement.style.left = `${tile.position.x * (this.tileSize + this.gap)}px`;
         tileElement.style.top = `${tile.position.y * (this.tileSize + this.gap)}px`;
-        tileElement.addEventListener('click', () => this.moveTile(tile));
         this.container.appendChild(tileElement);
       });
     } else {
