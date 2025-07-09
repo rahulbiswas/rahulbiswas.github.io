@@ -1,9 +1,9 @@
 :root {
   --tile-size: 40px;
-  --tile-gap: 14px;
-  --move-delay: 500ms;
-  --transition-speed: 300ms;
-  --empty-percent: 50;
+  --tile-gap: 20px;
+  --move-delay: 100ms;
+  --transition-speed: 100ms;
+  --empty-percent: 20;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #puzzle-container {
@@ -25,7 +26,43 @@ body {
   width: var(--tile-size);
   height: var(--tile-size);
   opacity: 0.9;
-  border-radius: 14px;
+  border-radius: 15px;
   cursor: pointer;
   transition: all var(--transition-speed) ease-in-out;
+}
+
+#controls {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  z-index: 1000;
+  font-weight: 300;
+}
+
+.control {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control input {
+  width: 300px;
+}
+
+.control label {
+  width: 200px;
+  font-weight: 500;
+	font-size: 48px;
+}
+
+.control span {
+  width: 150px;
+  font-weight: 400;
+	font-size: 48px;
 }
