@@ -1,0 +1,85 @@
+class ColorBoard {
+  constructor(containerId) {
+    console.log('Creating new ColorBoard!');
+    this.tiles = [];
+    this.emptyPosition = { x: 3, y: 3 };
+    this.container = document.getElementById(containerId);
+    this.pastelColors = {
+      pink: '#FFD1DC',
+      mint: '#98FF98',
+      lavender: '#E6E6FA',
+      babyBlue: '#89CFF0',
+      peach: '#FFDAB9',
+      yellow: '#FFFACD'
+    };
+    
+    this.initializeTiles();
+    this.render();
+  }
+
+  initializeTiles() {
+    let colorIndex = 0;
+    for (let y = 0; y < 4; y++) {
+      for (let x = 0; x < 4; x++) {
+        if (x === this.emptyPosition.x && y === this.emptyPosition.y) {
+          console.log(`Skipping empty position at x:${x}, y:${y}`);
+          continue;
+        }
+        
+        this.tiles.push({
+          color: Object.values(this.pastelColors)[colorIndex % 6],
+          position: { x, y }
+        });
+        colorIndex++;
+      }
+    }
+    console.log('Initialized tiles:', this.tiles);
+  }
+
+  render() {
+    const tileSize = 88;
+    const gap = 8;
+    const padding = 16;
+    
+    if (this.container.children.length === 0) {
+      this.tiles.forEach(tile => {
+        const tileElement = document.createElement('div');
+        tileElement.className = 'tile';
+        tileElement.style.backgroundColor = tile.color;
+        tileElement.style.left = `${tile.position.x * (tileSize + gap) + padding}px`;
+        tileElement.style.top = `${tile.position.y * (tileSize + gap) + padding}px`;
+        tileElement.addEventListener('click', () => this.moveTile(tile));
+        this.container.appendChild(tileElement);
+      });
+    } else {
+      this.tiles.forEach((tile, index) => {
+        const tileElement = this.container.children[index];
+        tileElement.style.left = `${tile.position.x * (tileSize + gap) + padding}px`;
+        tileElement.style.top = `${tile.position.y * (tileSize + gap) + padding}px`;
+      });
+    }
+    console.log('Rendered board. Empty position:', this.emptyPosition);
+  }
+
+  isNextToEmpty(position) {
+    const isNext = (
+      (Math.abs(position.x - this.emptyPosition.x) === 1 && position.y === this.emptyPosition.y) ||
+      (Math.abs(position.y - this.emptyPosition.y) === 1 && position.x === this.emptyPosition.x)
+    );
+    console.log('Checking if position', position, 'is next to empty:', isNext);
+    return isNext;
+  }
+
+  moveTile(tile) {
+    console.log('Attempting to move tile:', tile);
+    if (this.isNextToEmpty(tile.position)) {
+      console.log('Moving tile from', tile.position, 'to', this.emptyPosition);
+      const oldPosition = {...tile.position};
+      tile.position = {...this.emptyPosition};
+      this.emptyPosition = oldPosition;
+      this.render();
+    }
+  }
+}
+
+const board = new ColorBoard('puzzle-container');
