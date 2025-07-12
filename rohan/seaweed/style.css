@@ -97,3 +97,11 @@ h3 {
 .hidden {
   display: none;
 }
+
+.preview-light {
+  background-color: rgba(19, 182, 246, 0.3);
+}
+
+.preview-fish {
+  background-color: rgba(233, 114, 76, 0.5);
+}

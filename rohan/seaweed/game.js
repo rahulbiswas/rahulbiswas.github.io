@@ -17,6 +17,8 @@ let board;
 let iteration = 0;
 let savedConfigs = [];
 let currentConfig = 0;
+let previewX = -1;
+let previewY = -1;
 
 function celebrateCompletion() {
     document.getElementById('completion-message').classList.remove('hidden');
@@ -179,25 +181,66 @@ async function greedyButtonClick() {
     }
 }
 
-function drawBox(color, x, y) {
+function drawBox(color, x, y, isPreview = false) {
     ctx.fillStyle = color;
-    ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
+    if (isPreview) {
+        ctx.globalAlpha = 0.5;
+    }
+    ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10);
+    ctx.globalAlpha = 1.0;
 }
 
 function drawBoxes() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = getColor('background');
-    ctx.fillRect(0, 0, 900, 900)
+    ctx.fillRect(0, 0, 900, 900);
 
+    // Draw current board
     for (let x = 0; x < SIZE; x++) {
         for (let y = 0; y < SIZE; y++) {
-            let piece = board[x][y]
-            let color = getColor(piece)
-            drawBox(color, x, y)
+            let piece = board[x][y];
+            let color = getColor(piece);
+            drawBox(color, x, y);
         }
     }
+
+    // Draw preview if valid position
+    if (previewX >= 0 && previewX < SIZE && previewY >= 0 && previewY < SIZE) {
+        if (board[previewX][previewY] === 'x' && !isSeaweed(previewX, previewY, seaweedLocations)) {
+            let previewBoard = createBoard([...fishLocations, {x: previewX, y: previewY}], seaweedLocations);
+            for (let x = 0; x < SIZE; x++) {
+                for (let y = 0; y < SIZE; y++) {
+                    if (previewBoard[x][y] === '.' && board[x][y] === 'x') {
+                        drawBox(getColor('.'), x, y, true);
+                    }
+                }
+            }
+            drawBox(getColor('f'), previewX, previewY, true);
+        }
+    }
+    
     updateStatusDisplay();
 }
+
+canvas.addEventListener('mousemove', function(event) {
+    const rect = canvas.getBoundingClientRect();
+    const px = event.clientX - rect.left;
+    const py = event.clientY - rect.top;
+    const x = Math.floor((py - 20) * SIZE / 870);
+    const y = Math.floor((px - 20) * SIZE / 870);
+    
+    if (x !== previewX || y !== previewY) {
+        previewX = x;
+        previewY = y;
+        drawBoxes();
+    }
+});
+
+canvas.addEventListener('mouseleave', function() {
+    previewX = -1;
+    previewY = -1;
+    drawBoxes();
+});
 
 canvas.addEventListener('click', function(event) {
     const rect = canvas.getBoundingClientRect();
@@ -207,7 +250,7 @@ canvas.addEventListener('click', function(event) {
     const y = Math.floor((px - 20) * SIZE / 870);
     
     if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
-        return
+        return;
     }
 
     fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
