@@ -3,37 +3,92 @@ import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish }
 const urlParams = new URLSearchParams(window.location.search);
 const mcmcIterations = parseInt(urlParams.get('iterations')) || 500000;
 const numGames = parseInt(urlParams.get('games')) || 100;
+const creationMode = urlParams.get('mode') === 'create';
 
-let fishLocations = []
-let seaweedLocations = createSeaweeds()
-let minFish = -1
+let puzzleBook = [];
+let currentPuzzleIndex = 0;
+let targetMinFish = -1;
+let fishLocations = [];
+let seaweedLocations = [];
+let minFish = -1;
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
-let board = createBoard(fishLocations, seaweedLocations)
-console.log(board)
-let iteration = -1
+let board;
+let iteration = 0;
 let savedConfigs = [];
 let currentConfig = 0;
-drawBoxes();
+
+function celebrateCompletion() {
+    document.getElementById('completion-message').classList.remove('hidden');
+}
+
+function clearCelebration() {
+    document.getElementById('completion-message').classList.add('hidden');
+}
+
+function updateStatusDisplay() {
+    document.getElementById('puzzleCount').textContent = `${currentPuzzleIndex + 1}/${puzzleBook.length}`;
+    const fishCount = document.getElementById('fishCount');
+    fishCount.textContent = fishLocations.length;
+    
+    if (fishLocations.length === targetMinFish) {
+        fishCount.className = 'count-matched';
+        if (countUnseen(board) === 0) {
+            celebrateCompletion();
+        }
+    } else {
+        fishCount.className = 'count-normal';
+        clearCelebration();
+    }
+
+    if (creationMode) {
+        document.getElementById('minFishCount').textContent = minFish;
+        document.getElementById('iterationCount').textContent = iteration;
+        document.getElementById('targetCount').parentElement.style.display = 'none';
+    } else {
+        document.getElementById('targetCount').textContent = targetMinFish;
+        document.getElementById('creationStats').style.display = 'none';
+    }
+}
+
+fetch('seaweed-configs.json')
+    .then(response => response.json())
+    .then(data => {
+        puzzleBook = data;
+        loadPuzzle(0);
+    });
+
+function loadPuzzle(index) {
+    if (index >= 0 && index < puzzleBook.length) {
+        currentPuzzleIndex = index;
+        seaweedLocations = puzzleBook[index].seaweedLocations;
+        targetMinFish = puzzleBook[index].minFish;
+        fishLocations = [];
+        minFish = -1;
+        board = createBoard(fishLocations, seaweedLocations);
+        clearCelebration();
+        drawBoxes();
+        updateStatusDisplay();
+    }
+}
 
 function checkAndUpdateMinFish(fishLocations) {
     if (countUnseen(board) === 0) {
         if (fishLocations.length < minFish || minFish === -1) {
             minFish = fishLocations.length;
+            updateStatusDisplay();
         }
     }
 }
 
-console.log('Creating MCMC worker');
 const mcmcWorker = new Worker('mcmc-worker.js', { type: 'module' });
 
 mcmcWorker.onmessage = function(e) {
-    console.log('Received message from worker:', e.data);
     if (e.data.type === 'progress') {
         iteration = e.data.iteration;
+        updateStatusDisplay();
         drawBoxes();
     } else if (e.data.type === 'newBest') {
-        console.log('New best solution found:', e.data.score);
         fishLocations = e.data.fishLocations;
         board = createBoard(fishLocations, seaweedLocations);
         checkAndUpdateMinFish(fishLocations);
@@ -70,7 +125,6 @@ function downloadConfigs() {
 }
 
 function mcmcButtonClick() {
-    console.log('Starting MCMC with seaweed locations:', seaweedLocations);
     mcmcWorker.postMessage({
         type: 'start',
         seaweedLocations: seaweedLocations,
@@ -126,43 +180,35 @@ async function greedyButtonClick() {
 }
 
 function drawBox(color, x, y) {
-	ctx.fillStyle = color;
-	ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
+    ctx.fillStyle = color;
+    ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
 }
 
 function drawBoxes() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = getColor('background');
-	ctx.fillRect(0, 0, 900, 900)
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = getColor('background');
+    ctx.fillRect(0, 0, 900, 900)
 
-	for (let x = 0; x < SIZE; x++) {
-		for (let y = 0; y < SIZE; y++) {
-			let piece = board[x][y]
-			let color = getColor(piece)
-			drawBox(color, x, y)
-		}
-	}
-	
-	ctx.fillStyle = "black";
-    ctx.font = "24px Arial";
-    ctx.textAlign = "right";
-    ctx.fillText("Min Fish: " + minFish, 1120, 30);
-    ctx.fillText("Iteration: " + iteration, 1120, 80);
-    ctx.fillText("Config #: " + currentConfig, 1120, 130);
+    for (let x = 0; x < SIZE; x++) {
+        for (let y = 0; y < SIZE; y++) {
+            let piece = board[x][y]
+            let color = getColor(piece)
+            drawBox(color, x, y)
+        }
+    }
+    updateStatusDisplay();
 }
 
 canvas.addEventListener('click', function(event) {
     const rect = canvas.getBoundingClientRect();
-    
     const px = event.clientX - rect.left;
     const py = event.clientY - rect.top;
-    	
-	const x = Math.floor((py - 20) * SIZE / 870);
-	const y = Math.floor((px - 20) * SIZE / 870);
-	
-	if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
-		return
-	}
+    const x = Math.floor((py - 20) * SIZE / 870);
+    const y = Math.floor((px - 20) * SIZE / 870);
+    
+    if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
+        return
+    }
 
     fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
     board = createBoard(fishLocations, seaweedLocations);
@@ -172,11 +218,11 @@ canvas.addEventListener('click', function(event) {
 
 function getColor(str) {
     return {
-		'background': '#0D3B66',
-		'x': '#05668D',
-		'.': '#13B6F6',
-		'f': '#E9724C',
-		's': '#3CCD65'
+        'background': '#0D3B66',
+        'x': '#05668D',
+        '.': '#13B6F6',
+        'f': '#E9724C',
+        's': '#3CCD65'
     }[str];
 }
 
@@ -187,15 +233,27 @@ function sleep(ms) {
 async function randomNButtonClick(numIterations) {
     for (let n = 0; n < numIterations; n++) {
         const x = Math.floor(Math.random() * 9);
-        const y = Math.floor(Math.random() * 9);	
-        console.log('randomButtonClick', n, x, y);
-		iteration = n;
+        const y = Math.floor(Math.random() * 9);    
+        iteration = n;
         fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
         board = createBoard(fishLocations, seaweedLocations);
         checkAndUpdateMinFish(fishLocations);
         drawBoxes();
         await sleep(1000);
     }
+}
+
+if (creationMode) {
+    document.querySelector('.creator-tools').style.display = 'block';
+    document.querySelector('.creation-only').style.display = 'block';
+}
+
+window.prevPuzzle = function() {
+    loadPuzzle(currentPuzzleIndex - 1);
+}
+
+window.nextPuzzle = function() {
+    loadPuzzle(currentPuzzleIndex + 1);
 }
 
 window.greedyButtonClick = greedyButtonClick;

@@ -10,12 +10,27 @@
 	</head>
 	<body>
 		<canvas id="myCanvas" width="1200" height="900" style="rgba(0, 0, 0, 0.2);"></canvas>
-    <div style="border: 20px rgba(0, 0, 0, 0.2)">
-		<button id="greedyButton" onclick="greedyButtonClick()" style="border: 20px">Greedy</button>
-		<button id="mcmcButton" onclick="mcmcButtonClick()" style="border: 20px">MCMC</button>
-		<button id="random100Button" onclick="randomNButtonClick(100)" style="border: 20px">Random 100</button>
-		<button id="bookButton" onclick="bookButtonClick()" style="border: 20px">Book</button>
-		</div>
+        <div class="status-panel">
+            <div class="status-item">
+                <button id="prevButton" onclick="prevPuzzle()">←</button>
+                Puzzle <span id="puzzleCount">1/1</span>
+                <button id="nextButton" onclick="nextPuzzle()">→</button>
+								<br><br>
+                Fish <span id="fishCount" class="count-normal">0</span>/<span id="targetCount" class="count-target">0</span>
+								<br><br>
+                <span id="completion-message" class="hidden">✨ Perfect! ✨</span>
+                <span id="creationStats" class="creation-only">
+                    | Best: <span id="minFishCount">0</span>
+                    | Step: <span id="iterationCount">0</span>
+                </span>
+            </div>
+        </div>
+        <div class="creator-tools">
+            <h3>Creation Mode</h3>
+            <button id="mcmcButton" onclick="mcmcButtonClick()">MCMC</button>
+            <button id="random100Button" onclick="randomNButtonClick(100)">Random 100</button>
+            <button id="bookButton" onclick="bookButtonClick()">Generate Book</button>
+        </div>
 		<script type="module" src="game.js"></script>
 	</body>
 </html>
