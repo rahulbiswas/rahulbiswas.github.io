@@ -70,28 +70,34 @@ function updateLayout() {
     const windowHeight = window.innerHeight;
     console.log('Window dimensions:', { windowWidth, windowHeight });
     
-    const availableWidth = windowWidth - gameBorder;
-    const availableHeight = windowHeight - gameBorder;
-    
     gameContainer.style.width = `${windowWidth}px`;
     gameContainer.style.height = `${windowHeight}px`;
     
-    controlsContainer.style.position = 'absolute';
-    controlsContainer.style.bottom = '0';
-    controlsContainer.style.left = '0';
-    controlsContainer.style.width = `${availableWidth}px`;
-
+    const availableWidth = windowWidth - gameBorder;
+    const availableHeight = windowHeight - gameBorder;
+    
     const totalControlsHeight = controlsHeight + controlsPadding;
     const boardAvailableHeight = availableHeight - totalControlsHeight;
-    const boardSize = Math.min(availableWidth, boardAvailableHeight);
+    const boardSize = Math.min(availableWidth - borderWidth, boardAvailableHeight - borderWidth);
 
-    const leftOffset = (availableWidth - boardSize) / 2 + gameBorder/2;
+    const isWidthConstrained = (availableWidth - borderWidth) < (boardAvailableHeight - borderWidth);
+		console.log('isWidthConstrained ' + isWidthConstrained)
     
     boardContainer.style.position = 'absolute';
-    boardContainer.style.top = `${gameBorder/2}px`;
-    boardContainer.style.left = `${leftOffset}px`;
+    if (isWidthConstrained) {
+        boardContainer.style.left = `0`;
+        boardContainer.style.top = `${(boardAvailableHeight - boardSize - borderWidth) / 2}px`;
+    } else {
+        boardContainer.style.top = '0';
+        boardContainer.style.left = `${(availableWidth - boardSize - borderWidth) / 2 + gameBorder/2}px`;
+    }
     boardContainer.style.width = `${boardSize}px`;
     boardContainer.style.height = `${boardSize}px`;
+    
+    controlsContainer.style.position = 'absolute';
+    controlsContainer.style.bottom = `${gameBorder/2}px`;
+    controlsContainer.style.left = `${gameBorder/2}px`;
+    controlsContainer.style.width = `${availableWidth - borderWidth}px`;
 
     logAllLayout();
 }
