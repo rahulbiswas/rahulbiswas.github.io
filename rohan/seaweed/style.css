@@ -1,6 +1,6 @@
 :root {
   --border-width: 8px;
-  --game-border: 10px;
+  --game-border: 0px;
   --controls-height: 96px;
   --controls-padding: 10px;
   --grid-gap: 2px;
