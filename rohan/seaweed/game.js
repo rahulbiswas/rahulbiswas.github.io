@@ -50,8 +50,8 @@ function updateLayout() {
     const totalControlsHeight = controlsHeight + controlsPadding;
     
     controlsContainer.style.position = 'absolute';
-    controlsContainer.style.bottom = `${gameBorder/2}px`;
-    controlsContainer.style.left = `${gameBorder/2}px`;
+    controlsContainer.style.bottom = '0';
+    controlsContainer.style.left = '0';
     controlsContainer.style.width = `${availableWidth}px`;
     controlsContainer.style.height = `${controlsHeight}px`;
     console.log('Controls container:', {
@@ -68,10 +68,10 @@ function updateLayout() {
         boardSize 
     });
     
-    const leftOffset = (availableWidth - boardSize - borderWidth) / 2 + gameBorder/2;
+    const leftOffset = (availableWidth - boardSize - borderWidth) / 2;
     
     boardContainer.style.position = 'absolute';
-    boardContainer.style.top = `0px`;
+    boardContainer.style.top = '0';
     boardContainer.style.left = `${leftOffset}px`;
     boardContainer.style.width = `${boardSize}px`;
     boardContainer.style.height = `${boardSize}px`;
