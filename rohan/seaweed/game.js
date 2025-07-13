@@ -4,6 +4,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const mcmcIterations = parseInt(urlParams.get('iterations')) || 500000;
 const numGames = parseInt(urlParams.get('games')) || 100;
 const creationMode = urlParams.get('mode') === 'create';
+const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
 let puzzleBook = [];
 let currentPuzzleIndex = 0;
@@ -150,7 +151,7 @@ function drawBoxes() {
         }
     }
 
-    if (previewX >= 0 && previewX < SIZE && previewY >= 0 && previewY < SIZE) {
+    if (!isTouchDevice && previewX >= 0 && previewX < SIZE && previewY >= 0 && previewY < SIZE) {
         if (board[previewX][previewY] === 'x' && !isSeaweed(previewX, previewY, seaweedLocations)) {
             let previewBoard = createBoard([...fishLocations, {x: previewX, y: previewY}], seaweedLocations);
             for (let x = 0; x < SIZE; x++) {
@@ -180,21 +181,23 @@ function getGridPosition(clientX, clientY) {
     return { x, y };
 }
 
-canvas.addEventListener('mousemove', function(event) {
-    const { x, y } = getGridPosition(event.clientX, event.clientY);
-    
-    if (x !== previewX || y !== previewY) {
-        previewX = x;
-        previewY = y;
-        drawBoxes();
-    }
-});
+if (!isTouchDevice) {
+    canvas.addEventListener('mousemove', function(event) {
+        const { x, y } = getGridPosition(event.clientX, event.clientY);
+        
+        if (x !== previewX || y !== previewY) {
+            previewX = x;
+            previewY = y;
+            drawBoxes();
+        }
+    });
 
-canvas.addEventListener('mouseleave', function() {
-    previewX = -1;
-    previewY = -1;
-    drawBoxes();
-});
+    canvas.addEventListener('mouseleave', function() {
+        previewX = -1;
+        previewY = -1;
+        drawBoxes();
+    });
+}
 
 canvas.addEventListener('click', function(event) {
     const { x, y } = getGridPosition(event.clientX, event.clientY);
