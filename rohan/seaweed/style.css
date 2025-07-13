@@ -1,48 +1,66 @@
+:root {
+  --border-width: 8px;
+  --game-border: 10px;
+  --controls-height: 120px;
+  --controls-padding: 10px;
+  --grid-gap: 2px;
+  --cell-border-radius: 2px;
+  --primary-color: #0D3B66;
+  --secondary-color: #05668D;
+  --highlight-color: #13B6F6;
+  --fish-color: #E9724C;
+  --seaweed-color: #3CCD65;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f5f5f5;
-  font-family: Arial;
 }
 
 .game-container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
+  border: var(--game-border) solid red;
+  overflow: hidden;
 }
 
 .board-container {
-  background-color: #0D3B66;
-  border: 8px solid #0D3B66;
+  background-color: var(--primary-color);
+  border: var(--border-width) solid var(--primary-color);
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 2px;
-  padding: 2px;
-  background-color: #0D3B66;
-  aspect-ratio: 1;
+  gap: var(--grid-gap);
+  padding: var(--grid-gap);
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
 }
 
 .grid-cell {
   aspect-ratio: 1;
-  border-radius: 2px;
-  background-color: #05668D;
+  border-radius: var(--cell-border-radius);
+  background-color: var(--secondary-color);
   transition: background-color 0.2s;
 }
 
 .grid-cell.seen {
-  background-color: #13B6F6;
+  background-color: var(--highlight-color);
 }
 
 .grid-cell.fish {
-  background-color: #E9724C;
+  background-color: var(--fish-color);
 }
 
 .grid-cell.seaweed {
-  background-color: #3CCD65;
+  background-color: var(--seaweed-color);
 }
 
 .grid-cell.preview {
@@ -51,7 +69,7 @@ body {
 
 .controls-container {
   background-color: white;
-  padding: 10px;
+  padding: var(--controls-padding);
 }
 
 .status-panel {
@@ -63,7 +81,7 @@ body {
 .status-item {
   font-size: 18px;
   margin: 10px 0;
-  color: #0D3B66;
+  color: var(--primary-color);
   text-align: center;
 }
 
@@ -84,7 +102,7 @@ button {
   margin: 5px;
   border: none;
   border-radius: 5px;
-  background-color: #0D3B66;
+  background-color: var(--primary-color);
   color: white;
   cursor: pointer;
   font-size: 16px;
@@ -92,37 +110,37 @@ button {
 }
 
 button:hover {
-  background-color: #05668D;
+  background-color: var(--secondary-color);
 }
 
 #prevButton, #nextButton {
-  background-color: #13B6F6;
+  background-color: var(--highlight-color);
   padding: 5px 10px;
   font-size: 20px;
   margin: 0 5px;
 }
 
 #prevButton:hover, #nextButton:hover {
-  background-color: #0D3B66;
+  background-color: var(--primary-color);
 }
 
 .count-normal {
-  color: #E9724C;
+  color: var(--fish-color);
   font-weight: bold;
 }
 
 .count-target {
-  color: #3CCD65;
+  color: var(--seaweed-color);
   font-weight: bold;
 }
 
 .count-matched {
-  color: #3CCD65;
+  color: var(--seaweed-color);
   font-weight: bold;
 }
 
 #completion-message {
-  color: #3CCD65;
+  color: var(--seaweed-color);
   font-weight: bold;
   margin-left: 15px;
 }
