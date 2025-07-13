@@ -14,21 +14,17 @@
 				<div class="grid-container"></div>
 			</div>
 			<div class="controls-container">
-				<div class="status-panel">
-					<div class="status-item">
-						<button id="prevButton" onclick="prevPuzzle()">←</button>
-						Puzzle3 <span id="puzzleCount">1/1</span>
-						<button id="nextButton" onclick="nextPuzzle()">→</button>
-						<br><br>
-						Fish <span id="fishCount" class="count-normal">0</span>/<span id="targetCount" class="count-target">0</span>
-						<br><br>
-						<span id="completion-message" class="hidden">✨ Perfect! ✨</span>
-						<span id="creationStats" class="creation-only">
-							| Best: <span id="minFishCount">0</span>
-							| Step: <span id="iterationCount">0</span>
-						</span>
-					</div>
-				</div>
+				<button id="prevButton" onclick="prevPuzzle()">←</button>
+				Puzzle3 <span id="puzzleCount">1/1</span>
+				<button id="nextButton" onclick="nextPuzzle()">→</button>
+				<br><br>
+				Fish <span id="fishCount" class="count-normal">0</span>/<span id="targetCount" class="count-target">0</span>
+				<br><br>
+				<span id="completion-message" class="hidden">✨ Perfect! ✨</span>
+				<span id="creationStats" class="creation-only">
+					| Best: <span id="minFishCount">0</span>
+					| Step: <span id="iterationCount">0</span>
+				</span>
 				<div class="creator-tools">
 					<h3>Creation Mode</h3>
 					<button id="mcmcButton" onclick="mcmcButtonClick()">MCMC</button>

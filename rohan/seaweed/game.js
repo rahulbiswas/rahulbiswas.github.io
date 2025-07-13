@@ -30,6 +30,41 @@ const boardContainer = document.querySelector('.board-container');
 const controlsContainer = document.querySelector('.controls-container');
 const gameContainer = document.querySelector('.game-container');
 
+function logAllLayout() {
+    const elements = {
+        gameContainer: document.querySelector('.game-container'),
+        boardContainer: document.querySelector('.board-container'),
+        gridContainer: document.querySelector('.grid-container'),
+        controlsContainer: document.querySelector('.controls-container')
+    };
+
+    console.log('=== COMPLETE LAYOUT ===');
+    for (const [name, element] of Object.entries(elements)) {
+        const rect = element.getBoundingClientRect();
+        const styles = window.getComputedStyle(element);
+        console.log(`${name}:`, {
+            rect: {
+                width: Math.round(rect.width),
+                height: Math.round(rect.height),
+                top: Math.round(rect.top),
+                left: Math.round(rect.left)
+            },
+            computed: {
+                width: styles.width,
+                height: styles.height,
+                padding: styles.padding,
+                margin: styles.margin,
+                border: styles.border
+            },
+            offset: {
+                width: element.offsetWidth,
+                height: element.offsetHeight
+            }
+        });
+    }
+    console.log('=====================');
+}
+
 function updateLayout() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
@@ -40,47 +75,25 @@ function updateLayout() {
     
     gameContainer.style.width = `${windowWidth}px`;
     gameContainer.style.height = `${windowHeight}px`;
-    console.log('Game container style:', { 
-        width: gameContainer.style.width, 
-        height: gameContainer.style.height,
-        actualWidth: gameContainer.offsetWidth,
-        actualHeight: gameContainer.offsetHeight
-    });
-    
-    const totalControlsHeight = controlsHeight + controlsPadding;
     
     controlsContainer.style.position = 'absolute';
     controlsContainer.style.bottom = '0';
     controlsContainer.style.left = '0';
     controlsContainer.style.width = `${availableWidth}px`;
-    controlsContainer.style.height = `${controlsHeight}px`;
-    console.log('Controls container:', {
-        width: controlsContainer.style.width,
-        height: controlsContainer.style.height,
-        actualWidth: controlsContainer.offsetWidth,
-        actualHeight: controlsContainer.offsetHeight
-    });
-    
+
+    const totalControlsHeight = controlsHeight + controlsPadding;
     const boardAvailableHeight = availableHeight - totalControlsHeight;
-    const boardSize = Math.min(availableWidth, boardAvailableHeight) - borderWidth;
-    console.log('Board calculations:', { 
-        boardAvailableHeight, 
-        boardSize 
-    });
-    
-    const leftOffset = (availableWidth - boardSize - borderWidth) / 2;
+    const boardSize = Math.min(availableWidth, boardAvailableHeight);
+
+    const leftOffset = (availableWidth - boardSize) / 2 + gameBorder/2;
     
     boardContainer.style.position = 'absolute';
-    boardContainer.style.top = '0';
+    boardContainer.style.top = `${gameBorder/2}px`;
     boardContainer.style.left = `${leftOffset}px`;
     boardContainer.style.width = `${boardSize}px`;
     boardContainer.style.height = `${boardSize}px`;
-    console.log('Board container:', {
-        width: boardContainer.style.width,
-        height: boardContainer.style.height,
-        actualWidth: boardContainer.offsetWidth,
-        actualHeight: boardContainer.offsetHeight
-    });
+
+    logAllLayout();
 }
 
 window.addEventListener('resize', updateLayout);
