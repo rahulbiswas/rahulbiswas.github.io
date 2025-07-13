@@ -20,6 +20,27 @@ let previewX = -1;
 let previewY = -1;
 
 const gridContainer = document.querySelector('.grid-container');
+const boardContainer = document.querySelector('.board-container');
+const controlsContainer = document.querySelector('.controls-container');
+
+function updateLayout() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    const controlsHeight = 120;
+    const availableHeight = windowHeight - controlsHeight;
+    
+    const boardSize = Math.min(windowWidth, availableHeight);
+    
+    boardContainer.style.width = `${boardSize}px`;
+    boardContainer.style.height = `${boardSize}px`;
+    boardContainer.style.margin = 'auto';
+    
+    controlsContainer.style.height = `${controlsHeight}px`;
+}
+
+window.addEventListener('resize', updateLayout);
+updateLayout();
 
 function createGrid() {
     gridContainer.innerHTML = '';
