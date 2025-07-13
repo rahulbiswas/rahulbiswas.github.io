@@ -6,6 +6,12 @@ const numGames = parseInt(urlParams.get('games')) || 100;
 const creationMode = urlParams.get('mode') === 'create';
 const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
+const styles = getComputedStyle(document.documentElement);
+const borderWidth = parseInt(styles.getPropertyValue('--border-width')) * 2;
+const gameBorder = parseInt(styles.getPropertyValue('--game-border')) * 2;
+const controlsHeight = parseInt(styles.getPropertyValue('--controls-height'));
+const controlsPadding = parseInt(styles.getPropertyValue('--controls-padding')) * 2;
+
 let puzzleBook = [];
 let currentPuzzleIndex = 0;
 let targetMinFish = -1;
@@ -22,21 +28,59 @@ let previewY = -1;
 const gridContainer = document.querySelector('.grid-container');
 const boardContainer = document.querySelector('.board-container');
 const controlsContainer = document.querySelector('.controls-container');
+const gameContainer = document.querySelector('.game-container');
 
 function updateLayout() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
+    console.log('Window dimensions:', { windowWidth, windowHeight });
     
-    const controlsHeight = 120;
-    const availableHeight = windowHeight - controlsHeight;
+    const availableWidth = windowWidth - gameBorder;
+    const availableHeight = windowHeight - gameBorder;
     
-    const boardSize = Math.min(windowWidth, availableHeight);
+    gameContainer.style.width = `${windowWidth}px`;
+    gameContainer.style.height = `${windowHeight}px`;
+    console.log('Game container style:', { 
+        width: gameContainer.style.width, 
+        height: gameContainer.style.height,
+        actualWidth: gameContainer.offsetWidth,
+        actualHeight: gameContainer.offsetHeight
+    });
     
+    const totalControlsHeight = controlsHeight + controlsPadding;
+    
+    controlsContainer.style.position = 'absolute';
+    controlsContainer.style.bottom = `${gameBorder/2}px`;
+    controlsContainer.style.left = `${gameBorder/2}px`;
+    controlsContainer.style.width = `${availableWidth}px`;
+    controlsContainer.style.height = `${controlsHeight}px`;
+    console.log('Controls container:', {
+        width: controlsContainer.style.width,
+        height: controlsContainer.style.height,
+        actualWidth: controlsContainer.offsetWidth,
+        actualHeight: controlsContainer.offsetHeight
+    });
+    
+    const boardAvailableHeight = availableHeight - totalControlsHeight;
+    const boardSize = Math.min(availableWidth, boardAvailableHeight) - borderWidth;
+    console.log('Board calculations:', { 
+        boardAvailableHeight, 
+        boardSize 
+    });
+    
+    const leftOffset = (availableWidth - boardSize - borderWidth) / 2 + gameBorder/2;
+    
+    boardContainer.style.position = 'absolute';
+    boardContainer.style.top = `0px`;
+    boardContainer.style.left = `${leftOffset}px`;
     boardContainer.style.width = `${boardSize}px`;
     boardContainer.style.height = `${boardSize}px`;
-    boardContainer.style.margin = 'auto';
-    
-    controlsContainer.style.height = `${controlsHeight}px`;
+    console.log('Board container:', {
+        width: boardContainer.style.width,
+        height: boardContainer.style.height,
+        actualWidth: boardContainer.offsetWidth,
+        actualHeight: boardContainer.offsetHeight
+    });
 }
 
 window.addEventListener('resize', updateLayout);
