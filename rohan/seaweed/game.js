@@ -12,14 +12,61 @@ let targetMinFish = -1;
 let fishLocations = [];
 let seaweedLocations = [];
 let minFish = -1;
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
 let board = null;
 let iteration = 0;
 let savedConfigs = [];
 let currentConfig = 0;
 let previewX = -1;
 let previewY = -1;
+
+const gridContainer = document.querySelector('.grid-container');
+
+function createGrid() {
+    gridContainer.innerHTML = '';
+    for (let x = 0; x < SIZE; x++) {
+        for (let y = 0; y < SIZE; y++) {
+            const cell = document.createElement('div');
+            cell.className = 'grid-cell';
+            cell.dataset.x = x;
+            cell.dataset.y = y;
+            gridContainer.appendChild(cell);
+        }
+    }
+}
+
+createGrid();
+
+function updateGrid() {
+    if (!board) return;
+    
+    const cells = gridContainer.children;
+    for (let x = 0; x < SIZE; x++) {
+        for (let y = 0; y < SIZE; y++) {
+            const cell = cells[x * SIZE + y];
+            const piece = board[x][y];
+            
+            cell.className = 'grid-cell';
+            if (piece === '.') cell.classList.add('seen');
+            if (piece === 'f') cell.classList.add('fish');
+            if (piece === 's') cell.classList.add('seaweed');
+        }
+    }
+
+    if (!isTouchDevice && previewX >= 0 && previewX < SIZE && previewY >= 0 && previewY < SIZE) {
+        if (board[previewX][previewY] === 'x' && !isSeaweed(previewX, previewY, seaweedLocations)) {
+            let previewBoard = createBoard([...fishLocations, {x: previewX, y: previewY}], seaweedLocations);
+            for (let x = 0; x < SIZE; x++) {
+                for (let y = 0; y < SIZE; y++) {
+                    const cell = cells[x * SIZE + y];
+                    if (previewBoard[x][y] === '.' && board[x][y] === 'x') {
+                        cell.classList.add('seen', 'preview');
+                    }
+                }
+            }
+            cells[previewX * SIZE + previewY].classList.add('fish', 'preview');
+        }
+    }
+}
 
 window.prevPuzzle = function() {
     loadPuzzle(currentPuzzleIndex - 1);
@@ -33,27 +80,6 @@ window.greedyButtonClick = greedyButtonClick;
 window.mcmcButtonClick = mcmcButtonClick;
 window.randomNButtonClick = randomNButtonClick;
 window.bookButtonClick = bookButtonClick;
-
-function resizeCanvas() {
-    const maxWidth = window.innerWidth * 0.9;
-    const maxHeight = window.innerHeight * 0.7;
-    const aspectRatio = 4/3;
-    
-    let width = maxWidth;
-    let height = width / aspectRatio;
-    
-    if (height > maxHeight) {
-        height = maxHeight;
-        width = height * aspectRatio;
-    }
-    
-    canvas.width = width;
-    canvas.height = height;
-    if (board) drawBoxes();
-}
-
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
 
 function celebrateCompletion() {
     document.getElementById('completion-message').classList.remove('hidden');
@@ -104,109 +130,44 @@ function loadPuzzle(index) {
         minFish = -1;
         board = createBoard(fishLocations, seaweedLocations);
         clearCelebration();
-        drawBoxes();
+        updateGrid();
         updateStatusDisplay();
     }
 }
 
-function getDrawingDimensions() {
-    const gridSize = Math.min(canvas.width, canvas.height) * 0.9;
-    const cellSize = gridSize / SIZE;
-    const offsetX = (canvas.width - gridSize) / 2;
-    const offsetY = (canvas.height - gridSize) / 2;
-    return { gridSize, cellSize, offsetX, offsetY };
-}
-
-function drawBox(color, x, y, isPreview = false) {
-    const { cellSize, offsetX, offsetY } = getDrawingDimensions();
-    const margin = cellSize * 0.05;
-    
-    ctx.fillStyle = color;
-    if (isPreview) {
-        ctx.globalAlpha = 0.5;
-    }
-    ctx.fillRect(
-        offsetX + y * cellSize + margin,
-        offsetY + x * cellSize + margin,
-        cellSize - 2 * margin,
-        cellSize - 2 * margin
-    );
-    ctx.globalAlpha = 1.0;
-}
-
-function drawBoxes() {
-    if (!board) return;
-    
-    const { gridSize, offsetX, offsetY } = getDrawingDimensions();
-    
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = getColor('background');
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    for (let x = 0; x < SIZE; x++) {
-        for (let y = 0; y < SIZE; y++) {
-            let piece = board[x][y];
-            let color = getColor(piece);
-            drawBox(color, x, y);
-        }
-    }
-
-    if (!isTouchDevice && previewX >= 0 && previewX < SIZE && previewY >= 0 && previewY < SIZE) {
-        if (board[previewX][previewY] === 'x' && !isSeaweed(previewX, previewY, seaweedLocations)) {
-            let previewBoard = createBoard([...fishLocations, {x: previewX, y: previewY}], seaweedLocations);
-            for (let x = 0; x < SIZE; x++) {
-                for (let y = 0; y < SIZE; y++) {
-                    if (previewBoard[x][y] === '.' && board[x][y] === 'x') {
-                        drawBox(getColor('.'), x, y, true);
-                    }
-                }
-            }
-            drawBox(getColor('f'), previewX, previewY, true);
-        }
-    }
-    
-    updateStatusDisplay();
-}
-
-function getGridPosition(clientX, clientY) {
-    const rect = canvas.getBoundingClientRect();
-    const { cellSize, offsetX, offsetY } = getDrawingDimensions();
-    
-    const canvasX = (clientX - rect.left) * (canvas.width / rect.width);
-    const canvasY = (clientY - rect.top) * (canvas.height / rect.height);
-    
-    const x = Math.floor((canvasY - offsetY) / cellSize);
-    const y = Math.floor((canvasX - offsetX) / cellSize);
-    
-    return { x, y };
-}
-
 if (!isTouchDevice) {
-    canvas.addEventListener('mousemove', function(event) {
-        const { x, y } = getGridPosition(event.clientX, event.clientY);
+    gridContainer.addEventListener('mousemove', function(event) {
+        if (!event.target.classList.contains('grid-cell')) return;
+        
+        const x = parseInt(event.target.dataset.x);
+        const y = parseInt(event.target.dataset.y);
         
         if (x !== previewX || y !== previewY) {
             previewX = x;
             previewY = y;
-            drawBoxes();
+            updateGrid();
         }
     });
 
-    canvas.addEventListener('mouseleave', function() {
+    gridContainer.addEventListener('mouseleave', function() {
         previewX = -1;
         previewY = -1;
-        drawBoxes();
+        updateGrid();
     });
 }
 
-canvas.addEventListener('click', function(event) {
-    const { x, y } = getGridPosition(event.clientX, event.clientY);
+gridContainer.addEventListener('click', function(event) {
+    if (!event.target.classList.contains('grid-cell')) return;
+    
+    const x = parseInt(event.target.dataset.x);
+    const y = parseInt(event.target.dataset.y);
     
     if (x >= 0 && x < SIZE && y >= 0 && y < SIZE) {
         fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
         board = createBoard(fishLocations, seaweedLocations);
         checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
+        updateGrid();
+        updateStatusDisplay();
     }
 });
 
@@ -225,12 +186,12 @@ mcmcWorker.onmessage = function(e) {
     if (e.data.type === 'progress') {
         iteration = e.data.iteration;
         updateStatusDisplay();
-        drawBoxes();
+        updateGrid();
     } else if (e.data.type === 'newBest') {
         fishLocations = e.data.fishLocations;
         board = createBoard(fishLocations, seaweedLocations);
         checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
+        updateGrid();
         sleep(3000);
     } else if (e.data.type === 'complete') {
         savedConfigs.push({
@@ -260,16 +221,6 @@ function downloadConfigs() {
     a.href = url;
     a.download = 'seaweed-configs.json';
     a.click();
-}
-
-function getColor(str) {
-    return {
-        'background': '#0D3B66',
-        'x': '#05668D',
-        '.': '#13B6F6',
-        'f': '#E9724C',
-        's': '#3CCD65'
-    }[str];
 }
 
 function sleep(ms) {
@@ -311,7 +262,8 @@ async function greedyButtonClick() {
         fishLocations.push({x: bestX, y: bestY});
         board = createBoard(fishLocations, seaweedLocations);
         checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
+        updateGrid();
+        updateStatusDisplay();
         await sleep(100);
     }
 }
@@ -344,7 +296,8 @@ async function randomNButtonClick(numIterations) {
         fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
         board = createBoard(fishLocations, seaweedLocations);
         checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
+        updateGrid();
+        updateStatusDisplay();
         await sleep(1000);
     }
 }
