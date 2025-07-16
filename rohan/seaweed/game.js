@@ -8,7 +8,6 @@ const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 
 
 const styles = getComputedStyle(document.documentElement);
 const borderWidth = parseInt(styles.getPropertyValue('--border-width')) * 2;
-const gameBorder = parseInt(styles.getPropertyValue('--game-border')) * 2;
 const controlsHeight = parseInt(styles.getPropertyValue('--controls-height'));
 const controlsPadding = parseInt(styles.getPropertyValue('--controls-padding')) * 2;
 
@@ -69,35 +68,32 @@ function updateLayout() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     console.log('Window dimensions:', { windowWidth, windowHeight });
-    
+
     gameContainer.style.width = `${windowWidth}px`;
     gameContainer.style.height = `${windowHeight}px`;
     
-    const availableWidth = windowWidth - gameBorder;
-    const availableHeight = windowHeight - gameBorder;
-    
     const totalControlsHeight = controlsHeight + controlsPadding;
-    const boardAvailableHeight = availableHeight - totalControlsHeight;
-    const boardSize = Math.min(availableWidth - borderWidth, boardAvailableHeight - borderWidth);
+    const boardWindowHeight = windowHeight - totalControlsHeight;
+    const boardSize = Math.min(windowWidth - borderWidth, boardWindowHeight - borderWidth);
 
-    const isWidthConstrained = (availableWidth - borderWidth) < (boardAvailableHeight - borderWidth);
+    const isWidthConstrained = (windowWidth - borderWidth) < (boardWindowHeight - borderWidth);
 		console.log('isWidthConstrained ' + isWidthConstrained)
     
     boardContainer.style.position = 'absolute';
     if (isWidthConstrained) {
         boardContainer.style.left = `0`;
-        boardContainer.style.top = `${(boardAvailableHeight - boardSize - borderWidth) / 2}px`;
+        boardContainer.style.top = `${(boardWindowHeight - boardSize - borderWidth) / 2}px`;
     } else {
         boardContainer.style.top = '0';
-        boardContainer.style.left = `${(availableWidth - boardSize - borderWidth) / 2 + gameBorder/2}px`;
+        boardContainer.style.left = `${(windowWidth - boardSize - borderWidth) / 2}px`;
     }
     boardContainer.style.width = `${boardSize}px`;
     boardContainer.style.height = `${boardSize}px`;
     
     controlsContainer.style.position = 'absolute';
-    controlsContainer.style.bottom = `${gameBorder/2}px`;
-    controlsContainer.style.left = `${gameBorder/2}px`;
-    controlsContainer.style.width = `${availableWidth - borderWidth}px`;
+    controlsContainer.style.bottom = `${borderWidth/2}px`;
+    controlsContainer.style.left = `${borderWidth/2}px`;
+    controlsContainer.style.width = `${windowWidth - borderWidth}px`;
 
     logAllLayout();
 }
