@@ -5,11 +5,13 @@
   --controls-padding: 10px;
   --grid-gap: 12px;
   --cell-border-radius: 16px;
-  --primary-color: #0D3B66;
-  --secondary-color: #05668D;
-  --highlight-color: #13B6F6;
-  --fish-color: #E9724C;
-  --seaweed-color: #3CCD65;
+  --primary-color: #1976D2;
+  --secondary-color: #2196F3;
+  --highlight-color: #64B5F6;
+  --fish-color: #FF7043;
+  --seaweed-color: #66BB6A;
+  --container-color: #263238;
+  --text-color: rgba(255, 255, 255, 0.87);
 }
 
 body {
@@ -64,15 +66,15 @@ body {
 }
 
 .grid-cell.preview {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .controls-container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--container-color);
   padding: var(--controls-padding);
   border-radius: 16px;
   font-size: 18px;
-  color: var(--primary-color);
+  color: var(--text-color);
   text-align: center;
   height: var(--controls-height);
   box-sizing: border-box;
@@ -95,8 +97,8 @@ button {
   margin: 5px;
   border: none;
   border-radius: 5px;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: var(--container-color);
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
@@ -140,4 +142,22 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+#puzzleCount {
+  letter-spacing: 2px;  /* Adds nice spacing between all characters */
+  margin: 0 8px;       /* Adds space around the whole counter */
+}
+
+.fish-counter {
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.fish-counter-separator {
+  margin: 0 4px;
+  opacity: 0.87;  /* Material Design text opacity */
 }
