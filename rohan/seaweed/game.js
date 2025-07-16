@@ -76,6 +76,15 @@ function updateLayout() {
     const boardWindowHeight = windowHeight - totalControlsHeight;
     const boardSize = Math.min(windowWidth - borderWidth, boardWindowHeight - borderWidth);
 
+    // Calculate cell size (board size minus gaps, divided by 10 cells)
+    const cellSize = (boardSize - (11 * 2)) / 10;  // 11 gaps (9 between cells + 2 edges)
+
+    // Set dynamic border radius (maybe 15% of cell size?)
+    const dynamicRadius = Math.max(2, Math.round(cellSize * 0.15));
+
+    // Update CSS variable
+    document.documentElement.style.setProperty('--cell-border-radius', dynamicRadius + 'px');
+
     const isWidthConstrained = (windowWidth - borderWidth) < (boardWindowHeight - borderWidth);
 		console.log('isWidthConstrained ' + isWidthConstrained)
     
