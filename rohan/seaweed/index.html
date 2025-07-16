@@ -15,10 +15,21 @@
 			</div>
 			<div class="controls-container">
 				<button id="prevButton" onclick="prevPuzzle()">←</button>
-				Puzzle <span id="puzzleCount">1/1</span>
+				PUZZLE <span id="puzzleCount">1&nbsp/&nbsp1</span>
 				<button id="nextButton" onclick="nextPuzzle()">→</button>
 				<br><br>
-				Fish <span id="fishCount" class="count-normal">0</span>/<span id="targetCount" class="count-target">0</span>
+				FISH
+				<span class="fish-counter">
+					<span id="fishCount" class="count-normal">
+						0
+					</span>
+				</span>
+				<span class="fish-counter-separator">
+					/
+				</span>
+				<span id="targetCount" class="count-target">
+					0
+				</span>
 				<br><br>
 				<span id="completion-message" class="hidden">✨ Perfect! ✨</span>
 				<span id="creationStats" class="creation-only">

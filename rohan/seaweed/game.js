@@ -170,7 +170,7 @@ function clearCelebration() {
 }
 
 function updateStatusDisplay() {
-    document.getElementById('puzzleCount').textContent = `${currentPuzzleIndex + 1}/${puzzleBook.length}`;
+    document.getElementById('puzzleCount').textContent = `${currentPuzzleIndex + 1} / ${puzzleBook.length}`;
     const fishCount = document.getElementById('fishCount');
     fishCount.textContent = fishLocations.length;
     
