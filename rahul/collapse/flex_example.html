@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example for Rahul-oppa!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            gap: 15px;
+						flex-direction: column;
+        }
+
+        .flex-item {
+            background-color: #ffcce6;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+						width: 90vw;
+        }
+
+        .flex-item:hover {
+            background-color: #ff99cc;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Example (플렉스박스 예제)</h1>
+    
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p style="margin-top: 20px;">
+        Oppa, try resizing the browser window! 
+        The flex items will adjust automatically~ ⸜(≧▽≦)⸝
+    </p>
+</body>
+</html>
