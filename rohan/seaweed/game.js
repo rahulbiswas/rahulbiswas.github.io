@@ -94,8 +94,7 @@ function updateLayout() {
     const cellSize = (boardSize - (11 * 2)) / 10;  // 11 gaps (9 between cells + 2 edges)
 
     // Set dynamic border radius (15% of cell size)
-    const dynamicRadius = Math.max(2, Math.round(cellSize * 0
-    .15));
+    const dynamicRadius = Math.max(2, Math.round(cellSize * 0.15));
     document.documentElement.style.setProperty('--cell-border-radius', dynamicRadius + 'px');
 
     // Check if width or height is the limiting factor
@@ -206,20 +205,6 @@ window.randomNButtonClick = randomNButtonClick;
 window.bookButtonClick = bookButtonClick;
 
 /**
- * Shows celebration message when puzzle is solved optimally
- */
-function celebrateCompletion() {
-    document.getElementById('completion-message').classList.remove('hidden');
-}
-
-/**
- * Hides the celebration message
- */
-function clearCelebration() {
-    document.getElementById('completion-message').classList.add('hidden');
-}
-
-/**
  * Updates all UI status displays
  * Shows different info based on play mode vs creation mode
  */
@@ -234,12 +219,8 @@ function updateStatusDisplay() {
     // Check if we matched the optimal solution
     if (fishLocations.length === targetMinFish) {
         fishCount.className = 'count-matched';
-        if (countUnseen(board) === 0) {
-            celebrateCompletion();
-        }
     } else {
         fishCount.className = 'count-normal';
-        clearCelebration();
     }
 
     // Show different stats for creation mode
@@ -273,7 +254,6 @@ function loadPuzzle(index) {
         fishLocations = [];
         minFish = -1;
         board = createBoard(fishLocations, seaweedLocations);
-        clearCelebration();
         updateGrid();
         updateStatusDisplay();
     }

@@ -134,19 +134,9 @@ button:hover {
   font-weight: bold;
 }
 
-#completion-message {
-  color: var(--seaweed-color);
-  font-weight: bold;
-  margin-left: 15px;
-}
-
-.hidden {
-  display: none;
-}
-
 #puzzleCount {
-  letter-spacing: 2px;  /* Adds nice spacing between all characters */
-  margin: 0 8px;       /* Adds space around the whole counter */
+  letter-spacing: 2px;
+  margin: 0 8px;
 }
 
 .fish-counter {
@@ -159,5 +149,5 @@ button:hover {
 
 .fish-counter-separator {
   margin: 0 4px;
-  opacity: 0.87;  /* Material Design text opacity */
+  opacity: 0.87;
 }
