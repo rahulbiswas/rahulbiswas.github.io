@@ -219,8 +219,27 @@ function updateStatusDisplay() {
     // Check if we matched the optimal solution
     if (fishLocations.length === targetMinFish) {
         fishCount.className = 'count-matched';
+        if (countUnseen(board) === 0) {
+            // Hide everything and just show congratulations
+            document.querySelector('.fish-label').style.display = 'none';
+            document.querySelector('.fish-counter').style.display = 'none';
+            document.querySelector('.fish-counter-separator').style.display = 'none';
+            document.getElementById('targetCount').textContent = '🎉 PERFECT !! 🎉';
+            document.getElementById('targetCount').style.display = 'inline';
+        } else {
+            // Show normal display if optimal but not complete
+            document.querySelector('.fish-label').style.display = 'inline';
+            document.querySelector('.fish-counter').style.display = 'inline-block';
+            document.querySelector('.fish-counter-separator').style.display = 'inline';
+            document.getElementById('targetCount').textContent = targetMinFish;
+        }
     } else {
         fishCount.className = 'count-normal';
+        // Show normal display
+        document.querySelector('.fish-label').style.display = 'inline';
+        document.querySelector('.fish-counter').style.display = 'inline-block';
+        document.querySelector('.fish-counter-separator').style.display = 'inline';
+        document.getElementById('targetCount').textContent = targetMinFish;
     }
 
     // Show different stats for creation mode
@@ -229,7 +248,6 @@ function updateStatusDisplay() {
         document.getElementById('iterationCount').textContent = iteration;
         document.getElementById('targetCount').parentElement.style.display = 'none';
     } else {
-        document.getElementById('targetCount').textContent = targetMinFish;
         document.getElementById('creationStats').style.display = 'none';
     }
 }
@@ -254,6 +272,11 @@ function loadPuzzle(index) {
         fishLocations = [];
         minFish = -1;
         board = createBoard(fishLocations, seaweedLocations);
+        // Reset everything when loading new puzzle
+        document.querySelector('.fish-label').style.display = 'inline';
+        document.querySelector('.fish-counter').style.display = 'inline-block';
+        document.querySelector('.fish-counter-separator').style.display = 'inline';
+        document.getElementById('targetCount').textContent = targetMinFish;
         updateGrid();
         updateStatusDisplay();
     }
