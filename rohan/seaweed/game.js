@@ -1,5 +1,6 @@
 import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish } from './board.js';
 import { sleep, downloadConfigs } from './utils.js';
+import { checkAndUpdateMinFish, runGreedyAlgorithm } from './algorithms.js';
 
 // Parse URL parameters for game configuration
 const urlParams = new URLSearchParams(window.location.search);
@@ -202,7 +203,6 @@ window.nextPuzzle = function() {
 // Make functions available globally for onclick handlers
 window.greedyButtonClick = greedyButtonClick;
 window.mcmcButtonClick = mcmcButtonClick;
-window.randomNButtonClick = randomNButtonClick;
 window.bookButtonClick = bookButtonClick;
 
 /**
@@ -316,24 +316,11 @@ gridContainer.addEventListener('click', function(event) {
     if (x >= 0 && x < SIZE && y >= 0 && y < SIZE) {
         fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
         board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
+        minFish = checkAndUpdateMinFish(fishLocations, board, minFish, updateStatusDisplay);
         updateGrid();
         updateStatusDisplay();
     }
 });
-
-/**
- * Checks if current solution is complete and updates best score
- * @param {Array} fishLocations - Current fish placements
- */
-function checkAndUpdateMinFish(fishLocations) {
-    if (countUnseen(board) === 0) {
-        if (fishLocations.length < minFish || minFish === -1) {
-            minFish = fishLocations.length;
-            updateStatusDisplay();
-        }
-    }
-}
 
 // Set up Web Worker for MCMC algorithm
 const mcmcWorker = new Worker('mcmc-worker.js', { type: 'module' });
@@ -349,7 +336,7 @@ mcmcWorker.onmessage = function(e) {
         // New best solution found
         fishLocations = e.data.fishLocations;
         board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
+        minFish = checkAndUpdateMinFish(fishLocations, board, minFish, updateStatusDisplay);
         updateGrid();
         sleep(3000);  // Brief pause to show solution
     } else if (e.data.type === 'complete') {
@@ -382,47 +369,26 @@ if (creationMode) {
 }
 
 /**
- * Greedy algorithm - always places fish that reveals the most cells
- * Good for finding quick solutions but not always optimal
+ * Greedy algorithm button click handler
  */
 async function greedyButtonClick() {
-    fishLocations = [];
-    board = createBoard(fishLocations, seaweedLocations);
+    const result = await runGreedyAlgorithm(
+        [],
+        seaweedLocations,
+        (newFishLocations, newBoard, newMinFish) => {
+            fishLocations = newFishLocations;
+            board = newBoard;
+            minFish = newMinFish;
+            updateGrid();
+            updateStatusDisplay();
+        },
+        100
+    );
     
-    while (countUnseen(board) > 0) {
-        let bestX = -1, bestY = -1, maxBenefit = -1;
-        
-        // Try every empty cell
-        for (let x = 0; x < SIZE; x++) {
-            for (let y = 0; y < SIZE; y++) {
-                if (board[x][y] !== 'x') continue;
-                
-                // Calculate how many new cells this fish would reveal
-                let before = countUnseen(board);
-                let tempFishLocations = [...fishLocations, {x: x, y: y}];
-                let tempBoard = createBoard(tempFishLocations, seaweedLocations);
-                let after = countUnseen(tempBoard);
-                let benefit = before - after;
-                
-                // Track the best position
-                if (benefit > maxBenefit) {
-                    maxBenefit = benefit;
-                    bestX = x;
-                    bestY = y;
-                }
-            }
-        }
-        
-        if (bestX === -1) break;  // No valid positions left
-        
-        // Place fish at best position
-        fishLocations.push({x: bestX, y: bestY});
-        board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
-        updateGrid();
-        updateStatusDisplay();
-        await sleep(100);  // Animation delay
-    }
+    // Update final state
+    fishLocations = result.fishLocations;
+    board = result.board;
+    minFish = result.minFish;
 }
 
 /**
@@ -449,22 +415,4 @@ function bookButtonClick() {
         seaweedLocations: seaweedLocations,
         iterations: mcmcIterations
     });
-}
-
-/**
- * Random placement algorithm for testing
- * @param {number} numIterations - How many random placements to try
- */
-async function randomNButtonClick(numIterations) {
-    for (let n = 0; n < numIterations; n++) {
-        const x = Math.floor(Math.random() * SIZE);
-        const y = Math.floor(Math.random() * SIZE);    
-        iteration = n;
-        fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
-        board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
-        updateGrid();
-        updateStatusDisplay();
-        await sleep(1000);
-    }
 }
