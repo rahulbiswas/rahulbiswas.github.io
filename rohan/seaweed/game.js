@@ -37,45 +37,6 @@ const controlsContainer = document.querySelector('.controls-container');
 const gameContainer = document.querySelector('.game-container');
 
 /**
- * Debug function to log all element layouts
- * Helpful for troubleshooting responsive design issues
- */
-function logAllLayout() {
-    const elements = {
-        gameContainer: document.querySelector('.game-container'),
-        boardContainer: document.querySelector('.board-container'),
-        gridContainer: document.querySelector('.grid-container'),
-        controlsContainer: document.querySelector('.controls-container')
-    };
-
-    console.log('=== COMPLETE LAYOUT ===');
-    for (const [name, element] of Object.entries(elements)) {
-        const rect = element.getBoundingClientRect();
-        const styles = window.getComputedStyle(element);
-        console.log(`${name}:`, {
-            rect: {
-                width: Math.round(rect.width),
-                height: Math.round(rect.height),
-                top: Math.round(rect.top),
-                left: Math.round(rect.left)
-            },
-            computed: {
-                width: styles.width,
-                height: styles.height,
-                padding: styles.padding,
-                margin: styles.margin,
-                border: styles.border
-            },
-            offset: {
-                width: element.offsetWidth,
-                height: element.offsetHeight
-            }
-        });
-    }
-    console.log('=====================');
-}
-
-/**
  * Updates layout to be responsive to window size
  * Centers the game board and adjusts cell sizes dynamically
  */
@@ -121,8 +82,6 @@ function updateLayout() {
     controlsContainer.style.bottom = `${borderWidth/2}px`;
     controlsContainer.style.left = `${borderWidth/2}px`;
     controlsContainer.style.width = `${windowWidth - borderWidth}px`;
-
-    logAllLayout();
 }
 
 // Set up responsive layout
