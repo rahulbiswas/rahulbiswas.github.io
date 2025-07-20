@@ -1,4 +1,5 @@
 import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish } from './board.js';
+import { sleep, downloadConfigs } from './utils.js';
 
 // Parse URL parameters for game configuration
 const urlParams = new URLSearchParams(window.location.search);
@@ -369,30 +370,10 @@ mcmcWorker.onmessage = function(e) {
                 iterations: mcmcIterations
             });
         } else {
-            downloadConfigs();
+            downloadConfigs(savedConfigs);
         }
     }
 };
-
-/**
- * Downloads generated puzzles as JSON file
- */
-function downloadConfigs() {
-    const blob = new Blob([JSON.stringify(savedConfigs, null, 2)], {type: 'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'seaweed-configs.json';
-    a.click();
-}
-
-/**
- * Simple sleep/delay function
- * @param {number} ms - Milliseconds to wait
- */
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 // Show creation tools if in creation mode
 if (creationMode) {
