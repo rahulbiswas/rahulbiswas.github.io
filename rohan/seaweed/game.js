@@ -1,6 +1,7 @@
 import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish } from './board.js';
 import { sleep, downloadConfigs } from './utils.js';
 import { checkAndUpdateMinFish, runGreedyAlgorithm } from './algorithms.js';
+import { loadPuzzle, loadNextPuzzle, loadPrevPuzzle } from './puzzle-manager.js';
 
 // Parse URL parameters for game configuration
 const urlParams = new URLSearchParams(window.location.search);
@@ -191,20 +192,6 @@ function updateGrid() {
     }
 }
 
-// Navigation functions
-window.prevPuzzle = function() {
-    loadPuzzle(currentPuzzleIndex - 1);
-}
-
-window.nextPuzzle = function() {
-    loadPuzzle(currentPuzzleIndex + 1);
-}
-
-// Make functions available globally for onclick handlers
-window.greedyButtonClick = greedyButtonClick;
-window.mcmcButtonClick = mcmcButtonClick;
-window.bookButtonClick = bookButtonClick;
-
 /**
  * Updates all UI status displays
  * Shows different info based on play mode vs creation mode
@@ -253,35 +240,81 @@ function updateStatusDisplay() {
     }
 }
 
+// Navigation functions
+window.prevPuzzle = function() {
+    const gameState = {
+        currentPuzzleIndex,
+        seaweedLocations,
+        fishLocations,
+        minFish,
+        board
+    };
+    
+    const newState = loadPrevPuzzle(puzzleBook, gameState, { updateGrid, updateStatusDisplay });
+    
+    currentPuzzleIndex = newState.currentPuzzleIndex;
+    seaweedLocations = newState.seaweedLocations;
+    targetMinFish = newState.targetMinFish;
+    fishLocations = newState.fishLocations;
+    minFish = newState.minFish;
+    board = newState.board;
+    
+    updateGrid();
+    updateStatusDisplay();
+}
+
+window.nextPuzzle = function() {
+    const gameState = {
+        currentPuzzleIndex,
+        seaweedLocations,
+        fishLocations,
+        minFish,
+        board
+    };
+    
+    const newState = loadNextPuzzle(puzzleBook, gameState, { updateGrid, updateStatusDisplay });
+    
+    currentPuzzleIndex = newState.currentPuzzleIndex;
+    seaweedLocations = newState.seaweedLocations;
+    targetMinFish = newState.targetMinFish;
+    fishLocations = newState.fishLocations;
+    minFish = newState.minFish;
+    board = newState.board;
+    
+    updateGrid();
+    updateStatusDisplay();
+}
+
+// Make functions available globally for onclick handlers
+window.greedyButtonClick = greedyButtonClick;
+window.mcmcButtonClick = mcmcButtonClick;
+window.bookButtonClick = bookButtonClick;
+
 // Load puzzle data from JSON file
 fetch('seaweed-configs.json')
     .then(response => response.json())
     .then(data => {
         puzzleBook = data;
-        loadPuzzle(0);
-    });
-
-/**
- * Loads a specific puzzle by index
- * @param {number} index - Puzzle index to load
- */
-function loadPuzzle(index) {
-    if (index >= 0 && index < puzzleBook.length) {
-        currentPuzzleIndex = index;
-        seaweedLocations = puzzleBook[index].seaweedLocations;
-        targetMinFish = puzzleBook[index].minFish;
-        fishLocations = [];
-        minFish = -1;
-        board = createBoard(fishLocations, seaweedLocations);
-        // Reset everything when loading new puzzle
-        document.querySelector('.fish-label').style.display = 'inline';
-        document.querySelector('.fish-counter').style.display = 'inline-block';
-        document.querySelector('.fish-counter-separator').style.display = 'inline';
-        document.getElementById('targetCount').textContent = targetMinFish;
+        const gameState = {
+            currentPuzzleIndex,
+            seaweedLocations,
+            fishLocations,
+            minFish,
+            board
+        };
+        
+        const newState = loadPuzzle(puzzleBook, 0, gameState, { updateGrid, updateStatusDisplay });
+        
+        currentPuzzleIndex = newState.currentPuzzleIndex;
+        seaweedLocations = newState.seaweedLocations;
+        targetMinFish = newState.targetMinFish;
+        fishLocations = newState.fishLocations;
+        minFish = newState.minFish;
+        board = newState.board;
+        
         updateGrid();
         updateStatusDisplay();
-    }
-}
+    });
 
 // Mouse hover preview (desktop only)
 if (!isTouchDevice) {
