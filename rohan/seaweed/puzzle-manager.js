@@ -1,4 +1,5 @@
 import { createBoard } from './board.js';
+import { isPuzzleSolved } from './utils.js';
 
 /**
  * Loads a specific puzzle by index
@@ -26,6 +27,7 @@ function loadPuzzle(puzzleBook, index, gameState, callbacks) {
         document.querySelector('.fish-counter').style.display = 'inline-block';
         document.querySelector('.fish-counter-separator').style.display = 'inline';
         document.getElementById('targetCount').textContent = newGameState.targetMinFish;
+        document.getElementById('targetCount').style.display = 'inline';
         
         return newGameState;
     }
