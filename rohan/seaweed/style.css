@@ -108,14 +108,14 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
-#prevButton, #nextButton {
+#prevButton, #nextButton, #resetButton {
   background-color: var(--highlight-color);
   padding: 5px 10px;
   font-size: 20px;
   margin: 0 5px;
 }
 
-#prevButton:hover, #nextButton:hover {
+#prevButton:hover, #nextButton:hover, #resetButton:hover {
   background-color: var(--primary-color);
 }
 
