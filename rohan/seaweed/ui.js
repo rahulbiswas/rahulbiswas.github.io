@@ -125,10 +125,10 @@ function updatePuzzleDisplay(currentPuzzleIndex, puzzleBook) {
     const currentDisplay = `${currentPuzzleIndex + 1} / ${totalPuzzles}`;
     const isCurrentSolved = isPuzzleSolved(currentPuzzleIndex);
     const solvedIndicator = isCurrentSolved ? ' ✓' : '';
-    const solvedDisplay = `(${solvedCount} SOLVED)`;
+    const solvedDisplay = `${solvedCount} SOLVED`;
     
     document.getElementById('puzzleCount').innerHTML = 
-        `${currentDisplay}${solvedIndicator} <span style="color: var(--seaweed-color);">${solvedDisplay}</span>`;
+        `${currentDisplay}${solvedIndicator}<p></p><span style="color: var(--seaweed-color);">${solvedDisplay}</span>`;
 }
 
 /**
