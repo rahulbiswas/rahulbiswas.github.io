@@ -1,5 +1,5 @@
 import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish } from './board.js';
-import { sleep, downloadConfigs } from './utils.js';
+import { sleep, downloadConfigs, getSolvedPuzzles, markPuzzleAsSolved, isPuzzleSolved, getSolvedCount } from './utils.js';
 import { checkAndUpdateMinFish, runGreedyAlgorithm } from './algorithms.js';
 import { loadPuzzle, loadNextPuzzle, loadPrevPuzzle } from './puzzle-manager.js';
 
@@ -152,34 +152,50 @@ function updateGrid() {
 }
 
 /**
+ * Updates puzzle counter display with solved count
+ */
+function updatePuzzleDisplay() {
+    const solvedCount = getSolvedCount();
+    const totalPuzzles = puzzleBook.length;
+    const currentDisplay = `${currentPuzzleIndex + 1} / ${totalPuzzles}`;
+    const isCurrentSolved = isPuzzleSolved(currentPuzzleIndex);
+    const solvedIndicator = isCurrentSolved ? ' ✓' : '';
+    const solvedDisplay = `(${solvedCount} SOLVED)`;
+    
+    document.getElementById('puzzleCount').innerHTML = 
+        `${currentDisplay}${solvedIndicator} <span style="color: var(--seaweed-color);">${solvedDisplay}</span>`;
+}
+
+/**
  * Updates all UI status displays
  * Shows different info based on play mode vs creation mode
  */
 function updateStatusDisplay() {
     // Update puzzle counter
-    document.getElementById('puzzleCount').textContent = `${currentPuzzleIndex + 1} / ${puzzleBook.length}`;
+    updatePuzzleDisplay();
     
     // Update fish count with appropriate styling
     const fishCount = document.getElementById('fishCount');
     fishCount.textContent = fishLocations.length;
     
     // Check if we matched the optimal solution
-    if (fishLocations.length === targetMinFish) {
+    if (fishLocations.length === targetMinFish && countUnseen(board) === 0) {
+        markPuzzleAsSolved(currentPuzzleIndex);
         fishCount.className = 'count-matched';
-        if (countUnseen(board) === 0) {
-            // Hide everything and just show congratulations
-            document.querySelector('.fish-label').style.display = 'none';
-            document.querySelector('.fish-counter').style.display = 'none';
-            document.querySelector('.fish-counter-separator').style.display = 'none';
-            document.getElementById('targetCount').textContent = '🎉 PERFECT !! 🎉';
-            document.getElementById('targetCount').style.display = 'inline';
-        } else {
-            // Show normal display if optimal but not complete
-            document.querySelector('.fish-label').style.display = 'inline';
-            document.querySelector('.fish-counter').style.display = 'inline-block';
-            document.querySelector('.fish-counter-separator').style.display = 'inline';
-            document.getElementById('targetCount').textContent = targetMinFish;
-        }
+        // Hide everything and just show congratulations
+        document.querySelector('.fish-label').style.display = 'none';
+        document.querySelector('.fish-counter').style.display = 'none';
+        document.querySelector('.fish-counter-separator').style.display = 'none';
+        document.getElementById('targetCount').textContent = '🎉 SOLVED! 🎉';
+        document.getElementById('targetCount').style.display = 'inline';
+        updatePuzzleDisplay();
+    } else if (fishLocations.length === targetMinFish) {
+        fishCount.className = 'count-matched';
+        // Show normal display if optimal but not complete
+        document.querySelector('.fish-label').style.display = 'inline';
+        document.querySelector('.fish-counter').style.display = 'inline-block';
+        document.querySelector('.fish-counter-separator').style.display = 'inline';
+        document.getElementById('targetCount').textContent = targetMinFish;
     } else {
         fishCount.className = 'count-normal';
         // Show normal display
