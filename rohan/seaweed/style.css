@@ -1,7 +1,7 @@
 :root {
   --border-width: 16px;
   --game-border: 0px;
-  --controls-height: 96px;
+  --controls-height: 120px;
   --controls-padding: 10px;
   --grid-gap: 12px;
   --cell-border-radius: 16px;
