@@ -77,7 +77,7 @@ function createGrid(gridContainer) {
  * Applies appropriate CSS classes based on board state
  * Handles preview rendering for mouse hover
  */
-function updateGrid(gridContainer, board, fishLocations, seaweedLocations, previewX, previewY, isTouchDevice) {
+function updateGrid(gridContainer, board, fishLocations, seaweedLocations, previewX, previewY, isTouchDevice, targetMinFish) {
     if (!board) return;
     
     const cells = gridContainer.children;
@@ -96,6 +96,11 @@ function updateGrid(gridContainer, board, fishLocations, seaweedLocations, previ
 
     // Show preview on hover (desktop only)
     if (!isTouchDevice && previewX >= 0 && previewX < SIZE && previewY >= 0 && previewY < SIZE) {
+        // Check if we've reached the fish limit
+        if (targetMinFish !== -1 && fishLocations.length >= targetMinFish) {
+            return; // Don't show preview if at limit
+        }
+        
         // Only preview on empty cells (not seaweed)
         if (board[previewX][previewY] === 'x' && !isSeaweed(previewX, previewY, seaweedLocations)) {
             // Create temporary board with preview fish
