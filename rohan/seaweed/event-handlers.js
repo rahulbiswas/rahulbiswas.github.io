@@ -20,14 +20,14 @@ function setupGridEventListeners(gridContainer, gameState, isTouchDevice) {
             if (x !== gameState.previewX || y !== gameState.previewY) {
                 gameState.previewX = x;
                 gameState.previewY = y;
-                updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+                updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
             }
         });
 
         gridContainer.addEventListener('mouseleave', function() {
             gameState.previewX = -1;
             gameState.previewY = -1;
-            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
         });
     }
 
@@ -39,10 +39,10 @@ function setupGridEventListeners(gridContainer, gameState, isTouchDevice) {
         const y = parseInt(event.target.dataset.y);
         
         if (x >= 0 && x < SIZE && y >= 0 && y < SIZE) {
-            gameState.fishLocations = toggleFish(x, y, gameState.fishLocations, gameState.seaweedLocations);
+            gameState.fishLocations = toggleFish(x, y, gameState.fishLocations, gameState.seaweedLocations, gameState.targetMinFish);
             gameState.board = createBoard(gameState.fishLocations, gameState.seaweedLocations);
             gameState.minFish = checkAndUpdateMinFish(gameState.fishLocations, gameState.board, gameState.minFish, () => updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved));
-            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
             updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
         }
     });
@@ -70,7 +70,7 @@ function createPrevPuzzleHandler(gameState, gridContainer, isTouchDevice) {
         gameState.minFish = newState.minFish;
         gameState.board = newState.board;
         
-        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
         updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
     };
 }
@@ -94,7 +94,7 @@ function createNextPuzzleHandler(gameState, gridContainer, isTouchDevice) {
         gameState.minFish = newState.minFish;
         gameState.board = newState.board;
         
-        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
         updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
     };
 }
@@ -103,7 +103,7 @@ function createResetPuzzleHandler(gameState, gridContainer, isTouchDevice) {
     return function() {
         gameState.fishLocations = [];
         gameState.board = createBoard(gameState.fishLocations, gameState.seaweedLocations);
-        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
         updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
     };
 }
@@ -120,7 +120,7 @@ function createGreedyButtonHandler(gameState, gridContainer, isTouchDevice) {
                 gameState.fishLocations = newFishLocations;
                 gameState.board = newBoard;
                 gameState.minFish = newMinFish;
-                updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+                updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
                 updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
             },
             100
@@ -166,13 +166,13 @@ function createWorkerMessageHandler(gameState, gridContainer, isTouchDevice, num
             // Update iteration counter
             gameState.iteration = e.data.iteration;
             updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
-            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
         } else if (e.data.type === 'newBest') {
             // New best solution found
             gameState.fishLocations = e.data.fishLocations;
             gameState.board = createBoard(gameState.fishLocations, gameState.seaweedLocations);
             gameState.minFish = checkAndUpdateMinFish(gameState.fishLocations, gameState.board, gameState.minFish, () => updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved));
-            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+            updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice, gameState.targetMinFish);
             sleep(3000);  // Brief pause to show solution
         } else if (e.data.type === 'complete') {
             // MCMC run complete
