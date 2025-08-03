@@ -138,9 +138,8 @@ function updatePuzzleDisplay(currentPuzzleIndex, puzzleBook) {
 
 /**
  * Updates all UI status displays
- * Shows different info based on play mode vs creation mode
  */
-function updateStatusDisplay(currentPuzzleIndex, puzzleBook, fishLocations, targetMinFish, board, minFish, iteration, creationMode, markPuzzleAsSolved) {
+function updateStatusDisplay(currentPuzzleIndex, puzzleBook, fishLocations, targetMinFish, board, markPuzzleAsSolved) {
     // Update puzzle counter
     updatePuzzleDisplay(currentPuzzleIndex, puzzleBook);
     
@@ -152,14 +151,6 @@ function updateStatusDisplay(currentPuzzleIndex, puzzleBook, fishLocations, targ
         updatePuzzleDisplay(currentPuzzleIndex, puzzleBook);
     } else {
         document.getElementById('targetCount').style.display = 'none';
-    }
-
-    // Show different stats for creation mode
-    if (creationMode) {
-        document.getElementById('minFishCount').textContent = minFish;
-        document.getElementById('iterationCount').textContent = iteration;
-    } else {
-        document.getElementById('creationStats').style.display = 'none';
     }
 }
 

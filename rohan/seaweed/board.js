@@ -14,17 +14,6 @@ function isSeaweed(x, y, seaweedLocations) {
     return seaweedLocations.some(s => s.x === x && s.y === y);
 }
 
-function createSeaweeds() {
-    let newSeaweedLocations = [];
-    let numSeaweeds = 1 + Math.floor(Math.random() * 19);
-    for (let seaweedIndex = 0; seaweedIndex < numSeaweeds; seaweedIndex++) {
-        let seaweedX = Math.floor(Math.random() * (SIZE - 1));
-        let seaweedY = Math.floor(Math.random() * (SIZE - 1));
-        newSeaweedLocations.push({x: seaweedX, y: seaweedY});
-    }
-    return newSeaweedLocations;
-}
-
 function createBoard(fishLocations, seaweedLocations) {
     const board = []
     for (let i = 0; i < SIZE; i++) {
@@ -103,4 +92,4 @@ function toggleFish(x, y, fishLocations, seaweedLocations, targetMinFish) {
     }
 }
 
-export { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish };
+export { SIZE, countUnseen, isSeaweed, createBoard, toggleFish };

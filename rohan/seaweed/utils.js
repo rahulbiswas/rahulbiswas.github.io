@@ -7,19 +7,6 @@ function sleep(ms) {
 }
 
 /**
- * Downloads generated puzzles as JSON file
- * @param {Array} configs - Array of puzzle configurations to download
- */
-function downloadConfigs(configs) {
-    const blob = new Blob([JSON.stringify(configs, null, 2)], {type: 'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'seaweed-configs.json';
-    a.click();
-}
-
-/**
  * Get list of solved puzzle indices from localStorage
  * @returns {Array} Array of solved puzzle indices
  */
@@ -56,4 +43,4 @@ function getSolvedCount() {
     return getSolvedPuzzles().length;
 }
 
-export { sleep, downloadConfigs, getSolvedPuzzles, markPuzzleAsSolved, isPuzzleSolved, getSolvedCount };
+export { sleep, getSolvedPuzzles, markPuzzleAsSolved, isPuzzleSolved, getSolvedCount };

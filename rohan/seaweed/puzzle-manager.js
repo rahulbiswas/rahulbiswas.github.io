@@ -16,8 +16,7 @@ function loadPuzzle(puzzleBook, index, gameState, callbacks) {
             currentPuzzleIndex: index,
             seaweedLocations: puzzleBook[index].seaweedLocations,
             targetMinFish: puzzleBook[index].minFish,
-            fishLocations: [],
-            minFish: -1
+            fishLocations: []
         };
         
         newGameState.board = createBoard(newGameState.fishLocations, newGameState.seaweedLocations);
