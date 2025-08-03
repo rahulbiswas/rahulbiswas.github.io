@@ -22,12 +22,9 @@ function loadPuzzle(puzzleBook, index, gameState, callbacks) {
         
         newGameState.board = createBoard(newGameState.fishLocations, newGameState.seaweedLocations);
         
-        // Reset UI elements
-        document.querySelector('.fish-label').style.display = 'inline';
-        document.querySelector('.fish-counter').style.display = 'inline-block';
-        document.querySelector('.fish-counter-separator').style.display = 'inline';
+        // Reset target count display
         document.getElementById('targetCount').textContent = newGameState.targetMinFish;
-        document.getElementById('targetCount').style.display = 'inline';
+        document.getElementById('targetCount').style.display = 'none';
         
         return newGameState;
     }
