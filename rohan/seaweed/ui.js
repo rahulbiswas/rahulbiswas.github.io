@@ -25,8 +25,8 @@ function updateLayout(gameContainer, boardContainer, controlsContainer) {
     const boardWindowHeight = windowHeight - totalControlsHeight;
     const boardSize = Math.min(windowWidth - borderWidth, boardWindowHeight - borderWidth);
 
-    // Calculate cell size (board size minus gaps, divided by 10 cells)
-    const cellSize = (boardSize - (11 * 2)) / 10;  // 11 gaps (9 between cells + 2 edges)
+    // Calculate cell size (board size minus gaps, divided by grid size)
+    const cellSize = (boardSize - ((SIZE + 1) * 2)) / SIZE;
 
     // Set dynamic border radius (15% of cell size)
     const dynamicRadius = Math.max(2, Math.round(cellSize * 0.15));
@@ -56,7 +56,7 @@ function updateLayout(gameContainer, boardContainer, controlsContainer) {
 }
 
 /**
- * Creates the 10x10 grid of cells
+ * Creates the grid of cells
  * Each cell stores its coordinates in data attributes
  */
 function createGrid(gridContainer) {
@@ -144,42 +144,20 @@ function updateStatusDisplay(currentPuzzleIndex, puzzleBook, fishLocations, targ
     // Update puzzle counter
     updatePuzzleDisplay(currentPuzzleIndex, puzzleBook);
     
-    // Update fish count with appropriate styling
-    const fishCount = document.getElementById('fishCount');
-    fishCount.textContent = fishLocations.length;
-    
     // Check if we matched the optimal solution
     if (fishLocations.length === targetMinFish && countUnseen(board) === 0) {
         markPuzzleAsSolved(currentPuzzleIndex);
-        fishCount.className = 'count-matched';
-        // Hide everything and just show congratulations
-        document.querySelector('.fish-label').style.display = 'none';
-        document.querySelector('.fish-counter').style.display = 'none';
-        document.querySelector('.fish-counter-separator').style.display = 'none';
         document.getElementById('targetCount').textContent = '🎉 SOLVED! 🎉';
         document.getElementById('targetCount').style.display = 'inline';
         updatePuzzleDisplay(currentPuzzleIndex, puzzleBook);
-    } else if (fishLocations.length === targetMinFish) {
-        fishCount.className = 'count-matched';
-        // Show normal display if optimal but not complete
-        document.querySelector('.fish-label').style.display = 'inline';
-        document.querySelector('.fish-counter').style.display = 'inline-block';
-        document.querySelector('.fish-counter-separator').style.display = 'inline';
-        document.getElementById('targetCount').textContent = targetMinFish;
     } else {
-        fishCount.className = 'count-normal';
-        // Show normal display
-        document.querySelector('.fish-label').style.display = 'inline';
-        document.querySelector('.fish-counter').style.display = 'inline-block';
-        document.querySelector('.fish-counter-separator').style.display = 'inline';
-        document.getElementById('targetCount').textContent = targetMinFish;
+        document.getElementById('targetCount').style.display = 'none';
     }
 
     // Show different stats for creation mode
     if (creationMode) {
         document.getElementById('minFishCount').textContent = minFish;
         document.getElementById('iterationCount').textContent = iteration;
-        document.getElementById('targetCount').parentElement.style.display = 'none';
     } else {
         document.getElementById('creationStats').style.display = 'none';
     }
