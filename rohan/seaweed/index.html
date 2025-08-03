@@ -2,19 +2,47 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>
-			Seaweed
+			Seaweed (1929)
 		</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<canvas id="myCanvas" width="1200" height="900" style="rgba(0, 0, 0, 0.2);"></canvas>
-    <div style="border: 20px rgba(0, 0, 0, 0.2)">
-		<button id="greedyButton" onclick="greedyButtonClick()" style="border: 20px">Greedy</button>
-		<button id="mcmcButton" onclick="mcmcButtonClick()" style="border: 20px">MCMC</button>
-		<button id="random100Button" onclick="randomNButtonClick(100)" style="border: 20px">Random 100</button>
-		<button id="bookButton" onclick="bookButtonClick()" style="border: 20px">Book</button>
+		<div class="game-container">
+			<div class="board-container">
+				<div class="grid-container"></div>
+			</div>
+			<div class="controls-container">
+				<button id="prevButton" onclick="prevPuzzle()">←</button>
+				<button id="nextButton" onclick="nextPuzzle()">→</button>
+				PUZZLE <span id="puzzleCount">1&nbsp/&nbsp1</span>
+				<button id="resetButton" onclick="resetPuzzle()">R</button>
+				<br><br>
+				<span class="fish-label">FISH</span>
+				<span class="fish-counter">
+					<span id="fishCount" class="count-normal">
+						0
+					</span>
+				</span>
+				<span class="fish-counter-separator">
+					/
+				</span>
+				<span id="targetCount" class="count-target">
+					0
+				</span>
+				<br><br>
+				<span id="creationStats" class="creation-only">
+					| Best: <span id="minFishCount">0</span>
+					| Step: <span id="iterationCount">0</span>
+				</span>
+				<div class="creator-tools">
+					<h3>Creation Mode</h3>
+					<button id="mcmcButton" onclick="mcmcButtonClick()">MCMC</button>
+					<button id="random100Button" onclick="randomNButtonClick(100)">Random 100</button>
+					<button id="bookButton" onclick="bookButtonClick()">Generate Book</button>
+				</div>
+			</div>
 		</div>
 		<script type="module" src="game.js"></script>
 	</body>

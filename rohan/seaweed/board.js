@@ -1,4 +1,4 @@
-const SIZE = 10;
+const SIZE = 7;
 
 function countUnseen(board) {
     let count = 0;

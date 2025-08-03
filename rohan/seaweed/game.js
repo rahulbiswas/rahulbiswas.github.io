@@ -1,204 +1,102 @@
 import { SIZE, countUnseen, isSeaweed, createSeaweeds, createBoard, toggleFish } from './board.js';
+import { sleep, downloadConfigs, getSolvedPuzzles, markPuzzleAsSolved, isPuzzleSolved, getSolvedCount } from './utils.js';
+import { checkAndUpdateMinFish, runGreedyAlgorithm } from './algorithms.js';
+import { loadPuzzle, loadNextPuzzle, loadPrevPuzzle } from './puzzle-manager.js';
+import { updateLayout, createGrid, updateGrid, updatePuzzleDisplay, updateStatusDisplay } from './ui.js';
+import { 
+    setupGridEventListeners, 
+    createPrevPuzzleHandler, 
+    createNextPuzzleHandler, 
+    createResetPuzzleHandler,
+    createGreedyButtonHandler,
+    createMcmcButtonHandler,
+    createBookButtonHandler,
+    createWorkerMessageHandler
+} from './event-handlers.js';
 
+// Parse URL parameters for game configuration
 const urlParams = new URLSearchParams(window.location.search);
-const mcmcIterations = parseInt(urlParams.get('iterations')) || 500000;
-const numGames = parseInt(urlParams.get('games')) || 100;
+const mcmcIterations = parseInt(urlParams.get('iterations')) || 500000;  // Default 500k iterations
+const numGames = parseInt(urlParams.get('games')) || 100;  // For puzzle generation mode
+const creationMode = urlParams.get('mode') === 'create';  // Enable puzzle creation tools
+const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-let fishLocations = []
-let seaweedLocations = createSeaweeds()
-let minFish = -1
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
-let board = createBoard(fishLocations, seaweedLocations)
-console.log(board)
-let iteration = -1
-let savedConfigs = [];
-let currentConfig = 0;
-drawBoxes();
-
-function checkAndUpdateMinFish(fishLocations) {
-    if (countUnseen(board) === 0) {
-        if (fishLocations.length < minFish || minFish === -1) {
-            minFish = fishLocations.length;
-        }
-    }
-}
-
-console.log('Creating MCMC worker');
-const mcmcWorker = new Worker('mcmc-worker.js', { type: 'module' });
-
-mcmcWorker.onmessage = function(e) {
-    console.log('Received message from worker:', e.data);
-    if (e.data.type === 'progress') {
-        iteration = e.data.iteration;
-        drawBoxes();
-    } else if (e.data.type === 'newBest') {
-        console.log('New best solution found:', e.data.score);
-        fishLocations = e.data.fishLocations;
-        board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
-        sleep(3000);
-    } else if (e.data.type === 'complete') {
-        savedConfigs.push({
-            seaweedLocations: seaweedLocations,
-            minFish: e.data.score
-        });
-        
-        currentConfig++;
-        if (currentConfig < numGames) {
-            seaweedLocations = createSeaweeds();
-            minFish = -1;
-            mcmcWorker.postMessage({
-                type: 'start',
-                seaweedLocations: seaweedLocations,
-                iterations: mcmcIterations
-            });
-        } else {
-            downloadConfigs();
-        }
-    }
+// Game state variables
+const gameState = {
+    puzzleBook: [],           // All loaded puzzles
+    currentPuzzleIndex: 0,    // Which puzzle we're on
+    targetMinFish: -1,        // Optimal solution for current puzzle
+    fishLocations: [],        // Current fish placements
+    seaweedLocations: [],     // Current seaweed positions
+    minFish: -1,             // Best solution found (creation mode)
+    board: null,             // Current board state
+    iteration: 0,            // MCMC iteration counter
+    savedConfigs: [],        // Puzzles being generated
+    currentConfig: 0,        // Current puzzle being generated
+    previewX: -1,            // Mouse hover preview coordinates
+    previewY: -1,
+    creationMode: creationMode
 };
 
-function downloadConfigs() {
-    const blob = new Blob([JSON.stringify(savedConfigs, null, 2)], {type: 'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'seaweed-configs.json';
-    a.click();
-}
+// Get DOM elements
+const gridContainer = document.querySelector('.grid-container');
+const boardContainer = document.querySelector('.board-container');
+const controlsContainer = document.querySelector('.controls-container');
+const gameContainer = document.querySelector('.game-container');
 
-function mcmcButtonClick() {
-    console.log('Starting MCMC with seaweed locations:', seaweedLocations);
-    mcmcWorker.postMessage({
-        type: 'start',
-        seaweedLocations: seaweedLocations,
-        iterations: mcmcIterations
+// Set up responsive layout
+window.addEventListener('resize', () => updateLayout(gameContainer, boardContainer, controlsContainer));
+updateLayout(gameContainer, boardContainer, controlsContainer);
+
+createGrid(gridContainer);
+
+// Set up Web Worker for MCMC algorithm
+const mcmcWorker = new Worker('mcmc-worker.js', { type: 'module' });
+
+// Setup event handlers
+setupGridEventListeners(gridContainer, gameState, isTouchDevice);
+
+// Create and assign navigation handlers
+window.prevPuzzle = createPrevPuzzleHandler(gameState, gridContainer, isTouchDevice);
+window.nextPuzzle = createNextPuzzleHandler(gameState, gridContainer, isTouchDevice);
+window.resetPuzzle = createResetPuzzleHandler(gameState, gridContainer, isTouchDevice);
+
+// Create and assign algorithm button handlers
+window.greedyButtonClick = createGreedyButtonHandler(gameState, gridContainer, isTouchDevice);
+window.mcmcButtonClick = createMcmcButtonHandler(gameState, mcmcWorker, mcmcIterations);
+window.bookButtonClick = createBookButtonHandler(gameState, mcmcWorker, mcmcIterations);
+
+// Setup worker message handler
+mcmcWorker.onmessage = createWorkerMessageHandler(gameState, gridContainer, isTouchDevice, numGames, mcmcIterations, mcmcWorker);
+
+// Load puzzle data from JSON file
+fetch('seaweed-configs.json')
+    .then(response => response.json())
+    .then(data => {
+        gameState.puzzleBook = data;
+        const currentGameState = {
+            currentPuzzleIndex: gameState.currentPuzzleIndex,
+            seaweedLocations: gameState.seaweedLocations,
+            fishLocations: gameState.fishLocations,
+            minFish: gameState.minFish,
+            board: gameState.board
+        };
+        
+        const newState = loadPuzzle(gameState.puzzleBook, 0, currentGameState, { updateGrid, updateStatusDisplay });
+        
+        gameState.currentPuzzleIndex = newState.currentPuzzleIndex;
+        gameState.seaweedLocations = newState.seaweedLocations;
+        gameState.targetMinFish = newState.targetMinFish;
+        gameState.fishLocations = newState.fishLocations;
+        gameState.minFish = newState.minFish;
+        gameState.board = newState.board;
+        
+        updateGrid(gridContainer, gameState.board, gameState.fishLocations, gameState.seaweedLocations, gameState.previewX, gameState.previewY, isTouchDevice);
+        updateStatusDisplay(gameState.currentPuzzleIndex, gameState.puzzleBook, gameState.fishLocations, gameState.targetMinFish, gameState.board, gameState.minFish, gameState.iteration, gameState.creationMode, markPuzzleAsSolved);
     });
+
+// Show creation tools if in creation mode
+if (creationMode) {
+    document.querySelector('.creator-tools').style.display = 'block';
+    document.querySelector('.creation-only').style.display = 'block';
 }
-
-function bookButtonClick() {
-    savedConfigs = [];
-    currentConfig = 0;
-    minFish = -1;
-    seaweedLocations = createSeaweeds();
-    mcmcWorker.postMessage({
-        type: 'start',
-        seaweedLocations: seaweedLocations,
-        iterations: mcmcIterations
-    });
-}
-
-async function greedyButtonClick() {
-    fishLocations = [];
-    board = createBoard(fishLocations, seaweedLocations);
-    
-    while (countUnseen(board) > 0) {
-        let bestX = -1, bestY = -1, maxBenefit = -1;
-        
-        for (let x = 0; x < SIZE; x++) {
-            for (let y = 0; y < SIZE; y++) {
-                if (board[x][y] !== 'x') continue;
-                
-                let before = countUnseen(board);
-                let tempFishLocations = [...fishLocations, {x: x, y: y}];
-                let tempBoard = createBoard(tempFishLocations, seaweedLocations);
-                let after = countUnseen(tempBoard);
-                let benefit = before - after;
-                
-                if (benefit > maxBenefit) {
-                    maxBenefit = benefit;
-                    bestX = x;
-                    bestY = y;
-                }
-            }
-        }
-        
-        if (bestX === -1) break;
-        
-        fishLocations.push({x: bestX, y: bestY});
-        board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
-        await sleep(100);
-    }
-}
-
-function drawBox(color, x, y) {
-	ctx.fillStyle = color;
-	ctx.fillRect(20 + y * 870 / SIZE, 20 + x * 870 / SIZE, 870 / SIZE - 10, 870 / SIZE - 10)
-}
-
-function drawBoxes() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = getColor('background');
-	ctx.fillRect(0, 0, 900, 900)
-
-	for (let x = 0; x < SIZE; x++) {
-		for (let y = 0; y < SIZE; y++) {
-			let piece = board[x][y]
-			let color = getColor(piece)
-			drawBox(color, x, y)
-		}
-	}
-	
-	ctx.fillStyle = "black";
-    ctx.font = "24px Arial";
-    ctx.textAlign = "right";
-    ctx.fillText("Min Fish: " + minFish, 1120, 30);
-    ctx.fillText("Iteration: " + iteration, 1120, 80);
-    ctx.fillText("Config #: " + currentConfig, 1120, 130);
-}
-
-canvas.addEventListener('click', function(event) {
-    const rect = canvas.getBoundingClientRect();
-    
-    const px = event.clientX - rect.left;
-    const py = event.clientY - rect.top;
-    	
-	const x = Math.floor((py - 20) * SIZE / 870);
-	const y = Math.floor((px - 20) * SIZE / 870);
-	
-	if ((x < 0) || (y < 0) || (x > SIZE) || (y > SIZE)) {
-		return
-	}
-
-    fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
-    board = createBoard(fishLocations, seaweedLocations);
-    checkAndUpdateMinFish(fishLocations);
-    drawBoxes();
-});
-
-function getColor(str) {
-    return {
-		'background': '#0D3B66',
-		'x': '#05668D',
-		'.': '#13B6F6',
-		'f': '#E9724C',
-		's': '#3CCD65'
-    }[str];
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function randomNButtonClick(numIterations) {
-    for (let n = 0; n < numIterations; n++) {
-        const x = Math.floor(Math.random() * 9);
-        const y = Math.floor(Math.random() * 9);	
-        console.log('randomButtonClick', n, x, y);
-		iteration = n;
-        fishLocations = toggleFish(x, y, fishLocations, seaweedLocations);
-        board = createBoard(fishLocations, seaweedLocations);
-        checkAndUpdateMinFish(fishLocations);
-        drawBoxes();
-        await sleep(1000);
-    }
-}
-
-window.greedyButtonClick = greedyButtonClick;
-window.mcmcButtonClick = mcmcButtonClick;
-window.randomNButtonClick = randomNButtonClick;
-window.bookButtonClick = bookButtonClick;

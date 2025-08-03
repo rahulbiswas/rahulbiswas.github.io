@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fifty nine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <div class="control">
+            <label>SIZE</label>
+            <input type="range" id="tile-size" min="20" max="1000" value="40">
+            <span>40px</span>
+        </div>
+        <div class="control">
+            <label>GAP</label>
+            <input type="range" id="tile-gap" min="0" max="40" value="20">
+            <span>20px</span>
+        </div>
+        <div class="control">
+            <label>DELAY</label>
+            <input type="range" id="move-delay" min="50" max="100000" value="10000">
+            <span>100ms</span>
+        </div>
+        <div class="control">
+            <label>SPEED</label>
+            <input type="range" id="transition-speed" min="50" max="1000" value="100">
+            <span>100ms</span>
+        </div>
+        <div class="control">
+            <label>EMPTY</label>
+            <input type="range" id="empty-percent" min="0" max="100" value="20">
+            <span>20%</span>
+        </div>
+    </div>
+    <div id="puzzle-container"></div>
+    <script src="board.js"></script>
+</body>
+</html>
