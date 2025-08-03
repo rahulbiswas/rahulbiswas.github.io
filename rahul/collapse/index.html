@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .section {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .box {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .section1 .box { background-color: #FF9999; }
+        .section2 .box { background-color: #99FF99; }
+        .section3 .box { background-color: #9999FF; }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        h2:hover {
+            color: #666;
+        }
+
+        .content {
+            display: block;
+        }
+
+        .content.hidden {
+            display: none;
+        }
+
+        .fa-chevron-down, .fa-chevron-right {
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+
+        .fa-chevron-right {
+            display: none;
+        }
+
+        h2.collapsed .fa-chevron-down {
+            display: none;
+        }
+
+        h2.collapsed .fa-chevron-right {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="section section1">
+        <h2 onclick="toggleSection(this)">
+            Section 1
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-right"></i>
+        </h2>
+        <div class="content">
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            content.classList.toggle('hidden');
+            header.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>

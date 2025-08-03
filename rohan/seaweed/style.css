@@ -1,9 +1,153 @@
+:root {
+  --border-width: 16px;
+  --game-border: 0px;
+  --controls-height: 150px;
+  --controls-padding: 10px;
+  --grid-gap: 12px;
+  --cell-border-radius: 16px;
+  --primary-color: #1976D2;
+  --secondary-color: #1A237E;
+  --highlight-color: #64B5F6;
+  --fish-color: #FF7043;
+  --seaweed-color: #66BB6A;
+  --container-color: #263238;
+  --text-color: rgba(255, 255, 255, 0.87);
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--primary-color);
   font-family: Arial;
+}
+
+.game-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.board-container {
+  background-color: var(--primary-color);
+  border: var(--border-width) solid var(--primary-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--grid-gap);
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+}
+
+.grid-cell {
+  aspect-ratio: 1;
+  border-radius: var(--cell-border-radius);
+  background-color: var(--secondary-color);
+  transition: background-color 0.2s;
+}
+
+.grid-cell.seen {
+  background-color: var(--highlight-color);
+}
+
+.grid-cell.fish {
+  background-color: var(--fish-color);
+}
+
+.grid-cell.seaweed {
+  background-color: var(--seaweed-color);
+}
+
+.grid-cell.preview {
+  opacity: 0.8;
+}
+
+.controls-container {
+  background-color: var(--container-color);
+  padding: var(--controls-padding);
+  border-radius: 16px;
+  font-size: 18px;
+  color: var(--text-color);
+  text-align: center;
+  height: var(--controls-height);
+  box-sizing: border-box;
+}
+
+.creation-only {
+  display: none;
+}
+
+.creator-tools {
+  display: none;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: var(--container-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+#prevButton, #nextButton, #resetButton {
+  background-color: var(--highlight-color);
+  padding: 5px 10px;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+#prevButton:hover, #nextButton:hover, #resetButton:hover {
+  background-color: var(--primary-color);
+}
+
+.count-normal {
+  color: var(--fish-color);
+  font-weight: bold;
+}
+
+.count-target {
+  color: var(--seaweed-color);
+  font-weight: bold;
+}
+
+.count-matched {
+  color: var(--seaweed-color);
+  font-weight: bold;
+}
+
+#puzzleCount {
+  letter-spacing: 2px;
+  margin: 0 8px;
+}
+
+.fish-counter {
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.fish-counter-separator {
+  margin: 0 4px;
+  opacity: 0.87;
 }
