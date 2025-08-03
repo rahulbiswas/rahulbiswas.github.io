@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL Monthly Tally Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .month-tally {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 120px;
+        }
+        .month-name {
+            font-weight: bold;
+            color: #1976d2;
+        }
+        .month-count {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+        .comparison {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .person-column {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗓️ CL Monthly Tally Tool</h1>
+        <p>Paste your CL data below and click "Count CLs" to see monthly tallies! ✨</p>
+        
+        <textarea id="clData" placeholder="Paste CL data here (format: http://cl/123456 on 2025/07/29-23:06 by...)"></textarea>
+        
+        <button onclick="countCLs()">Count CLs 📊</button>
+        
+        <div id="results" class="results"></div>
+        
+        <div class="comparison" id="comparison" style="display: none;">
+            <div class="person-column">
+                <h3>Person 1</h3>
+                <div id="person1-results"></div>
+            </div>
+            <div class="person-column">
+                <h3>Person 2</h3>
+                <div id="person2-results"></div>
+            </div>
+        </div>
+        
+        <button onclick="showComparison()" style="margin-top: 20px; background: #ff9800;">Compare Two People 👥</button>
+    </div>
+
+    <script>
+        function countCLs() {
+            const data = document.getElementById('clData').value;
+            const lines = data.split('\n').filter(line => line.trim());
+            
+            const monthCounts = {};
+            let totalCLs = 0;
+            
+            lines.forEach(line => {
+                const match = line.match(/on (\d{4})\/(\d{2})-\d{2}/);
+                if (match) {
+                    const year = match[1];
+                    const month = match[2];
+                    const monthKey = `${year}-${month}`;
+                    
+                    if (!monthCounts) {
+                        monthCounts = 0;
+                    }
+                    monthCounts++;
+                    totalCLs++;
+                }
+            });
+            
+            displayResults(monthCounts, totalCLs);
+        }
+        
+        function displayResults(monthCounts, totalCLs) {
+            const monthNames = {
+                '01': 'January', '02': 'February', '03': 'March', '04': 'April',
+                '05': 'May', '06': 'June', '07': 'July', '08': 'August',
+                '09': 'September', '10': 'October', '11': 'November', '12': 'December'
+            };
+            
+            let html = `<h2>📈 Results (Total: ${totalCLs} CLs)</h2>`;
+            
+            const sortedMonths = Object.keys(monthCounts).sort();
+            
+            sortedMonths.forEach(monthKey => {
+                const  = monthKey.split('-');
+                const monthName = monthNames;
+                const count = monthCounts;
+                
+                html += `
+                    <div class="month-tally">
+                        <div class="month-name">${monthName} ${year}</div>
+                        <div class="month-count">${count}</div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('results').innerHTML = html;
+        }
+        
+        function showComparison() {
+            document.getElementById('comparison').style.display = 'flex';
+            
+            // Clear the main textarea and results for separate inputs
+            document.getElementById('clData').placeholder = "Paste Person 1 data here...";
+            
+            // Add second textarea
+            if (!document.getElementById('clData2')) {
+                const textarea2 = document.createElement('textarea');
+                textarea2.id = 'clData2';
+                textarea2.placeholder = 'Paste Person 2 data here...';
+                document.getElementById('clData').parentNode.insertBefore(textarea2, document.getElementById('clData').nextSibling);
+                
+                // Update button
+                const button = document.querySelector('button');
+                button.textContent = 'Compare Both 📊';
+                button.onclick = comparePeople;
+            }
+        }
+        
+        function comparePeople() {
+            const data1 = document.getElementById('clData').value;
+            const data2 = document.getElementById('clData2').value;
+            
+            const results1 = processData(data1);
+            const results2 = processData(data2);
+            
+            document.getElementById('person1-results').innerHTML = formatResults(results1);
+            document.getElementById('person2-results').innerHTML = formatResults(results2);
+        }
+        
+        function processData(data) {
+            const lines = data.split('\n').filter(line => line.trim());
+            const monthCounts = {};
+            let totalCLs = 0;
+            
+            lines.forEach(line => {
+                const match = line.match(/on (\d{4})\/(\d{2})-\d{2}/);
+                if (match) {
+                    const year = match[1];
+                    const month = match[2];
+                    const monthKey = `${year}-${month}`;
+                    
+                    if (!monthCounts) {
+                        monthCounts = 0;
+                    }
+                    monthCounts++;
+                    totalCLs++;
+                }
+            });
+            
+            return { monthCounts, totalCLs };
+        }
+        
+        function formatResults(results) {
+            const monthNames = {
+                '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr',
+                '05': 'May', '06': 'Jun', '07': 'Jul', '08': 'Aug',
+                '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec'
+            };
+            
+            let html = `<div style="text-align: center; margin-bottom: 10px;"><strong>Total: ${results.totalCLs} CLs</strong></div>`;
+            
+            const sortedMonths = Object.keys(results.monthCounts).sort();
+            
+            sortedMonths.forEach(monthKey => {
+                const  = monthKey.split('-');
+                const monthName = monthNames;
+                const count = results.monthCounts;
+                
+                html += `
+                    <div style="margin: 5px 0; padding: 8px; background: white; border-radius: 4px; display: flex; justify-content: space-between;">
+                        <span>${monthName} ${year}</span>
+                        <strong>${count}</strong>
+                    </div>
+                `;
+            });
+            
+            return html;
+        }
+    </script>
+</body>
+</html>
