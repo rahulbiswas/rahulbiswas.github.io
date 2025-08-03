@@ -40,17 +40,17 @@ function updateLayout(gameContainer, boardContainer, controlsContainer) {
     boardContainer.style.position = 'absolute';
     if (isWidthConstrained) {
         boardContainer.style.left = `0`;
-        boardContainer.style.top = `${(boardWindowHeight - boardSize - borderWidth) / 2}px`;
+        boardContainer.style.top = `${totalControlsHeight + (boardWindowHeight - boardSize - borderWidth) / 2}px`;
     } else {
-        boardContainer.style.top = '0';
+        boardContainer.style.top = `${totalControlsHeight}px`;
         boardContainer.style.left = `${(windowWidth - boardSize - borderWidth) / 2}px`;
     }
     boardContainer.style.width = `${boardSize}px`;
     boardContainer.style.height = `${boardSize}px`;
     
-    // Position controls at bottom
+    // Position controls at top
     controlsContainer.style.position = 'absolute';
-    controlsContainer.style.bottom = `${borderWidth/2}px`;
+    controlsContainer.style.top = `${borderWidth/2}px`;
     controlsContainer.style.left = `${borderWidth/2}px`;
     controlsContainer.style.width = `${windowWidth - borderWidth}px`;
 }
