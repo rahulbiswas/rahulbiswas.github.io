@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 import { createBoard } from './board.js';
 import { isPuzzleSolved } from './utils.js';
 

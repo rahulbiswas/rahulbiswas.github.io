@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 import { SIZE, createBoard, toggleFish } from './board.js';
 import { markPuzzleAsSolved } from './utils.js';
 import { loadNextPuzzle, loadPrevPuzzle } from './puzzle-manager.js';

@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 /**
  * Simple sleep/delay function
  * @param {number} ms - Milliseconds to wait

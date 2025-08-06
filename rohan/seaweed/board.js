@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 const SIZE = 7;
 
 function countUnseen(board) {

@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 import { SIZE, countUnseen, isSeaweed, createBoard } from './board.js';
 import { isPuzzleSolved, getSolvedCount } from './utils.js';
 
