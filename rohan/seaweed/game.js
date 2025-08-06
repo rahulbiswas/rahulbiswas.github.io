@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 import { markPuzzleAsSolved } from './utils.js';
 import { loadPuzzle } from './puzzle-manager.js';
 import { updateLayout, createGrid, updateGrid, updatePuzzleDisplay, updateStatusDisplay } from './ui.js';

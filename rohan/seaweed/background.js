@@ -1,3 +1,4 @@
+// Author: Rohan Biswas
 /**
  * Ocean background generator for Seaweed game
  * Creates dynamic SVG background with animated bubbles
