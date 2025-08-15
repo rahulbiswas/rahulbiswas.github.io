@@ -71,21 +71,38 @@ function generateSharks(width, height) {
         const direction = Math.random() < 0.5 ? 1 : -1; // 1 for LTR, -1 for RTL
 
         const animationValues = direction === 1 
-            ? `${-80 / scale},0; ${width / scale + 80},0`
-            : `${width / scale + 80},0; ${-80 / scale},0`;
+            ? `${-100 / scale},0; ${width / scale + 100},0`
+            : `${width / scale + 100},0; ${-100 / scale},0`;
 
-        const sharkBody = `
-            <g transform="scale(${direction}, 1)">
-                <ellipse cx="50" cy="0" rx="25" ry="13" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
-                <polygon points="25,0 16,-4 16,4" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
-                <polygon points="50,-13 56,-20 62,-13" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
-                <ellipse cx="46" cy="0" rx="6" ry="3" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
-                <circle cx="62" cy="-3" r="5" fill="#ffffff"/>
-                <circle cx="62" cy="-3" r="3" fill="#000000"/>
-                <circle cx="63" cy="-5" r="1.5" fill="#ffffff"/>
-                <ellipse cx="68" cy="2" rx="2" ry="1" fill="#4b5563"/>
-            </g>
-        `;
+        let sharkBody = '';
+        const isHappy = Math.random() < 0.4; // 40% chance of being a happy shark
+
+        if (isHappy) {
+            sharkBody = `
+                <g transform="scale(${direction}, 1)">
+                    <ellipse cx="55" cy="0" rx="30" ry="12" fill="#6b7280" stroke="#374151" stroke-width="2"/>
+                    <polygon points="25,0 15,-5 15,5" fill="#6b7280" stroke="#374151" stroke-width="2"/>
+                    <polygon points="55,-12 62,-20 70,-12" fill="#6b7280" stroke="#374151" stroke-width="2"/>
+                    <ellipse cx="50" cy="0" rx="8" ry="4" fill="#6b7280" stroke="#374151" stroke-width="2"/>
+                    <circle cx="68" cy="-3" r="4" fill="#ffffff"/>
+                    <circle cx="68" cy="-3" r="2" fill="#000000"/>
+                    <path d="M72 0 Q75 3 78 0" stroke="#374151" stroke-width="2" fill="none"/>
+                </g>
+            `;
+        } else {
+            sharkBody = `
+                <g transform="scale(${direction}, 1)">
+                    <ellipse cx="50" cy="0" rx="25" ry="13" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                    <polygon points="25,0 16,-4 16,4" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                    <polygon points="50,-13 56,-20 62,-13" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                    <ellipse cx="46" cy="0" rx="6" ry="3" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                    <circle cx="62" cy="-3" r="5" fill="#ffffff"/>
+                    <circle cx="62" cy="-3" r="3" fill="#000000"/>
+                    <circle cx="63" cy="-5" r="1.5" fill="#ffffff"/>
+                    <ellipse cx="68" cy="2" rx="2" ry="1" fill="#4b5563"/>
+                </g>
+            `;
+        }
 
         sharksHTML += `
             <g transform="translate(0, ${y}) scale(${scale})" opacity="0.6">
@@ -177,6 +194,35 @@ function generateSubmarines(width, height) {
     return subsHTML;
 }
 
+function generateSeaweed(width, height) {
+    let seaweedHTML = '';
+    const seaweedCount = Math.floor(width / 60);
+    const maxHeight = height * 0.25;
+
+    for (let i = 0; i < seaweedCount; i++) {
+        const x = (i + 0.5) * (width / seaweedCount) + (Math.random() - 0.5) * 30;
+        const h = maxHeight * (0.6 + Math.random() * 0.4);
+        const dur = 4 + Math.random() * 2;
+        const delay = Math.random() * dur;
+        const sway = 3 + Math.random() * 2;
+        const q1 = h * 0.3, q2 = h * 0.6, q3 = h;
+
+        const path = `M${x} ${height} Q${x - 2} ${height - q1} ${x + 2} ${height - q2} Q${x - 4} ${height - (q2 + q1)} ${x} ${height - q3}`;
+        
+        seaweedHTML += `
+            <g>
+                <animateTransform attributeName="transform" type="rotate" 
+                                values="0 ${x} ${height}; ${sway} ${x} ${height}; -${sway} ${x} ${height}; 0 ${x} ${height}" 
+                                dur="${dur}s" repeatCount="indefinite" begin="-${delay}s"/>
+                <path d="${path}" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+        `;
+    }
+
+    return `<g opacity="0.4">${seaweedHTML}</g>`;
+}
+
+
 function createOceanBackground() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -209,9 +255,6 @@ function createOceanBackground() {
                ry="${Math.min(width, height) * 0.3}" 
                fill="rgba(255,255,255,0.05)"/>
       
-      <!-- Animated bubbles -->
-      ${generateBubbles(width, height)}
-
       <!-- Swimming Submarines -->
       ${generateSubmarines(width, height)}
 
@@ -220,6 +263,12 @@ function createOceanBackground() {
 
       <!-- Majestic Orca -->
       ${generateOrca(width, height)}
+
+      <!-- Seaweed Forest -->
+      ${generateSeaweed(width, height)}
+
+      <!-- Animated bubbles -->
+      ${generateBubbles(width, height)}
     </svg>
   `;
   
