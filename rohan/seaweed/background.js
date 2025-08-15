@@ -63,6 +63,29 @@ function createOceanBackground() {
       
       <!-- Animated bubbles -->
       ${generateBubbles(width, height)}
+
+      <!-- Majestic Orca (swimming left to right on bottom) -->
+      <g opacity="0.7">
+        <animateTransform attributeName="transform" type="translate" 
+                          values="${-350},0; ${width + 350},0" dur="45s" repeatCount="indefinite" begin="-20s"/>
+        <g transform="translate(0, ${height - 64}) scale(1.9)">
+          <!-- Dynamic curved body -->
+          <path d="M -62 2 Q -40 -20 -10 -18 Q 20 -16 50 -12 Q 75 -5 85 2 Q 75 9 50 16 Q 20 20 -10 18 Q -40 22 -62 2" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+          <!-- Angled dorsal fin -->
+          <path d="M -18 -18 Q -12 -35 -6 -18 Q -12 -14 -18 -18" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+          <!-- Reduced white belly -->
+          <ellipse cx="8" cy="12" rx="32" ry="8" fill="#ffffff"/>
+          <!-- Eye patch -->
+          <ellipse cx="68" cy="-8" rx="8" ry="5" fill="#ffffff" transform="rotate(-5 68 -8)"/>
+          <!-- Eye -->
+          <circle cx="71" cy="-6" r="2.5" fill="#000000"/>
+          <circle cx="71" cy="-6" r="1" fill="#ffffff"/>
+          <!-- Small chin mark -->
+          <ellipse cx="78" cy="10" rx="5" ry="3" fill="#ffffff"/>
+          <!-- Curved tail -->
+          <path d="M -62 2 Q -80 -10 -90 -4 Q -82 2 -80 8 Q -90 14 -80 8 Q -70 2 -62 2" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+        </g>
+      </g>
     </svg>
   `;
   
