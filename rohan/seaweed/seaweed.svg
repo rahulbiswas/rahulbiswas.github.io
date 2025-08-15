@@ -21,13 +21,6 @@
     
     <!-- Button placeholders -->
     <g transform="translate(90, 15)">
-      <!-- Prev button -->
-      <rect x="0" y="0" width="65" height="35" rx="8" fill="#2A9D8F" />
-      <!-- Arrow pointing left -->
-      <line x1="24" y1="17.5" x2="41" y2="17.5" stroke="white" stroke-width="3" stroke-linecap="round" />
-      <!-- Arrowhead -->
-      <path d="M 24 17.5 L 30 11.5 M 24 17.5 L 30 23.5" stroke="white" stroke-width="3" stroke-linecap="round" />
-      
       <!-- Reset button -->
       <rect x="74" y="0" width="65" height="35" rx="8" fill="#2A9D8F" />
       <!-- Reset icon -->
@@ -41,17 +34,10 @@
           </g>
         </g>
       </g>
-      
-      <!-- Next button -->
-      <rect x="148" y="0" width="65" height="35" rx="8" fill="#2A9D8F" />
-      <!-- Arrow pointing right -->
-      <line x1="172" y1="17.5" x2="189" y2="17.5" stroke="white" stroke-width="3" stroke-linecap="round" />
-      <!-- Arrowhead -->
-      <path d="M 189 17.5 L 183 11.5 M 189 17.5 L 183 23.5" stroke="white" stroke-width="3" stroke-linecap="round" />
     </g>
     
     <!-- Info display -->
-    <text x="180" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#FFD93D" font-weight="bold">puzzle 15 | solved 3</text>
+    <text x="180" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#FFD93D" font-weight="bold">fish 6 / 7 | solved 3</text>
   </g>
 
   <!-- Swimming Sharks and Submarines ABOVE the board -->
