@@ -101,6 +101,82 @@ function generateSharks(width, height) {
     return sharksHTML;
 }
 
+function generateSubmarines(width, height) {
+    let subsHTML = '';
+
+    // 1. Yellow Submarine (RTL)
+    const y1 = Math.random() * height;
+    const d1 = 18 + Math.random() * 8;
+    const del1 = Math.random() * d1;
+    subsHTML += `
+        <g transform="translate(0, ${y1}) scale(0.9)" opacity="0.7">
+            <animateTransform attributeName="transform" type="translate" 
+                            values="${width+100},${y1}; -100,${y1}" dur="${d1}s" 
+                            repeatCount="indefinite" begin="-${del1}s"/>
+            <g transform="scale(-1, 1)">
+                <ellipse cx="50" cy="0" rx="40" ry="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+                <rect x="45" y="-15" width="10" height="15" rx="5" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+                <rect x="49" y="-20" width="2" height="8" fill="#6b7280"/>
+                <ellipse cx="90" cy="0" rx="8" ry="4" fill="none" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="82" y1="0" x2="98" y2="0" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="90" y1="-8" x2="90" y2="8" stroke="#f59e0b" stroke-width="2"/>
+                <circle cx="30" cy="0" r="6" fill="#60a5fa" stroke="#1d4ed8" stroke-width="2"/>
+                <circle cx="40" cy="0" r="4" fill="#60a5fa" stroke="#1d4ed8" stroke-width="2"/>
+            </g>
+        </g>
+    `;
+
+    // 2. Steampunk Submarine (LTR)
+    const y2 = Math.random() * height;
+    const d2 = 15 + Math.random() * 6;
+    const del2 = Math.random() * d2;
+    subsHTML += `
+        <g transform="translate(0, ${y2}) scale(0.8)" opacity="0.7">
+            <animateTransform attributeName="transform" type="translate" 
+                            values="-100,${y2}; ${width+100},${y2}" dur="${d2}s" 
+                            repeatCount="indefinite" begin="-${del2}s"/>
+            <ellipse cx="40" cy="0" rx="25" ry="10" fill="#ea580c" stroke="#c2410c" stroke-width="2"/>
+            <rect x="37" y="-15" width="6" height="10" rx="3" fill="#ea580c" stroke="#c2410c" stroke-width="2"/>
+            <rect x="39" y="-20" width="1.5" height="5" fill="#92400e"/>
+            <ellipse cx="5" cy="0" rx="5" ry="3" fill="none" stroke="#c2410c" stroke-width="2"/>
+            <line x1="0" y1="0" x2="10" y2="0" stroke="#c2410c" stroke-width="2"/>
+            <line x1="5" y1="-5" x2="5" y2="5" stroke="#c2410c" stroke-width="2"/>
+            <circle cx="55" cy="0" r="4" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+            <circle cx="48" cy="0" r="2.5" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+            <rect x="32" y="8" width="16" height="2" rx="1" fill="#92400e"/>
+            <circle cx="35" cy="12" r="1.5" fill="#92400e"/>
+            <circle cx="45" cy="12" r="1.5" fill="#92400e"/>
+        </g>
+    `;
+
+    // 3. Luxury Submarine (RTL)
+    const y3 = Math.random() * height;
+    const d3 = 25 + Math.random() * 10;
+    const del3 = Math.random() * d3;
+    subsHTML += `
+        <g transform="translate(0, ${y3}) scale(1.1)" opacity="0.7">
+            <animateTransform attributeName="transform" type="translate" 
+                            values="${width+150},${y3}; -150,${y3}" dur="${d3}s" 
+                            repeatCount="indefinite" begin="-${del3}s"/>
+            <g transform="scale(-1, 1)">
+                <ellipse cx="70" cy="0" rx="55" ry="18" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+                <ellipse cx="70" cy="0" rx="55" ry="18" fill="none" stroke="#fbbf24" stroke-width="1"/>
+                <rect x="60" y="-18" width="20" height="15" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+                <rect x="20" y="-3" width="30" height="6" rx="3" fill="#92400e"/>
+                <ellipse cx="45" cy="0" rx="12" ry="8" fill="#dbeafe" stroke="#0284c7" stroke-width="2"/>
+                <rect x="27" y="-5" width="8" height="10" rx="4" fill="#dbeafe" stroke="#0284c7" stroke-width="2"/>
+                <g transform="translate(125, 0)">
+                    <circle cx="0" cy="0" r="7" fill="none" stroke="#fbbf24" stroke-width="2"/>
+                    <path d="M-5,-5 Q0,0 5,-5" stroke="#fbbf24" stroke-width="2" fill="none"/>
+                    <path d="M-5,5 Q0,0 5,5" stroke="#fbbf24" stroke-width="2" fill="none"/>
+                </g>
+            </g>
+        </g>
+    `;
+
+    return subsHTML;
+}
+
 function createOceanBackground() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -135,6 +211,9 @@ function createOceanBackground() {
       
       <!-- Animated bubbles -->
       ${generateBubbles(width, height)}
+
+      <!-- Swimming Submarines -->
+      ${generateSubmarines(width, height)}
 
       <!-- Swimming Sharks -->
       ${generateSharks(width, height)}
