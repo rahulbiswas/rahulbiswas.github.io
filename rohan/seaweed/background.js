@@ -29,6 +29,78 @@ function generateBubbles(width, height) {
   return `<g>${bubblesHTML}</g>`;
 }
 
+function generateOrca(width, height) {
+  const orcaY = Math.random() * height; // Can appear anywhere from top to bottom
+  const orcaDrift = (Math.random() - 0.5) * 40; // Gentle up/down drift
+
+  return `
+    <!-- Majestic Orca -->
+    <g opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" 
+                        values="${-350},0; ${width + 350},${orcaDrift}" dur="45s" repeatCount="indefinite" begin="-20s"/>
+      <g transform="translate(0, ${orcaY}) scale(1.9)">
+        <!-- Dynamic curved body -->
+        <path d="M -62 2 Q -40 -20 -10 -18 Q 20 -16 50 -12 Q 75 -5 85 2 Q 75 9 50 16 Q 20 20 -10 18 Q -40 22 -62 2" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+        <!-- Angled dorsal fin -->
+        <path d="M -18 -18 Q -12 -35 -6 -18 Q -12 -14 -18 -18" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+        <!-- Reduced white belly -->
+        <ellipse cx="8" cy="12" rx="32" ry="8" fill="#ffffff"/>
+        <!-- Eye patch -->
+        <ellipse cx="68" cy="-8" rx="8" ry="5" fill="#ffffff" transform="rotate(-5 68 -8)"/>
+        <!-- Eye -->
+        <circle cx="71" cy="-6" r="2.5" fill="#000000"/>
+        <circle cx="71" cy="-6" r="1" fill="#ffffff"/>
+        <!-- Small chin mark -->
+        <ellipse cx="78" cy="10" rx="5" ry="3" fill="#ffffff"/>
+        <!-- Curved tail -->
+        <path d="M -62 2 Q -80 -10 -90 -4 Q -82 2 -80 8 Q -90 14 -80 8 Q -70 2 -62 2" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+      </g>
+    </g>
+  `;
+}
+
+function generateSharks(width, height) {
+    let sharksHTML = '';
+    const sharkCount = 3;
+
+    for (let i = 0; i < sharkCount; i++) {
+        const y = Math.random() * height;
+        const duration = 12 + Math.random() * 8; // 12-20s
+        const delay = Math.random() * duration;
+        const scale = 0.6 + Math.random() * 0.5; // 60% to 110% size
+        const direction = Math.random() < 0.5 ? 1 : -1; // 1 for LTR, -1 for RTL
+
+        const animationValues = direction === 1 
+            ? `${-80 / scale},0; ${width / scale + 80},0`
+            : `${width / scale + 80},0; ${-80 / scale},0`;
+
+        const sharkBody = `
+            <g transform="scale(${direction}, 1)">
+                <ellipse cx="50" cy="0" rx="25" ry="13" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                <polygon points="25,0 16,-4 16,4" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                <polygon points="50,-13 56,-20 62,-13" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                <ellipse cx="46" cy="0" rx="6" ry="3" fill="#7c8691" stroke="#4b5563" stroke-width="2"/>
+                <circle cx="62" cy="-3" r="5" fill="#ffffff"/>
+                <circle cx="62" cy="-3" r="3" fill="#000000"/>
+                <circle cx="63" cy="-5" r="1.5" fill="#ffffff"/>
+                <ellipse cx="68" cy="2" rx="2" ry="1" fill="#4b5563"/>
+            </g>
+        `;
+
+        sharksHTML += `
+            <g transform="translate(0, ${y}) scale(${scale})" opacity="0.6">
+                <g>
+                    <animateTransform attributeName="transform" type="translate" 
+                                    values="${animationValues}" dur="${duration}s" 
+                                    repeatCount="indefinite" begin="-${delay}s"/>
+                    ${sharkBody}
+                </g>
+            </g>
+        `;
+    }
+    return sharksHTML;
+}
+
 function createOceanBackground() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -64,28 +136,11 @@ function createOceanBackground() {
       <!-- Animated bubbles -->
       ${generateBubbles(width, height)}
 
-      <!-- Majestic Orca (swimming left to right on bottom) -->
-      <g opacity="0.7">
-        <animateTransform attributeName="transform" type="translate" 
-                          values="${-350},0; ${width + 350},0" dur="45s" repeatCount="indefinite" begin="-20s"/>
-        <g transform="translate(0, ${height - 64}) scale(1.9)">
-          <!-- Dynamic curved body -->
-          <path d="M -62 2 Q -40 -20 -10 -18 Q 20 -16 50 -12 Q 75 -5 85 2 Q 75 9 50 16 Q 20 20 -10 18 Q -40 22 -62 2" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
-          <!-- Angled dorsal fin -->
-          <path d="M -18 -18 Q -12 -35 -6 -18 Q -12 -14 -18 -18" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
-          <!-- Reduced white belly -->
-          <ellipse cx="8" cy="12" rx="32" ry="8" fill="#ffffff"/>
-          <!-- Eye patch -->
-          <ellipse cx="68" cy="-8" rx="8" ry="5" fill="#ffffff" transform="rotate(-5 68 -8)"/>
-          <!-- Eye -->
-          <circle cx="71" cy="-6" r="2.5" fill="#000000"/>
-          <circle cx="71" cy="-6" r="1" fill="#ffffff"/>
-          <!-- Small chin mark -->
-          <ellipse cx="78" cy="10" rx="5" ry="3" fill="#ffffff"/>
-          <!-- Curved tail -->
-          <path d="M -62 2 Q -80 -10 -90 -4 Q -82 2 -80 8 Q -90 14 -80 8 Q -70 2 -62 2" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
-        </g>
-      </g>
+      <!-- Swimming Sharks -->
+      ${generateSharks(width, height)}
+
+      <!-- Majestic Orca -->
+      ${generateOrca(width, height)}
     </svg>
   `;
   
