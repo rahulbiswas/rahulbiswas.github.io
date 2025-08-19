@@ -1,0 +1,2202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="1">
+        <prompt>What was the significance of the "Hamburg Riot" of 1876?</prompt>
+        <options>
+            <option letter="a">Demonstrated declining federal protection for African Americans</option>
+            <option letter="b">Led to increased civil rights</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Strengthened Republican control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Hamburg Riot, where white supremacists killed African American militia members, showed the declining federal willingness to protect black citizens.</explanation>
+    </question>
+    <question number="2">
+        <prompt>How did the "Agricultural Lien Laws" affect freedmen?</prompt>
+        <options>
+            <option letter="a">Created a system of debt peonage</option>
+            <option letter="b">Provided economic independence</option>
+            <option letter="c">Improved farming conditions</option>
+            <option letter="d">Protected farmer rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Agricultural Lien Laws created a system of debt peonage by requiring farmers to pledge future crops as collateral for current supplies and loans.</explanation>
+    </question>
+    <question number="3">
+        <prompt>What role did "Benevolent Societies" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided mutual aid and community support</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Managed military affairs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Benevolent Societies provided mutual aid, education, and community support for freed people during Reconstruction.</explanation>
+    </question>
+    <question number="4">
+        <prompt>What was the purpose of the "Mississippi Plan" of 1875?</prompt>
+        <options>
+            <option letter="a">Used violence to suppress Republican voting</option>
+            <option letter="b">Protected voting rights</option>
+            <option letter="c">Promoted economic growth</option>
+            <option letter="d">Reformed education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Mississippi Plan was a coordinated campaign of violence and intimidation used by Democrats to suppress Republican and African American voting.</explanation>
+    </question>
+<question number="5">
+        <prompt>What was the significance of the "Easter Monday" election riots?</prompt>
+        <options>
+            <option letter="a">Demonstrated violent resistance to black voting rights</option>
+            <option letter="b">Led to increased voter turnout</option>
+            <option letter="c">Improved election security</option>
+            <option letter="d">Strengthened federal oversight</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Easter Monday election riots showed the violent resistance to African American voting rights and the difficulties in protecting black voters during Reconstruction.</explanation>
+    </question>
+    <question number="6">
+        <prompt>How did the end of Reconstruction affect land ownership?</prompt>
+        <options>
+            <option letter="a">Reversed many freedmen's land gains</option>
+            <option letter="b">Increased black land ownership</option>
+            <option letter="c">Distributed more federal land</option>
+            <option letter="d">Created new homestead programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to the reversal of many freedmen's land gains as former Confederate owners reclaimed property and new restrictions limited land acquisition.</explanation>
+    </question>
+    <question number="7">
+        <prompt>What role did the "Union League Clubs" play in Northern cities?</prompt>
+        <options>
+            <option letter="a">Supported Southern Reconstruction policies</option>
+            <option letter="b">Opposed civil rights</option>
+            <option letter="c">Promoted segregation</option>
+            <option letter="d">Defended Confederate interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union League Clubs in Northern cities provided political and financial support for Reconstruction policies and advocated for civil rights enforcement.</explanation>
+    </question>
+    <question number="8">
+        <prompt>What was the impact of the "Georgia Returns" case?</prompt>
+        <options>
+            <option letter="a">Required Georgia to readmit black legislators</option>
+            <option letter="b">Ended Reconstruction in Georgia</option>
+            <option letter="c">Created new voting laws</option>
+            <option letter="d">Established segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Georgia Returns case forced Georgia to readmit black legislators who had been expelled from the state legislature, temporarily maintaining Reconstruction authority.</explanation>
+    </question>
+<question number="9">
+        <prompt>What was the significance of the "Labor Reform Convention" of 1871?</prompt>
+        <options>
+            <option letter="a">Attempted to unite black and white workers</option>
+            <option letter="b">Supported plantation owners</option>
+            <option letter="c">Opposed labor rights</option>
+            <option letter="d">Protected Confederate interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Labor Reform Convention attempted to unite black and white workers for better working conditions, though it achieved limited success due to racial tensions.</explanation>
+    </question>
+    <question number="10">
+        <prompt>How did the "Rifle Clubs" affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Intimidated Republican voters through armed demonstrations</option>
+            <option letter="b">Protected African American rights</option>
+            <option letter="c">Supported federal policies</option>
+            <option letter="d">Promoted racial harmony</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Rifle Clubs were paramilitary groups that intimidated Republican voters through armed demonstrations and violence to restore Democratic control.</explanation>
+    </question>
+    <question number="11">
+        <prompt>What was the purpose of the "Land Commission" in South Carolina?</prompt>
+        <options>
+            <option letter="a">To help freedmen purchase land</option>
+            <option letter="b">To protect plantation owners</option>
+            <option letter="c">To restrict land sales</option>
+            <option letter="d">To increase taxes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>South Carolina's Land Commission was established to help freedmen purchase land by dividing large plantations and offering affordable payment terms.</explanation>
+    </question>
+    <question number="12">
+        <prompt>What role did "Colored Conventions" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Organized African American political activism</option>
+            <option letter="b">Supported segregation policies</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Managed agricultural programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Colored Conventions brought together African American leaders to organize political activism and advocate for civil rights during Reconstruction.</explanation>
+    </question>
+<question number="13">
+        <prompt>What was the primary purpose of "Redemption Constitutions"?</prompt>
+        <options>
+            <option letter="a">To restrict African American rights and reduce state spending</option>
+            <option letter="b">To protect civil rights</option>
+            <option letter="c">To expand public education</option>
+            <option letter="d">To increase voter participation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Redemption Constitutions were adopted by Southern states to restrict African American rights and reduce state spending on public services after Reconstruction.</explanation>
+    </question>
+    <question number="14">
+        <prompt>How did the "Labor Contract Laws" affect freed people?</prompt>
+        <options>
+            <option letter="a">Required annual labor contracts and restricted mobility</option>
+            <option letter="b">Provided fair labor conditions</option>
+            <option letter="c">Increased wages</option>
+            <option letter="d">Protected worker rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Labor Contract Laws required freedmen to sign annual labor contracts and restricted their mobility, effectively limiting their economic freedom.</explanation>
+    </question>
+    <question number="15">
+        <prompt>What role did the "Knights of the White Camelia" play?</prompt>
+        <options>
+            <option letter="a">Terrorized African Americans and Republicans</option>
+            <option letter="b">Supported Reconstruction policies</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Promoted economic development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Knights of the White Camelia was a secret society that terrorized African Americans and Republicans to oppose Reconstruction policies.</explanation>
+    </question>
+    <question number="16">
+        <prompt>What impact did the "Charleston Convention" of 1867 have?</prompt>
+        <options>
+            <option letter="a">Organized African American political participation</option>
+            <option letter="b">Supported Confederate interests</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Limited voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Charleston Convention of 1867 organized African American political participation and helped establish Republican control in South Carolina during Reconstruction.</explanation>
+    </question>
+<question number="17">
+        <prompt>What was the significance of the Arkansas Constitution of 1868?</prompt>
+        <options>
+            <option letter="a">Established universal male suffrage and public education</option>
+            <option letter="b">Restored Confederate control</option>
+            <option letter="c">Banned African American voting</option>
+            <option letter="d">Created segregation laws</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Arkansas Constitution of 1868 established universal male suffrage and created the state's first system of public education during Reconstruction.</explanation>
+    </question>
+    <question number="18">
+        <prompt>How did the Brooks-Baxter War affect Arkansas?</prompt>
+        <options>
+            <option letter="a">Led to the end of Reconstruction in Arkansas</option>
+            <option letter="b">Strengthened Republican control</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Created economic prosperity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Brooks-Baxter War of 1874 resulted in the end of Reconstruction in Arkansas and the return of conservative Democratic control.</explanation>
+    </question>
+    <question number="19">
+        <prompt>What was the purpose of the "Iron Clad Oath"?</prompt>
+        <options>
+            <option letter="a">To prevent former Confederates from holding office</option>
+            <option letter="b">To support Confederate veterans</option>
+            <option letter="c">To regulate voting rights</option>
+            <option letter="d">To control labor contracts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Iron Clad Oath required individuals to swear they had never supported the Confederacy before holding public office, limiting former Confederates' political power.</explanation>
+    </question>
+    <question number="20">
+        <prompt>What role did the "Pine Knot" strategy play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Intimidated African American voters through night raids</option>
+            <option letter="b">Protected freed slaves</option>
+            <option letter="c">Supported education reform</option>
+            <option letter="d">Promoted economic development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Pine Knot strategy involved night raids by white supremacists using burning pine knots to intimidate African American voters and Republican supporters.</explanation>
+    </question>
+<question number="21">
+        <prompt>What was the significance of the "Cipher Telegrams"?</prompt>
+        <options>
+            <option letter="a">Revealed attempted electoral fraud in the 1876 election</option>
+            <option letter="b">Improved communication systems</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Strengthened military control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Cipher Telegrams controversy revealed attempts at electoral fraud during the disputed 1876 presidential election, affecting public trust in the electoral process.</explanation>
+    </question>
+    <question number="22">
+        <prompt>How did the "Tenant Rights" movement affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Attempted to secure legal protections for sharecroppers</option>
+            <option letter="b">Supported landowners' interests</option>
+            <option letter="c">Opposed agricultural reform</option>
+            <option letter="d">Promoted industrial development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Tenant Rights movement attempted to secure legal protections for sharecroppers and tenant farmers, though it achieved limited success during Reconstruction.</explanation>
+    </question>
+    <question number="23">
+        <prompt>What role did the "Colored Educational Conventions" play?</prompt>
+        <options>
+            <option letter="a">Advocated for African American education rights</option>
+            <option letter="b">Supported segregation policies</option>
+            <option letter="c">Opposed public schools</option>
+            <option letter="d">Managed church activities</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Colored Educational Conventions brought together African American leaders to advocate for educational rights and equal access to public education.</explanation>
+    </question>
+    <question number="24">
+        <prompt>What was the purpose of the "Southern Homestead Act of 1866"?</prompt>
+        <options>
+            <option letter="a">Provided land opportunities to freedmen and loyal whites</option>
+            <option letter="b">Protected Confederate property</option>
+            <option letter="c">Supported plantation system</option>
+            <option letter="d">Regulated cotton production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Southern Homestead Act of 1866 made public lands available to freedmen and loyal whites, though its impact was limited by various obstacles.</explanation>
+    </question>
+<question number="25">
+        <prompt>What was the significance of the "Military Reconstruction Acts"?</prompt>
+        <options>
+            <option letter="a">Divided the South into military districts for federal control</option>
+            <option letter="b">Ended military presence</option>
+            <option letter="c">Supported Confederate authority</option>
+            <option letter="d">Restricted federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Military Reconstruction Acts divided the South into five military districts, placing them under federal military control to enforce Reconstruction policies.</explanation>
+    </question>
+    <question number="26">
+        <prompt>How did the "Amnesty Act" of 1872 affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Restored political rights to former Confederates</option>
+            <option letter="b">Strengthened civil rights</option>
+            <option letter="c">Increased military control</option>
+            <option letter="d">Protected African Americans</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Amnesty Act of 1872 restored political rights to most former Confederates, weakening Republican control in the South.</explanation>
+    </question>
+    <question number="27">
+        <prompt>What role did "Carpetbaggers" play in Southern politics?</prompt>
+        <options>
+            <option letter="a">Northerners who supported Republican Reconstruction</option>
+            <option letter="b">Confederate supporters</option>
+            <option letter="c">Democratic leaders</option>
+            <option letter="d">Southern businessmen</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Carpetbaggers were Northerners who moved South to support Republican Reconstruction policies and often held political positions.</explanation>
+    </question>
+    <question number="28">
+        <prompt>What was the purpose of the "Registration Boards"?</prompt>
+        <options>
+            <option letter="a">To register voters and enforce voting requirements</option>
+            <option letter="b">To restrict all voting</option>
+            <option letter="c">To support Confederate veterans</option>
+            <option letter="d">To manage property records</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Registration Boards were established to register voters and enforce voting requirements under Congressional Reconstruction policies.</explanation>
+    </question>
+<question number="29">
+        <prompt>What was the significance of the Compromise of 1877?</prompt>
+        <options>
+            <option letter="a">It ended Reconstruction by removing federal troops from the South</option>
+            <option letter="b">It established new civil rights legislation</option>
+            <option letter="c">It created the Freedmen's Bureau</option>
+            <option letter="d">It granted women's suffrage</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 resolved the disputed presidential election of 1876 and effectively ended Reconstruction by withdrawing federal troops from the South.</explanation>
+    </question>
+    <question number="30">
+        <prompt>Who were the major candidates in the disputed presidential election of 1876?</prompt>
+        <options>
+            <option letter="a">Rutherford B. Hayes and Samuel Tilden</option>
+            <option letter="b">Ulysses S. Grant and Horace Greeley</option>
+            <option letter="c">James Garfield and Winfield Hancock</option>
+            <option letter="d">Abraham Lincoln and George McClellan</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Republican Rutherford B. Hayes and Democrat Samuel Tilden were the candidates in the disputed 1876 election, which was ultimately resolved by the Compromise of 1877.</explanation>
+    </question>
+    <question number="31">
+        <prompt>What was promised to the South in the Compromise of 1877?</prompt>
+        <options>
+            <option letter="a">Federal aid for railroad construction and economic development</option>
+            <option letter="b">Continued military occupation</option>
+            <option letter="c">Expansion of civil rights protection</option>
+            <option letter="d">New public education funding</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise included promises of federal aid for Southern railroad construction and economic development, along with a cabinet position for a Southerner.</explanation>
+    </question>
+    <question number="32">
+        <prompt>How many electoral votes were disputed in the 1876 election?</prompt>
+        <options>
+            <option letter="a">20 electoral votes</option>
+            <option letter="b">15 electoral votes</option>
+            <option letter="c">25 electoral votes</option>
+            <option letter="d">30 electoral votes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>20 electoral votes from four states (Florida, Louisiana, South Carolina, and one from Oregon) were disputed in the 1876 election.</explanation>
+    </question>
+<question number="33">
+        <prompt>What was sharecropping?</prompt>
+        <options>
+            <option letter="a">A system where farmers worked land in exchange for a share of the crop</option>
+            <option letter="b">A federal program to distribute land to freedmen</option>
+            <option letter="c">A method of organizing plantation labor cooperatives</option>
+            <option letter="d">A system of communal farming</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sharecropping was a post-war agricultural system where farmers (often former slaves) worked landowners' fields in exchange for a portion of the harvest, though this often led to cycles of debt.</explanation>
+    </question>
+    <question number="34">
+        <prompt>What was the "forty acres and a mule" promise?</prompt>
+        <options>
+            <option letter="a">Special Field Order No. 15 by General Sherman</option>
+            <option letter="b">A Congressional Reconstruction Act</option>
+            <option letter="c">A Freedmen's Bureau policy</option>
+            <option letter="d">A state law in Georgia</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Special Field Order No. 15, issued by General Sherman in 1865, promised 40 acres of confiscated Confederate land and a mule to freed families, though this was later reversed by President Johnson.</explanation>
+    </question>
+    <question number="35">
+        <prompt>What economic system largely replaced slavery in the post-war South?</prompt>
+        <options>
+            <option letter="a">Tenant farming and sharecropping</option>
+            <option letter="b">Industrial wage labor</option>
+            <option letter="c">Agricultural cooperatives</option>
+            <option letter="d">Small independent farms</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Tenant farming and sharecropping became the dominant agricultural systems in the post-war South, creating new forms of economic dependency for both black and white farmers.</explanation>
+    </question>
+    <question number="36">
+        <prompt>What was the primary purpose of the crop-lien system?</prompt>
+        <options>
+            <option letter="a">To provide credit to farmers using future crops as collateral</option>
+            <option letter="b">To regulate agricultural prices</option>
+            <option letter="c">To organize collective farming</option>
+            <option letter="d">To distribute government farming subsidies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The crop-lien system provided credit to farmers using their future crops as collateral, though high interest rates often trapped farmers in cycles of debt.</explanation>
+    </question>
+<question number="37">
+        <prompt>What was the significance of the "Black Friday" uprising in Louisiana?</prompt>
+        <options>
+            <option letter="a">A failed attempt by African Americans to defend voting rights</option>
+            <option letter="b">An economic protest</option>
+            <option letter="c">A labor strike</option>
+            <option letter="d">A military conflict</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Black Friday uprising was a failed attempt by African Americans to defend their voting rights against violent suppression in Louisiana.</explanation>
+    </question>
+    <question number="38">
+        <prompt>How did the "Labor Code" affect freed people in South Carolina?</prompt>
+        <options>
+            <option letter="a">Restricted worker rights and mobility</option>
+            <option letter="b">Protected worker interests</option>
+            <option letter="c">Increased wages</option>
+            <option letter="d">Improved working conditions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>South Carolina's Labor Code restricted worker rights and mobility by requiring annual contracts and imposing penalties for breaking them.</explanation>
+    </question>
+    <question number="39">
+        <prompt>What role did the "Loyal League" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Organized African American political activity</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Managed military affairs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Loyal League organized African American political activity and provided protection for black voters during Reconstruction.</explanation>
+    </question>
+    <question number="40">
+        <prompt>What was the purpose of the "Uniform Militia Act"?</prompt>
+        <options>
+            <option letter="a">To create white-controlled state militias</option>
+            <option letter="b">To protect African Americans</option>
+            <option letter="c">To support federal troops</option>
+            <option letter="d">To enforce civil rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Uniform Militia Act allowed Southern states to create white-controlled militias that were often used to intimidate African American voters.</explanation>
+    </question>
+<question number="41">
+        <prompt>Which Constitutional amendment abolished slavery in the United States?</prompt>
+        <options>
+            <option letter="a">13th Amendment</option>
+            <option letter="b">14th Amendment</option>
+            <option letter="c">15th Amendment</option>
+            <option letter="d">16th Amendment</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 13th Amendment, ratified in 1865, officially abolished slavery and involuntary servitude throughout the United States.</explanation>
+    </question>
+    <question number="42">
+        <prompt>What was President Andrew Johnson's background before becoming president?</prompt>
+        <options>
+            <option letter="a">Northern Republican congressman</option>
+            <option letter="b">Southern Democratic senator who remained loyal to the Union</option>
+            <option letter="c">Confederate general who switched sides</option>
+            <option letter="d">Northern abolitionist leader</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Andrew Johnson was a Southern Democrat from Tennessee who remained loyal to the Union during the Civil War, making him unique as the only Southern senator to retain his seat.</explanation>
+    </question>
+    <question number="43">
+        <prompt>What was the primary goal of the Black Codes enacted by Southern states in 1865-1866?</prompt>
+        <options>
+            <option letter="a">To protect African American voting rights</option>
+            <option letter="b">To restrict African American freedom and maintain white control</option>
+            <option letter="c">To promote racial equality</option>
+            <option letter="d">To provide education to former slaves</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Black Codes were laws passed by Southern states to restrict African Americans' freedoms and maintain white control through strict labor and social regulations.</explanation>
+    </question>
+    <question number="44">
+        <prompt>Which group opposed President Johnson's lenient Reconstruction policies?</prompt>
+        <options>
+            <option letter="a">Radical Republicans</option>
+            <option letter="b">Southern Democrats</option>
+            <option letter="c">Moderate Republicans</option>
+            <option letter="d">Freedmen's Bureau officials</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Radical Republicans, led by figures like Thaddeus Stevens and Charles Sumner, strongly opposed Johnson's lenient policies toward the South and pushed for more stringent Reconstruction measures.</explanation>
+    </question>
+<question number="45">
+        <prompt>What was the "Enforcement Act" of 1870 primarily designed to do?</prompt>
+        <options>
+            <option letter="a">Protect African American voting rights</option>
+            <option letter="b">Regulate commerce</option>
+            <option letter="c">Manage land distribution</option>
+            <option letter="d">Control military forces</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Act of 1870 was designed to protect African American voting rights by providing federal enforcement of the 15th Amendment.</explanation>
+    </question>
+    <question number="46">
+        <prompt>How did the "Poll Tax" affect voting rights?</prompt>
+        <options>
+            <option letter="a">Prevented poor citizens from voting through fees</option>
+            <option letter="b">Increased voter participation</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Improved election security</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Poll Tax effectively prevented many poor citizens, especially African Americans, from voting by requiring payment of a fee to vote.</explanation>
+    </question>
+    <question number="47">
+        <prompt>What was the significance of the "Force Bill" of 1871?</prompt>
+        <options>
+            <option letter="a">Gave presidents power to combat Klan violence</option>
+            <option letter="b">Restricted federal authority</option>
+            <option letter="c">Protected Confederate rights</option>
+            <option letter="d">Regulated commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Force Bill gave presidents the authority to use military force to combat Ku Klux Klan violence and protect civil rights.</explanation>
+    </question>
+    <question number="48">
+        <prompt>What role did the "Fusion Movement" play in Southern politics?</prompt>
+        <options>
+            <option letter="a">United black and white voters against Democratic control</option>
+            <option letter="b">Supported segregation</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Protected plantation interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Fusion Movement attempted to unite black and white voters against Democratic control through political coalitions in Southern states.</explanation>
+    </question>
+<question number="49">
+        <prompt>What impact did the Hamburg Massacre of 1876 have on Reconstruction?</prompt>
+        <options>
+            <option letter="a">Demonstrated the federal government's unwillingness to protect black rights</option>
+            <option letter="b">Led to increased military presence in the South</option>
+            <option letter="c">Resulted in new civil rights legislation</option>
+            <option letter="d">Strengthened Republican control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Hamburg Massacre, where white supremacists killed African American militia members in South Carolina, demonstrated the federal government's declining willingness to protect black rights.</explanation>
+    </question>
+    <question number="50">
+        <prompt>What was the "Reconstruction Constitution" in South Carolina known for?</prompt>
+        <options>
+            <option letter="a">Creating the South's most democratic state government</option>
+            <option letter="b">Restricting African American rights</option>
+            <option letter="c">Maintaining slavery</option>
+            <option letter="d">Supporting Confederate policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>South Carolina's 1868 "Reconstruction Constitution" created the most democratic state government in the South, with universal male suffrage and other progressive reforms.</explanation>
+    </question>
+    <question number="51">
+        <prompt>What was the primary goal of the Knights of the White Camelia?</prompt>
+        <options>
+            <option letter="a">To oppose Reconstruction and maintain white supremacy</option>
+            <option letter="b">To support Republican policies</option>
+            <option letter="c">To promote economic development</option>
+            <option letter="d">To protect freed slaves</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Knights of the White Camelia, similar to the KKK, was a secret society formed to oppose Reconstruction policies and maintain white supremacy in the South.</explanation>
+    </question>
+    <question number="52">
+        <prompt>What role did Robert Smalls play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Served as a Republican congressman from South Carolina</option>
+            <option letter="b">Led the Freedmen's Bureau</option>
+            <option letter="c">Commanded Confederate forces</option>
+            <option letter="d">Headed the Democratic Party</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Robert Smalls, a former slave who became famous for stealing a Confederate ship, served as a Republican congressman from South Carolina during Reconstruction.</explanation>
+    </question>
+<question number="53">
+        <prompt>What was the outcome of the Supreme Court's decision in United States v. Cruikshank (1876)?</prompt>
+        <options>
+            <option letter="a">Limited federal power to protect civil rights against private citizens</option>
+            <option letter="b">Strengthened federal civil rights enforcement</option>
+            <option letter="c">Established voting rights protections</option>
+            <option letter="d">Banned racial segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Cruikshank decision severely limited federal power by ruling that the 14th Amendment only restricted state actions, not those of private citizens, weakening civil rights protection.</explanation>
+    </question>
+    <question number="54">
+        <prompt>What was the primary purpose of Southern "Redeemer" governments?</prompt>
+        <options>
+            <option letter="a">To restore white Democratic control and reduce taxes</option>
+            <option letter="b">To promote racial equality</option>
+            <option letter="c">To support Reconstruction policies</option>
+            <option letter="d">To industrialize the South</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Redeemer governments sought to restore white Democratic control, reduce taxes and government spending, and limit the political rights gained by African Americans during Reconstruction.</explanation>
+    </question>
+    <question number="55">
+        <prompt>What was the significance of the Slaughterhouse Cases (1873)?</prompt>
+        <options>
+            <option letter="a">Limited the scope of the 14th Amendment's protection of civil rights</option>
+            <option letter="b">Expanded federal civil rights enforcement</option>
+            <option letter="c">Protected labor union rights</option>
+            <option letter="d">Regulated interstate commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Slaughterhouse Cases narrowly interpreted the 14th Amendment's privileges and immunities clause, limiting federal protection of civil rights and strengthening state powers.</explanation>
+    </question>
+    <question number="56">
+        <prompt>What role did African American women play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Established mutual aid societies and schools</option>
+            <option letter="b">Served in Congress</option>
+            <option letter="c">Led military units</option>
+            <option letter="d">Owned large plantations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>African American women played crucial roles in establishing mutual aid societies, schools, and churches, while also working to support their families and communities during Reconstruction.</explanation>
+    </question>
+<question number="57">
+        <prompt>What was the significance of the "New Departure" Democrats?</prompt>
+        <options>
+            <option letter="a">Accepted war amendments while opposing other Reconstruction policies</option>
+            <option letter="b">Supported full civil rights</option>
+            <option letter="c">Joined the Republican Party</option>
+            <option letter="d">Led military resistance</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "New Departure" Democrats strategically accepted the Civil War amendments while opposing other Reconstruction policies to regain political power.</explanation>
+    </question>
+    <question number="58">
+        <prompt>How did the end of Reconstruction affect public education in the South?</prompt>
+        <options>
+            <option letter="a">Led to segregated and unequal school systems</option>
+            <option letter="b">Improved educational quality</option>
+            <option letter="c">Increased funding</option>
+            <option letter="d">Created integrated schools</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to the establishment of segregated and unequal school systems, with African American schools receiving significantly less funding.</explanation>
+    </question>
+    <question number="59">
+        <prompt>What was the purpose of "Redeemer" constitutions?</prompt>
+        <options>
+            <option letter="a">To restrict African American rights and reduce state spending</option>
+            <option letter="b">To expand voting rights</option>
+            <option letter="c">To increase education funding</option>
+            <option letter="d">To protect civil rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Redeemer constitutions were designed to restrict African American rights, reduce state spending on public services, and restore conservative white Democratic control.</explanation>
+    </question>
+    <question number="60">
+        <prompt>What impact did the Supreme Court have on civil rights after Reconstruction?</prompt>
+        <options>
+            <option letter="a">Consistently ruled to limit federal civil rights protection</option>
+            <option letter="b">Expanded civil rights</option>
+            <option letter="c">Supported integration</option>
+            <option letter="d">Protected voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Supreme Court consistently ruled to limit federal civil rights protection through decisions in cases like United States v. Cruikshank and the Civil Rights Cases.</explanation>
+    </question>
+<question number="61">
+        <prompt>What was the main purpose of "Black Codes" in Mississippi?</prompt>
+        <options>
+            <option letter="a">To restrict African American freedom and maintain labor control</option>
+            <option letter="b">To protect freed slaves' rights</option>
+            <option letter="c">To promote racial equality</option>
+            <option letter="d">To establish public education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mississippi's Black Codes were designed to restrict African American freedom and maintain white control over black labor through strict regulations and vagrancy laws.</explanation>
+    </question>
+    <question number="62">
+        <prompt>What was the significance of the "shotgun policy" in Mississippi?</prompt>
+        <options>
+            <option letter="a">Armed intimidation of black voters at polling places</option>
+            <option letter="b">A hunting regulation</option>
+            <option letter="c">A military strategy</option>
+            <option letter="d">An economic policy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "shotgun policy" involved armed whites intimidating African American voters at polling places to prevent them from voting during Reconstruction.</explanation>
+    </question>
+    <question number="63">
+        <prompt>How did the Compromise of 1877 affect Southern education?</prompt>
+        <options>
+            <option letter="a">Led to reduced funding for public schools</option>
+            <option letter="b">Increased educational funding</option>
+            <option letter="c">Created integrated schools</option>
+            <option letter="d">Expanded higher education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to reduced funding for public schools, particularly those serving African American communities, as "Redeemer" governments cut education budgets.</explanation>
+    </question>
+    <question number="64">
+        <prompt>What was the purpose of the "eight box" ballot law?</prompt>
+        <options>
+            <option letter="a">To confuse and discourage illiterate voters</option>
+            <option letter="b">To organize voting precincts</option>
+            <option letter="c">To protect ballot security</option>
+            <option letter="d">To speed up vote counting</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "eight box" ballot law required voters to place different ballots in separate boxes, deliberately confusing illiterate voters to prevent them from voting correctly.</explanation>
+    </question>
+<question number="65">
+        <prompt>What was the purpose of the "Alabama Constitution" of 1875?</prompt>
+        <options>
+            <option letter="a">To restore Democratic control and limit black rights</option>
+            <option letter="b">To expand civil rights protection</option>
+            <option letter="c">To support Reconstruction policies</option>
+            <option letter="d">To increase education funding</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Alabama Constitution of 1875 was designed to restore Democratic control and limit African American rights while reducing state government powers.</explanation>
+    </question>
+    <question number="66">
+        <prompt>How did the "Militia Act" affect Southern states?</prompt>
+        <options>
+            <option letter="a">Allowed states to organize white-only militia units</option>
+            <option letter="b">Created integrated military forces</option>
+            <option letter="c">Strengthened federal control</option>
+            <option letter="d">Protected black rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Militia Act allowed Southern states to organize white-only militia units, which were often used to intimidate African American voters.</explanation>
+    </question>
+    <question number="67">
+        <prompt>What role did "Carpetbag Constitutions" play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Established Republican governments and civil rights</option>
+            <option letter="b">Restricted voting rights</option>
+            <option letter="c">Protected Confederate interests</option>
+            <option letter="d">Limited federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Carpetbag Constitutions were state constitutions written during Reconstruction that established Republican governments and protected civil rights.</explanation>
+    </question>
+    <question number="68">
+        <prompt>What was the impact of the "Cotton Tax"?</prompt>
+        <options>
+            <option letter="a">Created economic hardship for Southern farmers</option>
+            <option letter="b">Improved agricultural conditions</option>
+            <option letter="c">Increased cotton production</option>
+            <option letter="d">Supported freedmen</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Cotton Tax created economic hardship for Southern farmers by taxing their primary cash crop during the difficult post-war recovery period.</explanation>
+    </question>
+<question number="69">
+        <prompt>What was the primary goal of the Redeemers in the South?</prompt>
+        <options>
+            <option letter="a">To restore white Democratic control of state governments</option>
+            <option letter="b">To support Reconstruction policies</option>
+            <option letter="c">To promote racial equality</option>
+            <option letter="d">To industrialize the South</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Redeemers were conservative Democrats who sought to "redeem" the South from Republican control and restore white supremacy through political and sometimes violent means.</explanation>
+    </question>
+    <question number="70">
+        <prompt>What was the significance of the Mississippi Plan of 1875?</prompt>
+        <options>
+            <option letter="a">A strategy to intimidate black voters and restore Democratic control</option>
+            <option letter="b">A program to modernize Mississippi's economy</option>
+            <option letter="c">A plan to improve public education</option>
+            <option letter="d">A compromise with Republican leaders</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Mississippi Plan was a Democratic strategy using economic pressure and violence to prevent African Americans from voting, becoming a model for other Southern states.</explanation>
+    </question>
+    <question number="71">
+        <prompt>What controversial Supreme Court decision limited federal protection of civil rights in 1876?</prompt>
+        <options>
+            <option letter="a">United States v. Cruikshank</option>
+            <option letter="b">Plessy v. Ferguson</option>
+            <option letter="c">Dred Scott v. Sandford</option>
+            <option letter="d">Munn v. Illinois</option>
+        </options>
+        <answer>a</answer>
+        <explanation>United States v. Cruikshank severely limited federal power to protect civil rights by ruling that the 14th Amendment only applied to state actions, not those of private citizens.</explanation>
+    </question>
+    <question number="72">
+        <prompt>What event marked the beginning of the "Redemption" period in Virginia?</prompt>
+        <options>
+            <option letter="a">The Conservative Party's victory in 1869</option>
+            <option letter="b">The passage of new voting laws</option>
+            <option letter="c">A constitutional convention</option>
+            <option letter="d">The election of 1876</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Virginia's Conservative Party victory in 1869 made it the first Southern state to return to conservative Democratic control, beginning the "Redemption" period.</explanation>
+    </question>
+<question number="73">
+        <prompt>What was the significance of the "Red Shirts" in South Carolina?</prompt>
+        <options>
+            <option letter="a">A paramilitary group that intimidated Republican voters</option>
+            <option letter="b">A civil rights organization</option>
+            <option letter="c">A labor union</option>
+            <option letter="d">An educational society</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Red Shirts were a paramilitary organization in South Carolina that used violence and intimidation to prevent Republicans, especially African Americans, from voting.</explanation>
+    </question>
+    <question number="74">
+        <prompt>How did the "Crop-Lien Merchant System" affect farmers?</prompt>
+        <options>
+            <option letter="a">Created a cycle of debt through high-interest credit</option>
+            <option letter="b">Provided fair lending practices</option>
+            <option letter="c">Improved agricultural profits</option>
+            <option letter="d">Supported farmer independence</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Crop-Lien Merchant System created a cycle of debt by providing high-interest credit to farmers who had to pledge future crops as collateral.</explanation>
+    </question>
+    <question number="75">
+        <prompt>What role did "Black Codes" play in Mississippi?</prompt>
+        <options>
+            <option letter="a">Restricted African American freedom and mobility</option>
+            <option letter="b">Protected civil rights</option>
+            <option letter="c">Promoted racial equality</option>
+            <option letter="d">Supported education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mississippi's Black Codes were laws designed to restrict African American freedom and mobility by imposing strict labor and social regulations.</explanation>
+    </question>
+    <question number="76">
+        <prompt>What was the purpose of the "Joint Committee on Reconstruction"?</prompt>
+        <options>
+            <option letter="a">To oversee and investigate Southern Reconstruction</option>
+            <option letter="b">To support Confederate interests</option>
+            <option letter="c">To limit federal power</option>
+            <option letter="d">To restrict civil rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Joint Committee on Reconstruction was established by Congress to oversee and investigate conditions in the South during Reconstruction.</explanation>
+    </question>
+<question number="77">
+        <prompt>What was the significance of the "Georgia Platform" of 1870?</prompt>
+        <options>
+            <option letter="a">Marked the return of conservative Democratic control</option>
+            <option letter="b">Expanded civil rights protections</option>
+            <option letter="c">Supported Reconstruction policies</option>
+            <option letter="d">Created public education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Georgia Platform marked the return of conservative Democratic control and the effective end of Reconstruction in Georgia through political reorganization.</explanation>
+    </question>
+    <question number="78">
+        <prompt>How did the "White League" affect Louisiana politics?</prompt>
+        <options>
+            <option letter="a">Used violence to overthrow Republican government</option>
+            <option letter="b">Supported racial equality</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Promoted education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The White League used organized violence to overthrow the Republican government in Louisiana and restore Democratic control.</explanation>
+    </question>
+    <question number="79">
+        <prompt>What role did "Radical Republicans" play in Congressional Reconstruction?</prompt>
+        <options>
+            <option letter="a">Pushed for stronger civil rights protection</option>
+            <option letter="b">Supported moderate policies</option>
+            <option letter="c">Opposed federal intervention</option>
+            <option letter="d">Protected Confederate interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Radical Republicans pushed for stronger civil rights protection and more extensive federal intervention in Southern reconstruction.</explanation>
+    </question>
+    <question number="80">
+        <prompt>What was the purpose of the "Educational Association" in South Carolina?</prompt>
+        <options>
+            <option letter="a">To establish schools for freed people</option>
+            <option letter="b">To restrict education access</option>
+            <option letter="c">To support segregation</option>
+            <option letter="d">To train Confederate veterans</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Educational Association worked to establish schools for freed people and provide educational opportunities during Reconstruction.</explanation>
+    </question>
+<question number="81">
+        <prompt>What was the literacy rate among freed slaves in 1865?</prompt>
+        <options>
+            <option letter="a">About 5 percent</option>
+            <option letter="b">About 15 percent</option>
+            <option letter="c">About 25 percent</option>
+            <option letter="d">About 35 percent</option>
+        </options>
+        <answer>a</answer>
+        <explanation>When slavery ended, only about 5 percent of freed slaves could read and write, highlighting the urgent need for education during Reconstruction.</explanation>
+    </question>
+    <question number="82">
+        <prompt>What role did the African American church play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Served as centers for education, politics, and community organization</option>
+            <option letter="b">Focused solely on religious services</option>
+            <option letter="c">Operated primarily as business centers</option>
+            <option letter="d">Functioned mainly as military recruitment centers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>African American churches were crucial institutions that served multiple roles: religious centers, schools, political meeting places, and community organizing hubs.</explanation>
+    </question>
+    <question number="83">
+        <prompt>What was significant about the establishment of Howard University in 1867?</prompt>
+        <options>
+            <option letter="a">It was created specifically to educate African American students</option>
+            <option letter="b">It was the first public university in the South</option>
+            <option letter="c">It was founded by former Confederate leaders</option>
+            <option letter="d">It was exclusively for white students</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Howard University was established by the Freedmen's Bureau specifically to provide higher education opportunities for African American students during Reconstruction.</explanation>
+    </question>
+    <question number="84">
+        <prompt>What was the primary focus of the first public school systems in the South?</prompt>
+        <options>
+            <option letter="a">Establishing segregated schools for both races</option>
+            <option letter="b">Creating integrated education</option>
+            <option letter="c">Teaching only vocational skills</option>
+            <option letter="d">Focusing only on primary education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The first public school systems established in the South during Reconstruction were segregated by race, though this represented the first time public education was available to African Americans.</explanation>
+    </question>
+<question number="85">
+        <prompt>What role did Northern industrialists play in ending Reconstruction?</prompt>
+        <options>
+            <option letter="a">Withdrew support to focus on economic development</option>
+            <option letter="b">Continued supporting civil rights</option>
+            <option letter="c">Increased Southern investment</option>
+            <option letter="d">Opposed the Compromise of 1877</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Northern industrialists withdrew support for Reconstruction to focus on national economic development and reconciliation with Southern business interests.</explanation>
+    </question>
+    <question number="86">
+        <prompt>What was the significance of the "Redemption" period in Georgia?</prompt>
+        <options>
+            <option letter="a">Return to conservative Democratic control and racial restrictions</option>
+            <option letter="b">Expansion of civil rights</option>
+            <option letter="c">Economic prosperity</option>
+            <option letter="d">Educational reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Georgia's "Redemption" marked the return to conservative Democratic control and the implementation of racial restrictions through new laws and policies.</explanation>
+    </question>
+    <question number="87">
+        <prompt>How did the Compromise of 1877 affect federal troops in the South?</prompt>
+        <options>
+            <option letter="a">Required their withdrawal from political involvement</option>
+            <option letter="b">Increased their presence</option>
+            <option letter="c">Changed their command structure</option>
+            <option letter="d">Expanded their authority</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 required the withdrawal of federal troops from political involvement in the South, effectively ending military support for Reconstruction.</explanation>
+    </question>
+    <question number="88">
+        <prompt>What was the impact of sharecropping on former slaves?</prompt>
+        <options>
+            <option letter="a">Created a cycle of debt and dependency</option>
+            <option letter="b">Provided economic independence</option>
+            <option letter="c">Led to land ownership</option>
+            <option letter="d">Improved living conditions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sharecropping typically created a cycle of debt and dependency for former slaves, as high interest rates and low crop prices made it difficult to earn profits.</explanation>
+    </question>
+<question number="89">
+        <prompt>How did Southern states restrict African American voting after Reconstruction?</prompt>
+        <options>
+            <option letter="a">Through poll taxes, literacy tests, and grandfather clauses</option>
+            <option letter="b">By expanding voting rights</option>
+            <option letter="c">Through federal intervention</option>
+            <option letter="d">By increasing polling places</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Southern states implemented poll taxes, literacy tests, and grandfather clauses to systematically disenfranchise African American voters after Reconstruction.</explanation>
+    </question>
+    <question number="90">
+        <prompt>What impact did the Compromise of 1877 have on civil rights legislation?</prompt>
+        <options>
+            <option letter="a">Effectively ended federal enforcement of civil rights laws</option>
+            <option letter="b">Strengthened civil rights protections</option>
+            <option letter="c">Created new civil rights laws</option>
+            <option letter="d">Expanded voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 effectively ended federal enforcement of civil rights laws, leaving African Americans vulnerable to discrimination and disenfranchisement.</explanation>
+    </question>
+    <question number="91">
+        <prompt>What was the significance of the "Force Bill" of 1875?</prompt>
+        <options>
+            <option letter="a">Last attempt to protect African American voting rights</option>
+            <option letter="b">First civil rights legislation</option>
+            <option letter="c">Created the Freedmen's Bureau</option>
+            <option letter="d">Established military districts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Force Bill of 1875 was Congress's last significant attempt to protect African American voting rights before the end of Reconstruction.</explanation>
+    </question>
+    <question number="92">
+        <prompt>What role did violence play in ending Reconstruction in Louisiana?</prompt>
+        <options>
+            <option letter="a">Intimidated Republican voters and officials into submission</option>
+            <option letter="b">Protected voting rights</option>
+            <option letter="c">Supported federal policies</option>
+            <option letter="d">Prevented economic change</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Violence and intimidation by groups like the White League effectively suppressed Republican voting and forced Republican officials from office in Louisiana.</explanation>
+    </question>
+<question number="93">
+        <prompt>What was the purpose of "apprenticeship" laws passed by Southern states after the Civil War?</prompt>
+        <options>
+            <option letter="a">To force African American children into labor contracts</option>
+            <option letter="b">To provide job training for freedmen</option>
+            <option letter="c">To establish technical schools</option>
+            <option letter="d">To create industrial programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Apprenticeship laws were part of the Black Codes, allowing courts to force African American children into labor contracts, often returning them to their former masters.</explanation>
+    </question>
+    <question number="94">
+        <prompt>What role did P.B.S. Pinchback play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Served as the first African American governor in U.S. history</option>
+            <option letter="b">Led the Freedmen's Bureau</option>
+            <option letter="c">Commanded Union military forces</option>
+            <option letter="d">Headed the Republican Party</option>
+        </options>
+        <answer>a</answer>
+        <explanation>P.B.S. Pinchback became the first African American governor in U.S. history when he briefly served as Louisiana's governor during Reconstruction in 1872-73.</explanation>
+    </question>
+    <question number="95">
+        <prompt>What was the "Mississippi Plan" of 1875?</prompt>
+        <options>
+            <option letter="a">A campaign of violence and intimidation to suppress black voting</option>
+            <option letter="b">An economic development program</option>
+            <option letter="c">A public education initiative</option>
+            <option letter="d">A land redistribution scheme</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Mississippi Plan was a coordinated campaign of violence, intimidation, and fraud used by Democrats to suppress black voting and restore white Democratic control.</explanation>
+    </question>
+    <question number="96">
+        <prompt>What was the significance of the "Exodusters" movement?</prompt>
+        <options>
+            <option letter="a">Mass migration of African Americans to Kansas</option>
+            <option letter="b">Return of Confederate soldiers home</option>
+            <option letter="c">Movement of carpetbaggers to the South</option>
+            <option letter="d">Relocation of Native Americans</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Exodusters were African Americans who fled violence and oppression in the South, migrating to Kansas in 1879-80 in search of freedom and opportunity.</explanation>
+    </question>
+<question number="97">
+        <prompt>What was the primary goal of the Ku Klux Klan during Reconstruction?</prompt>
+        <options>
+            <option letter="a">To terrorize African Americans and Republicans into political submission</option>
+            <option letter="b">To promote economic development</option>
+            <option letter="c">To support federal policies</option>
+            <option letter="d">To protect voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Ku Klux Klan used violence and intimidation to terrorize African Americans and their white Republican allies, aiming to restore Democratic control and white supremacy.</explanation>
+    </question>
+    <question number="98">
+        <prompt>How did the Civil Rights Act of 1866 define citizenship?</prompt>
+        <options>
+            <option letter="a">All persons born in the United States regardless of race</option>
+            <option letter="b">Only white males over 21</option>
+            <option letter="c">Anyone who owned property</option>
+            <option letter="d">Former Union soldiers only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Act of 1866 defined citizenship as belonging to all persons born in the United States, regardless of race or previous condition of servitude.</explanation>
+    </question>
+    <question number="99">
+        <prompt>What was the purpose of the Southern Homestead Act of 1866?</prompt>
+        <options>
+            <option letter="a">To provide land opportunities to freedmen and poor whites</option>
+            <option letter="b">To return land to Confederate veterans</option>
+            <option letter="c">To establish military bases</option>
+            <option letter="d">To create national parks</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Southern Homestead Act opened public lands in five Southern states exclusively to freedmen and loyal whites, though its impact was limited by various factors.</explanation>
+    </question>
+    <question number="100">
+        <prompt>What was the significance of the Reconstruction Act of 1867's requirement for new state constitutions?</prompt>
+        <options>
+            <option letter="a">Required states to guarantee universal male suffrage</option>
+            <option letter="b">Maintained existing voting restrictions</option>
+            <option letter="c">Limited voting to property owners</option>
+            <option letter="d">Excluded former slaves from voting</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Reconstruction Act required Southern states to write new constitutions guaranteeing universal male suffrage, including African Americans, as a condition for readmission to the Union.</explanation>
+    </question>
+<question number="101">
+        <prompt>What was the significance of the "Camilla Massacre" in Georgia?</prompt>
+        <options>
+            <option letter="a">Violent suppression of African American political activity</option>
+            <option letter="b">Labor dispute resolution</option>
+            <option letter="c">Educational reform protest</option>
+            <option letter="d">Economic policy debate</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Camilla Massacre of 1868 involved the violent suppression of African American political activity in Georgia, demonstrating the dangers faced by black voters.</explanation>
+    </question>
+    <question number="102">
+        <prompt>How did the "crop-lien" system affect Southern agriculture?</prompt>
+        <options>
+            <option letter="a">Created a cycle of debt for farmers</option>
+            <option letter="b">Improved agricultural productivity</option>
+            <option letter="c">Increased farmer independence</option>
+            <option letter="d">Reduced cotton production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The crop-lien system created a cycle of debt for farmers who had to mortgage their future crops for current supplies at high interest rates.</explanation>
+    </question>
+    <question number="103">
+        <prompt>What role did the "Union Aid Societies" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided assistance to freedmen and poor whites</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed Reconstruction policies</option>
+            <option letter="d">Managed military operations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union Aid Societies provided food, clothing, education, and other assistance to freedmen and poor whites during Reconstruction.</explanation>
+    </question>
+    <question number="104">
+        <prompt>What was the purpose of the "Alabama Claims"?</prompt>
+        <options>
+            <option letter="a">To seek compensation from Britain for Civil War damages</option>
+            <option letter="b">To distribute land to freedmen</option>
+            <option letter="c">To establish voting rights</option>
+            <option letter="d">To fund education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Alabama Claims sought compensation from Britain for damages caused by Confederate ships built in British shipyards during the Civil War.</explanation>
+    </question>
+<question number="105">
+        <prompt>What was the significance of the "Coushatta Massacre"?</prompt>
+        <options>
+            <option letter="a">Murder of Republican officials to regain white Democratic control</option>
+            <option letter="b">Labor dispute resolution</option>
+            <option letter="c">Religious conflict</option>
+            <option letter="d">Economic protest</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Coushatta Massacre of 1874 involved the murder of Republican officials in Louisiana, demonstrating violent Democratic efforts to regain political control.</explanation>
+    </question>
+    <question number="106">
+        <prompt>How did the "convict lease system" affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Created a new form of forced labor targeting African Americans</option>
+            <option letter="b">Reformed prison conditions</option>
+            <option letter="c">Provided job training</option>
+            <option letter="d">Reduced crime rates</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The convict lease system created a new form of forced labor by allowing businesses to lease prisoners, disproportionately targeting African Americans through selective law enforcement.</explanation>
+    </question>
+    <question number="107">
+        <prompt>What role did the "Colored Farmers' Alliance" play?</prompt>
+        <options>
+            <option letter="a">Organized African American farmers for economic cooperation</option>
+            <option letter="b">Supported plantation owners</option>
+            <option letter="c">Opposed agricultural reform</option>
+            <option letter="d">Managed slave labor</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Colored Farmers' Alliance organized African American farmers for economic cooperation and mutual support during the late Reconstruction period.</explanation>
+    </question>
+    <question number="108">
+        <prompt>What was the purpose of "forty acres and a mule" certificates?</prompt>
+        <options>
+            <option letter="a">Temporary land grants that were later revoked</option>
+            <option letter="b">Permanent property deeds</option>
+            <option letter="c">Agricultural training documents</option>
+            <option letter="d">Military service rewards</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "forty acres and a mule" certificates were temporary land grants given to freedmen by Sherman's Special Field Order 15, but were later revoked by President Johnson.</explanation>
+    </question>
+<question number="109">
+        <prompt>What was the significance of the "Enforcement Acts" collectively?</prompt>
+        <options>
+            <option letter="a">Created federal power to protect civil rights and voting</option>
+            <option letter="b">Reduced federal authority</option>
+            <option letter="c">Supported state sovereignty</option>
+            <option letter="d">Protected Confederate rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Acts collectively created federal authority to protect civil rights and voting rights through military and legal intervention.</explanation>
+    </question>
+    <question number="110">
+        <prompt>How did the end of Reconstruction affect African American political participation?</prompt>
+        <options>
+            <option letter="a">Led to widespread disenfranchisement</option>
+            <option letter="b">Increased political power</option>
+            <option letter="c">Improved voting rights</option>
+            <option letter="d">Strengthened representation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to widespread disenfranchisement of African Americans through various legal and extralegal means.</explanation>
+    </question>
+    <question number="111">
+        <prompt>What was the overall impact of the "Redeemer" period on the South?</prompt>
+        <options>
+            <option letter="a">Restored white Democratic control and racial segregation</option>
+            <option letter="b">Improved civil rights</option>
+            <option letter="c">Increased economic equality</option>
+            <option letter="d">Strengthened federal oversight</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Redeemer period restored white Democratic control and established racial segregation across the South, effectively ending Reconstruction reforms.</explanation>
+    </question>
+    <question number="112">
+        <prompt>What was the lasting legacy of Reconstruction on American civil rights?</prompt>
+        <options>
+            <option letter="a">Set precedents for federal civil rights protection</option>
+            <option letter="b">Permanently secured equality</option>
+            <option letter="c">Ended racial discrimination</option>
+            <option letter="d">Created lasting integration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>While ultimately limited, Reconstruction established important precedents for federal civil rights protection and constitutional amendments that would be built upon in the 20th century.</explanation>
+    </question>
+<question number="113">
+        <prompt>What was the "Education Clause" in Southern state constitutions?</prompt>
+        <options>
+            <option letter="a">Required establishment of public schools but allowed segregation</option>
+            <option letter="b">Banned public education</option>
+            <option letter="c">Required integrated schools</option>
+            <option letter="d">Focused on higher education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Education Clause required Southern states to establish public school systems but allowed racial segregation, setting the pattern for "separate but equal" education.</explanation>
+    </question>
+    <question number="114">
+        <prompt>How did the "Exodus of 1879" affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Demonstrated African Americans' willingness to leave the South</option>
+            <option letter="b">Strengthened Southern economy</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Increased cotton production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Exodus of 1879 showed African Americans' willingness to leave the South for Kansas and other states to escape discrimination and violence.</explanation>
+    </question>
+    <question number="115">
+        <prompt>What was the purpose of "Republican Clubs" during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Organized political activity and protected Republican voters</option>
+            <option letter="b">Supported Confederate interests</option>
+            <option letter="c">Promoted segregation</option>
+            <option letter="d">Managed economic policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Republican Clubs organized political activity and provided protection for Republican voters, particularly African Americans, during Reconstruction.</explanation>
+    </question>
+    <question number="116">
+        <prompt>What impact did the "Return to Home Rule" movement have?</prompt>
+        <options>
+            <option letter="a">Ended federal oversight of Southern states</option>
+            <option letter="b">Increased federal control</option>
+            <option letter="c">Improved civil rights</option>
+            <option letter="d">Strengthened Reconstruction</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "Return to Home Rule" movement successfully ended federal oversight of Southern states, allowing conservative Democrats to regain control of state governments.</explanation>
+    </question>
+<question number="117">
+        <prompt>What was the significance of the "textbook wars" during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Debates over how to teach Civil War history in Southern schools</option>
+            <option letter="b">Conflicts over school funding</option>
+            <option letter="c">Disputes about teacher qualifications</option>
+            <option letter="d">Arguments over school segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The textbook wars reflected conflicts over how the Civil War and slavery should be portrayed in Southern school textbooks during Reconstruction.</explanation>
+    </question>
+    <question number="118">
+        <prompt>How did the Freedmen's Bureau handle family reunification?</prompt>
+        <options>
+            <option letter="a">Helped separated families locate and reunite with each other</option>
+            <option letter="b">Prevented family reunification</option>
+            <option letter="c">Only assisted children</option>
+            <option letter="d">Focused on employment instead</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau helped formerly enslaved families locate and reunite with members who had been separated during slavery.</explanation>
+    </question>
+    <question number="119">
+        <prompt>What was the purpose of the "Louisiana Unification Movement"?</prompt>
+        <options>
+            <option letter="a">To promote racial cooperation and integration</option>
+            <option letter="b">To restore Confederate control</option>
+            <option letter="c">To oppose Reconstruction</option>
+            <option letter="d">To support segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Louisiana Unification Movement was a brief effort to promote racial cooperation and integration in Louisiana politics during Reconstruction.</explanation>
+    </question>
+    <question number="120">
+        <prompt>What impact did the "Labor Contract Law" have in Mississippi?</prompt>
+        <options>
+            <option letter="a">Restricted freedmen's economic mobility</option>
+            <option letter="b">Improved working conditions</option>
+            <option letter="c">Increased wages</option>
+            <option letter="d">Protected workers' rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mississippi's Labor Contract Law restricted freedmen's economic mobility by requiring annual labor contracts and imposing penalties for breaking them.</explanation>
+    </question>
+<question number="121">
+        <prompt>What impact did the Civil Rights Act of 1875 have?</prompt>
+        <options>
+            <option letter="a">Limited impact due to lack of enforcement and later Supreme Court reversal</option>
+            <option letter="b">Successfully integrated all public facilities</option>
+            <option letter="c">Created a federal civil rights commission</option>
+            <option letter="d">Established voting rights protections</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Act of 1875, which banned discrimination in public accommodations, had limited impact due to weak enforcement and was later struck down by the Supreme Court in 1883.</explanation>
+    </question>
+    <question number="122">
+        <prompt>What was the significance of the "New Departure" strategy?</prompt>
+        <options>
+            <option letter="a">Democrats accepting the war amendments while opposing other Reconstruction policies</option>
+            <option letter="b">Republicans abandoning Reconstruction efforts</option>
+            <option letter="c">African Americans forming independent political parties</option>
+            <option letter="d">Northern industrialists investing in the South</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "New Departure" was a Democratic strategy of accepting the Civil War amendments while opposing other aspects of Reconstruction, helping them regain political power.</explanation>
+    </question>
+    <question number="123">
+        <prompt>How did the Panic of 1873 affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Reduced Northern support for Reconstruction as economic issues took priority</option>
+            <option letter="b">Increased federal funding for Southern development</option>
+            <option letter="c">Strengthened Republican control in the South</option>
+            <option letter="d">Led to new civil rights legislation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Panic of 1873 led to a severe economic depression that reduced Northern interest in and support for Reconstruction as domestic economic issues took priority.</explanation>
+    </question>
+    <question number="124">
+        <prompt>What was the "Liberal Republican" movement of 1872?</prompt>
+        <options>
+            <option letter="a">Republicans who opposed Grant's corruption and Reconstruction policies</option>
+            <option letter="b">Supporters of more radical Reconstruction measures</option>
+            <option letter="c">A coalition of Southern Republicans and Democrats</option>
+            <option letter="d">An African American political organization</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Liberal Republicans were reformers who opposed corruption under Grant and favored ending Reconstruction, leading to a failed presidential campaign by Horace Greeley in 1872.</explanation>
+    </question>
+<question number="125">
+        <prompt>What was the "Colfax Massacre" of 1873?</prompt>
+        <options>
+            <option letter="a">The killing of African Americans defending a Louisiana courthouse</option>
+            <option letter="b">A battle between Union and Confederate forces</option>
+            <option letter="c">A labor strike that turned violent</option>
+            <option letter="d">A naval engagement</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Colfax Massacre occurred when white supremacists attacked African Americans defending a courthouse in Louisiana, killing over 100 people in one of Reconstruction's bloodiest incidents.</explanation>
+    </question>
+    <question number="126">
+        <prompt>What was the significance of the "Grandfather Clause" in Southern voting restrictions?</prompt>
+        <options>
+            <option letter="a">Exempted whites from voting restrictions by referring to pre-1867 voters</option>
+            <option letter="b">Required all voters to prove their grandfathers voted</option>
+            <option letter="c">Gave special rights to elderly voters</option>
+            <option letter="d">Protected African American voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Grandfather Clause exempted whites from voting restrictions by allowing anyone whose grandfather could vote before 1867 to vote, effectively excluding African Americans.</explanation>
+    </question>
+    <question number="127">
+        <prompt>What was the primary goal of the First Reconstruction Act's military districts?</prompt>
+        <options>
+            <option letter="a">To oversee the creation of new state governments and protect freedmen</option>
+            <option letter="b">To punish former Confederates</option>
+            <option letter="c">To manage agricultural production</option>
+            <option letter="d">To collect taxes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The military districts were established to oversee the creation of new state governments based on universal male suffrage and to protect the rights of freedmen.</explanation>
+    </question>
+    <question number="128">
+        <prompt>How did the Compromise of 1877 affect African Americans in the South?</prompt>
+        <options>
+            <option letter="a">Left them vulnerable to increased discrimination and violence</option>
+            <option letter="b">Strengthened their voting rights</option>
+            <option letter="c">Provided them with new economic opportunities</option>
+            <option letter="d">Guaranteed federal protection</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877's removal of federal troops left African Americans vulnerable to increased discrimination, violence, and the loss of political rights in the South.</explanation>
+    </question>
+<question number="129">
+        <prompt>What was the significance of the "Paschal's Plantation" case?</prompt>
+        <options>
+            <option letter="a">Demonstrated the limits of land redistribution efforts</option>
+            <option letter="b">Established sharecropping laws</option>
+            <option letter="c">Created new labor regulations</option>
+            <option letter="d">Protected freedmen's rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Paschal's Plantation case showed the limits of land redistribution when freedmen were forced to return land to its former Confederate owner despite Union promises.</explanation>
+    </question>
+    <question number="130">
+        <prompt>How did the Freedmen's Bureau handle labor contracts?</prompt>
+        <options>
+            <option letter="a">Mediated between planters and freedmen to establish fair contracts</option>
+            <option letter="b">Gave all land to freedmen</option>
+            <option letter="c">Supported plantation owners exclusively</option>
+            <option letter="d">Ignored labor issues entirely</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau mediated between planters and freedmen to establish fair labor contracts, though its effectiveness was limited by insufficient resources.</explanation>
+    </question>
+    <question number="131">
+        <prompt>What role did African American churches play in political organization?</prompt>
+        <options>
+            <option letter="a">Served as centers for political meetings and voter education</option>
+            <option letter="b">Remained politically neutral</option>
+            <option letter="c">Supported Confederate interests</option>
+            <option letter="d">Opposed voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>African American churches served as crucial centers for political meetings, voter education, and community organization during Reconstruction.</explanation>
+    </question>
+    <question number="132">
+        <prompt>What was the impact of the "shop system" in sharecropping?</prompt>
+        <options>
+            <option letter="a">Created additional debt through overpriced goods</option>
+            <option letter="b">Provided fair prices to farmers</option>
+            <option letter="c">Improved agricultural efficiency</option>
+            <option letter="d">Reduced farming costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The shop system forced sharecroppers to buy supplies at inflated prices from plantation stores, creating additional debt and economic dependency.</explanation>
+    </question>
+<question number="133">
+        <prompt>What role did the Union League play in organizing African American voters?</prompt>
+        <options>
+            <option letter="a">Provided political education and protection for black voters</option>
+            <option letter="b">Opposed black voting rights</option>
+            <option letter="c">Supported Confederate interests</option>
+            <option letter="d">Focused on economic development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Union League provided political education to newly enfranchised African Americans and offered protection when they exercised their voting rights.</explanation>
+    </question>
+    <question number="134">
+        <prompt>What was the significance of the Civil Rights Act of 1875?</prompt>
+        <options>
+            <option letter="a">Last major civil rights legislation until the 1950s</option>
+            <option letter="b">First voting rights law</option>
+            <option letter="c">Created the Freedmen's Bureau</option>
+            <option letter="d">Established military districts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Act of 1875 was the last major civil rights legislation passed by Congress until the Civil Rights Movement of the 1950s and 1960s.</explanation>
+    </question>
+    <question number="135">
+        <prompt>What was the purpose of the "pig law" in South Carolina?</prompt>
+        <options>
+            <option letter="a">To imprison African Americans through harsh theft penalties</option>
+            <option letter="b">To regulate livestock farming</option>
+            <option letter="c">To improve food safety</option>
+            <option letter="d">To support agricultural development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "pig law" made theft of farm animals a major felony, used to imprison African Americans through disproportionate enforcement and harsh penalties.</explanation>
+    </question>
+    <question number="136">
+        <prompt>What impact did the Enforcement Acts have on the Ku Klux Klan?</prompt>
+        <options>
+            <option letter="a">Temporarily suppressed Klan activity in many areas</option>
+            <option letter="b">Strengthened the organization</option>
+            <option letter="c">Had no effect on Klan operations</option>
+            <option letter="d">Led to increased membership</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Acts temporarily suppressed Klan activity in many areas through federal prosecution, though similar organizations later emerged under different names.</explanation>
+    </question>
+<question number="137">
+        <prompt>What was the primary goal of the Enforcement Acts of 1870-1871?</prompt>
+        <options>
+            <option letter="a">To protect African American voting rights from Klan violence</option>
+            <option letter="b">To regulate commerce</option>
+            <option letter="c">To establish schools</option>
+            <option letter="d">To manage land distribution</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Acts were passed to protect African American voting rights from Ku Klux Klan violence and intimidation in the South.</explanation>
+    </question>
+    <question number="138">
+        <prompt>What was the significance of Blanche K. Bruce?</prompt>
+        <options>
+            <option letter="a">Second African American U.S. Senator and former slave</option>
+            <option letter="b">Leader of the Freedmen's Bureau</option>
+            <option letter="c">Confederate general</option>
+            <option letter="d">White House staff member</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Blanche K. Bruce was the second African American U.S. Senator and the first former slave to serve a full Senate term, representing Mississippi.</explanation>
+    </question>
+    <question number="139">
+        <prompt>What role did scalawags play in Southern politics?</prompt>
+        <options>
+            <option letter="a">Southern whites who supported Republican Reconstruction policies</option>
+            <option letter="b">Northern carpetbaggers</option>
+            <option letter="c">Confederate veterans</option>
+            <option letter="d">Democratic Party leaders</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Scalawags were Southern whites who supported Republican Reconstruction policies and often worked with African Americans, earning contempt from other whites.</explanation>
+    </question>
+    <question number="140">
+        <prompt>What was the purpose of the Sumner Civil Rights Bill?</prompt>
+        <options>
+            <option letter="a">To guarantee equal access to public accommodations</option>
+            <option letter="b">To establish voting rights</option>
+            <option letter="c">To create the Freedmen's Bureau</option>
+            <option letter="d">To regulate labor contracts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Charles Sumner's Civil Rights Bill sought to guarantee equal access to public accommodations regardless of race, though the final 1875 law was weaker than his original proposal.</explanation>
+    </question>
+<question number="141">
+        <prompt>What was the primary purpose of the Freedmen's Bureau schools?</prompt>
+        <options>
+            <option letter="a">To provide basic education and job training to former slaves</option>
+            <option letter="b">To train military officers</option>
+            <option letter="c">To educate wealthy southerners</option>
+            <option letter="d">To teach agricultural techniques only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau schools were established to provide basic education, including reading and writing, as well as job training to former slaves and their children.</explanation>
+    </question>
+    <question number="142">
+        <prompt>How did the "Lost Cause" ideology affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">It justified resistance to Reconstruction policies</option>
+            <option letter="b">It supported racial equality</option>
+            <option letter="c">It promoted Northern interests</option>
+            <option letter="d">It encouraged industrial development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "Lost Cause" ideology romanticized the Confederate cause and justified resistance to Reconstruction policies while promoting white supremacy.</explanation>
+    </question>
+    <question number="143">
+        <prompt>What was the significance of the "Battle of Liberty Place" in 1874?</prompt>
+        <options>
+            <option letter="a">White supremacists temporarily overthrew Louisiana's government</option>
+            <option letter="b">Union forces won a major victory</option>
+            <option letter="c">Freedmen gained political control</option>
+            <option letter="d">Republicans expanded their power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Battle of Liberty Place was an attempted coup by the White League that temporarily overthrew Louisiana's Reconstruction government in New Orleans.</explanation>
+    </question>
+    <question number="144">
+        <prompt>What impact did the Compromise of 1877 have on Southern Republicans?</prompt>
+        <options>
+            <option letter="a">Led to the collapse of Republican power in the South</option>
+            <option letter="b">Strengthened their political position</option>
+            <option letter="c">Increased their economic influence</option>
+            <option letter="d">Improved their relationship with Democrats</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 led to the collapse of Republican power in the South as federal support was withdrawn, ending Reconstruction.</explanation>
+    </question>
+<question number="145">
+        <prompt>What was the purpose of the Freedmen's Bureau created in 1865?</prompt>
+        <options>
+            <option letter="a">To provide aid and education to former slaves and poor whites</option>
+            <option letter="b">To enforce military rule in the South</option>
+            <option letter="c">To collect Confederate war debts</option>
+            <option letter="d">To organize Southern political parties</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau was established to assist former slaves and poor whites with food, housing, education, and legal assistance during Reconstruction.</explanation>
+    </question>
+    <question number="146">
+        <prompt>What was a major provision of the First Reconstruction Act of 1867?</prompt>
+        <options>
+            <option letter="a">Divided the South into five military districts</option>
+            <option letter="b">Granted immediate citizenship to all former slaves</option>
+            <option letter="c">Redistributed plantation lands to former slaves</option>
+            <option letter="d">Restored voting rights to Confederate leaders</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The First Reconstruction Act divided the former Confederacy into five military districts, each under the command of a Union general.</explanation>
+    </question>
+    <question number="147">
+        <prompt>What was required of Southern states to be readmitted to the Union under Congressional Reconstruction?</prompt>
+        <options>
+            <option letter="a">Ratify the 14th Amendment and guarantee black male suffrage</option>
+            <option letter="b">Pay reparations to Northern states</option>
+            <option letter="c">Reject all former Confederate officials</option>
+            <option letter="d">Maintain a Union military presence indefinitely</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Southern states had to ratify the 14th Amendment and guarantee voting rights to black males before being readmitted to the Union under Congressional Reconstruction.</explanation>
+    </question>
+    <question number="148">
+        <prompt>What was the significance of the Civil Rights Act of 1866?</prompt>
+        <options>
+            <option letter="a">It defined citizenship and guaranteed equal protection under the law</option>
+            <option letter="b">It established public education in the South</option>
+            <option letter="c">It provided land grants to former slaves</option>
+            <option letter="d">It created the Freedmen's Bureau</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Act of 1866 defined citizenship rights and made it illegal to deny these rights based on race, setting the foundation for the 14th Amendment.</explanation>
+    </question>
+<question number="149">
+        <prompt>What was the significance of the "Constitutional Union Guard"?</prompt>
+        <options>
+            <option letter="a">A paramilitary group opposing Reconstruction</option>
+            <option letter="b">A federal protection force</option>
+            <option letter="c">A civil rights organization</option>
+            <option letter="d">An educational society</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Constitutional Union Guard was a paramilitary organization that used violence and intimidation to oppose Reconstruction policies and Republican control.</explanation>
+    </question>
+    <question number="150">
+        <prompt>How did the "Compromise of 1877" affect the South's economy?</prompt>
+        <options>
+            <option letter="a">Promised federal support for Southern railroads and industry</option>
+            <option letter="b">Restricted economic development</option>
+            <option letter="c">Increased agricultural aid</option>
+            <option letter="d">Protected small farmers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 included promises of federal support for Southern railroad construction and industrial development to gain Southern support.</explanation>
+    </question>
+    <question number="151">
+        <prompt>What role did the "Farmer's Alliance" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Organized farmers to resist economic exploitation</option>
+            <option letter="b">Supported plantation owners</option>
+            <option letter="c">Opposed agricultural reform</option>
+            <option letter="d">Protected slave labor</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Farmer's Alliance organized farmers to resist economic exploitation by merchants and landlords through cooperative economic actions.</explanation>
+    </question>
+    <question number="152">
+        <prompt>What was the purpose of "Reconstruction Schools"?</prompt>
+        <options>
+            <option letter="a">To provide education to formerly enslaved people</option>
+            <option letter="b">To train Confederate soldiers</option>
+            <option letter="c">To support segregation</option>
+            <option letter="d">To manage military training</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Reconstruction Schools were established to provide basic education and vocational training to formerly enslaved people and their children.</explanation>
+    </question>
+<question number="153">
+        <prompt>What was the 15th Amendment's primary purpose?</prompt>
+        <options>
+            <option letter="a">Guaranteed voting rights regardless of race</option>
+            <option letter="b">Established citizenship rights</option>
+            <option letter="c">Abolished slavery</option>
+            <option letter="d">Created public education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 15th Amendment, ratified in 1870, prohibited denying voting rights based on race, color, or previous condition of servitude.</explanation>
+    </question>
+    <question number="154">
+        <prompt>Who was Hiram Revels?</prompt>
+        <options>
+            <option letter="a">First African American U.S. Senator</option>
+            <option letter="b">Leader of the Freedmen's Bureau</option>
+            <option letter="c">Confederate general</option>
+            <option letter="d">Radical Republican leader</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Hiram Revels became the first African American U.S. Senator in 1870, representing Mississippi in the seat previously held by Jefferson Davis.</explanation>
+    </question>
+    <question number="155">
+        <prompt>What percentage of Southern state legislators were African American during the height of Reconstruction?</prompt>
+        <options>
+            <option letter="a">15 percent</option>
+            <option letter="b">25 percent</option>
+            <option letter="c">35 percent</option>
+            <option letter="d">45 percent</option>
+        </options>
+        <answer>a</answer>
+        <explanation>At its peak, about 15 percent of Southern state legislators were African American, showing significant but limited political gains during Reconstruction.</explanation>
+    </question>
+    <question number="156">
+        <prompt>What was the first Southern state readmitted to the Union after the Civil War?</prompt>
+        <options>
+            <option letter="a">Tennessee</option>
+            <option letter="b">Virginia</option>
+            <option letter="c">Georgia</option>
+            <option letter="d">South Carolina</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Tennessee was readmitted in 1866, becoming the first Confederate state to rejoin the Union, largely due to its early ratification of the 14th Amendment.</explanation>
+    </question>
+<question number="157">
+        <prompt>What was the significance of the "Civil Rights Cases" of 1883?</prompt>
+        <options>
+            <option letter="a">Severely limited federal civil rights enforcement</option>
+            <option letter="b">Expanded civil rights protections</option>
+            <option letter="c">Created new voting rights</option>
+            <option letter="d">Strengthened federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Cases of 1883 severely limited federal civil rights enforcement by ruling that the 14th Amendment only applied to state, not private, discrimination.</explanation>
+    </question>
+    <question number="158">
+        <prompt>How did the "Vagrancy Laws" affect freed people?</prompt>
+        <options>
+            <option letter="a">Forced them into labor contracts through threat of arrest</option>
+            <option letter="b">Protected their freedom of movement</option>
+            <option letter="c">Provided employment opportunities</option>
+            <option letter="d">Guaranteed fair wages</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Vagrancy Laws were used to force freed people into labor contracts by threatening arrest for unemployment or "wandering" without proof of employment.</explanation>
+    </question>
+    <question number="159">
+        <prompt>What role did "Mutual Aid Societies" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided social services and economic assistance to freedmen</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Managed military affairs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mutual Aid Societies provided social services, economic assistance, and community support to freedmen during Reconstruction.</explanation>
+    </question>
+    <question number="160">
+        <prompt>What was the purpose of the "Understanding Clause" in voting requirements?</prompt>
+        <options>
+            <option letter="a">To allow subjective denial of voting rights</option>
+            <option letter="b">To ensure voter literacy</option>
+            <option letter="c">To protect voting rights</option>
+            <option letter="d">To increase participation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Understanding Clause allowed registrars to subjectively deny voting rights by requiring voters to "understand" and interpret the constitution.</explanation>
+    </question>
+<question number="161">
+        <prompt>What was the significance of the "Union Leagues" in the South?</prompt>
+        <options>
+            <option letter="a">Organizations that helped freedmen exercise political rights</option>
+            <option letter="b">Confederate veteran groups</option>
+            <option letter="c">Northern business associations</option>
+            <option letter="d">Agricultural cooperatives</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union Leagues were organizations that helped freedmen exercise their new political rights, providing protection and education about voting and citizenship.</explanation>
+    </question>
+    <question number="162">
+        <prompt>What impact did President Johnson's veto of the Freedmen's Bureau Bill have?</prompt>
+        <options>
+            <option letter="a">Increased conflict between Congress and the President</option>
+            <option letter="b">Strengthened Reconstruction efforts</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Expanded federal programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Johnson's veto of the Freedmen's Bureau Bill in 1866 intensified conflict between Congress and the President, leading to more radical Reconstruction measures.</explanation>
+    </question>
+    <question number="163">
+        <prompt>How did the Compromise of 1877 affect Northern Republicans?</prompt>
+        <options>
+            <option letter="a">Led them to abandon civil rights enforcement</option>
+            <option letter="b">Strengthened their commitment to reform</option>
+            <option letter="c">Increased their Southern support</option>
+            <option letter="d">Improved party unity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 marked Northern Republicans' abandonment of civil rights enforcement in favor of economic development and national reconciliation.</explanation>
+    </question>
+    <question number="164">
+        <prompt>What was the purpose of the "Dante's Defeat" campaign in Mississippi?</prompt>
+        <options>
+            <option letter="a">To intimidate African American voters through violence</option>
+            <option letter="b">To promote economic reform</option>
+            <option letter="c">To support education initiatives</option>
+            <option letter="d">To organize labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "Dante's Defeat" campaign used violence and intimidation to prevent African Americans from voting in Mississippi elections during Reconstruction.</explanation>
+    </question>
+<question number="165">
+        <prompt>What was the purpose of the Tenure of Office Act's repeal in 1887?</prompt>
+        <options>
+            <option letter="a">To restore presidential power over cabinet appointments</option>
+            <option letter="b">To strengthen Congressional authority</option>
+            <option letter="c">To reform civil service</option>
+            <option letter="d">To reduce government spending</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Tenure of Office Act was repealed to restore presidential authority over cabinet appointments, acknowledging that the law had improperly restricted executive power.</explanation>
+    </question>
+    <question number="166">
+        <prompt>What was the primary economic impact of the Panic of 1873 on Reconstruction?</prompt>
+        <options>
+            <option letter="a">Reduced Northern support for Reconstruction programs</option>
+            <option letter="b">Increased federal spending in the South</option>
+            <option letter="c">Improved Southern industrial growth</option>
+            <option letter="d">Strengthened the Freedmen's Bureau</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Panic of 1873 led to a severe depression that reduced Northern interest in and financial support for Reconstruction programs as economic issues took priority.</explanation>
+    </question>
+    <question number="167">
+        <prompt>What was the significance of the 1872 Credit Mobilier scandal?</prompt>
+        <options>
+            <option letter="a">Damaged public support for Reconstruction policies</option>
+            <option letter="b">Strengthened Republican control</option>
+            <option letter="c">Improved railroad construction</option>
+            <option letter="d">Helped freedmen's rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Credit Mobilier scandal exposed corruption in railroad construction and Republican administration, damaging public support for Reconstruction policies.</explanation>
+    </question>
+    <question number="168">
+        <prompt>What role did the Supreme Court play in the Slaughterhouse Cases of 1873?</prompt>
+        <options>
+            <option letter="a">Narrowly interpreted the 14th Amendment's protections</option>
+            <option letter="b">Expanded civil rights protections</option>
+            <option letter="c">Supported state's rights</option>
+            <option letter="d">Protected business interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>In the Slaughterhouse Cases, the Supreme Court narrowly interpreted the 14th Amendment's privileges and immunities clause, limiting federal protection of civil rights.</explanation>
+    </question>
+<question number="169">
+        <prompt>What was the significance of the "Kirk-Holden War" in North Carolina?</prompt>
+        <options>
+            <option letter="a">Led to the first impeachment of a Southern governor</option>
+            <option letter="b">Resulted in Union victory</option>
+            <option letter="c">Established new voting rights</option>
+            <option letter="d">Created economic reforms</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Kirk-Holden War led to the impeachment of Governor William Holden after he used militia to combat Klan violence, marking the first impeachment of a state governor in U.S. history.</explanation>
+    </question>
+    <question number="170">
+        <prompt>What was the primary purpose of the Reconstruction Act's requirement for new state constitutions?</prompt>
+        <options>
+            <option letter="a">To guarantee universal male suffrage and ratify the 14th Amendment</option>
+            <option letter="b">To restore Confederate leadership</option>
+            <option letter="c">To limit federal control</option>
+            <option letter="d">To reduce state debts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Reconstruction Act required Southern states to write new constitutions guaranteeing universal male suffrage and ratify the 14th Amendment before readmission to the Union.</explanation>
+    </question>
+    <question number="171">
+        <prompt>How did the Compromise of 1877 affect President Hayes's policies?</prompt>
+        <options>
+            <option letter="a">Led to reduced federal intervention in Southern affairs</option>
+            <option letter="b">Increased military presence in the South</option>
+            <option letter="c">Strengthened civil rights enforcement</option>
+            <option letter="d">Expanded Reconstruction programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 led Hayes to reduce federal intervention in Southern affairs, effectively ending Reconstruction and federal protection of civil rights.</explanation>
+    </question>
+    <question number="172">
+        <prompt>What was the impact of the "Readjuster" movement in Virginia?</prompt>
+        <options>
+            <option letter="a">Created a biracial political coalition focused on debt reduction</option>
+            <option letter="b">Restored Confederate control</option>
+            <option letter="c">Increased state debt</option>
+            <option letter="d">Expanded slavery</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Readjuster movement created a successful biracial political coalition in Virginia focused on reducing state debt and supporting public education.</explanation>
+    </question>
+<question number="173">
+        <prompt>What was President Andrew Johnson's primary objection to the Freedmen's Bureau?</prompt>
+        <options>
+            <option letter="a">He saw it as federal interference in state matters</option>
+            <option letter="b">It was too expensive to maintain</option>
+            <option letter="c">It didn't help enough people</option>
+            <option letter="d">It had too much military control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Johnson opposed the Freedmen's Bureau because he believed it represented unconstitutional federal interference in matters that should be left to the states.</explanation>
+    </question>
+    <question number="174">
+        <prompt>What role did African American churches play in education during Reconstruction?</prompt>
+        <options>
+            <option letter="a">They often housed the first schools for freedmen</option>
+            <option letter="b">They opposed educational initiatives</option>
+            <option letter="c">They only provided religious education</option>
+            <option letter="d">They focused on adult education only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>African American churches often served as the first schoolhouses for freedmen, combining religious instruction with basic education and literacy programs.</explanation>
+    </question>
+    <question number="175">
+        <prompt>What was the significance of the Civil Rights Cases of 1883?</prompt>
+        <options>
+            <option letter="a">Declared the Civil Rights Act of 1875 unconstitutional</option>
+            <option letter="b">Strengthened federal civil rights protection</option>
+            <option letter="c">Established voting rights</option>
+            <option letter="d">Created new anti-discrimination laws</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Supreme Court's decision in the Civil Rights Cases declared the Civil Rights Act of 1875 unconstitutional, severely limiting federal protection against private discrimination.</explanation>
+    </question>
+    <question number="176">
+        <prompt>What was the purpose of "whitecapping" during Reconstruction?</prompt>
+        <options>
+            <option letter="a">To intimidate African Americans through nighttime raids</option>
+            <option letter="b">To protect freed slaves</option>
+            <option letter="c">To enforce labor contracts</option>
+            <option letter="d">To organize voter registration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Whitecapping involved nighttime raids and intimidation tactics used by white supremacists to terrorize African Americans and maintain racial control.</explanation>
+    </question>
+<question number="177">
+        <prompt>What was the significance of the "Redemption" period in Texas?</prompt>
+        <options>
+            <option letter="a">Return to Democratic control and racial restrictions</option>
+            <option letter="b">Expansion of civil rights</option>
+            <option letter="c">Economic prosperity</option>
+            <option letter="d">Educational reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Texas's "Redemption" marked the return to Democratic control and implementation of racial restrictions through new laws and constitutional changes.</explanation>
+    </question>
+    <question number="178">
+        <prompt>How did the Mobile Riot of 1867 affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">Demonstrated the need for continued military presence</option>
+            <option letter="b">Led to reduced federal involvement</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Strengthened local government</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Mobile Riot demonstrated the ongoing need for federal military presence to protect freedmen's rights and maintain order during Reconstruction.</explanation>
+    </question>
+    <question number="179">
+        <prompt>What role did the Freedmen's Bureau play in education?</prompt>
+        <options>
+            <option letter="a">Established schools and recruited teachers</option>
+            <option letter="b">Opposed educational initiatives</option>
+            <option letter="c">Focused only on adult education</option>
+            <option letter="d">Supported segregation policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau established schools throughout the South and recruited Northern teachers to provide education to former slaves and their children.</explanation>
+    </question>
+    <question number="180">
+        <prompt>What was the purpose of "redemption bonds" in Southern states?</prompt>
+        <options>
+            <option letter="a">To finance Democratic Party control of state governments</option>
+            <option letter="b">To support public education</option>
+            <option letter="c">To aid freedmen</option>
+            <option letter="d">To build railroads</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Redemption bonds were used to finance Democratic Party efforts to regain control of state governments and end Reconstruction policies.</explanation>
+    </question>
+<question number="181">
+        <prompt>What role did the Freedmen's Bank play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided banking services to African Americans until its collapse in 1874</option>
+            <option letter="b">Distributed land to former slaves</option>
+            <option letter="c">Funded Confederate war debts</option>
+            <option letter="d">Managed plantation systems</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Savings and Trust Company (Freedmen's Bank) served African American depositors until its collapse in 1874, devastating many black families' savings.</explanation>
+    </question>
+    <question number="182">
+        <prompt>What was the purpose of "Union Leagues"?</prompt>
+        <options>
+            <option letter="a">Secret societies that supported Republican policies and protected freedmen</option>
+            <option letter="b">Confederate veteran organizations</option>
+            <option letter="c">Northern business associations</option>
+            <option letter="d">Democratic political clubs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union Leagues were secret societies that supported Republican policies, protected freedmen, and helped organize African American political participation.</explanation>
+    </question>
+    <question number="183">
+        <prompt>What was the main purpose of the Enforcement Acts of 1870-1871?</prompt>
+        <options>
+            <option letter="a">To combat Klan violence and protect voting rights</option>
+            <option letter="b">To regulate interstate commerce</option>
+            <option letter="c">To establish public schools</option>
+            <option letter="d">To manage currency policy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Acts, also known as the Force Acts, were passed to combat Ku Klux Klan violence and protect African American voting rights in the South.</explanation>
+    </question>
+    <question number="184">
+        <prompt>What was the significance of the "Force Bill" of 1871?</prompt>
+        <options>
+            <option letter="a">Gave the president power to suspend habeas corpus to combat Klan violence</option>
+            <option letter="b">Created the Freedmen's Bureau</option>
+            <option letter="c">Established military districts in the South</option>
+            <option letter="d">Regulated interstate commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Force Bill (Ku Klux Klan Act) gave President Grant the power to suspend habeas corpus and use military force to combat Klan violence in the South.</explanation>
+    </question>
+<question number="185">
+        <prompt>What were "scalawags" during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Southern whites who supported Republican policies</option>
+            <option letter="b">Northern migrants to the South</option>
+            <option letter="c">Former Confederate soldiers</option>
+            <option letter="d">African American politicians</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Scalawags were white Southerners who supported Republican Reconstruction policies and often cooperated with freedmen and carpetbaggers, earning them contempt from other Southern whites.</explanation>
+    </question>
+    <question number="186">
+        <prompt>What was the significance of the Tenure of Office Act of 1867?</prompt>
+        <options>
+            <option letter="a">Required Senate approval for removal of cabinet members</option>
+            <option letter="b">Limited presidential terms to four years</option>
+            <option letter="c">Established requirements for federal judges</option>
+            <option letter="d">Created new cabinet positions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Tenure of Office Act restricted the president's power to remove cabinet members without Senate approval, leading to conflict between Congress and President Johnson.</explanation>
+    </question>
+    <question number="187">
+        <prompt>What was the primary reason for President Johnson's impeachment?</prompt>
+        <options>
+            <option letter="a">Violation of the Tenure of Office Act</option>
+            <option letter="b">Support of the Confederacy</option>
+            <option letter="c">Corruption charges</option>
+            <option letter="d">Vetoing civil rights legislation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Johnson was impeached primarily for violating the Tenure of Office Act by removing Secretary of War Edwin Stanton without Senate approval.</explanation>
+    </question>
+    <question number="188">
+        <prompt>How many votes short was the Senate of convicting President Johnson?</prompt>
+        <options>
+            <option letter="a">One vote</option>
+            <option letter="b">Two votes</option>
+            <option letter="c">Three votes</option>
+            <option letter="d">Four votes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Senate fell one vote short of the two-thirds majority needed to convict Johnson, with the final vote being 35 for conviction and 19 for acquittal.</explanation>
+    </question>
+<question number="189">
+        <prompt>What was the significance of the "Union League Schools"?</prompt>
+        <options>
+            <option letter="a">Provided education and political training to freedmen</option>
+            <option letter="b">Trained Confederate soldiers</option>
+            <option letter="c">Supported segregation</option>
+            <option letter="d">Managed military education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union League Schools provided both basic education and political training to freedmen, helping them understand their new rights and responsibilities.</explanation>
+    </question>
+    <question number="190">
+        <prompt>How did the "Landlord and Tenant Act" affect freed people?</prompt>
+        <options>
+            <option letter="a">Gave landlords extensive legal power over tenants</option>
+            <option letter="b">Protected tenant rights</option>
+            <option letter="c">Provided fair housing</option>
+            <option letter="d">Increased tenant ownership</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Landlord and Tenant Act gave landlords extensive legal powers over tenants, including the right to seize property for debt payment.</explanation>
+    </question>
+    <question number="191">
+        <prompt>What role did "Reconstruction Governors" play?</prompt>
+        <options>
+            <option letter="a">Implemented federal Reconstruction policies</option>
+            <option letter="b">Opposed civil rights</option>
+            <option letter="c">Supported Confederate interests</option>
+            <option letter="d">Restricted voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Reconstruction Governors were appointed or elected to implement federal Reconstruction policies and protect civil rights in Southern states.</explanation>
+    </question>
+    <question number="192">
+        <prompt>What was the purpose of the "White Man's Party" in North Carolina?</prompt>
+        <options>
+            <option letter="a">To restore white supremacy and Democratic control</option>
+            <option letter="b">To support Reconstruction</option>
+            <option letter="c">To protect voting rights</option>
+            <option letter="d">To promote racial equality</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The White Man's Party was organized to restore white supremacy and Democratic control in North Carolina through political organization and intimidation.</explanation>
+    </question>
+<question number="193">
+        <prompt>What was the major focus of the 14th Amendment to the Constitution?</prompt>
+        <options>
+            <option letter="a">Granting citizenship and equal protection under the law</option>
+            <option letter="b">Abolishing slavery</option>
+            <option letter="c">Guaranteeing voting rights</option>
+            <option letter="d">Establishing income tax</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 14th Amendment, ratified in 1868, granted citizenship to all persons born in the US and guaranteed equal protection under the law.</explanation>
+    </question>
+    <question number="194">
+        <prompt>What role did the Union League play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Organized African Americans politically and provided mutual aid</option>
+            <option letter="b">Represented former Confederate interests</option>
+            <option letter="c">Operated as a secret military organization</option>
+            <option letter="d">Managed Northern business investments</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Union League helped organize African Americans politically, provided mutual assistance, and helped establish schools and churches in black communities.</explanation>
+    </question>
+    <question number="195">
+        <prompt>What was "carpetbagger" a derogatory term for during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Northerners who moved South after the Civil War</option>
+            <option letter="b">Southern Republicans who supported Reconstruction</option>
+            <option letter="c">Former Confederate soldiers</option>
+            <option letter="d">Freedmen's Bureau agents</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Southerners used "carpetbagger" as a derogatory term for Northerners who moved South after the Civil War, suggesting they carried all their belongings in carpetbags.</explanation>
+    </question>
+    <question number="196">
+        <prompt>What was the purpose of the Ku Klux Klan Act of 1871?</prompt>
+        <options>
+            <option letter="a">To suppress Klan violence and protect African American rights</option>
+            <option letter="b">To establish public schools in the South</option>
+            <option letter="c">To regulate interstate commerce</option>
+            <option letter="d">To organize military districts</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Ku Klux Klan Act authorized President Grant to use federal troops to suppress Klan violence and protect African Americans' civil rights.</explanation>
+    </question>
+<question number="197">
+        <prompt>What was the significance of the "Meridian Race Riot" of 1871?</prompt>
+        <options>
+            <option letter="a">Demonstrated the limits of federal protection for African Americans</option>
+            <option letter="b">Led to increased civil rights</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Strengthened Republican control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Meridian Race Riot showed the limitations of federal protection for African Americans when local authorities refused to prosecute white perpetrators of violence.</explanation>
+    </question>
+    <question number="198">
+        <prompt>How did the "Fence Laws" affect Southern agriculture?</prompt>
+        <options>
+            <option letter="a">Placed burden on poor farmers to fence livestock</option>
+            <option letter="b">Protected small farmers</option>
+            <option letter="c">Improved agricultural efficiency</option>
+            <option letter="d">Supported sharecroppers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Fence Laws placed the burden on poor farmers to fence their livestock, rather than requiring plantation owners to fence their crops, creating economic hardship.</explanation>
+    </question>
+    <question number="199">
+        <prompt>What role did "Reading Rooms" play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided education and political information to freedmen</option>
+            <option letter="b">Supported Confederate interests</option>
+            <option letter="c">Restricted literacy access</option>
+            <option letter="d">Managed military records</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Reading Rooms established by the Freedmen's Bureau and other organizations provided education and political information to newly freed people.</explanation>
+    </question>
+    <question number="200">
+        <prompt>What was the purpose of the "Property Qualification" for voting?</prompt>
+        <options>
+            <option letter="a">To prevent poor citizens from voting</option>
+            <option letter="b">To increase voter participation</option>
+            <option letter="c">To protect voting rights</option>
+            <option letter="d">To ensure fair elections</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Property Qualifications were used to prevent poor citizens, particularly African Americans, from voting by requiring voters to own property.</explanation>
+    </question>
+</quiz>

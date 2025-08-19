@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which World War I military development had the GREATEST impact on the war's outcome?</prompt>
+        <options>
+            <option letter="a">The convoy system for shipping</option>
+            <option letter="b">The use of tanks in battle</option>
+            <option letter="c">The development of military aircraft</option>
+            <option letter="d">The introduction of poison gas</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The convoy system proved most decisive by dramatically reducing Allied shipping losses to German submarines, ensuring the flow of American troops and supplies to Europe. While tanks, aircraft, and poison gas changed battlefield tactics, none had as strategic an impact as the convoy system, which solved the critical problem of German submarine warfare that had nearly won the war for the Central Powers and enabled the massive American military buildup in Europe.</explanation>
+    </question>
+</quiz>

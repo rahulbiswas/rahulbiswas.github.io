@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If MPC = 0.8 and the government increases spending by $100 billion while raising taxes by $150 billion, what is the net change in GDP?</prompt>
+        <options>
+            <option letter="a">$100 billion decrease</option>
+            <option letter="b">$200 billion decrease</option>
+            <option letter="c">$300 billion decrease</option>
+            <option letter="d">$400 billion decrease</option>
+        </options>
+        <answer>a</answer>
+        <explanation>With MPC = 0.8, the spending multiplier is 5 and the tax multiplier is -4. The net effect is: ($100B × 5) + ($150B × -4) = $500B - $600B = -$100B. This shows how combining expansionary spending with larger contractionary taxation leads to a net decrease in GDP.</explanation>
+    </question>
+</quiz>

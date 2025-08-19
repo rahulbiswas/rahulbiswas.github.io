@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the money demand curve when GDP decreases significantly?</prompt>
+        <options>
+            <option letter="a">Shifts right because people need more money for transactions</option>
+            <option letter="b">Shifts left because people need less money for transactions</option>
+            <option letter="c">Becomes steeper but doesn't shift</option>
+            <option letter="d">Becomes more elastic but doesn't shift</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When GDP decreases, fewer transactions occur in the economy, so people need less money to conduct their reduced level of business. This shifts the money demand curve to the left at every interest rate, as less money is demanded for the lower level of economic activity.</explanation>
+    </question>
+</quiz>

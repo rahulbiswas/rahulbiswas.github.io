@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main component of microfilaments?</text>
+        <option>Actin</option>
+        <option>Tubulin</option>
+        <option>Keratin</option>
+        <option>Myosin</option>
+        <answer>Actin</answer>
+        <explanation>Microfilaments are composed primarily of the protein actin, which forms thin, flexible filaments in the cytoskeleton.</explanation>
+    </question>
+    <question>
+        <text>Which cytoskeletal element is involved in cell division?</text>
+        <option>Microtubules</option>
+        <option>Intermediate filaments</option>
+        <option>Microfilaments</option>
+        <option>Stress fibers</option>
+        <answer>Microtubules</answer>
+        <explanation>Microtubules form the mitotic spindle that separates chromosomes during cell division.</explanation>
+    </question>
+    <question>
+        <text>What provides mechanical strength to cells?</text>
+        <option>Intermediate filaments</option>
+        <option>Motor proteins</option>
+        <option>Transport vesicles</option>
+        <option>Membrane proteins</option>
+        <answer>Intermediate filaments</answer>
+        <explanation>Intermediate filaments provide mechanical strength and help maintain cell shape and structural integrity.</explanation>
+    </question>
+    <question>
+        <text>Which protein moves along microtubules?</text>
+        <option>Kinesin</option>
+        <option>Actin</option>
+        <option>Spectrin</option>
+        <option>Vimentin</option>
+        <answer>Kinesin</answer>
+        <explanation>Kinesin is a motor protein that moves cargo along microtubules in cells.</explanation>
+    </question>
+    <question>
+        <text>What characterizes dynamic instability?</text>
+        <option>Rapid microtubule growth and shrinkage</option>
+        <option>Stable protein structures</option>
+        <option>Permanent cell attachments</option>
+        <option>Fixed cytoskeletal elements</option>
+        <answer>Rapid microtubule growth and shrinkage</answer>
+        <explanation>Dynamic instability refers to the rapid growth and shrinkage of microtubules at their ends.</explanation>
+    </question>
+</questions>

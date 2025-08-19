@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How does DNA replication maintain accuracy?</text>
+        <option>Random copying</option>
+        <option>Through proofreading mechanisms</option>
+        <option>No accuracy control</option>
+        <option>Through mutation</option>
+        <answer>Through proofreading mechanisms</answer>
+        <explanation>DNA replication maintains accuracy through polymerase proofreading and post-replication repair mechanisms.</explanation>
+    </question>
+    <question>
+        <text>What role do topoisomerases play in DNA function?</text>
+        <option>Break down DNA</option>
+        <option>Manage DNA topology</option>
+        <option>Synthesize DNA</option>
+        <option>Transport DNA</option>
+        <answer>Manage DNA topology</answer>
+        <explanation>Topoisomerases manage DNA supercoiling and untangle DNA during replication and transcription.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate chromatin structure?</text>
+        <option>They don't regulate it</option>
+        <option>Through histone modifications</option>
+        <option>Only through temperature</option>
+        <option>Only through pH</option>
+        <answer>Through histone modifications</answer>
+        <explanation>Cells regulate chromatin structure through histone modifications and chromatin remodeling complexes.</explanation>
+    </question>
+    <question>
+        <text>What determines DNA bending and flexibility?</text>
+        <option>Only temperature</option>
+        <option>Sequence and protein binding</option>
+        <option>Only pH</option>
+        <option>Random factors</option>
+        <answer>Sequence and protein binding</answer>
+        <explanation>DNA sequence characteristics and protein binding influence DNA bending and flexibility.</explanation>
+    </question>
+    <question>
+        <text>How do nucleosomes affect gene expression?</text>
+        <option>No effect</option>
+        <option>Regulate DNA accessibility</option>
+        <option>Increase mutation rate</option>
+        <option>Transport proteins</option>
+        <answer>Regulate DNA accessibility</answer>
+        <explanation>Nucleosomes regulate gene expression by controlling DNA accessibility to transcription machinery.</explanation>
+    </question>
+</questions>

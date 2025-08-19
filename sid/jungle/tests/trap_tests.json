@@ -1,0 +1,39 @@
+{
+  "description": "Trap",
+  "tests": [
+    {
+      "description": "Opposing animals in traps can be captured",
+      "board": {
+        "2_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.TIGER"
+        },
+        "2_1": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.CAT"
+        }
+      },
+      "startPos": "2_1",
+      "endPos": "2_0",
+      "currentPlayer": "PLAYERS.YELLOW",
+      "expectedValid": true
+    },
+    {
+      "description": "should prevent capturing piece in own trap",
+      "board": {
+        "2_0": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.RAT"
+        },
+        "2_1": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.ELEPHANT"
+        }
+      },
+      "startPos": "2_1",
+      "endPos": "2_0",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": false
+    }
+  ]
+}

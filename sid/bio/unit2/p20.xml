@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of lysosomes?</text>
+        <option>Cellular digestion</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Lipid storage</option>
+        <answer>Cellular digestion</answer>
+        <explanation>Lysosomes contain hydrolytic enzymes that break down cellular materials and foreign particles.</explanation>
+    </question>
+    <question>
+        <text>How do lysosomes maintain their acidic pH?</text>
+        <option>Proton pumps</option>
+        <option>Ion channels</option>
+        <option>Passive diffusion</option>
+        <option>Buffer systems</option>
+        <answer>Proton pumps</answer>
+        <explanation>Proton pumps in the lysosomal membrane actively transport H+ ions into the lysosome to maintain acidic pH.</explanation>
+    </question>
+    <question>
+        <text>What process involves lysosome fusion with autophagic vesicles?</text>
+        <option>Autophagy</option>
+        <option>Exocytosis</option>
+        <option>Endocytosis</option>
+        <option>Phagocytosis</option>
+        <answer>Autophagy</answer>
+        <explanation>During autophagy, lysosomes fuse with autophagic vesicles to break down cellular components.</explanation>
+    </question>
+    <question>
+        <text>Which condition results from lysosomal enzyme deficiency?</text>
+        <option>Storage disease</option>
+        <option>Cancer</option>
+        <option>Diabetes</option>
+        <option>Inflammation</option>
+        <answer>Storage disease</answer>
+        <explanation>Lysosomal storage diseases occur when specific lysosomal enzymes are missing or defective.</explanation>
+    </question>
+    <question>
+        <text>What protects lysosomes from self-digestion?</text>
+        <option>Membrane glycoproteins</option>
+        <option>Thick membrane</option>
+        <option>High pH</option>
+        <option>Low temperature</option>
+        <answer>Membrane glycoproteins</answer>
+        <explanation>Heavily glycosylated membrane proteins protect the lysosomal membrane from its own digestive enzymes.</explanation>
+    </question>
+</questions>

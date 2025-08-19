@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"We are tired of promises, we have listened to speeches, we have listened to good wishes long enough. We want action now... Every week I must attend the funeral of one of my people. A funeral that could have been prevented."
+- Clara Lemlich, garment workers' strike speech, 1909</stimulus>
+        <prompt>This speech most directly led to which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">The Uprising of 20,000</option>
+            <option letter="b">The Pure Food and Drug Act</option>
+            <option letter="c">The Federal Reserve Act</option>
+            <option letter="d">The Clayton Antitrust Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Clara Lemlich's speech sparked the "Uprising of 20,000," a massive strike by women garment workers that led to improved working conditions and strengthened labor unions in the garment industry.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of children in a city tenement, showing overcrowded conditions, poor ventilation, and lack of proper sanitation facilities, 1890s]</stimulus>
+        <prompt>Which Progressive Era reform most directly addressed the conditions shown?</prompt>
+        <options>
+            <option letter="a">The Federal Reserve System</option>
+            <option letter="b">The Tenement House Act</option>
+            <option letter="c">The Pure Food and Drug Act</option>
+            <option letter="d">The Federal Trade Commission</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Tenement House Act of 1901 established standards for urban housing, requiring improved ventilation, access to light, and proper sanitation facilities in response to documented poor living conditions.</explanation>
+    </question>
+    <question>
+        <stimulus>"The fundamental purpose of government is to protect property from the majority, and that the minority of the rich must combine to protect themselves from the majority."
+- William Howard Taft, criticized by Progressives, 1910</stimulus>
+        <prompt>This statement most directly contributed to:</prompt>
+        <options>
+            <option letter="a">The formation of the Bull Moose Party</option>
+            <option letter="b">The passage of the 16th Amendment</option>
+            <option letter="c">The creation of the Federal Reserve</option>
+            <option letter="d">The ratification of Prohibition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Taft's conservative stance on property rights and business regulation contributed to the split in the Republican Party and Roosevelt's formation of the Progressive (Bull Moose) Party in 1912.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing increase in state referendum and initiative laws: 1898: 1 state, 1904: 6 states, 1911: 13 states, 1918: 19 states]</stimulus>
+        <prompt>This trend most clearly reflects the Progressive Era's emphasis on:</prompt>
+        <options>
+            <option letter="a">Direct democracy</option>
+            <option letter="b">Economic regulation</option>
+            <option letter="c">Social welfare</option>
+            <option letter="d">Conservation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The spread of referendum and initiative laws reflected the Progressive movement's commitment to direct democracy, giving voters more direct control over legislation and government decisions.</explanation>
+    </question>
+</quiz>

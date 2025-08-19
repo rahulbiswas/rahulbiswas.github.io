@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="53">
+        <prompt>What was the primary purpose of the "Remember the Maine" slogan?</prompt>
+        <options>
+            <option letter="a">To rally public support for war with Spain</option>
+            <option letter="b">To honor fallen sailors</option>
+            <option letter="c">To raise funds for the navy</option>
+            <option letter="d">To promote naval reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The slogan "Remember the Maine" was used by yellow journalists and war hawks to rally public support for war with Spain after the battleship's explosion in Havana harbor.</explanation>
+    </question>
+    <question number="54">
+        <prompt>What was the main effect of the Sherman Anti-Trust Act of 1890?</prompt>
+        <options>
+            <option letter="a">It was initially used more against labor unions than trusts</option>
+            <option letter="b">It immediately broke up major monopolies</option>
+            <option letter="c">It strengthened worker rights</option>
+            <option letter="d">It reduced business consolidation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Despite its intended purpose to break up monopolies, the Sherman Anti-Trust Act was initially used more frequently against labor unions than against business trusts.</explanation>
+    </question>
+    <question number="55">
+        <prompt>What was the significance of William McKinley's election in 1896?</prompt>
+        <options>
+            <option letter="a">It marked the triumph of big business and the gold standard</option>
+            <option letter="b">It led to free silver coinage</option>
+            <option letter="c">It strengthened the Populist Party</option>
+            <option letter="d">It reduced corporate influence</option>
+        </options>
+        <answer>a</answer>
+        <explanation>McKinley's victory represented the triumph of big business interests and the gold standard over the Populist-Democratic fusion and free silver movement.</explanation>
+    </question>
+    <question number="56">
+        <prompt>What was the main purpose of the Interstate Commerce Act of 1887?</prompt>
+        <options>
+            <option letter="a">To regulate railroad rates and practices</option>
+            <option letter="b">To promote railroad expansion</option>
+            <option letter="c">To nationalize railroads</option>
+            <option letter="d">To protect railroad profits</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Interstate Commerce Act was designed to regulate railroad rates and practices, particularly to prevent rate discrimination and other unfair practices affecting shippers.</explanation>
+    </question>
+</quiz>

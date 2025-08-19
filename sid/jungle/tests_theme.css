@@ -1,0 +1,67 @@
+.test:hover {
+    transform: translateX(2px);
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+}
+
+.test.pass .test-header:before {
+    color: var(--status-pass);
+}
+
+.test.fail .test-header:before {
+    color: var(--status-fail);
+}
+
+.setup {
+    background-color: var(--bauhaus-cream);
+    color: var(--bauhaus-gray);
+}
+
+.setup pre {
+    background-color: white;
+    border-left: 3px solid var(--bauhaus-yellow);
+}
+
+.pass { 
+    color: var(--status-pass);
+    font-weight: 500;
+}
+
+.fail { 
+    color: var(--status-fail);
+    font-weight: 500;
+}
+
+.suite .summary {
+    color: var(--bauhaus-cream);
+    background-color: rgba(255,255,255,0.1);
+}
+
+.suite .summary .pass-count {
+    color: #2EE59D;
+}
+
+.suite .summary .fail-count {
+    color: #FF9999;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bauhaus-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bauhaus-light-blue);
+    border: 2px solid var(--bauhaus-cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bauhaus-blue);
+}
+
+#testResults:before {
+    color: var(--bauhaus-blue);
+    border-left: 8px solid var(--bauhaus-yellow);
+}

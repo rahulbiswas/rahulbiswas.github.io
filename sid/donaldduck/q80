@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did the First New Deal differ from the Second?</prompt>
+    <options>
+        <option letter="a">Less business friendly</option>
+        <option letter="b">More conservative</option>
+        <option letter="c">State controlled</option>
+        <option letter="d">Privately funded</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The First New Deal worked more with business interests, while the Second New Deal took a more adversarial stance toward business and emphasized social welfare.</explanation>
+</question>

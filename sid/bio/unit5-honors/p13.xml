@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of DnaA protein in bacteria?</text>
+        <option>Repair DNA damage</option>
+        <option>Initiate replication</option>
+        <option>Transcribe genes</option>
+        <option>Fold proteins</option>
+        <answer>Initiate replication</answer>
+        <explanation>DnaA protein recognizes and binds to the bacterial origin of replication to initiate DNA replication.</explanation>
+    </question>
+    
+    <question>
+        <text>Which modification marks active promoters?</text>
+        <option>DNA methylation</option>
+        <option>H3K4 trimethylation</option>
+        <option>Histone deacetylation</option>
+        <option>H3K9 methylation</option>
+        <answer>H3K4 trimethylation</answer>
+        <explanation>H3K4 trimethylation is a histone modification typically found at active promoters and associated with gene activation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of U1 snRNP?</text>
+        <option>End translation</option>
+        <option>Recognize 5' splice site</option>
+        <option>Add poly-A tail</option>
+        <option>Repair DNA</option>
+        <answer>Recognize 5' splice site</answer>
+        <explanation>U1 snRNP recognizes and binds to the 5' splice site during the initial steps of pre-mRNA splicing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein complex degrades damaged proteins?</text>
+        <option>Ribosome</option>
+        <option>Proteasome</option>
+        <option>Spliceosome</option>
+        <option>Polymerase</option>
+        <answer>Proteasome</answer>
+        <explanation>The proteasome is a protein complex that degrades damaged or unwanted proteins marked with ubiquitin.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of methylases in bacteria?</text>
+        <option>Repair DNA</option>
+        <option>Protect from restriction enzymes</option>
+        <option>Synthesize proteins</option>
+        <option>Process RNA</option>
+        <answer>Protect from restriction enzymes</answer>
+        <explanation>Bacterial methylases add methyl groups to DNA to protect it from destruction by the cell's own restriction enzymes.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of ASXL1?</text>
+        <option>Process RNA</option>
+        <option>Regulate PRC2 activity</option>
+        <option>Repair DNA</option>
+        <option>Synthesize proteins</option>
+        <answer>Regulate PRC2 activity</answer>
+        <explanation>ASXL1 regulates the activity of PRC2 complex and influences H3K27me3 deposition patterns.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex deposits H3K36me3?</text>
+        <option>SETD2</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>SETD2</answer>
+        <explanation>SETD2 methyltransferase complex adds H3K36me3 marks associated with active transcription elongation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of ATRX?</text>
+        <option>Transcribe genes</option>
+        <option>Deposit H3.3 at repeats</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Deposit H3.3 at repeats</answer>
+        <explanation>ATRX works with DAXX to deposit histone variant H3.3 at repetitive DNA regions like telomeres.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme processes miRNA hairpins?</text>
+        <option>Drosha</option>
+        <option>RNase P</option>
+        <option>RNase Z</option>
+        <option>XRN2</option>
+        <answer>Drosha</answer>
+        <explanation>Drosha processes primary miRNA transcripts into precursor miRNA hairpins in the nucleus.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of SMARCAL1?</text>
+        <option>Process RNA</option>
+        <option>Fork reversal</option>
+        <option>Modify histones</option>
+        <option>Transcribe genes</option>
+        <answer>Fork reversal</answer>
+        <explanation>SMARCAL1 promotes fork reversal at stalled replication forks to maintain genome stability.</explanation>
+    </question>
+</questions>

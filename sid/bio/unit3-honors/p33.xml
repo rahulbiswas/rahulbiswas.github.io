@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do cancer cells modify their energy metabolism?</text>
+        <option>They use normal metabolic pathways</option>
+        <option>They shift to aerobic glycolysis (Warburg effect)</option>
+        <option>They stop using glucose</option>
+        <option>They only use fatty acids</option>
+        <answer>They shift to aerobic glycolysis (Warburg effect)</answer>
+        <explanation>Cancer cells often shift to aerobic glycolysis even in the presence of oxygen, producing lactate rather than using oxidative phosphorylation, which supports rapid proliferation and survival in hypoxic conditions.</explanation>
+    </question>
+    <question>
+        <text>What role does mitochondrial dysfunction play in disease?</text>
+        <option>It has no effect on health</option>
+        <option>It contributes to multiple pathological conditions</option>
+        <option>It only affects muscle tissue</option>
+        <option>It improves cell function</option>
+        <answer>It contributes to multiple pathological conditions</answer>
+        <explanation>Mitochondrial dysfunction contributes to various diseases including neurodegenerative disorders, diabetes, and aging-related conditions by disrupting energy production and cellular homeostasis.</explanation>
+    </question>
+    <question>
+        <text>How do metabolic disorders affect cellular energy production?</text>
+        <option>They have no effect on energy</option>
+        <option>They disrupt specific metabolic pathways</option>
+        <option>They increase energy production</option>
+        <option>They only affect glucose use</option>
+        <answer>They disrupt specific metabolic pathways</answer>
+        <explanation>Metabolic disorders can disrupt specific pathways of energy production, leading to energy deficits, accumulation of toxic intermediates, and cellular dysfunction in affected tissues.</explanation>
+    </question>
+    <question>
+        <text>What energy adaptations occur in neurodegenerative diseases?</text>
+        <option>Energy metabolism remains normal</option>
+        <option>Multiple bioenergetic defects develop</option>
+        <option>Energy production increases</option>
+        <option>Only glycolysis is affected</option>
+        <answer>Multiple bioenergetic defects develop</answer>
+        <explanation>Neurodegenerative diseases often involve multiple bioenergetic defects including impaired mitochondrial function, altered glucose metabolism, and disrupted energy homeostasis in neural tissues.</explanation>
+    </question>
+    <question>
+        <text>How does diabetes affect cellular energy metabolism?</text>
+        <option>It has no metabolic effects</option>
+        <option>It disrupts glucose utilization and energy homeostasis</option>
+        <option>It increases energy efficiency</option>
+        <option>It only affects liver cells</option>
+        <answer>It disrupts glucose utilization and energy homeostasis</answer>
+        <explanation>Diabetes disrupts normal glucose utilization and energy homeostasis, affecting multiple metabolic pathways and requiring cells to adapt their energy metabolism, often leading to complications in various tissues.</explanation>
+    </question>
+</quiz>

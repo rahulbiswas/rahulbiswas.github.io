@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of CDC6?</text>
+        <option>Repair DNA</option>
+        <option>Load MCM helicase</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Load MCM helicase</answer>
+        <explanation>CDC6 helps load the MCM helicase complex onto DNA during replication origin licensing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex removes H3K36me3?</text>
+        <option>JHDM1</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>JHDM1</answer>
+        <explanation>JHDM1 is a histone demethylase that specifically removes the H3K36me3 modification.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of CSB protein?</text>
+        <option>Repair DNA</option>
+        <option>Couple transcription and repair</option>
+        <option>Process RNA</option>
+        <option>Modify histones</option>
+        <answer>Couple transcription and repair</answer>
+        <explanation>CSB protein couples transcription to DNA repair in transcription-coupled nucleotide excision repair.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme processes the 3' end of tRNAs?</text>
+        <option>RNase P</option>
+        <option>RNase Z</option>
+        <option>Dicer</option>
+        <option>Drosha</option>
+        <answer>RNase Z</answer>
+        <explanation>RNase Z processes the 3' end of precursor tRNAs during tRNA maturation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of PRMT5?</text>
+        <option>Process RNA</option>
+        <option>Methylate arginine residues</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Methylate arginine residues</answer>
+        <explanation>PRMT5 is a protein arginine methyltransferase that symmetrically methylates arginine residues in proteins.</explanation>
+    </question>
+</questions>

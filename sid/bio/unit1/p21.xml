@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What type of bond forms between phosphate groups in ATP?</text>
+        <option>Hydrogen bond</option>
+        <option>Ionic bond</option>
+        <option>Phosphoanhydride bond</option>
+        <option>Glycosidic bond</option>
+        <answer>Phosphoanhydride bond</answer>
+        <explanation>High-energy phosphoanhydride bonds connect the phosphate groups in ATP, storing energy for cellular processes.</explanation>
+    </question>
+    <question>
+        <text>How do membrane proteins maintain their orientation?</text>
+        <option>Random movement</option>
+        <option>Hydrophobic interactions</option>
+        <option>Covalent bonds</option>
+        <option>Temperature changes</option>
+        <answer>Hydrophobic interactions</answer>
+        <explanation>Hydrophobic interactions between membrane protein regions and membrane lipids maintain proper protein orientation.</explanation>
+    </question>
+    <question>
+        <text>What stabilizes protein-DNA interactions?</text>
+        <option>Only hydrogen bonds</option>
+        <option>Only van der Waals forces</option>
+        <option>Multiple types of interactions</option>
+        <option>Only ionic bonds</option>
+        <answer>Multiple types of interactions</answer>
+        <explanation>Protein-DNA interactions are stabilized by multiple forces including hydrogen bonds, ionic bonds, and van der Waals interactions.</explanation>
+    </question>
+    <question>
+        <text>Which interaction is strongest in biological systems?</text>
+        <option>Hydrogen bond</option>
+        <option>Van der Waals force</option>
+        <option>Covalent bond</option>
+        <option>Hydrophobic interaction</option>
+        <answer>Covalent bond</answer>
+        <explanation>Covalent bonds are the strongest type of chemical bond in biological systems, requiring the most energy to break.</explanation>
+    </question>
+    <question>
+        <text>What role do electrostatic interactions play in protein folding?</text>
+        <option>Energy storage</option>
+        <option>Structure stabilization</option>
+        <option>Catalysis</option>
+        <option>Transport</option>
+        <answer>Structure stabilization</answer>
+        <explanation>Electrostatic interactions between charged amino acid side chains help stabilize protein tertiary structure.</explanation>
+    </question>
+</questions>

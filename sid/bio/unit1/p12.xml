@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of ribose in nucleic acids?</text>
+        <option>Base pairing</option>
+        <option>Structural backbone</option>
+        <option>Energy storage</option>
+        <option>Protein synthesis</option>
+        <answer>Structural backbone</answer>
+        <explanation>Ribose (or deoxyribose) forms part of the sugar-phosphate backbone that gives nucleic acids their structural framework.</explanation>
+    </question>
+    <question>
+        <text>How many hydrogen bonds form between adenine and thymine?</text>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+        <option>Four</option>
+        <answer>Two</answer>
+        <explanation>Adenine and thymine form two hydrogen bonds in DNA base pairing, while guanine and cytosine form three.</explanation>
+    </question>
+    <question>
+        <text>What distinguishes DNA from RNA?</text>
+        <option>Presence of uracil instead of thymine</option>
+        <option>Presence of thymine instead of uracil</option>
+        <option>Presence of ribose instead of deoxyribose</option>
+        <option>Number of phosphate groups</option>
+        <answer>Presence of thymine instead of uracil</answer>
+        <explanation>DNA contains thymine where RNA has uracil, and DNA has deoxyribose where RNA has ribose sugar.</explanation>
+    </question>
+    <question>
+        <text>Which bond connects nucleotides in DNA?</text>
+        <option>Hydrogen bond</option>
+        <option>Phosphodiester bond</option>
+        <option>Glycosidic bond</option>
+        <option>Peptide bond</option>
+        <answer>Phosphodiester bond</answer>
+        <explanation>Phosphodiester bonds connect the 3' carbon of one nucleotide to the 5' carbon of the next nucleotide in DNA and RNA.</explanation>
+    </question>
+    <question>
+        <text>What causes the major groove in DNA?</text>
+        <option>Base stacking</option>
+        <option>Hydrogen bonding</option>
+        <option>Helical twist</option>
+        <option>Phosphate groups</option>
+        <answer>Helical twist</answer>
+        <explanation>The helical twist of the DNA double helix creates alternating major and minor grooves along the molecule.</explanation>
+    </question>
+</questions>

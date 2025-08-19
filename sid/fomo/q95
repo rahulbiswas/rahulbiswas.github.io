@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the nominal interest rate is 7% and expected inflation rises from 3% to 5%, what happens to the real interest rate?</prompt>
+        <options>
+            <option letter="a">Increases from 4% to 6%</option>
+            <option letter="b">Decreases from 4% to 2%</option>
+            <option letter="c">Remains constant at 4%</option>
+            <option letter="d">Increases from 2% to 4%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The real interest rate equals the nominal rate minus expected inflation. Initially, real rate = 7% - 3% = 4%. After inflation expectations rise, new real rate = 7% - 5% = 2%. With a constant nominal rate, higher expected inflation reduces the real interest rate by the same amount.</explanation>
+    </question>
+</quiz>

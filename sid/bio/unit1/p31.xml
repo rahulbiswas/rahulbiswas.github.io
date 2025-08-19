@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How do cells regulate membrane surface area?</text>
+        <option>They don't regulate it</option>
+        <option>Through endocytosis and exocytosis</option>
+        <option>Through temperature changes</option>
+        <option>Through pH changes</option>
+        <answer>Through endocytosis and exocytosis</answer>
+        <explanation>Cells regulate membrane surface area through balanced processes of endocytosis and exocytosis.</explanation>
+    </question>
+    <question>
+        <text>What role do cardiolipins play in mitochondrial membranes?</text>
+        <option>No role</option>
+        <option>Support respiratory chain complexes</option>
+        <option>Block protein function</option>
+        <option>Store energy</option>
+        <answer>Support respiratory chain complexes</answer>
+        <explanation>Cardiolipins help organize and support respiratory chain complexes in mitochondrial membranes.</explanation>
+    </question>
+    <question>
+        <text>How do membrane proteins respond to stress?</text>
+        <option>They always denature</option>
+        <option>They adapt through various mechanisms</option>
+        <option>They remain unchanged</option>
+        <option>They leave the membrane</option>
+        <answer>They adapt through various mechanisms</answer>
+        <explanation>Membrane proteins can adapt to stress through conformational changes, interactions with chaperones, and other protective mechanisms.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane curvature?</text>
+        <option>Random forces</option>
+        <option>Multiple factors including lipid composition</option>
+        <option>Temperature only</option>
+        <option>Protein content only</option>
+        <answer>Multiple factors including lipid composition</answer>
+        <explanation>Membrane curvature is determined by lipid composition, protein interactions, and mechanical forces.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain membrane potential?</text>
+        <option>Through passive diffusion</option>
+        <option>Through active ion transport</option>
+        <option>Through osmosis</option>
+        <option>Through temperature control</option>
+        <answer>Through active ion transport</answer>
+        <explanation>Cells maintain membrane potential through active ion transport systems and selective ion channels.</explanation>
+    </question>
+</questions>

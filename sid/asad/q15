@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which of the following would most likely result in cost-push inflation?</prompt>
+        <options>
+            <option letter="a">An increase in consumer spending</option>
+            <option letter="b">An increase in government spending</option>
+            <option letter="c">An increase in raw material prices</option>
+            <option letter="d">A decrease in interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Cost-push inflation occurs when production costs rise, such as through higher raw material prices, shifting the SRAS curve left and pushing up the price level.</explanation>
+    </question>
+
+    <question>
+        <prompt>In a fixed exchange rate system, if a country's currency is under pressure to appreciate, its central bank must:</prompt>
+        <options>
+            <option letter="a">Sell domestic currency and buy foreign currency</option>
+            <option letter="b">Buy domestic currency and sell foreign currency</option>
+            <option letter="c">Increase interest rates</option>
+            <option letter="d">Decrease interest rates</option>
+        </options>
+        <answer>a</answer>
+        <explanation>To prevent appreciation under a fixed exchange rate, the central bank must increase the supply of domestic currency by selling it and buying foreign currency.</explanation>
+    </question>
+
+    <question>
+        <prompt>The rationale for expansionary fiscal policy during a recession is that:</prompt>
+        <options>
+            <option letter="a">Government spending crowds out private investment</option>
+            <option letter="b">Tax cuts increase aggregate supply</option>
+            <option letter="c">Government spending replaces lost private spending</option>
+            <option letter="d">Budget deficits reduce inflation</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During recessions, government spending can help maintain aggregate demand by replacing the decline in private sector spending, helping to stabilize the economy.</explanation>
+    </question>
+
+    <question>
+        <prompt>If MPS = 0.25, what is the value of the spending multiplier?</prompt>
+        <options>
+            <option letter="a">1.33</option>
+            <option letter="b">2.50</option>
+            <option letter="c">4.00</option>
+            <option letter="d">0.25</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The spending multiplier equals 1/(1-MPC) or 1/MPS. With MPS = 0.25, the multiplier is 1/0.25 = 4.00.</explanation>
+    </question>
+</quiz>

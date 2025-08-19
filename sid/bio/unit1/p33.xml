@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of histones in DNA packaging?</text>
+        <option>Break down DNA</option>
+        <option>Compact and organize DNA</option>
+        <option>Synthesize DNA</option>
+        <option>Transport DNA</option>
+        <answer>Compact and organize DNA</answer>
+        <explanation>Histones are proteins that help compact and organize DNA into chromatin structure within the nucleus.</explanation>
+    </question>
+    <question>
+        <text>How do transcription factors recognize specific DNA sequences?</text>
+        <option>Random binding</option>
+        <option>Through specific DNA-binding domains</option>
+        <option>Temperature sensing</option>
+        <option>pH detection</option>
+        <answer>Through specific DNA-binding domains</answer>
+        <explanation>Transcription factors have specific DNA-binding domains that recognize and bind to particular DNA sequences.</explanation>
+    </question>
+    <question>
+        <text>What stabilizes the DNA double helix?</text>
+        <option>Only hydrogen bonds</option>
+        <option>Multiple interactions including base stacking</option>
+        <option>Only ionic bonds</option>
+        <option>Only van der Waals forces</option>
+        <answer>Multiple interactions including base stacking</answer>
+        <explanation>The DNA double helix is stabilized by hydrogen bonds, base stacking interactions, and the sugar-phosphate backbone.</explanation>
+    </question>
+    <question>
+        <text>How do cells repair DNA damage?</text>
+        <option>They don't repair it</option>
+        <option>Through multiple repair mechanisms</option>
+        <option>Only through cell division</option>
+        <option>Only through DNA synthesis</option>
+        <answer>Through multiple repair mechanisms</answer>
+        <explanation>Cells have multiple DNA repair mechanisms to fix different types of DNA damage and maintain genetic integrity.</explanation>
+    </question>
+    <question>
+        <text>What role do telomeres play in chromosomes?</text>
+        <option>Code for proteins</option>
+        <option>Protect chromosome ends</option>
+        <option>Generate energy</option>
+        <option>Transport nutrients</option>
+        <answer>Protect chromosome ends</answer>
+        <explanation>Telomeres protect chromosome ends from degradation and fusion, maintaining chromosome stability.</explanation>
+    </question>
+</questions>

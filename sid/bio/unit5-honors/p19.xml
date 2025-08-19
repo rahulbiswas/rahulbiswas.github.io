@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of DGCR8?</text>
+        <option>Repair DNA</option>
+        <option>Assist microRNA processing</option>
+        <option>Synthesize proteins</option>
+        <option>Modify histones</option>
+        <answer>Assist microRNA processing</answer>
+        <explanation>DGCR8 partners with Drosha to process primary microRNAs into precursor microRNAs in the nucleus.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex loads cohesin onto DNA?</text>
+        <option>FACT complex</option>
+        <option>NIPBL-MAU2</option>
+        <option>Ribosome</option>
+        <option>Proteasome</option>
+        <answer>NIPBL-MAU2</answer>
+        <explanation>The NIPBL-MAU2 complex loads cohesin onto DNA to establish sister chromatid cohesion.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of DDX3?</text>
+        <option>Repair DNA</option>
+        <option>Unwind RNA structures</option>
+        <option>Modify proteins</option>
+        <option>Synthesize DNA</option>
+        <answer>Unwind RNA structures</answer>
+        <explanation>DDX3 is an RNA helicase that unwinds RNA secondary structures to facilitate translation and other processes.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds poly(U) tails to RNAs?</text>
+        <option>TUTase</option>
+        <option>Poly-A polymerase</option>
+        <option>RNA polymerase</option>
+        <option>DNA ligase</option>
+        <answer>TUTase</answer>
+        <explanation>Terminal Uridylyl Transferases (TUTases) add uridine residues to RNA molecules, affecting their stability.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of XRN2?</text>
+        <option>Process tRNA</option>
+        <option>Degrade RNA</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Degrade RNA</answer>
+        <explanation>XRN2 is a 5'-3' exoribonuclease that degrades RNA during transcription termination and RNA processing.</explanation>
+    </question>
+</questions>

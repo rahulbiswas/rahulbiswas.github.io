@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What role do non-coding RNAs play in gene regulation?</text>
+        <option>No role</option>
+        <option>Multiple regulatory functions</option>
+        <option>Only protein synthesis</option>
+        <option>Only transport</option>
+        <answer>Multiple regulatory functions</answer>
+        <explanation>Non-coding RNAs perform various regulatory functions including gene silencing and chromatin modification.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain chromosome structure?</text>
+        <option>Random organization</option>
+        <option>Through structural proteins and regulation</option>
+        <option>Only during division</option>
+        <option>No maintenance needed</option>
+        <answer>Through structural proteins and regulation</answer>
+        <explanation>Cells maintain chromosome structure through structural proteins, condensins, and regulatory mechanisms.</explanation>
+    </question>
+    <question>
+        <text>What determines DNA replication timing?</text>
+        <option>Random timing</option>
+        <option>Specific regulatory mechanisms</option>
+        <option>Only cell size</option>
+        <option>Only temperature</option>
+        <answer>Specific regulatory mechanisms</answer>
+        <explanation>DNA replication timing is controlled by specific regulatory mechanisms and chromatin organization.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate gene silencing?</text>
+        <option>They don't regulate it</option>
+        <option>Through multiple epigenetic mechanisms</option>
+        <option>Only through temperature</option>
+        <option>Random processes</option>
+        <answer>Through multiple epigenetic mechanisms</answer>
+        <explanation>Cells regulate gene silencing through various epigenetic mechanisms including DNA methylation and histone modifications.</explanation>
+    </question>
+    <question>
+        <text>What role does DNA packaging play in gene expression?</text>
+        <option>No role</option>
+        <option>Controls gene accessibility</option>
+        <option>Only structural support</option>
+        <option>Protein synthesis</option>
+        <answer>Controls gene accessibility</answer>
+        <explanation>DNA packaging levels control gene accessibility and regulate gene expression patterns.</explanation>
+    </question>
+</questions>

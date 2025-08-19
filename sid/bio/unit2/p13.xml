@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which process uses vesicles for cellular uptake?</text>
+        <option>Endocytosis</option>
+        <option>Diffusion</option>
+        <option>Osmosis</option>
+        <option>Facilitated transport</option>
+        <answer>Endocytosis</answer>
+        <explanation>Endocytosis involves the formation of vesicles to internalize materials from the extracellular environment.</explanation>
+    </question>
+    <question>
+        <text>What is the role of dynamin in endocytosis?</text>
+        <option>Vesicle pinching</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Membrane fusion</option>
+        <answer>Vesicle pinching</answer>
+        <explanation>Dynamin is a protein that helps pinch off endocytic vesicles from the plasma membrane.</explanation>
+    </question>
+    <question>
+        <text>Which molecule triggers receptor-mediated endocytosis?</text>
+        <option>Specific ligand</option>
+        <option>Random molecule</option>
+        <option>Water</option>
+        <option>ATP</option>
+        <answer>Specific ligand</answer>
+        <explanation>Receptor-mediated endocytosis begins when specific ligands bind to their membrane receptors.</explanation>
+    </question>
+    <question>
+        <text>What is the function of early endosomes?</text>
+        <option>Sorting vesicle contents</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Waste storage</option>
+        <answer>Sorting vesicle contents</answer>
+        <explanation>Early endosomes sort internalized materials and determine their cellular fate.</explanation>
+    </question>
+    <question>
+        <text>Which protein coat is involved in receptor-mediated endocytosis?</text>
+        <option>Clathrin</option>
+        <option>Actin</option>
+        <option>Tubulin</option>
+        <option>Keratin</option>
+        <answer>Clathrin</answer>
+        <explanation>Clathrin forms a protein coat around vesicles during receptor-mediated endocytosis.</explanation>
+    </question>
+</questions>

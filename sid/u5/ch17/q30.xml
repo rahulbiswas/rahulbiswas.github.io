@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="117">
+        <prompt>What was the main effect of the Australian ballot system?</prompt>
+        <options>
+            <option letter="a">It reduced electoral corruption through secret voting</option>
+            <option letter="b">It increased voter participation</option>
+            <option letter="c">It simplified voting procedures</option>
+            <option letter="d">It expanded voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Australian ballot system reduced electoral corruption by providing standardized, government-printed ballots and secret voting, though it also confused some illiterate voters.</explanation>
+    </question>
+    <question number="118">
+        <prompt>What was the significance of the Cambridge School controversy?</prompt>
+        <options>
+            <option letter="a">It challenged separate but equal education in the North</option>
+            <option letter="b">It supported segregation</option>
+            <option letter="c">It improved school funding</option>
+            <option letter="d">It expanded education access</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Cambridge School controversy challenged racial segregation in Northern schools, highlighting that Jim Crow practices weren't limited to the South.</explanation>
+    </question>
+    <question number="119">
+        <prompt>What was the main purpose of the National Cordage Association?</prompt>
+        <options>
+            <option letter="a">To control rope production and prices through monopoly</option>
+            <option letter="b">To improve product quality</option>
+            <option letter="c">To protect workers</option>
+            <option letter="d">To promote competition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Cordage Association attempted to monopolize rope production and control prices, though its collapse in 1893 helped trigger the economic depression.</explanation>
+    </question>
+    <question number="120">
+        <prompt>What was the primary goal of the National Civil Service Reform League?</prompt>
+        <options>
+            <option letter="a">To eliminate the spoils system through merit-based hiring</option>
+            <option letter="b">To expand patronage</option>
+            <option letter="c">To reduce government jobs</option>
+            <option letter="d">To increase political control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Civil Service Reform League worked to eliminate the spoils system and establish merit-based hiring for government positions.</explanation>
+    </question>
+</quiz>

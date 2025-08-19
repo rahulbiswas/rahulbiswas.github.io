@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Sacco and Vanzetti case highlighted:</prompt>
+        <options>
+            <option letter="a">Fair trial procedures</option>
+            <option letter="b">Anti-immigrant and anti-radical prejudices</option>
+            <option letter="c">Criminal justice reforms</option>
+            <option letter="d">Support for immigrant rights</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Sacco and Vanzetti case highlighted widespread anti-immigrant and anti-radical prejudices in 1920s America. Their trial for murder was marked by ethnic and political bias against them as Italian immigrants and anarchists. Despite international protests and questionable evidence, their conviction and execution demonstrated the era's strong prejudices against both immigrants and radical political beliefs.</explanation>
+    </question>
+</quiz>

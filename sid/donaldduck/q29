@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the purpose of the Filipino Repatriation Act?</prompt>
+    <options>
+        <option letter="a">To send Filipinos home</option>
+        <option letter="b">To grant citizenship</option>
+        <option letter="c">To increase immigration</option>
+        <option letter="d">To provide education</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Act offered to pay for Filipino immigrants to return home, but those who accepted could never return to the United States.</explanation>
+</question>

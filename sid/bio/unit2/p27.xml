@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of intermediate filaments?</text>
+        <option>Structural support</option>
+        <option>Cell movement</option>
+        <option>Protein transport</option>
+        <option>Energy production</option>
+        <answer>Structural support</answer>
+        <explanation>Intermediate filaments provide mechanical strength and structural support to cells and tissues.</explanation>
+    </question>
+    <question>
+        <text>Which protein forms nuclear lamina?</text>
+        <option>Lamins</option>
+        <option>Keratins</option>
+        <option>Vimentin</option>
+        <option>Desmin</option>
+        <answer>Lamins</answer>
+        <explanation>Lamins are specialized intermediate filament proteins that form the nuclear lamina beneath the nuclear envelope.</explanation>
+    </question>
+    <question>
+        <text>What characterizes intermediate filaments?</text>
+        <option>Stable structure</option>
+        <option>Rapid turnover</option>
+        <option>Dynamic instability</option>
+        <option>Constant movement</option>
+        <answer>Stable structure</answer>
+        <explanation>Intermediate filaments form stable, rope-like structures that resist mechanical stress.</explanation>
+    </question>
+    <question>
+        <text>Which cells contain keratin filaments?</text>
+        <option>Epithelial cells</option>
+        <option>Muscle cells</option>
+        <option>Nerve cells</option>
+        <option>Blood cells</option>
+        <answer>Epithelial cells</answer>
+        <explanation>Keratin intermediate filaments are characteristic of epithelial cells, providing strength and protection.</explanation>
+    </question>
+    <question>
+        <text>What happens to intermediate filaments during cell division?</text>
+        <option>Reorganization</option>
+        <option>Destruction</option>
+        <option>Rapid growth</option>
+        <option>No change</option>
+        <answer>Reorganization</answer>
+        <explanation>Intermediate filaments undergo controlled reorganization during cell division to allow proper cell splitting.</explanation>
+    </question>
+</questions>

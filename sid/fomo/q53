@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to money market equilibrium when the price level decreases?</prompt>
+        <options>
+            <option letter="a">Money demand increases, raising interest rates</option>
+            <option letter="b">Money demand decreases, lowering interest rates</option>
+            <option letter="c">Money supply increases, lowering interest rates</option>
+            <option letter="d">Money supply decreases, raising interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the price level decreases, people need less money to conduct transactions. This shifts the money demand curve left at every interest rate, resulting in a lower equilibrium interest rate in the money market while the money supply remains constant.</explanation>
+    </question>
+</quiz>

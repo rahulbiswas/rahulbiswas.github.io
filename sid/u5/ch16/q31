@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="121">
+        <prompt>What effect did the "blast furnace" improvements have on steel production?</prompt>
+        <options>
+            <option letter="a">Dramatically increased steel output and quality</option>
+            <option letter="b">Reduced production capacity</option>
+            <option letter="c">Limited steel availability</option>
+            <option letter="d">Increased production costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Improvements in blast furnace technology dramatically increased steel production output and quality while reducing costs, enabling the growth of the steel industry.</explanation>
+    </question>
+    <question number="122">
+        <prompt>How did the "office building" change urban work?</prompt>
+        <options>
+            <option letter="a">Centralized clerical work and created new job categories</option>
+            <option letter="b">Reduced business efficiency</option>
+            <option letter="c">Limited employment opportunities</option>
+            <option letter="d">Decreased urban development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Office buildings centralized clerical work and created new job categories, particularly for women, while transforming urban business districts.</explanation>
+    </question>
+    <question number="123">
+        <prompt>What was the significance of the "steam hammer"?</prompt>
+        <options>
+            <option letter="a">Enabled production of large steel components</option>
+            <option letter="b">Limited manufacturing capacity</option>
+            <option letter="c">Reduced product quality</option>
+            <option letter="d">Increased production time</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The steam hammer enabled the production of large steel components necessary for industrial machinery and railroad equipment, advancing manufacturing capabilities.</explanation>
+    </question>
+    <question number="124">
+        <prompt>How did the "freight classification" system affect shipping?</prompt>
+        <options>
+            <option letter="a">Standardized shipping rates and practices</option>
+            <option letter="b">Increased shipping costs</option>
+            <option letter="c">Limited trade options</option>
+            <option letter="d">Reduced efficiency</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Freight classification systems standardized shipping rates and practices across railroads, making transportation costs more predictable for businesses.</explanation>
+    </question></quiz>

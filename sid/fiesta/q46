@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the price level when the economy moves from a recessionary gap to potential GDP?</prompt>
+        <options>
+            <option letter="a">Price level must decrease</option>
+            <option letter="b">Price level tends to increase</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Price level becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As the economy moves from a recessionary gap to potential GDP, the price level tends to increase because rising aggregate demand and resource utilization put upward pressure on wages and prices.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in expected future income affect current saving?</prompt>
+        <options>
+            <option letter="a">Increases current saving</option>
+            <option letter="b">Decreases current saving</option>
+            <option letter="c">Has no effect on current saving</option>
+            <option letter="d">Only affects future saving</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in expected future income tends to decrease current saving because people smooth their consumption over time and may borrow against expected future income increases.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to aggregate supply when worker productivity declines?</prompt>
+        <options>
+            <option letter="a">Both SRAS and LRAS shift right</option>
+            <option letter="b">Both SRAS and LRAS shift left</option>
+            <option letter="c">SRAS shifts left, LRAS unchanged</option>
+            <option letter="d">Only LRAS shifts left</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When worker productivity declines, both SRAS and LRAS shift left because the economy's ability to produce output decreases in both the short and long run.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does a decrease in the velocity of money affect the price level, assuming constant money supply and real GDP?</prompt>
+        <options>
+            <option letter="a">Price level increases</option>
+            <option letter="b">Price level decreases</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With constant money supply and real GDP, a decrease in velocity means each dollar is spent less frequently, leading to a lower price level according to the quantity theory of money.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The fundamentalist movement of the 1920s was characterized by:</prompt>
+        <options>
+            <option letter="a">Support for scientific theories like evolution</option>
+            <option letter="b">Opposition to modernist religious and social trends</option>
+            <option letter="c">Promotion of religious diversity</option>
+            <option letter="d">Advocacy for separation of church and state</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The fundamentalist movement represented a conservative religious reaction against modernist trends in American society. Fundamentalists defended traditional Protestant beliefs, opposed the teaching of evolution, advocated literal interpretation of the Bible, and resisted changing social values. This cultural conflict was dramatically illustrated in the Scopes Trial and reflected deeper tensions between tradition and modernity in 1920s America.</explanation>
+    </question>
+</quiz>

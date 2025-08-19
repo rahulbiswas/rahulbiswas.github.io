@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do aging cells maintain energy homeostasis?</text>
+        <option>They function normally</option>
+        <option>They adapt metabolic pathways and efficiency</option>
+        <option>They stop producing energy</option>
+        <option>They only use glycolysis</option>
+        <answer>They adapt metabolic pathways and efficiency</answer>
+        <explanation>Aging cells maintain energy homeostasis by adapting metabolic pathways, modifying mitochondrial function, and adjusting energy allocation, though often with reduced efficiency compared to younger cells.</explanation>
+    </question>
+    <question>
+        <text>What happens to mitochondrial function during aging?</text>
+        <option>It stays the same</option>
+        <option>It typically declines with accumulated damage</option>
+        <option>It always improves</option>
+        <option>It only affects certain tissues</option>
+        <answer>It typically declines with accumulated damage</answer>
+        <explanation>Mitochondrial function typically declines with age due to accumulated oxidative damage, mutations in mitochondrial DNA, and reduced efficiency of repair mechanisms.</explanation>
+    </question>
+    <question>
+        <text>How does cellular energy efficiency change with age?</text>
+        <option>It remains constant</option>
+        <option>It generally decreases over time</option>
+        <option>It always increases</option>
+        <option>It only affects metabolism</option>
+        <answer>It generally decreases over time</answer>
+        <explanation>Cellular energy efficiency typically decreases with age due to reduced mitochondrial function, increased oxidative stress, and declining ability to maintain optimal metabolic pathways.</explanation>
+    </question>
+    <question>
+        <text>What role do free radicals play in aging metabolism?</text>
+        <option>They have no effect</option>
+        <option>They contribute to metabolic decline</option>
+        <option>They improve metabolism</option>
+        <option>They only affect proteins</option>
+        <answer>They contribute to metabolic decline</answer>
+        <explanation>Free radicals contribute to aging-related metabolic decline by damaging cellular components, particularly mitochondrial DNA and proteins, leading to reduced energy production efficiency.</explanation>
+    </question>
+    <question>
+        <text>How do aging organisms compensate for reduced energy efficiency?</text>
+        <option>They don't compensate</option>
+        <option>They modify metabolic pathways and resource allocation</option>
+        <option>They increase energy use</option>
+        <option>They only use glucose</option>
+        <answer>They modify metabolic pathways and resource allocation</answer>
+        <explanation>Aging organisms compensate for reduced energy efficiency by modifying metabolic pathways, reallocating resources, and adjusting activity levels to match their changing energy production capacity.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 5 Quiz ⭐️</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-5">
+        <h1>Unit 5 Self Quiz</h1>
+
+        <div class="key-concept">
+            <h2>Test Your Knowledge! 화이팅! ✨</h2>
+            <p>Let's see how much you've learned about heredity and inheritance~</p>
+        </div>
+
+        <div class="section">
+            <h2>Multiple Choice</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. Which phase of meiosis involves crossing over?</p>
+                    <ul>
+                        <li>a) Metaphase I</li>
+                        <li>b) Prophase I</li>
+                        <li>c) Anaphase I</li>
+                        <li>d) Prophase II</li>
+                    </ul>
+                    <button class="show-answer">See Answer (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <p>b) Prophase I - Crossing over occurs during prophase I of meiosis I, specifically during the pachytene stage.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. What is the phenotype ratio in a dihybrid cross of two heterozygotes?</p>
+                    <ul>
+                        <li>a) 3:1</li>
+                        <li>b) 1:2:1</li>
+                        <li>c) 9:3:3:1</li>
+                        <li>d) 1:1:1:1</li>
+                    </ul>
+                    <button class="show-answer">See Answer ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <p>c) 9:3:3:1 - This is the classic phenotype ratio for a dihybrid cross showing independent assortment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Short Answer</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Compare codominance and incomplete dominance:</p>
+                    <button class="show-answer">See Answer (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Codominance: Both alleles fully expressed</li>
+                            <li>Incomplete dominance: Intermediate phenotype</li>
+                            <li>Example: AB blood vs. pink flowers</li>
+                            <li>Different inheritance patterns</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Explain how nondisjunction leads to chromosomal disorders:</p>
+                    <button class="show-answer">See Answer ⭐️</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Improper chromosome separation</li>
+                            <li>Results in aneuploidy</li>
+                            <li>Can occur in meiosis I or II</li>
+                            <li>Leads to trisomy or monosomy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Problem Solving</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. A colorblind woman marries a man with normal vision. What proportion of their sons will be colorblind?</p>
+                    <button class="show-answer">See Answer (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <p>Solution:</p>
+                        <ul>
+                            <li>Woman is XcXc (colorblind)</li>
+                            <li>Man is XY (normal)</li>
+                            <li>All sons get Xc from mother</li>
+                            <li>Therefore, 100% of sons will be colorblind</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Pedigree Analysis</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>6. Identify the inheritance pattern shown:</p>
+                    <button class="show-answer">See Answer ✨</button>
+                    <div class="answer hidden">
+                        <p>Look for:</p>
+                        <ul>
+                            <li>Male/female distribution</li>
+                            <li>Generation patterns</li>
+                            <li>Skipped generations</li>
+                            <li>Affected parent-child patterns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Review Tips</h3>
+            <ul>
+                <li>Draw diagrams</li>
+                <li>Practice problems</li>
+                <li>Know patterns</li>
+                <li>Understand mechanisms</li>
+                <li>Connect concepts</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>

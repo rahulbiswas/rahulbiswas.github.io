@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of translation release factors?</text>
+        <option>Start protein synthesis</option>
+        <option>Recognize stop codons</option>
+        <option>Add amino acids</option>
+        <option>Join DNA fragments</option>
+        <answer>Recognize stop codons</answer>
+        <explanation>Release factors recognize stop codons in mRNA and trigger the release of the completed protein from the ribosome.</explanation>
+    </question>
+    
+    <question>
+        <text>Which structure forms during homologous recombination?</text>
+        <option>Replication fork</option>
+        <option>Holliday junction</option>
+        <option>Transcription bubble</option>
+        <option>Translation complex</option>
+        <answer>Holliday junction</answer>
+        <explanation>Holliday junctions form when homologous DNA strands cross over and exchange genetic material during recombination.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of exportins in gene expression?</text>
+        <option>Import proteins</option>
+        <option>Transport RNA to cytoplasm</option>
+        <option>Repair DNA</option>
+        <option>Synthesize proteins</option>
+        <answer>Transport RNA to cytoplasm</answer>
+        <explanation>Exportins are nuclear transport proteins that help move processed RNA molecules from the nucleus to the cytoplasm.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds the poly-A tail to mRNA?</text>
+        <option>RNA polymerase</option>
+        <option>Poly-A polymerase</option>
+        <option>DNA ligase</option>
+        <option>Primase</option>
+        <answer>Poly-A polymerase</answer>
+        <explanation>Poly-A polymerase adds the string of adenine nucleotides that forms the poly-A tail during mRNA processing.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of origin recognition complex?</text>
+        <option>Start transcription</option>
+        <option>Initiate DNA replication</option>
+        <option>Process RNA</option>
+        <option>Fold proteins</option>
+        <answer>Initiate DNA replication</answer>
+        <explanation>The origin recognition complex identifies and binds to DNA replication origin sites to begin the replication process.</explanation>
+    </question>
+</questions>

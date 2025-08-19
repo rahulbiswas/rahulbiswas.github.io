@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the purpose of the "Alabama Constitution" of 1875?</prompt>
+        <options>
+            <option letter="a">To restore Democratic control and limit black rights</option>
+            <option letter="b">To expand civil rights protection</option>
+            <option letter="c">To support Reconstruction policies</option>
+            <option letter="d">To increase education funding</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Alabama Constitution of 1875 was designed to restore Democratic control and limit African American rights while reducing state government powers.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Militia Act" affect Southern states?</prompt>
+        <options>
+            <option letter="a">Allowed states to organize white-only militia units</option>
+            <option letter="b">Created integrated military forces</option>
+            <option letter="c">Strengthened federal control</option>
+            <option letter="d">Protected black rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Militia Act allowed Southern states to organize white-only militia units, which were often used to intimidate African American voters.</explanation>
+    </question>
+    <question>
+        <prompt>What role did "Carpetbag Constitutions" play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Established Republican governments and civil rights</option>
+            <option letter="b">Restricted voting rights</option>
+            <option letter="c">Protected Confederate interests</option>
+            <option letter="d">Limited federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Carpetbag Constitutions were state constitutions written during Reconstruction that established Republican governments and protected civil rights.</explanation>
+    </question>
+    <question>
+        <prompt>What was the impact of the "Cotton Tax"?</prompt>
+        <options>
+            <option letter="a">Created economic hardship for Southern farmers</option>
+            <option letter="b">Improved agricultural conditions</option>
+            <option letter="c">Increased cotton production</option>
+            <option letter="d">Supported freedmen</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Cotton Tax created economic hardship for Southern farmers by taxing their primary cash crop during the difficult post-war recovery period.</explanation>
+    </question>
+</quiz>

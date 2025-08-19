@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What caused the Dust Bowl?</prompt>
+    <options>
+        <option letter="a">Poor farming practices</option>
+        <option letter="b">Industrial pollution</option>
+        <option letter="c">Nuclear testing</option>
+        <option letter="d">Urban development</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Dust Bowl resulted from drought combined with years of poor farming practices that left topsoil vulnerable to wind erosion.</explanation>
+</question>

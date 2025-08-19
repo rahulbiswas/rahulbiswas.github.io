@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What role do motor proteins play in the cell?</text>
+        <option>Transport cargo</option>
+        <option>Generate energy</option>
+        <option>Build membranes</option>
+        <option>Synthesize proteins</option>
+        <answer>Transport cargo</answer>
+        <explanation>Motor proteins move cargo along cytoskeletal tracks, transporting vesicles and organelles within the cell.</explanation>
+    </question>
+    <question>
+        <text>Which motor protein moves along microtubules toward the plus end?</text>
+        <option>Kinesin</option>
+        <option>Dynein</option>
+        <option>Myosin</option>
+        <option>Actin</option>
+        <answer>Kinesin</answer>
+        <explanation>Kinesin motors typically move cargo toward the plus end of microtubules in anterograde transport.</explanation>
+    </question>
+    <question>
+        <text>What powers motor protein movement?</text>
+        <option>ATP hydrolysis</option>
+        <option>Passive diffusion</option>
+        <option>Thermal energy</option>
+        <option>Ion gradients</option>
+        <answer>ATP hydrolysis</answer>
+        <explanation>Motor proteins use energy from ATP hydrolysis to generate force and movement along cytoskeletal tracks.</explanation>
+    </question>
+    <question>
+        <text>Which motor protein is involved in muscle contraction?</text>
+        <option>Myosin II</option>
+        <option>Kinesin</option>
+        <option>Dynein</option>
+        <option>Myosin VI</option>
+        <answer>Myosin II</answer>
+        <explanation>Myosin II is the primary motor protein responsible for muscle contraction through interaction with actin filaments.</explanation>
+    </question>
+    <question>
+        <text>What characterizes retrograde transport?</text>
+        <option>Movement toward cell body</option>
+        <option>Movement toward periphery</option>
+        <option>Random movement</option>
+        <option>No movement</option>
+        <answer>Movement toward cell body</answer>
+        <explanation>Retrograde transport moves cargo toward the cell body, typically using dynein motors on microtubules.</explanation>
+    </question>
+</questions>

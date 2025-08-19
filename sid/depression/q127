@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Billy Sunday's evangelical crusades promoted:</prompt>
+        <options>
+            <option letter="a">Religious modernism</option>
+            <option letter="b">Traditional Protestant values and Prohibition</option>
+            <option letter="c">Scientific theories</option>
+            <option letter="d">Social reform movements</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Billy Sunday's evangelical crusades promoted traditional Protestant values and Prohibition through theatrical preaching style. As a prominent fundamentalist evangelist, he defended traditional religious beliefs, opposed modernism and evolution, and strongly supported Prohibition. His popular revival meetings represented the conservative religious reaction against modern cultural and social changes of the 1920s.</explanation>
+    </question>
+</quiz>

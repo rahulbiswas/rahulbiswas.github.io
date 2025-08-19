@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of cohesins in cell division?</text>
+        <option>Break DNA strands</option>
+        <option>Hold sister chromatids</option>
+        <option>Replicate DNA</option>
+        <option>Transcribe genes</option>
+        <answer>Hold sister chromatids</answer>
+        <explanation>Cohesin proteins hold sister chromatids together after DNA replication until they separate during cell division.</explanation>
+    </question>
+    
+    <question>
+        <text>Which modification is characteristic of active enhancers?</text>
+        <option>DNA methylation</option>
+        <option>H3K27 methylation</option>
+        <option>H3K27 acetylation</option>
+        <option>Histone deacetylation</option>
+        <answer>H3K27 acetylation</answer>
+        <explanation>H3K27 acetylation is a histone modification typically found at active enhancer regions that promote gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of Sm proteins?</text>
+        <option>Repair DNA</option>
+        <option>Form spliceosome core</option>
+        <option>Synthesize proteins</option>
+        <option>Regulate transcription</option>
+        <answer>Form spliceosome core</answer>
+        <explanation>Sm proteins form the core structure of spliceosomes, helping to organize snRNAs for pre-mRNA splicing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds telomere sequences?</text>
+        <option>DNA polymerase</option>
+        <option>Telomerase</option>
+        <option>RNA polymerase</option>
+        <option>Primase</option>
+        <answer>Telomerase</answer>
+        <explanation>Telomerase is a specialized enzyme that adds repetitive sequences to chromosome ends to maintain telomere length.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of the peptidyl transferase center?</text>
+        <option>Transport proteins</option>
+        <option>Form peptide bonds</option>
+        <option>Modify DNA</option>
+        <option>Process RNA</option>
+        <answer>Form peptide bonds</answer>
+        <explanation>The peptidyl transferase center in ribosomes catalyzes the formation of peptide bonds between amino acids during protein synthesis.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,116 @@
+{
+  "description": "Capture",
+  "tests": [
+    {
+      "description": "cat can capture rat on land",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.CAT"
+        },
+        "0_1": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.RAT"
+        }
+      },
+      "startPos": "0_0",
+      "endPos": "0_1",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "should allow capturing weaker opponent piece",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.TIGER"
+        },
+        "0_1": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.RAT"
+        }
+      },
+      "startPos": "0_0",
+      "endPos": "0_1",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "rat can capture elephant",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        },
+        "0_1": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.ELEPHANT"
+        }
+      },
+      "startPos": "0_0",
+      "endPos": "0_1",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "should allow equal rank captures",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.DOG"
+        },
+        "0_1": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.DOG"
+        }
+      },
+      "startPos": "0_0",
+      "endPos": "0_1",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "should reject red piece entering red den",
+      "board": {
+        "3_7": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        }
+      },
+      "startPos": "3_7",
+      "endPos": "3_8",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": false
+    },
+    {
+      "description": "should allow red piece entering yellow den",
+      "board": {
+        "3_1": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        }
+      },
+      "startPos": "3_1",
+      "endPos": "3_0",
+      "currentPlayer": "PLAYERS.RED",
+      "expectedValid": true
+    },
+    {
+      "description": "elephant cannot eat rat",
+      "board": {
+        "0_0": {
+          "player": "PLAYERS.RED",
+          "animal": "PIECES.RAT"
+        },
+        "1_0": {
+          "player": "PLAYERS.YELLOW",
+          "animal": "PIECES.ELEPHANT"
+        }
+      },
+      "startPos": "1_0",
+      "endPos": "0_0",
+      "currentPlayer": "PLAYERS.YELLOW",
+      "expectedValid": false
+    }
+  ]
+}

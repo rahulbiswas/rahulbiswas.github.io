@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>What role do accessory pigments play in photosynthesis?</text>
+        <option>They directly power the Calvin cycle</option>
+        <option>They expand the spectrum of light that can be used</option>
+        <option>They split water molecules</option>
+        <option>They produce ATP independently</option>
+        <answer>They expand the spectrum of light that can be used</answer>
+        <explanation>Accessory pigments like carotenoids and chlorophyll b absorb different wavelengths of light than chlorophyll a, expanding the range of light energy that can be captured for photosynthesis and transferred to reaction centers.</explanation>
+    </question>
+    <question>
+        <text>How does the light compensation point affect plant survival?</text>
+        <option>It determines maximum photosynthesis rate</option>
+        <option>It indicates where photosynthesis equals respiration</option>
+        <option>It measures water usage only</option>
+        <option>It controls flowering time</option>
+        <answer>It indicates where photosynthesis equals respiration</answer>
+        <explanation>The light compensation point is where photosynthetic CO2 uptake exactly balances respiratory CO2 release. Below this point, plants consume more energy than they produce, affecting their ability to survive in low-light conditions.</explanation>
+    </question>
+    <question>
+        <text>What happens to excess light energy in photosynthesis?</text>
+        <option>It is always stored as ATP</option>
+        <option>It is dissipated as heat or fluorescence</option>
+        <option>It is converted to glucose directly</option>
+        <option>It is stored for nighttime use</option>
+        <answer>It is dissipated as heat or fluorescence</answer>
+        <explanation>When plants receive more light energy than they can use for photosynthesis, they must safely dissipate the excess energy through heat release or fluorescence to prevent damage to photosynthetic machinery.</explanation>
+    </question>
+    <question>
+        <text>How do plants adjust to varying light intensities?</text>
+        <option>Only by growing taller</option>
+        <option>By changing leaf orientation and chloroplast position</option>
+        <option>By stopping photosynthesis completely</option>
+        <option>By producing more roots</option>
+        <answer>By changing leaf orientation and chloroplast position</answer>
+        <explanation>Plants can adjust leaf angle and move chloroplasts within cells to optimize light capture in low light or minimize damage from excessive light, demonstrating both short-term and long-term adaptations.</explanation>
+    </question>
+    <question>
+        <text>What is the relationship between light intensity and photosynthetic rate?</text>
+        <option>Always directly proportional</option>
+        <option>Linear until light saturation point</option>
+        <option>Completely independent</option>
+        <option>Inversely proportional</option>
+        <answer>Linear until light saturation point</answer>
+        <explanation>Photosynthetic rate increases linearly with light intensity until reaching the light saturation point, where other factors become limiting. Beyond this point, increasing light intensity doesn't increase photosynthesis rate.</explanation>
+    </question>
+</quiz>

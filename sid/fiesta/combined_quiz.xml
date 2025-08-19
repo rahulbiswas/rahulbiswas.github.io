@@ -1,0 +1,2399 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="1">
+        <prompt>How does an increase in the money supply affect real GDP in the long run?</prompt>
+        <options>
+            <option letter="a">Increases real GDP proportionally</option>
+            <option letter="b">Decreases real GDP proportionally</option>
+            <option letter="c">Has no effect on real GDP</option>
+            <option letter="d">Effect depends on the inflation rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In the long run, money is neutral, meaning changes in the money supply affect nominal variables (like prices) but not real variables like real GDP, due to price and wage adjustment.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>What happens to the purchasing power of fixed-income payments during periods of deflation?</prompt>
+        <options>
+            <option letter="a">Purchasing power decreases</option>
+            <option letter="b">Purchasing power increases</option>
+            <option letter="c">Purchasing power stays the same</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During deflation, the purchasing power of fixed-income payments increases because the same nominal amount of money can buy more goods and services as prices fall.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>How does an increase in government spending affect private investment in the short run?</prompt>
+        <options>
+            <option letter="a">Always increases private investment</option>
+            <option letter="b">May crowd out private investment</option>
+            <option letter="c">Has no effect on private investment</option>
+            <option letter="d">Only affects public investment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in government spending may crowd out private investment in the short run by raising interest rates, making it more expensive for private firms to borrow and invest.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What happens to frictional unemployment when job matching technology improves?</prompt>
+        <options>
+            <option letter="a">Increases frictional unemployment</option>
+            <option letter="b">Decreases frictional unemployment</option>
+            <option letter="c">Has no effect on frictional unemployment</option>
+            <option letter="d">Only affects structural unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Improved job matching technology (like online job boards) decreases frictional unemployment by making it easier and faster for workers to find suitable job openings.</explanation>
+    </question>
+<question number="5">
+        <prompt>How does a decrease in business taxes affect both AD and LRAS?</prompt>
+        <options>
+            <option letter="a">Shifts both curves left</option>
+            <option letter="b">Shifts both curves right</option>
+            <option letter="c">Shifts AD right, no effect on LRAS</option>
+            <option letter="d">Shifts AD and LRAS right, but for different reasons</option>
+        </options>
+        <answer>d</answer>
+        <explanation>A decrease in business taxes shifts AD right by increasing business spending and investment, and shifts LRAS right by increasing the incentive for capital investment and expanding productive capacity.</explanation>
+    </question>
+
+    <question number="6">
+        <prompt>What determines the size of the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">The unemployment rate</option>
+            <option letter="b">The marginal propensities to consume and import</option>
+            <option letter="c">The inflation rate</option>
+            <option letter="d">The size of government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The size of the government spending multiplier is determined by the marginal propensity to consume (how much additional income is spent) minus the marginal propensity to import (spending on foreign goods).</explanation>
+    </question>
+
+    <question number="7">
+        <prompt>How does an increase in expected future income affect current consumption?</prompt>
+        <options>
+            <option letter="a">Decreases current consumption</option>
+            <option letter="b">Increases current consumption</option>
+            <option letter="c">Has no effect on current consumption</option>
+            <option letter="d">Only affects future consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in expected future income tends to increase current consumption because people smooth their consumption over time based on their permanent or lifetime expected income.</explanation>
+    </question>
+
+    <question number="8">
+        <prompt>What happens to the natural rate of unemployment when job search time increases?</prompt>
+        <options>
+            <option letter="a">Natural rate decreases</option>
+            <option letter="b">Natural rate increases</option>
+            <option letter="c">Natural rate stays the same</option>
+            <option letter="d">Only cyclical unemployment is affected</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When job search time increases, frictional unemployment rises as people spend longer between jobs, causing an increase in the natural rate of unemployment.</explanation>
+    </question>
+<question number="9">
+        <prompt>What happens to the unemployment rate when discouraged workers re-enter the labor force during recovery?</prompt>
+        <options>
+            <option letter="a">Unemployment rate decreases</option>
+            <option letter="b">Unemployment rate increases initially</option>
+            <option letter="c">Unemployment rate stays constant</option>
+            <option letter="d">Only affects employment rate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When discouraged workers re-enter the labor force, the unemployment rate initially increases because they are counted as unemployed while searching for work, even though this may indicate improving economic conditions.</explanation>
+    </question>
+
+    <question number="10">
+        <prompt>How does a decrease in aggregate supply affect the relationship between inflation and unemployment?</prompt>
+        <options>
+            <option letter="a">Creates lower inflation and lower unemployment</option>
+            <option letter="b">Creates higher inflation and higher unemployment</option>
+            <option letter="c">Creates higher inflation and lower unemployment</option>
+            <option letter="d">Has no effect on inflation or unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A decrease in aggregate supply creates stagflation, with both higher inflation (due to higher costs) and higher unemployment (due to reduced output), shifting the Phillips Curve right.</explanation>
+    </question>
+
+    <question number="11">
+        <prompt>What effect does an increase in the required reserve ratio have on the money multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the money multiplier</option>
+            <option letter="b">Decreases the money multiplier</option>
+            <option letter="c">Has no effect on the money multiplier</option>
+            <option letter="d">Makes the money multiplier negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the required reserve ratio decreases the money multiplier because banks must hold more reserves for each dollar of deposits, reducing their ability to create money through lending.</explanation>
+    </question>
+
+    <question number="12">
+        <prompt>How does an increase in income inequality affect aggregate consumption spending?</prompt>
+        <options>
+            <option letter="a">Always increases aggregate consumption</option>
+            <option letter="b">Tends to decrease aggregate consumption</option>
+            <option letter="c">Has no effect on aggregate consumption</option>
+            <option letter="d">Only affects investment spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased income inequality tends to decrease aggregate consumption because higher-income households have a lower marginal propensity to consume than lower-income households.</explanation>
+    </question>
+<question number="13">
+        <prompt>What happens to the real interest rate when expected inflation increases but nominal interest rates don't change?</prompt>
+        <options>
+            <option letter="a">Real interest rate increases</option>
+            <option letter="b">Real interest rate decreases</option>
+            <option letter="c">Real interest rate stays the same</option>
+            <option letter="d">Real interest rate becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When expected inflation increases but nominal interest rates remain constant, the real interest rate decreases because real interest rate equals nominal interest rate minus expected inflation rate.</explanation>
+    </question>
+
+    <question number="14">
+        <prompt>How does an increase in the velocity of money affect the price level, assuming constant money supply and real GDP?</prompt>
+        <options>
+            <option letter="a">Price level decreases</option>
+            <option letter="b">Price level increases</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With constant money supply and real GDP, an increase in velocity means each dollar is being spent more frequently, leading to a higher price level according to the quantity theory of money.</explanation>
+    </question>
+
+    <question number="15">
+        <prompt>What distinguishes automatic stabilizers from discretionary fiscal policy?</prompt>
+        <options>
+            <option letter="a">Automatic stabilizers require congressional approval</option>
+            <option letter="b">Automatic stabilizers work without policy action</option>
+            <option letter="c">Automatic stabilizers only work during expansions</option>
+            <option letter="d">Automatic stabilizers only affect government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Automatic stabilizers work without requiring specific policy actions, automatically helping to stabilize the economy through mechanisms like progressive taxes and unemployment benefits.</explanation>
+    </question>
+
+    <question number="16">
+        <prompt>How does an increase in capital mobility affect the effectiveness of monetary policy in a fixed exchange rate system?</prompt>
+        <options>
+            <option letter="a">Increases monetary policy effectiveness</option>
+            <option letter="b">Decreases monetary policy effectiveness</option>
+            <option letter="c">Has no effect on monetary policy</option>
+            <option letter="d">Only affects fiscal policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased capital mobility reduces monetary policy effectiveness under fixed exchange rates because the central bank must focus on maintaining the exchange rate rather than managing domestic economic conditions.</explanation>
+    </question>
+<question number="17">
+        <prompt>Which measures productive efficiency in an economy?</prompt>
+        <options>
+            <option letter="a">Real GDP</option>
+            <option letter="b">Nominal GDP</option>
+            <option letter="c">Real GDP per worker</option>
+            <option letter="d">Real GDP per capita</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Real GDP per worker measures productive efficiency because it shows how much output is produced per worker, adjusting for inflation and directly measuring labor productivity.</explanation>
+    </question>
+
+    <question number="18">
+        <prompt>How does increased income inequality affect the consumption function?</prompt>
+        <options>
+            <option letter="a">Shifts it up because wealthy people spend more</option>
+            <option letter="b">Shifts it down because wealthy people have lower MPC</option>
+            <option letter="c">Makes it steeper</option>
+            <option letter="d">Has no effect on consumption function</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased income inequality tends to shift the consumption function down because wealthy individuals have a lower marginal propensity to consume than lower-income individuals.</explanation>
+    </question>
+
+    <question number="19">
+        <prompt>What happens to velocity of money during a financial crisis?</prompt>
+        <options>
+            <option letter="a">Increases as people spend more rapidly</option>
+            <option letter="b">Decreases as people hold more precautionary balances</option>
+            <option letter="c">Stays constant despite the crisis</option>
+            <option letter="d">Becomes more volatile but averages normal levels</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a financial crisis, velocity of money typically decreases as people and businesses hold more precautionary money balances and reduce spending, causing money to circulate more slowly.</explanation>
+    </question>
+
+    <question number="20">
+        <prompt>How does an increase in the minimum wage affect the SRAS curve?</prompt>
+        <options>
+            <option letter="a">Shifts SRAS right</option>
+            <option letter="b">Shifts SRAS left</option>
+            <option letter="c">Moves along the SRAS curve</option>
+            <option letter="d">Has no effect on SRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the minimum wage raises production costs for businesses, causing the Short-Run Aggregate Supply curve to shift left as firms produce less output at each price level.</explanation>
+    </question>
+<question number="21">
+        <prompt>What happens to the cyclical component of the budget deficit during a recession?</prompt>
+        <options>
+            <option letter="a">Cyclical deficit decreases</option>
+            <option letter="b">Cyclical deficit increases</option>
+            <option letter="c">Cyclical deficit stays constant</option>
+            <option letter="d">Cyclical deficit becomes a surplus</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The cyclical component of the budget deficit increases during a recession because tax revenues automatically fall and transfer payments automatically rise as economic activity declines.</explanation>
+    </question>
+
+    <question number="22">
+        <prompt>How does an increase in expected future inflation affect current consumption?</prompt>
+        <options>
+            <option letter="a">Decreases current consumption</option>
+            <option letter="b">Increases current consumption</option>
+            <option letter="c">Has no effect on current consumption</option>
+            <option letter="d">Only affects future consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in expected future inflation tends to increase current consumption as people buy goods sooner to avoid higher prices in the future, particularly for durable goods.</explanation>
+    </question>
+
+    <question number="23">
+        <prompt>What determines the steepness of the aggregate demand curve?</prompt>
+        <options>
+            <option letter="a">The size of the wealth effect only</option>
+            <option letter="b">The size of the interest rate effect only</option>
+            <option letter="c">The combined size of wealth, interest rate, and foreign trade effects</option>
+            <option letter="d">The unemployment rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The steepness of the aggregate demand curve is determined by the combined magnitude of the wealth effect, interest rate effect, and foreign trade effect in response to price level changes.</explanation>
+    </question>
+
+    <question number="24">
+        <prompt>How does an increase in labor force participation affect the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Always decreases the natural rate</option>
+            <option letter="b">Always increases the natural rate</option>
+            <option letter="c">Initially may increase the natural rate</option>
+            <option letter="d">Has no effect on the natural rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>An increase in labor force participation may initially increase the natural rate of unemployment as new workers enter the labor force and experience frictional unemployment while searching for jobs.</explanation>
+    </question>
+<question number="25">
+        <prompt>How does an increase in the required reserve ratio affect the money supply?</prompt>
+        <options>
+            <option letter="a">Increases the money supply</option>
+            <option letter="b">Decreases the money supply</option>
+            <option letter="c">Has no effect on money supply</option>
+            <option letter="d">Only affects the price level</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the required reserve ratio decreases the money supply because banks must hold more reserves against deposits, reducing their ability to create money through the lending process.</explanation>
+    </question>
+
+    <question number="26">
+        <prompt>What happens to potential GDP when the participation rate decreases?</prompt>
+        <options>
+            <option letter="a">Potential GDP increases</option>
+            <option letter="b">Potential GDP decreases</option>
+            <option letter="c">Potential GDP stays constant</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A decrease in the labor force participation rate reduces potential GDP because fewer workers are available to produce goods and services, lowering the economy's productive capacity.</explanation>
+    </question>
+
+    <question number="27">
+        <prompt>How does an increase in expected inflation affect investment spending?</prompt>
+        <options>
+            <option letter="a">Always increases investment</option>
+            <option letter="b">Tends to decrease investment</option>
+            <option letter="c">Has no effect on investment</option>
+            <option letter="d">Only affects consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Higher expected inflation tends to decrease investment spending because it typically leads to higher nominal interest rates and increases uncertainty about future returns on investment.</explanation>
+    </question>
+
+    <question number="28">
+        <prompt>What effect does increased price flexibility have on macroeconomic adjustment?</prompt>
+        <options>
+            <option letter="a">Slows adjustment to shocks</option>
+            <option letter="b">Speeds adjustment to shocks</option>
+            <option letter="c">Has no effect on adjustment speed</option>
+            <option letter="d">Only affects wage adjustment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased price flexibility speeds up macroeconomic adjustment to shocks because prices can change more quickly to restore equilibrium in various markets.</explanation>
+    </question>
+<question number="29">
+        <prompt>If the CPI in 2020 is 200 and in 2021 is 208, what is the inflation rate between these years?</prompt>
+        <options>
+            <option letter="a">8%</option>
+            <option letter="b">4%</option>
+            <option letter="c">0.4%</option>
+            <option letter="d">0.08%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The inflation rate is calculated as (208-200)/200 × 100 = 4%. This represents the percentage increase in the price level between the two years.</explanation>
+    </question>
+
+    <question number="30">
+        <prompt>What is considered a problem with using the unemployment rate as an economic indicator?</prompt>
+        <options>
+            <option letter="a">It counts part-time workers as fully employed</option>
+            <option letter="b">It includes discouraged workers who have stopped looking for work</option>
+            <option letter="c">It only measures urban unemployment</option>
+            <option letter="d">It overestimates the number of unemployed people</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The unemployment rate counts part-time workers as fully employed even if they want full-time work, and it doesn't account for discouraged workers who have stopped looking for work.</explanation>
+    </question>
+
+    <question number="31">
+        <prompt>During which phase of the business cycle is GDP growing but still below potential GDP?</prompt>
+        <options>
+            <option letter="a">Peak</option>
+            <option letter="b">Recession</option>
+            <option letter="c">Recovery</option>
+            <option letter="d">Trough</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During the recovery (expansion) phase, GDP is growing positively but may still be below potential GDP until full recovery is achieved. This period follows a trough and continues until reaching peak.</explanation>
+    </question>
+
+    <question number="32">
+        <prompt>If nominal GDP is $20 trillion and real GDP is $16 trillion, what is the GDP deflator?</prompt>
+        <options>
+            <option letter="a">80</option>
+            <option letter="b">125</option>
+            <option letter="c">25</option>
+            <option letter="d">1.25</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The GDP deflator is calculated as (Nominal GDP/Real GDP) × 100 = ($20 trillion/$16 trillion) × 100 = 125. This indicates that the price level has increased 25% since the base year.</explanation>
+    </question>
+<question number="33">
+        <prompt>What causes structural unemployment?</prompt>
+        <options>
+            <option letter="a">Temporary layoffs during economic downturns</option>
+            <option letter="b">Workers voluntarily changing jobs</option>
+            <option letter="c">Mismatch between worker skills and job requirements</option>
+            <option letter="d">Seasonal changes in employment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Structural unemployment occurs when there is a fundamental mismatch between workers' skills and the skills required for available jobs, often due to technological change or industry shifts.</explanation>
+    </question>
+
+    <question number="34">
+        <prompt>In the circular flow model, what is an example of an injection?</prompt>
+        <options>
+            <option letter="a">Savings by households</option>
+            <option letter="b">Investment spending by firms</option>
+            <option letter="c">Tax payments</option>
+            <option letter="d">Imports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Investment spending by firms is an injection into the circular flow as it represents new spending entering the economy. Other injections include government spending and exports.</explanation>
+    </question>
+
+    <question number="35">
+        <prompt>Which group typically benefits from unexpected inflation?</prompt>
+        <options>
+            <option letter="a">Retirees living on fixed pensions</option>
+            <option letter="b">Borrowers with fixed-rate loans</option>
+            <option letter="c">Lenders with fixed-rate loans</option>
+            <option letter="d">People with large cash savings</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Borrowers with fixed-rate loans benefit from unexpected inflation because they repay their loans with money that is worth less in real terms, while the nominal payment remains the same.</explanation>
+    </question>
+
+    <question number="36">
+        <prompt>What happens to the Short-Run Aggregate Supply curve when energy prices increase significantly?</prompt>
+        <options>
+            <option letter="a">Shifts right</option>
+            <option letter="b">Shifts left</option>
+            <option letter="c">Moves along the curve</option>
+            <option letter="d">Becomes more elastic</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in energy prices raises production costs for firms, causing the Short-Run Aggregate Supply curve to shift left as firms produce less output at each price level.</explanation>
+    </question>
+<question number="37">
+        <prompt>How does an increase in structural unemployment affect the Phillips Curve?</prompt>
+        <options>
+            <option letter="a">Shifts Phillips Curve left</option>
+            <option letter="b">Shifts Phillips Curve right</option>
+            <option letter="c">Makes Phillips Curve steeper</option>
+            <option letter="d">Makes Phillips Curve flatter</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in structural unemployment shifts the Phillips Curve right because it raises the natural rate of unemployment, meaning any given inflation rate is associated with a higher unemployment rate.</explanation>
+    </question>
+
+    <question number="38">
+        <prompt>What happens to the aggregate price level during a supply-side recession?</prompt>
+        <options>
+            <option letter="a">Price level falls</option>
+            <option letter="b">Price level rises</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Direction depends on monetary policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a supply-side recession, the price level tends to rise because the negative supply shock that caused the recession also creates upward pressure on costs and prices.</explanation>
+    </question>
+
+    <question number="39">
+        <prompt>How does an increase in the budget deficit affect the exchange rate?</prompt>
+        <options>
+            <option letter="a">Always causes depreciation</option>
+            <option letter="b">Tends to cause appreciation</option>
+            <option letter="c">Has no effect on exchange rate</option>
+            <option letter="d">Only affects trade balance</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the budget deficit tends to cause currency appreciation because higher interest rates attract foreign capital inflows, increasing demand for the domestic currency.</explanation>
+    </question>
+
+    <question number="40">
+        <prompt>What determines the natural rate of output?</prompt>
+        <options>
+            <option letter="a">The level of aggregate demand</option>
+            <option letter="b">The amount of physical and human capital</option>
+            <option letter="c">Government spending levels</option>
+            <option letter="d">The unemployment rate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The natural rate of output (potential GDP) is determined by the economy's productive capacity, which depends on its physical capital (machines, equipment) and human capital (skills, knowledge).</explanation>
+    </question>
+<question number="41">
+        <prompt>What are the three main goals of macroeconomic policy?</prompt>
+        <options>
+            <option letter="a">Economic growth, full employment, and price stability</option>
+            <option letter="b">Maximum profits, minimum unemployment, and zero inflation</option>
+            <option letter="c">Budget surplus, trade surplus, and monetary stability</option>
+            <option letter="d">High wages, low taxes, and balanced trade</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The three main goals of macroeconomic policy are economic growth (increasing real GDP), full employment (minimizing cyclical unemployment), and price stability (maintaining low and stable inflation).</explanation>
+    </question>
+
+    <question number="42">
+        <prompt>During which phase of the business cycle does real GDP growth become negative?</prompt>
+        <options>
+            <option letter="a">Peak</option>
+            <option letter="b">Recession</option>
+            <option letter="c">Trough</option>
+            <option letter="d">Recovery</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a recession, real GDP growth becomes negative as economic activity contracts. This period is characterized by declining output, employment, and income levels.</explanation>
+    </question>
+
+    <question number="43">
+        <prompt>In the circular flow model, which of the following represents a leakage from the circular flow?</prompt>
+        <options>
+            <option letter="a">Consumer spending</option>
+            <option letter="b">Government purchases</option>
+            <option letter="c">Savings</option>
+            <option letter="d">Wages</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Savings represents a leakage from the circular flow because it is income that is not immediately spent on goods and services. The other major leakages are taxes and imports.</explanation>
+    </question>
+
+    <question number="44">
+        <prompt>Real GDP is calculated by:</prompt>
+        <options>
+            <option letter="a">Multiplying nominal GDP by the GDP deflator</option>
+            <option letter="b">Dividing nominal GDP by the GDP deflator and multiplying by 100</option>
+            <option letter="c">Adding the GDP deflator to nominal GDP</option>
+            <option letter="d">Subtracting the GDP deflator from nominal GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP is calculated by dividing nominal GDP by the GDP deflator (expressed as a decimal) and multiplying by 100. This process removes the effects of price changes to show actual economic growth.</explanation>
+    </question>
+<question number="45">
+        <prompt>How does an increase in productivity growth affect the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Always increases the natural rate</option>
+            <option letter="b">Tends to decrease the natural rate</option>
+            <option letter="c">Has no effect on the natural rate</option>
+            <option letter="d">Only affects cyclical unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased productivity growth tends to decrease the natural rate of unemployment by creating more job opportunities and reducing structural unemployment as the economy becomes more efficient.</explanation>
+    </question>
+
+    <question number="46">
+        <prompt>What happens to the aggregate price level when the economy corrects from an inflationary gap?</prompt>
+        <options>
+            <option letter="a">Price level rises continuously</option>
+            <option letter="b">Price level falls</option>
+            <option letter="c">Price level remains constant</option>
+            <option letter="d">Price level becomes more volatile</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When an inflationary gap corrects, the price level falls as wages and prices adjust downward, bringing actual GDP back to potential GDP and reducing inflationary pressures.</explanation>
+    </question>
+
+    <question number="47">
+        <prompt>How does an increase in government transfer payments affect the size of automatic stabilizers?</prompt>
+        <options>
+            <option letter="a">Reduces the impact of automatic stabilizers</option>
+            <option letter="b">Increases the impact of automatic stabilizers</option>
+            <option letter="c">Has no effect on automatic stabilizers</option>
+            <option letter="d">Only affects discretionary policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in government transfer payments increases the impact of automatic stabilizers because more income support is automatically provided during economic downturns.</explanation>
+    </question>
+
+    <question number="48">
+        <prompt>What happens to the foreign trade effect when domestic prices rise relative to foreign prices?</prompt>
+        <options>
+            <option letter="a">Domestic exports increase</option>
+            <option letter="b">Net exports decrease</option>
+            <option letter="c">Trade balance improves</option>
+            <option letter="d">Has no effect on trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When domestic prices rise relative to foreign prices, net exports decrease because domestic goods become relatively more expensive, reducing exports and increasing imports.</explanation>
+    </question>
+<question number="49">
+        <prompt>Which best describes the relationship between real GDP and standard of living?</prompt>
+        <options>
+            <option letter="a">They are exactly the same thing</option>
+            <option letter="b">Real GDP per capita is a rough proxy for standard of living</option>
+            <option letter="c">Standard of living determines real GDP</option>
+            <option letter="d">They are inversely related</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP per capita provides a rough measure of living standards, as it shows average output per person, but it doesn't capture non-economic factors like leisure time, environmental quality, or income distribution.</explanation>
+    </question>
+
+    <question number="50">
+        <prompt>How does an increase in net exports affect aggregate demand?</prompt>
+        <options>
+            <option letter="a">Shifts AD left</option>
+            <option letter="b">Shifts AD right</option>
+            <option letter="c">Moves along the AD curve</option>
+            <option letter="d">Has no effect on AD</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in net exports (exports minus imports) represents increased spending on domestic goods and services, shifting the aggregate demand curve to the right.</explanation>
+    </question>
+
+    <question number="51">
+        <prompt>What happens to the natural rate of unemployment when structural unemployment increases?</prompt>
+        <options>
+            <option letter="a">Natural rate decreases</option>
+            <option letter="b">Natural rate increases</option>
+            <option letter="c">Natural rate stays the same</option>
+            <option letter="d">Natural rate becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The natural rate of unemployment increases when structural unemployment rises because structural unemployment is a component of the natural rate, along with frictional unemployment.</explanation>
+    </question>
+
+    <question number="52">
+        <prompt>Which is a limitation of using GDP to measure economic well-being?</prompt>
+        <options>
+            <option letter="a">It doesn't measure intermediate goods</option>
+            <option letter="b">It doesn't include imported goods</option>
+            <option letter="c">It doesn't account for environmental damage</option>
+            <option letter="d">It doesn't measure government spending</option>
+        </options>
+        <answer>c</answer>
+        <explanation>GDP doesn't account for environmental damage or resource depletion caused by economic activity. These negative externalities can reduce well-being even as GDP grows.</explanation>
+    </question>
+<question number="53">
+        <prompt>What characterizes the adjustment process in a recessionary gap without government intervention?</prompt>
+        <options>
+            <option letter="a">Immediate price increases to restore equilibrium</option>
+            <option letter="b">Gradual wage and price decreases until full employment</option>
+            <option letter="c">Rapid increase in government spending</option>
+            <option letter="d">Immediate return to potential GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In a recessionary gap, wages and prices gradually decrease due to high unemployment and excess capacity. This process continues until lower production costs lead to increased output and employment.</explanation>
+    </question>
+
+    <question number="54">
+        <prompt>If the labor force is 160 million and the number of unemployed is 8 million, what is the unemployment rate?</prompt>
+        <options>
+            <option letter="a">5%</option>
+            <option letter="b">8%</option>
+            <option letter="c">20%</option>
+            <option letter="d">95%</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The unemployment rate is (Number of Unemployed/Labor Force) × 100 = (8 million/160 million) × 100 = 5%. This represents the percentage of the labor force that is unemployed.</explanation>
+    </question>
+
+    <question number="55">
+        <prompt>Which group is most likely to benefit from unexpected deflation?</prompt>
+        <options>
+            <option letter="a">Borrowers with fixed-rate loans</option>
+            <option letter="b">People with fixed nominal wages</option>
+            <option letter="c">People with large cash savings</option>
+            <option letter="d">Exporters selling goods abroad</option>
+        </options>
+        <answer>c</answer>
+        <explanation>People with large cash savings benefit from unexpected deflation because their money's purchasing power increases as prices fall, while the nominal value of their savings remains constant.</explanation>
+    </question>
+
+    <question number="56">
+        <prompt>What happens to potential GDP when there is an increase in the quality of education?</prompt>
+        <options>
+            <option letter="a">Decreases as costs rise</option>
+            <option letter="b">Increases due to higher productivity</option>
+            <option letter="c">Stays the same</option>
+            <option letter="d">Changes only if actual GDP changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in education quality improves human capital and worker productivity, which increases the economy's potential GDP by shifting the Long-Run Aggregate Supply curve to the right.</explanation>
+    </question>
+<question number="57">
+        <prompt>What happens to the natural rate of unemployment when job search efficiency increases?</prompt>
+        <options>
+            <option letter="a">Natural rate increases</option>
+            <option letter="b">Natural rate decreases</option>
+            <option letter="c">Natural rate stays the same</option>
+            <option letter="d">Natural rate becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When job search efficiency increases (through better technology or information), the natural rate of unemployment decreases because frictional unemployment falls as people find jobs more quickly.</explanation>
+    </question>
+
+    <question number="58">
+        <prompt>How does the interest rate effect contribute to the downward slope of the AD curve?</prompt>
+        <options>
+            <option letter="a">Higher prices increase interest rates, reducing investment and consumption</option>
+            <option letter="b">Higher prices decrease interest rates, increasing investment and consumption</option>
+            <option letter="c">Higher prices have no effect on interest rates</option>
+            <option letter="d">Interest rates only affect government spending</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Higher prices increase money demand, raising interest rates, which reduces investment and interest-sensitive consumption spending, contributing to the inverse relationship between price level and aggregate demand.</explanation>
+    </question>
+
+    <question number="59">
+        <prompt>What determines the steepness of the Short-Run Aggregate Supply curve?</prompt>
+        <options>
+            <option letter="a">The unemployment rate</option>
+            <option letter="b">The inflation rate</option>
+            <option letter="c">The degree of wage and price stickiness</option>
+            <option letter="d">The size of the money supply</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The degree of wage and price stickiness determines how steep the SRAS curve is. More sticky wages and prices make the curve steeper because output responds less to price level changes.</explanation>
+    </question>
+
+    <question number="60">
+        <prompt>How does an increase in labor productivity affect unit labor costs?</prompt>
+        <options>
+            <option letter="a">Unit labor costs increase</option>
+            <option letter="b">Unit labor costs decrease</option>
+            <option letter="c">Unit labor costs stay the same</option>
+            <option letter="d">Effect depends on wage changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor productivity decreases unit labor costs because more output is produced per worker, spreading labor costs over more units of output, assuming wages don't increase proportionally.</explanation>
+    </question>
+<question number="61">
+        <prompt>What is the relationship between real GDP and nominal GDP when the GDP deflator is 100?</prompt>
+        <options>
+            <option letter="a">Real GDP is greater than nominal GDP</option>
+            <option letter="b">Real GDP is less than nominal GDP</option>
+            <option letter="c">Real GDP equals nominal GDP</option>
+            <option letter="d">No relationship exists between them</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When the GDP deflator is 100 (base year), real GDP equals nominal GDP because prices in the current year are the same as in the base year, meaning no price level adjustment is needed.</explanation>
+    </question>
+
+    <question number="62">
+        <prompt>Which factor would most likely cause cost-push inflation?</prompt>
+        <options>
+            <option letter="a">An increase in consumer confidence</option>
+            <option letter="b">A decrease in government spending</option>
+            <option letter="c">A significant increase in raw material prices</option>
+            <option letter="d">An increase in exports</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A significant increase in raw material prices would cause cost-push inflation by increasing production costs, shifting the aggregate supply curve left and raising the price level even as output falls.</explanation>
+    </question>
+
+    <question number="63">
+        <prompt>How does an increase in net foreign investment affect the market for loanable funds?</prompt>
+        <options>
+            <option letter="a">Decreases demand for loanable funds</option>
+            <option letter="b">Increases demand for loanable funds</option>
+            <option letter="c">Increases supply of loanable funds</option>
+            <option letter="d">Has no effect on loanable funds</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in net foreign investment increases the demand for loanable funds because foreign investors need to borrow in domestic financial markets to fund their investments.</explanation>
+    </question>
+
+    <question number="64">
+        <prompt>What happens to the government spending multiplier when the marginal propensity to save increases?</prompt>
+        <options>
+            <option letter="a">The multiplier increases</option>
+            <option letter="b">The multiplier decreases</option>
+            <option letter="c">The multiplier stays the same</option>
+            <option letter="d">The multiplier becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the marginal propensity to save increases, the government spending multiplier decreases because people save more of each additional dollar of income, reducing the amount that gets respent in subsequent rounds.</explanation>
+    </question>
+<question number="65">
+        <prompt>Which best describes the difference between real and nominal GDP?</prompt>
+        <options>
+            <option letter="a">Real GDP includes imports, nominal GDP doesn't</option>
+            <option letter="b">Real GDP adjusts for inflation, nominal GDP doesn't</option>
+            <option letter="c">Real GDP measures quantity, nominal GDP measures quality</option>
+            <option letter="d">Real GDP excludes services, nominal GDP includes them</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP adjusts for price level changes (inflation) to measure actual changes in production, while nominal GDP measures production at current prices without adjusting for inflation.</explanation>
+    </question>
+
+    <question number="66">
+        <prompt>How does depreciation affect GDP measurement?</prompt>
+        <options>
+            <option letter="a">Increases GDP by the amount of depreciation</option>
+            <option letter="b">Is subtracted from gross investment to get net investment</option>
+            <option letter="c">Has no effect on GDP measurement</option>
+            <option letter="d">Only affects real GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Depreciation is subtracted from gross investment to calculate net investment, which shows the actual increase in the capital stock. GDP includes gross investment before depreciation.</explanation>
+    </question>
+
+    <question number="67">
+        <prompt>What happens to potential GDP when the average skill level of workers increases?</prompt>
+        <options>
+            <option letter="a">Potential GDP decreases</option>
+            <option letter="b">Potential GDP increases</option>
+            <option letter="c">Potential GDP stays the same</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in worker skill levels represents an improvement in human capital, which increases potential GDP by enhancing the economy's productive capacity at all price levels.</explanation>
+    </question>
+
+    <question number="68">
+        <prompt>How does an increase in the minimum wage affect teenage unemployment?</prompt>
+        <options>
+            <option letter="a">Always decreases teenage unemployment</option>
+            <option letter="b">Tends to increase teenage unemployment</option>
+            <option letter="c">Has no effect on teenage unemployment</option>
+            <option letter="d">Only affects adult unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the minimum wage tends to increase teenage unemployment because teenagers often have less experience and skills, making them less likely to be hired at the higher wage rate.</explanation>
+    </question>
+<question number="69">
+        <prompt>Why is the Long-Run Aggregate Supply curve vertical?</prompt>
+        <options>
+            <option letter="a">Because prices are sticky in the long run</option>
+            <option letter="b">Because the economy always produces at full employment in the long run</option>
+            <option letter="c">Because wages are fixed in the long run</option>
+            <option letter="d">Because aggregate demand determines output in the long run</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The LRAS curve is vertical because in the long run, the economy produces at its full employment level (potential GDP) regardless of the price level, as wages and prices fully adjust.</explanation>
+    </question>
+
+    <question number="70">
+        <prompt>What problem is NOT captured in GDP measurements?</prompt>
+        <options>
+            <option letter="a">Value of intermediate goods</option>
+            <option letter="b">Quality of life improvements</option>
+            <option letter="c">Services provided by imported goods</option>
+            <option letter="d">Government transfer payments</option>
+        </options>
+        <answer>b</answer>
+        <explanation>GDP does not measure quality of life improvements, including factors like environmental quality, leisure time, or income distribution. It only measures the market value of final goods and services produced.</explanation>
+    </question>
+
+    <question number="71">
+        <prompt>How does an inflationary gap affect the price level without government intervention?</prompt>
+        <options>
+            <option letter="a">Prices fall until full employment is reached</option>
+            <option letter="b">Prices rise until actual GDP equals potential GDP</option>
+            <option letter="c">Prices remain stable as output adjusts</option>
+            <option letter="d">Prices adjust only if the government intervenes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In an inflationary gap, excess demand puts upward pressure on wages and prices. Prices continue rising until higher costs reduce output to potential GDP level.</explanation>
+    </question>
+
+    <question number="72">
+        <prompt>Which factor would NOT shift the Aggregate Demand curve?</prompt>
+        <options>
+            <option letter="a">Changes in government spending</option>
+            <option letter="b">Changes in interest rates</option>
+            <option letter="c">Changes in the price level</option>
+            <option letter="d">Changes in consumer wealth</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Changes in the price level cause movement along the existing Aggregate Demand curve rather than shifting it. The other factors are determinants that shift the entire AD curve.</explanation>
+    </question>
+<question number="73">
+        <prompt>What happens to the price level when the economy moves from a recessionary gap to potential GDP?</prompt>
+        <options>
+            <option letter="a">Price level must decrease</option>
+            <option letter="b">Price level tends to increase</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Price level becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As the economy moves from a recessionary gap to potential GDP, the price level tends to increase because rising aggregate demand and resource utilization put upward pressure on wages and prices.</explanation>
+    </question>
+
+    <question number="74">
+        <prompt>How does an increase in expected future income affect current saving?</prompt>
+        <options>
+            <option letter="a">Increases current saving</option>
+            <option letter="b">Decreases current saving</option>
+            <option letter="c">Has no effect on current saving</option>
+            <option letter="d">Only affects future saving</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in expected future income tends to decrease current saving because people smooth their consumption over time and may borrow against expected future income increases.</explanation>
+    </question>
+
+    <question number="75">
+        <prompt>What happens to aggregate supply when worker productivity declines?</prompt>
+        <options>
+            <option letter="a">Both SRAS and LRAS shift right</option>
+            <option letter="b">Both SRAS and LRAS shift left</option>
+            <option letter="c">SRAS shifts left, LRAS unchanged</option>
+            <option letter="d">Only LRAS shifts left</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When worker productivity declines, both SRAS and LRAS shift left because the economy's ability to produce output decreases in both the short and long run.</explanation>
+    </question>
+
+    <question number="76">
+        <prompt>How does a decrease in the velocity of money affect the price level, assuming constant money supply and real GDP?</prompt>
+        <options>
+            <option letter="a">Price level increases</option>
+            <option letter="b">Price level decreases</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With constant money supply and real GDP, a decrease in velocity means each dollar is spent less frequently, leading to a lower price level according to the quantity theory of money.</explanation>
+    </question>
+<question number="77">
+        <prompt>How does an increase in government spending affect private consumption?</prompt>
+        <options>
+            <option letter="a">Always decreases private consumption</option>
+            <option letter="b">May increase private consumption through multiplier effect</option>
+            <option letter="c">Has no effect on private consumption</option>
+            <option letter="d">Only affects government consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased government spending may increase private consumption through the multiplier effect as the initial spending becomes income for others, who then spend part of their additional income.</explanation>
+    </question>
+
+    <question number="78">
+        <prompt>What happens to the natural rate of interest when productivity growth increases?</prompt>
+        <options>
+            <option letter="a">Natural rate decreases</option>
+            <option letter="b">Natural rate increases</option>
+            <option letter="c">Natural rate stays constant</option>
+            <option letter="d">Only nominal rate changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Higher productivity growth increases the natural rate of interest because it raises the return on capital investment, increasing the equilibrium interest rate that balances saving and investment.</explanation>
+    </question>
+
+    <question number="79">
+        <prompt>How does an increase in the capital stock affect the marginal product of labor?</prompt>
+        <options>
+            <option letter="a">Decreases marginal product of labor</option>
+            <option letter="b">Increases marginal product of labor</option>
+            <option letter="c">Has no effect on marginal product of labor</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital stock increases the marginal product of labor because workers have more or better capital equipment to work with, making each additional unit of labor more productive.</explanation>
+    </question>
+
+    <question number="80">
+        <prompt>What happens to aggregate demand when consumers expect future prices to fall?</prompt>
+        <options>
+            <option letter="a">AD increases</option>
+            <option letter="b">AD decreases</option>
+            <option letter="c">AD stays the same</option>
+            <option letter="d">Only affects aggregate supply</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When consumers expect future prices to fall, they tend to postpone purchases, leading to a decrease in current aggregate demand as they wait for lower prices.</explanation>
+    </question>
+<question number="81">
+        <prompt>If the civilian adult population is 200 million and the labor force is 140 million, what is the labor force participation rate?</prompt>
+        <options>
+            <option letter="a">60%</option>
+            <option letter="b">70%</option>
+            <option letter="c">30%</option>
+            <option letter="d">40%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The labor force participation rate is (Labor Force/Adult Population) × 100 = (140 million/200 million) × 100 = 70%. This shows the percentage of adults who are either working or looking for work.</explanation>
+    </question>
+
+    <question number="82">
+        <prompt>When the economy self-corrects from a recessionary gap, what happens to wages?</prompt>
+        <options>
+            <option letter="a">Wages rise immediately</option>
+            <option letter="b">Wages remain constant</option>
+            <option letter="c">Wages fall, leading to increased employment</option>
+            <option letter="d">Wages become more rigid</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In a recessionary gap, excess unemployment puts downward pressure on wages. As wages fall, firms hire more workers and increase production, moving the economy back toward potential GDP.</explanation>
+    </question>
+
+    <question number="83">
+        <prompt>Which component of aggregate demand is most sensitive to interest rate changes?</prompt>
+        <options>
+            <option letter="a">Consumer spending</option>
+            <option letter="b">Investment spending</option>
+            <option letter="c">Government spending</option>
+            <option letter="d">Net exports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Investment spending is most sensitive to interest rate changes because businesses carefully evaluate borrowing costs when deciding on capital investments like new equipment or facilities.</explanation>
+    </question>
+
+    <question number="84">
+        <prompt>What happens to the unemployment rate if discouraged workers re-enter the labor force?</prompt>
+        <options>
+            <option letter="a">It decreases</option>
+            <option letter="b">It increases</option>
+            <option letter="c">It stays the same</option>
+            <option letter="d">It cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When discouraged workers re-enter the labor force looking for work, they are counted as unemployed, causing the unemployment rate to increase even though economic conditions might be improving.</explanation>
+    </question>
+<question number="85">
+        <prompt>Which would be classified as an injection in the circular flow model?</prompt>
+        <options>
+            <option letter="a">Household savings</option>
+            <option letter="b">Tax payments</option>
+            <option letter="c">Import purchases</option>
+            <option letter="d">Export sales</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Export sales represent an injection into the circular flow because they bring new spending into the domestic economy from foreign buyers, increasing the flow of money in the domestic economy.</explanation>
+    </question>
+
+    <question number="86">
+        <prompt>How does an increase in the capital stock affect potential GDP?</prompt>
+        <options>
+            <option letter="a">Decreases potential GDP</option>
+            <option letter="b">Increases potential GDP</option>
+            <option letter="c">Has no effect on potential GDP</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital stock (machines, buildings, equipment) increases potential GDP by expanding the economy's productive capacity, shifting the LRAS curve to the right.</explanation>
+    </question>
+
+    <question number="87">
+        <prompt>What distinguishes expansionary fiscal policy from expansionary monetary policy?</prompt>
+        <options>
+            <option letter="a">Only fiscal policy affects interest rates</option>
+            <option letter="b">Only monetary policy affects aggregate demand</option>
+            <option letter="c">Fiscal policy uses government spending and taxes, while monetary policy uses money supply and interest rates</option>
+            <option letter="d">Fiscal policy is always more effective</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Expansionary fiscal policy uses increased government spending or decreased taxes, while expansionary monetary policy uses increased money supply or decreased interest rates to stimulate the economy.</explanation>
+    </question>
+
+    <question number="88">
+        <prompt>How does an appreciation of the domestic currency affect net exports?</prompt>
+        <options>
+            <option letter="a">Increases exports and decreases imports</option>
+            <option letter="b">Decreases exports and increases imports</option>
+            <option letter="c">Increases both exports and imports</option>
+            <option letter="d">Decreases both exports and imports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Currency appreciation makes domestic goods more expensive for foreigners (reducing exports) and foreign goods cheaper for domestic buyers (increasing imports), thus reducing net exports.</explanation>
+    </question>
+<question number="89">
+        <prompt>What is the main difference between seasonal and cyclical unemployment?</prompt>
+        <options>
+            <option letter="a">Seasonal follows a predictable pattern, cyclical depends on business cycles</option>
+            <option letter="b">Seasonal is permanent, cyclical is temporary</option>
+            <option letter="c">Seasonal affects all industries, cyclical affects only some</option>
+            <option letter="d">Seasonal is included in the natural rate, cyclical is not</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Seasonal unemployment follows predictable patterns based on time of year (like retail after holidays), while cyclical unemployment varies with unpredictable business cycle fluctuations in overall economic activity.</explanation>
+    </question>
+
+    <question number="90">
+        <prompt>How does accelerating inflation affect the relationship between nominal and real interest rates?</prompt>
+        <options>
+            <option letter="a">The gap between them narrows</option>
+            <option letter="b">The gap between them widens</option>
+            <option letter="c">They become equal</option>
+            <option letter="d">Their relationship becomes inverse</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Accelerating inflation causes the gap between nominal and real interest rates to widen because higher inflation rates lead to a larger difference between the nominal rate and the real return after accounting for inflation.</explanation>
+    </question>
+
+    <question number="91">
+        <prompt>Which best describes the short-run Phillips Curve?</prompt>
+        <options>
+            <option letter="a">A vertical line showing no relationship between inflation and unemployment</option>
+            <option letter="b">A downward-sloping curve showing a tradeoff between inflation and unemployment</option>
+            <option letter="c">An upward-sloping curve showing inflation and unemployment move together</option>
+            <option letter="d">A horizontal line showing constant inflation regardless of unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The short-run Phillips Curve is downward-sloping, showing a tradeoff between inflation and unemployment in the short run due to sticky wages and prices and imperfect information.</explanation>
+    </question>
+
+    <question number="92">
+        <prompt>What happens to velocity of money when people hold more precautionary balances?</prompt>
+        <options>
+            <option letter="a">Velocity increases</option>
+            <option letter="b">Velocity decreases</option>
+            <option letter="c">Velocity stays constant</option>
+            <option letter="d">Velocity becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When people hold more precautionary balances (keep more money for emergencies), the velocity of money decreases because money changes hands less frequently as people hold onto it longer.</explanation>
+    </question>
+<question number="93">
+        <prompt>How does an increase in transfer payments affect GDP?</prompt>
+        <options>
+            <option letter="a">Directly increases GDP by the amount of the payments</option>
+            <option letter="b">Directly decreases GDP by the amount of the payments</option>
+            <option letter="c">Has no direct effect on GDP</option>
+            <option letter="d">Always increases GDP by more than the payment amount</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Transfer payments (like Social Security or unemployment benefits) are not included in GDP calculations because they don't represent current production. They may indirectly affect GDP through increased consumer spending.</explanation>
+    </question>
+
+    <question number="94">
+        <prompt>Which factor would cause the Long-Run Aggregate Supply curve to shift left?</prompt>
+        <options>
+            <option letter="a">An increase in the capital stock</option>
+            <option letter="b">A decrease in the labor force</option>
+            <option letter="c">Technological advancement</option>
+            <option letter="d">Improved education and training</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A decrease in the labor force reduces the economy's productive capacity, shifting the LRAS curve left as the economy's potential output decreases at all price levels.</explanation>
+    </question>
+
+    <question number="95">
+        <prompt>What happens to cyclical unemployment during an economic boom?</prompt>
+        <options>
+            <option letter="a">Increases above the natural rate</option>
+            <option letter="b">Decreases below zero</option>
+            <option letter="c">Approaches zero</option>
+            <option letter="d">Remains at the natural rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During an economic boom, cyclical unemployment approaches zero as aggregate demand is high and firms hire more workers. Only frictional and structural unemployment remain.</explanation>
+    </question>
+
+    <question number="96">
+        <prompt>Which economic indicator most directly measures changes in the cost of living?</prompt>
+        <options>
+            <option letter="a">GDP deflator</option>
+            <option letter="b">Consumer Price Index</option>
+            <option letter="c">Producer Price Index</option>
+            <option letter="d">Nominal GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Consumer Price Index (CPI) most directly measures changes in the cost of living because it tracks price changes in a fixed basket of consumer goods and services commonly purchased by households.</explanation>
+    </question>
+<question number="97">
+        <prompt>How does an increase in business confidence affect the economy?</prompt>
+        <options>
+            <option letter="a">Shifts only the LRAS curve right</option>
+            <option letter="b">Shifts only the SRAS curve right</option>
+            <option letter="c">Shifts the AD curve right</option>
+            <option letter="d">Has no effect on any curve</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Increased business confidence leads to more investment spending, which is a component of aggregate demand. This shifts the AD curve to the right as businesses invest more in capital and inventory.</explanation>
+    </question>
+
+    <question number="98">
+        <prompt>If an economy has 100 million adults, 60 million employed, and 6 million unemployed, what is the labor force participation rate?</prompt>
+        <options>
+            <option letter="a">60%</option>
+            <option letter="b">66%</option>
+            <option letter="c">6%</option>
+            <option letter="d">94%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Labor force = Employed + Unemployed = 66 million. Labor force participation rate = (Labor Force/Adult Population) × 100 = (66 million/100 million) × 100 = 66%</explanation>
+    </question>
+
+    <question number="99">
+        <prompt>What is the main reason the aggregate demand curve slopes downward?</prompt>
+        <options>
+            <option letter="a">The law of diminishing returns</option>
+            <option letter="b">The wealth effect, interest rate effect, and foreign trade effect</option>
+            <option letter="c">Sticky wages and prices</option>
+            <option letter="d">Government regulations</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The AD curve slopes downward due to three effects when prices change: the wealth effect (real balances), the interest rate effect, and the foreign trade effect (exchange rates).</explanation>
+    </question>
+
+    <question number="100">
+        <prompt>Which type of unemployment would increase during a recession?</prompt>
+        <options>
+            <option letter="a">Frictional unemployment</option>
+            <option letter="b">Structural unemployment</option>
+            <option letter="c">Cyclical unemployment</option>
+            <option letter="d">Natural unemployment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Cyclical unemployment increases during recessions as businesses lay off workers due to decreased aggregate demand. This type of unemployment is above and beyond the natural rate.</explanation>
+    </question>
+<question number="101">
+        <prompt>How does an increase in the capital stock affect labor productivity?</prompt>
+        <options>
+            <option letter="a">Decreases labor productivity</option>
+            <option letter="b">Increases labor productivity</option>
+            <option letter="c">Has no effect on labor productivity</option>
+            <option letter="d">Only affects capital productivity</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital stock increases labor productivity because workers have more or better equipment to work with, allowing them to produce more output per hour of work.</explanation>
+    </question>
+
+    <question number="102">
+        <prompt>What happens to the aggregate price level when the economy moves from a recessionary gap to potential GDP?</prompt>
+        <options>
+            <option letter="a">Price level must decrease</option>
+            <option letter="b">Price level tends to increase</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Price level becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As the economy moves from a recessionary gap to potential GDP, the price level tends to increase because rising aggregate demand and resource utilization put upward pressure on prices.</explanation>
+    </question>
+
+    <question number="103">
+        <prompt>How does an increase in government transfer payments affect the labor force participation rate?</prompt>
+        <options>
+            <option letter="a">Always increases participation</option>
+            <option letter="b">Tends to decrease participation</option>
+            <option letter="c">Has no effect on participation</option>
+            <option letter="d">Only affects employed workers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in government transfer payments tends to decrease the labor force participation rate because higher benefits can reduce the incentive to work or search for employment.</explanation>
+    </question>
+
+    <question number="104">
+        <prompt>What distinguishes demand-pull inflation from cost-push inflation?</prompt>
+        <options>
+            <option letter="a">Demand-pull affects prices, cost-push affects wages</option>
+            <option letter="b">Demand-pull comes from AD increases, cost-push from SRAS decreases</option>
+            <option letter="c">Demand-pull is temporary, cost-push is permanent</option>
+            <option letter="d">Demand-pull affects some sectors, cost-push affects all</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Demand-pull inflation results from increases in aggregate demand pulling up prices, while cost-push inflation results from decreases in aggregate supply pushing up prices due to higher production costs.</explanation>
+    </question>
+<question number="105">
+        <prompt>Which economic indicator is considered a leading indicator of inflation?</prompt>
+        <options>
+            <option letter="a">The unemployment rate</option>
+            <option letter="b">The Producer Price Index</option>
+            <option letter="c">The Consumer Price Index</option>
+            <option letter="d">The GDP deflator</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Producer Price Index (PPI) is considered a leading indicator of inflation because changes in production costs often lead to subsequent changes in consumer prices.</explanation>
+    </question>
+
+    <question number="106">
+        <prompt>How does an increase in the natural rate of unemployment affect potential GDP?</prompt>
+        <options>
+            <option letter="a">Increases potential GDP</option>
+            <option letter="b">Decreases potential GDP</option>
+            <option letter="c">Has no effect on potential GDP</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the natural rate of unemployment decreases potential GDP because it means a larger portion of the labor force is structurally or frictionally unemployed at full employment.</explanation>
+    </question>
+
+    <question number="107">
+        <prompt>What happens to the multiplier effect when the marginal propensity to import increases?</prompt>
+        <options>
+            <option letter="a">The multiplier effect increases</option>
+            <option letter="b">The multiplier effect decreases</option>
+            <option letter="c">The multiplier effect remains constant</option>
+            <option letter="d">The multiplier effect becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the marginal propensity to import increases, the multiplier effect decreases because more of each additional dollar of income is spent on imports rather than domestic goods, reducing the impact on domestic GDP.</explanation>
+    </question>
+
+    <question number="108">
+        <prompt>How does an appreciation of the domestic currency affect aggregate supply?</prompt>
+        <options>
+            <option letter="a">Shifts SRAS left</option>
+            <option letter="b">Shifts SRAS right</option>
+            <option letter="c">Moves along the SRAS curve</option>
+            <option letter="d">Has no effect on SRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Currency appreciation shifts SRAS right because it reduces the cost of imported inputs, lowering production costs and allowing firms to supply more output at any given price level.</explanation>
+    </question>
+<question number="109">
+        <prompt>How does an increase in the savings rate affect long-run economic growth?</prompt>
+        <options>
+            <option letter="a">Reduces long-run growth</option>
+            <option letter="b">Increases long-run growth</option>
+            <option letter="c">Has no effect on long-run growth</option>
+            <option letter="d">Only affects short-run growth</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the savings rate increases long-run economic growth by providing more funds for investment in physical capital, which increases the economy's productive capacity.</explanation>
+    </question>
+
+    <question number="110">
+        <prompt>What happens to the multiplier effect when the marginal propensity to import increases?</prompt>
+        <options>
+            <option letter="a">Multiplier effect increases</option>
+            <option letter="b">Multiplier effect decreases</option>
+            <option letter="c">Multiplier effect stays constant</option>
+            <option letter="d">Only domestic multiplier changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the marginal propensity to import reduces the multiplier effect because more of each additional dollar of income is spent on imports rather than domestic goods and services.</explanation>
+    </question>
+
+    <question number="111">
+        <prompt>How does accelerating inflation affect the relationship between nominal and real wages?</prompt>
+        <options>
+            <option letter="a">Gap between nominal and real wages narrows</option>
+            <option letter="b">Gap between nominal and real wages widens</option>
+            <option letter="c">No effect on the gap</option>
+            <option letter="d">Only affects real wages</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Accelerating inflation causes the gap between nominal and real wages to widen because prices are rising at an increasing rate, causing real wages to fall further behind nominal wages.</explanation>
+    </question>
+
+    <question number="112">
+        <prompt>What determines the effectiveness of fiscal policy in an open economy?</prompt>
+        <options>
+            <option letter="a">Only the exchange rate regime</option>
+            <option letter="b">Only capital mobility</option>
+            <option letter="c">Both exchange rate regime and capital mobility</option>
+            <option letter="d">Only domestic interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The effectiveness of fiscal policy in an open economy depends on both the exchange rate regime and the degree of capital mobility, as these factors affect how much crowding out occurs through exchange rate changes.</explanation>
+    </question>
+<question number="113">
+        <prompt>Which best explains why the Long-Run Phillips Curve is vertical?</prompt>
+        <options>
+            <option letter="a">Because prices are sticky in the long run</option>
+            <option letter="b">Because unemployment always equals zero in the long run</option>
+            <option letter="c">Because expected inflation equals actual inflation in the long run</option>
+            <option letter="d">Because wages are fixed in the long run</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Long-Run Phillips Curve is vertical because in the long run, expected inflation adjusts to equal actual inflation, so there is no trade-off between inflation and unemployment at the natural rate.</explanation>
+    </question>
+
+    <question number="114">
+        <prompt>How does an increase in real interest rates affect investment spending?</prompt>
+        <options>
+            <option letter="a">Always increases investment spending</option>
+            <option letter="b">Decreases investment spending</option>
+            <option letter="c">Has no effect on investment spending</option>
+            <option letter="d">Only affects government investment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in real interest rates decreases investment spending because it raises the cost of borrowing and reduces the expected return on investment projects relative to the cost of funds.</explanation>
+    </question>
+
+    <question number="115">
+        <prompt>What happens to the GDP gap during a period of accelerating inflation?</prompt>
+        <options>
+            <option letter="a">GDP gap becomes negative</option>
+            <option letter="b">GDP gap becomes positive</option>
+            <option letter="c">GDP gap equals zero</option>
+            <option letter="d">GDP gap cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During accelerating inflation, the GDP gap tends to be positive (actual GDP exceeds potential GDP) because the economy is operating above its sustainable capacity, creating upward pressure on prices.</explanation>
+    </question>
+
+    <question number="116">
+        <prompt>How does an increase in structural unemployment affect the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Decreases the natural rate</option>
+            <option letter="b">Increases the natural rate</option>
+            <option letter="c">Has no effect on the natural rate</option>
+            <option letter="d">Only affects cyclical unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in structural unemployment directly increases the natural rate of unemployment because structural unemployment is a component of the natural rate, along with frictional unemployment.</explanation>
+    </question>
+<question number="117">
+        <prompt>What is the primary difference between a recession and a growth recession?</prompt>
+        <options>
+            <option letter="a">A recession shows negative GDP growth, a growth recession shows slow positive growth</option>
+            <option letter="b">A recession affects GDP, a growth recession affects only employment</option>
+            <option letter="c">A recession is longer, a growth recession is shorter</option>
+            <option letter="d">A recession is domestic, a growth recession is international</option>
+        </options>
+        <answer>a</answer>
+        <explanation>A recession involves negative GDP growth (declining real GDP), while a growth recession involves positive but slower-than-normal GDP growth that may still lead to rising unemployment.</explanation>
+    </question>
+
+    <question number="118">
+        <prompt>How does an increase in productivity growth affect the Phillips Curve in the long run?</prompt>
+        <options>
+            <option letter="a">Shifts it right</option>
+            <option letter="b">Shifts it left</option>
+            <option letter="c">Makes it more vertical</option>
+            <option letter="d">Has no effect on long-run Phillips Curve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased productivity growth shifts the long-run Phillips Curve left because it allows for lower unemployment at any given inflation rate by improving the economy's productive efficiency.</explanation>
+    </question>
+
+    <question number="119">
+        <prompt>What happens to the money multiplier when banks become more risk-averse?</prompt>
+        <options>
+            <option letter="a">Increases as banks seek more profits</option>
+            <option letter="b">Decreases as banks hold more excess reserves</option>
+            <option letter="c">Stays the same despite bank behavior</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When banks become more risk-averse, they hold more excess reserves and lend less, reducing the money multiplier as each dollar of reserves creates less money in the banking system.</explanation>
+    </question>
+
+    <question number="120">
+        <prompt>How does an increase in income taxes affect the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Has no effect on the multiplier</option>
+            <option letter="d">Reverses the multiplier's direction</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in income taxes reduces the government spending multiplier because it decreases the amount of additional income that gets spent in each round, acting as an automatic stabilizer.</explanation>
+    </question>
+<question number="121">
+        <prompt>What happens to aggregate demand when there is a negative wealth effect?</prompt>
+        <options>
+            <option letter="a">AD shifts right due to increased consumer spending</option>
+            <option letter="b">AD shifts left due to decreased consumer spending</option>
+            <option letter="c">AD remains unchanged as consumers maintain spending</option>
+            <option letter="d">Movement along the existing AD curve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A negative wealth effect (like falling asset prices) causes consumers to feel poorer and reduce spending, shifting the aggregate demand curve to the left as overall spending in the economy decreases.</explanation>
+    </question>
+
+    <question number="122">
+        <prompt>If nominal GDP grows by 5% and inflation is 3%, what is the real GDP growth rate?</prompt>
+        <options>
+            <option letter="a">8%</option>
+            <option letter="b">2%</option>
+            <option letter="c">15%</option>
+            <option letter="d">1.67%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP growth is approximately nominal GDP growth minus inflation rate: 5% - 3% = 2%. This shows the actual increase in production after accounting for price changes.</explanation>
+    </question>
+
+    <question number="123">
+        <prompt>What distinguishes cost-push inflation from demand-pull inflation?</prompt>
+        <options>
+            <option letter="a">Cost-push occurs when AD increases, while demand-pull occurs when SRAS decreases</option>
+            <option letter="b">Cost-push occurs when SRAS decreases, while demand-pull occurs when AD increases</option>
+            <option letter="c">Cost-push affects only wages, while demand-pull affects only prices</option>
+            <option letter="d">Cost-push is temporary, while demand-pull is permanent</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Cost-push inflation occurs when SRAS shifts left due to rising production costs, while demand-pull inflation occurs when AD shifts right due to increased spending in the economy.</explanation>
+    </question>
+
+    <question number="124">
+        <prompt>Which economic indicator would best show whether an economy is experiencing stagflation?</prompt>
+        <options>
+            <option letter="a">GDP growth rate alone</option>
+            <option letter="b">Unemployment rate alone</option>
+            <option letter="c">Inflation rate alone</option>
+            <option letter="d">Both inflation rate and unemployment rate together</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Stagflation is characterized by high inflation occurring simultaneously with high unemployment and low economic growth, so both inflation and unemployment rates must be examined together.</explanation>
+    </question>
+<question number="125">
+        <prompt>Which is an example of a leakage in the circular flow model?</prompt>
+        <options>
+            <option letter="a">Government spending</option>
+            <option letter="b">Investment by firms</option>
+            <option letter="c">Imports</option>
+            <option letter="d">Exports</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Imports represent a leakage from the circular flow because they are spending that flows out of the domestic economy to other countries. Other leakages include savings and taxes.</explanation>
+    </question>
+
+    <question number="126">
+        <prompt>What typically happens to frictional unemployment during rapid economic growth?</prompt>
+        <options>
+            <option letter="a">Increases significantly</option>
+            <option letter="b">Decreases significantly</option>
+            <option letter="c">Remains relatively stable</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Frictional unemployment typically remains relatively stable even during economic growth because it represents normal job transitions and job searches that occur in any economy.</explanation>
+    </question>
+
+    <question number="127">
+        <prompt>How does an increase in productivity affect unit labor costs?</prompt>
+        <options>
+            <option letter="a">Increases unit labor costs</option>
+            <option letter="b">Decreases unit labor costs</option>
+            <option letter="c">Has no effect on unit labor costs</option>
+            <option letter="d">Effects cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in productivity decreases unit labor costs because more output is produced per unit of labor input, reducing the labor cost per unit of output.</explanation>
+    </question>
+
+    <question number="128">
+        <prompt>What happens to the purchasing power of money during deflation?</prompt>
+        <options>
+            <option letter="a">Decreases proportionally</option>
+            <option letter="b">Increases proportionally</option>
+            <option letter="c">Stays the same</option>
+            <option letter="d">Becomes zero</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During deflation (falling prices), the purchasing power of money increases because each unit of currency can buy more goods and services than before.</explanation>
+    </question>
+<question number="129">
+        <prompt>What happens to consumer spending when the wealth effect is positive?</prompt>
+        <options>
+            <option letter="a">Consumer spending decreases</option>
+            <option letter="b">Consumer spending increases</option>
+            <option letter="c">Consumer spending stays constant</option>
+            <option letter="d">Consumer spending becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A positive wealth effect occurs when consumers feel wealthier (due to rising asset values, for example), leading them to increase their spending as they perceive their wealth has increased.</explanation>
+    </question>
+
+    <question number="130">
+        <prompt>How does increased foreign investment affect domestic interest rates?</prompt>
+        <options>
+            <option letter="a">Always decreases interest rates</option>
+            <option letter="b">Always increases interest rates</option>
+            <option letter="c">Tends to lower interest rates by increasing loanable funds</option>
+            <option letter="d">Has no effect on interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Increased foreign investment tends to lower domestic interest rates by increasing the supply of loanable funds in the domestic financial market.</explanation>
+    </question>
+
+    <question number="131">
+        <prompt>What characterizes a depression compared to a recession?</prompt>
+        <options>
+            <option letter="a">A depression is shorter but more severe</option>
+            <option letter="b">A depression is longer and more severe</option>
+            <option letter="c">A depression affects fewer sectors of the economy</option>
+            <option letter="d">A depression has higher inflation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A depression is characterized by a longer duration and more severe decline in economic activity than a recession, typically involving a GDP decline of more than 10% or lasting more than two years.</explanation>
+    </question>
+
+    <question number="132">
+        <prompt>How does an increase in government transfer payments affect the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Does not affect the multiplier</option>
+            <option letter="d">Reverses the multiplier's direction</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Transfer payments do not directly affect the government spending multiplier because they are not part of government purchases. They may indirectly affect aggregate demand through their impact on consumer spending.</explanation>
+    </question>
+<question number="133">
+        <prompt>How does built-in stabilizer affect the size of the multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Has no effect on the multiplier</option>
+            <option letter="d">Eliminates the multiplier effect</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Built-in stabilizers like progressive taxes and unemployment benefits reduce the multiplier effect because they automatically decrease the amount of each round of spending that becomes someone else's income.</explanation>
+    </question>
+
+    <question number="134">
+        <prompt>What happens to the labor force participation rate when discouraged workers leave the labor force?</prompt>
+        <options>
+            <option letter="a">Increases</option>
+            <option letter="b">Decreases</option>
+            <option letter="c">Stays the same</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When discouraged workers leave the labor force, the labor force participation rate decreases because these individuals are no longer counted as part of the labor force (denominator in the calculation).</explanation>
+    </question>
+
+    <question number="135">
+        <prompt>Which best describes the relationship between inflation and unemployment in the long run?</prompt>
+        <options>
+            <option letter="a">There is a stable tradeoff between them</option>
+            <option letter="b">They are directly related</option>
+            <option letter="c">There is no stable tradeoff between them</option>
+            <option letter="d">They must always move in opposite directions</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In the long run, there is no stable tradeoff between inflation and unemployment, as the Phillips Curve becomes vertical at the natural rate of unemployment, showing that any inflation rate is possible at the natural rate.</explanation>
+    </question>
+
+    <question number="136">
+        <prompt>What happens to the money multiplier when the required reserve ratio increases?</prompt>
+        <options>
+            <option letter="a">Money multiplier increases</option>
+            <option letter="b">Money multiplier decreases</option>
+            <option letter="c">Money multiplier stays the same</option>
+            <option letter="d">Money multiplier becomes undefined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the required reserve ratio increases, banks must hold more reserves and can loan out less money, resulting in a smaller money multiplier and less money creation in the banking system.</explanation>
+    </question>
+<question number="137">
+        <prompt>What is measured by real GDP per capita?</prompt>
+        <options>
+            <option letter="a">Total production in current prices</option>
+            <option letter="b">Average standard of living in a country</option>
+            <option letter="c">Government spending per person</option>
+            <option letter="d">Nominal output adjusted for population</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP per capita measures the average standard of living in a country by showing the value of goods and services produced per person, adjusted for inflation.</explanation>
+    </question>
+
+    <question number="138">
+        <prompt>How does menu cost inflation affect firms' pricing decisions?</prompt>
+        <options>
+            <option letter="a">Makes firms change prices more frequently</option>
+            <option letter="b">Makes firms reluctant to change prices</option>
+            <option letter="c">Has no effect on pricing decisions</option>
+            <option letter="d">Forces firms to lower prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Menu costs (the cost of changing prices) make firms reluctant to change prices frequently, contributing to price stickiness because small price changes may not be worth the cost of implementing them.</explanation>
+    </question>
+
+    <question number="139">
+        <prompt>What happens to the multiplier effect when people save more of their additional income?</prompt>
+        <options>
+            <option letter="a">The multiplier effect increases</option>
+            <option letter="b">The multiplier effect decreases</option>
+            <option letter="c">The multiplier effect stays the same</option>
+            <option letter="d">The multiplier effect becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When people save more of their additional income (higher marginal propensity to save), the multiplier effect decreases because less money is respent in each round, reducing the total impact on national income.</explanation>
+    </question>
+
+    <question number="140">
+        <prompt>Which factor would shift both AD and SRAS curves?</prompt>
+        <options>
+            <option letter="a">Changes in consumer confidence</option>
+            <option letter="b">Changes in resource prices</option>
+            <option letter="c">Changes in government spending</option>
+            <option letter="d">Changes in interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Changes in resource prices affect both AD (through production costs and prices) and SRAS (through cost of production), potentially shifting both curves simultaneously.</explanation>
+    </question>
+<question number="141">
+        <prompt>What happens to the price level when the economy moves from a recessionary gap to full employment?</prompt>
+        <options>
+            <option letter="a">Price level must decrease</option>
+            <option letter="b">Price level must increase</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Price level could increase or decrease</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As the economy moves from a recessionary gap to full employment, increased aggregate demand and production costs typically cause the price level to rise as output expands to potential GDP.</explanation>
+    </question>
+
+    <question number="142">
+        <prompt>How does an increase in government transfer payments affect the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Has no effect on the multiplier</option>
+            <option letter="d">Reverses the multiplier's sign</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Transfer payments don't directly affect the government spending multiplier because they're not part of government purchases. They may indirectly affect aggregate demand through changes in consumer spending.</explanation>
+    </question>
+
+    <question number="143">
+        <prompt>What distinguishes a leading economic indicator from a lagging indicator?</prompt>
+        <options>
+            <option letter="a">Leading indicators are more accurate</option>
+            <option letter="b">Leading indicators change after economic conditions change</option>
+            <option letter="c">Leading indicators tend to change before economic conditions change</option>
+            <option letter="d">Leading indicators only measure GDP</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Leading economic indicators tend to change direction before the overall economy does, helping to predict future economic conditions. Examples include stock prices and building permits.</explanation>
+    </question>
+
+    <question number="144">
+        <prompt>How does increased income inequality affect GDP as a measure of economic well-being?</prompt>
+        <options>
+            <option letter="a">Makes GDP a more accurate measure</option>
+            <option letter="b">Makes GDP a less accurate measure</option>
+            <option letter="c">Has no effect on GDP's accuracy</option>
+            <option letter="d">Improves GDP calculation methods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased income inequality makes GDP a less accurate measure of economic well-being because GDP per capita doesn't reflect how income is distributed across the population or its impact on overall social welfare.</explanation>
+    </question>
+<question number="145">
+        <prompt>In the long-run aggregate supply curve (LRAS), an increase in labor productivity would:</prompt>
+        <options>
+            <option letter="a">Shift LRAS left</option>
+            <option letter="b">Shift LRAS right</option>
+            <option letter="c">Move along the existing LRAS curve</option>
+            <option letter="d">Have no effect on LRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor productivity represents an improvement in productive capacity, shifting the long-run aggregate supply curve rightward as the economy can produce more output at any price level.</explanation>
+    </question>
+
+    <question number="146">
+        <prompt>Which of the following would NOT cause a shift in the aggregate demand (AD) curve?</prompt>
+        <options>
+            <option letter="a">A change in consumer confidence</option>
+            <option letter="b">A change in government spending</option>
+            <option letter="c">A change in the price level</option>
+            <option letter="d">A change in interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A change in the price level causes movement along the existing AD curve, not a shift. The other factors are determinants that would shift the entire AD curve.</explanation>
+    </question>
+
+    <question number="147">
+        <prompt>The short-run aggregate supply (SRAS) curve is upward sloping because:</prompt>
+        <options>
+            <option letter="a">Prices and wages are sticky in the short run</option>
+            <option letter="b">Resources are fully employed</option>
+            <option letter="c">The money supply determines output</option>
+            <option letter="d">Consumer spending increases with income</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The SRAS curve slopes upward because prices and wages are sticky (inflexible) in the short run, meaning firms will produce more when prices rise while costs remain relatively constant.</explanation>
+    </question>
+
+    <question number="148">
+        <prompt>At the full-employment level of output:</prompt>
+        <options>
+            <option letter="a">There is no unemployment</option>
+            <option letter="b">Only structural unemployment exists</option>
+            <option letter="c">The natural rate of unemployment exists</option>
+            <option letter="d">Cyclical unemployment is positive</option>
+        </options>
+        <answer>c</answer>
+        <explanation>At full employment, the economy operates at potential GDP with the natural rate of unemployment, which includes frictional and structural but not cyclical unemployment.</explanation>
+    </question>
+<question number="149">
+        <prompt>Which component typically represents the largest percentage of GDP in the United States?</prompt>
+        <options>
+            <option letter="a">Government spending</option>
+            <option letter="b">Consumer spending</option>
+            <option letter="c">Investment spending</option>
+            <option letter="d">Net exports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Consumer spending (personal consumption expenditures) typically accounts for about 65-70% of GDP in the United States, making it the largest component of aggregate demand.</explanation>
+    </question>
+
+    <question number="150">
+        <prompt>The unemployment rate is calculated by:</prompt>
+        <options>
+            <option letter="a">Number of unemployed divided by total population</option>
+            <option letter="b">Number of employed divided by labor force</option>
+            <option letter="c">Number of unemployed divided by labor force, multiplied by 100</option>
+            <option letter="d">Labor force divided by total population</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The unemployment rate is calculated by dividing the number of unemployed people by the total labor force (employed + unemployed) and multiplying by 100 to express it as a percentage.</explanation>
+    </question>
+
+    <question number="151">
+        <prompt>Which phase of the business cycle immediately follows a trough?</prompt>
+        <options>
+            <option letter="a">Peak</option>
+            <option letter="b">Recession</option>
+            <option letter="c">Recovery (expansion)</option>
+            <option letter="d">Depression</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The recovery or expansion phase follows a trough in the business cycle. During this phase, real GDP begins growing again and economic indicators start improving.</explanation>
+    </question>
+
+    <question number="152">
+        <prompt>The labor force participation rate measures:</prompt>
+        <options>
+            <option letter="a">Employed workers divided by total population</option>
+            <option letter="b">Labor force divided by adult population</option>
+            <option letter="c">Unemployed workers divided by total population</option>
+            <option letter="d">Employed workers divided by labor force</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The labor force participation rate is calculated by dividing the labor force (employed + unemployed) by the adult civilian population (16 years and older) and multiplying by 100.</explanation>
+    </question>
+<question number="153">
+        <prompt>How does an increase in the natural rate of unemployment affect the LRAS curve?</prompt>
+        <options>
+            <option letter="a">Shifts LRAS right</option>
+            <option letter="b">Shifts LRAS left</option>
+            <option letter="c">Moves along the LRAS curve</option>
+            <option letter="d">Makes LRAS more elastic</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the natural rate of unemployment shifts the Long-Run Aggregate Supply curve left because it reduces the economy's productive capacity at full employment.</explanation>
+    </question>
+
+    <question number="154">
+        <prompt>What happens to the cyclical deficit during an economic boom?</prompt>
+        <options>
+            <option letter="a">Cyclical deficit increases</option>
+            <option letter="b">Cyclical deficit decreases</option>
+            <option letter="c">Cyclical deficit stays constant</option>
+            <option letter="d">Only structural deficit changes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During an economic boom, the cyclical deficit decreases or becomes a surplus because tax revenues automatically increase and transfer payments decrease as economic activity expands.</explanation>
+    </question>
+
+    <question number="155">
+        <prompt>How does an improvement in technology affect the production possibilities frontier?</prompt>
+        <options>
+            <option letter="a">Shifts PPF inward</option>
+            <option letter="b">Shifts PPF outward</option>
+            <option letter="c">Moves along the existing PPF</option>
+            <option letter="d">Makes PPF more linear</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Technological improvement shifts the production possibilities frontier outward because it enables the economy to produce more of all goods and services with the same resources.</explanation>
+    </question>
+
+    <question number="156">
+        <prompt>What determines the size of the foreign trade multiplier?</prompt>
+        <options>
+            <option letter="a">Only the marginal propensity to consume</option>
+            <option letter="b">Only the marginal propensity to import</option>
+            <option letter="c">The MPC minus the MPI</option>
+            <option letter="d">The exchange rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The size of the foreign trade multiplier is determined by the marginal propensity to consume (MPC) minus the marginal propensity to import (MPI), as imports are a leakage from domestic spending.</explanation>
+    </question>
+<question number="157">
+        <prompt>Which GDP calculation method adds up all expenditures in the economy?</prompt>
+        <options>
+            <option letter="a">Income approach</option>
+            <option letter="b">Value-added approach</option>
+            <option letter="c">Expenditure approach</option>
+            <option letter="d">Production approach</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The expenditure approach calculates GDP by summing C (consumption) + I (investment) + G (government spending) + (X-M) (net exports), measuring total spending on final goods and services.</explanation>
+    </question>
+
+    <question number="158">
+        <prompt>Which is NOT counted in GDP calculations?</prompt>
+        <options>
+            <option letter="a">A new car purchased from a dealer</option>
+            <option letter="b">Used car sold between private individuals</option>
+            <option letter="c">Government purchase of military equipment</option>
+            <option letter="d">Construction of a new house</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Used goods sold between private individuals are not counted in GDP because they were already counted when first produced. Only new goods and services produced in the current year are included in GDP.</explanation>
+    </question>
+
+    <question number="159">
+        <prompt>What happens to cyclical unemployment during a recession?</prompt>
+        <options>
+            <option letter="a">It decreases as structural unemployment increases</option>
+            <option letter="b">It increases as aggregate demand falls</option>
+            <option letter="c">It remains constant at the natural rate</option>
+            <option letter="d">It disappears completely</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a recession, falling aggregate demand leads to decreased production and higher cyclical unemployment as businesses lay off workers due to reduced economic activity.</explanation>
+    </question>
+
+    <question number="160">
+        <prompt>What distinguishes the CPI from the GDP deflator?</prompt>
+        <options>
+            <option letter="a">CPI only includes consumer goods while GDP deflator includes all goods produced</option>
+            <option letter="b">CPI measures inflation while GDP deflator measures output</option>
+            <option letter="c">CPI uses current year quantities while GDP deflator uses base year quantities</option>
+            <option letter="d">CPI is always higher than the GDP deflator</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The CPI measures price changes in a fixed basket of consumer goods and services, while the GDP deflator measures price changes in all goods and services produced in the economy, including capital goods and government services.</explanation>
+    </question>
+<question number="161">
+        <prompt>What happens to the money multiplier during a financial crisis?</prompt>
+        <options>
+            <option letter="a">Increases as banks lend more</option>
+            <option letter="b">Decreases as banks hold more reserves</option>
+            <option letter="c">Stays constant despite the crisis</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a financial crisis, the money multiplier typically decreases because banks become more cautious and hold more excess reserves, reducing their willingness to make loans.</explanation>
+    </question>
+
+    <question number="162">
+        <prompt>How does an increase in the budget deficit affect national saving?</prompt>
+        <options>
+            <option letter="a">Always increases national saving</option>
+            <option letter="b">Decreases national saving</option>
+            <option letter="c">Has no effect on national saving</option>
+            <option letter="d">Only affects private saving</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the budget deficit decreases national saving because government dissaving reduces the total amount of saving in the economy, even if private saving remains unchanged.</explanation>
+    </question>
+
+    <question number="163">
+        <prompt>What effect does anticipated inflation have on nominal interest rates?</prompt>
+        <options>
+            <option letter="a">No effect on nominal rates</option>
+            <option letter="b">Decreases nominal rates</option>
+            <option letter="c">Increases nominal rates</option>
+            <option letter="d">Only affects real rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Anticipated inflation increases nominal interest rates because lenders demand higher nominal rates to compensate for the expected decrease in the purchasing power of their returns.</explanation>
+    </question>
+
+    <question number="164">
+        <prompt>How does an increase in labor productivity affect unit labor costs?</prompt>
+        <options>
+            <option letter="a">Increases unit labor costs</option>
+            <option letter="b">Decreases unit labor costs</option>
+            <option letter="c">No effect on unit labor costs</option>
+            <option letter="d">Only affects total costs</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor productivity decreases unit labor costs because more output is produced per unit of labor input, spreading labor costs over a larger quantity of output.</explanation>
+    </question>
+<question number="165">
+        <prompt>How does hyperinflation affect the demand for money?</prompt>
+        <options>
+            <option letter="a">Increases money demand as prices rise</option>
+            <option letter="b">Decreases money demand as people spend quickly</option>
+            <option letter="c">Has no effect on money demand</option>
+            <option letter="d">Only affects foreign currency demand</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During hyperinflation, people reduce their demand for money because they try to spend it quickly before it loses more value, leading to an increased velocity of money.</explanation>
+    </question>
+
+    <question number="166">
+        <prompt>What happens to structural unemployment during rapid technological change?</prompt>
+        <options>
+            <option letter="a">Decreases as new jobs are created</option>
+            <option letter="b">Increases as skills become obsolete</option>
+            <option letter="c">Remains constant despite changes</option>
+            <option letter="d">Becomes cyclical unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Rapid technological change often increases structural unemployment as existing workers' skills become obsolete and don't match the requirements of newly created jobs.</explanation>
+    </question>
+
+    <question number="167">
+        <prompt>How does an increase in investment spending affect the LRAS curve?</prompt>
+        <options>
+            <option letter="a">Shifts LRAS left</option>
+            <option letter="b">Shifts LRAS right</option>
+            <option letter="c">Moves along existing LRAS</option>
+            <option letter="d">Has no effect on LRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in investment spending increases the economy's capital stock, which expands productive capacity and shifts the Long-Run Aggregate Supply curve to the right.</explanation>
+    </question>
+
+    <question number="168">
+        <prompt>What is the primary difference between nominal and real values in economics?</prompt>
+        <options>
+            <option letter="a">Nominal includes taxes, real doesn't</option>
+            <option letter="b">Nominal includes imports, real doesn't</option>
+            <option letter="c">Nominal is in current prices, real is adjusted for inflation</option>
+            <option letter="d">Nominal is adjusted for population, real isn't</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The primary difference is that nominal values are measured in current prices, while real values are adjusted for inflation to show actual changes in purchasing power or quantity.</explanation>
+    </question>
+<question number="169">
+        <prompt>Which type of unemployment is most directly related to minimum wage laws?</prompt>
+        <options>
+            <option letter="a">Cyclical unemployment</option>
+            <option letter="b">Frictional unemployment</option>
+            <option letter="c">Structural unemployment</option>
+            <option letter="d">Seasonal unemployment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Structural unemployment is most directly related to minimum wage laws because these laws can create a mismatch between workers willing to work and employers willing to hire at the mandated wage rate.</explanation>
+    </question>
+
+    <question number="170">
+        <prompt>What happens to the SRAS curve when worker productivity increases?</prompt>
+        <options>
+            <option letter="a">Shifts right</option>
+            <option letter="b">Shifts left</option>
+            <option letter="c">Moves along the curve</option>
+            <option letter="d">Becomes steeper</option>
+        </options>
+        <answer>a</answer>
+        <explanation>When worker productivity increases, firms can produce more output at any given price level, causing the Short-Run Aggregate Supply curve to shift right.</explanation>
+    </question>
+
+    <question number="171">
+        <prompt>How does the wealth effect influence aggregate demand?</prompt>
+        <options>
+            <option letter="a">Higher prices increase real wealth and spending</option>
+            <option letter="b">Higher prices reduce real wealth and spending</option>
+            <option letter="c">Higher prices have no effect on real wealth</option>
+            <option letter="d">Only affects international trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The wealth effect shows that higher prices reduce the real value (purchasing power) of people's wealth, causing them to spend less and contributing to the downward slope of the AD curve.</explanation>
+    </question>
+
+    <question number="172">
+        <prompt>What determines the size of an inflationary gap?</prompt>
+        <options>
+            <option letter="a">The difference between actual and potential GDP</option>
+            <option letter="b">The difference between exports and imports</option>
+            <option letter="c">The difference between savings and investment</option>
+            <option letter="d">The difference between taxes and government spending</option>
+        </options>
+        <answer>a</answer>
+        <explanation>An inflationary gap is measured by the difference between actual GDP and potential GDP when actual GDP exceeds potential GDP, indicating the economy is operating above its full-employment level.</explanation>
+    </question>
+<question number="173">
+        <prompt>Which of these is counted in GDP calculations?</prompt>
+        <options>
+            <option letter="a">The sale of a used car between private individuals</option>
+            <option letter="b">A stock market transaction</option>
+            <option letter="c">The production of a new factory machine</option>
+            <option letter="d">Social Security payments to retirees</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The production of a new factory machine is counted in GDP as investment spending because it represents new production of capital goods. Used goods, financial transactions, and transfer payments are not included in GDP.</explanation>
+    </question>
+
+    <question number="174">
+        <prompt>What causes stagflation?</prompt>
+        <options>
+            <option letter="a">Only a decrease in aggregate demand</option>
+            <option letter="b">Only an increase in aggregate demand</option>
+            <option letter="c">A decrease in aggregate supply while aggregate demand remains stable</option>
+            <option letter="d">An increase in aggregate supply while aggregate demand remains stable</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Stagflation typically occurs when aggregate supply decreases (shifts left), causing both higher prices (inflation) and lower output (stagnation) simultaneously while aggregate demand remains relatively stable.</explanation>
+    </question>
+
+    <question number="175">
+        <prompt>How does an increase in the minimum wage affect the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Decreases the natural rate</option>
+            <option letter="b">Increases the natural rate</option>
+            <option letter="c">Has no effect on the natural rate</option>
+            <option letter="d">Only affects cyclical unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the minimum wage tends to increase the natural rate of unemployment by creating structural unemployment, as some workers' productivity may be worth less to employers than the higher mandated wage.</explanation>
+    </question>
+
+    <question number="176">
+        <prompt>When the economy is at full employment, which type of unemployment exists?</prompt>
+        <options>
+            <option letter="a">Only cyclical unemployment</option>
+            <option letter="b">Only structural unemployment</option>
+            <option letter="c">Frictional and structural unemployment</option>
+            <option letter="d">No unemployment exists</option>
+        </options>
+        <answer>c</answer>
+        <explanation>At full employment, the economy experiences the natural rate of unemployment, which consists of frictional unemployment (normal job transitions) and structural unemployment (skill mismatches), but no cyclical unemployment.</explanation>
+    </question>
+<question number="177">
+        <prompt>What is the primary difference between M1 and M2 money supply?</prompt>
+        <options>
+            <option letter="a">M1 includes credit cards while M2 doesn't</option>
+            <option letter="b">M1 is currency and checking accounts, M2 includes savings accounts and small time deposits</option>
+            <option letter="c">M1 is just coins while M2 includes paper money</option>
+            <option letter="d">M1 is international currency while M2 is domestic only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>M1 consists of the most liquid forms of money (currency and checking accounts), while M2 includes M1 plus less liquid forms like savings accounts and small time deposits.</explanation>
+    </question>
+
+    <question number="178">
+        <prompt>How does increased automation in production affect the LRAS curve?</prompt>
+        <options>
+            <option letter="a">Shifts LRAS left due to job losses</option>
+            <option letter="b">Shifts LRAS right due to increased productivity</option>
+            <option letter="c">Moves along the existing LRAS curve</option>
+            <option letter="d">Has no effect on LRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased automation represents technological advancement that increases productivity and productive capacity, shifting the Long-Run Aggregate Supply curve to the right.</explanation>
+    </question>
+
+    <question number="179">
+        <prompt>What happens to the money multiplier when banks increase their excess reserves?</prompt>
+        <options>
+            <option letter="a">The multiplier increases</option>
+            <option letter="b">The multiplier decreases</option>
+            <option letter="c">The multiplier stays the same</option>
+            <option letter="d">The multiplier becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When banks hold more excess reserves, they loan out less money, reducing the money multiplier. This means each dollar of reserves creates fewer dollars of money supply.</explanation>
+    </question>
+
+    <question number="180">
+        <prompt>Which would most likely result in demand-pull inflation?</prompt>
+        <options>
+            <option letter="a">An increase in oil prices</option>
+            <option letter="b">A decrease in worker productivity</option>
+            <option letter="c">A large increase in government spending</option>
+            <option letter="d">An increase in business taxes</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A large increase in government spending would shift aggregate demand to the right, potentially causing demand-pull inflation as total spending in the economy increases relative to its productive capacity.</explanation>
+    </question>
+<question number="181">
+        <prompt>Which best describes the relationship between the CPI and GDP deflator?</prompt>
+        <options>
+            <option letter="a">They always move in opposite directions</option>
+            <option letter="b">They measure exactly the same thing</option>
+            <option letter="c">CPI includes imported goods, GDP deflator only includes domestic production</option>
+            <option letter="d">GDP deflator includes imported goods, CPI only includes domestic goods</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The CPI includes imported consumer goods and excludes exports, while the GDP deflator only includes goods produced domestically and excludes imports but includes exports.</explanation>
+    </question>
+
+    <question number="182">
+        <prompt>What happens to aggregate demand when there is a negative wealth effect?</prompt>
+        <options>
+            <option letter="a">AD curve shifts right</option>
+            <option letter="b">AD curve shifts left</option>
+            <option letter="c">Movement along the AD curve</option>
+            <option letter="d">AD curve becomes steeper</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A negative wealth effect (such as falling asset prices) makes people feel poorer, causing them to reduce spending, which shifts the aggregate demand curve to the left.</explanation>
+    </question>
+
+    <question number="183">
+        <prompt>How does an increase in income tax rates affect the consumption function?</prompt>
+        <options>
+            <option letter="a">Shifts the consumption function up</option>
+            <option letter="b">Shifts the consumption function down</option>
+            <option letter="c">Makes the consumption function steeper</option>
+            <option letter="d">Makes the consumption function flatter</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in income tax rates reduces disposable income at every level of GDP, shifting the consumption function downward as people have less income available for consumption.</explanation>
+    </question>
+
+    <question number="184">
+        <prompt>What happens to the labor force participation rate during a strong economic expansion?</prompt>
+        <options>
+            <option letter="a">Always decreases</option>
+            <option letter="b">Tends to increase</option>
+            <option letter="c">Remains constant</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a strong economic expansion, the labor force participation rate tends to increase as higher wages and better job prospects encourage more people to enter the labor force.</explanation>
+    </question>
+<question number="185">
+        <prompt>What is the primary difference between the income and expenditure approaches to calculating GDP?</prompt>
+        <options>
+            <option letter="a">Income approach counts only wages, while expenditure counts all spending</option>
+            <option letter="b">Income approach measures earnings, while expenditure measures spending</option>
+            <option letter="c">Income approach includes foreign transactions, while expenditure doesn't</option>
+            <option letter="d">Income approach uses base year prices, while expenditure uses current prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The income approach measures GDP by summing all earnings (wages, rent, interest, profit), while the expenditure approach measures GDP by summing all spending (C + I + G + NX). Both should yield the same total.</explanation>
+    </question>
+
+    <question number="186">
+        <prompt>How does a decrease in the value of the dollar affect net exports?</prompt>
+        <options>
+            <option letter="a">Decreases exports and increases imports</option>
+            <option letter="b">Increases exports and decreases imports</option>
+            <option letter="c">Increases both exports and imports</option>
+            <option letter="d">Decreases both exports and imports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A weaker dollar makes U.S. goods cheaper for foreigners (increasing exports) and foreign goods more expensive for Americans (decreasing imports), thereby improving net exports.</explanation>
+    </question>
+
+    <question number="187">
+        <prompt>What causes the "sticky" prices and wages in the short-run aggregate supply curve?</prompt>
+        <options>
+            <option letter="a">Government price controls</option>
+            <option letter="b">Labor union contracts and menu costs</option>
+            <option letter="c">International trade agreements</option>
+            <option letter="d">Central bank policies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Prices and wages are sticky in the short run due to factors like labor union contracts, menu costs (expense of changing prices), and long-term wage agreements that prevent immediate adjustment.</explanation>
+    </question>
+
+    <question number="188">
+        <prompt>If the nominal interest rate is 8% and the inflation rate is 3%, what is the real interest rate?</prompt>
+        <options>
+            <option letter="a">11%</option>
+            <option letter="b">5%</option>
+            <option letter="c">2.67%</option>
+            <option letter="d">24%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The real interest rate is calculated by subtracting the inflation rate from the nominal interest rate: 8% - 3% = 5%. This represents the actual return after accounting for inflation.</explanation>
+    </question>
+<question number="189">
+        <prompt>The aggregate demand curve slopes downward primarily because of:</prompt>
+        <options>
+            <option letter="a">The law of diminishing returns</option>
+            <option letter="b">The wealth effect, interest rate effect, and foreign trade effect</option>
+            <option letter="c">Sticky wages and prices</option>
+            <option letter="d">Resource mobility</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The aggregate demand curve slopes downward due to three effects: the wealth effect (real balances), the interest rate effect, and the foreign trade effect (exchange rate), all occurring when the price level changes.</explanation>
+    </question>
+
+    <question number="190">
+        <prompt>A recessionary gap occurs when:</prompt>
+        <options>
+            <option letter="a">Actual real GDP exceeds potential real GDP</option>
+            <option letter="b">Actual real GDP equals potential real GDP</option>
+            <option letter="c">Actual real GDP is less than potential real GDP</option>
+            <option letter="d">The price level is too high</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A recessionary gap exists when actual real GDP is below potential real GDP, indicating the economy is operating below its full employment level and resources are being underutilized.</explanation>
+    </question>
+
+    <question number="191">
+        <prompt>Which of the following would cause the Long-Run Aggregate Supply curve to shift right?</prompt>
+        <options>
+            <option letter="a">An increase in the minimum wage</option>
+            <option letter="b">A decrease in the labor force</option>
+            <option letter="c">Technological advancement</option>
+            <option letter="d">A decrease in capital investment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Technological advancement increases the economy's productive capacity and potential GDP, shifting the Long-Run Aggregate Supply curve to the right as the economy can produce more output at any price level.</explanation>
+    </question>
+
+    <question number="192">
+        <prompt>How does the economy self-correct from an inflationary gap without government intervention?</prompt>
+        <options>
+            <option letter="a">Through immediate price increases</option>
+            <option letter="b">Through falling wages and prices as workers lose jobs</option>
+            <option letter="c">Through flexible wages adjusting upward to reduce output</option>
+            <option letter="d">Through increasing interest rates automatically</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In an inflationary gap, excess demand for labor pushes wages up, increasing production costs. This eventually reduces output and employment until the economy returns to its potential GDP level.</explanation>
+    </question>
+<question number="193">
+        <prompt>How does an increase in labor mobility affect structural unemployment?</prompt>
+        <options>
+            <option letter="a">Increases structural unemployment</option>
+            <option letter="b">Decreases structural unemployment</option>
+            <option letter="c">Has no effect on structural unemployment</option>
+            <option letter="d">Only affects frictional unemployment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased labor mobility reduces structural unemployment because workers can more easily move to where jobs are available, reducing the mismatch between workers and job opportunities.</explanation>
+    </question>
+
+    <question number="194">
+        <prompt>What happens to the equilibrium price level when both AD and SRAS increase?</prompt>
+        <options>
+            <option letter="a">Price level definitely increases</option>
+            <option letter="b">Price level definitely decreases</option>
+            <option letter="c">Price level could increase or decrease</option>
+            <option letter="d">Price level stays the same</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When both AD and SRAS increase, the effect on the price level is ambiguous and depends on the relative size of the shifts in AD and SRAS curves.</explanation>
+    </question>
+
+    <question number="195">
+        <prompt>How does an increase in income tax rates affect the government spending multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Has no effect on the multiplier</option>
+            <option letter="d">Makes the multiplier negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Higher income tax rates decrease the government spending multiplier because they reduce the amount of additional income that gets spent in each round, acting as an automatic stabilizer.</explanation>
+    </question>
+
+    <question number="196">
+        <prompt>What effect does menu cost inflation have on relative prices?</prompt>
+        <options>
+            <option letter="a">Makes relative prices more accurate</option>
+            <option letter="b">Distorts relative prices</option>
+            <option letter="c">Has no effect on relative prices</option>
+            <option letter="d">Only affects absolute prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Menu cost inflation distorts relative prices because firms change prices at different times due to the costs of price adjustment, temporarily misaligning prices between different goods and services.</explanation>
+    </question>
+<question number="197">
+        <prompt>What is the natural rate of unemployment?</prompt>
+        <options>
+            <option letter="a">Zero unemployment in the economy</option>
+            <option letter="b">The unemployment rate when the economy is at full employment</option>
+            <option letter="c">The unemployment rate during recessions</option>
+            <option letter="d">The highest unemployment rate in a business cycle</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The natural rate of unemployment is the unemployment rate when the economy is at full employment, consisting of frictional and structural unemployment but no cyclical unemployment.</explanation>
+    </question>
+
+    <question number="198">
+        <prompt>Which type of unemployment occurs when workers are temporarily between jobs?</prompt>
+        <options>
+            <option letter="a">Structural unemployment</option>
+            <option letter="b">Cyclical unemployment</option>
+            <option letter="c">Frictional unemployment</option>
+            <option letter="d">Seasonal unemployment</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Frictional unemployment occurs when workers are temporarily between jobs as they search for new employment or enter the workforce for the first time.</explanation>
+    </question>
+
+    <question number="199">
+        <prompt>The GDP deflator measures:</prompt>
+        <options>
+            <option letter="a">The price level of all goods and services produced in an economy</option>
+            <option letter="b">The price level of consumer goods only</option>
+            <option letter="c">The cost of a fixed basket of consumer goods</option>
+            <option letter="d">The inflation rate for imported goods</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The GDP deflator measures the overall price level of all goods and services produced within an economy, including consumer goods, capital goods, exports, and government services.</explanation>
+    </question>
+
+    <question number="200">
+        <prompt>Real interest rate is calculated by:</prompt>
+        <options>
+            <option letter="a">Adding inflation rate to nominal interest rate</option>
+            <option letter="b">Multiplying nominal interest rate by inflation rate</option>
+            <option letter="c">Subtracting inflation rate from nominal interest rate</option>
+            <option letter="d">Dividing nominal interest rate by inflation rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The real interest rate is calculated by subtracting the inflation rate from the nominal interest rate. This shows the actual purchasing power gained from interest after accounting for inflation.</explanation>
+    </question>
+<question number="201">
+        <prompt>What happens to the marginal propensity to consume when wealth inequality increases?</prompt>
+        <options>
+            <option letter="a">MPC increases for the economy as a whole</option>
+            <option letter="b">MPC decreases for the economy as a whole</option>
+            <option letter="c">MPC stays the same</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When wealth inequality increases, the overall marginal propensity to consume tends to decrease because wealthy individuals typically have a lower MPC than those with less wealth.</explanation>
+    </question>
+
+    <question number="202">
+        <prompt>How does an increase in expected future taxes affect current consumption?</prompt>
+        <options>
+            <option letter="a">Increases current consumption</option>
+            <option letter="b">Decreases current consumption</option>
+            <option letter="c">Has no effect on current consumption</option>
+            <option letter="d">Only affects future consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in expected future taxes tends to decrease current consumption as households save more in anticipation of lower future disposable income, following the permanent income hypothesis.</explanation>
+    </question>
+
+    <question number="203">
+        <prompt>What happens to the loanable funds market when government borrowing increases?</prompt>
+        <options>
+            <option letter="a">Interest rates fall</option>
+            <option letter="b">Interest rates rise</option>
+            <option letter="c">Supply of loanable funds increases</option>
+            <option letter="d">Has no effect on interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased government borrowing raises demand for loanable funds, causing interest rates to rise as the government competes with private borrowers for available funds.</explanation>
+    </question>
+
+    <question number="204">
+        <prompt>How does an increase in the capital-to-labor ratio affect labor productivity?</prompt>
+        <options>
+            <option letter="a">Decreases labor productivity</option>
+            <option letter="b">Increases labor productivity</option>
+            <option letter="c">Has no effect on labor productivity</option>
+            <option letter="d">Only affects capital productivity</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital-to-labor ratio increases labor productivity because workers have more capital (equipment, tools, technology) to work with, enabling them to produce more output per hour.</explanation>
+    </question>
+</quiz>

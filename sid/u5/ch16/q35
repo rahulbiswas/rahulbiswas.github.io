@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="137">
+        <prompt>What effect did the "mechanical reaper" have on agriculture?</prompt>
+        <options>
+            <option letter="a">Dramatically increased grain harvesting efficiency</option>
+            <option letter="b">Reduced crop yields</option>
+            <option letter="c">Increased labor needs</option>
+            <option letter="d">Limited farm size</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The mechanical reaper dramatically increased grain harvesting efficiency, enabling larger farms and reducing labor requirements in agriculture.</explanation>
+    </question>
+    <question number="138">
+        <prompt>How did the "contract labor" system affect immigration?</prompt>
+        <options>
+            <option letter="a">Facilitated immigration while often exploiting workers</option>
+            <option letter="b">Protected worker rights</option>
+            <option letter="c">Improved working conditions</option>
+            <option letter="d">Increased wages</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The contract labor system facilitated immigration but often exploited workers through debt bondage and poor working conditions.</explanation>
+    </question>
+    <question number="139">
+        <prompt>What was the significance of the "hydraulic elevator"?</prompt>
+        <options>
+            <option letter="a">Enabled taller building construction</option>
+            <option letter="b">Limited building access</option>
+            <option letter="c">Increased construction costs</option>
+            <option letter="d">Reduced building efficiency</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The hydraulic elevator enabled the construction of taller buildings by providing reliable vertical transportation, contributing to urban development.</explanation>
+    </question>
+    <question number="140">
+        <prompt>How did the "commercial bank" affect business growth?</prompt>
+        <options>
+            <option letter="a">Provided capital for business expansion</option>
+            <option letter="b">Limited economic development</option>
+            <option letter="c">Increased borrowing costs</option>
+            <option letter="d">Reduced investment options</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Commercial banks provided essential capital for business expansion, facilitating economic growth and industrial development.</explanation>
+    </question></quiz>

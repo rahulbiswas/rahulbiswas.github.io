@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The Progressive movement is a double movement: its aim is the overthrow of the power of the corporations and the establishment of the power of the people... We propose to wrest the control of the government from the special interests and restore it to the people."
+- Robert La Follette, 1911</stimulus>
+        <prompt>Which Progressive Era reform best exemplifies this goal?</prompt>
+        <options>
+            <option letter="a">The Prohibition Amendment</option>
+            <option letter="b">The direct primary system</option>
+            <option letter="c">The Pure Food and Drug Act</option>
+            <option letter="d">The Federal Reserve Act</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The direct primary system represented the Progressive goal of returning political power to the people by allowing voters, rather than party bosses, to select candidates for office.</explanation>
+    </question>
+    <question>
+        <stimulus>[Statistical table showing increase in public high school attendance: 1890: 200,000 students, 1900: 500,000 students, 1910: 900,000 students, 1920: 2,000,000 students]</stimulus>
+        <prompt>This trend most directly reflected the Progressive Era emphasis on:</prompt>
+        <options>
+            <option letter="a">Social mobility through education</option>
+            <option letter="b">Immigration restriction</option>
+            <option letter="c">Labor union growth</option>
+            <option letter="d">Urban political reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The dramatic increase in high school attendance reflected Progressive beliefs in education as a means of social mobility and preparation for modern industrial society.</explanation>
+    </question>
+    <question>
+        <stimulus>"The saloon is the mortal enemy of peace and order, the despoiler of men and terror of women, the cloud that shadows the face of children... the compromise of law, the ally of gambling, ill-health, and disease..."
+- Richmond P. Hobson, Congressional Speech, 1914</stimulus>
+        <prompt>This rhetoric most directly contributed to which Constitutional amendment?</prompt>
+        <options>
+            <option letter="a">16th Amendment (Income Tax)</option>
+            <option letter="b">17th Amendment (Direct Election of Senators)</option>
+            <option letter="c">18th Amendment (Prohibition)</option>
+            <option letter="d">19th Amendment (Women's Suffrage)</option>
+        </options>
+        <answer>c</answer>
+        <explanation>This anti-saloon rhetoric typified temperance movement arguments that led to the ratification of the 18th Amendment establishing Prohibition in 1919.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of the Triangle Shirtwaist Factory fire aftermath, showing burned building and victims, New York City, 1911]</stimulus>
+        <prompt>This tragic event most directly led to:</prompt>
+        <options>
+            <option letter="a">Child labor laws</option>
+            <option letter="b">Workplace safety regulations</option>
+            <option letter="c">Minimum wage legislation</option>
+            <option letter="d">Anti-trust legislation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Triangle Shirtwaist Factory fire, which killed 146 workers, led to significant workplace safety reforms in New York and other states, including improved fire safety regulations and factory inspection systems.</explanation>
+    </question>
+</quiz>

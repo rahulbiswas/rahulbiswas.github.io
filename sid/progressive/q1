@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The people of the United States are tired of a condition under which the United States is made a dumping ground for vicious, ignorant, criminal and diseased crowd which other countries are glad to get rid of... This country is not a universal almshouse for the relief of Asia and Europe..." 
+- Henry Cabot Lodge, Speech to Congress, 1896</stimulus>
+        <prompt>This excerpt best reflects which Progressive Era debate?</prompt>
+        <options>
+            <option letter="a">Labor union rights</option>
+            <option letter="b">Immigration restriction</option>
+            <option letter="c">Women's suffrage</option>
+            <option letter="d">Trust busting</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Lodge's nativist rhetoric represents growing calls for immigration restriction during the Progressive Era, which ultimately led to legislation like the Immigration Act of 1917.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political Cartoon from 1906 showing Upton Sinclair pulling back a curtain labeled "Packingtown" to reveal horrific meat packing conditions to a shocked public]</stimulus>
+        <prompt>This cartoon most directly led to which Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">The Pure Food and Drug Act</option>
+            <option letter="b">The Federal Reserve Act</option>
+            <option letter="c">The Clayton Antitrust Act</option>
+            <option letter="d">The Federal Trade Commission</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sinclair's "The Jungle" exposing meat packing conditions led directly to the Pure Food and Drug Act of 1906, though Sinclair had intended to highlight worker conditions rather than food safety.</explanation>
+    </question>
+    <question>
+        <stimulus>"The Negro race, like all races, is going to be saved by its exceptional men. The problem of education, then, among Negroes must first of all deal with the Talented Tenth... The Talented Tenth of the Negro race must be made leaders of thought and missionaries of culture among their people."
+- W.E.B. Du Bois, "The Talented Tenth," 1903</stimulus>
+        <prompt>Du Bois's approach to African American advancement most directly conflicted with which other leader's philosophy?</prompt>
+        <options>
+            <option letter="a">Booker T. Washington</option>
+            <option letter="b">Jane Addams</option>
+            <option letter="c">Eugene V. Debs</option>
+            <option letter="d">Susan B. Anthony</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Du Bois's emphasis on higher education and political equality for African Americans directly challenged Booker T. Washington's Atlanta Compromise promoting industrial education and gradual progress.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing female workers in manufacturing increasing from 2.5 million in 1880 to 8.5 million in 1920]</stimulus>
+        <prompt>This trend most directly contributed to which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">The rise of settlement houses</option>
+            <option letter="b">The growth of the suffrage movement</option>
+            <option letter="c">The passage of prohibition</option>
+            <option letter="d">The creation of the Federal Reserve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Women's increasing presence in the industrial workforce strengthened arguments for women's suffrage, as female workers demanded political voice to advocate for their interests.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of proto-oncogenes in normal cells?</text>
+        <option>Suppress cell growth</option>
+        <option>Promote normal growth</option>
+        <option>Cause cancer</option>
+        <option>Kill cells</option>
+        <answer>Promote normal growth</answer>
+        <explanation>Proto-oncogenes are normal genes that help regulate cell growth and division in healthy cells before any mutations occur.</explanation>
+    </question>
+    
+    <question>
+        <text>Which is a characteristic of the genetic code?</text>
+        <option>Overlapping</option>
+        <option>Variable length</option>
+        <option>Degenerate</option>
+        <option>Tissue-specific</option>
+        <answer>Degenerate</answer>
+        <explanation>The genetic code is degenerate because multiple different codons can specify the same amino acid.</explanation>
+    </question>
+    
+    <question>
+        <text>What happens during alternative splicing?</text>
+        <option>Different proteins from same gene</option>
+        <option>DNA repair</option>
+        <option>Chromosome duplication</option>
+        <option>Base modification</option>
+        <answer>Different proteins from same gene</answer>
+        <explanation>Alternative splicing allows different combinations of exons to be joined, producing different protein variants from the same gene.</explanation>
+    </question>
+    
+    <question>
+        <text>Which molecule transports amino acids out of cells?</text>
+        <option>DNA polymerase</option>
+        <option>Membrane transporters</option>
+        <option>RNA polymerase</option>
+        <option>Ribosomes</option>
+        <answer>Membrane transporters</answer>
+        <explanation>Specific membrane transport proteins move amino acids across cell membranes in and out of cells.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of telomerase?</text>
+        <option>Repair DNA damage</option>
+        <option>Maintain chromosome ends</option>
+        <option>Splice RNA</option>
+        <option>Synthesize proteins</option>
+        <answer>Maintain chromosome ends</answer>
+        <explanation>Telomerase maintains chromosome length by adding repeated sequences to chromosome ends, preventing their shortening during replication.</explanation>
+    </question>
+</questions>

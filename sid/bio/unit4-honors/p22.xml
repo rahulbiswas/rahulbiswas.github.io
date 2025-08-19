@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What regulates acetyl-CoA carboxylase activity?</text>
+        <option>Only temperature</option>
+        <option>Hormones and energy status</option>
+        <option>Oxygen levels</option>
+        <option>Water availability</option>
+        <answer>Hormones and energy status</answer>
+        <explanation>Acetyl-CoA carboxylase is regulated by hormones like insulin and glucagon, and by cellular energy status through AMP-activated protein kinase.</explanation>
+    </question>
+    <question>
+        <text>How many carbons are added in each round of fatty acid synthesis?</text>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <answer>2</answer>
+        <explanation>Each round of fatty acid synthesis adds two carbons to the growing fatty acid chain, using malonyl-CoA as the two-carbon donor.</explanation>
+    </question>
+    <question>
+        <text>What is the end product of fatty acid synthase?</text>
+        <option>Stearic acid</option>
+        <option>Palmitic acid</option>
+        <option>Oleic acid</option>
+        <option>Linoleic acid</option>
+        <answer>Palmitic acid</answer>
+        <explanation>The main product of fatty acid synthase is palmitic acid, a 16-carbon saturated fatty acid, which can be modified to form other fatty acids.</explanation>
+    </question>
+    <question>
+        <text>Why is NADPH essential for fatty acid synthesis?</text>
+        <option>It provides energy</option>
+        <option>It provides reducing power</option>
+        <option>It breaks bonds</option>
+        <option>It transfers phosphate</option>
+        <answer>It provides reducing power</answer>
+        <explanation>NADPH provides the reducing power needed to convert the keto groups to methylene groups during fatty acid synthesis.</explanation>
+    </question>
+    <question>
+        <text>What is the role of biotin in fatty acid synthesis?</text>
+        <option>To break down fatty acids</option>
+        <option>To carry CO2 in carboxylation</option>
+        <option>To transfer electrons</option>
+        <option>To provide energy</option>
+        <answer>To carry CO2 in carboxylation</answer>
+        <explanation>Biotin acts as a CO2 carrier in the acetyl-CoA carboxylase reaction, which forms malonyl-CoA from acetyl-CoA.</explanation>
+    </question>
+</questions>

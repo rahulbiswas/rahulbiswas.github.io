@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="169">
+        <prompt>What was the main purpose of the National Baptist Convention?</prompt>
+        <options>
+            <option letter="a">To unite African American Baptists for religious and social action</option>
+            <option letter="b">To support segregation</option>
+            <option letter="c">To oppose civil rights</option>
+            <option letter="d">To promote integration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Baptist Convention united African American Baptists for religious worship and social action, becoming the largest African American religious organization.</explanation>
+    </question>
+    <question number="170">
+        <prompt>What was the significance of the Nicaraguan Canal proposal?</prompt>
+        <options>
+            <option letter="a">It demonstrated growing American interest in Central America</option>
+            <option letter="b">It reduced U.S. influence</option>
+            <option letter="c">It supported European control</option>
+            <option letter="d">It opposed expansion</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Nicaraguan Canal proposal demonstrated growing American interest in controlling Central American transportation routes, though Panama was ultimately chosen.</explanation>
+    </question>
+    <question number="171">
+        <prompt>What was the main effect of the Panic of 1893 on labor unions?</prompt>
+        <options>
+            <option letter="a">It weakened union membership and bargaining power</option>
+            <option letter="b">It strengthened unions</option>
+            <option letter="c">It improved working conditions</option>
+            <option letter="d">It increased wages</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Panic of 1893 severely weakened labor unions as unemployment rose and workers became more concerned with survival than organization.</explanation>
+    </question>
+    <question number="172">
+        <prompt>What was the primary goal of the National Direct Legislation League?</prompt>
+        <options>
+            <option letter="a">To promote initiative and referendum in state government</option>
+            <option letter="b">To oppose democracy</option>
+            <option letter="c">To support political machines</option>
+            <option letter="d">To limit voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Direct Legislation League worked to promote initiative and referendum procedures in state governments to increase direct democracy.</explanation>
+    </question>
+</quiz>

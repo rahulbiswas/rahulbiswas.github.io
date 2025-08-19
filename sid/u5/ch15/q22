@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the main purpose of "Black Codes" in Mississippi?</prompt>
+        <options>
+            <option letter="a">To restrict African American freedom and maintain labor control</option>
+            <option letter="b">To protect freed slaves' rights</option>
+            <option letter="c">To promote racial equality</option>
+            <option letter="d">To establish public education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mississippi's Black Codes were designed to restrict African American freedom and maintain white control over black labor through strict regulations and vagrancy laws.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the "shotgun policy" in Mississippi?</prompt>
+        <options>
+            <option letter="a">Armed intimidation of black voters at polling places</option>
+            <option letter="b">A hunting regulation</option>
+            <option letter="c">A military strategy</option>
+            <option letter="d">An economic policy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "shotgun policy" involved armed whites intimidating African American voters at polling places to prevent them from voting during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Compromise of 1877 affect Southern education?</prompt>
+        <options>
+            <option letter="a">Led to reduced funding for public schools</option>
+            <option letter="b">Increased educational funding</option>
+            <option letter="c">Created integrated schools</option>
+            <option letter="d">Expanded higher education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to reduced funding for public schools, particularly those serving African American communities, as "Redeemer" governments cut education budgets.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "eight box" ballot law?</prompt>
+        <options>
+            <option letter="a">To confuse and discourage illiterate voters</option>
+            <option letter="b">To organize voting precincts</option>
+            <option letter="c">To protect ballot security</option>
+            <option letter="d">To speed up vote counting</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "eight box" ballot law required voters to place different ballots in separate boxes, deliberately confusing illiterate voters to prevent them from voting correctly.</explanation>
+    </question>
+</quiz>

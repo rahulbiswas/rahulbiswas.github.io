@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is chemiosmosis?</text>
+        <option>The breakdown of glucose</option>
+        <option>The production of ATP using a proton gradient</option>
+        <option>The transfer of electrons</option>
+        <option>The splitting of water molecules</option>
+        <answer>The production of ATP using a proton gradient</answer>
+        <explanation>Chemiosmosis is the process where ATP synthase uses the energy from protons moving down their concentration gradient to synthesize ATP from ADP and phosphate.</explanation>
+    </question>
+    <question>
+        <text>How many protons must pass through ATP synthase to produce one ATP?</text>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <answer>3</answer>
+        <explanation>Generally, it takes about 3 protons moving through ATP synthase to generate one molecule of ATP from ADP and inorganic phosphate.</explanation>
+    </question>
+    <question>
+        <text>What determines the rate of ATP synthesis?</text>
+        <option>The amount of glucose available</option>
+        <option>The strength of the proton gradient</option>
+        <option>The temperature only</option>
+        <option>The amount of water present</option>
+        <answer>The strength of the proton gradient</answer>
+        <explanation>The rate of ATP synthesis depends primarily on the strength of the proton gradient across the membrane, which drives ATP synthase.</explanation>
+    </question>
+    <question>
+        <text>What is the role of the F0 portion of ATP synthase?</text>
+        <option>To bind ATP</option>
+        <option>To provide a channel for protons</option>
+        <option>To break down glucose</option>
+        <option>To transfer electrons</option>
+        <answer>To provide a channel for protons</answer>
+        <explanation>The F0 portion of ATP synthase spans the membrane and provides a channel through which protons can flow down their concentration gradient.</explanation>
+    </question>
+    <question>
+        <text>What happens to the F1 portion during ATP synthesis?</text>
+        <option>It dissolves</option>
+        <option>It rotates</option>
+        <option>It splits in half</option>
+        <option>It stays stationary</option>
+        <answer>It rotates</answer>
+        <explanation>The F1 portion rotates as protons flow through F0, causing conformational changes that enable the synthesis of ATP from ADP and phosphate.</explanation>
+    </question>
+</questions>

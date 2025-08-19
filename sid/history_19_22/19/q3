@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which president broke up the MOST business trusts during their administration?</prompt>
+        <options>
+            <option letter="a">Theodore Roosevelt (1901-1909)</option>
+            <option letter="b">William Howard Taft (1909-1913)</option>
+            <option letter="c">Woodrow Wilson (1913-1921)</option>
+            <option letter="d">Warren G. Harding (1921-1923)</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Though Theodore Roosevelt was known as the "trust-buster" and Wilson passed significant anti-trust legislation, William Howard Taft's administration actually broke up more trusts than any other, including 90 trusts in four years compared to Roosevelt's 44 in seven years. Major cases included Standard Oil and American Tobacco Company. Harding's administration largely abandoned anti-trust efforts.</explanation>
+    </question>
+</quiz>

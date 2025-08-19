@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main component of the extracellular matrix?</text>
+        <option>Collagen</option>
+        <option>Actin</option>
+        <option>Tubulin</option>
+        <option>Myosin</option>
+        <answer>Collagen</answer>
+        <explanation>Collagen is the most abundant protein in the extracellular matrix, providing structural support and strength.</explanation>
+    </question>
+    <question>
+        <text>Which molecule connects cells to the extracellular matrix?</text>
+        <option>Integrins</option>
+        <option>Channels</option>
+        <option>Pumps</option>
+        <option>Carriers</option>
+        <answer>Integrins</answer>
+        <explanation>Integrin proteins serve as transmembrane receptors that connect the cytoskeleton to the extracellular matrix.</explanation>
+    </question>
+    <question>
+        <text>What is the function of proteoglycans in the ECM?</text>
+        <option>Water retention</option>
+        <option>Energy storage</option>
+        <option>Protein synthesis</option>
+        <option>Lipid transport</option>
+        <answer>Water retention</answer>
+        <explanation>Proteoglycans help maintain tissue hydration by attracting and retaining water in the extracellular space.</explanation>
+    </question>
+    <question>
+        <text>Which structure forms the basement membrane?</text>
+        <option>Type IV collagen</option>
+        <option>Actin filaments</option>
+        <option>Microtubules</option>
+        <option>Intermediate filaments</option>
+        <answer>Type IV collagen</answer>
+        <explanation>Type IV collagen forms a specialized network that is a key component of the basement membrane.</explanation>
+    </question>
+    <question>
+        <text>What role does fibronectin play in the ECM?</text>
+        <option>Cell adhesion</option>
+        <option>Energy production</option>
+        <option>Waste removal</option>
+        <option>Ion transport</option>
+        <answer>Cell adhesion</answer>
+        <explanation>Fibronectin is an adhesive glycoprotein that helps cells attach to the extracellular matrix.</explanation>
+    </question>
+</questions>

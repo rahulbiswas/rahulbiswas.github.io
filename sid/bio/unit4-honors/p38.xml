@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the purpose of metabolic specialization?</text>
+        <option>To reduce efficiency</option>
+        <option>To optimize tissue-specific functions</option>
+        <option>To use more energy</option>
+        <option>To store nutrients</option>
+        <answer>To optimize tissue-specific functions</answer>
+        <explanation>Metabolic specialization allows different tissues to optimize their metabolic pathways for specific functions, improving overall organismal efficiency.</explanation>
+    </question>
+    <question>
+        <text>How do cancer cells alter metabolism?</text>
+        <option>They use less glucose</option>
+        <option>They increase aerobic glycolysis</option>
+        <option>They reduce proliferation</option>
+        <option>They maintain normal metabolism</option>
+        <answer>They increase aerobic glycolysis</answer>
+        <explanation>Cancer cells exhibit the Warburg effect, increasing aerobic glycolysis even in the presence of oxygen to support rapid proliferation.</explanation>
+    </question>
+    <question>
+        <text>What is metabolic reprogramming?</text>
+        <option>Random metabolic changes</option>
+        <option>Coordinated changes in metabolic pathways</option>
+        <option>Stopping metabolism</option>
+        <option>Only storing energy</option>
+        <answer>Coordinated changes in metabolic pathways</answer>
+        <explanation>Metabolic reprogramming involves coordinated changes in metabolic pathways to meet new cellular demands or respond to environmental changes.</explanation>
+    </question>
+    <question>
+        <text>How do neurons maintain energy metabolism?</text>
+        <option>Through photosynthesis</option>
+        <option>Through constant glucose oxidation</option>
+        <option>By storing fat</option>
+        <option>By random processes</option>
+        <answer>Through constant glucose oxidation</answer>
+        <explanation>Neurons maintain high rates of glucose oxidation to meet their constant energy demands, as they cannot efficiently use other fuel sources.</explanation>
+    </question>
+    <question>
+        <text>What characterizes muscle metabolism during exercise?</text>
+        <option>Decreased energy use</option>
+        <option>Increased glucose and fatty acid oxidation</option>
+        <option>No metabolic changes</option>
+        <option>Only fat use</option>
+        <answer>Increased glucose and fatty acid oxidation</answer>
+        <explanation>During exercise, muscle metabolism is characterized by increased oxidation of both glucose and fatty acids to meet elevated energy demands.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 5 Practice Problems ⭐️</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-5">
+        <h1>Unit 5 Practice Problems</h1>
+
+        <div class="key-concept">
+            <h2>Let's Practice! 화이팅! ✨</h2>
+            <p>Test your understanding of heredity and inheritance patterns~</p>
+        </div>
+
+        <div class="section">
+            <h2>Mendelian Genetics Problems</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. In pea plants, tall (T) is dominant over short (t). Cross Tt × tt:</p>
+                    <ul>
+                        <li>Determine genotype ratio</li>
+                        <li>Determine phenotype ratio</li>
+                        <li>Calculate probability of short offspring</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <p>Solution:</p>
+                        <ul>
+                            <li>Genotype ratio: 1 Tt : 1 tt</li>
+                            <li>Phenotype ratio: 1 tall : 1 short</li>
+                            <li>Probability of short = 50% or 1/2</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Complete a dihybrid cross between RrYy × RrYy:</p>
+                    <button class="show-answer">See Solution ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Genotypic ratio: 1:2:2:4:1:2:1:2:1</li>
+                            <li>Phenotypic ratio: 9:3:3:1</li>
+                            <li>Four gamete types: RY, Ry, rY, ry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Non-Mendelian Inheritance</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Calculate possible blood type offspring:</p>
+                    <p>Mother: Type A (AO), Father: Type B (BO)</p>
+                    <button class="show-answer">See Solution (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Possible genotypes: AB, AO, BO, OO</li>
+                            <li>Phenotypes: Type A, B, AB, O</li>
+                            <li>Each type has 25% probability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Sex-Linked Problems</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>4. Color-blind father, carrier mother. Find:</p>
+                    <ul>
+                        <li>Probability of color-blind sons</li>
+                        <li>Probability of carrier daughters</li>
+                    </ul>
+                    <button class="show-answer">See Solution ⭐️</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Sons: 50% chance color-blind</li>
+                            <li>Daughters: 50% chance carriers</li>
+                            <li>Genotypes: XBXB, XBXb, XbY</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Pedigree Analysis</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. Determine inheritance pattern:</p>
+                    <button class="show-answer">See Solution (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <p>Look for:</p>
+                        <ul>
+                            <li>Generation patterns</li>
+                            <li>Gender distribution</li>
+                            <li>Carrier status</li>
+                            <li>Affected individuals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Problem-Solving Tips</h3>
+            <ul>
+                <li>Draw Punnett squares</li>
+                <li>Write out genotypes</li>
+                <li>Show all work</li>
+                <li>Check probability rules</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>

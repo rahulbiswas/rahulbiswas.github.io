@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of DNMT3L?</text>
+        <option>Process RNA</option>
+        <option>Stimulate DNMT3A/B</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>Stimulate DNMT3A/B</answer>
+        <explanation>DNMT3L is a catalytically inactive protein that stimulates the de novo DNA methyltransferases DNMT3A and DNMT3B.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex recognizes DNA overhangs?</text>
+        <option>CST complex</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>CST complex</answer>
+        <explanation>The CST complex binds to single-stranded DNA overhangs at telomeres and stalled replication forks.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of HDAC3?</text>
+        <option>Add acetyl groups</option>
+        <option>Remove histone acetylation</option>
+        <option>Process RNA</option>
+        <option>Repair DNA</option>
+        <answer>Remove histone acetylation</answer>
+        <explanation>HDAC3 is a histone deacetylase that removes acetyl groups from histones to promote gene repression.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein processes pri-miRNAs?</text>
+        <option>Drosha</option>
+        <option>Dicer</option>
+        <option>DGCR8</option>
+        <option>AGO2</option>
+        <answer>Drosha</answer>
+        <explanation>Drosha is the RNase III enzyme that processes primary miRNAs into precursor miRNAs in the nucleus.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of ADAR1?</text>
+        <option>Process RNA</option>
+        <option>Edit A to I in RNA</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Edit A to I in RNA</answer>
+        <explanation>ADAR1 converts adenosine to inosine in double-stranded RNA regions, affecting RNA function and processing.</explanation>
+    </question>
+</questions>

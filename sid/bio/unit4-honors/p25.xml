@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of lipoprotein lipase?</text>
+        <option>To synthesize lipoproteins</option>
+        <option>To break down triglycerides in lipoproteins</option>
+        <option>To transport cholesterol</option>
+        <option>To store fat</option>
+        <answer>To break down triglycerides in lipoproteins</answer>
+        <explanation>Lipoprotein lipase breaks down triglycerides in lipoproteins, allowing tissues to take up fatty acids from the bloodstream.</explanation>
+    </question>
+    <question>
+        <text>What is the role of HDL in lipid metabolism?</text>
+        <option>To deliver cholesterol to tissues</option>
+        <option>To remove excess cholesterol from tissues</option>
+        <option>To store triglycerides</option>
+        <option>To break down fats</option>
+        <answer>To remove excess cholesterol from tissues</answer>
+        <explanation>HDL (High-Density Lipoprotein) removes excess cholesterol from tissues and transports it back to the liver for disposal or recycling.</explanation>
+    </question>
+    <question>
+        <text>What is the main function of LDL?</text>
+        <option>To remove cholesterol from tissues</option>
+        <option>To deliver cholesterol to tissues</option>
+        <option>To synthesize cholesterol</option>
+        <option>To store cholesterol</option>
+        <answer>To deliver cholesterol to tissues</answer>
+        <explanation>LDL (Low-Density Lipoprotein) delivers cholesterol to peripheral tissues for use in membrane synthesis and other cellular processes.</explanation>
+    </question>
+    <question>
+        <text>How are chylomicrons formed?</text>
+        <option>In the liver</option>
+        <option>In intestinal cells</option>
+        <option>In adipose tissue</option>
+        <option>In muscle cells</option>
+        <answer>In intestinal cells</answer>
+        <explanation>Chylomicrons are formed in intestinal cells to transport dietary lipids and fat-soluble vitamins from the intestine to other tissues.</explanation>
+    </question>
+    <question>
+        <text>What happens to chylomicron remnants?</text>
+        <option>They are stored in fat cells</option>
+        <option>They are taken up by the liver</option>
+        <option>They circulate indefinitely</option>
+        <option>They are excreted directly</option>
+        <answer>They are taken up by the liver</answer>
+        <explanation>After delivering their triglyceride content to tissues, chylomicron remnants are taken up by the liver for processing and recycling.</explanation>
+    </question>
+</questions>

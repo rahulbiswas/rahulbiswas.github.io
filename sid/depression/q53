@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Harlem Renaissance writer Langston Hughes differed from Countee Cullen in his:</prompt>
+        <options>
+            <option letter="a">Use of traditional European poetic forms</option>
+            <option letter="b">Embrace of vernacular language and jazz rhythms</option>
+            <option letter="c">Support for racial equality</option>
+            <option letter="d">Interest in African American themes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>While both Hughes and Cullen wrote about African American experiences, their styles differed significantly. Hughes deliberately embraced black vernacular language, jazz rhythms, and blues influences in his poetry, while Cullen preferred traditional European poetic forms. This stylistic difference reflected broader debates within the Harlem Renaissance about African American artistic expression.</explanation>
+    </question>
+</quiz>

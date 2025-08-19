@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which president was MOST supportive of labor unions during their administration?</prompt>
+        <options>
+            <option letter="a">Theodore Roosevelt (1901-1909)</option>
+            <option letter="b">William Howard Taft (1909-1913)</option>
+            <option letter="c">Woodrow Wilson (1913-1921)</option>
+            <option letter="d">Warren G. Harding (1921-1923)</option>
+        </options>
+        <answer>c</answer>
+        <explanation>While Theodore Roosevelt mediated some labor disputes like the 1902 coal strike, Wilson enacted the most pro-labor legislation, including the Clayton Act (which limited injunctions against unions), the Adamson Act (establishing an 8-hour workday for railroad workers), and the creation of the Department of Labor. Taft often used injunctions against unions, while Harding opposed union power.</explanation>
+    </question>
+</quiz>

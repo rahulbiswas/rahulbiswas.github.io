@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Harlem Renaissance writers demonstrated their diversity through:</prompt>
+        <options>
+            <option letter="a">Uniform writing styles</option>
+            <option letter="b">Different approaches to expressing African American experience</option>
+            <option letter="c">Focus on single themes</option>
+            <option letter="d">Avoiding racial topics</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Harlem Renaissance writers demonstrated diversity in their approaches to expressing African American experience. While Countee Cullen used traditional poetic forms, Langston Hughes embraced vernacular language and jazz rhythms. Claude McKay combined militant themes with classical sonnets. These varying approaches reflected different views on how to best express African American identity and experience in literature.</explanation>
+    </question>
+</quiz>

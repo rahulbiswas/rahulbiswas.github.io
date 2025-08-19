@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was unique about the Civil Works Administration?</prompt>
+    <options>
+        <option letter="a">Immediate job creation</option>
+        <option letter="b">Long-term planning</option>
+        <option letter="c">Private contracts</option>
+        <option letter="d">State control</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The CWA provided immediate employment through direct federal hiring, creating four million jobs in just a few weeks during winter 1933-34.</explanation>
+</question>

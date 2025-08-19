@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What were "scalawags" during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Southern whites who supported Republican policies</option>
+            <option letter="b">Northern migrants to the South</option>
+            <option letter="c">Former Confederate soldiers</option>
+            <option letter="d">African American politicians</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Scalawags were white Southerners who supported Republican Reconstruction policies and often cooperated with freedmen and carpetbaggers, earning them contempt from other Southern whites.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the Tenure of Office Act of 1867?</prompt>
+        <options>
+            <option letter="a">Required Senate approval for removal of cabinet members</option>
+            <option letter="b">Limited presidential terms to four years</option>
+            <option letter="c">Established requirements for federal judges</option>
+            <option letter="d">Created new cabinet positions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Tenure of Office Act restricted the president's power to remove cabinet members without Senate approval, leading to conflict between Congress and President Johnson.</explanation>
+    </question>
+    <question>
+        <prompt>What was the primary reason for President Johnson's impeachment?</prompt>
+        <options>
+            <option letter="a">Violation of the Tenure of Office Act</option>
+            <option letter="b">Support of the Confederacy</option>
+            <option letter="c">Corruption charges</option>
+            <option letter="d">Vetoing civil rights legislation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Johnson was impeached primarily for violating the Tenure of Office Act by removing Secretary of War Edwin Stanton without Senate approval.</explanation>
+    </question>
+    <question>
+        <prompt>How many votes short was the Senate of convicting President Johnson?</prompt>
+        <options>
+            <option letter="a">One vote</option>
+            <option letter="b">Two votes</option>
+            <option letter="c">Three votes</option>
+            <option letter="d">Four votes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Senate fell one vote short of the two-thirds majority needed to convict Johnson, with the final vote being 35 for conviction and 19 for acquittal.</explanation>
+    </question>
+</quiz>

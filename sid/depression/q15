@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Adkins v. Children's Hospital Supreme Court case (1923) dealt with:</prompt>
+        <options>
+            <option letter="a">Child labor regulations</option>
+            <option letter="b">Minimum wage laws for women</option>
+            <option letter="c">Hospital segregation policies</option>
+            <option letter="d">Medical malpractice standards</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In Adkins v. Children's Hospital, the Supreme Court struck down a minimum wage law for women workers in Washington D.C., ruling it unconstitutional under the due process clause of the Fifth Amendment. This decision reflected the conservative court's protection of business interests and freedom of contract, while limiting government power to regulate working conditions.</explanation>
+    </question>
+</quiz>

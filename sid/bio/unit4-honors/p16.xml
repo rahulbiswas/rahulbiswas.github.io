@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of mitochondrial shuttles?</text>
+        <option>To produce ATP</option>
+        <option>To transport NADH electrons into mitochondria</option>
+        <option>To break down glucose</option>
+        <option>To store energy</option>
+        <answer>To transport NADH electrons into mitochondria</answer>
+        <explanation>Mitochondrial shuttles transfer electrons from NADH produced in glycolysis across the mitochondrial membrane for use in the electron transport chain.</explanation>
+    </question>
+    <question>
+        <text>What is the malate-aspartate shuttle?</text>
+        <option>A protein transport system</option>
+        <option>A system for transferring electrons across mitochondrial membranes</option>
+        <option>A glucose transport system</option>
+        <option>An ATP production system</option>
+        <answer>A system for transferring electrons across mitochondrial membranes</answer>
+        <explanation>The malate-aspartate shuttle transfers electrons from cytosolic NADH into mitochondria by converting malate and aspartate back and forth.</explanation>
+    </question>
+    <question>
+        <text>Why can't NADH directly cross the mitochondrial membrane?</text>
+        <option>It's too small</option>
+        <option>The membrane is too thick</option>
+        <option>The membrane is impermeable to NADH</option>
+        <option>NADH is unstable</option>
+        <answer>The membrane is impermeable to NADH</answer>
+        <explanation>The inner mitochondrial membrane is impermeable to NADH, requiring shuttle systems to transfer its electrons into the mitochondria.</explanation>
+    </question>
+    <question>
+        <text>What is the glycerol-3-phosphate shuttle?</text>
+        <option>A glucose transport system</option>
+        <option>An alternative electron transport system</option>
+        <option>A protein transport system</option>
+        <option>An ATP production system</option>
+        <answer>An alternative electron transport system</answer>
+        <explanation>The glycerol-3-phosphate shuttle is an alternative system for transferring electrons from cytosolic NADH into mitochondria, though less efficient than the malate-aspartate shuttle.</explanation>
+    </question>
+    <question>
+        <text>Which shuttle is more energy efficient?</text>
+        <option>Glycerol-3-phosphate shuttle</option>
+        <option>Malate-aspartate shuttle</option>
+        <option>Both are equally efficient</option>
+        <option>Neither is efficient</option>
+        <answer>Malate-aspartate shuttle</answer>
+        <explanation>The malate-aspartate shuttle is more energy efficient because it delivers NADH electrons directly to NAD+ in the matrix, while the glycerol-3-phosphate shuttle delivers electrons to FAD.</explanation>
+    </question>
+</questions>

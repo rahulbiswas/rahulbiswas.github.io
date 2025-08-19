@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of glycogen phosphorylase?</text>
+        <option>To synthesize glycogen</option>
+        <option>To break down glycogen</option>
+        <option>To store glucose</option>
+        <option>To transport glucose</option>
+        <answer>To break down glycogen</answer>
+        <explanation>Glycogen phosphorylase catalyzes the breakdown of glycogen by removing glucose units one at a time, producing glucose-1-phosphate.</explanation>
+    </question>
+    <question>
+        <text>How is glycogen phosphorylase regulated?</text>
+        <option>Only by temperature</option>
+        <option>By hormones and metabolites</option>
+        <option>By light exposure</option>
+        <option>By cell size</option>
+        <answer>By hormones and metabolites</answer>
+        <explanation>Glycogen phosphorylase is regulated by hormones like glucagon and epinephrine, and by metabolites like AMP and glucose-6-phosphate.</explanation>
+    </question>
+    <question>
+        <text>What activates glycogen synthase?</text>
+        <option>Low glucose levels</option>
+        <option>Insulin and high glucose</option>
+        <option>Exercise</option>
+        <option>Fasting</option>
+        <answer>Insulin and high glucose</answer>
+        <explanation>Glycogen synthase is activated by insulin and high glucose levels, promoting the storage of excess glucose as glycogen.</explanation>
+    </question>
+    <question>
+        <text>Where is glycogen primarily stored?</text>
+        <option>Brain and heart</option>
+        <option>Liver and muscles</option>
+        <option>Kidneys and lungs</option>
+        <option>Skin and bones</option>
+        <answer>Liver and muscles</answer>
+        <explanation>Glycogen is primarily stored in the liver (for maintaining blood glucose) and muscles (for local energy use during exercise).</explanation>
+    </question>
+    <question>
+        <text>What is the branching enzyme's function?</text>
+        <option>To break glycogen</option>
+        <option>To add branch points to glycogen</option>
+        <option>To store glucose</option>
+        <option>To transport glycogen</option>
+        <answer>To add branch points to glycogen</answer>
+        <explanation>The branching enzyme creates branch points in glycogen by transferring short glucose chains to form α-1,6 linkages, increasing glycogen's solubility and accessibility.</explanation>
+    </question>
+</questions>

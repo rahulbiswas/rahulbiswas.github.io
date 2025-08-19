@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Modern liberalism in the 1920s was characterized by support for:</prompt>
+        <options>
+            <option letter="a">Laissez-faire economics</option>
+            <option letter="b">Civil liberties and social reform</option>
+            <option letter="c">Immigration restrictions</option>
+            <option letter="d">Religious fundamentalism</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Modern liberalism in the 1920s, though politically marginalized, emphasized civil liberties, social reform, and government regulation of business. Liberal thinkers and organizations like the ACLU advocated for free speech, workers' rights, and civil rights, while opposing the decade's conservative trends. This ideology laid groundwork for the New Deal liberalism that would emerge in the 1930s.</explanation>
+    </question>
+</quiz>

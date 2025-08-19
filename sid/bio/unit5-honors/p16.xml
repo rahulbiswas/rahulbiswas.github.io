@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of ADAR enzymes?</text>
+        <option>Repair DNA</option>
+        <option>Edit RNA sequences</option>
+        <option>Modify proteins</option>
+        <option>Replicate DNA</option>
+        <answer>Edit RNA sequences</answer>
+        <explanation>ADAR enzymes perform adenosine-to-inosine editing in RNA molecules, altering their sequence and function.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex removes H2A-H2B dimers?</text>
+        <option>FACT complex</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>FACT complex</answer>
+        <explanation>The FACT complex removes H2A-H2B dimers from nucleosomes to facilitate transcription through chromatin.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of Sir proteins?</text>
+        <option>Activate genes</option>
+        <option>Establish silencing</option>
+        <option>Repair DNA</option>
+        <option>Process RNA</option>
+        <answer>Establish silencing</answer>
+        <explanation>Silent Information Regulator (Sir) proteins establish and maintain transcriptionally silent chromatin regions.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme synthesizes RNA primers?</text>
+        <option>DNA polymerase</option>
+        <option>Primase</option>
+        <option>Helicase</option>
+        <option>Ligase</option>
+        <answer>Primase</answer>
+        <explanation>Primase synthesizes short RNA primers that are required for DNA replication to begin.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of RFC complex?</text>
+        <option>Repair DNA</option>
+        <option>Load sliding clamp</option>
+        <option>Transcribe genes</option>
+        <option>Process RNA</option>
+        <answer>Load sliding clamp</answer>
+        <explanation>The Replication Factor C (RFC) complex loads the sliding clamp onto DNA during replication.</explanation>
+    </question>
+</questions>

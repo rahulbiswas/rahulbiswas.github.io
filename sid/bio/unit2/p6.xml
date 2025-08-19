@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of clathrin in endocytosis?</text>
+        <option>Forms coated pits</option>
+        <option>Produces energy</option>
+        <option>Breaks down proteins</option>
+        <option>Synthesizes lipids</option>
+        <answer>Forms coated pits</answer>
+        <explanation>Clathrin proteins form a lattice-like coat that helps shape membrane invaginations into coated pits during endocytosis.</explanation>
+    </question>
+    <question>
+        <text>Which process involves cell "drinking"?</text>
+        <option>Pinocytosis</option>
+        <option>Phagocytosis</option>
+        <option>Exocytosis</option>
+        <option>Osmosis</option>
+        <answer>Pinocytosis</answer>
+        <explanation>Pinocytosis, or "cell drinking," is the uptake of extracellular fluid and dissolved substances in small vesicles.</explanation>
+    </question>
+    <question>
+        <text>What characterizes receptor-mediated endocytosis?</text>
+        <option>Specific binding</option>
+        <option>Random uptake</option>
+        <option>Bulk transport</option>
+        <option>Passive diffusion</option>
+        <answer>Specific binding</answer>
+        <explanation>Receptor-mediated endocytosis involves specific binding of molecules to membrane receptors before internalization.</explanation>
+    </question>
+    <question>
+        <text>Which protein is essential for vesicle fusion in exocytosis?</text>
+        <option>SNARE proteins</option>
+        <option>Actin</option>
+        <option>Tubulin</option>
+        <option>Keratin</option>
+        <answer>SNARE proteins</answer>
+        <explanation>SNARE proteins are crucial for facilitating the fusion of vesicles with the target membrane during exocytosis.</explanation>
+    </question>
+    <question>
+        <text>What is the role of pseudopods in cell transport?</text>
+        <option>Engulf particles</option>
+        <option>Pump ions</option>
+        <option>Generate energy</option>
+        <option>Synthesize proteins</option>
+        <answer>Engulf particles</answer>
+        <explanation>Pseudopods are cellular extensions that reach out to surround and engulf particles during phagocytosis.</explanation>
+    </question>
+</questions>

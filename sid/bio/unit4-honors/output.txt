@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Biology Unit 3 Review ✿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="unit unit-3-honors">
+        <h1>Cellular Energetics</h1>
+
+        <div class="key-concept">
+            <h2>Energy & Metabolism</h2>
+            <p>Understanding how cells capture, store, and use energy for life processes!</p>
+            <a href="quizzes/quiz.html" class="quiz-button">Take Unit Quiz ✿</a>
+        </div>
+
+        <div class="study-topics">
+            <h3>Main Topics:</h3>
+            <ul>
+                <li>Enzyme Structure & Function</li>
+                <li>Environmental Effects on Enzymes</li>
+                <li>Cellular Energy & ATP</li>
+                <li>Photosynthesis</li>
+                <li>Cellular Respiration</li>
+                <li>Metabolic Pathways</li>
+            </ul>
+        </div>
+
+        <div class="practice">
+            <h3>Practice Areas:</h3>
+            <ul>
+                <li>Energy Flow Diagrams</li>
+                <li>Metabolic Equations</li>
+                <li>Data Analysis</li>
+                <li>Scientific Modeling</li>
+            </ul>
+        </div>
+
+        <div class="study-tips">
+            <h3>Study Tips:</h3>
+            <ul>
+                <li>Review key vocabulary</li>
+                <li>Practice drawing diagrams</li>
+                <li>Connect concepts</li>
+                <li>Do practice problems</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

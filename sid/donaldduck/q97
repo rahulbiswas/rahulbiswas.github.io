@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What key idea did Keynes promote?</prompt>
+    <options>
+        <option letter="a">Government spending</option>
+        <option letter="b">Free markets</option>
+        <option letter="c">Gold standard</option>
+        <option letter="d">Balanced budgets</option>
+    </options>
+    <answer>a</answer>
+    <explanation>John Maynard Keynes argued that government spending could stimulate economic recovery during depressions.</explanation>
+</question>

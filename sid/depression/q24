@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Charles Lindbergh's 1927 solo flight across the Atlantic:</prompt>
+        <options>
+            <option letter="a">Led to increased government regulation of aviation</option>
+            <option letter="b">Sparked widespread public interest in aviation</option>
+            <option letter="c">Established the first commercial airline</option>
+            <option letter="d">Created new military air routes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Charles Lindbergh's successful solo flight from New York to Paris in 1927 captured the public imagination and symbolized the spirit of the "Roaring Twenties." His achievement sparked tremendous interest in aviation, led to growth in the commercial aviation industry, and made him an international celebrity. The flight exemplified the era's fascination with technological progress and individual achievement.</explanation>
+    </question>
+</quiz>

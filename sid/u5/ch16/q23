@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="89">
+        <prompt>What impact did the "Granger Laws" have on railroads?</prompt>
+        <options>
+            <option letter="a">Established state regulation of railroad rates</option>
+            <option letter="b">Increased railroad profits</option>
+            <option letter="c">Reduced rail service</option>
+            <option letter="d">Protected railroad interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Granger Laws established states' rights to regulate railroad rates and grain warehouse fees, marking the first significant government regulation of private business.</explanation>
+    </question>
+    <question number="90">
+        <prompt>How did the "padrone system" affect immigrant labor?</prompt>
+        <options>
+            <option letter="a">Exploited immigrants through labor contracting</option>
+            <option letter="b">Protected immigrant rights</option>
+            <option letter="c">Improved working conditions</option>
+            <option letter="d">Increased wages</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The padrone system exploited immigrant workers through labor contractors who controlled their employment, housing, and often kept them in debt bondage.</explanation>
+    </question>
+    <question number="91">
+        <prompt>What was the significance of the "sleeping car" in rail travel?</prompt>
+        <options>
+            <option letter="a">Created luxury travel while employing African Americans</option>
+            <option letter="b">Reduced travel costs</option>
+            <option letter="c">Increased train speed</option>
+            <option letter="d">Limited passenger service</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Pullman sleeping cars created luxury rail travel while employing African American porters, establishing both a new standard of travel and an important source of employment.</explanation>
+    </question>
+    <question number="92">
+        <prompt>How did the "dispatch system" change railroad operations?</prompt>
+        <options>
+            <option letter="a">Coordinated train movements and improved safety</option>
+            <option letter="b">Reduced operational efficiency</option>
+            <option letter="c">Increased accidents</option>
+            <option letter="d">Limited rail service</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The dispatch system coordinated train movements through telegraph communication, improving safety and efficiency in railroad operations.</explanation>
+    </question></quiz>

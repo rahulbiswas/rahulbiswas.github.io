@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What determines protein targeting to membranes?</text>
+        <option>Random movement</option>
+        <option>Signal sequences</option>
+        <option>Size only</option>
+        <option>Temperature</option>
+        <answer>Signal sequences</answer>
+        <explanation>Specific signal sequences in proteins direct their targeting to appropriate cellular membranes.</explanation>
+    </question>
+    <question>
+        <text>How do cells respond to membrane damage?</text>
+        <option>No response</option>
+        <option>Membrane repair mechanisms</option>
+        <option>Cell death only</option>
+        <option>Growth increase</option>
+        <answer>Membrane repair mechanisms</answer>
+        <explanation>Cells have specific mechanisms to detect and repair membrane damage to maintain cellular integrity.</explanation>
+    </question>
+    <question>
+        <text>What role do sphingolipids play in membranes?</text>
+        <option>Energy storage only</option>
+        <option>Structural and signaling functions</option>
+        <option>Protein synthesis</option>
+        <option>Ion transport</option>
+        <answer>Structural and signaling functions</answer>
+        <explanation>Sphingolipids provide membrane structure and act as signaling molecules in cellular processes.</explanation>
+    </question>
+    <question>
+        <text>How do membrane proteins interact with cytoskeleton?</text>
+        <option>They don't interact</option>
+        <option>Through specific binding domains</option>
+        <option>Random contacts</option>
+        <option>Through temperature changes</option>
+        <answer>Through specific binding domains</answer>
+        <explanation>Membrane proteins contain specific domains that interact with cytoskeletal elements for structural support and organization.</explanation>
+    </question>
+    <question>
+        <text>What affects membrane protein clustering?</text>
+        <option>Temperature only</option>
+        <option>Multiple factors including protein-protein interactions</option>
+        <option>pH only</option>
+        <option>Random movement</option>
+        <answer>Multiple factors including protein-protein interactions</answer>
+        <explanation>Membrane protein clustering is affected by protein-protein interactions, lipid composition, and cellular signaling.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The case of Bhagat Singh Thind (1923) was significant because it:</prompt>
+        <options>
+            <option letter="a">Granted citizenship rights to all Asian immigrants</option>
+            <option letter="b">Ruled that Indian Sikhs were not "white" for citizenship</option>
+            <option letter="c">Established affirmative action policies</option>
+            <option letter="d">Guaranteed religious freedom for immigrants</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In United States v. Bhagat Singh Thind, the Supreme Court ruled that although Indians were technically classified as Caucasian, they were not "white" in the common understanding and therefore ineligible for naturalized citizenship. This decision reflected the racial prejudices of the era and further restricted Asian immigration and citizenship rights.</explanation>
+    </question>
+</quiz>

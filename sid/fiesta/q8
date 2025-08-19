@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the CPI in 2020 is 200 and in 2021 is 208, what is the inflation rate between these years?</prompt>
+        <options>
+            <option letter="a">8%</option>
+            <option letter="b">4%</option>
+            <option letter="c">0.4%</option>
+            <option letter="d">0.08%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The inflation rate is calculated as (208-200)/200 × 100 = 4%. This represents the percentage increase in the price level between the two years.</explanation>
+    </question>
+
+    <question>
+        <prompt>What is considered a problem with using the unemployment rate as an economic indicator?</prompt>
+        <options>
+            <option letter="a">It counts part-time workers as fully employed</option>
+            <option letter="b">It includes discouraged workers who have stopped looking for work</option>
+            <option letter="c">It only measures urban unemployment</option>
+            <option letter="d">It overestimates the number of unemployed people</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The unemployment rate counts part-time workers as fully employed even if they want full-time work, and it doesn't account for discouraged workers who have stopped looking for work.</explanation>
+    </question>
+
+    <question>
+        <prompt>During which phase of the business cycle is GDP growing but still below potential GDP?</prompt>
+        <options>
+            <option letter="a">Peak</option>
+            <option letter="b">Recession</option>
+            <option letter="c">Recovery</option>
+            <option letter="d">Trough</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During the recovery (expansion) phase, GDP is growing positively but may still be below potential GDP until full recovery is achieved. This period follows a trough and continues until reaching peak.</explanation>
+    </question>
+
+    <question>
+        <prompt>If nominal GDP is $20 trillion and real GDP is $16 trillion, what is the GDP deflator?</prompt>
+        <options>
+            <option letter="a">80</option>
+            <option letter="b">125</option>
+            <option letter="c">25</option>
+            <option letter="d">1.25</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The GDP deflator is calculated as (Nominal GDP/Real GDP) × 100 = ($20 trillion/$16 trillion) × 100 = 125. This indicates that the price level has increased 25% since the base year.</explanation>
+    </question>
+</quiz>

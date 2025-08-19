@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The term "flappers" represented changing social values through:</prompt>
+        <options>
+            <option letter="a">Political activism</option>
+            <option letter="b">New fashion, behavior, and attitudes</option>
+            <option letter="c">Religious devotion</option>
+            <option letter="d">Economic reforms</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Flappers symbolized changing social values in the 1920s through their distinctive fashion (short skirts, bobbed hair), behavior (smoking, drinking, dancing), and attitudes toward traditional moral standards. These young women challenged conventional gender roles and social expectations, representing broader cultural changes of the era including greater freedom for women, changing sexual mores, and generational conflict.</explanation>
+    </question>
+</quiz>

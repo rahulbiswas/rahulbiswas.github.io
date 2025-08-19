@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of Dicer?</text>
+        <option>Repair DNA</option>
+        <option>Process pre-miRNAs</option>
+        <option>Synthesize proteins</option>
+        <option>Modify histones</option>
+        <answer>Process pre-miRNAs</answer>
+        <explanation>Dicer cleaves precursor microRNAs into mature microRNAs in the cytoplasm during miRNA biogenesis.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex deposits H3K27me3?</text>
+        <option>FACT complex</option>
+        <option>PRC2</option>
+        <option>Ribosome</option>
+        <option>Proteasome</option>
+        <answer>PRC2</answer>
+        <explanation>The Polycomb Repressive Complex 2 (PRC2) adds the repressive H3K27me3 modification to histones.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of RRP6?</text>
+        <option>Repair DNA</option>
+        <option>Degrade RNA</option>
+        <option>Modify proteins</option>
+        <option>Synthesize DNA</option>
+        <answer>Degrade RNA</answer>
+        <explanation>RRP6 is an exosome component that degrades RNA during RNA processing and quality control.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein recognizes H3K4me3?</text>
+        <option>TAF3</option>
+        <option>DNA ligase</option>
+        <option>RNA polymerase</option>
+        <option>Helicase</option>
+        <answer>TAF3</answer>
+        <explanation>TAF3, a TFIID subunit, specifically recognizes H3K4me3 marks at active promoters.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of SETD2?</text>
+        <option>Process RNA</option>
+        <option>Methylate H3K36</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Methylate H3K36</answer>
+        <explanation>SETD2 is a histone methyltransferase that specifically adds methyl groups to histone H3 at lysine 36.</explanation>
+    </question>
+</questions>
