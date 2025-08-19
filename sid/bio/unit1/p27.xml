@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of ATP in active transport?</text>
+        <option>No role</option>
+        <option>Energy source</option>
+        <option>Structural support</option>
+        <option>Temperature control</option>
+        <answer>Energy source</answer>
+        <explanation>ATP provides the energy needed for active transport proteins to move molecules against their concentration gradients.</explanation>
+    </question>
+    <question>
+        <text>How do symporters function?</text>
+        <option>Transport one molecule</option>
+        <option>Transport molecules in opposite directions</option>
+        <option>Transport molecules in same direction</option>
+        <option>Block transport</option>
+        <answer>Transport molecules in same direction</answer>
+        <explanation>Symporters transport two different molecules across a membrane in the same direction simultaneously.</explanation>
+    </question>
+    <question>
+        <text>What determines ion selectivity in channels?</text>
+        <option>Only size</option>
+        <option>Only charge</option>
+        <option>Selectivity filter properties</option>
+        <option>Random selection</option>
+        <answer>Selectivity filter properties</answer>
+        <explanation>Ion channels use specific selectivity filters that discriminate ions based on size, charge, and hydration properties.</explanation>
+    </question>
+    <question>
+        <text>How do antiporters differ from symporters?</text>
+        <option>They use more energy</option>
+        <option>They transport in opposite directions</option>
+        <option>They transport only one molecule</option>
+        <option>They don't use energy</option>
+        <answer>They transport in opposite directions</answer>
+        <explanation>Antiporters transport two different molecules across a membrane in opposite directions simultaneously.</explanation>
+    </question>
+    <question>
+        <text>What affects membrane protein diffusion?</text>
+        <option>Only temperature</option>
+        <option>Only protein size</option>
+        <option>Multiple factors including membrane composition</option>
+        <option>Only pH</option>
+        <answer>Multiple factors including membrane composition</answer>
+        <explanation>Membrane protein diffusion is affected by temperature, protein size, membrane composition, and cytoskeletal interactions.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What occurs during the elongation phase of translation?</text>
+        <option>RNA splicing</option>
+        <option>DNA unwinding</option>
+        <option>Amino acid chain growth</option>
+        <option>Transcription initiation</option>
+        <answer>Amino acid chain growth</answer>
+        <explanation>During translation elongation, amino acids are added one by one to the growing polypeptide chain as codons are read from the mRNA.</explanation>
+    </question>
+    
+    <question>
+        <text>Which molecule is responsible for DNA replication proofreading?</text>
+        <option>DNA ligase</option>
+        <option>DNA polymerase</option>
+        <option>Helicase</option>
+        <option>Primase</option>
+        <answer>DNA polymerase</answer>
+        <explanation>DNA polymerase has 3'-5' exonuclease activity that allows it to check and correct nucleotide insertion errors during replication.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of chromatin remodeling in gene expression?</text>
+        <option>Adds amino acids to proteins</option>
+        <option>Controls DNA accessibility</option>
+        <option>Joins DNA fragments</option>
+        <option>Processes RNA</option>
+        <answer>Controls DNA accessibility</answer>
+        <explanation>Chromatin remodeling alters DNA packaging to control access to genes, affecting whether they can be transcribed.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process is involved in post-translational modification?</text>
+        <option>Adding introns</option>
+        <option>DNA methylation</option>
+        <option>Protein phosphorylation</option>
+        <option>RNA splicing</option>
+        <answer>Protein phosphorylation</answer>
+        <explanation>Protein phosphorylation is a common post-translational modification that can alter protein function after synthesis.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of a promoter sequence?</text>
+        <option>Ends transcription</option>
+        <option>Initiates translation</option>
+        <option>Binds RNA polymerase</option>
+        <option>Removes introns</option>
+        <answer>Binds RNA polymerase</answer>
+        <explanation>Promoter sequences are DNA regions where RNA polymerase binds to initiate transcription of a gene.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of peroxisomes?</text>
+        <option>Oxidative reactions</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>Lipid storage</option>
+        <answer>Oxidative reactions</answer>
+        <explanation>Peroxisomes contain enzymes that carry out oxidative reactions, particularly breaking down fatty acids and toxic substances.</explanation>
+    </question>
+    <question>
+        <text>Which enzyme is characteristic of peroxisomes?</text>
+        <option>Catalase</option>
+        <option>DNA polymerase</option>
+        <option>ATP synthase</option>
+        <option>Amylase</option>
+        <answer>Catalase</answer>
+        <explanation>Catalase, which breaks down hydrogen peroxide, is a characteristic enzyme of peroxisomes.</explanation>
+    </question>
+    <question>
+        <text>How are proteins targeted to peroxisomes?</text>
+        <option>PTS signals</option>
+        <option>Random diffusion</option>
+        <option>Membrane fusion</option>
+        <option>Active transport</option>
+        <answer>PTS signals</answer>
+        <explanation>Peroxisomal Targeting Signals (PTS) direct proteins to peroxisomes during their synthesis.</explanation>
+    </question>
+    <question>
+        <text>What is produced during peroxisomal fatty acid oxidation?</text>
+        <option>Hydrogen peroxide</option>
+        <option>ATP</option>
+        <option>Glucose</option>
+        <option>Proteins</option>
+        <answer>Hydrogen peroxide</answer>
+        <explanation>Fatty acid oxidation in peroxisomes produces hydrogen peroxide as a byproduct.</explanation>
+    </question>
+    <question>
+        <text>How do peroxisomes multiply?</text>
+        <option>Division of existing peroxisomes</option>
+        <option>Spontaneous formation</option>
+        <option>Budding from ER</option>
+        <option>Fusion of vesicles</option>
+        <answer>Division of existing peroxisomes</answer>
+        <explanation>Peroxisomes multiply by growing and dividing from existing peroxisomes.</explanation>
+    </question>
+</questions>

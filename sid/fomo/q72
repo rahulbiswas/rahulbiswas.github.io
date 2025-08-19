@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the economy has an MPC of 0.8 and the government increases both spending and taxes by $300 billion, what is the net change in GDP?</prompt>
+        <options>
+            <option letter="a">$0 billion (they cancel out)</option>
+            <option letter="b">$300 billion</option>
+            <option letter="c">$600 billion</option>
+            <option letter="d">$1200 billion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>This is the balanced budget multiplier. When G and T both increase by the same amount, the net multiplier is 1, regardless of the MPC. The spending increase multiplier (5) times $300B minus the tax increase multiplier (-4) times $300B equals a net change of $300B in GDP.</explanation>
+    </question>
+</quiz>

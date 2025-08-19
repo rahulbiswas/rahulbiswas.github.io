@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which of the following best describes hydrogen bonding?</text>
+        <option>A bond between two hydrogen atoms</option>
+        <option>A weak intermolecular force between H and electronegative atoms</option>
+        <option>A type of covalent bond</option>
+        <option>An ionic interaction</option>
+        <answer>A weak intermolecular force between H and electronegative atoms</answer>
+        <explanation>Hydrogen bonds form between a hydrogen atom bonded to an electronegative atom (like N, O, or F) and another electronegative atom.</explanation>
+    </question>
+    <question>
+        <text>What is the normal pH range of human blood?</text>
+        <option>6.8-7.0</option>
+        <option>7.35-7.45</option>
+        <option>7.5-8.0</option>
+        <option>8.0-8.5</option>
+        <answer>7.35-7.45</answer>
+        <explanation>Blood pH is tightly regulated between 7.35-7.45. Values outside this range can be dangerous or fatal.</explanation>
+    </question>
+    <question>
+        <text>Which property of water is responsible for its ability to moderate temperature?</text>
+        <option>High surface tension</option>
+        <option>High specific heat capacity</option>
+        <option>Low density when frozen</option>
+        <option>Cohesion</option>
+        <answer>High specific heat capacity</answer>
+        <explanation>Water's high specific heat capacity allows it to absorb or release large amounts of heat with minimal temperature change.</explanation>
+    </question>
+    <question>
+        <text>What type of bond forms the backbone of DNA?</text>
+        <option>Hydrogen bond</option>
+        <option>Ionic bond</option>
+        <option>Phosphodiester bond</option>
+        <option>Glycosidic bond</option>
+        <answer>Phosphodiester bond</answer>
+        <explanation>Phosphodiester bonds connect the sugar-phosphate backbone of DNA, while hydrogen bonds hold the base pairs together.</explanation>
+    </question>
+    <question>
+        <text>Which statement about water's polarity is correct?</text>
+        <option>Water molecules are nonpolar</option>
+        <option>Water has an even distribution of charge</option>
+        <option>Water has a bent shape with partial charges</option>
+        <option>Water molecules are linear</option>
+        <answer>Water has a bent shape with partial charges</answer>
+        <explanation>Water's bent shape and uneven electron distribution creates partial negative charge on oxygen and partial positive charges on hydrogens.</explanation>
+    </question>
+</questions>

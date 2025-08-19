@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of proteasomes?</text>
+        <option>To synthesize proteins</option>
+        <option>To degrade ubiquitinated proteins</option>
+        <option>To store proteins</option>
+        <option>To transport proteins</option>
+        <answer>To degrade ubiquitinated proteins</answer>
+        <explanation>Proteasomes are protein complexes that degrade ubiquitinated proteins in an ATP-dependent manner, helping maintain cellular protein quality control.</explanation>
+    </question>
+    <question>
+        <text>How do cells respond to amino acid starvation?</text>
+        <option>By increasing protein synthesis</option>
+        <option>By activating protein breakdown</option>
+        <option>By storing more proteins</option>
+        <option>By ignoring the shortage</option>
+        <answer>By activating protein breakdown</answer>
+        <explanation>During amino acid starvation, cells activate protein breakdown through autophagy and the ubiquitin-proteasome system to recycle amino acids.</explanation>
+    </question>
+    <question>
+        <text>What is the mTOR pathway's role in protein metabolism?</text>
+        <option>To break down proteins</option>
+        <option>To regulate protein synthesis</option>
+        <option>To transport amino acids</option>
+        <option>To store proteins</option>
+        <answer>To regulate protein synthesis</answer>
+        <explanation>The mTOR pathway integrates nutrient and growth factor signals to regulate protein synthesis, cell growth, and metabolism.</explanation>
+    </question>
+    <question>
+        <text>What activates protein synthesis?</text>
+        <option>Starvation</option>
+        <option>Growth factors and nutrients</option>
+        <option>Sleep</option>
+        <option>Dehydration</option>
+        <answer>Growth factors and nutrients</answer>
+        <explanation>Growth factors and adequate nutrient availability activate protein synthesis through signaling pathways like mTOR and other regulatory mechanisms.</explanation>
+    </question>
+    <question>
+        <text>How do amino acid pools maintain homeostasis?</text>
+        <option>Through random processes</option>
+        <option>Through balanced synthesis and degradation</option>
+        <option>Through storage only</option>
+        <option>Through excretion only</option>
+        <answer>Through balanced synthesis and degradation</answer>
+        <explanation>Amino acid pools maintain homeostasis through coordinated regulation of protein synthesis, degradation, and amino acid metabolism based on cellular needs.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Course Units ✿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Biology Course Units</h1>
+        
+        <div class="unit-links">
+            <div class="unit-card">
+                <h2>Unit 1: Introduction to Biology</h2>
+                <a href="unit1/unit1.html">View Unit Materials</a>
+            </div>
+
+            <div class="unit-card">
+                <h2>Unit 2: Cell Biology</h2>
+                <a href="unit2/unit2.html">View Unit Materials</a>
+            </div>
+
+            <div class="unit-card">
+                <h2>Unit 3: Cellular Energetics</h2>
+                <a href="unit3/unit3.html">View Unit Materials</a>
+            </div>
+
+            <div class="unit-card">
+                <h2>Unit 4: Cell Communication</h2>
+                <a href="unit4/unit4.html">View Unit Materials</a>
+            </div>
+
+            <div class="unit-card active">
+                <h2>Unit 5: Molecular Genetics</h2>
+                <a href="unit5/unit5.html">View Unit Materials</a>
+                <a href="unit5/quiz.html" class="quiz-link">Take Unit Quiz</a>
+            </div>
+
+            <div class="unit-card">
+                <h2>Unit 6: Evolution</h2>
+                <a href="unit6/unit6.html">View Unit Materials</a>
+            </div>
+        </div>
+
+        <div class="resources">
+            <h2>Course Resources</h2>
+            <ul>
+                <li><a href="syllabus.html">Course Syllabus</a></li>
+                <li><a href="schedule.html">Class Schedule</a></li>
+                <li><a href="materials.html">Required Materials</a></li>
+                <li><a href="contact.html">Contact Instructor</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

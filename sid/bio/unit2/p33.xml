@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What enables selective permeability in membranes?</text>
+        <option>Transport proteins</option>
+        <option>Random movement</option>
+        <option>Constant flow</option>
+        <option>Equal distribution</option>
+        <answer>Transport proteins</answer>
+        <explanation>Transport proteins allow specific molecules to cross membranes while blocking others.</explanation>
+    </question>
+    <question>
+        <text>How do small nonpolar molecules cross membranes?</text>
+        <option>Simple diffusion</option>
+        <option>Active transport</option>
+        <option>Facilitated diffusion</option>
+        <option>Bulk transport</option>
+        <answer>Simple diffusion</answer>
+        <explanation>Small nonpolar molecules can pass directly through the phospholipid bilayer by simple diffusion.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane permeability?</text>
+        <option>Molecule characteristics</option>
+        <option>Cell size</option>
+        <option>Temperature only</option>
+        <option>pH only</option>
+        <answer>Molecule characteristics</answer>
+        <explanation>Size, charge, and polarity of molecules determine their ability to cross membranes.</explanation>
+    </question>
+    <question>
+        <text>Which process requires no energy?</text>
+        <option>Passive transport</option>
+        <option>Active transport</option>
+        <option>Endocytosis</option>
+        <option>Exocytosis</option>
+        <answer>Passive transport</answer>
+        <explanation>Passive transport moves molecules down their concentration gradient without energy input.</explanation>
+    </question>
+    <question>
+        <text>What affects membrane fluidity?</text>
+        <option>Temperature changes</option>
+        <option>Protein content only</option>
+        <option>Water content only</option>
+        <option>Ion concentration only</option>
+        <answer>Temperature changes</answer>
+        <explanation>Temperature changes affect phospholipid movement and thus membrane fluidity.</explanation>
+    </question>
+</questions>

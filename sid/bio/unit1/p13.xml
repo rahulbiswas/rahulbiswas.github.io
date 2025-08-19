@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which enzyme structure model better explains substrate specificity?</text>
+        <option>Lock and key</option>
+        <option>Induced fit</option>
+        <option>Allosteric model</option>
+        <option>Competitive model</option>
+        <answer>Induced fit</answer>
+        <explanation>The induced fit model explains how enzymes change shape to better fit their substrates, accounting for flexibility in enzyme-substrate interactions.</explanation>
+    </question>
+    <question>
+        <text>What is the role of the active site in enzymes?</text>
+        <option>Structural support only</option>
+        <option>Substrate binding and catalysis</option>
+        <option>Energy storage</option>
+        <option>Protein synthesis</option>
+        <answer>Substrate binding and catalysis</answer>
+        <explanation>The active site is where substrate binding occurs and chemical reactions are catalyzed through specific amino acid arrangements.</explanation>
+    </question>
+    <question>
+        <text>How do cofactors differ from coenzymes?</text>
+        <option>Cofactors are organic, coenzymes are inorganic</option>
+        <option>Cofactors are inorganic, coenzymes are organic</option>
+        <option>They are the same thing</option>
+        <option>Neither affects enzyme function</option>
+        <answer>Cofactors are inorganic, coenzymes are organic</answer>
+        <explanation>Cofactors are typically inorganic ions like zinc or iron, while coenzymes are organic molecules often derived from vitamins.</explanation>
+    </question>
+    <question>
+        <text>What is the function of allosteric sites?</text>
+        <option>Substrate binding</option>
+        <option>Enzyme regulation</option>
+        <option>Protein synthesis</option>
+        <option>Energy storage</option>
+        <answer>Enzyme regulation</answer>
+        <explanation>Allosteric sites bind regulatory molecules that can alter enzyme activity by changing the enzyme's shape.</explanation>
+    </question>
+    <question>
+        <text>Which statement about enzyme specificity is correct?</text>
+        <option>All enzymes can catalyze multiple reactions</option>
+        <option>Enzymes have no specificity</option>
+        <option>Enzymes are highly specific for their substrates</option>
+        <option>Specificity depends on temperature only</option>
+        <answer>Enzymes are highly specific for their substrates</answer>
+        <explanation>Enzymes show high specificity for their substrates due to their unique active site structure and chemical properties.</explanation>
+    </question>
+</questions>

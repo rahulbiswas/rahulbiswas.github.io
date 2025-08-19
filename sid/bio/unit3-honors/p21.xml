@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How does the mitochondrial electron transport chain create reactive oxygen species?</text>
+        <option>Through normal water splitting</option>
+        <option>Through electron leakage to oxygen</option>
+        <option>Through ATP synthesis</option>
+        <option>Through glucose breakdown</option>
+        <answer>Through electron leakage to oxygen</answer>
+        <explanation>Electrons can occasionally leak from the electron transport chain directly to oxygen, forming superoxide radicals. This electron leakage, particularly at complexes I and III, is a major source of cellular reactive oxygen species.</explanation>
+    </question>
+    <question>
+        <text>What role do mitochondrial quality control systems serve?</text>
+        <option>They increase ROS production</option>
+        <option>They remove damaged mitochondria</option>
+        <option>They produce more glucose</option>
+        <option>They increase membrane leakage</option>
+        <answer>They remove damaged mitochondria</answer>
+        <explanation>Mitochondrial quality control systems, including mitophagy and protein degradation pathways, remove damaged mitochondrial components and entire damaged mitochondria to maintain cellular energy efficiency and prevent oxidative damage.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate mitochondrial fusion and fission?</text>
+        <option>They don't control these processes</option>
+        <option>Through specific proteins and cellular signals</option>
+        <option>Only during cell division</option>
+        <option>By changing temperature</option>
+        <answer>Through specific proteins and cellular signals</answer>
+        <explanation>Cells regulate mitochondrial fusion and fission through specialized proteins like dynamins and cellular signals responding to energy status, stress, and developmental cues to maintain optimal mitochondrial function.</explanation>
+    </question>
+    <question>
+        <text>What happens during mitochondrial stress response?</text>
+        <option>Cells immediately die</option>
+        <option>Multiple adaptive pathways activate</option>
+        <option>Metabolism completely stops</option>
+        <option>Nothing changes</option>
+        <answer>Multiple adaptive pathways activate</answer>
+        <explanation>Mitochondrial stress triggers multiple adaptive responses including increased expression of protective proteins, activation of quality control systems, and metabolic adjustments to maintain cellular energy balance.</explanation>
+    </question>
+    <question>
+        <text>How do mitochondria communicate with the nucleus?</text>
+        <option>They don't communicate</option>
+        <option>Through retrograde signaling pathways</option>
+        <option>Only through proteins</option>
+        <option>By physical contact</option>
+        <answer>Through retrograde signaling pathways</answer>
+        <explanation>Mitochondria communicate with the nucleus through retrograde signaling pathways, using molecules like calcium, reactive oxygen species, and metabolites to influence nuclear gene expression and cellular responses.</explanation>
+    </question>
+</quiz>

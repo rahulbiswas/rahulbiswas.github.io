@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of RFC complex?</text>
+        <option>Repair DNA</option>
+        <option>Load PCNA</option>
+        <option>Process RNA</option>
+        <option>Modify histones</option>
+        <answer>Load PCNA</answer>
+        <explanation>The RFC (Replication Factor C) complex loads the PCNA sliding clamp onto DNA during replication.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein removes H2A.Z?</text>
+        <option>INO80</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>INO80</answer>
+        <explanation>The INO80 chromatin remodeling complex can remove H2A.Z variant histones from nucleosomes.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of XIST RNA?</text>
+        <option>Repair DNA</option>
+        <option>X chromosome inactivation</option>
+        <option>Process RNA</option>
+        <option>Modify histones</option>
+        <answer>X chromosome inactivation</answer>
+        <explanation>XIST is a long non-coding RNA that initiates and spreads X chromosome inactivation in female cells.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme cleaves R-loops?</text>
+        <option>RNase H1</option>
+        <option>DNase</option>
+        <option>Topoisomerase</option>
+        <option>Helicase</option>
+        <answer>RNase H1</answer>
+        <explanation>RNase H1 specifically degrades the RNA strand in RNA-DNA hybrids known as R-loops.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of MSL complex?</text>
+        <option>Process RNA</option>
+        <option>Dosage compensation</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Dosage compensation</answer>
+        <explanation>The MSL (Male-Specific Lethal) complex regulates dosage compensation by modifying chromatin on the X chromosome.</explanation>
+    </question>
+</questions>

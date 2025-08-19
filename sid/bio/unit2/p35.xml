@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What characterizes membrane asymmetry?</text>
+        <option>Different lipid distribution</option>
+        <option>Equal protein content</option>
+        <option>Uniform structure</option>
+        <option>Random organization</option>
+        <answer>Different lipid distribution</answer>
+        <explanation>Membrane asymmetry results from different lipid compositions between the inner and outer leaflets.</explanation>
+    </question>
+    <question>
+        <text>Where are glycolipids located?</text>
+        <option>Outer leaflet</option>
+        <option>Inner leaflet</option>
+        <option>Both leaflets equally</option>
+        <option>Random distribution</option>
+        <answer>Outer leaflet</answer>
+        <explanation>Glycolipids are found exclusively in the outer leaflet of the plasma membrane.</explanation>
+    </question>
+    <question>
+        <text>What maintains membrane asymmetry?</text>
+        <option>Flippase enzymes</option>
+        <option>Passive diffusion</option>
+        <option>Osmotic pressure</option>
+        <option>Temperature changes</option>
+        <answer>Flippase enzymes</answer>
+        <explanation>Flippase enzymes actively maintain lipid asymmetry by moving specific lipids between membrane leaflets.</explanation>
+    </question>
+    <question>
+        <text>Which lipid signals apoptosis?</text>
+        <option>Phosphatidylserine exposure</option>
+        <option>Cholesterol synthesis</option>
+        <option>Glycolipid production</option>
+        <option>Sphingolipid formation</option>
+        <answer>Phosphatidylserine exposure</answer>
+        <explanation>Exposure of phosphatidylserine on the outer leaflet signals cells for apoptotic removal.</explanation>
+    </question>
+    <question>
+        <text>What forms lipid rafts?</text>
+        <option>Cholesterol and sphingolipids</option>
+        <option>Phospholipids only</option>
+        <option>Proteins only</option>
+        <option>Carbohydrates only</option>
+        <answer>Cholesterol and sphingolipids</answer>
+        <explanation>Lipid rafts are membrane domains enriched in cholesterol and sphingolipids.</explanation>
+    </question>
+</questions>

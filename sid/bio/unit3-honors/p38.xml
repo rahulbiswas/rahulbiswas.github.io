@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do metabolic pathways adapt during seed germination?</text>
+        <option>They remain dormant</option>
+        <option>They activate sequentially to support growth</option>
+        <option>They only use photosynthesis</option>
+        <option>They reduce all activity</option>
+        <answer>They activate sequentially to support growth</answer>
+        <explanation>During seed germination, metabolic pathways activate in a coordinated sequence, starting with stored energy mobilization and gradually transitioning to active growth and photosynthesis.</explanation>
+    </question>
+    <question>
+        <text>What role do storage compounds play in early seedling growth?</text>
+        <option>They are not used</option>
+        <option>They provide energy before photosynthesis begins</option>
+        <option>They only provide structure</option>
+        <option>They inhibit growth</option>
+        <answer>They provide energy before photosynthesis begins</answer>
+        <explanation>Storage compounds like lipids and proteins provide essential energy and building blocks for early seedling growth before the development of photosynthetic capacity.</explanation>
+    </question>
+    <question>
+        <text>How does energy metabolism shift during leaf development?</text>
+        <option>It stays constant</option>
+        <option>It transitions from heterotrophic to autotrophic</option>
+        <option>It only uses respiration</option>
+        <option>It decreases over time</option>
+        <answer>It transitions from heterotrophic to autotrophic</answer>
+        <explanation>Leaf energy metabolism shifts from depending on stored energy (heterotrophic) to producing its own energy through photosynthesis (autotrophic) as chloroplasts develop and mature.</explanation>
+    </question>
+    <question>
+        <text>What metabolic changes occur during flower development?</text>
+        <option>No changes occur</option>
+        <option>Energy allocation shifts to reproductive structures</option>
+        <option>Metabolism stops</option>
+        <option>Only respiration changes</option>
+        <answer>Energy allocation shifts to reproductive structures</answer>
+        <explanation>During flower development, metabolic resources and energy are redirected to support reproductive structure formation, often involving specialized pathways for pigment and volatile compound production.</explanation>
+    </question>
+    <question>
+        <text>How do plants regulate energy use during fruit development?</text>
+        <option>Energy use stops</option>
+        <option>They coordinate source-sink relationships</option>
+        <option>Only leaves provide energy</option>
+        <option>Energy use is random</option>
+        <answer>They coordinate source-sink relationships</answer>
+        <explanation>Plants carefully regulate energy distribution during fruit development through coordinated source-sink relationships, balancing photosynthate production with the energy demands of developing fruits.</explanation>
+    </question>
+</quiz>

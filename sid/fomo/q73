@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If velocity (V) is 4, nominal GDP (PY) is $20 trillion, what is the money supply (M)?</prompt>
+        <options>
+            <option letter="a">$80 trillion</option>
+            <option letter="b">$5 trillion</option>
+            <option letter="c">$16 trillion</option>
+            <option letter="d">$24 trillion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Using the equation of exchange MV = PY, we can solve for M: M = PY/V. With PY = $20 trillion and V = 4, M = $20 trillion/4 = $5 trillion. This represents the money supply needed to support this level of nominal GDP at this velocity.</explanation>
+    </question>
+</quiz>

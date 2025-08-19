@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the equation of exchange (MV = PY), if M increases by 5% and V remains constant, what happens to nominal GDP (PY)?</prompt>
+        <options>
+            <option letter="a">Decreases by 5%</option>
+            <option letter="b">Increases by 5%</option>
+            <option letter="c">Remains unchanged</option>
+            <option letter="d">Cannot be determined without more information</option>
+        </options>
+        <answer>b</answer>
+        <explanation>According to the equation of exchange, if M increases by 5% and V is constant, then PY (nominal GDP) must increase by 5% to maintain the equation's equality.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which policy would most effectively reduce a trade deficit?</prompt>
+        <options>
+            <option letter="a">Increasing government spending</option>
+            <option letter="b">Decreasing domestic saving</option>
+            <option letter="c">Increasing domestic saving</option>
+            <option letter="d">Decreasing interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Increasing domestic saving reduces domestic consumption, including consumption of imports, and provides more funds for investment, helping to reduce the trade deficit.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which factor would NOT shift the short-run Phillips Curve?</prompt>
+        <options>
+            <option letter="a">Changes in expected inflation</option>
+            <option letter="b">Supply shocks</option>
+            <option letter="c">Changes in the actual unemployment rate</option>
+            <option letter="d">Changes in worker productivity</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Changes in the actual unemployment rate represent movement along the Phillips Curve, not a shift. The other factors would cause the curve to shift.</explanation>
+    </question>
+
+    <question>
+        <prompt>Real interest rates will rise when:</prompt>
+        <options>
+            <option letter="a">Nominal interest rates fall faster than inflation</option>
+            <option letter="b">Nominal interest rates rise faster than inflation</option>
+            <option letter="c">Inflation rises faster than nominal interest rates</option>
+            <option letter="d">Both inflation and nominal rates remain constant</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real interest rates increase when nominal interest rates increase by more than the inflation rate, as the real rate is the nominal rate minus inflation.</explanation>
+    </question>
+</quiz>

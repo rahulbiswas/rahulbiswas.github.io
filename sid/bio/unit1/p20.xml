@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What distinguishes reversible from irreversible enzyme inhibition?</text>
+        <option>Duration of effect</option>
+        <option>Type of binding</option>
+        <option>Inhibitor concentration</option>
+        <option>Enzyme type</option>
+        <answer>Type of binding</answer>
+        <explanation>Reversible inhibition involves non-covalent binding that can dissociate, while irreversible inhibition involves permanent covalent modification.</explanation>
+    </question>
+    <question>
+        <text>How do suicide inhibitors work?</text>
+        <option>By competing with substrate</option>
+        <option>By changing enzyme shape</option>
+        <option>By being converted to reactive forms</option>
+        <option>By blocking cofactor binding</option>
+        <answer>By being converted to reactive forms</answer>
+        <explanation>Suicide inhibitors are converted by the enzyme into reactive forms that permanently bind to and inactivate the enzyme.</explanation>
+    </question>
+    <question>
+        <text>What is the primary role of coenzymes?</text>
+        <option>Structural support</option>
+        <option>Transfer of chemical groups</option>
+        <option>Protein synthesis</option>
+        <option>Energy storage</option>
+        <answer>Transfer of chemical groups</answer>
+        <explanation>Coenzymes assist in catalysis by transferring specific chemical groups or electrons during enzymatic reactions.</explanation>
+    </question>
+    <question>
+        <text>Which best describes enzyme promiscuity?</text>
+        <option>Random activity</option>
+        <option>Ability to catalyze multiple reactions</option>
+        <option>Loss of function</option>
+        <option>Increased specificity</option>
+        <answer>Ability to catalyze multiple reactions</answer>
+        <explanation>Enzyme promiscuity refers to the ability of an enzyme to catalyze reactions with different substrates or reaction types.</explanation>
+    </question>
+    <question>
+        <text>What is the function of regulatory subunits?</text>
+        <option>Catalyze reactions</option>
+        <option>Transport substrates</option>
+        <option>Control enzyme activity</option>
+        <option>Store energy</option>
+        <answer>Control enzyme activity</answer>
+        <explanation>Regulatory subunits modify enzyme activity in response to cellular signals without directly participating in catalysis.</explanation>
+    </question>
+</questions>

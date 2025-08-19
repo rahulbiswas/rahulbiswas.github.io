@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of the urea cycle?</text>
+        <option>To produce energy</option>
+        <option>To eliminate excess nitrogen</option>
+        <option>To synthesize proteins</option>
+        <option>To store amino acids</option>
+        <answer>To eliminate excess nitrogen</answer>
+        <explanation>The urea cycle converts toxic ammonia into urea, providing a safe way to eliminate excess nitrogen from amino acid metabolism.</explanation>
+    </question>
+    <question>
+        <text>Where does the urea cycle occur?</text>
+        <option>Kidneys</option>
+        <option>Liver</option>
+        <option>Muscles</option>
+        <option>Brain</option>
+        <answer>Liver</answer>
+        <explanation>The urea cycle takes place exclusively in the liver, where enzymes in both mitochondria and cytosol work together to produce urea.</explanation>
+    </question>
+    <question>
+        <text>What is carbamoyl phosphate synthase I?</text>
+        <option>A protein carrier</option>
+        <option>The first enzyme of the urea cycle</option>
+        <option>A nitrogen transporter</option>
+        <option>An amino acid converter</option>
+        <answer>The first enzyme of the urea cycle</answer>
+        <explanation>Carbamoyl phosphate synthase I is the rate-limiting enzyme of the urea cycle, catalyzing the first committed step using ammonia and bicarbonate.</explanation>
+    </question>
+    <question>
+        <text>What activates the urea cycle?</text>
+        <option>High glucose levels</option>
+        <option>High protein intake</option>
+        <option>Exercise</option>
+        <option>Sleep</option>
+        <answer>High protein intake</answer>
+        <explanation>High protein intake increases amino acid breakdown, producing more ammonia that must be converted to urea through increased urea cycle activity.</explanation>
+    </question>
+    <question>
+        <text>What happens in urea cycle disorders?</text>
+        <option>Excess glucose production</option>
+        <option>Ammonia accumulation</option>
+        <option>Increased protein synthesis</option>
+        <option>Enhanced fat metabolism</option>
+        <answer>Ammonia accumulation</answer>
+        <explanation>Urea cycle disorders result in dangerous accumulation of ammonia in the blood, which can cause severe neurological problems if untreated.</explanation>
+    </question>
+</questions>

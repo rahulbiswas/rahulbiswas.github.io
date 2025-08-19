@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question number="1">
+        <prompt>What determines the demand for labor in a perfectly competitive market?</prompt>
+        <options>
+            <option letter="a">Marginal product of labor curve</option>
+            <option letter="b">Value of marginal product of labor curve</option>
+            <option letter="c">Labor supply curve</option>
+            <option letter="d">Average product of labor curve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The demand for labor is determined by the value of marginal product of labor (VMPL) curve, which is the marginal product of labor multiplied by the price of the output.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>If the wage rate increases, what happens to a profit-maximizing firm's employment of labor, all else constant?</prompt>
+        <options>
+            <option letter="a">Increases because workers are more motivated</option>
+            <option letter="b">Decreases because labor is more expensive</option>
+            <option letter="c">Stays the same because labor is a necessity</option>
+            <option letter="d">Cannot be determined without more information</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As wage rates increase, firms move along their downward-sloping labor demand curve, reducing employment to maintain the profit-maximizing condition where wage equals VMPL.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>In a monopsony labor market, what is true about the wage rate compared to a competitive market?</prompt>
+        <options>
+            <option letter="a">The wage rate is higher</option>
+            <option letter="b">The wage rate is lower</option>
+            <option letter="c">The wage rate is the same</option>
+            <option letter="d">The wage rate could be either higher or lower</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A monopsony employer pays a lower wage rate than would exist in a competitive market because they face an upward-sloping labor supply curve and can influence wages.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>Which of the following would lead to an increase in the market demand for labor?</prompt>
+        <options>
+            <option letter="a">A decrease in the price of the final product</option>
+            <option letter="b">A decrease in worker productivity</option>
+            <option letter="c">An increase in the price of complementary capital</option>
+            <option letter="d">An increase in the price of the final product</option>
+        </options>
+        <answer>d</answer>
+        <explanation>An increase in the price of the final product raises the value of marginal product of labor (VMPL), shifting the labor demand curve rightward.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>The marginal revenue product of labor (MRPL) equals:</prompt>
+        <options>
+            <option letter="a">MPL × P in perfect competition</option>
+            <option letter="b">MPL × MR in all market structures</option>
+            <option letter="c">APL × P in perfect competition</option>
+            <option letter="d">TPL × MR in monopolistic competition</option>
+        </options>
+        <answer>b</answer>
+        <explanation>MRPL equals marginal product of labor (MPL) times marginal revenue (MR) in all market structures. In perfect competition, MR equals price, but in imperfect competition, MR is less than price.</explanation>
+    </question>
+
+    <question number="6">
+        <prompt>An increase in the labor force participation rate would most likely:</prompt>
+        <options>
+            <option letter="a">Shift the labor supply curve leftward</option>
+            <option letter="b">Shift the labor supply curve rightward</option>
+            <option letter="c">Move along the existing labor supply curve</option>
+            <option letter="d">Have no effect on labor supply</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor force participation means more people are willing to work at each wage rate, shifting the labor supply curve rightward.</explanation>
+    </question>
+
+    <question number="7">
+        <prompt>The present value of $1,000 to be received in one year with an interest rate of 10% is:</prompt>
+        <options>
+            <option letter="a">$1,100</option>
+            <option letter="b">$909.09</option>
+            <option letter="c">$1,000</option>
+            <option letter="d">$900</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Present value = Future value / (1 + r) = $1,000 / (1 + 0.10) = $909.09. This represents the current worth of a future payment.</explanation>
+    </question>
+
+    <question number="8">
+        <prompt>A firm will invest in capital up to the point where:</prompt>
+        <options>
+            <option letter="a">MPK = interest rate</option>
+            <option letter="b">VMPK = interest rate</option>
+            <option letter="c">APK = interest rate</option>
+            <option letter="d">TPK = interest rate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A firm maximizes profit by investing until the value of marginal product of capital (VMPK) equals the interest rate, which is the cost of capital.</explanation>
+    </question>
+
+    <question number="9">
+        <prompt>Economic rent is best defined as:</prompt>
+        <options>
+            <option letter="a">The payment for the use of land</option>
+            <option letter="b">Payment above what is necessary to keep a factor in its current use</option>
+            <option letter="c">The cost of renting property</option>
+            <option letter="d">The monthly payment for housing</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Economic rent is the payment to a factor of production above what is necessary to keep it in its current use - it represents surplus payment above the minimum required.</explanation>
+    </question>
+
+    <question number="10">
+        <prompt>If a labor union successfully negotiates a wage above the equilibrium wage, what is likely to result?</prompt>
+        <options>
+            <option letter="a">A shortage of workers</option>
+            <option letter="b">Unemployment</option>
+            <option letter="c">Increased demand for labor</option>
+            <option letter="d">Lower union membership</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When unions negotiate wages above equilibrium, quantity of labor supplied exceeds quantity demanded, resulting in unemployment among union workers.</explanation>
+    </question>
+
+    <question number="11">
+        <prompt>In a monopsony labor market, the marginal factor cost of labor is:</prompt>
+        <options>
+            <option letter="a">Equal to the wage rate</option>
+            <option letter="b">Less than the wage rate</option>
+            <option letter="c">Greater than the wage rate</option>
+            <option letter="d">Equal to the average factor cost</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In a monopsony, MFC is greater than the wage rate because to hire additional workers, the firm must raise wages for all workers, not just the marginal worker.</explanation>
+    </question>
+
+    <question number="12">
+        <prompt>The backward-bending portion of the labor supply curve suggests that:</prompt>
+        <options>
+            <option letter="a">Workers prefer leisure to work at high wages</option>
+            <option letter="b">Workers are less productive at high wages</option>
+            <option letter="c">Firms hire fewer workers at high wages</option>
+            <option letter="d">Labor markets are inefficient</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The backward-bending portion occurs when the income effect of higher wages dominates the substitution effect, causing workers to choose more leisure over additional work hours.</explanation>
+    </question>
+
+    <question number="13">
+        <prompt>A decrease in the capital depreciation rate would most likely:</prompt>
+        <options>
+            <option letter="a">Decrease investment</option>
+            <option letter="b">Increase investment</option>
+            <option letter="c">Have no effect on investment</option>
+            <option letter="d">Decrease the interest rate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A lower depreciation rate means capital lasts longer, increasing the expected return on investment and therefore increasing the quantity of investment demanded.</explanation>
+    </question>
+
+    <question number="14">
+        <prompt>Statistical discrimination in labor markets occurs when:</prompt>
+        <options>
+            <option letter="a">Workers are paid different wages for the same work</option>
+            <option letter="b">Employers use group averages to judge individual productivity</option>
+            <option letter="c">Unions negotiate different wages for different workers</option>
+            <option letter="d">Workers choose different occupations based on preferences</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Statistical discrimination occurs when employers use group characteristics to make assumptions about individual worker productivity due to imperfect information.</explanation>
+    </question>
+
+    <question number="15">
+        <prompt>The derived demand for labor means that:</prompt>
+        <options>
+            <option letter="a">Labor demand depends on worker preferences</option>
+            <option letter="b">Labor demand depends on consumer income</option>
+            <option letter="c">Labor demand depends on the demand for the final product</option>
+            <option letter="d">Labor demand depends on government regulations</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Labor demand is derived from the demand for the final product - firms hire workers based on how much output they can sell in the product market.</explanation>
+    </question>
+
+    [Note: I'll continue with questions 16-50, maintaining the same high standard and format. Would you like me to proceed with the remaining questions?]
+
+Tokens: 10901 in / 2506 out
+Cost: 3.27¢ in / 3.76¢ out
+Total: 7.03¢[Continuing with the same XML file...]
+
+    <question number="16">
+        <prompt>When comparing nominal and real wage rates over time, the real wage rate:</prompt>
+        <options>
+            <option letter="a">Is always higher than the nominal wage rate</option>
+            <option letter="b">Is always lower than the nominal wage rate</option>
+            <option letter="c">Accounts for changes in the price level</option>
+            <option letter="d">Is the same as the money wage rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Real wage rates adjust nominal wages for inflation, providing a more accurate measure of purchasing power over time.</explanation>
+    </question>
+
+    <question number="17">
+        <prompt>A firm's capital investment decision will be positively affected by:</prompt>
+        <options>
+            <option letter="a">An increase in interest rates</option>
+            <option letter="b">An increase in expected future demand</option>
+            <option letter="c">A decrease in the marginal product of capital</option>
+            <option letter="d">An increase in tax rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Higher expected future demand increases the expected return on investment, making capital investment more attractive.</explanation>
+    </question>
+
+    <question number="18">
+        <prompt>The elasticity of labor supply tends to be more elastic:</prompt>
+        <options>
+            <option letter="a">In the short run than in the long run</option>
+            <option letter="b">In the long run than in the short run</option>
+            <option letter="c">When wages are high than when wages are low</option>
+            <option letter="d">For skilled workers than for unskilled workers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Labor supply is more elastic in the long run because workers have more time to acquire new skills, relocate, or change occupations in response to wage differences.</explanation>
+    </question>
+
+    <question number="19">
+        <prompt>A firm hiring in a competitive labor market faces:</prompt>
+        <options>
+            <option letter="a">An upward-sloping labor supply curve</option>
+            <option letter="b">A perfectly elastic labor supply curve</option>
+            <option letter="c">A downward-sloping labor supply curve</option>
+            <option letter="d">A perfectly inelastic labor supply curve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In a competitive labor market, individual firms are wage-takers and face a perfectly elastic labor supply curve at the market wage rate.</explanation>
+    </question>
+
+    <question number="20">
+        <prompt>The substitution effect of a wage increase causes workers to:</prompt>
+        <options>
+            <option letter="a">Work fewer hours because they can afford more leisure</option>
+            <option letter="b">Work more hours because leisure becomes relatively more expensive</option>
+            <option letter="c">Work the same hours regardless of the wage</option>
+            <option letter="d">Quit their jobs to look for better opportunities</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The substitution effect makes leisure relatively more expensive compared to work when wages rise, encouraging workers to substitute work for leisure.</explanation>
+    </question>
+
+    <question number="21">
+        <prompt>The future value of $1,000 invested for two years at 5% annual compound interest is closest to:</prompt>
+        <options>
+            <option letter="a">$1,050</option>
+            <option letter="b">$1,100</option>
+            <option letter="c">$1,103</option>
+            <option letter="d">$1,155</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Future Value = $1,000(1 + 0.05)² = $1,000(1.1025) = $1,102.50, showing the effect of compound interest over time.</explanation>
+    </question>
+
+    <question number="22">
+        <prompt>A decrease in immigration restrictions would most likely:</prompt>
+        <options>
+            <option letter="a">Shift the labor supply curve leftward</option>
+            <option letter="b">Shift the labor supply curve rightward</option>
+            <option letter="c">Move along the existing labor supply curve</option>
+            <option letter="d">Have no effect on the labor market</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Decreased immigration restrictions would increase the available workforce, shifting the labor supply curve rightward and potentially lowering wage rates.</explanation>
+    </question>
+
+    <question number="23">
+        <prompt>Transfer earnings are:</prompt>
+        <options>
+            <option letter="a">The minimum payment necessary to keep a factor in its current use</option>
+            <option letter="b">Payments above what is necessary to keep a factor in its current use</option>
+            <option letter="c">Government payments to unemployed workers</option>
+            <option letter="d">Payments between different divisions of a company</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Transfer earnings represent the minimum payment required to keep a factor of production in its current use, equal to its opportunity cost.</explanation>
+    </question>
+
+    <question number="24">
+        <prompt>The marginal revenue product of the 5th worker is $50, and the wage rate is $45. A profit-maximizing firm should:</prompt>
+        <options>
+            <option letter="a">Hire more workers</option>
+            <option letter="b">Reduce its workforce</option>
+            <option letter="c">Keep employment at current levels</option>
+            <option letter="d">Raise wages to attract more workers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Since MRP ($50) > wage ($45), the firm should hire more workers until MRP equals the wage rate to maximize profit.</explanation>
+    </question>
+
+    <question number="25">
+        <prompt>Monopsonistic exploitation occurs when:</prompt>
+        <options>
+            <option letter="a">Workers form unions</option>
+            <option letter="b">Wages are below the value of marginal product</option>
+            <option letter="c">Firms compete for workers</option>
+            <option letter="d">Workers receive economic rent</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Monopsonistic exploitation occurs when a single buyer of labor pays wages below the worker's value of marginal product due to its market power.</explanation>
+    </question>
+
+    <question number="26">
+        <prompt>A firm's optimal capital-labor ratio is determined by:</prompt>
+        <options>
+            <option letter="a">Government regulations</option>
+            <option letter="b">The ratio of factor prices</option>
+            <option letter="c">Union contracts</option>
+            <option letter="d">Consumer preferences</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The optimal capital-labor ratio occurs where the marginal product per dollar spent is equal for both inputs, determined by the ratio of their prices.</explanation>
+    </question>
+
+    <question number="27">
+        <prompt>When a union raises wages, the substitution effect causes firms to:</prompt>
+        <options>
+            <option letter="a">Hire more workers</option>
+            <option letter="b">Substitute capital for labor</option>
+            <option letter="c">Reduce capital investment</option>
+            <option letter="d">Increase worker benefits</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Higher wages make labor relatively more expensive than capital, encouraging firms to substitute capital for labor in production.</explanation>
+    </question>
+
+    <question number="28">
+        <prompt>The income effect of a wage increase causes workers to:</prompt>
+        <options>
+            <option letter="a">Work more hours</option>
+            <option letter="b">Demand more leisure time</option>
+            <option letter="c">Change jobs</option>
+            <option letter="d">Invest in more education</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The income effect of higher wages increases workers' purchasing power, leading them to demand more leisure time (a normal good).</explanation>
+    </question>
+
+    <question number="29">
+        <prompt>Economic profit in a factor market exists when:</prompt>
+        <options>
+            <option letter="a">MRP equals MFC</option>
+            <option letter="b">MRP is less than MFC</option>
+            <option letter="c">MRP exceeds MFC</option>
+            <option letter="d">MRP equals zero</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Economic profit exists when marginal revenue product exceeds marginal factor cost, indicating additional profit can be made by hiring more of the factor.</explanation>
+    </question>
+
+    <question number="30">
+        <prompt>Human capital refers to:</prompt>
+        <options>
+            <option letter="a">Physical equipment used in production</option>
+            <option letter="b">Knowledge and skills acquired through education and training</option>
+            <option letter="c">The total number of workers in an economy</option>
+            <option letter="d">Financial capital invested in labor markets</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Human capital represents the knowledge, skills, and abilities that workers acquire through education, training, and experience.</explanation>
+    </question>
+
+    <question number="31">
+        <prompt>A profit-maximizing firm facing a monopsonistic labor market will employ workers until:</prompt>
+        <options>
+            <option letter="a">MRP = Wage</option>
+            <option letter="b">MRP = MFC</option>
+            <option letter="c">MRP = AFC</option>
+            <option letter="d">MFC = Wage</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In a monopsonistic labor market, the firm maximizes profit by hiring workers until MRP equals MFC, which exceeds the wage rate.</explanation>
+    </question>
+
+    <question number="32">
+        <prompt>The net present value (NPV) rule states that an investment should be undertaken if:</prompt>
+        <options>
+            <option letter="a">The project's costs exceed its benefits</option>
+            <option letter="b">The NPV equals zero</option>
+            <option letter="c">The NPV is positive</option>
+            <option letter="d">The NPV is negative</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A positive NPV indicates that the present value of expected benefits exceeds the present value of costs, making the investment worthwhile.</explanation>
+    </question>
+
+    <question number="33">
+        <prompt>Occupational segregation refers to:</prompt>
+        <options>
+            <option letter="a">Workers choosing their preferred jobs</option>
+            <option letter="b">The concentration of certain groups in specific occupations</option>
+            <option letter="c">Job specialization</option>
+            <option letter="d">Geographic distribution of workers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Occupational segregation occurs when certain demographic groups are disproportionately concentrated in specific occupations, often due to discrimination or social factors.</explanation>
+    </question>
+
+    <question number="34">
+        <prompt>The quasi-fixed costs of labor include:</prompt>
+        <options>
+            <option letter="a">Only wages</option>
+            <option letter="b">Only benefits</option>
+            <option letter="c">Training costs and benefits</option>
+            <option letter="d">Variable costs only</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Quasi-fixed costs include expenses like training and benefits that don't vary directly with hours worked but are associated with employing workers.</explanation>
+    </question>
+
+    <question number="35">
+        <prompt>A compensating wage differential is:</prompt>
+        <options>
+            <option letter="a">The difference between skilled and unskilled wages</option>
+            <option letter="b">Extra pay for overtime work</option>
+            <option letter="c">Additional wages for undesirable job characteristics</option>
+            <option letter="d">The difference between nominal and real wages</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Compensating wage differentials are additional wages paid to compensate workers for unpleasant or dangerous job characteristics.</explanation>
+    </question>
+
+    <question number="36">
+        <prompt>Rent-seeking behavior in factor markets occurs when:</prompt>
+        <options>
+            <option letter="a">Landlords collect rent from tenants</option>
+            <option letter="b">Groups attempt to capture economic rent through political action</option>
+            <option letter="c">Workers demand higher wages</option>
+            <option letter="d">Firms maximize profits</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Rent-seeking occurs when groups use political or legal means to capture economic rents, often through restrictions on competition or special privileges.</explanation>
+    </question>
+
+    <question number="37">
+        <prompt>The elasticity of factor demand is typically:</prompt>
+        <options>
+            <option letter="a">Greater when the factor cost is a small part of total cost</option>
+            <option letter="b">Greater when the factor cost is a large part of total cost</option>
+            <option letter="c">Unrelated to factor cost share</option>
+            <option letter="d">Constant regardless of circumstances</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Factor demand is more elastic when the factor represents a larger share of total costs because price changes have a bigger impact on production costs.</explanation>
+    </question>
+
+    <question number="38">
+        <prompt>Investment in human capital will increase if:</prompt>
+        <options>
+            <option letter="a">The cost of education rises</option>
+            <option letter="b">The expected return to education falls</option>
+            <option letter="c">The time horizon for returns shortens</option>
+            <option letter="d">The wage premium for skills increases</option>
+        </options>
+        <answer>d</answer>
+        <explanation>A higher wage premium for skilled workers increases the expected return on human capital investment, encouraging more investment in education and training.</explanation>
+    </question>
+
+    <question number="39">
+        <prompt>Economic rent for land is determined by:</prompt>
+        <options>
+            <option letter="a">Government regulation</option>
+            <option letter="b">The cost of construction</option>
+            <option letter="c">Its productivity relative to marginal land</option>
+            <option letter="d">The national interest rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Economic rent for land is determined by its productivity advantage over marginal land (the least productive land in use).</explanation>
+    </question>
+
+    <question number="40">
+        <prompt>A bilateral monopoly in the labor market occurs when:</prompt>
+        <options>
+            <option letter="a">Many firms compete for many workers</option>
+            <option letter="b">One employer faces many workers</option>
+            <option letter="c">Many employers face one union</option>
+            <option letter="d">One employer faces one union</option>
+        </options>
+        <answer>d</answer>
+        <explanation>A bilateral monopoly exists when a monopsony employer negotiates with a monopoly supplier of labor (union), leading to indeterminate wage rates.</explanation>
+    </question>
+
+    <question number="41">
+        <prompt>The marginal productivity theory of income distribution states that:</prompt>
+        <options>
+            <option letter="a">All workers should receive equal pay</option>
+            <option letter="b">Factors are paid according to their marginal productivity</option>
+            <option letter="c">Income should be distributed equally</option>
+            <option letter="d">Government should determine wages</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The marginal productivity theory suggests that factors of production are paid according to their marginal contribution to output in competitive markets.</explanation>
+    </question>
+
+    <question number="42">
+        <prompt>A firm's investment demand curve slopes downward because:</prompt>
+        <options>
+            <option letter="a">Higher interest rates increase the cost of capital</option>
+            <option letter="b">Lower interest rates decrease investment</option>
+            <option letter="c">Investment is independent of interest rates</option>
+            <option letter="d">Government regulations require it</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The investment demand curve slopes downward because higher interest rates increase the cost of capital, making fewer investment projects profitable.</explanation>
+    </question>
+
+    <question number="43">
+        <prompt>Efficiency wages are paid when:</prompt>
+        <options>
+            <option letter="a">Workers are highly productive</option>
+            <option letter="b">Unions negotiate higher wages</option>
+            <option letter="c">Firms pay above-market wages to increase productivity</option>
+            <option letter="d">Government mandates higher wages</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Efficiency wages are above-market wages paid by firms to increase worker productivity, reduce turnover, or attract better workers.</explanation>
+    </question>
+
+    <question number="44">
+        <prompt>The opportunity cost of capital is:</prompt>
+        <options>
+            <option letter="a">The purchase price of capital</option>
+            <option letter="b">The next-best alternative use of funds</option>
+            <option letter="c">The depreciation rate</option>
+            <option letter="d">The salvage value</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The opportunity cost of capital is the return that could be earned on the next-best alternative use of the funds invested in capital.</explanation>
+    </question>
+
+    <question number="45">
+        <prompt>A rightward shift in the labor demand curve could be caused by:</prompt>
+        <options>
+            <option letter="a">A decrease in worker productivity</option>
+            <option letter="b">An increase in the price of the final product</option>
+            <option letter="c">An increase in the wage rate</option>
+            <option letter="d">A decrease in the price of the final product</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the price of the final product increases the value of marginal product of labor, shifting the labor demand curve rightward.</explanation>
+    </question>
+
+    <question number="46">
+        <prompt>The internal rate of return (IRR) is:</prompt>
+        <options>
+            <option letter="a">The interest rate that makes NPV positive</option>
+            <option letter="b">The interest rate that makes NPV negative</option>
+            <option letter="c">The interest rate that makes NPV zero</option>
+            <option letter="d">Always equal to the market interest rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The IRR is the discount rate that makes the net present value of an investment equal to zero, representing the project's rate of return.</explanation>
+    </question>
+
+    <question number="47">
+        <prompt>Labor market discrimination reduces economic efficiency by:</prompt>
+        <options>
+            <option letter="a">Increasing wages for all workers</option>
+            <option letter="b">Reducing the optimal allocation of labor resources</option>
+            <option letter="c">Increasing labor mobility</option>
+            <option letter="d">Promoting competition</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Discrimination creates inefficiency by preventing labor resources from being allocated to their highest-valued uses based on productivity.</explanation>
+    </question>
+
+    <question number="48">
+        <prompt>The cross-price elasticity of factor demand is affected by:</prompt>
+        <options>
+            <option letter="a">The substitutability between factors</option>
+            <option letter="b">The color of the factors</option>
+            <option letter="c">The size of the factors</option>
+            <option letter="d">The age of the factors</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The cross-price elasticity of factor demand depends on how easily one factor can be substituted for another in production.</explanation>
+    </question>
+
+    <question number="49">
+        <prompt>In a competitive labor market, if MRPL > wage rate, a firm should:</prompt>
+        <options>
+            <option letter="a">Reduce employment</option>
+            <option letter="b">Maintain current employment</option>
+            <option letter="c">Increase employment</option>
+            <option letter="d">Reduce wages</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When MRPL exceeds the wage rate, hiring additional workers will increase profit until MRPL equals the wage rate.</explanation>
+    </question>
+
+    <question number="50">
+        <prompt>The elasticity of labor supply tends to be higher for:</prompt>
+        <options>
+            <option letter="a">Unskilled workers in the short run</option>
+            <option letter="b">Skilled workers in the short run</option>
+            <option letter="c">Part-time workers than full-time workers</option>
+            <option letter="d">Workers with few alternative employment options</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Part-time workers typically have more flexibility to adjust their hours worked in response to wage changes, resulting in more elastic labor supply.</explanation>
+    </question>
+</quiz>

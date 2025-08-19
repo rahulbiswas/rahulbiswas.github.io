@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Bonus Army March of 1932 demonstrated:</prompt>
+        <options>
+            <option letter="a">Hoover's popularity with veterans</option>
+            <option letter="b">The government's harsh response to protesters</option>
+            <option letter="c">Successful negotiation with demonstrators</option>
+            <option letter="d">Support for military spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The violent dispersal of the Bonus Army, WWI veterans peacefully protesting for early payment of their service bonuses, revealed the Hoover administration's harsh response to social protest during the Depression. The use of military forces, led by General MacArthur, to drive out veterans and their families from Washington D.C. severely damaged Hoover's public image and exemplified his administration's failure to address the human costs of the Depression.</explanation>
+    </question>
+</quiz>

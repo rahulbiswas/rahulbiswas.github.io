@@ -1,0 +1,134 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-board {
+    width: 100%;
+    height: 100%;
+}
+
+.square {
+    transition: fill 0.2s ease;
+}
+
+.square:hover {
+    filter: brightness(1.1);
+}
+
+.square.valid-move {
+    filter: brightness(1.2);
+}
+
+.square.valid-move:hover {
+    filter: brightness(1.3);
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.valid-move circle {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 16px;
+    font-family: 'Impact', Arial Black, sans-serif;
+    font-size: 16px;
+    color: #F5E6D3;
+    background: linear-gradient(to bottom, #8B4513, #654321);
+    border: 1px solid #2F4F4F;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background: linear-gradient(to bottom, #9B5523, #755331);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.debug-info {
+    position: absolute;
+    left: 10px;
+    color: #4A4A4A;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 100;
+}
+
+#ai-depth-info {
+    top: 60px;
+}
+
+#ai-move-time {
+    top: 85px;
+}
+
+.debug-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-family: 'Impact', Arial Black, sans-serif;
+    font-size: 16px;
+    color: #F5E6D3;
+    background: linear-gradient(to bottom, #556B2F, #4A5D28);
+    border: 1px solid #2F4F4F;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.debug-button:hover {
+    background: linear-gradient(to bottom, #657B3F, #5A6D38);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.debug-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.debug-button.active {
+    background: linear-gradient(to bottom, #A83232, #982D2D);
+}
+
+.debug-button.active:hover {
+    background: linear-gradient(to bottom, #B84242, #A83D3D);
+}

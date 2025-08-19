@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 3 Quiz ⚡️</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-3">
+        <h1>Unit 3 Self Quiz</h1>
+
+        <div class="key-concept">
+            <h2>Test Your Knowledge! 화이팅! ✨</h2>
+            <p>Let's see how much you've learned about cellular energetics~</p>
+        </div>
+
+        <div class="section">
+            <h2>Multiple Choice</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. During cellular respiration, most ATP is produced by:</p>
+                    <ul>
+                        <li>a) Glycolysis</li>
+                        <li>b) Citric acid cycle</li>
+                        <li>c) Electron transport chain</li>
+                        <li>d) Fermentation</li>
+                    </ul>
+                    <button class="show-answer">See Answer (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <p>c) Electron transport chain - Through oxidative phosphorylation, produces ~34 ATP per glucose</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. What process releases oxygen during photosynthesis?</p>
+                    <ul>
+                        <li>a) Calvin cycle</li>
+                        <li>b) Light-dependent reactions</li>
+                        <li>c) Carbon fixation</li>
+                        <li>d) Chemiosmosis</li>
+                    </ul>
+                    <button class="show-answer">See Answer ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <p>b) Light-dependent reactions - Through photolysis of water (H2O → 2H+ + 2e- + ½O2)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Short Answer</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Compare C3 and C4 photosynthesis:</p>
+                    <button class="show-answer">See Answer (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>C3: Single cell process, RuBisCO directly fixes CO2</li>
+                            <li>C4: Two-cell process, PEP carboxylase first step</li>
+                            <li>C4 reduces photorespiration</li>
+                            <li>C4 more efficient in hot climates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Explain chemiosmosis in respiration:</p>
+                    <button class="show-answer">See Answer ⭐️</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Protons pumped to intermembrane space</li>
+                            <li>Creates proton gradient (proton-motive force)</li>
+                            <li>ATP synthase uses gradient for ATP production</li>
+                            <li>~3 H+ needed per ATP synthesized</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>True/False</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. NADH and FADH2 produce the same amount of ATP.</p>
+                    <button class="show-answer">See Answer (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <p>False - NADH typically yields 3 ATP while FADH2 yields 2 ATP through the electron transport chain.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>6. The Calvin cycle requires direct light energy.</p>
+                    <button class="show-answer">See Answer ✨</button>
+                    <div class="answer hidden">
+                        <p>False - The Calvin cycle uses ATP and NADPH from light reactions but doesn't directly use light energy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Review Tips</h3>
+            <ul>
+                <li>Draw out metabolic pathways</li>
+                <li>Compare different processes</li>
+                <li>Know key enzymes and products</li>
+                <li>Understand energy transfers</li>
+                <li>Practice calculating ATP yields</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>

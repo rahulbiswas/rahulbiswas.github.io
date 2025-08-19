@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which Federal Reserve tool has the most immediate and precise effect on the money supply?</prompt>
+        <options>
+            <option letter="a">Changing the reserve requirement</option>
+            <option letter="b">Adjusting the discount rate</option>
+            <option letter="c">Conducting open market operations</option>
+            <option letter="d">Modifying bank regulations</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Open market operations (buying and selling government securities) are the Fed's most frequently used and precise tool for controlling the money supply. These operations can be conducted quickly, in varying amounts, and can be easily reversed, allowing for fine-tuned adjustments to the money supply.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which process directly produces messenger RNA from DNA?</text>
+        <option>Translation</option>
+        <option>DNA replication</option>
+        <option>Transcription</option>
+        <option>Protein synthesis</option>
+        <answer>Transcription</answer>
+        <explanation>Transcription is the process where DNA is used as a template to produce messenger RNA (mRNA). This is the first step in gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>What modification is added to the 5' end of mRNA during processing?</text>
+        <option>Poly-A tail</option>
+        <option>GTP cap</option>
+        <option>Methylated cap</option>
+        <option>Phosphate group</option>
+        <answer>Methylated cap</answer>
+        <explanation>A methylated guanine cap is added to the 5' end of mRNA during processing. This protects the mRNA and helps with ribosome binding.</explanation>
+    </question>
+    
+    <question>
+        <text>Which type of mutation changes a codon to a stop codon?</text>
+        <option>Silent mutation</option>
+        <option>Missense mutation</option>
+        <option>Nonsense mutation</option>
+        <option>Frameshift mutation</option>
+        <answer>Nonsense mutation</answer>
+        <explanation>A nonsense mutation changes a codon that specifies an amino acid into a premature stop codon, leading to a truncated protein.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of DNA methylation in gene expression?</text>
+        <option>Increases gene expression</option>
+        <option>Prevents gene silencing</option>
+        <option>Generally represses transcription</option>
+        <option>Activates promoters</option>
+        <answer>Generally represses transcription</answer>
+        <explanation>DNA methylation typically leads to gene silencing by preventing transcription factors from binding and recruiting repressive chromatin modifiers.</explanation>
+    </question>
+    
+    <question>
+        <text>Which experiment proved DNA was the genetic material?</text>
+        <option>Franklin's X-ray diffraction</option>
+        <option>Meselson-Stahl experiment</option>
+        <option>Hershey-Chase experiment</option>
+        <option>Griffith's transformation</option>
+        <answer>Hershey-Chase experiment</answer>
+        <explanation>The Hershey-Chase experiment using radioactively labeled bacteriophages conclusively showed that DNA, not protein, was the genetic material passed to offspring.</explanation>
+    </question>
+</questions>

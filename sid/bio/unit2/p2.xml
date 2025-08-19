@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which process requires ATP?</text>
+        <option>Active transport</option>
+        <option>Simple diffusion</option>
+        <option>Facilitated diffusion</option>
+        <option>Osmosis</option>
+        <answer>Active transport</answer>
+        <explanation>Active transport moves molecules against their concentration gradient, requiring energy from ATP.</explanation>
+    </question>
+    <question>
+        <text>What drives passive transport across membranes?</text>
+        <option>Concentration gradient</option>
+        <option>ATP hydrolysis</option>
+        <option>Protein pumps</option>
+        <option>Active carriers</option>
+        <answer>Concentration gradient</answer>
+        <explanation>Passive transport occurs along concentration gradients without requiring energy input.</explanation>
+    </question>
+    <question>
+        <text>Which protein facilitates water movement across membranes?</text>
+        <option>Aquaporins</option>
+        <option>Ion channels</option>
+        <option>Glucose transporters</option>
+        <option>Proton pumps</option>
+        <answer>Aquaporins</answer>
+        <explanation>Aquaporins are specialized channel proteins that facilitate the selective movement of water molecules across membranes.</explanation>
+    </question>
+    <question>
+        <text>What characterizes facilitated diffusion?</text>
+        <option>Protein-mediated transport</option>
+        <option>ATP requirement</option>
+        <option>Against gradient</option>
+        <option>Active pumping</option>
+        <answer>Protein-mediated transport</answer>
+        <explanation>Facilitated diffusion uses transport proteins to move specific molecules down their concentration gradients.</explanation>
+    </question>
+    <question>
+        <text>Which transport process is selective?</text>
+        <option>Channel-mediated transport</option>
+        <option>Simple diffusion</option>
+        <option>Bulk flow</option>
+        <option>Random movement</option>
+        <answer>Channel-mediated transport</answer>
+        <explanation>Channel proteins are selective, allowing only specific molecules or ions to pass through based on size and charge.</explanation>
+    </question>
+</questions>

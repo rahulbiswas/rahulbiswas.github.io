@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was unique about Frances Perkins in FDR's administration?</prompt>
+    <options>
+        <option letter="a">First female cabinet member</option>
+        <option letter="b">Youngest cabinet member</option>
+        <option letter="c">Longest-serving official</option>
+        <option letter="d">Former Republican</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Frances Perkins became the first woman to serve in a presidential cabinet when FDR appointed her as Secretary of Labor in 1933.</explanation>
+</question>

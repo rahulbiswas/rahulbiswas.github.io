@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do alternative oxidases affect plant energy efficiency?</text>
+        <option>They increase ATP production</option>
+        <option>They reduce ATP yield but provide metabolic flexibility</option>
+        <option>They have no effect on energy production</option>
+        <option>They completely block electron transport</option>
+        <answer>They reduce ATP yield but provide metabolic flexibility</answer>
+        <explanation>Alternative oxidases provide an electron transport pathway that bypasses proton pumping, reducing ATP yield but allowing continued electron flow and metabolic flexibility under stress conditions.</explanation>
+    </question>
+    <question>
+        <text>What role do uncoupling proteins play in plant thermogenesis?</text>
+        <option>They increase ATP synthesis</option>
+        <option>They generate heat by uncoupling electron transport</option>
+        <option>They stop all metabolic activities</option>
+        <option>They only function in animals</option>
+        <answer>They generate heat by uncoupling electron transport</answer>
+        <explanation>Plant uncoupling proteins can dissipate the proton gradient as heat rather than ATP synthesis, contributing to thermogenesis in specific tissues like thermogenic flowers.</explanation>
+    </question>
+    <question>
+        <text>How do plants regulate electron transport during stress?</text>
+        <option>By shutting down all metabolism</option>
+        <option>Through multiple regulatory mechanisms</option>
+        <option>By increasing ATP production</option>
+        <option>They cannot regulate electron transport</option>
+        <answer>Through multiple regulatory mechanisms</answer>
+        <explanation>Plants regulate electron transport through multiple mechanisms including alternative oxidases, cyclic electron flow, and protein phosphorylation to balance energy production with cellular demands during stress.</explanation>
+    </question>
+    <question>
+        <text>What is the significance of proton leak in plant mitochondria?</text>
+        <option>It only wastes energy</option>
+        <option>It provides metabolic flexibility and regulation</option>
+        <option>It increases ATP production</option>
+        <option>It has no biological function</option>
+        <answer>It provides metabolic flexibility and regulation</answer>
+        <explanation>Controlled proton leak in plant mitochondria provides metabolic flexibility, helps prevent reactive oxygen species formation, and allows fine-tuning of energy production to meet cellular needs.</explanation>
+    </question>
+    <question>
+        <text>How do plants coordinate mitochondrial and chloroplast activities?</text>
+        <option>They operate independently</option>
+        <option>Through metabolic and signaling networks</option>
+        <option>By stopping one process completely</option>
+        <option>Through random interactions</option>
+        <answer>Through metabolic and signaling networks</answer>
+        <explanation>Plants coordinate mitochondrial and chloroplast activities through complex metabolic and signaling networks that balance energy production, carbon metabolism, and cellular redox state.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Civil Rights Cases" of 1883?</prompt>
+        <options>
+            <option letter="a">Severely limited federal civil rights enforcement</option>
+            <option letter="b">Expanded civil rights protections</option>
+            <option letter="c">Created new voting rights</option>
+            <option letter="d">Strengthened federal power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Cases of 1883 severely limited federal civil rights enforcement by ruling that the 14th Amendment only applied to state, not private, discrimination.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Vagrancy Laws" affect freed people?</prompt>
+        <options>
+            <option letter="a">Forced them into labor contracts through threat of arrest</option>
+            <option letter="b">Protected their freedom of movement</option>
+            <option letter="c">Provided employment opportunities</option>
+            <option letter="d">Guaranteed fair wages</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Vagrancy Laws were used to force freed people into labor contracts by threatening arrest for unemployment or "wandering" without proof of employment.</explanation>
+    </question>
+    <question>
+        <prompt>What role did "Mutual Aid Societies" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided social services and economic assistance to freedmen</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Managed military affairs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mutual Aid Societies provided social services, economic assistance, and community support to freedmen during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Understanding Clause" in voting requirements?</prompt>
+        <options>
+            <option letter="a">To allow subjective denial of voting rights</option>
+            <option letter="b">To ensure voter literacy</option>
+            <option letter="c">To protect voting rights</option>
+            <option letter="d">To increase participation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Understanding Clause allowed registrars to subjectively deny voting rights by requiring voters to "understand" and interpret the constitution.</explanation>
+    </question>
+</quiz>

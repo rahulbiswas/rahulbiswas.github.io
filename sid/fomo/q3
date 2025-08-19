@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In a liquidity trap scenario, why might traditional monetary policy become ineffective?</prompt>
+        <options>
+            <option letter="a">Interest rates are already at their maximum level</option>
+            <option letter="b">Interest rates are already at or near zero, so they cannot be lowered further</option>
+            <option letter="c">Banks have too much liquidity</option>
+            <option letter="d">The money supply is too low</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In a liquidity trap, interest rates are already at or very near zero (the "zero lower bound"). Since the Fed cannot push rates significantly below zero, traditional monetary policy of lowering rates to stimulate borrowing and investment becomes ineffective.</explanation>
+    </question>
+</quiz>

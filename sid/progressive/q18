@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The National Municipal League believes that municipal government is business, not politics... The city manager plan has proven that trained administrators, rather than political appointees, can best serve the public interest."
+- National Municipal League Report, 1915</stimulus>
+        <prompt>This statement most clearly reflects the Progressive Era emphasis on:</prompt>
+        <options>
+            <option letter="a">Scientific management</option>
+            <option letter="b">Direct democracy</option>
+            <option letter="c">Social justice</option>
+            <option letter="d">Moral reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The support for city managers reflects the Progressive emphasis on scientific management and professional expertise in government administration.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing correlation between state women's suffrage laws and passage of workplace safety regulations, child labor laws, and public health measures, 1890-1920]</stimulus>
+        <prompt>This data most strongly supports which Progressive Era argument?</prompt>
+        <options>
+            <option letter="a">Women voters would support social reforms</option>
+            <option letter="b">Business regulation was unnecessary</option>
+            <option letter="c">Immigration should be restricted</option>
+            <option letter="d">Cities needed more autonomy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The correlation between women's suffrage and social legislation supported Progressive arguments that women voters would promote social welfare reforms.</explanation>
+    </question>
+    <question>
+        <stimulus>"The corrupt alliance between business and politics threatens the very foundation of our democracy... We must choose between a government by corporations and a government by the people."
+- Robert La Follette, 1912 Presidential Campaign Speech</stimulus>
+        <prompt>Which Progressive Era reform most directly addressed this concern?</prompt>
+        <options>
+            <option letter="a">The Federal Trade Commission</option>
+            <option letter="b">The Pure Food and Drug Act</option>
+            <option letter="c">The Federal Reserve Act</option>
+            <option letter="d">The Adamson Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Federal Trade Commission was created to regulate business practices and prevent corrupt alliances between business and politics, addressing La Follette's concerns.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photographs comparing public health conditions before and after municipal reform, showing improved water systems, waste management, and street cleaning]</stimulus>
+        <prompt>These improvements most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Scientific understanding of disease</option>
+            <option letter="b">Federal government mandates</option>
+            <option letter="c">Corporate philanthropy</option>
+            <option letter="d">Labor union demands</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Progressive Era public health reforms were primarily driven by new scientific understanding of disease transmission and the role of sanitation in public health.</explanation>
+    </question>
+</quiz>

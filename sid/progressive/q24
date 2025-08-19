@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"Every special interest is entitled to justice, but not one is entitled to a vote in Congress, to a voice on the bench, or to representation in any public office... The Constitution guarantees protection to property, and we must make that promise good. But it does not give the right to vote to property."
+- Theodore Roosevelt, New Nationalism Speech, 1910</stimulus>
+        <prompt>This statement most directly supported which Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">Direct election of senators</option>
+            <option letter="b">Women's suffrage</option>
+            <option letter="c">Prohibition</option>
+            <option letter="d">Conservation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Roosevelt's statement supported the direct election of senators (17th Amendment) by arguing against corporate influence in government and emphasizing popular sovereignty.</explanation>
+    </question>
+    <question>
+        <stimulus>[Map showing spread of workplace safety laws, minimum wage legislation, and workers' compensation laws across states, 1900-1920]</stimulus>
+        <prompt>This pattern of reform most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Progressive state governments</option>
+            <option letter="b">Federal mandates</option>
+            <option letter="c">Corporate initiatives</option>
+            <option letter="d">International pressure</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The spread of labor legislation reflected the influence of Progressive reformers in state governments, who used states as laboratories for social reform.</explanation>
+    </question>
+    <question>
+        <stimulus>"The fundamental evil in our cities is not in our men but in the system... A city is not merely a place to work in and sleep in; it should be a place to live in, and living is more than existing."
+- Frederic Howe, The City: The Hope of Democracy, 1905</stimulus>
+        <prompt>Which Progressive reform most directly addressed these concerns?</prompt>
+        <options>
+            <option letter="a">City planning movement</option>
+            <option letter="b">Direct primary elections</option>
+            <option letter="c">Anti-trust legislation</option>
+            <option letter="d">Immigration restriction</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The city planning movement, including the City Beautiful movement, addressed Howe's concerns by attempting to make cities more livable through planned development.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a figure labeled "Muckraking Press" shining a spotlight on corrupt business practices while corporate figures try to hide]</stimulus>
+        <prompt>The type of journalism depicted most directly contributed to:</prompt>
+        <options>
+            <option letter="a">Business regulation</option>
+            <option letter="b">Women's suffrage</option>
+            <option letter="c">Prohibition</option>
+            <option letter="d">Conservation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Muckraking journalism exposing corporate corruption directly contributed to Progressive Era business regulation and anti-trust legislation.</explanation>
+    </question>
+</quiz>

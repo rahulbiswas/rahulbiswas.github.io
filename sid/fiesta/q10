@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to aggregate demand when there is a negative wealth effect?</prompt>
+        <options>
+            <option letter="a">AD shifts right due to increased consumer spending</option>
+            <option letter="b">AD shifts left due to decreased consumer spending</option>
+            <option letter="c">AD remains unchanged as consumers maintain spending</option>
+            <option letter="d">Movement along the existing AD curve</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A negative wealth effect (like falling asset prices) causes consumers to feel poorer and reduce spending, shifting the aggregate demand curve to the left as overall spending in the economy decreases.</explanation>
+    </question>
+
+    <question>
+        <prompt>If nominal GDP grows by 5% and inflation is 3%, what is the real GDP growth rate?</prompt>
+        <options>
+            <option letter="a">8%</option>
+            <option letter="b">2%</option>
+            <option letter="c">15%</option>
+            <option letter="d">1.67%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP growth is approximately nominal GDP growth minus inflation rate: 5% - 3% = 2%. This shows the actual increase in production after accounting for price changes.</explanation>
+    </question>
+
+    <question>
+        <prompt>What distinguishes cost-push inflation from demand-pull inflation?</prompt>
+        <options>
+            <option letter="a">Cost-push occurs when AD increases, while demand-pull occurs when SRAS decreases</option>
+            <option letter="b">Cost-push occurs when SRAS decreases, while demand-pull occurs when AD increases</option>
+            <option letter="c">Cost-push affects only wages, while demand-pull affects only prices</option>
+            <option letter="d">Cost-push is temporary, while demand-pull is permanent</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Cost-push inflation occurs when SRAS shifts left due to rising production costs, while demand-pull inflation occurs when AD shifts right due to increased spending in the economy.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which economic indicator would best show whether an economy is experiencing stagflation?</prompt>
+        <options>
+            <option letter="a">GDP growth rate alone</option>
+            <option letter="b">Unemployment rate alone</option>
+            <option letter="c">Inflation rate alone</option>
+            <option letter="d">Both inflation rate and unemployment rate together</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Stagflation is characterized by high inflation occurring simultaneously with high unemployment and low economic growth, so both inflation and unemployment rates must be examined together.</explanation>
+    </question>
+</quiz>

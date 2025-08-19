@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did the New Deal affect Native American policy?</prompt>
+    <options>
+        <option letter="a">Ended forced assimilation</option>
+        <option letter="b">Increased reservations</option>
+        <option letter="c">Required citizenship</option>
+        <option letter="d">Mandated education</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Indian New Deal ended the policy of forced assimilation, though it also included controversial livestock reduction programs on some reservations.</explanation>
+</question>

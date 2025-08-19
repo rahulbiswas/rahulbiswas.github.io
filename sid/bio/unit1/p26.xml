@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of carrier proteins in facilitated diffusion?</text>
+        <option>Use ATP to pump molecules</option>
+        <option>Block molecular movement</option>
+        <option>Aid diffusion of specific molecules</option>
+        <option>Generate energy</option>
+        <answer>Aid diffusion of specific molecules</answer>
+        <explanation>Carrier proteins facilitate the diffusion of specific molecules across membranes without using energy.</explanation>
+    </question>
+    <question>
+        <text>How do aquaporins increase water permeability?</text>
+        <option>By using ATP</option>
+        <option>By forming selective water channels</option>
+        <option>By breaking membranes</option>
+        <option>By heating the membrane</option>
+        <answer>By forming selective water channels</answer>
+        <explanation>Aquaporins form specific channels that allow rapid water movement across membranes while excluding other molecules.</explanation>
+    </question>
+    <question>
+        <text>What drives passive transport across membranes?</text>
+        <option>ATP hydrolysis</option>
+        <option>Concentration gradients</option>
+        <option>Active pumping</option>
+        <option>Temperature changes</option>
+        <answer>Concentration gradients</answer>
+        <explanation>Passive transport is driven by concentration gradients, moving molecules from high to low concentration.</explanation>
+    </question>
+    <question>
+        <text>How do ion channels control ion flow?</text>
+        <option>Through random opening</option>
+        <option>Through gating mechanisms</option>
+        <option>Through constant flow</option>
+        <option>Through ATP use</option>
+        <answer>Through gating mechanisms</answer>
+        <explanation>Ion channels use specific gating mechanisms to control when ions can pass through the channel.</explanation>
+    </question>
+    <question>
+        <text>What role do phospholipids play in membrane organization?</text>
+        <option>Energy storage only</option>
+        <option>Structural framework</option>
+        <option>Protein synthesis</option>
+        <option>Ion transport</option>
+        <answer>Structural framework</answer>
+        <explanation>Phospholipids create the basic structural framework of biological membranes through bilayer formation.</explanation>
+    </question>
+</questions>

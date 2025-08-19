@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the main focus of Booker T. Washington's Atlanta Compromise?</prompt>
+        <options>
+            <option letter="a">Immediate political equality</option>
+            <option letter="b">Economic self-improvement before political rights</option>
+            <option letter="c">Armed resistance to segregation</option>
+            <option letter="d">Integration of public schools</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Atlanta Compromise advocated for African Americans to focus on economic self-improvement and industrial education before pursuing political rights, accepting temporary social segregation.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Mexican Revolution affect U.S.-Mexico relations?</prompt>
+        <options>
+            <option letter="a">It led to peaceful cooperation</option>
+            <option letter="b">It caused multiple U.S. military interventions</option>
+            <option letter="c">Mexico joined the Allied Powers</option>
+            <option letter="d">The U.S. purchased Mexican territory</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mexican Revolution led to several U.S. military interventions, including the occupation of Veracruz and Pershing's Punitive Expedition, straining U.S.-Mexico relations.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the primary purpose of the War Industries Board?</prompt>
+        <options>
+            <option letter="a">To recruit soldiers</option>
+            <option letter="b">To coordinate industrial production for WWI</option>
+            <option letter="c">To ration food supplies</option>
+            <option letter="d">To censor newspapers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The War Industries Board, under Bernard Baruch, coordinated American industrial production during WWI, converting peacetime industries to war production and setting priorities.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Supreme Court's Muller v. Oregon decision affect women workers?</prompt>
+        <options>
+            <option letter="a">It banned women from working</option>
+            <option letter="b">It allowed special protections for women workers</option>
+            <option letter="c">It required equal pay</option>
+            <option letter="d">It eliminated gender discrimination</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Muller v. Oregon (1908) upheld laws limiting women's working hours, establishing that women could receive special workplace protections, though based on assumptions about women's "weakness."</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of the Standard Oil antitrust case?</prompt>
+        <options>
+            <option letter="a">It strengthened monopolies</option>
+            <option letter="b">It broke up the largest corporate trust</option>
+            <option letter="c">It nationalized the oil industry</option>
+            <option letter="d">It reduced oil prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1911 Standard Oil antitrust case resulted in the breakup of the largest corporate trust in America, setting a precedent for future antitrust actions and establishing the "rule of reason" doctrine.</explanation>
+    </question>
+</quiz>

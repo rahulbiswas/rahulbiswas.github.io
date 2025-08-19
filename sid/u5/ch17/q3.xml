@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="9">
+        <prompt>What was the significance of the Homestead Strike of 1892?</prompt>
+        <options>
+            <option letter="a">It demonstrated the effectiveness of private security forces against unions</option>
+            <option letter="b">It resulted in better working conditions for steel workers</option>
+            <option letter="c">It led to the creation of new labor laws</option>
+            <option letter="d">It strengthened the power of labor unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The defeat of the Homestead Strike by Pinkerton agents and the state militia demonstrated the power of corporations and their ability to use private security forces to break unions.</explanation>
+    </question>
+    <question number="10">
+        <prompt>What was the main goal of the Populist Party platform in 1892?</prompt>
+        <options>
+            <option letter="a">The free and unlimited coinage of silver at a 16:1 ratio with gold</option>
+            <option letter="b">The abolition of the national banking system</option>
+            <option letter="c">The establishment of a federal income tax</option>
+            <option letter="d">The nationalization of railroads</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Populists' primary demand was for free silver coinage at a 16:1 ratio with gold, which they believed would help farmers by causing inflation and making it easier to pay off debts.</explanation>
+    </question>
+    <question number="11">
+        <prompt>What role did yellow journalism play in the Spanish-American War?</prompt>
+        <options>
+            <option letter="a">It inflamed public opinion against Spain through sensationalized stories</option>
+            <option letter="b">It provided accurate war reporting</option>
+            <option letter="c">It opposed American intervention</option>
+            <option letter="d">It supported Spanish colonial policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Newspapers like Hearst's and Pulitzer's used sensationalized and often exaggerated stories about Spanish atrocities in Cuba to build public support for war with Spain.</explanation>
+    </question>
+    <question number="12">
+        <prompt>What was the primary purpose of the Hawaiian annexation in 1898?</prompt>
+        <options>
+            <option letter="a">To secure a strategic naval base in the Pacific</option>
+            <option letter="b">To protect native Hawaiian rights</option>
+            <option letter="c">To support sugar plantation workers</option>
+            <option letter="d">To promote Hawaiian independence</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The United States annexed Hawaii primarily to secure Pearl Harbor as a strategic naval base in the Pacific, supporting American military and commercial interests in Asia.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do photoperiods affect cellular energy metabolism?</text>
+        <option>They have no effect on metabolism</option>
+        <option>They regulate metabolic rhythms and energy allocation</option>
+        <option>They only affect leaf color</option>
+        <option>They decrease all energy production</option>
+        <answer>They regulate metabolic rhythms and energy allocation</answer>
+        <explanation>Photoperiods influence cellular metabolism through circadian rhythms, coordinating energy production and utilization patterns to match environmental light-dark cycles and seasonal changes.</explanation>
+    </question>
+    <question>
+        <text>What role do biological clocks play in energy homeostasis?</text>
+        <option>They only control sleep patterns</option>
+        <option>They coordinate metabolic processes with environmental cycles</option>
+        <option>They have no effect on energy</option>
+        <option>They reduce energy efficiency</option>
+        <answer>They coordinate metabolic processes with environmental cycles</answer>
+        <explanation>Biological clocks synchronize cellular energy metabolism with daily and seasonal environmental cycles, optimizing energy production and utilization while anticipating regular changes in energy demands.</explanation>
+    </question>
+    <question>
+        <text>How do seasonal changes affect mitochondrial function?</text>
+        <option>Mitochondria remain unchanged</option>
+        <option>Mitochondria adjust their number and activity</option>
+        <option>Mitochondria stop working</option>
+        <option>Only temperature affects mitochondria</option>
+        <answer>Mitochondria adjust their number and activity</answer>
+        <explanation>Mitochondria adapt to seasonal changes by adjusting their numbers, composition, and activity levels to match changing energy demands and environmental conditions throughout the year.</explanation>
+    </question>
+    <question>
+        <text>What triggers seasonal changes in photosynthetic capacity?</text>
+        <option>Only temperature changes</option>
+        <option>Multiple environmental and internal signals</option>
+        <option>Changes in soil type</option>
+        <option>Random fluctuations</option>
+        <answer>Multiple environmental and internal signals</answer>
+        <explanation>Seasonal changes in photosynthetic capacity are triggered by multiple signals including day length, temperature, hormones, and internal timekeepers that coordinate adjustment of photosynthetic machinery.</explanation>
+    </question>
+    <question>
+        <text>How do plants prepare for winter metabolically?</text>
+        <option>They only drop their leaves</option>
+        <option>They adjust metabolism and accumulate protective compounds</option>
+        <option>They increase growth rate</option>
+        <option>They maintain summer metabolism</option>
+        <answer>They adjust metabolism and accumulate protective compounds</answer>
+        <explanation>Plants prepare for winter by adjusting their metabolism, accumulating protective compounds like sugars and proteins, and modifying cellular structures to enhance cold tolerance and survival.</explanation>
+    </question>
+</quiz>

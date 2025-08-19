@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of DNA ligase in DNA repair?</text>
+        <option>Removes damaged bases</option>
+        <option>Joins DNA strands</option>
+        <option>Unwinds DNA helix</option>
+        <option>Adds primers</option>
+        <answer>Joins DNA strands</answer>
+        <explanation>DNA ligase seals breaks in DNA strands by forming phosphodiester bonds between nucleotides during DNA repair processes.</explanation>
+    </question>
+    
+    <question>
+        <text>Which feature characterizes euchromatin?</text>
+        <option>Highly condensed</option>
+        <option>Transcriptionally active</option>
+        <option>Gene silencing</option>
+        <option>Permanently inactive</option>
+        <answer>Transcriptionally active</answer>
+        <explanation>Euchromatin is less condensed and contains actively transcribed genes, allowing access to transcription machinery.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of sigma factor in bacteria?</text>
+        <option>Terminates translation</option>
+        <option>Directs RNA polymerase</option>
+        <option>Repairs DNA damage</option>
+        <option>Adds poly-A tail</option>
+        <answer>Directs RNA polymerase</answer>
+        <explanation>Sigma factors help RNA polymerase recognize specific promoter sequences in bacterial genes to initiate transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires snRNPs?</text>
+        <option>DNA replication</option>
+        <option>Translation</option>
+        <option>RNA splicing</option>
+        <option>Protein folding</option>
+        <answer>RNA splicing</answer>
+        <explanation>Small nuclear ribonucleoproteins (snRNPs) are essential components of the spliceosome that removes introns from pre-mRNA.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of chaperone proteins?</text>
+        <option>DNA repair</option>
+        <option>Protein folding</option>
+        <option>RNA synthesis</option>
+        <option>Gene regulation</option>
+        <answer>Protein folding</answer>
+        <explanation>Chaperone proteins assist in proper protein folding and prevent protein aggregation during and after synthesis.</explanation>
+    </question>
+</questions>

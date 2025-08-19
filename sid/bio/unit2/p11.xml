@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which factor increases membrane fluidity?</text>
+        <option>Unsaturated fatty acids</option>
+        <option>Saturated fatty acids</option>
+        <option>Low temperature</option>
+        <option>High cholesterol</option>
+        <answer>Unsaturated fatty acids</answer>
+        <explanation>Unsaturated fatty acids create kinks in membrane phospholipids, increasing membrane fluidity by preventing tight packing.</explanation>
+    </question>
+    <question>
+        <text>How does temperature affect membrane fluidity?</text>
+        <option>Higher temperature increases fluidity</option>
+        <option>Temperature has no effect</option>
+        <option>Higher temperature decreases fluidity</option>
+        <option>Temperature effects are random</option>
+        <answer>Higher temperature increases fluidity</answer>
+        <explanation>Higher temperatures increase phospholipid movement, making membranes more fluid.</explanation>
+    </question>
+    <question>
+        <text>What is the effect of cholesterol at high temperatures?</text>
+        <option>Reduces membrane fluidity</option>
+        <option>Increases membrane fluidity</option>
+        <option>Has no effect</option>
+        <option>Dissolves membrane</option>
+        <answer>Reduces membrane fluidity</answer>
+        <explanation>Cholesterol prevents excessive membrane fluidity at high temperatures by restricting phospholipid movement.</explanation>
+    </question>
+    <question>
+        <text>Which adaptation helps cells maintain proper membrane fluidity?</text>
+        <option>Homeoviscous adaptation</option>
+        <option>Protein denaturation</option>
+        <option>Membrane dissolution</option>
+        <option>Lipid elimination</option>
+        <answer>Homeoviscous adaptation</answer>
+        <explanation>Homeoviscous adaptation involves changing membrane lipid composition to maintain appropriate fluidity in different conditions.</explanation>
+    </question>
+    <question>
+        <text>What happens to membranes below the transition temperature?</text>
+        <option>Become gel-like</option>
+        <option>Become more fluid</option>
+        <option>Dissolve completely</option>
+        <option>Expand rapidly</option>
+        <answer>Become gel-like</answer>
+        <explanation>Below the transition temperature, membranes become more rigid and gel-like as phospholipid movement decreases.</explanation>
+    </question>
+</questions>

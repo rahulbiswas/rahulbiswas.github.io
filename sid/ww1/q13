@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did the Underwood-Simmons Tariff have on the American economy?</prompt>
+        <options>
+            <option letter="a">It raised tariff rates to record highs</option>
+            <option letter="b">It significantly reduced tariff rates</option>
+            <option letter="c">It eliminated all tariffs</option>
+            <option letter="d">It only affected luxury goods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Underwood-Simmons Tariff of 1913 significantly reduced tariff rates for the first time since the Civil War, marking a major shift in U.S. economic policy under Wilson's administration.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of the 16th Amendment?</prompt>
+        <options>
+            <option letter="a">It banned alcohol</option>
+            <option letter="b">It established federal income tax</option>
+            <option letter="c">It gave women voting rights</option>
+            <option letter="d">It abolished slavery</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 16th Amendment, ratified in 1913, established the federal government's right to collect income tax directly from citizens, dramatically changing federal revenue collection.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the creation of the Federal Trade Commission affect business?</prompt>
+        <options>
+            <option letter="a">It eliminated all regulations</option>
+            <option letter="b">It investigated unfair business practices</option>
+            <option letter="c">It set all prices</option>
+            <option letter="d">It managed international trade only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Trade Commission, established in 1914, was empowered to investigate and prevent unfair business practices, adding another layer of federal oversight to business activities.</explanation>
+    </question>
+
+    <question>
+        <prompt>What characterized American neutrality before entering WWI?</prompt>
+        <options>
+            <option letter="a">Complete isolation from Europe</option>
+            <option letter="b">Trading primarily with Germany</option>
+            <option letter="c">Trading mainly with Allied powers</option>
+            <option letter="d">Equal trade with both sides</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During American "neutrality," the U.S. traded primarily with Allied powers due to the British naval blockade of Germany, showing the limits of true neutrality in practice.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Adamson Act affect railroad workers?</prompt>
+        <options>
+            <option letter="a">It banned unions</option>
+            <option letter="b">It established the 8-hour workday</option>
+            <option letter="c">It reduced wages</option>
+            <option letter="d">It increased working hours</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Adamson Act of 1916 established an 8-hour workday for railroad workers with additional pay for overtime, representing a major victory for labor rights.</explanation>
+    </question>
+</quiz>

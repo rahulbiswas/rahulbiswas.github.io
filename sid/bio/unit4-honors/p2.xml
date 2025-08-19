@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of the Calvin cycle?</text>
+        <option>To produce oxygen</option>
+        <option>To synthesize glucose from CO2</option>
+        <option>To break down glucose</option>
+        <option>To produce ATP</option>
+        <answer>To synthesize glucose from CO2</answer>
+        <explanation>The Calvin cycle, also known as the light-independent reactions, uses ATP and NADPH from the light-dependent reactions to fix CO2 into glucose through a series of enzymatic reactions.</explanation>
+    </question>
+    <question>
+        <text>Which molecule is the primary electron acceptor in the electron transport chain?</text>
+        <option>NAD+</option>
+        <option>Oxygen</option>
+        <option>Water</option>
+        <option>ATP</option>
+        <answer>Oxygen</answer>
+        <explanation>Oxygen serves as the final electron acceptor in the electron transport chain, combining with hydrogen to form water. This makes cellular respiration an aerobic process.</explanation>
+    </question>
+    <question>
+        <text>During which phase of photosynthesis is NADPH produced?</text>
+        <option>Calvin cycle</option>
+        <option>Light-dependent reactions</option>
+        <option>Glycolysis</option>
+        <option>Krebs cycle</option>
+        <answer>Light-dependent reactions</answer>
+        <explanation>NADPH is produced during the light-dependent reactions when NADP+ accepts electrons and hydrogen ions. This NADPH is then used in the Calvin cycle.</explanation>
+    </question>
+    <question>
+        <text>What enzyme catalyzes the fixation of CO2 in the Calvin cycle?</text>
+        <option>ATP synthase</option>
+        <option>RuBisCO</option>
+        <option>Photosystem II</option>
+        <option>Pyruvate dehydrogenase</option>
+        <answer>RuBisCO</answer>
+        <explanation>RuBisCO (Ribulose-1,5-bisphosphate carboxylase/oxygenase) is the enzyme responsible for fixing CO2 to ribulose bisphosphate in the first step of the Calvin cycle.</explanation>
+    </question>
+    <question>
+        <text>Which photosystem is responsible for splitting water molecules?</text>
+        <option>Photosystem I</option>
+        <option>Photosystem II</option>
+        <option>ATP synthase</option>
+        <option>Electron transport chain</option>
+        <answer>Photosystem II</answer>
+        <explanation>Photosystem II performs photolysis, splitting water molecules into hydrogen ions, electrons, and oxygen gas, which is released as a byproduct.</explanation>
+    </question>
+</questions>

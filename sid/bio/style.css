@@ -1,0 +1,158 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background: #fafafa;
+}
+
+/* Headers */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #16a085;
+}
+
+/* Content sections */
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Key concepts */
+.key-concept {
+    background: #e8f6f3;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #1abc9c;
+    border-radius: 5px;
+}
+
+/* Notes */
+.note {
+    background: #f9f3ff;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #9b59b6;
+    border-radius: 5px;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Navigation buttons */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Study tips */
+.study-tips {
+    background: #fff5f5;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Quick check sections */
+.practice {
+    background: #f0f9ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #bde0ff;
+}
+
+.answer {
+    color: #2980b9;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    .navigation {
+        display: none;
+    }
+}
+
+/* Highlight sections */
+.highlight {
+    background: #f4f9fd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+/* Terms */
+.term {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .section {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}

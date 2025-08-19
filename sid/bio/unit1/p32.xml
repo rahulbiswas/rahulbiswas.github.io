@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What role do membrane rafts play in signal transduction?</text>
+        <option>Block signals</option>
+        <option>Organize signaling components</option>
+        <option>Store energy</option>
+        <option>Transport ions</option>
+        <answer>Organize signaling components</answer>
+        <explanation>Membrane rafts concentrate and organize signaling proteins to facilitate efficient signal transduction.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate membrane protein activity?</text>
+        <option>They don't regulate it</option>
+        <option>Through multiple mechanisms including phosphorylation</option>
+        <option>Through temperature only</option>
+        <option>Through random processes</option>
+        <answer>Through multiple mechanisms including phosphorylation</answer>
+        <explanation>Cells regulate membrane protein activity through phosphorylation, ligand binding, and other modifications.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane fusion specificity?</text>
+        <option>Random events</option>
+        <option>Specific protein interactions</option>
+        <option>Temperature only</option>
+        <option>pH only</option>
+        <answer>Specific protein interactions</answer>
+        <explanation>Membrane fusion is controlled by specific interactions between fusion proteins and their target membranes.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain lipid asymmetry?</text>
+        <option>They don't maintain it</option>
+        <option>Through lipid transporters</option>
+        <option>Through temperature control</option>
+        <option>Through random movement</option>
+        <answer>Through lipid transporters</answer>
+        <explanation>Specific lipid transporters actively maintain different lipid compositions in each membrane leaflet.</explanation>
+    </question>
+    <question>
+        <text>What role do membrane proteins play in cell adhesion?</text>
+        <option>No role</option>
+        <option>Mediate specific cell-cell contacts</option>
+        <option>Block adhesion</option>
+        <option>Transport molecules</option>
+        <answer>Mediate specific cell-cell contacts</answer>
+        <explanation>Membrane proteins like cadherins and integrins mediate specific cell-cell and cell-matrix adhesion.</explanation>
+    </question>
+</questions>

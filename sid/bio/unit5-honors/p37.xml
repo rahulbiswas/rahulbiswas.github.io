@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of FANCD2?</text>
+        <option>Process RNA</option>
+        <option>Repair DNA crosslinks</option>
+        <option>Modify histones</option>
+        <option>Transcribe genes</option>
+        <answer>Repair DNA crosslinks</answer>
+        <explanation>FANCD2 is activated by ubiquitination to coordinate the repair of DNA interstrand crosslinks.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex methylates rRNA?</text>
+        <option>Fibrillarin</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>Fibrillarin</answer>
+        <explanation>Fibrillarin is a methyltransferase that adds methyl groups to specific sites in ribosomal RNA.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of SMCHD1?</text>
+        <option>Repair DNA</option>
+        <option>X inactivation</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>X inactivation</answer>
+        <explanation>SMCHD1 helps maintain X chromosome inactivation by promoting chromosome compaction and gene silencing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds m5C to RNA?</text>
+        <option>NSUN2</option>
+        <option>DNMT1</option>
+        <option>TET1</option>
+        <option>METTL3</option>
+        <answer>NSUN2</answer>
+        <explanation>NSUN2 is a methyltransferase that adds 5-methylcytosine modifications to various RNA molecules.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of CHD1?</text>
+        <option>Process RNA</option>
+        <option>Remodel nucleosomes</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Remodel nucleosomes</answer>
+        <explanation>CHD1 is a chromatin remodeler that repositions nucleosomes to regulate gene accessibility.</explanation>
+    </question>
+</questions>

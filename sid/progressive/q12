@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The conscience of the people, in a time of grave national problems, has called into being a new party, born of the nation's sense of justice... We stand at Armageddon, and we battle for the Lord."
+- Theodore Roosevelt, Progressive Party Convention, 1912</stimulus>
+        <prompt>The formation of this new party was most directly caused by:</prompt>
+        <options>
+            <option letter="a">Socialist party growth</option>
+            <option letter="b">Republican party split</option>
+            <option letter="c">Democratic party reforms</option>
+            <option letter="d">Labor party emergence</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Progressive (Bull Moose) Party formed after the split between Roosevelt and Taft divided the Republican Party over the direction of progressive reforms.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of children working in a textile mill alongside newspaper headline: "Massachusetts Passes Nation's First Minimum Working Age Law, 1912"]</stimulus>
+        <prompt>This type of legislation most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Muckraking journalism</option>
+            <option letter="b">Supreme Court decisions</option>
+            <option letter="c">Presidential orders</option>
+            <option letter="d">Corporate initiatives</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Muckraking journalism exposing child labor conditions, particularly through photographs and investigative reports, led to state-level child labor regulations.</explanation>
+    </question>
+    <question>
+        <stimulus>"The old parties are husks, with no real soul within either, divided on artificial lines, boss-ridden and privilege-controlled, each a jumble of incongruous elements, and neither daring to speak out wisely and fearlessly on what should be said on the vital issues of the day."
+- Robert La Follette, 1911</stimulus>
+        <prompt>This criticism most directly supported which Progressive Era goal?</prompt>
+        <options>
+            <option letter="a">Direct primary elections</option>
+            <option letter="b">Federal reserve creation</option>
+            <option letter="c">Conservation policy</option>
+            <option letter="d">Immigration restriction</option>
+        </options>
+        <answer>a</answer>
+        <explanation>La Follette's criticism of party boss control supported the Progressive goal of implementing direct primary elections to give voters more control over candidate selection.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing increases in settlement house programs: Education Classes, Health Clinics, Job Training, Child Care Services, 1890-1920]</stimulus>
+        <prompt>The expansion of these services most directly reflected Progressive Era beliefs about:</prompt>
+        <options>
+            <option letter="a">Environmental determinism</option>
+            <option letter="b">Social Darwinism</option>
+            <option letter="c">Manifest Destiny</option>
+            <option letter="d">Laissez-faire economics</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The growth of settlement house services reflected Progressive beliefs in environmental determinism - that improving people's social environment would lead to personal and social improvement.</explanation>
+    </question>
+</quiz>

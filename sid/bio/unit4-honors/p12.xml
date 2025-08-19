@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of beta oxidation in cellular respiration?</text>
+        <option>To break down glucose</option>
+        <option>To break down fatty acids into acetyl-CoA</option>
+        <option>To synthesize proteins</option>
+        <option>To produce glucose</option>
+        <answer>To break down fatty acids into acetyl-CoA</answer>
+        <explanation>Beta oxidation breaks down fatty acids into two-carbon units of acetyl-CoA, which can then enter the Krebs cycle for energy production.</explanation>
+    </question>
+    <question>
+        <text>Where does beta oxidation occur in eukaryotic cells?</text>
+        <option>Cytoplasm</option>
+        <option>Mitochondrial matrix</option>
+        <option>Chloroplasts</option>
+        <option>Endoplasmic reticulum</option>
+        <answer>Mitochondrial matrix</answer>
+        <explanation>Beta oxidation takes place in the mitochondrial matrix, where the enzymes needed for fatty acid breakdown are located.</explanation>
+    </question>
+    <question>
+        <text>What is the main advantage of using fats for energy?</text>
+        <option>They produce less ATP</option>
+        <option>They are easier to break down</option>
+        <option>They yield more energy per gram</option>
+        <option>They require less oxygen</option>
+        <answer>They yield more energy per gram</answer>
+        <explanation>Fats yield more energy per gram than carbohydrates because they are more reduced and contain more energy-rich bonds.</explanation>
+    </question>
+    <question>
+        <text>What happens to amino acids in cellular respiration?</text>
+        <option>They are always stored</option>
+        <option>They can be converted to glucose or acetyl-CoA</option>
+        <option>They are only used for protein synthesis</option>
+        <option>They are converted to fats</option>
+        <answer>They can be converted to glucose or acetyl-CoA</answer>
+        <explanation>Amino acids can be broken down and converted to either glucose or acetyl-CoA, depending on the specific amino acid, for use in cellular respiration.</explanation>
+    </question>
+    <question>
+        <text>What is the first step in fatty acid catabolism?</text>
+        <option>Glycolysis</option>
+        <option>Activation with CoA</option>
+        <option>Beta oxidation</option>
+        <option>Krebs cycle</option>
+        <answer>Activation with CoA</answer>
+        <explanation>Before beta oxidation can begin, fatty acids must first be activated by combining with CoA to form fatty acyl-CoA, using ATP in the process.</explanation>
+    </question>
+</questions>

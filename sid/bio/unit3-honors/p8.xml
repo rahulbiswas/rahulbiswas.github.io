@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>What is the primary role of fermentation in cellular metabolism?</text>
+        <option>Producing large amounts of ATP</option>
+        <option>Regenerating NAD+ for glycolysis</option>
+        <option>Creating glucose molecules</option>
+        <option>Consuming oxygen</option>
+        <answer>Regenerating NAD+ for glycolysis</answer>
+        <explanation>Fermentation regenerates NAD+ from NADH, allowing glycolysis to continue when oxygen is unavailable. This process ensures cells can continue producing some ATP through glycolysis under anaerobic conditions.</explanation>
+    </question>
+    <question>
+        <text>How does lactic acid fermentation differ from alcoholic fermentation?</text>
+        <option>In the final electron acceptor and end products</option>
+        <option>In the amount of ATP produced</option>
+        <option>In the starting molecule used</option>
+        <option>In the requirement for oxygen</option>
+        <answer>In the final electron acceptor and end products</answer>
+        <explanation>While both types regenerate NAD+, lactic acid fermentation reduces pyruvate to lactate, while alcoholic fermentation reduces pyruvate to ethanol and CO2. The pathway chosen depends on the organism and conditions.</explanation>
+    </question>
+    <question>
+        <text>Why do muscle cells switch to lactic acid fermentation during intense exercise?</text>
+        <option>To produce more ATP than aerobic respiration</option>
+        <option>Because oxygen supply cannot meet demand</option>
+        <option>To produce carbon dioxide</option>
+        <option>To store energy for later use</option>
+        <answer>Because oxygen supply cannot meet demand</answer>
+        <explanation>During intense exercise, oxygen demand exceeds supply to muscle cells. They switch to lactic acid fermentation to maintain NAD+ levels and continue producing ATP through glycolysis, though less efficiently than aerobic respiration.</explanation>
+    </question>
+    <question>
+        <text>What is the role of yeast in bread making?</text>
+        <option>Adding protein to the bread</option>
+        <option>Breaking down gluten</option>
+        <option>Performing alcoholic fermentation</option>
+        <option>Absorbing excess water</option>
+        <answer>Performing alcoholic fermentation</answer>
+        <explanation>Yeast performs alcoholic fermentation in bread dough, producing ethanol and CO2. The CO2 bubbles cause the dough to rise, while the ethanol evaporates during baking, contributing to bread's texture and flavor.</explanation>
+    </question>
+    <question>
+        <text>What determines whether a cell uses fermentation or cellular respiration?</text>
+        <option>The amount of glucose available</option>
+        <option>The presence or absence of oxygen</option>
+        <option>The temperature of the environment</option>
+        <option>The type of organism</option>
+        <answer>The presence or absence of oxygen</answer>
+        <explanation>The availability of oxygen determines whether cells use fermentation or cellular respiration. When oxygen is present, cells typically use aerobic respiration; when oxygen is scarce or absent, they switch to fermentation.</explanation>
+    </question>
+</quiz>

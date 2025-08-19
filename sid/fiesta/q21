@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does built-in stabilizer affect the size of the multiplier?</prompt>
+        <options>
+            <option letter="a">Increases the multiplier</option>
+            <option letter="b">Decreases the multiplier</option>
+            <option letter="c">Has no effect on the multiplier</option>
+            <option letter="d">Eliminates the multiplier effect</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Built-in stabilizers like progressive taxes and unemployment benefits reduce the multiplier effect because they automatically decrease the amount of each round of spending that becomes someone else's income.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the labor force participation rate when discouraged workers leave the labor force?</prompt>
+        <options>
+            <option letter="a">Increases</option>
+            <option letter="b">Decreases</option>
+            <option letter="c">Stays the same</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When discouraged workers leave the labor force, the labor force participation rate decreases because these individuals are no longer counted as part of the labor force (denominator in the calculation).</explanation>
+    </question>
+
+    <question>
+        <prompt>Which best describes the relationship between inflation and unemployment in the long run?</prompt>
+        <options>
+            <option letter="a">There is a stable tradeoff between them</option>
+            <option letter="b">They are directly related</option>
+            <option letter="c">There is no stable tradeoff between them</option>
+            <option letter="d">They must always move in opposite directions</option>
+        </options>
+        <answer>c</answer>
+        <explanation>In the long run, there is no stable tradeoff between inflation and unemployment, as the Phillips Curve becomes vertical at the natural rate of unemployment, showing that any inflation rate is possible at the natural rate.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the money multiplier when the required reserve ratio increases?</prompt>
+        <options>
+            <option letter="a">Money multiplier increases</option>
+            <option letter="b">Money multiplier decreases</option>
+            <option letter="c">Money multiplier stays the same</option>
+            <option letter="d">Money multiplier becomes undefined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the required reserve ratio increases, banks must hold more reserves and can loan out less money, resulting in a smaller money multiplier and less money creation in the banking system.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Andrew Mellon's tax policies as Treasury Secretary:</prompt>
+        <options>
+            <option letter="a">Increased taxes on wealthy Americans</option>
+            <option letter="b">Dramatically reduced taxes on high incomes</option>
+            <option letter="c">Expanded social programs</option>
+            <option letter="d">Focused on helping the poor</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Andrew Mellon's "scientific taxation" policy dramatically reduced taxes on wealthy Americans and corporations during his tenure as Treasury Secretary (1921-1932). He argued that lower taxes on the rich would stimulate economic growth and increase government revenue. His policies epitomized the pro-business Republican administrations of the 1920s and contributed to growing economic inequality before the Great Depression.</explanation>
+    </question>
+</quiz>

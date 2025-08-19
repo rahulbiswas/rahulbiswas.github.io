@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Reconstruction Finance Corporation's limitation was its:</prompt>
+        <options>
+            <option letter="a">Focus on direct aid to individuals</option>
+            <option letter="b">Indirect approach to economic relief</option>
+            <option letter="c">Excessive government spending</option>
+            <option letter="d">Support for labor unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The RFC's main limitation was its indirect approach to economic relief. By focusing on providing loans to banks, railroads, and corporations rather than direct aid to individuals, it reflected Hoover's belief in "trickle-down" economics. This indirect approach proved inadequate for addressing the immediate needs of millions of Americans suffering during the Depression.</explanation>
+    </question>
+</quiz>

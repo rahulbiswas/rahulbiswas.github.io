@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The money multiplier would decrease if:</prompt>
+        <options>
+            <option letter="a">Banks reduce their excess reserves</option>
+            <option letter="b">The required reserve ratio decreases</option>
+            <option letter="c">The public holds more currency relative to deposits</option>
+            <option letter="d">The discount rate is lowered</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When the public holds more currency instead of deposits, banks have fewer deposits to multiply through lending, reducing the money multiplier.</explanation>
+    </question>
+
+    <question>
+        <prompt>During a recession, cyclical unemployment:</prompt>
+        <options>
+            <option letter="a">Equals the natural rate of unemployment</option>
+            <option letter="b">Is negative</option>
+            <option letter="c">Is positive</option>
+            <option letter="d">Does not affect the unemployment rate</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During recessions, cyclical unemployment is positive because actual unemployment exceeds the natural rate due to insufficient aggregate demand.</explanation>
+    </question>
+
+    <question>
+        <prompt>The primary difference between GDP and GNP is the treatment of:</prompt>
+        <options>
+            <option letter="a">Government spending</option>
+            <option letter="b">Net exports</option>
+            <option letter="c">Net factor payments from abroad</option>
+            <option letter="d">Transfer payments</option>
+        </options>
+        <answer>c</answer>
+        <explanation>GNP differs from GDP by including net factor payments from abroad, which represent income earned by domestic factors abroad minus income earned by foreign factors domestically.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which policy combination would most effectively combat both unemployment and inflation?</prompt>
+        <options>
+            <option letter="a">Expansionary fiscal and monetary policy</option>
+            <option letter="b">Contractionary fiscal and monetary policy</option>
+            <option letter="c">Supply-side policies and demand management</option>
+            <option letter="d">Increased taxes and decreased interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Supply-side policies can increase potential output while demand management can control inflation, addressing both problems simultaneously.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which force is primarily responsible for the high surface tension of water?</text>
+        <option>Van der Waals forces</option>
+        <option>Covalent bonds</option>
+        <option>Hydrogen bonds</option>
+        <option>Ionic bonds</option>
+        <answer>Hydrogen bonds</answer>
+        <explanation>Hydrogen bonding between water molecules creates strong cohesive forces that result in high surface tension.</explanation>
+    </question>
+    <question>
+        <text>What happens to the density of water when it freezes?</text>
+        <option>It increases significantly</option>
+        <option>It stays the same</option>
+        <option>It decreases slightly</option>
+        <option>It fluctuates randomly</option>
+        <answer>It decreases slightly</answer>
+        <explanation>Water's unique hydrogen bonding pattern in ice creates a crystalline structure that is less dense than liquid water, causing ice to float.</explanation>
+    </question>
+    <question>
+        <text>Which property of water is essential for temperature regulation in living organisms?</text>
+        <option>Low specific heat capacity</option>
+        <option>High specific heat capacity</option>
+        <option>Low heat of vaporization</option>
+        <option>Low boiling point</option>
+        <answer>High specific heat capacity</answer>
+        <explanation>Water's high specific heat capacity allows organisms to maintain stable temperatures despite environmental changes or metabolic heat production.</explanation>
+    </question>
+    <question>
+        <text>What is the bond angle in a water molecule?</text>
+        <option>180 degrees</option>
+        <option>120 degrees</option>
+        <option>104.5 degrees</option>
+        <option>90 degrees</option>
+        <answer>104.5 degrees</answer>
+        <explanation>The water molecule has a bent shape with an H-O-H bond angle of 104.5 degrees due to oxygen's electron configuration.</explanation>
+    </question>
+    <question>
+        <text>Which property of water makes it essential for cellular transport?</text>
+        <option>Its ability to form covalent bonds</option>
+        <option>Its ability to act as a universal solvent</option>
+        <option>Its high density</option>
+        <option>Its neutral charge</option>
+        <answer>Its ability to act as a universal solvent</answer>
+        <explanation>Water's polar nature makes it an excellent solvent for many biological molecules, facilitating cellular transport and reactions.</explanation>
+    </question>
+</questions>

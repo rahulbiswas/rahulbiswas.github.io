@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Bonus Army's 1932 march demonstrated:</prompt>
+        <options>
+            <option letter="a">Veterans' support for Hoover</option>
+            <option letter="b">The human impact of the Depression</option>
+            <option letter="c">Military strength</option>
+            <option letter="d">Political unity</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Bonus Army march of 1932, when World War I veterans and their families came to Washington D.C. seeking early payment of service bonuses, demonstrated the human impact of the Great Depression. Their peaceful protest and subsequent violent eviction by military forces highlighted both the economic desperation of the era and the Hoover administration's harsh response to citizens seeking relief.</explanation>
+    </question>
+</quiz>

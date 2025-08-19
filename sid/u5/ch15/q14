@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did the Hamburg Massacre of 1876 have on Reconstruction?</prompt>
+        <options>
+            <option letter="a">Demonstrated the federal government's unwillingness to protect black rights</option>
+            <option letter="b">Led to increased military presence in the South</option>
+            <option letter="c">Resulted in new civil rights legislation</option>
+            <option letter="d">Strengthened Republican control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Hamburg Massacre, where white supremacists killed African American militia members in South Carolina, demonstrated the federal government's declining willingness to protect black rights.</explanation>
+    </question>
+    <question>
+        <prompt>What was the "Reconstruction Constitution" in South Carolina known for?</prompt>
+        <options>
+            <option letter="a">Creating the South's most democratic state government</option>
+            <option letter="b">Restricting African American rights</option>
+            <option letter="c">Maintaining slavery</option>
+            <option letter="d">Supporting Confederate policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>South Carolina's 1868 "Reconstruction Constitution" created the most democratic state government in the South, with universal male suffrage and other progressive reforms.</explanation>
+    </question>
+    <question>
+        <prompt>What was the primary goal of the Knights of the White Camelia?</prompt>
+        <options>
+            <option letter="a">To oppose Reconstruction and maintain white supremacy</option>
+            <option letter="b">To support Republican policies</option>
+            <option letter="c">To promote economic development</option>
+            <option letter="d">To protect freed slaves</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Knights of the White Camelia, similar to the KKK, was a secret society formed to oppose Reconstruction policies and maintain white supremacy in the South.</explanation>
+    </question>
+    <question>
+        <prompt>What role did Robert Smalls play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Served as a Republican congressman from South Carolina</option>
+            <option letter="b">Led the Freedmen's Bureau</option>
+            <option letter="c">Commanded Confederate forces</option>
+            <option letter="d">Headed the Democratic Party</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Robert Smalls, a former slave who became famous for stealing a Confederate ship, served as a Republican congressman from South Carolina during Reconstruction.</explanation>
+    </question>
+</quiz>

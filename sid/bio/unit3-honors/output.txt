@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do biofilms modify their collective energy metabolism?</text>
+        <option>Each cell maintains independent metabolism</option>
+        <option>They develop coordinated metabolic networks</option>
+        <option>They stop all metabolism</option>
+        <option>They only use fermentation</option>
+        <answer>They develop coordinated metabolic networks</answer>
+        <explanation>Biofilms develop sophisticated metabolic networks where different regions specialize in specific metabolic functions, sharing resources and coordinating energy production across the community.</explanation>
+    </question>
+    <question>
+        <text>What metabolic adaptations occur in bacterial communities?</text>
+        <option>No adaptations occur</option>
+        <option>They develop metabolic specialization and cooperation</option>
+        <option>All bacteria use identical pathways</option>
+        <option>They compete for all resources</option>
+        <answer>They develop metabolic specialization and cooperation</answer>
+        <explanation>Bacterial communities develop metabolic specialization where different members perform complementary metabolic functions, sharing resources and creating efficient energy utilization networks.</explanation>
+    </question>
+    <question>
+        <text>How do microbial mats organize their energy metabolism?</text>
+        <option>Randomly throughout the mat</option>
+        <option>In distinct layers with specialized functions</option>
+        <option>Only at the surface</option>
+        <option>Without any organization</option>
+        <answer>In distinct layers with specialized functions</answer>
+        <explanation>Microbial mats organize into distinct layers where different groups of organisms perform specialized metabolic functions, creating an efficient system for energy and nutrient cycling.</explanation>
+    </question>
+    <question>
+        <text>What role does quorum sensing play in community metabolism?</text>
+        <option>It has no metabolic effects</option>
+        <option>It coordinates community-wide metabolic activities</option>
+        <option>It only affects individual cells</option>
+        <option>It reduces metabolism</option>
+        <answer>It coordinates community-wide metabolic activities</answer>
+        <explanation>Quorum sensing helps coordinate metabolic activities across microbial communities, allowing them to adjust their collective metabolism based on population density and environmental conditions.</explanation>
+    </question>
+    <question>
+        <text>How do syntrophic relationships affect energy efficiency?</text>
+        <option>They reduce efficiency</option>
+        <option>They improve overall metabolic efficiency</option>
+        <option>They have no effect</option>
+        <option>They only benefit one species</option>
+        <answer>They improve overall metabolic efficiency</answer>
+        <explanation>Syntrophic relationships improve overall metabolic efficiency by allowing organisms to perform complementary metabolic functions, making energetically unfavorable reactions possible through cooperation.</explanation>
+    </question>
+</quiz>

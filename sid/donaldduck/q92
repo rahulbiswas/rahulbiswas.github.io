@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the main purpose of HUAC hearings?</prompt>
+    <options>
+        <option letter="a">Find subversives</option>
+        <option letter="b">Reform government</option>
+        <option letter="c">Investigate crime</option>
+        <option letter="d">Study economics</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The House Un-American Activities Committee held hearings to identify and expose alleged communists and other political radicals.</explanation>
+</question>

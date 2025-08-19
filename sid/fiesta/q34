@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which economic indicator is considered a leading indicator of inflation?</prompt>
+        <options>
+            <option letter="a">The unemployment rate</option>
+            <option letter="b">The Producer Price Index</option>
+            <option letter="c">The Consumer Price Index</option>
+            <option letter="d">The GDP deflator</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Producer Price Index (PPI) is considered a leading indicator of inflation because changes in production costs often lead to subsequent changes in consumer prices.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in the natural rate of unemployment affect potential GDP?</prompt>
+        <options>
+            <option letter="a">Increases potential GDP</option>
+            <option letter="b">Decreases potential GDP</option>
+            <option letter="c">Has no effect on potential GDP</option>
+            <option letter="d">Only affects actual GDP</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the natural rate of unemployment decreases potential GDP because it means a larger portion of the labor force is structurally or frictionally unemployed at full employment.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the multiplier effect when the marginal propensity to import increases?</prompt>
+        <options>
+            <option letter="a">The multiplier effect increases</option>
+            <option letter="b">The multiplier effect decreases</option>
+            <option letter="c">The multiplier effect remains constant</option>
+            <option letter="d">The multiplier effect becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the marginal propensity to import increases, the multiplier effect decreases because more of each additional dollar of income is spent on imports rather than domestic goods, reducing the impact on domestic GDP.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an appreciation of the domestic currency affect aggregate supply?</prompt>
+        <options>
+            <option letter="a">Shifts SRAS left</option>
+            <option letter="b">Shifts SRAS right</option>
+            <option letter="c">Moves along the SRAS curve</option>
+            <option letter="d">Has no effect on SRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Currency appreciation shifts SRAS right because it reduces the cost of imported inputs, lowering production costs and allowing firms to supply more output at any given price level.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary role of vacuoles in plant cells?</text>
+        <option>Maintain turgor pressure</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>DNA storage</option>
+        <answer>Maintain turgor pressure</answer>
+        <explanation>Plant vacuoles maintain cell turgor pressure through water storage and osmotic regulation.</explanation>
+    </question>
+    <question>
+        <text>Which molecules are stored in vacuoles?</text>
+        <option>Ions and pigments</option>
+        <option>DNA and RNA</option>
+        <option>Proteins and lipids</option>
+        <option>Carbohydrates only</option>
+        <answer>Ions and pigments</answer>
+        <explanation>Vacuoles store various molecules including ions, pigments, and secondary metabolites.</explanation>
+    </question>
+    <question>
+        <text>How do vacuoles contribute to cell defense?</text>
+        <option>Store toxic compounds</option>
+        <option>Produce antibodies</option>
+        <option>Generate heat</option>
+        <option>Create barriers</option>
+        <answer>Store toxic compounds</answer>
+        <explanation>Vacuoles store toxic compounds that help protect plants from herbivores and pathogens.</explanation>
+    </question>
+    <question>
+        <text>What controls transport across vacuolar membranes?</text>
+        <option>Transport proteins</option>
+        <option>Simple diffusion</option>
+        <option>Passive flow</option>
+        <option>Random movement</option>
+        <answer>Transport proteins</answer>
+        <explanation>Specific transport proteins in the vacuolar membrane regulate the movement of substances in and out.</explanation>
+    </question>
+    <question>
+        <text>What happens to vacuoles during cell growth?</text>
+        <option>They enlarge</option>
+        <option>They divide</option>
+        <option>They disappear</option>
+        <option>They shrink</option>
+        <answer>They enlarge</answer>
+        <explanation>Vacuoles typically enlarge as plant cells grow, often occupying most of the cell volume.</explanation>
+    </question>
+</questions>

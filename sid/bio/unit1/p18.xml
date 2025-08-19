@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What causes protein misfolding diseases?</text>
+        <option>Excess protein synthesis</option>
+        <option>Abnormal protein aggregation</option>
+        <option>Normal aging</option>
+        <option>Increased metabolism</option>
+        <answer>Abnormal protein aggregation</answer>
+        <explanation>Protein misfolding diseases result from abnormal protein aggregation, often due to mutations that affect proper folding.</explanation>
+    </question>
+    <question>
+        <text>How do prions cause disease?</text>
+        <option>By producing toxins</option>
+        <option>By inducing mutations</option>
+        <option>By converting normal proteins to misfolded forms</option>
+        <option>By blocking protein synthesis</option>
+        <answer>By converting normal proteins to misfolded forms</answer>
+        <explanation>Prions cause disease by converting normal proteins into misfolded forms that can accumulate and spread the misfolding process.</explanation>
+    </question>
+    <question>
+        <text>What role do molecular chaperones play in protein trafficking?</text>
+        <option>They break down proteins</option>
+        <option>They maintain proper folding during transport</option>
+        <option>They synthesize new proteins</option>
+        <option>They form membranes</option>
+        <answer>They maintain proper folding during transport</answer>
+        <explanation>Molecular chaperones help maintain proper protein folding during cellular transport to prevent aggregation or misfolding.</explanation>
+    </question>
+    <question>
+        <text>Which condition promotes protein denaturation?</text>
+        <option>Normal body temperature</option>
+        <option>Neutral pH</option>
+        <option>Extreme pH changes</option>
+        <option>Isotonic conditions</option>
+        <answer>Extreme pH changes</answer>
+        <explanation>Extreme pH changes can disrupt protein structure by affecting amino acid charge states, leading to denaturation.</explanation>
+    </question>
+    <question>
+        <text>What is the function of protein degradation pathways?</text>
+        <option>Protein synthesis</option>
+        <option>Quality control and regulation</option>
+        <option>Energy production</option>
+        <option>Membrane formation</option>
+        <answer>Quality control and regulation</answer>
+        <explanation>Protein degradation pathways remove damaged or unnecessary proteins, maintaining cellular quality control and regulation.</explanation>
+    </question>
+</questions>

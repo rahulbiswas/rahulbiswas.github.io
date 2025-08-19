@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If MPC = 0.75 and income increases by $1000, what is the change in saving?</prompt>
+        <options>
+            <option letter="a">$750</option>
+            <option letter="b">$250</option>
+            <option letter="c">$1000</option>
+            <option letter="d">$0</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With MPC = 0.75, the Marginal Propensity to Save (MPS) = 1 - MPC = 0.25. When income increases by $1000, consumption increases by $750 (MPC × $1000) and saving increases by $250 (MPS × $1000), as each additional dollar must be either consumed or saved.</explanation>
+    </question>
+</quiz>

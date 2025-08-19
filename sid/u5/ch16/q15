@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="57">
+        <prompt>What impact did "yellow journalism" have on public opinion?</prompt>
+        <options>
+            <option letter="a">Sensationalized news to increase newspaper sales</option>
+            <option letter="b">Promoted accurate reporting</option>
+            <option letter="c">Reduced media influence</option>
+            <option letter="d">Improved journalism standards</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Yellow journalism, pioneered by Pulitzer and Hearst, used sensationalized stories and dramatic headlines to increase newspaper sales and influence public opinion.</explanation>
+    </question>
+    <question number="58">
+        <prompt>How did the "department store" change urban commerce?</prompt>
+        <options>
+            <option letter="a">Created new retail experiences and shopping culture</option>
+            <option letter="b">Limited consumer choices</option>
+            <option letter="c">Increased product prices</option>
+            <option letter="d">Reduced urban development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Department stores revolutionized urban commerce by creating new shopping experiences, fixed pricing, and modern marketing techniques.</explanation>
+    </question>
+    <question number="59">
+        <prompt>What was the significance of the "clearing house" system?</prompt>
+        <options>
+            <option letter="a">Facilitated bank transactions and financial stability</option>
+            <option letter="b">Increased banking crises</option>
+            <option letter="c">Limited money circulation</option>
+            <option letter="d">Reduced bank cooperation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The clearing house system facilitated transactions between banks and provided stability during financial crises, helping develop modern banking practices.</explanation>
+    </question>
+    <question number="60">
+        <prompt>How did the "typewriter" affect office work?</prompt>
+        <options>
+            <option letter="a">Created new jobs for women and changed business communication</option>
+            <option letter="b">Reduced office efficiency</option>
+            <option letter="c">Limited job opportunities</option>
+            <option letter="d">Decreased document production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The typewriter revolutionized office work by creating new jobs for women as typists and stenographers while standardizing business communication.</explanation>
+    </question></quiz>

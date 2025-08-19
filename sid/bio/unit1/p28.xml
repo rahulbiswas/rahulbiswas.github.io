@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of gap junctions?</text>
+        <option>Block cell communication</option>
+        <option>Allow direct cell-cell exchange</option>
+        <option>Store nutrients</option>
+        <option>Produce energy</option>
+        <answer>Allow direct cell-cell exchange</answer>
+        <explanation>Gap junctions form channels between adjacent cells allowing direct exchange of small molecules and ions.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain membrane asymmetry?</text>
+        <option>Random distribution</option>
+        <option>Active lipid translocation</option>
+        <option>Passive diffusion</option>
+        <option>Temperature control</option>
+        <answer>Active lipid translocation</answer>
+        <explanation>Cells use specialized enzymes called flippases and scramblases to maintain different lipid compositions in each membrane leaflet.</explanation>
+    </question>
+    <question>
+        <text>What role do glycolipids play in membranes?</text>
+        <option>Energy storage</option>
+        <option>Cell recognition</option>
+        <option>Protein synthesis</option>
+        <option>Ion transport</option>
+        <answer>Cell recognition</answer>
+        <explanation>Glycolipids on cell surfaces act as recognition sites for cell-cell interactions and molecular signaling.</explanation>
+    </question>
+    <question>
+        <text>How do mechanosensitive channels work?</text>
+        <option>Using ATP</option>
+        <option>Through membrane tension</option>
+        <option>By temperature changes</option>
+        <option>Through pH changes</option>
+        <answer>Through membrane tension</answer>
+        <explanation>Mechanosensitive channels open in response to mechanical force or membrane tension changes.</explanation>
+    </question>
+    <question>
+        <text>What determines membrane protein topology?</text>
+        <option>Random insertion</option>
+        <option>Signal sequences and insertion machinery</option>
+        <option>Only temperature</option>
+        <option>Only pH</option>
+        <answer>Signal sequences and insertion machinery</answer>
+        <explanation>Membrane protein topology is determined by signal sequences and cellular machinery that direct proper protein insertion.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What role did the World Bank play in the Bretton Woods system?</prompt>
+        <options>
+            <option letter="a">Setting exchange rates</option>
+            <option letter="b">Providing reconstruction loans</option>
+            <option letter="c">Regulating gold prices</option>
+            <option letter="d">Managing currency markets</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The World Bank was established to provide loans for postwar reconstruction and development, complementing the IMF's monetary role.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does a bank's balance sheet change when it creates a loan?</prompt>
+        <options>
+            <option letter="a">Only assets increase</option>
+            <option letter="b">Only liabilities increase</option>
+            <option letter="c">Both assets and liabilities increase equally</option>
+            <option letter="d">Neither assets nor liabilities change</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When a bank creates a loan, both assets (the loan) and liabilities (the deposit created) increase by the same amount.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was a key difference between commodity money and the gold standard?</prompt>
+        <options>
+            <option letter="a">Commodity money was the actual gold, while gold standard used gold-backed paper</option>
+            <option letter="b">Commodity money wasn't government regulated</option>
+            <option letter="c">Gold standard didn't use physical gold</option>
+            <option letter="d">Commodity money couldn't be traded</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Commodity money involved using actual gold or silver coins, while the gold standard used paper money that could be converted to gold at a fixed rate.</explanation>
+    </question>
+
+    <question>
+        <prompt>Under the Federal Reserve's original structure, who owned the Reserve Banks?</prompt>
+        <options>
+            <option letter="a">The U.S. Treasury</option>
+            <option letter="b">Member commercial banks</option>
+            <option letter="c">The general public</option>
+            <option letter="d">Foreign investors</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Member banks were required to purchase stock in their regional Federal Reserve Bank, making them the owners of the Reserve Banks.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the money supply when banks hold excess reserves?</prompt>
+        <options>
+            <option letter="a">Money supply expands faster</option>
+            <option letter="b">Money supply expands slower</option>
+            <option letter="c">Money supply remains unchanged</option>
+            <option letter="d">Money supply becomes more volatile</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When banks hold excess reserves rather than lending them out, the money creation process slows down, leading to slower money supply growth.</explanation>
+    </question>
+</quiz>

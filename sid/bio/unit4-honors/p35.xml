@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of phosphofructokinase-2 (PFK-2)?</text>
+        <option>To break down glucose</option>
+        <option>To regulate glycolysis</option>
+        <option>To store energy</option>
+        <option>To transport glucose</option>
+        <answer>To regulate glycolysis</answer>
+        <explanation>PFK-2 produces fructose-2,6-bisphosphate, which is a potent activator of PFK-1, thus playing a key role in regulating glycolysis.</explanation>
+    </question>
+    <question>
+        <text>How does insulin affect PFK-2?</text>
+        <option>It inhibits it</option>
+        <option>It activates it</option>
+        <option>It has no effect</option>
+        <option>It breaks it down</option>
+        <answer>It activates it</answer>
+        <explanation>Insulin activates PFK-2 through phosphorylation, leading to increased production of fructose-2,6-bisphosphate and enhanced glycolysis.</explanation>
+    </question>
+    <question>
+        <text>What is metabolic flux control?</text>
+        <option>Random pathway regulation</option>
+        <option>Coordinated regulation of pathway rates</option>
+        <option>Storage of metabolites</option>
+        <option>Transport of molecules</option>
+        <answer>Coordinated regulation of pathway rates</answer>
+        <explanation>Metabolic flux control involves the coordinated regulation of pathway rates through various mechanisms to maintain optimal metabolic flow.</explanation>
+    </question>
+    <question>
+        <text>What determines the rate-limiting step?</text>
+        <option>The fastest reaction</option>
+        <option>The slowest regulated step</option>
+        <option>Random selection</option>
+        <option>The last step</option>
+        <answer>The slowest regulated step</answer>
+        <explanation>The rate-limiting step is typically the slowest, highly regulated step in a metabolic pathway that controls the overall flux through the pathway.</explanation>
+    </question>
+    <question>
+        <text>How do cells coordinate multiple metabolic pathways?</text>
+        <option>They don't coordinate them</option>
+        <option>Through integrated regulatory systems</option>
+        <option>By chance</option>
+        <option>Through single enzymes</option>
+        <answer>Through integrated regulatory systems</answer>
+        <explanation>Cells coordinate multiple metabolic pathways through integrated regulatory systems including hormones, allosteric regulation, and transcriptional control.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How did the Spanish Flu pandemic specifically affect India?</prompt>
+        <options>
+            <option letter="a">It had minimal impact due to British protection</option>
+            <option letter="b">It caused the highest death toll of any country</option>
+            <option letter="c">It only affected urban areas</option>
+            <option letter="d">It strengthened the healthcare system</option>
+        </options>
+        <answer>b</answer>
+        <explanation>India suffered the highest death toll globally from the Spanish Flu, with 17-18 million deaths, exacerbated by British colonial policies, drought, and poor healthcare infrastructure.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main purpose of the Selective Service Act of 1917?</prompt>
+        <options>
+            <option letter="a">To create a volunteer army</option>
+            <option letter="b">To implement the first military draft</option>
+            <option letter="c">To train officers only</option>
+            <option letter="d">To build military bases</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Selective Service Act of 1917 implemented the first nationwide military draft since the Civil War, requiring all men aged 21-30 to register for potential military service.</explanation>
+    </question>
+
+    <question>
+        <prompt>What role did Jacob Lawrence play in documenting African American history?</prompt>
+        <options>
+            <option letter="a">He wrote newspaper articles</option>
+            <option letter="b">He created paintings about the Great Migration</option>
+            <option letter="c">He was a political leader</option>
+            <option letter="d">He composed music</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Jacob Lawrence created "The Migration Series," 60 paintings that powerfully documented the Great Migration of African Americans from South to North, becoming a crucial artistic record of this historical movement.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of Eugene V. Debs during this period?</prompt>
+        <options>
+            <option letter="a">He was a military general</option>
+            <option letter="b">He ran for president while imprisoned</option>
+            <option letter="c">He invented new weapons</option>
+            <option letter="d">He was a prohibition leader</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Eugene V. Debs, a Socialist Party leader, was imprisoned under the Espionage Act for opposing WWI, and famously ran for president in 1920 while still in prison.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main achievement of Alice Paul and the militant suffragists?</prompt>
+        <options>
+            <option letter="a">Getting women into combat roles</option>
+            <option letter="b">Pressuring for the 19th Amendment</option>
+            <option letter="c">Creating women's colleges</option>
+            <option letter="d">Running for Congress</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Alice Paul and militant suffragists used aggressive tactics like White House protests and hunger strikes to pressure Wilson's administration to support women's suffrage, leading to the 19th Amendment.</explanation>
+    </question>
+</quiz>

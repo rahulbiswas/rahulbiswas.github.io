@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="45">
+        <prompt>What was the primary goal of Jim Crow laws in the 1890s?</prompt>
+        <options>
+            <option letter="a">To establish complete racial segregation in public life</option>
+            <option letter="b">To protect African American rights</option>
+            <option letter="c">To promote racial equality</option>
+            <option letter="d">To reform education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Jim Crow laws were designed to establish and maintain complete racial segregation in all aspects of public life, creating a comprehensive system of white supremacy.</explanation>
+    </question>
+    <question number="46">
+        <prompt>What was the main purpose of the Sherman Silver Purchase Act of 1890?</prompt>
+        <options>
+            <option letter="a">To increase the amount of silver the government purchased monthly</option>
+            <option letter="b">To establish the gold standard</option>
+            <option letter="c">To reduce silver mining</option>
+            <option letter="d">To stabilize currency value</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Sherman Silver Purchase Act required the government to purchase 4.5 million ounces of silver monthly, more than double the previous amount, in an attempt to help silver producers.</explanation>
+    </question>
+    <question number="47">
+        <prompt>What role did the NAACP play in challenging segregation?</prompt>
+        <options>
+            <option letter="a">It used legal action to challenge discriminatory laws</option>
+            <option letter="b">It organized mass protests</option>
+            <option letter="c">It promoted economic boycotts</option>
+            <option letter="d">It supported political candidates</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The NAACP, founded in 1909, focused primarily on using legal action to challenge segregation and discrimination in the courts, establishing a pattern of civil rights litigation.</explanation>
+    </question>
+    <question number="48">
+        <prompt>What was the main effect of the Spanish-American War on American society?</prompt>
+        <options>
+            <option letter="a">It established the United States as a world power</option>
+            <option letter="b">It united North and South</option>
+            <option letter="c">It improved race relations</option>
+            <option letter="d">It strengthened isolationism</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Spanish-American War established the United States as a world power with overseas territories, marking a significant shift toward American imperialism and international influence.</explanation>
+    </question>
+</quiz>

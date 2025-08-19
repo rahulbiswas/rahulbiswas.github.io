@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Paschal's Plantation" case?</prompt>
+        <options>
+            <option letter="a">Demonstrated the limits of land redistribution efforts</option>
+            <option letter="b">Established sharecropping laws</option>
+            <option letter="c">Created new labor regulations</option>
+            <option letter="d">Protected freedmen's rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Paschal's Plantation case showed the limits of land redistribution when freedmen were forced to return land to its former Confederate owner despite Union promises.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Freedmen's Bureau handle labor contracts?</prompt>
+        <options>
+            <option letter="a">Mediated between planters and freedmen to establish fair contracts</option>
+            <option letter="b">Gave all land to freedmen</option>
+            <option letter="c">Supported plantation owners exclusively</option>
+            <option letter="d">Ignored labor issues entirely</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau mediated between planters and freedmen to establish fair labor contracts, though its effectiveness was limited by insufficient resources.</explanation>
+    </question>
+    <question>
+        <prompt>What role did African American churches play in political organization?</prompt>
+        <options>
+            <option letter="a">Served as centers for political meetings and voter education</option>
+            <option letter="b">Remained politically neutral</option>
+            <option letter="c">Supported Confederate interests</option>
+            <option letter="d">Opposed voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>African American churches served as crucial centers for political meetings, voter education, and community organization during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the impact of the "shop system" in sharecropping?</prompt>
+        <options>
+            <option letter="a">Created additional debt through overpriced goods</option>
+            <option letter="b">Provided fair prices to farmers</option>
+            <option letter="c">Improved agricultural efficiency</option>
+            <option letter="d">Reduced farming costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The shop system forced sharecroppers to buy supplies at inflated prices from plantation stores, creating additional debt and economic dependency.</explanation>
+    </question>
+</quiz>

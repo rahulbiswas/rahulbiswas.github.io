@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which World War I policy had the MOST lasting effect on American civil liberties?</prompt>
+        <options>
+            <option letter="a">The Espionage Act</option>
+            <option letter="b">The Selective Service Act</option>
+            <option letter="c">The Trading with the Enemy Act</option>
+            <option letter="d">The Lever Food Control Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Espionage Act of 1917 established precedents for limiting civil liberties during wartime that continue to influence American law today. While the draft ended with the war, food control expired, and trading restrictions were temporary, the Espionage Act remains in effect and has been used in numerous cases involving national security, from the Cold War to modern whistleblower prosecutions, establishing enduring limits on First Amendment protections.</explanation>
+    </question>
+</quiz>

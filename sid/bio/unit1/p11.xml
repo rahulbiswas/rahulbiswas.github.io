@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which level of protein structure describes the sequence of amino acids?</text>
+        <option>Primary structure</option>
+        <option>Secondary structure</option>
+        <option>Tertiary structure</option>
+        <option>Quaternary structure</option>
+        <answer>Primary structure</answer>
+        <explanation>The primary structure of a protein is the linear sequence of amino acids connected by peptide bonds.</explanation>
+    </question>
+    <question>
+        <text>What type of bond stabilizes an alpha helix?</text>
+        <option>Peptide bonds</option>
+        <option>Hydrogen bonds</option>
+        <option>Disulfide bridges</option>
+        <option>Ionic bonds</option>
+        <answer>Hydrogen bonds</answer>
+        <explanation>Alpha helices are stabilized by hydrogen bonds between the C=O of one peptide bond and the N-H of another peptide bond.</explanation>
+    </question>
+    <question>
+        <text>Which amino acid often disrupts alpha helices?</text>
+        <option>Alanine</option>
+        <option>Leucine</option>
+        <option>Proline</option>
+        <option>Glycine</option>
+        <answer>Proline</answer>
+        <explanation>Proline's rigid ring structure disrupts the normal hydrogen bonding pattern of alpha helices, often causing bends in the protein.</explanation>
+    </question>
+    <question>
+        <text>What stabilizes the quaternary structure of proteins?</text>
+        <option>Only hydrogen bonds</option>
+        <option>Only disulfide bridges</option>
+        <option>Multiple types of interactions</option>
+        <option>Only ionic bonds</option>
+        <answer>Multiple types of interactions</answer>
+        <explanation>Quaternary structure is stabilized by various interactions including hydrogen bonds, ionic bonds, hydrophobic interactions, and sometimes disulfide bridges.</explanation>
+    </question>
+    <question>
+        <text>Which process describes denaturation?</text>
+        <option>Formation of peptide bonds</option>
+        <option>Loss of primary structure</option>
+        <option>Loss of higher-order structure</option>
+        <option>Synthesis of new proteins</option>
+        <answer>Loss of higher-order structure</answer>
+        <explanation>Denaturation is the loss of secondary, tertiary, and quaternary structure while maintaining primary structure (peptide bonds).</explanation>
+    </question>
+</questions>

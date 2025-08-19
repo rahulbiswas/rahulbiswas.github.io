@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>Which model describes membrane organization?</text>
+        <option>Fluid mosaic model</option>
+        <option>Static lattice model</option>
+        <option>Rigid matrix model</option>
+        <option>Fixed barrier model</option>
+        <answer>Fluid mosaic model</answer>
+        <explanation>The fluid mosaic model describes the membrane as a dynamic phospholipid bilayer with embedded proteins that can move laterally.</explanation>
+    </question>
+    <question>
+        <text>What is the primary lipid component of cell membranes?</text>
+        <option>Phospholipids</option>
+        <option>Cholesterol</option>
+        <option>Triglycerides</option>
+        <option>Sphingolipids</option>
+        <answer>Phospholipids</answer>
+        <explanation>Phospholipids form the basic bilayer structure of cell membranes due to their amphipathic nature.</explanation>
+    </question>
+    <question>
+        <text>Which property allows membrane components to move laterally?</text>
+        <option>Membrane fluidity</option>
+        <option>Membrane rigidity</option>
+        <option>Membrane polarity</option>
+        <option>Membrane elasticity</option>
+        <answer>Membrane fluidity</answer>
+        <explanation>Membrane fluidity allows lipids and proteins to move laterally within the membrane plane.</explanation>
+    </question>
+    <question>
+        <text>What role does cholesterol play in membranes?</text>
+        <option>Regulates membrane fluidity</option>
+        <option>Provides energy</option>
+        <option>Transports ions</option>
+        <option>Synthesizes proteins</option>
+        <answer>Regulates membrane fluidity</answer>
+        <explanation>Cholesterol helps regulate membrane fluidity by preventing crystallization at low temperatures and excessive fluidity at high temperatures.</explanation>
+    </question>
+    <question>
+        <text>Which feature makes phospholipids ideal for membrane formation?</text>
+        <option>Amphipathic nature</option>
+        <option>Uniform charge</option>
+        <option>Rigid structure</option>
+        <option>High solubility</option>
+        <answer>Amphipathic nature</answer>
+        <explanation>The amphipathic nature of phospholipids, having both hydrophilic and hydrophobic regions, allows them to spontaneously form bilayers.</explanation>
+    </question>
+</questions>

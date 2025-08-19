@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of connexins?</text>
+        <option>Form gap junction channels</option>
+        <option>Generate energy</option>
+        <option>Break down proteins</option>
+        <option>Store nutrients</option>
+        <answer>Form gap junction channels</answer>
+        <explanation>Connexin proteins assemble to form channels in gap junctions for direct cell-cell communication.</explanation>
+    </question>
+    <question>
+        <text>How are tight junctions regulated?</text>
+        <option>Protein phosphorylation</option>
+        <option>Temperature changes</option>
+        <option>Random movement</option>
+        <option>Simple diffusion</option>
+        <answer>Protein phosphorylation</answer>
+        <explanation>Phosphorylation of tight junction proteins regulates barrier properties and assembly.</explanation>
+    </question>
+    <question>
+        <text>What controls gap junction opening?</text>
+        <option>Calcium levels</option>
+        <option>Protein synthesis</option>
+        <option>Lipid composition</option>
+        <option>Cell size</option>
+        <answer>Calcium levels</answer>
+        <explanation>Calcium concentration changes can regulate the opening and closing of gap junction channels.</explanation>
+    </question>
+    <question>
+        <text>Which disease affects desmosomes?</text>
+        <option>Pemphigus</option>
+        <option>Diabetes</option>
+        <option>Arthritis</option>
+        <option>Hypertension</option>
+        <answer>Pemphigus</answer>
+        <explanation>Pemphigus is an autoimmune disease that disrupts desmosomal adhesion in skin cells.</explanation>
+    </question>
+    <question>
+        <text>What role do septate junctions play?</text>
+        <option>Barrier function in invertebrates</option>
+        <option>Energy production</option>
+        <option>Protein synthesis</option>
+        <option>Waste removal</option>
+        <answer>Barrier function in invertebrates</answer>
+        <explanation>Septate junctions provide barrier function in invertebrates, similar to tight junctions in vertebrates.</explanation>
+    </question>
+</questions>

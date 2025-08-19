@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the Lochner v. New York Supreme Court case?</prompt>
+        <options>
+            <option letter="a">It supported labor laws</option>
+            <option letter="b">It struck down workplace regulations</option>
+            <option letter="c">It established minimum wage</option>
+            <option letter="d">It protected unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Lochner v. New York (1905) struck down state laws limiting bakery working hours, establishing the "Lochner era" of court decisions that opposed government regulation of business practices.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did Pancho Villa's raids affect U.S.-Mexico relations?</prompt>
+        <options>
+            <option letter="a">They improved diplomatic ties</option>
+            <option letter="b">They triggered a U.S. military expedition</option>
+            <option letter="c">They led to Mexican territory purchase</option>
+            <option letter="d">They had no effect</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Pancho Villa's 1916 raids on U.S. border towns triggered the Pershing Expedition into Mexico, increasing tensions between the two countries and complicating U.S.-Mexico relations.</explanation>
+    </question>
+
+    <question>
+        <prompt>What distinguished the Niagara Movement from other civil rights organizations?</prompt>
+        <options>
+            <option letter="a">It supported segregation</option>
+            <option letter="b">It demanded immediate equal rights</option>
+            <option letter="c">It focused on economic issues only</option>
+            <option letter="d">It opposed voting rights</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Niagara Movement, led by W.E.B. Du Bois, distinguished itself by demanding immediate equal rights and opposing Booker T. Washington's gradualist approach to racial advancement.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main result of the Standard Oil antitrust case?</prompt>
+        <options>
+            <option letter="a">Standard Oil expanded</option>
+            <option letter="b">The company was broken up</option>
+            <option letter="c">Oil prices increased</option>
+            <option letter="d">Government ownership</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1911 Standard Oil antitrust case resulted in the company being broken up into 34 separate companies, marking a major victory for the government's trust-busting efforts.</explanation>
+    </question>
+
+    <question>
+        <prompt>What characterized Justice Louis Brandeis's approach to law?</prompt>
+        <options>
+            <option letter="a">Conservative interpretation</option>
+            <option letter="b">Fact-based analysis of social issues</option>
+            <option letter="c">Strict constructionism</option>
+            <option letter="d">Political partisanship</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Justice Brandeis was known for his detailed factual analysis of social and economic issues, introducing "Brandeis briefs" that used social science evidence to support legal arguments.</explanation>
+    </question>
+</quiz>

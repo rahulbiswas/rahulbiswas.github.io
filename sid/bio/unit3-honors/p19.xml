@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do chloroplasts and mitochondria communicate with each other?</text>
+        <option>They don't communicate at all</option>
+        <option>Through direct physical contact only</option>
+        <option>Through metabolic and signaling pathways</option>
+        <option>Through the nucleus only</option>
+        <answer>Through metabolic and signaling pathways</answer>
+        <explanation>Chloroplasts and mitochondria coordinate their activities through shared metabolites, redox signals, and regulatory molecules, ensuring proper balance between photosynthesis and cellular respiration.</explanation>
+    </question>
+    <question>
+        <text>What role does redox signaling play in energy metabolism?</text>
+        <option>It only affects photosynthesis</option>
+        <option>It coordinates multiple cellular processes</option>
+        <option>It has no effect on metabolism</option>
+        <option>It only occurs in bacteria</option>
+        <answer>It coordinates multiple cellular processes</answer>
+        <explanation>Redox signaling helps coordinate energy metabolism by communicating cellular redox state, affecting enzyme activities, gene expression, and the balance between different metabolic pathways.</explanation>
+    </question>
+    <question>
+        <text>How do cells adapt to chronic energy stress?</text>
+        <option>By dying immediately</option>
+        <option>By increasing mitochondrial number and efficiency</option>
+        <option>By stopping all energy production</option>
+        <option>By ignoring the stress</option>
+        <answer>By increasing mitochondrial number and efficiency</answer>
+        <explanation>Under chronic energy stress, cells can adapt by increasing mitochondrial biogenesis, enhancing metabolic efficiency, and modifying gene expression patterns to better match energy supply with demand.</explanation>
+    </question>
+    <question>
+        <text>What role does calcium signaling play in energy metabolism?</text>
+        <option>It has no metabolic effects</option>
+        <option>It coordinates energy supply and demand</option>
+        <option>It only affects muscle cells</option>
+        <option>It reduces all metabolism</option>
+        <answer>It coordinates energy supply and demand</answer>
+        <explanation>Calcium signaling helps coordinate cellular energy metabolism by regulating enzyme activities, mitochondrial function, and the coupling of energy-consuming processes with energy production.</explanation>
+    </question>
+    <question>
+        <text>How do cellular energy sensors regulate metabolism?</text>
+        <option>They only monitor glucose levels</option>
+        <option>They integrate multiple metabolic signals</option>
+        <option>They have no regulatory function</option>
+        <option>They only work in liver cells</option>
+        <answer>They integrate multiple metabolic signals</answer>
+        <explanation>Cellular energy sensors like AMPK integrate information about ATP levels, nutrient availability, and cellular stress to regulate metabolic pathways and maintain energy homeostasis.</explanation>
+    </question>
+</quiz>

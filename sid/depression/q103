@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Warren G. Harding's "return to normalcy" policy included:</prompt>
+        <options>
+            <option letter="a">Increased government regulation</option>
+            <option letter="b">Higher tariffs and immigration restrictions</option>
+            <option letter="c">Support for labor unions</option>
+            <option letter="d">Progressive reforms</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Harding's "return to normalcy" policy included higher tariffs (Fordney-McCumber Tariff) and strict immigration restrictions, reflecting a desire to return to pre-World War I isolationism. This approach emphasized reducing government's role in the economy, restricting immigration through quotas, and promoting business interests. The policy marked a sharp break from the Progressive Era's reform agenda.</explanation>
+    </question>
+</quiz>

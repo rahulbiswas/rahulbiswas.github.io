@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main function of smooth ER?</text>
+        <option>Lipid synthesis</option>
+        <option>Protein synthesis</option>
+        <option>ATP production</option>
+        <option>Cell movement</option>
+        <answer>Lipid synthesis</answer>
+        <explanation>The smooth endoplasmic reticulum specializes in lipid synthesis and metabolic processes.</explanation>
+    </question>
+    <question>
+        <text>Which organelle processes newly synthesized proteins?</text>
+        <option>Rough ER</option>
+        <option>Peroxisome</option>
+        <option>Lysosome</option>
+        <option>Mitochondria</option>
+        <answer>Rough ER</answer>
+        <explanation>The rough ER, with its attached ribosomes, processes newly synthesized proteins and adds modifications.</explanation>
+    </question>
+    <question>
+        <text>What determines protein targeting to the ER?</text>
+        <option>Signal sequence</option>
+        <option>Protein size</option>
+        <option>Amino acid content</option>
+        <option>Molecular weight</option>
+        <answer>Signal sequence</answer>
+        <explanation>A specific signal sequence directs proteins to the ER during their synthesis.</explanation>
+    </question>
+    <question>
+        <text>Which process occurs in smooth ER?</text>
+        <option>Steroid synthesis</option>
+        <option>RNA processing</option>
+        <option>DNA replication</option>
+        <option>Protein folding</option>
+        <answer>Steroid synthesis</answer>
+        <explanation>The smooth ER is the site of steroid hormone synthesis in specialized cells.</explanation>
+    </question>
+    <question>
+        <text>What connects the ER to the nuclear envelope?</text>
+        <option>Direct membrane continuity</option>
+        <option>Transport vesicles</option>
+        <option>Protein bridges</option>
+        <option>Cytoskeletal elements</option>
+        <answer>Direct membrane continuity</answer>
+        <explanation>The ER membrane is directly continuous with the outer nuclear membrane.</explanation>
+    </question>
+</questions>

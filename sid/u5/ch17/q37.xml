@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="145">
+        <prompt>What was the main purpose of the Red Record?</prompt>
+        <options>
+            <option letter="a">To document and publicize lynching in the South</option>
+            <option letter="b">To record business transactions</option>
+            <option letter="c">To track voter registration</option>
+            <option letter="d">To list property ownership</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Ida B. Wells's The Red Record documented and publicized the practice of lynching in the South, helping to mobilize anti-lynching activism.</explanation>
+    </question>
+    <question number="146">
+        <prompt>What was the significance of the Minneapolis flour milling industry?</prompt>
+        <options>
+            <option letter="a">It demonstrated the efficiency of industrial consolidation</option>
+            <option letter="b">It supported small businesses</option>
+            <option letter="c">It reduced grain production</option>
+            <option letter="d">It increased competition</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Minneapolis flour milling industry demonstrated how industrial consolidation and technological innovation could increase efficiency and market control.</explanation>
+    </question>
+    <question number="147">
+        <prompt>What was the main effect of the National Guard's role in labor disputes?</prompt>
+        <options>
+            <option letter="a">It strengthened business control over labor relations</option>
+            <option letter="b">It protected worker rights</option>
+            <option letter="c">It promoted negotiations</option>
+            <option letter="d">It supported unions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The National Guard's frequent use against strikers strengthened business control over labor relations by providing military force to break strikes.</explanation>
+    </question>
+    <question number="148">
+        <prompt>What was the primary purpose of the Immigration Restriction League?</prompt>
+        <options>
+            <option letter="a">To limit immigration from Southern and Eastern Europe</option>
+            <option letter="b">To protect immigrant rights</option>
+            <option letter="c">To assist new immigrants</option>
+            <option letter="d">To promote cultural diversity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Immigration Restriction League worked to limit immigration from Southern and Eastern Europe, arguing that these immigrants were racially and culturally inferior.</explanation>
+    </question>
+</quiz>

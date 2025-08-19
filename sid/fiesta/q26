@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What is measured by real GDP per capita?</prompt>
+        <options>
+            <option letter="a">Total production in current prices</option>
+            <option letter="b">Average standard of living in a country</option>
+            <option letter="c">Government spending per person</option>
+            <option letter="d">Nominal output adjusted for population</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Real GDP per capita measures the average standard of living in a country by showing the value of goods and services produced per person, adjusted for inflation.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does menu cost inflation affect firms' pricing decisions?</prompt>
+        <options>
+            <option letter="a">Makes firms change prices more frequently</option>
+            <option letter="b">Makes firms reluctant to change prices</option>
+            <option letter="c">Has no effect on pricing decisions</option>
+            <option letter="d">Forces firms to lower prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Menu costs (the cost of changing prices) make firms reluctant to change prices frequently, contributing to price stickiness because small price changes may not be worth the cost of implementing them.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the multiplier effect when people save more of their additional income?</prompt>
+        <options>
+            <option letter="a">The multiplier effect increases</option>
+            <option letter="b">The multiplier effect decreases</option>
+            <option letter="c">The multiplier effect stays the same</option>
+            <option letter="d">The multiplier effect becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When people save more of their additional income (higher marginal propensity to save), the multiplier effect decreases because less money is respent in each round, reducing the total impact on national income.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which factor would shift both AD and SRAS curves?</prompt>
+        <options>
+            <option letter="a">Changes in consumer confidence</option>
+            <option letter="b">Changes in resource prices</option>
+            <option letter="c">Changes in government spending</option>
+            <option letter="d">Changes in interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Changes in resource prices affect both AD (through production costs and prices) and SRAS (through cost of production), potentially shifting both curves simultaneously.</explanation>
+    </question>
+</quiz>

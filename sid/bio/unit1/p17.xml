@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>How do chaperone proteins assist in protein folding?</text>
+        <option>By breaking peptide bonds</option>
+        <option>By preventing aggregation</option>
+        <option>By adding amino acids</option>
+        <option>By removing water</option>
+        <answer>By preventing aggregation</answer>
+        <explanation>Chaperone proteins help other proteins fold correctly by preventing inappropriate interactions and aggregation during the folding process.</explanation>
+    </question>
+    <question>
+        <text>What is the role of ubiquitination in protein regulation?</text>
+        <option>Protein synthesis</option>
+        <option>Protein folding</option>
+        <option>Protein degradation targeting</option>
+        <option>Protein transport</option>
+        <answer>Protein degradation targeting</answer>
+        <explanation>Ubiquitination marks proteins for degradation by the proteasome, helping regulate protein levels in the cell.</explanation>
+    </question>
+    <question>
+        <text>Which process requires ATP in protein synthesis?</text>
+        <option>Peptide bond formation</option>
+        <option>Amino acid activation</option>
+        <option>Translation termination</option>
+        <option>Protein folding</option>
+        <answer>Amino acid activation</answer>
+        <explanation>ATP is required for amino acid activation, forming aminoacyl-tRNA before peptide bond formation.</explanation>
+    </question>
+    <question>
+        <text>What determines the direction of protein synthesis?</text>
+        <option>3' to 5' on mRNA</option>
+        <option>5' to 3' on mRNA</option>
+        <option>Random direction</option>
+        <option>Depends on protein type</option>
+        <answer>5' to 3' on mRNA</answer>
+        <explanation>Protein synthesis always proceeds from the N-terminus to C-terminus as ribosomes move 5' to 3' along mRNA.</explanation>
+    </question>
+    <question>
+        <text>How do heat shock proteins protect cells?</text>
+        <option>By breaking down proteins</option>
+        <option>By preventing protein denaturation</option>
+        <option>By lowering temperature</option>
+        <option>By stopping protein synthesis</option>
+        <answer>By preventing protein denaturation</answer>
+        <explanation>Heat shock proteins act as molecular chaperones to prevent protein denaturation and help refold damaged proteins during stress.</explanation>
+    </question>
+</questions>

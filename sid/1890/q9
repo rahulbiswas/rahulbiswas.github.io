@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the "Atlanta Compromise" of 1895?</prompt>
+        <options>
+            <option letter="a">A civil rights law</option>
+            <option letter="b">An agreement for racial cooperation</option>
+            <option letter="c">A voting rights act</option>
+            <option letter="d">An education policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Atlanta Compromise was Booker T. Washington's speech proposing that African Americans accept social segregation in exchange for economic opportunities.</explanation>
+    </question>
+
+    <question>
+        <prompt>What did Ida B. Wells-Barnett primarily campaign against?</prompt>
+        <options>
+            <option letter="a">Poll taxes</option>
+            <option letter="b">Lynching</option>
+            <option letter="c">School segregation</option>
+            <option letter="d">Labor discrimination</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Ida B. Wells-Barnett conducted an anti-lynching campaign, documenting and publicizing racial violence in the South.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did African American churches respond to Jim Crow?</prompt>
+        <options>
+            <option letter="a">They closed down</option>
+            <option letter="b">They became community centers</option>
+            <option letter="c">They supported segregation</option>
+            <option letter="d">They moved North</option>
+        </options>
+        <answer>b</answer>
+        <explanation>African American churches became crucial community centers, providing social services, education, and organizing spaces under Jim Crow.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of the "black codes"?</prompt>
+        <options>
+            <option letter="a">They promoted racial equality</option>
+            <option letter="b">They restricted African American rights</option>
+            <option letter="c">They protected voting rights</option>
+            <option letter="d">They ended slavery</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Black codes were laws passed in Southern states to restrict African American rights and maintain white social and economic control.</explanation>
+    </question>
+
+    <question>
+        <prompt>What economic system replaced slavery in many parts of the South?</prompt>
+        <options>
+            <option letter="a">Free market labor</option>
+            <option letter="b">Sharecropping</option>
+            <option letter="c">Industrial jobs</option>
+            <option letter="d">Government employment</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Sharecropping became the dominant economic system, keeping many African Americans in a cycle of debt and economic dependence.</explanation>
+    </question>
+</quiz>

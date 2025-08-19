@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"I see tens of thousands of these pale-faced children who crowd into the factories and the mills... We want them to be kept at school when they ought to be at school; we want them to get an education so that they will be better fitted for manhood and womanhood."
+- Mother Jones, Speech on Child Labor, 1908</stimulus>
+        <prompt>Which Progressive Era reform movement most directly addressed these concerns?</prompt>
+        <options>
+            <option letter="a">The settlement house movement</option>
+            <option letter="b">The compulsory education movement</option>
+            <option letter="c">The temperance movement</option>
+            <option letter="d">The women's suffrage movement</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The compulsory education movement, coupled with child labor laws, aimed to keep children in school rather than factories, reflecting Progressive concerns about child welfare and education.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of Jane Addams working with immigrant children at Hull House, showing a classroom setting with various educational materials and cultural artifacts]</stimulus>
+        <prompt>The activities shown in this photograph primarily aimed to:</prompt>
+        <options>
+            <option letter="a">Promote prohibition</option>
+            <option letter="b">Secure women's voting rights</option>
+            <option letter="c">Americanize immigrants</option>
+            <option letter="d">Reform city government</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Settlement houses like Hull House aimed to help immigrants adapt to American society while preserving their cultural heritage, offering education and social services to facilitate integration.</explanation>
+    </question>
+    <question>
+        <stimulus>"The conservation of our natural resources and their proper use constitute the fundamental problem which underlies almost every other problem of our national life."
+- Theodore Roosevelt, Message to Congress, 1907</stimulus>
+        <prompt>This statement most directly led to which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">The creation of the Forest Service</option>
+            <option letter="b">The passage of the Pure Food and Drug Act</option>
+            <option letter="c">The establishment of the Federal Reserve</option>
+            <option letter="d">The ratification of the 16th Amendment</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Roosevelt's conservation ideology led to the expansion of federal land management, including the creation of the Forest Service and the designation of numerous national forests and parks.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a woman labeled "Democracy" sweeping away corrupt politicians and business monopolies with a broom labeled "Direct Primary"]</stimulus>
+        <prompt>This cartoon most directly supports which Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">Initiative and referendum</option>
+            <option letter="b">Direct election of senators</option>
+            <option letter="c">Municipal reform</option>
+            <option letter="d">Women's suffrage</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The cartoon promotes direct democracy reforms, particularly the direct election of senators (achieved by the 17th Amendment in 1913), as a means of reducing corruption in government.</explanation>
+    </question>
+</quiz>

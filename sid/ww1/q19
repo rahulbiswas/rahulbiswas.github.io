@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the main contribution of George Creel during World War I?</prompt>
+        <options>
+            <option letter="a">Military strategy</option>
+            <option letter="b">Managing wartime propaganda</option>
+            <option letter="c">Diplomatic negotiations</option>
+            <option letter="d">Economic planning</option>
+        </options>
+        <answer>b</answer>
+        <explanation>George Creel headed the Committee on Public Information, which managed government propaganda and public information during WWI, coordinating efforts to build public support for the war.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Pure Food and Drug Act affect American consumers?</prompt>
+        <options>
+            <option letter="a">It increased food prices</option>
+            <option letter="b">It required honest labeling and inspection</option>
+            <option letter="c">It reduced food variety</option>
+            <option letter="d">It closed most restaurants</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Pure Food and Drug Act of 1906 protected consumers by requiring honest labeling of foods and drugs, prohibiting harmful additives, and establishing federal inspection of meat products.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main accomplishment of Alice Paul's militant suffrage movement?</prompt>
+        <options>
+            <option letter="a">Peaceful negotiations</option>
+            <option letter="b">Pressuring Wilson through protests</option>
+            <option letter="c">Organizing boycotts</option>
+            <option letter="d">Running for office</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Alice Paul's militant tactics, including White House protests and hunger strikes, successfully pressured President Wilson to support women's suffrage, contributing to the 19th Amendment's passage.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Clayton Antitrust Act differ from the Sherman Antitrust Act?</prompt>
+        <options>
+            <option letter="a">It was weaker</option>
+            <option letter="b">It specified illegal practices</option>
+            <option letter="c">It only affected railroads</option>
+            <option letter="d">It eliminated all regulation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Clayton Antitrust Act (1914) strengthened antitrust law by specifically identifying illegal practices like price discrimination and interlocking directorates, clarifying the Sherman Act's broader provisions.</explanation>
+    </question>
+
+    <question>
+        <prompt>What impact did the Zimmermann Telegram have on U.S. entry into WWI?</prompt>
+        <options>
+            <option letter="a">It delayed U.S. entry</option>
+            <option letter="b">It helped push America into war</option>
+            <option letter="c">It had no effect</option>
+            <option letter="d">It prevented U.S. entry</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Zimmermann Telegram, proposing a German alliance with Mexico against the U.S., helped push American public opinion toward entering WWI when it was revealed in 1917.</explanation>
+    </question>
+</quiz>

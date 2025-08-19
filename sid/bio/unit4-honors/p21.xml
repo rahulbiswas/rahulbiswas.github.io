@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary role of fatty acid synthase?</text>
+        <option>To break down fatty acids</option>
+        <option>To synthesize fatty acids from acetyl-CoA</option>
+        <option>To store fatty acids</option>
+        <option>To transport fatty acids</option>
+        <answer>To synthesize fatty acids from acetyl-CoA</answer>
+        <explanation>Fatty acid synthase is a multi-enzyme complex that catalyzes the synthesis of fatty acids from acetyl-CoA and malonyl-CoA, using NADPH as a reducing agent.</explanation>
+    </question>
+    <question>
+        <text>Where does fatty acid synthesis primarily occur?</text>
+        <option>Mitochondria</option>
+        <option>Cytosol</option>
+        <option>Peroxisomes</option>
+        <option>Endoplasmic reticulum</option>
+        <answer>Cytosol</answer>
+        <explanation>Fatty acid synthesis takes place in the cytosol, in contrast to fatty acid oxidation which occurs in mitochondria.</explanation>
+    </question>
+    <question>
+        <text>What is required for fatty acid synthesis?</text>
+        <option>Oxygen and ATP</option>
+        <option>Acetyl-CoA, NADPH, and ATP</option>
+        <option>Glucose and water</option>
+        <option>NADH and FAD</option>
+        <answer>Acetyl-CoA, NADPH, and ATP</answer>
+        <explanation>Fatty acid synthesis requires acetyl-CoA as a building block, NADPH as a reducing agent, and ATP for energy to drive the synthetic reactions.</explanation>
+    </question>
+    <question>
+        <text>How does citrate contribute to fatty acid synthesis?</text>
+        <option>It directly forms fatty acids</option>
+        <option>It transfers acetyl-CoA from mitochondria to cytosol</option>
+        <option>It provides energy</option>
+        <option>It regulates enzyme activity</option>
+        <answer>It transfers acetyl-CoA from mitochondria to cytosol</answer>
+        <explanation>Citrate shuttles acetyl-CoA from mitochondria to the cytosol, where it can be converted back to acetyl-CoA for fatty acid synthesis.</explanation>
+    </question>
+    <question>
+        <text>What is the first committed step in fatty acid synthesis?</text>
+        <option>Formation of acetyl-CoA</option>
+        <option>Conversion of acetyl-CoA to malonyl-CoA</option>
+        <option>Transport of citrate</option>
+        <option>Production of NADPH</option>
+        <answer>Conversion of acetyl-CoA to malonyl-CoA</answer>
+        <explanation>The conversion of acetyl-CoA to malonyl-CoA by acetyl-CoA carboxylase is the first committed step in fatty acid synthesis and is highly regulated.</explanation>
+    </question>
+</questions>

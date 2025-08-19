@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What type of bonds hold membrane proteins in place?</text>
+        <option>Hydrophobic interactions</option>
+        <option>Covalent bonds</option>
+        <option>Ionic bonds</option>
+        <option>Hydrogen bonds</option>
+        <answer>Hydrophobic interactions</answer>
+        <explanation>Hydrophobic interactions between membrane protein regions and membrane lipids anchor proteins in the membrane.</explanation>
+    </question>
+    <question>
+        <text>Which type of protein spans the entire membrane?</text>
+        <option>Transmembrane protein</option>
+        <option>Peripheral protein</option>
+        <option>Surface protein</option>
+        <option>Cytoskeletal protein</option>
+        <answer>Transmembrane protein</answer>
+        <explanation>Transmembrane proteins extend through the entire phospholipid bilayer, with domains on both sides.</explanation>
+    </question>
+    <question>
+        <text>What determines the orientation of membrane proteins?</text>
+        <option>Signal sequences</option>
+        <option>Random insertion</option>
+        <option>Protein size</option>
+        <option>Lipid composition</option>
+        <answer>Signal sequences</answer>
+        <explanation>Signal sequences in the protein determine how it is inserted and oriented in the membrane during synthesis.</explanation>
+    </question>
+    <question>
+        <text>Which protein modification occurs in the ER?</text>
+        <option>Glycosylation</option>
+        <option>Methylation</option>
+        <option>Phosphorylation</option>
+        <option>Acetylation</option>
+        <answer>Glycosylation</answer>
+        <explanation>Glycosylation, the addition of carbohydrate groups to proteins, occurs in the endoplasmic reticulum.</explanation>
+    </question>
+    <question>
+        <text>What characterizes GPI-anchored proteins?</text>
+        <option>Lipid attachment</option>
+        <option>Transmembrane domain</option>
+        <option>Cytoplasmic location</option>
+        <option>Nuclear targeting</option>
+        <answer>Lipid attachment</answer>
+        <explanation>GPI-anchored proteins are attached to the membrane's outer surface via a glycosylphosphatidylinositol anchor.</explanation>
+    </question>
+</questions>

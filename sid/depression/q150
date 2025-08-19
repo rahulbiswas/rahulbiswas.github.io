@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Herbert Hoover's "American Individualism" philosophy led to:</prompt>
+        <options>
+            <option letter="a">Effective Depression relief</option>
+            <option letter="b">Limited response to economic crisis</option>
+            <option letter="c">Direct government aid</option>
+            <option letter="d">Popular support</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hoover's philosophy of "American Individualism" led to a limited response to the Great Depression. His belief in voluntary cooperation, self-reliance, and minimal government intervention prevented him from implementing direct federal relief measures. This ideological commitment to individualism and opposition to direct federal aid proved inadequate for addressing the Depression's unprecedented severity.</explanation>
+    </question>
+</quiz>

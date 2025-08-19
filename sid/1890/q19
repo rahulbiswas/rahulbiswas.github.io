@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What defined American nativism in the 1890s?</prompt>
+        <options>
+            <option letter="a">Support for immigration</option>
+            <option letter="b">Opposition to new immigrants</option>
+            <option letter="c">Religious tolerance</option>
+            <option letter="d">Cultural diversity</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Nativism in the 1890s was characterized by opposition to new immigrants, particularly those from Southern and Eastern Europe.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the American Protective Association?</prompt>
+        <options>
+            <option letter="a">An immigrant aid society</option>
+            <option letter="b">An anti-Catholic organization</option>
+            <option letter="c">A labor union</option>
+            <option letter="d">A government agency</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The American Protective Association was a nativist organization that particularly opposed Catholic immigrants, claiming they threatened American democracy.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did literacy tests affect immigration?</prompt>
+        <options>
+            <option letter="a">They encouraged immigration</option>
+            <option letter="b">They restricted certain groups</option>
+            <option letter="c">They had no effect</option>
+            <option letter="d">They helped integration</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Literacy tests were designed to restrict immigration, particularly affecting immigrants from Southern and Eastern Europe who had less access to education.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the Immigration Restriction League?</prompt>
+        <options>
+            <option letter="a">A pro-immigration group</option>
+            <option letter="b">An anti-immigration organization</option>
+            <option letter="c">A government department</option>
+            <option letter="d">An immigrant aid society</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Immigration Restriction League, founded in 1894, advocated for limiting immigration through literacy tests and other restrictions.</explanation>
+    </question>
+
+    <question>
+        <prompt>What theory did many nativists use to justify restrictions?</prompt>
+        <options>
+            <option letter="a">Economic theory</option>
+            <option letter="b">Scientific racism</option>
+            <option letter="c">Religious doctrine</option>
+            <option letter="d">Political philosophy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Nativists often used pseudo-scientific theories of racial superiority to justify restricting immigration from certain regions.</explanation>
+    </question>
+</quiz>

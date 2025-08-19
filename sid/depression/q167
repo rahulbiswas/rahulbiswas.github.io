@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Milo Reno's Farmers' Holiday Movement was significant because it:</prompt>
+        <options>
+            <option letter="a">Supported government policies</option>
+            <option letter="b">Organized direct action by desperate farmers</option>
+            <option letter="c">Promoted international trade</option>
+            <option letter="d">Advocated for urban development</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Milo Reno's Farmers' Holiday Movement was significant for organizing direct action protests by farmers during the early Depression. The movement coordinated strikes where farmers withheld products from market and blocked roads to prevent farm deliveries, demanding higher agricultural prices. These actions reflected rural desperation during the Depression and demonstrated organized resistance to economic conditions.</explanation>
+    </question>
+</quiz>

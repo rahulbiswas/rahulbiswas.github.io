@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the primary purpose of the Freedmen's Bureau schools?</prompt>
+        <options>
+            <option letter="a">To provide basic education and job training to former slaves</option>
+            <option letter="b">To train military officers</option>
+            <option letter="c">To educate wealthy southerners</option>
+            <option letter="d">To teach agricultural techniques only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Bureau schools were established to provide basic education, including reading and writing, as well as job training to former slaves and their children.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Lost Cause" ideology affect Reconstruction?</prompt>
+        <options>
+            <option letter="a">It justified resistance to Reconstruction policies</option>
+            <option letter="b">It supported racial equality</option>
+            <option letter="c">It promoted Northern interests</option>
+            <option letter="d">It encouraged industrial development</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The "Lost Cause" ideology romanticized the Confederate cause and justified resistance to Reconstruction policies while promoting white supremacy.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the "Battle of Liberty Place" in 1874?</prompt>
+        <options>
+            <option letter="a">White supremacists temporarily overthrew Louisiana's government</option>
+            <option letter="b">Union forces won a major victory</option>
+            <option letter="c">Freedmen gained political control</option>
+            <option letter="d">Republicans expanded their power</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Battle of Liberty Place was an attempted coup by the White League that temporarily overthrew Louisiana's Reconstruction government in New Orleans.</explanation>
+    </question>
+    <question>
+        <prompt>What impact did the Compromise of 1877 have on Southern Republicans?</prompt>
+        <options>
+            <option letter="a">Led to the collapse of Republican power in the South</option>
+            <option letter="b">Strengthened their political position</option>
+            <option letter="c">Increased their economic influence</option>
+            <option letter="d">Improved their relationship with Democrats</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 led to the collapse of Republican power in the South as federal support was withdrawn, ending Reconstruction.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do mitochondrial cristae enhance cellular respiration?</text>
+        <option>By storing more glucose</option>
+        <option>By increasing surface area for electron transport chains</option>
+        <option>By producing more oxygen</option>
+        <option>By protecting DNA from damage</option>
+        <answer>By increasing surface area for electron transport chains</answer>
+        <explanation>Mitochondrial cristae are folded inner membranes that greatly increase the surface area available for housing electron transport chain components, allowing for more ATP production through oxidative phosphorylation.</explanation>
+    </question>
+    <question>
+        <text>What role does the mitochondrial matrix play in cellular respiration?</text>
+        <option>It only stores calcium</option>
+        <option>It houses the citric acid cycle enzymes</option>
+        <option>It produces chlorophyll</option>
+        <option>It breaks down the cell membrane</option>
+        <answer>It houses the citric acid cycle enzymes</answer>
+        <explanation>The mitochondrial matrix contains all the enzymes needed for the citric acid cycle, along with mitochondrial DNA, ribosomes, and other molecules necessary for energy production and mitochondrial function.</explanation>
+    </question>
+    <question>
+        <text>Why do cells with high energy demands have more mitochondria?</text>
+        <option>To store more water</option>
+        <option>To increase protein production</option>
+        <option>To produce more ATP through oxidative phosphorylation</option>
+        <option>To break down more fats</option>
+        <answer>To produce more ATP through oxidative phosphorylation</answer>
+        <explanation>Cells with high energy requirements, like muscle cells and neurons, contain more mitochondria to meet their ATP demands through increased capacity for oxidative phosphorylation.</explanation>
+    </question>
+    <question>
+        <text>How do mitochondria and chloroplasts demonstrate endosymbiotic theory?</text>
+        <option>They have the same function</option>
+        <option>They share similar DNA and ribosomes with bacteria</option>
+        <option>They cannot divide independently</option>
+        <option>They lack membranes</option>
+        <answer>They share similar DNA and ribosomes with bacteria</answer>
+        <explanation>Both organelles contain their own DNA and ribosomes similar to bacteria, supporting the theory that they originated as free-living bacteria that were engulfed by early eukaryotic cells.</explanation>
+    </question>
+    <question>
+        <text>What happens to mitochondrial function during aging?</text>
+        <option>It always improves</option>
+        <option>It remains exactly the same</option>
+        <option>It typically declines due to DNA damage and oxidative stress</option>
+        <option>It only affects muscle cells</option>
+        <answer>It typically declines due to DNA damage and oxidative stress</answer>
+        <explanation>Mitochondrial function often decreases with age due to accumulated damage to mitochondrial DNA from reactive oxygen species, leading to reduced ATP production and cellular energy deficits.</explanation>
+    </question>
+</quiz>

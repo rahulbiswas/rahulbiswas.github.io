@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the nominal interest rate is 8% and inflation is expected to be 3%, what is the real interest rate?</prompt>
+        <options>
+            <option letter="a">11%</option>
+            <option letter="b">5%</option>
+            <option letter="c">2.67%</option>
+            <option letter="d">-5%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The real interest rate equals the nominal interest rate minus the expected inflation rate. In this case, 8% - 3% = 5%. This represents the actual return on investment after accounting for the erosion of purchasing power due to inflation.</explanation>
+    </question>
+</quiz>

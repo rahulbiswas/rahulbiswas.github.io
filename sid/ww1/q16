@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What role did Colonel Edward House play in Wilson's wartime diplomacy?</prompt>
+        <options>
+            <option letter="a">He led military campaigns</option>
+            <option letter="b">He conducted personal diplomatic missions</option>
+            <option letter="c">He managed domestic policy</option>
+            <option letter="d">He commanded the navy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonel Edward House served as Wilson's personal diplomat and closest advisor, conducting crucial diplomatic missions in Europe before and during WWI, earning the nickname "Wilson's alter ego."</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Nineteenth Amendment change American society?</prompt>
+        <options>
+            <option letter="a">It granted women property rights</option>
+            <option letter="b">It gave women the right to vote</option>
+            <option letter="c">It established equal pay</option>
+            <option letter="d">It banned gender discrimination</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Nineteenth Amendment, ratified in 1920, gave women the right to vote nationwide, marking a major victory for the women's suffrage movement after decades of struggle.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the primary focus of Jane Addams's work?</prompt>
+        <options>
+            <option letter="a">Military strategy</option>
+            <option letter="b">Social reform and settlement houses</option>
+            <option letter="c">Banking reform</option>
+            <option letter="d">Agricultural policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Jane Addams focused on social reform through settlement houses, particularly Hull House, providing education and social services to immigrants and the poor while advocating for peace and women's rights.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did the Selective Service Act of 1917 differ from previous military recruitment?</prompt>
+        <options>
+            <option letter="a">It relied only on volunteers</option>
+            <option letter="b">It created a fair and efficient draft system</option>
+            <option letter="c">It excluded minorities</option>
+            <option letter="d">It only drafted officers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Selective Service Act of 1917 created a more fair and efficient draft system than previous methods, requiring all men within certain age ranges to register regardless of social status.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the main effect of the Federal Reserve Act of 1913?</prompt>
+        <options>
+            <option letter="a">It eliminated all banks</option>
+            <option letter="b">It created a central banking system</option>
+            <option letter="c">It banned paper money</option>
+            <option letter="d">It increased inflation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Reserve Act of 1913 created America's central banking system, providing a more stable and flexible banking structure through a network of regional Federal Reserve banks.</explanation>
+    </question>
+</quiz>

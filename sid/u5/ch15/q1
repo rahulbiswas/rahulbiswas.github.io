@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which Constitutional amendment abolished slavery in the United States?</prompt>
+        <options>
+            <option letter="a">13th Amendment</option>
+            <option letter="b">14th Amendment</option>
+            <option letter="c">15th Amendment</option>
+            <option letter="d">16th Amendment</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 13th Amendment, ratified in 1865, officially abolished slavery and involuntary servitude throughout the United States.</explanation>
+    </question>
+    <question>
+        <prompt>What was President Andrew Johnson's background before becoming president?</prompt>
+        <options>
+            <option letter="a">Northern Republican congressman</option>
+            <option letter="b">Southern Democratic senator who remained loyal to the Union</option>
+            <option letter="c">Confederate general who switched sides</option>
+            <option letter="d">Northern abolitionist leader</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Andrew Johnson was a Southern Democrat from Tennessee who remained loyal to the Union during the Civil War, making him unique as the only Southern senator to retain his seat.</explanation>
+    </question>
+    <question>
+        <prompt>What was the primary goal of the Black Codes enacted by Southern states in 1865-1866?</prompt>
+        <options>
+            <option letter="a">To protect African American voting rights</option>
+            <option letter="b">To restrict African American freedom and maintain white control</option>
+            <option letter="c">To promote racial equality</option>
+            <option letter="d">To provide education to former slaves</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Black Codes were laws passed by Southern states to restrict African Americans' freedoms and maintain white control through strict labor and social regulations.</explanation>
+    </question>
+    <question>
+        <prompt>Which group opposed President Johnson's lenient Reconstruction policies?</prompt>
+        <options>
+            <option letter="a">Radical Republicans</option>
+            <option letter="b">Southern Democrats</option>
+            <option letter="c">Moderate Republicans</option>
+            <option letter="d">Freedmen's Bureau officials</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Radical Republicans, led by figures like Thaddeus Stevens and Charles Sumner, strongly opposed Johnson's lenient policies toward the South and pushed for more stringent Reconstruction measures.</explanation>
+    </question>
+</quiz>

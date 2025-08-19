@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of SUV420H1?</text>
+        <option>Process RNA</option>
+        <option>Methylate H4K20</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Methylate H4K20</answer>
+        <explanation>SUV420H1 is a histone methyltransferase that specifically adds methyl groups to histone H4 lysine 20.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex removes topological stress?</text>
+        <option>Condensin</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>Condensin</answer>
+        <explanation>Condensin complexes help remove topological stress from DNA during chromosome condensation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of DDX21?</text>
+        <option>Repair DNA</option>
+        <option>Unwind RNA</option>
+        <option>Modify histones</option>
+        <option>Degrade proteins</option>
+        <answer>Unwind RNA</answer>
+        <explanation>DDX21 is an RNA helicase that unwinds RNA structures to facilitate ribosome assembly and RNA processing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein recognizes methylated DNA?</text>
+        <option>MeCP2</option>
+        <option>DNMT1</option>
+        <option>TET1</option>
+        <option>UHRF1</option>
+        <answer>MeCP2</answer>
+        <explanation>MeCP2 specifically binds to methylated DNA and helps recruit factors that regulate gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of PRMT1?</text>
+        <option>Process RNA</option>
+        <option>Methylate arginine</option>
+        <option>Repair DNA</option>
+        <option>Transport proteins</option>
+        <answer>Methylate arginine</answer>
+        <explanation>PRMT1 is a protein arginine methyltransferase that adds methyl groups to arginine residues in proteins.</explanation>
+    </question>
+</questions>

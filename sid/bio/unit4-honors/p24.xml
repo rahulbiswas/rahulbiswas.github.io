@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of cholesterol in cell membranes?</text>
+        <option>To produce energy</option>
+        <option>To regulate membrane fluidity</option>
+        <option>To transport nutrients</option>
+        <option>To store energy</option>
+        <answer>To regulate membrane fluidity</answer>
+        <explanation>Cholesterol helps regulate membrane fluidity by inserting between phospholipids, preventing crystallization at low temperatures and excessive fluidity at high temperatures.</explanation>
+    </question>
+    <question>
+        <text>Where does cholesterol synthesis primarily occur?</text>
+        <option>Mitochondria</option>
+        <option>Endoplasmic reticulum</option>
+        <option>Golgi apparatus</option>
+        <option>Nucleus</option>
+        <answer>Endoplasmic reticulum</answer>
+        <explanation>Cholesterol synthesis occurs primarily in the endoplasmic reticulum, where most of the enzymes required for its synthesis are located.</explanation>
+    </question>
+    <question>
+        <text>What is the rate-limiting step in cholesterol synthesis?</text>
+        <option>Acetyl-CoA formation</option>
+        <option>HMG-CoA reduction</option>
+        <option>Mevalonate formation</option>
+        <option>Steroid ring formation</option>
+        <answer>HMG-CoA reduction</answer>
+        <explanation>The reduction of HMG-CoA to mevalonate by HMG-CoA reductase is the rate-limiting step in cholesterol synthesis and the main regulatory point.</explanation>
+    </question>
+    <question>
+        <text>How do statins lower cholesterol levels?</text>
+        <option>By blocking absorption</option>
+        <option>By inhibiting HMG-CoA reductase</option>
+        <option>By increasing excretion</option>
+        <option>By reducing fat intake</option>
+        <answer>By inhibiting HMG-CoA reductase</answer>
+        <explanation>Statins work by competitively inhibiting HMG-CoA reductase, the rate-limiting enzyme in cholesterol synthesis, thereby reducing cholesterol production.</explanation>
+    </question>
+    <question>
+        <text>What regulates cholesterol synthesis?</text>
+        <option>Only diet</option>
+        <option>Feedback inhibition by cholesterol</option>
+        <option>Temperature</option>
+        <option>Exercise</option>
+        <answer>Feedback inhibition by cholesterol</answer>
+        <explanation>Cholesterol synthesis is regulated through feedback inhibition, where high cholesterol levels suppress HMG-CoA reductase activity and gene expression.</explanation>
+    </question>
+</questions>

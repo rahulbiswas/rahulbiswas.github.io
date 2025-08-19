@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Wickersham Commission's report in 1931:</prompt>
+        <options>
+            <option letter="a">Supported continuing Prohibition</option>
+            <option letter="b">Documented Prohibition's failures while opposing repeal</option>
+            <option letter="c">Called for immediate repeal of Prohibition</option>
+            <option letter="d">Promoted stricter enforcement methods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Wickersham Commission, appointed by President Hoover, released its report in 1931 documenting the failures of Prohibition enforcement and the rise in criminal activity. However, despite acknowledging these problems, the commission paradoxically opposed repeal of the 18th Amendment. This contradictory position reflected the growing public recognition of Prohibition's failure while maintaining official support for the policy.</explanation>
+    </question>
+</quiz>

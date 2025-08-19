@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the primary outcome of the 1896 presidential election?</prompt>
+        <options>
+            <option letter="a">William McKinley's victory</option>
+            <option letter="b">William Jennings Bryan's victory</option>
+            <option letter="c">A third-party victory</option>
+            <option letter="d">An electoral tie</option>
+        </options>
+        <answer>a</answer>
+        <explanation>William McKinley's victory over William Jennings Bryan in 1896 marked the defeat of the Populist-Democratic fusion and free silver movement.</explanation>
+    </question>
+
+    <question>
+        <prompt>What campaign strategy did McKinley use in 1896?</prompt>
+        <options>
+            <option letter="a">Front porch campaign</option>
+            <option letter="b">Whistle-stop tour</option>
+            <option letter="c">Radio addresses</option>
+            <option letter="d">Public debates</option>
+        </options>
+        <answer>a</answer>
+        <explanation>McKinley conducted a "front porch campaign," staying at home while supporters came to him, contrasting with Bryan's active traveling campaign.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was Marcus Hanna's role in the 1896 election?</prompt>
+        <options>
+            <option letter="a">Democratic Party leader</option>
+            <option letter="b">McKinley's campaign manager</option>
+            <option letter="c">Populist Party founder</option>
+            <option letter="d">Independent candidate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Marcus Hanna served as McKinley's campaign manager and pioneered modern campaign financing through business contributions.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which region provided McKinley's strongest support?</prompt>
+        <options>
+            <option letter="a">The South</option>
+            <option letter="b">The West</option>
+            <option letter="c">The Northeast</option>
+            <option letter="d">The Midwest</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The industrialized Northeast strongly supported McKinley and the gold standard, fearing Bryan's free silver policy.</explanation>
+    </question>
+
+    <question>
+        <prompt>What economic issue dominated the 1896 campaign?</prompt>
+        <options>
+            <option letter="a">Tariff rates</option>
+            <option letter="b">Currency policy</option>
+            <option letter="c">Labor laws</option>
+            <option letter="d">Railroad regulation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The debate over currency policy, specifically the gold standard versus free silver, dominated the 1896 presidential campaign.</explanation>
+    </question>
+</quiz>

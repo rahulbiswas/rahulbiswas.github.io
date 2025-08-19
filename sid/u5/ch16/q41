@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did mutual savings banks have on urban populations?</prompt>
+        <options>
+            <option letter="a">They encouraged savings among working classes and provided financial services</option>
+            <option letter="b">They served only wealthy depositors</option>
+            <option letter="c">They decreased savings rates</option>
+            <option letter="d">They had minimal financial impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mutual savings banks encouraged thrift among working-class urban residents while providing essential financial services to communities.</explanation>
+    </question>
+    <question>
+        <prompt>How did building and loan associations affect home ownership?</prompt>
+        <options>
+            <option letter="a">They enabled working-class home ownership through installment payments</option>
+            <option letter="b">They decreased home ownership</option>
+            <option letter="c">They served only wealthy buyers</option>
+            <option letter="d">They had minimal housing impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Building and loan associations made home ownership possible for working-class families through systematic savings and installment payments.</explanation>
+    </question>
+    <question>
+        <prompt>What role did life insurance companies play in financial markets?</prompt>
+        <options>
+            <option letter="a">They accumulated large investment pools and funded business growth</option>
+            <option letter="b">They focused only on insurance</option>
+            <option letter="c">They decreased investment capital</option>
+            <option letter="d">They had minimal market impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Life insurance companies accumulated large pools of investment capital, becoming major investors in corporate bonds and real estate.</explanation>
+    </question>
+    <question>
+        <prompt>How did mortgage companies affect real estate development?</prompt>
+        <options>
+            <option letter="a">They provided capital for construction and enabled property development</option>
+            <option letter="b">They limited property sales</option>
+            <option letter="c">They increased borrowing costs</option>
+            <option letter="d">They had minimal development impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mortgage companies provided essential capital for real estate development, enabling the expansion of urban and suburban construction.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of KDM2A?</text>
+        <option>Add methylation</option>
+        <option>Remove H3K36me2</option>
+        <option>Process RNA</option>
+        <option>Repair DNA</option>
+        <answer>Remove H3K36me2</answer>
+        <explanation>KDM2A is a histone demethylase that specifically removes dimethylation from H3K36.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex recognizes DNA loops?</text>
+        <option>Cohesin</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>Cohesin</answer>
+        <explanation>Cohesin complexes help form and maintain DNA loops important for gene regulation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of SETDB1?</text>
+        <option>Process RNA</option>
+        <option>Methylate H3K9</option>
+        <option>Repair DNA</option>
+        <option>Transcribe genes</option>
+        <answer>Methylate H3K9</answer>
+        <explanation>SETDB1 is a histone methyltransferase that adds methyl groups to H3K9, promoting gene silencing.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein stabilizes G-quadruplexes?</text>
+        <option>BLM</option>
+        <option>ATRX</option>
+        <option>FANCJ</option>
+        <option>WRN</option>
+        <answer>ATRX</answer>
+        <explanation>ATRX helps stabilize G-quadruplex structures in DNA, particularly at telomeres.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of TOP1?</text>
+        <option>Process RNA</option>
+        <option>Relieve DNA supercoiling</option>
+        <option>Modify histones</option>
+        <option>Degrade proteins</option>
+        <answer>Relieve DNA supercoiling</answer>
+        <explanation>Topoisomerase 1 (TOP1) relieves DNA supercoiling by creating temporary single-strand breaks.</explanation>
+    </question>
+</questions>

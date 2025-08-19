@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What role did Northern industrialists play in ending Reconstruction?</prompt>
+        <options>
+            <option letter="a">Withdrew support to focus on economic development</option>
+            <option letter="b">Continued supporting civil rights</option>
+            <option letter="c">Increased Southern investment</option>
+            <option letter="d">Opposed the Compromise of 1877</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Northern industrialists withdrew support for Reconstruction to focus on national economic development and reconciliation with Southern business interests.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the "Redemption" period in Georgia?</prompt>
+        <options>
+            <option letter="a">Return to conservative Democratic control and racial restrictions</option>
+            <option letter="b">Expansion of civil rights</option>
+            <option letter="c">Economic prosperity</option>
+            <option letter="d">Educational reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Georgia's "Redemption" marked the return to conservative Democratic control and the implementation of racial restrictions through new laws and policies.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Compromise of 1877 affect federal troops in the South?</prompt>
+        <options>
+            <option letter="a">Required their withdrawal from political involvement</option>
+            <option letter="b">Increased their presence</option>
+            <option letter="c">Changed their command structure</option>
+            <option letter="d">Expanded their authority</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Compromise of 1877 required the withdrawal of federal troops from political involvement in the South, effectively ending military support for Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the impact of sharecropping on former slaves?</prompt>
+        <options>
+            <option letter="a">Created a cycle of debt and dependency</option>
+            <option letter="b">Provided economic independence</option>
+            <option letter="c">Led to land ownership</option>
+            <option letter="d">Improved living conditions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sharecropping typically created a cycle of debt and dependency for former slaves, as high interest rates and low crop prices made it difficult to earn profits.</explanation>
+    </question>
+</quiz>

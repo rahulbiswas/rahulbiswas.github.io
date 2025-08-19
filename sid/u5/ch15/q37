@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Hamburg Riot" of 1876?</prompt>
+        <options>
+            <option letter="a">Demonstrated declining federal protection for African Americans</option>
+            <option letter="b">Led to increased civil rights</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Strengthened Republican control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Hamburg Riot, where white supremacists killed African American militia members, showed the declining federal willingness to protect black citizens.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Agricultural Lien Laws" affect freedmen?</prompt>
+        <options>
+            <option letter="a">Created a system of debt peonage</option>
+            <option letter="b">Provided economic independence</option>
+            <option letter="c">Improved farming conditions</option>
+            <option letter="d">Protected farmer rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Agricultural Lien Laws created a system of debt peonage by requiring farmers to pledge future crops as collateral for current supplies and loans.</explanation>
+    </question>
+    <question>
+        <prompt>What role did "Benevolent Societies" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided mutual aid and community support</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Managed military affairs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Benevolent Societies provided mutual aid, education, and community support for freed people during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Mississippi Plan" of 1875?</prompt>
+        <options>
+            <option letter="a">Used violence to suppress Republican voting</option>
+            <option letter="b">Protected voting rights</option>
+            <option letter="c">Promoted economic growth</option>
+            <option letter="d">Reformed education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Mississippi Plan was a coordinated campaign of violence and intimidation used by Democrats to suppress Republican and African American voting.</explanation>
+    </question>
+</quiz>

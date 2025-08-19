@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If a country's MPC is 0.8 and the government cuts taxes by $100 billion while decreasing spending by $80 billion, what is the net effect on GDP?</prompt>
+        <options>
+            <option letter="a">No change in GDP</option>
+            <option letter="b">$200 billion decrease</option>
+            <option letter="c">$400 billion decrease</option>
+            <option letter="d">$100 billion decrease</option>
+        </options>
+        <answer>d</answer>
+        <explanation>With MPC = 0.8, the spending multiplier is 5 and the tax multiplier is -4. For spending decrease: -$80B × 5 = -$400B. For tax cut: $100B × 4 = +$400B. The net effect is -$400B + $300B = -$100B. The contractionary effect of decreased spending slightly outweighs the expansionary effect of the tax cut.</explanation>
+    </question>
+</quiz>

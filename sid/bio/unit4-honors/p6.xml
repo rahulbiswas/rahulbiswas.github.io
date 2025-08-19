@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary role of NADPH in photosynthesis?</text>
+        <option>To produce ATP</option>
+        <option>To provide reducing power for glucose synthesis</option>
+        <option>To split water molecules</option>
+        <option>To absorb light energy</option>
+        <answer>To provide reducing power for glucose synthesis</answer>
+        <explanation>NADPH provides the reducing power (electrons and hydrogen) needed to convert CO2 into glucose during the Calvin cycle of photosynthesis.</explanation>
+    </question>
+    <question>
+        <text>Which process occurs in the stroma of chloroplasts?</text>
+        <option>Light-dependent reactions</option>
+        <option>Calvin cycle</option>
+        <option>Electron transport chain</option>
+        <option>Photolysis</option>
+        <answer>Calvin cycle</answer>
+        <explanation>The Calvin cycle (light-independent reactions) occurs in the stroma, the fluid-filled space inside chloroplasts where CO2 is fixed into glucose.</explanation>
+    </question>
+    <question>
+        <text>What is cyclic photophosphorylation?</text>
+        <option>The splitting of water molecules</option>
+        <option>The production of NADPH</option>
+        <option>A process that produces only ATP</option>
+        <option>The synthesis of glucose</option>
+        <answer>A process that produces only ATP</answer>
+        <explanation>Cyclic photophosphorylation is an alternative pathway in photosynthesis where electrons cycle back to Photosystem I, producing ATP but not NADPH or oxygen.</explanation>
+    </question>
+    <question>
+        <text>What happens to ADP during photophosphorylation?</text>
+        <option>It is broken down into AMP</option>
+        <option>It is converted to ATP</option>
+        <option>It is used to make glucose</option>
+        <option>It accepts electrons</option>
+        <answer>It is converted to ATP</answer>
+        <explanation>During photophosphorylation, ADP combines with inorganic phosphate to form ATP, driven by the proton gradient across the thylakoid membrane.</explanation>
+    </question>
+    <question>
+        <text>Which pigment absorbs red and blue light most efficiently?</text>
+        <option>Carotenoids</option>
+        <option>Chlorophyll a</option>
+        <option>Phycobilins</option>
+        <option>Xanthophylls</option>
+        <answer>Chlorophyll a</answer>
+        <explanation>Chlorophyll a is the primary photosynthetic pigment that efficiently absorbs red and blue wavelengths of light, appearing green because it reflects green light.</explanation>
+    </question>
+</questions>

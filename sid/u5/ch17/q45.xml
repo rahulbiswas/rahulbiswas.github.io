@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="177">
+        <prompt>What was the main purpose of the Atlanta Cotton States Exposition?</prompt>
+        <options>
+            <option letter="a">To showcase the New South's industrial progress</option>
+            <option letter="b">To promote segregation</option>
+            <option letter="c">To oppose industrialization</option>
+            <option letter="d">To support agriculture only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Atlanta Cotton States Exposition showcased the New South's industrial development and provided the setting for Booker T. Washington's Atlanta Compromise speech.</explanation>
+    </question>
+    <question number="178">
+        <prompt>What was the significance of Charles Sheldon's "In His Steps"?</prompt>
+        <options>
+            <option letter="a">It popularized Social Gospel ideas through fiction</option>
+            <option letter="b">It opposed religious reform</option>
+            <option letter="c">It supported traditional churches</option>
+            <option letter="d">It criticized Christianity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sheldon's novel popularized Social Gospel ideas by asking "What Would Jesus Do?" about social problems, becoming a bestseller that influenced religious reform.</explanation>
+    </question>
+    <question number="179">
+        <prompt>What was the main effect of the Supreme Court's Income Tax Case?</prompt>
+        <options>
+            <option letter="a">It prevented federal income taxation until the 16th Amendment</option>
+            <option letter="b">It expanded taxation power</option>
+            <option letter="c">It supported progressives</option>
+            <option letter="d">It reduced inequality</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Court's ruling in Pollock v. Farmers' Loan & Trust Co. prevented federal income taxation until the ratification of the 16th Amendment in 1913.</explanation>
+    </question>
+    <question number="180">
+        <prompt>What was the primary goal of the Liberal Republican movement?</prompt>
+        <options>
+            <option letter="a">To reform the Republican Party and end corruption</option>
+            <option letter="b">To support big business</option>
+            <option letter="c">To oppose civil service</option>
+            <option letter="d">To increase patronage</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Liberal Republican movement sought to reform the Republican Party by ending corruption and supporting civil service reform, though it ultimately failed.</explanation>
+    </question>
+</quiz>

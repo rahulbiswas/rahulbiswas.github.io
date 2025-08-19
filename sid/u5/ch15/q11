@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What role did the Freedmen's Bank play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided banking services to African Americans until its collapse in 1874</option>
+            <option letter="b">Distributed land to former slaves</option>
+            <option letter="c">Funded Confederate war debts</option>
+            <option letter="d">Managed plantation systems</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Freedmen's Savings and Trust Company (Freedmen's Bank) served African American depositors until its collapse in 1874, devastating many black families' savings.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of "Union Leagues"?</prompt>
+        <options>
+            <option letter="a">Secret societies that supported Republican policies and protected freedmen</option>
+            <option letter="b">Confederate veteran organizations</option>
+            <option letter="c">Northern business associations</option>
+            <option letter="d">Democratic political clubs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union Leagues were secret societies that supported Republican policies, protected freedmen, and helped organize African American political participation.</explanation>
+    </question>
+    <question>
+        <prompt>What was the main purpose of the Enforcement Acts of 1870-1871?</prompt>
+        <options>
+            <option letter="a">To combat Klan violence and protect voting rights</option>
+            <option letter="b">To regulate interstate commerce</option>
+            <option letter="c">To establish public schools</option>
+            <option letter="d">To manage currency policy</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Acts, also known as the Force Acts, were passed to combat Ku Klux Klan violence and protect African American voting rights in the South.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the "Force Bill" of 1871?</prompt>
+        <options>
+            <option letter="a">Gave the president power to suspend habeas corpus to combat Klan violence</option>
+            <option letter="b">Created the Freedmen's Bureau</option>
+            <option letter="c">Established military districts in the South</option>
+            <option letter="d">Regulated interstate commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Force Bill (Ku Klux Klan Act) gave President Grant the power to suspend habeas corpus and use military force to combat Klan violence in the South.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"Democracy has been planted in the soil of autocracy... When people come here, they must understand that America is not a mere crucible in which all nationalities are to be melted into one, but rather a garden in which may grow and bloom the finest flowers of all races."
+- Settlement House Worker's Report, 1915</stimulus>
+        <prompt>This view of immigration most directly contrasted with:</prompt>
+        <options>
+            <option letter="a">Americanization movement</option>
+            <option letter="b">Social Gospel movement</option>
+            <option letter="c">Conservation movement</option>
+            <option letter="d">Municipal reform movement</option>
+        </options>
+        <answer>a</answer>
+        <explanation>This pluralistic view of immigration contrasted with the Americanization movement's emphasis on complete assimilation and abandonment of immigrant cultures.</explanation>
+    </question>
+    <question>
+        <stimulus>[Statistical table showing correlation between women in state legislatures and passage of maternal/child welfare laws, 1910-1920]</stimulus>
+        <prompt>This data most strongly supports which Progressive Era argument?</prompt>
+        <options>
+            <option letter="a">Women's voting rights would lead to social reform</option>
+            <option letter="b">Economic regulation was necessary</option>
+            <option letter="c">Immigration should be restricted</option>
+            <option letter="d">Prohibition would improve society</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The correlation between women legislators and welfare legislation supported Progressive arguments that women's suffrage would lead to social reforms benefiting women and children.</explanation>
+    </question>
+    <question>
+        <stimulus>"The great corporation which employed you lied to you, and lied to the whole country... It had never had any intention of treating you as human beings, with rights and feelings of your own."
+- Upton Sinclair, Appeal to Reason, 1906</stimulus>
+        <prompt>Sinclair's writing most directly contributed to:</prompt>
+        <options>
+            <option letter="a">Food safety legislation</option>
+            <option letter="b">Banking reform</option>
+            <option letter="c">Immigration restriction</option>
+            <option letter="d">Civil service reform</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sinclair's exposé of the meatpacking industry in "The Jungle" led directly to the Pure Food and Drug Act and the Meat Inspection Act of 1906.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a figure labeled "Progressive Movement" trying to balance "Direct Democracy" and "Expert Administration"]</stimulus>
+        <prompt>This cartoon illustrates which Progressive Era tension?</prompt>
+        <options>
+            <option letter="a">Popular control vs. professional expertise</option>
+            <option letter="b">Federal power vs. states' rights</option>
+            <option letter="c">Business interests vs. labor rights</option>
+            <option letter="d">Urban reform vs. rural interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The cartoon depicts the Progressive Era tension between expanding direct democracy and relying on expert administrators to manage government efficiently.</explanation>
+    </question>
+</quiz>

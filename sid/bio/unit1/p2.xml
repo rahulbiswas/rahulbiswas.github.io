@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary role of buffers in biological systems?</text>
+        <option>To increase pH</option>
+        <option>To decrease pH</option>
+        <option>To maintain constant pH</option>
+        <option>To eliminate all H+ ions</option>
+        <answer>To maintain constant pH</answer>
+        <explanation>Buffers resist changes in pH by neutralizing small amounts of added acids or bases, helping maintain stable conditions for biological processes.</explanation>
+    </question>
+    <question>
+        <text>Which equation correctly represents the Henderson-Hasselbalch equation?</text>
+        <option>pH = pKa + log([HA]/[A-])</option>
+        <option>pH = pKa - log([A-]/[HA])</option>
+        <option>pH = pKa + log([A-]/[HA])</option>
+        <option>pH = -log[H+]</option>
+        <answer>pH = pKa + log([A-]/[HA])</answer>
+        <explanation>The Henderson-Hasselbalch equation relates pH to the ratio of conjugate base [A-] to weak acid [HA] concentrations.</explanation>
+    </question>
+    <question>
+        <text>What makes water an effective biological solvent?</text>
+        <option>Its nonpolar nature</option>
+        <option>Its large size</option>
+        <option>Its polar nature and hydrogen bonding ability</option>
+        <option>Its high molecular weight</option>
+        <answer>Its polar nature and hydrogen bonding ability</answer>
+        <explanation>Water's polarity and hydrogen bonding capability allow it to dissolve many biological molecules, especially polar and ionic compounds.</explanation>
+    </question>
+    <question>
+        <text>What is the primary buffer system in human blood?</text>
+        <option>Phosphate buffer</option>
+        <option>Bicarbonate buffer</option>
+        <option>Acetate buffer</option>
+        <option>Protein buffer</option>
+        <answer>Bicarbonate buffer</answer>
+        <explanation>The bicarbonate buffer system (H2CO3/HCO3-) is the main buffer in blood, maintaining pH between 7.35-7.45.</explanation>
+    </question>
+    <question>
+        <text>When is a buffer solution most effective?</text>
+        <option>When pH equals 7</option>
+        <option>When pH equals pKa</option>
+        <option>When pH is much higher than pKa</option>
+        <option>When pH is much lower than pKa</option>
+        <answer>When pH equals pKa</answer>
+        <explanation>A buffer solution is most effective when pH = pKa, as the concentrations of acid and conjugate base are equal, maximizing buffering capacity.</explanation>
+    </question>
+</questions>

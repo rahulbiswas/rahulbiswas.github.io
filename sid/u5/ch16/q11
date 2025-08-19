@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="41">
+        <prompt>What was the significance of the "free silver" movement?</prompt>
+        <options>
+            <option letter="a">Advocated unlimited silver coinage to increase money supply</option>
+            <option letter="b">Supported gold standard only</option>
+            <option letter="c">Promoted paper currency</option>
+            <option letter="d">Regulated mining claims</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The free silver movement advocated unlimited coinage of silver at a 16:1 ratio with gold to increase the money supply and help indebted farmers and workers.</explanation>
+    </question>
+    <question number="42">
+        <prompt>How did the "piece-rate" system affect industrial workers?</prompt>
+        <options>
+            <option letter="a">Tied wages to production output</option>
+            <option letter="b">Guaranteed steady income</option>
+            <option letter="c">Reduced working hours</option>
+            <option letter="d">Improved working conditions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The piece-rate system paid workers based on their production output rather than time worked, often leading to speed-ups and exhaustion among workers.</explanation>
+    </question>
+    <question number="43">
+        <prompt>What impact did the creation of Yellowstone National Park have?</prompt>
+        <options>
+            <option letter="a">Established federal land conservation precedent</option>
+            <option letter="b">Restricted western development</option>
+            <option letter="c">Increased mining operations</option>
+            <option letter="d">Protected Native American lands</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The creation of Yellowstone in 1872 established the precedent for federal land conservation and the national park system in America.</explanation>
+    </question>
+    <question number="44">
+        <prompt>What was the purpose of "scientific management" in factories?</prompt>
+        <options>
+            <option letter="a">To increase efficiency through detailed work analysis</option>
+            <option letter="b">To improve worker safety</option>
+            <option letter="c">To reduce working hours</option>
+            <option letter="d">To promote worker creativity</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Scientific management, developed by Frederick Taylor, aimed to increase efficiency by analyzing and standardizing every work task in detail.</explanation>
+    </question></quiz>

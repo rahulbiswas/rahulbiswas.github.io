@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does an increase in structural unemployment affect the Phillips Curve?</prompt>
+        <options>
+            <option letter="a">Shifts Phillips Curve left</option>
+            <option letter="b">Shifts Phillips Curve right</option>
+            <option letter="c">Makes Phillips Curve steeper</option>
+            <option letter="d">Makes Phillips Curve flatter</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in structural unemployment shifts the Phillips Curve right because it raises the natural rate of unemployment, meaning any given inflation rate is associated with a higher unemployment rate.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the aggregate price level during a supply-side recession?</prompt>
+        <options>
+            <option letter="a">Price level falls</option>
+            <option letter="b">Price level rises</option>
+            <option letter="c">Price level stays constant</option>
+            <option letter="d">Direction depends on monetary policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a supply-side recession, the price level tends to rise because the negative supply shock that caused the recession also creates upward pressure on costs and prices.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in the budget deficit affect the exchange rate?</prompt>
+        <options>
+            <option letter="a">Always causes depreciation</option>
+            <option letter="b">Tends to cause appreciation</option>
+            <option letter="c">Has no effect on exchange rate</option>
+            <option letter="d">Only affects trade balance</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the budget deficit tends to cause currency appreciation because higher interest rates attract foreign capital inflows, increasing demand for the domestic currency.</explanation>
+    </question>
+
+    <question>
+        <prompt>What determines the natural rate of output?</prompt>
+        <options>
+            <option letter="a">The level of aggregate demand</option>
+            <option letter="b">The amount of physical and human capital</option>
+            <option letter="c">Government spending levels</option>
+            <option letter="d">The unemployment rate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The natural rate of output (potential GDP) is determined by the economy's productive capacity, which depends on its physical capital (machines, equipment) and human capital (skills, knowledge).</explanation>
+    </question>
+</quiz>

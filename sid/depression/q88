@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Smoot-Hawley Tariff's impact on the Great Depression was:</prompt>
+        <options>
+            <option letter="a">Helping economic recovery</option>
+            <option letter="b">Worsening international economic conditions</option>
+            <option letter="c">Increasing American exports</option>
+            <option letter="d">Strengthening international trade</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Smoot-Hawley Tariff of 1930 significantly worsened the Great Depression by raising tariffs to record levels on over 20,000 imported goods. This protectionist measure prompted retaliatory tariffs from other nations, resulting in a dramatic decline in international trade. The tariff's negative effects on global commerce contributed to deepening and prolonging the worldwide economic crisis.</explanation>
+    </question>
+</quiz>

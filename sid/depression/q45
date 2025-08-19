@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Somoza family's rise to power in Nicaragua was significant because:</prompt>
+        <options>
+            <option letter="a">They promoted democracy and independence</option>
+            <option letter="b">They established a U.S.-backed dictatorship</option>
+            <option letter="c">They opposed American influence</option>
+            <option letter="d">They supported communist policies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Somoza family dynasty began when Anastasio Somoza García gained power in Nicaragua with U.S. support in the 1930s, after the assassination of Sandino. The Somozas established a dictatorship that maintained close ties with the United States while controlling Nicaragua through corruption and repression. Their regime, which lasted until 1979, exemplified U.S. support for authoritarian allies during the twentieth century.</explanation>
+    </question>
+</quiz>

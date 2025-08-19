@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which president's Latin American policy resulted in the LEAST direct military intervention?</prompt>
+        <options>
+            <option letter="a">Theodore Roosevelt (1901-1909)</option>
+            <option letter="b">William Howard Taft (1909-1913)</option>
+            <option letter="c">Woodrow Wilson (1913-1921)</option>
+            <option letter="d">Warren G. Harding (1921-1923)</option>
+        </options>
+        <answer>b</answer>
+        <explanation>While Taft's Dollar Diplomacy used American economic power in Latin America, he relied less on direct military intervention than Roosevelt (who used gunboat diplomacy) or Wilson (who intervened in Mexico, Haiti, and Dominican Republic). Taft preferred to use banks and businesses to exert American influence rather than sending in troops.</explanation>
+    </question>
+</quiz>

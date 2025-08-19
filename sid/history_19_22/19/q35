@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was a key difference between the NAACP and the Niagara Movement?</prompt>
+        <options>
+            <option letter="a">The NAACP included white supporters while the Niagara Movement was all-Black</option>
+            <option letter="b">The Niagara Movement supported integration while the NAACP opposed it</option>
+            <option letter="c">The NAACP focused on economic rights while the Niagara Movement emphasized political rights</option>
+            <option letter="d">The Niagara Movement was more conservative than the NAACP in its approach</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The NAACP's inclusion of white progressives and philanthropists distinguished it from the all-Black Niagara Movement. This interracial cooperation provided the NAACP with broader support, greater resources, and more political influence than its predecessor. Both organizations shared similar goals of civil rights and racial equality, but the NAACP's integrated approach proved more effective in achieving lasting change.</explanation>
+    </question>
+</quiz>

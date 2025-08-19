@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of desmoplakin?</text>
+        <option>Link intermediate filaments to desmosomes</option>
+        <option>Generate energy</option>
+        <option>Transport molecules</option>
+        <option>Synthesize proteins</option>
+        <answer>Link intermediate filaments to desmosomes</answer>
+        <explanation>Desmoplakin connects intermediate filaments to desmosomal plaques, providing mechanical strength.</explanation>
+    </question>
+    <question>
+        <text>How do hemidesmosomes function?</text>
+        <option>Attach cells to basement membrane</option>
+        <option>Connect adjacent cells</option>
+        <option>Transport ions</option>
+        <option>Produce proteins</option>
+        <answer>Attach cells to basement membrane</answer>
+        <explanation>Hemidesmosomes anchor epithelial cells to the underlying basement membrane.</explanation>
+    </question>
+    <question>
+        <text>What proteins form adherens junctions?</text>
+        <option>Cadherins</option>
+        <option>Integrins</option>
+        <option>Selectins</option>
+        <option>Connexins</option>
+        <answer>Cadherins</answer>
+        <explanation>Cadherin proteins mediate cell-cell adhesion at adherens junctions.</explanation>
+    </question>
+    <question>
+        <text>Which junction allows direct communication?</text>
+        <option>Gap junctions</option>
+        <option>Tight junctions</option>
+        <option>Desmosomes</option>
+        <option>Adherens junctions</option>
+        <answer>Gap junctions</answer>
+        <explanation>Gap junctions form channels that allow direct communication between adjacent cells.</explanation>
+    </question>
+    <question>
+        <text>What maintains epithelial barrier function?</text>
+        <option>Tight junctions</option>
+        <option>Gap junctions</option>
+        <option>Desmosomes</option>
+        <option>Focal adhesions</option>
+        <answer>Tight junctions</answer>
+        <explanation>Tight junctions create a seal between epithelial cells, maintaining barrier function.</explanation>
+    </question>
+</questions>

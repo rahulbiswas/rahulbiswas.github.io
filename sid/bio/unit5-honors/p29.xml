@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of SPT6?</text>
+        <option>Repair DNA</option>
+        <option>Reassemble nucleosomes</option>
+        <option>Process RNA</option>
+        <option>Degrade proteins</option>
+        <answer>Reassemble nucleosomes</answer>
+        <explanation>SPT6 is a histone chaperone that helps reassemble nucleosomes behind elongating RNA polymerase II.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex reads H3K4me3?</text>
+        <option>NURF</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>NURF</answer>
+        <explanation>The NURF chromatin remodeling complex specifically recognizes H3K4me3 marks at active promoters.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of TFIIIB?</text>
+        <option>Process mRNA</option>
+        <option>Recruit Pol III</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>Recruit Pol III</answer>
+        <explanation>TFIIIB recruits RNA polymerase III to promoters for transcription of tRNA and other small RNA genes.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds poly(A) to mitochondrial RNA?</text>
+        <option>mtPAP</option>
+        <option>PAP</option>
+        <option>TUTase</option>
+        <option>RNase P</option>
+        <answer>mtPAP</answer>
+        <explanation>Mitochondrial Poly(A) Polymerase (mtPAP) adds poly(A) tails to mitochondrial mRNAs.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of BRCA2?</text>
+        <option>Process RNA</option>
+        <option>Load RAD51</option>
+        <option>Modify histones</option>
+        <option>Transcribe genes</option>
+        <answer>Load RAD51</answer>
+        <explanation>BRCA2 helps load RAD51 protein onto single-stranded DNA during homologous recombination repair.</explanation>
+    </question>
+</questions>

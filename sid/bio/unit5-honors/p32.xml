@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of UHRF1?</text>
+        <option>Process RNA</option>
+        <option>Recruit DNMT1</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>Recruit DNMT1</answer>
+        <explanation>UHRF1 recognizes hemimethylated DNA and recruits DNMT1 to maintain DNA methylation patterns.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex removes R-loops?</text>
+        <option>SETX</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>SETX</answer>
+        <explanation>Senataxin (SETX) helps resolve R-loops that form during transcription to prevent genome instability.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of CENP-A?</text>
+        <option>Repair DNA</option>
+        <option>Mark centromeres</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Mark centromeres</answer>
+        <explanation>CENP-A is a histone H3 variant that specifically marks centromere locations on chromosomes.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds poly(U) to RNAs?</text>
+        <option>TUT4</option>
+        <option>PAP</option>
+        <option>XRN2</option>
+        <option>DIS3</option>
+        <answer>TUT4</answer>
+        <explanation>Terminal Uridylyl Transferase 4 (TUT4) adds uridine residues to certain RNAs to regulate their stability.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of SMC5/6?</text>
+        <option>Process RNA</option>
+        <option>DNA repair</option>
+        <option>Transcribe genes</option>
+        <option>Modify histones</option>
+        <answer>DNA repair</answer>
+        <explanation>The SMC5/6 complex plays important roles in DNA repair and chromosome segregation.</explanation>
+    </question>
+</questions>

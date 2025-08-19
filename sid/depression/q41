@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Billy Sunday's role in 1920s American society was as:</prompt>
+        <options>
+            <option letter="a">A prominent evangelist supporting traditional values</option>
+            <option letter="b">A political reformer advocating social change</option>
+            <option letter="c">A progressive religious leader</option>
+            <option letter="d">A labor union organizer</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Billy Sunday was a famous fundamentalist evangelist who promoted traditional Protestant values and temperance during the 1920s. His theatrical preaching style and fierce opposition to modernism, evolution, and alcohol made him a leading voice of religious conservatism. His popularity reflected the cultural tensions between traditionalism and modernism that characterized the era.</explanation>
+    </question>
+</quiz>

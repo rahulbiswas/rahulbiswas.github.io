@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What role do RNA-binding proteins play?</text>
+        <option>Break down RNA</option>
+        <option>Regulate RNA processing and function</option>
+        <option>Synthesize RNA</option>
+        <option>Transport proteins</option>
+        <answer>Regulate RNA processing and function</answer>
+        <explanation>RNA-binding proteins control various aspects of RNA processing, stability, and function in cells.</explanation>
+    </question>
+    <question>
+        <text>How do cells recognize damaged DNA?</text>
+        <option>They don't recognize damage</option>
+        <option>Through specific sensor proteins</option>
+        <option>Only during replication</option>
+        <option>Random detection</option>
+        <answer>Through specific sensor proteins</answer>
+        <explanation>Cells use specific sensor proteins to detect various types of DNA damage and initiate repair responses.</explanation>
+    </question>
+    <question>
+        <text>What determines splice site selection?</text>
+        <option>Random selection</option>
+        <option>Specific sequence elements and proteins</option>
+        <option>Only temperature</option>
+        <option>Only pH</option>
+        <answer>Specific sequence elements and proteins</answer>
+        <explanation>Splice site selection is determined by specific RNA sequences and regulatory proteins that control splicing.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain genome stability?</text>
+        <option>They don't maintain it</option>
+        <option>Multiple mechanisms including repair</option>
+        <option>Only through division</option>
+        <option>Random processes</option>
+        <answer>Multiple mechanisms including repair</answer>
+        <explanation>Cells maintain genome stability through DNA repair, checkpoint controls, and chromosome maintenance mechanisms.</explanation>
+    </question>
+    <question>
+        <text>What role does chromatin remodeling play?</text>
+        <option>No role</option>
+        <option>Controls DNA accessibility</option>
+        <option>Breaks down DNA</option>
+        <option>Synthesizes proteins</option>
+        <answer>Controls DNA accessibility</answer>
+        <explanation>Chromatin remodeling controls access to DNA sequences by changing nucleosome positioning and structure.</explanation>
+    </question>
+</questions>

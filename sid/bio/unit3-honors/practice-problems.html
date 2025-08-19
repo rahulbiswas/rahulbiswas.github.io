@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Problems ✿</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #ff66aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit unit-3-honors">
+        <h1>Practice Problems</h1>
+
+        <div class="key-concept">
+            <h2>Let's Practice! 화이팅! ✨</h2>
+            <p>Test your understanding of cellular energetics~</p>
+        </div>
+
+        <div class="section">
+            <h2>Cellular Respiration Problems</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>1. Calculate ATP yield from one glucose molecule:</p>
+                    <ul>
+                        <li>How many from glycolysis?</li>
+                        <li>How many from Krebs cycle?</li>
+                        <li>How many from ETC?</li>
+                        <li>What's the total yield?</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◕‿◕✿)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Glycolysis: 2 ATP net</li>
+                            <li>Krebs cycle: 2 ATP</li>
+                            <li>ETC: ~34 ATP</li>
+                            <li>Total: ~38 ATP per glucose</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Compare energy yields:</p>
+                    <ul>
+                        <li>Aerobic respiration</li>
+                        <li>Lactic acid fermentation</li>
+                        <li>Alcoholic fermentation</li>
+                    </ul>
+                    <button class="show-answer">See Solution ₍ᐢ. ̫ .ᐢ₎</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Aerobic: ~38 ATP</li>
+                            <li>Lactic acid: 2 ATP</li>
+                            <li>Alcoholic: 2 ATP</li>
+                            <li>Aerobic is most efficient!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Photosynthesis Problems</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>3. Balance this equation:</p>
+                    <p>___ CO2 + ___ H2O → ___ C6H12O6 + ___ O2</p>
+                    <button class="show-answer">See Solution (｡♥‿♥｡)</button>
+                    <div class="answer hidden">
+                        <p>6 CO2 + 6 H2O → 1 C6H12O6 + 6 O2</p>
+                        <p>Remember water splitting produces O2!</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Calculate carbon fixation:</p>
+                    <ul>
+                        <li>How many CO2 needed for one glucose?</li>
+                        <li>How many ATP required?</li>
+                        <li>How many NADPH needed?</li>
+                    </ul>
+                    <button class="show-answer">See Solution ⭐️</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>6 CO2 molecules</li>
+                            <li>18 ATP molecules</li>
+                            <li>12 NADPH molecules</li>
+                            <li>Per one glucose produced</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Environmental Calculations</h2>
+            
+            <div class="practice">
+                <div class="question">
+                    <p>5. Compare photosynthesis rates:</p>
+                    <ul>
+                        <li>At 25°C vs 35°C</li>
+                        <li>At 400 vs 800 ppm CO2</li>
+                        <li>Consider limiting factors</li>
+                    </ul>
+                    <button class="show-answer">See Solution (◠‿◠✿)</button>
+                    <div class="answer hidden">
+                        <ul>
+                            <li>Temperature optimum ~25°C</li>
+                            <li>Higher CO2 increases rate</li>
+                            <li>Until another factor limits</li>
+                            <li>Consider water & nutrients!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Problem-Solving Tips</h3>
+            <ul>
+                <li>Draw diagrams when needed</li>
+                <li>Show your work clearly</li>
+                <li>Check your units</li>
+                <li>Think about biological context</li>
+                <li>Consider limiting factors</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.classList.toggle('hidden');
+                button.textContent = answer.classList.contains('hidden') ? 
+                    button.textContent.replace('Hide', 'See') : 
+                    button.textContent.replace('See', 'Hide');
+            });
+        });
+    </script>
+</body>
+</html>

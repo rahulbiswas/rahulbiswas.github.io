@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If the Marginal Propensity to Consume (MPC) is 0.8, what is the size of the spending multiplier?</prompt>
+        <options>
+            <option letter="a">0.8</option>
+            <option letter="b">1.25</option>
+            <option letter="c">5.0</option>
+            <option letter="d">0.2</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The spending multiplier is calculated as 1/(1-MPC). With MPC = 0.8, the multiplier is 1/(1-0.8) = 1/0.2 = 5.0. This means each dollar of government spending or other autonomous expenditure changes total spending by $5.</explanation>
+    </question>
+</quiz>

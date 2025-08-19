@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does the Marginal Propensity to Save (MPS) affect the size of the fiscal multiplier?</prompt>
+        <options>
+            <option letter="a">A higher MPS creates a larger multiplier</option>
+            <option letter="b">A higher MPS creates a smaller multiplier</option>
+            <option letter="c">MPS has no effect on the multiplier</option>
+            <option letter="d">The relationship depends on the interest rate</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A higher Marginal Propensity to Save (MPS) creates a smaller fiscal multiplier because more of each additional dollar of income is saved rather than spent. Since MPS = 1 - MPC, and the multiplier is 1/(1-MPC), a higher MPS means less recycling of spending through the economy.</explanation>
+    </question>
+</quiz>

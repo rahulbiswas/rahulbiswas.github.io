@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do cellular energy pathways adapt during drought stress?</text>
+        <option>They shut down completely</option>
+        <option>They modify metabolism to conserve water and energy</option>
+        <option>They increase water consumption</option>
+        <option>They remain unchanged</option>
+        <answer>They modify metabolism to conserve water and energy</answer>
+        <explanation>During drought stress, cells modify their metabolic pathways to reduce water loss, maintain essential functions, and adjust energy production to match reduced photosynthetic capacity while preserving cellular integrity.</explanation>
+    </question>
+    <question>
+        <text>What role does ABA play in energy metabolism during stress?</text>
+        <option>It has no metabolic effects</option>
+        <option>It coordinates stress responses and energy conservation</option>
+        <option>It increases energy use</option>
+        <option>It only affects root growth</option>
+        <answer>It coordinates stress responses and energy conservation</answer>
+        <explanation>Abscisic acid (ABA) coordinates cellular responses to stress by regulating stomatal closure, gene expression, and metabolic adjustments to help conserve energy and water while maintaining essential functions.</explanation>
+    </question>
+    <question>
+        <text>How do heat shock proteins affect cellular energetics?</text>
+        <option>They reduce energy production</option>
+        <option>They protect cellular machinery and maintain function</option>
+        <option>They have no effect on energy</option>
+        <option>They only work in cold conditions</option>
+        <answer>They protect cellular machinery and maintain function</answer>
+        <explanation>Heat shock proteins help maintain cellular energy production during stress by protecting proteins and cellular machinery from damage, preventing denaturation, and assisting in protein folding and repair.</explanation>
+    </question>
+    <question>
+        <text>What happens to electron transport chains during salt stress?</text>
+        <option>They become more efficient</option>
+        <option>They experience increased electron leakage</option>
+        <option>They shut down completely</option>
+        <option>They remain unchanged</option>
+        <answer>They experience increased electron leakage</answer>
+        <explanation>Salt stress can increase electron leakage from transport chains, leading to enhanced production of reactive oxygen species and requiring additional energy expenditure for cellular protection and repair mechanisms.</explanation>
+    </question>
+    <question>
+        <text>How do cells balance energy needs during multiple stresses?</text>
+        <option>They only respond to one stress</option>
+        <option>They integrate responses to optimize survival</option>
+        <option>They ignore all stresses</option>
+        <option>They always prioritize growth</option>
+        <answer>They integrate responses to optimize survival</answer>
+        <explanation>Cells integrate multiple stress responses through complex signaling networks to balance energy allocation between growth, maintenance, and stress protection, optimizing survival under challenging conditions.</explanation>
+    </question>
+</quiz>

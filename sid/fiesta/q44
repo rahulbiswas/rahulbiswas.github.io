@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the money multiplier during a financial crisis?</prompt>
+        <options>
+            <option letter="a">Increases as banks lend more</option>
+            <option letter="b">Decreases as banks hold more reserves</option>
+            <option letter="c">Stays constant despite the crisis</option>
+            <option letter="d">Becomes negative</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During a financial crisis, the money multiplier typically decreases because banks become more cautious and hold more excess reserves, reducing their willingness to make loans.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in the budget deficit affect national saving?</prompt>
+        <options>
+            <option letter="a">Always increases national saving</option>
+            <option letter="b">Decreases national saving</option>
+            <option letter="c">Has no effect on national saving</option>
+            <option letter="d">Only affects private saving</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the budget deficit decreases national saving because government dissaving reduces the total amount of saving in the economy, even if private saving remains unchanged.</explanation>
+    </question>
+
+    <question>
+        <prompt>What effect does anticipated inflation have on nominal interest rates?</prompt>
+        <options>
+            <option letter="a">No effect on nominal rates</option>
+            <option letter="b">Decreases nominal rates</option>
+            <option letter="c">Increases nominal rates</option>
+            <option letter="d">Only affects real rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Anticipated inflation increases nominal interest rates because lenders demand higher nominal rates to compensate for the expected decrease in the purchasing power of their returns.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in labor productivity affect unit labor costs?</prompt>
+        <options>
+            <option letter="a">Increases unit labor costs</option>
+            <option letter="b">Decreases unit labor costs</option>
+            <option letter="c">No effect on unit labor costs</option>
+            <option letter="d">Only affects total costs</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor productivity decreases unit labor costs because more output is produced per unit of labor input, spreading labor costs over a larger quantity of output.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did the Bonneville Dam affect Native Americans?</prompt>
+    <options>
+        <option letter="a">Disrupted fishing rights</option>
+        <option letter="b">Created new jobs</option>
+        <option letter="c">Improved transportation</option>
+        <option letter="d">Provided education</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Bonneville Dam disrupted traditional Native American fishing sites and salmon runs on the Columbia River.</explanation>
+</question>

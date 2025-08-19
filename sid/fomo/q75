@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>With a required reserve ratio of 10%, how much can banks lend from a new deposit of $5000?</prompt>
+        <options>
+            <option letter="a">$500</option>
+            <option letter="b">$4500</option>
+            <option letter="c">$5000</option>
+            <option letter="d">$50000</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With a 10% reserve requirement, banks must keep $500 (10% of $5000) as required reserves. They can lend out the remaining 90%, which is $4500. This initial lending begins the money creation process through the banking system's money multiplier effect.</explanation>
+    </question>
+</quiz>

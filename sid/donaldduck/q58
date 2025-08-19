@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What role did Eleanor Roosevelt play in the New Deal?</prompt>
+    <options>
+        <option letter="a">Civil rights advocate</option>
+        <option letter="b">Cabinet secretary</option>
+        <option letter="c">Program director</option>
+        <option letter="d">Budget manager</option>
+    </options>
+    <answer>a</answer>
+    <explanation>Eleanor Roosevelt advocated for civil rights and social justice, often pushing the administration to address discrimination in New Deal programs.</explanation>
+</question>

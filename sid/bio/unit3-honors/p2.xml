@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>Which component of ATP stores the most energy for cellular work?</text>
+        <option>The adenine base</option>
+        <option>The ribose sugar</option>
+        <option>The phosphate groups</option>
+        <option>The glycosidic bond</option>
+        <answer>The phosphate groups</answer>
+        <explanation>The phosphate groups of ATP, particularly the last two phosphate bonds, store large amounts of energy that can be released through hydrolysis. These phosphoanhydride bonds are unstable and their breaking releases energy that can drive cellular work.</explanation>
+    </question>
+    <question>
+        <text>What is the primary role of ATP in energy coupling?</text>
+        <option>To store energy indefinitely</option>
+        <option>To transfer phosphate groups to other molecules</option>
+        <option>To create energy from nothing</option>
+        <option>To break down glucose</option>
+        <answer>To transfer phosphate groups to other molecules</answer>
+        <explanation>ATP couples exergonic and endergonic reactions by transferring its phosphate group to other molecules. This phosphorylation makes endergonic reactions more favorable by modifying the substrates, allowing otherwise unfavorable reactions to proceed.</explanation>
+    </question>
+    <question>
+        <text>How does ATP synthase produce ATP during cellular respiration?</text>
+        <option>Through direct electron transfer</option>
+        <option>By breaking down glucose</option>
+        <option>Using proton flow through its structure</option>
+        <option>By splitting water molecules</option>
+        <answer>Using proton flow through its structure</answer>
+        <explanation>ATP synthase uses chemiosmosis - the flow of protons (H+) through its structure from high to low concentration - to power the mechanical rotation of its parts. This mechanical energy drives the synthesis of ATP from ADP and inorganic phosphate.</explanation>
+    </question>
+    <question>
+        <text>Which statement about cellular ATP levels is correct?</text>
+        <option>Cells store large amounts of ATP for later use</option>
+        <option>ATP is produced once and lasts the cell's lifetime</option>
+        <option>ATP is continuously recycled and replaced</option>
+        <option>ATP levels remain constant regardless of cell activity</option>
+        <answer>ATP is continuously recycled and replaced</answer>
+        <explanation>Cells maintain a dynamic balance of ATP through continuous production and consumption. ATP is rapidly used and regenerated rather than stored long-term, with the entire cellular ATP pool typically being recycled every few minutes.</explanation>
+    </question>
+    <question>
+        <text>What happens when ATP hydrolysis occurs?</text>
+        <option>Energy is created from nothing</option>
+        <option>A phosphate group is added to ATP</option>
+        <option>A phosphate group is removed and energy is released</option>
+        <option>ATP is converted to glucose</option>
+        <answer>A phosphate group is removed and energy is released</answer>
+        <explanation>During ATP hydrolysis, water breaks the bond between the last phosphate group and ATP, releasing energy and producing ADP plus inorganic phosphate. This released energy can then power various cellular processes requiring energy input.</explanation>
+    </question>
+</quiz>

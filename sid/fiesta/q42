@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What happens to the marginal propensity to consume when wealth inequality increases?</prompt>
+        <options>
+            <option letter="a">MPC increases for the economy as a whole</option>
+            <option letter="b">MPC decreases for the economy as a whole</option>
+            <option letter="c">MPC stays the same</option>
+            <option letter="d">Effect cannot be determined</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When wealth inequality increases, the overall marginal propensity to consume tends to decrease because wealthy individuals typically have a lower MPC than those with less wealth.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in expected future taxes affect current consumption?</prompt>
+        <options>
+            <option letter="a">Increases current consumption</option>
+            <option letter="b">Decreases current consumption</option>
+            <option letter="c">Has no effect on current consumption</option>
+            <option letter="d">Only affects future consumption</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in expected future taxes tends to decrease current consumption as households save more in anticipation of lower future disposable income, following the permanent income hypothesis.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happens to the loanable funds market when government borrowing increases?</prompt>
+        <options>
+            <option letter="a">Interest rates fall</option>
+            <option letter="b">Interest rates rise</option>
+            <option letter="c">Supply of loanable funds increases</option>
+            <option letter="d">Has no effect on interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Increased government borrowing raises demand for loanable funds, causing interest rates to rise as the government competes with private borrowers for available funds.</explanation>
+    </question>
+
+    <question>
+        <prompt>How does an increase in the capital-to-labor ratio affect labor productivity?</prompt>
+        <options>
+            <option letter="a">Decreases labor productivity</option>
+            <option letter="b">Increases labor productivity</option>
+            <option letter="c">Has no effect on labor productivity</option>
+            <option letter="d">Only affects capital productivity</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in the capital-to-labor ratio increases labor productivity because workers have more capital (equipment, tools, technology) to work with, enabling them to produce more output per hour.</explanation>
+    </question>
+</quiz>
