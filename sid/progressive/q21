@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The social settlement is a protest against a restricted view of education... It insists that education is life itself, not a mere preparation for a future career. Knowledge for the sake of life, art for the sake of life, should be our motto."
+- Jane Addams, Twenty Years at Hull House, 1910</stimulus>
+        <prompt>This philosophy most directly influenced which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">Adult education programs</option>
+            <option letter="b">Child labor laws</option>
+            <option letter="c">Anti-trust legislation</option>
+            <option letter="d">Conservation policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Addams's educational philosophy led to the development of adult education programs in settlement houses, emphasizing lifelong learning and practical knowledge.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing correlation between state referendum laws and decrease in corporate influence in state legislatures, 1900-1915]</stimulus>
+        <prompt>This data most strongly supports which Progressive Era goal?</prompt>
+        <options>
+            <option letter="a">Reducing business control of politics</option>
+            <option letter="b">Promoting women's suffrage</option>
+            <option letter="c">Restricting immigration</option>
+            <option letter="d">Expanding public education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The correlation supports the Progressive goal of using direct democracy tools like referendums to reduce corporate influence over state governments.</explanation>
+    </question>
+    <question>
+        <stimulus>"The great corporations which employed you lied to you, and lied to the whole country... They held that your lives were less valuable than their profits."
+- Upton Sinclair, Appeal to Reason, 1906</stimulus>
+        <prompt>This criticism most directly led to:</prompt>
+        <options>
+            <option letter="a">The Meat Inspection Act</option>
+            <option letter="b">The Federal Reserve Act</option>
+            <option letter="c">The Clayton Antitrust Act</option>
+            <option letter="d">The Adamson Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sinclair's exposé of meatpacking industry conditions in "The Jungle" led directly to the passage of the Meat Inspection Act of 1906.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a figure labeled "Commission Government" cleaning up city hall while traditional politicians flee]</stimulus>
+        <prompt>The reform shown in this cartoon aimed to:</prompt>
+        <options>
+            <option letter="a">Increase municipal efficiency</option>
+            <option letter="b">Expand voting rights</option>
+            <option letter="c">Regulate business</option>
+            <option letter="d">Restrict immigration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The commission form of government aimed to increase municipal efficiency by replacing corrupt political machines with professional administrators.</explanation>
+    </question>
+</quiz>

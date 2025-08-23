@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the long-run aggregate supply curve (LRAS), an increase in labor productivity would:</prompt>
+        <options>
+            <option letter="a">Shift LRAS left</option>
+            <option letter="b">Shift LRAS right</option>
+            <option letter="c">Move along the existing LRAS curve</option>
+            <option letter="d">Have no effect on LRAS</option>
+        </options>
+        <answer>b</answer>
+        <explanation>An increase in labor productivity represents an improvement in productive capacity, shifting the long-run aggregate supply curve rightward as the economy can produce more output at any price level.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which of the following would NOT cause a shift in the aggregate demand (AD) curve?</prompt>
+        <options>
+            <option letter="a">A change in consumer confidence</option>
+            <option letter="b">A change in government spending</option>
+            <option letter="c">A change in the price level</option>
+            <option letter="d">A change in interest rates</option>
+        </options>
+        <answer>c</answer>
+        <explanation>A change in the price level causes movement along the existing AD curve, not a shift. The other factors are determinants that would shift the entire AD curve.</explanation>
+    </question>
+
+    <question>
+        <prompt>The short-run aggregate supply (SRAS) curve is upward sloping because:</prompt>
+        <options>
+            <option letter="a">Prices and wages are sticky in the short run</option>
+            <option letter="b">Resources are fully employed</option>
+            <option letter="c">The money supply determines output</option>
+            <option letter="d">Consumer spending increases with income</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The SRAS curve slopes upward because prices and wages are sticky (inflexible) in the short run, meaning firms will produce more when prices rise while costs remain relatively constant.</explanation>
+    </question>
+
+    <question>
+        <prompt>At the full-employment level of output:</prompt>
+        <options>
+            <option letter="a">There is no unemployment</option>
+            <option letter="b">Only structural unemployment exists</option>
+            <option letter="c">The natural rate of unemployment exists</option>
+            <option letter="d">Cyclical unemployment is positive</option>
+        </options>
+        <answer>c</answer>
+        <explanation>At full employment, the economy operates at potential GDP with the natural rate of unemployment, which includes frictional and structural but not cyclical unemployment.</explanation>
+    </question>
+</quiz>

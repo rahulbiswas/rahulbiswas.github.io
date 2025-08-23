@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of CDK7?</text>
+        <option>Repair DNA</option>
+        <option>Phosphorylate RNA Pol II CTD</option>
+        <option>Process RNA</option>
+        <option>Modify histones</option>
+        <answer>Phosphorylate RNA Pol II CTD</answer>
+        <explanation>CDK7 phosphorylates the C-terminal domain of RNA Polymerase II, helping initiate transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex reads DNA methylation?</text>
+        <option>MBD proteins</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>MBD proteins</answer>
+        <explanation>Methyl-CpG Binding Domain (MBD) proteins specifically recognize and bind to methylated DNA.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of TFIIH?</text>
+        <option>End translation</option>
+        <option>Open DNA at promoters</option>
+        <option>Process RNA</option>
+        <option>Degrade proteins</option>
+        <answer>Open DNA at promoters</answer>
+        <explanation>TFIIH uses its helicase activity to open DNA at promoters during transcription initiation.</explanation>
+    </question>
+    
+    <question>
+        <text>Which enzyme adds m6A to mRNA?</text>
+        <option>METTL3</option>
+        <option>DNMTs</option>
+        <option>HDACs</option>
+        <option>HATs</option>
+        <answer>METTL3</answer>
+        <explanation>METTL3 is the catalytic component that adds m6A modifications to messenger RNA.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of PARP1?</text>
+        <option>Process RNA</option>
+        <option>Signal DNA damage</option>
+        <option>Synthesize proteins</option>
+        <option>Modify histones</option>
+        <answer>Signal DNA damage</answer>
+        <explanation>PARP1 recognizes DNA breaks and adds poly(ADP-ribose) chains to proteins to signal DNA damage.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of carnitine in fatty acid metabolism?</text>
+        <option>To break down fatty acids</option>
+        <option>To transport fatty acids into mitochondria</option>
+        <option>To synthesize new fatty acids</option>
+        <option>To store fatty acids</option>
+        <answer>To transport fatty acids into mitochondria</answer>
+        <explanation>Carnitine helps transport long-chain fatty acids across the mitochondrial membranes by forming fatty acyl-carnitine complexes.</explanation>
+    </question>
+    <question>
+        <text>What is the primary purpose of gluconeogenesis?</text>
+        <option>To break down glucose</option>
+        <option>To synthesize glucose from non-carbohydrate sources</option>
+        <option>To store glucose</option>
+        <option>To transport glucose</option>
+        <answer>To synthesize glucose from non-carbohydrate sources</answer>
+        <explanation>Gluconeogenesis is the metabolic pathway that produces glucose from non-carbohydrate precursors like amino acids and lactate.</explanation>
+    </question>
+    <question>
+        <text>When does gluconeogenesis primarily occur?</text>
+        <option>After eating carbohydrates</option>
+        <option>During fasting or low-carb diets</option>
+        <option>During intense exercise</option>
+        <option>While sleeping</option>
+        <answer>During fasting or low-carb diets</answer>
+        <explanation>Gluconeogenesis is activated when glucose availability is low, such as during fasting or when following a low-carbohydrate diet.</explanation>
+    </question>
+    <question>
+        <text>What is ketogenesis?</text>
+        <option>The breakdown of glucose</option>
+        <option>The production of ketone bodies from fatty acids</option>
+        <option>The synthesis of proteins</option>
+        <option>The storage of glycogen</option>
+        <answer>The production of ketone bodies from fatty acids</answer>
+        <explanation>Ketogenesis is the metabolic pathway that produces ketone bodies from fatty acids when glucose is scarce, providing an alternative energy source.</explanation>
+    </question>
+    <question>
+        <text>Which organ is the primary site of ketogenesis?</text>
+        <option>Brain</option>
+        <option>Liver</option>
+        <option>Muscles</option>
+        <option>Kidneys</option>
+        <answer>Liver</answer>
+        <explanation>The liver is the main site of ketogenesis, where fatty acids are converted to ketone bodies that can be used by other tissues for energy.</explanation>
+    </question>
+</questions>

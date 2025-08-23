@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>How does the balanced budget multiplier explain why a $100 billion increase in both government spending and taxes affects GDP?</prompt>
+        <options>
+            <option letter="a">It has no effect because spending and taxes offset</option>
+            <option letter="b">It increases GDP by $100 billion</option>
+            <option letter="c">It decreases GDP by $100 billion</option>
+            <option letter="d">It doubles GDP by $200 billion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The balanced budget multiplier shows that equal increases in government spending and taxes increase GDP by the amount of the spending increase. This occurs because government spending affects all of the initial amount, while the tax increase reduces consumption only by the MPC times the tax amount, resulting in a net positive effect.</explanation>
+    </question>
+</quiz>

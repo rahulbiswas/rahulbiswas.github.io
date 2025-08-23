@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What happens during photorespiration?</text>
+        <option>CO2 is fixed into glucose</option>
+        <option>O2 binds to RuBisCO instead of CO2</option>
+        <option>ATP is produced</option>
+        <option>NADPH is generated</option>
+        <answer>O2 binds to RuBisCO instead of CO2</answer>
+        <explanation>During photorespiration, oxygen competes with CO2 and binds to RuBisCO, reducing photosynthetic efficiency as it produces no useful products and consumes ATP.</explanation>
+    </question>
+    <question>
+        <text>How do C4 plants reduce photorespiration?</text>
+        <option>By not using RuBisCO</option>
+        <option>By separating initial CO2 fixation from the Calvin cycle</option>
+        <option>By eliminating oxygen production</option>
+        <option>By closing their stomata</option>
+        <answer>By separating initial CO2 fixation from the Calvin cycle</answer>
+        <explanation>C4 plants fix CO2 initially in mesophyll cells and transport it to bundle sheath cells where the Calvin cycle occurs, maintaining high CO2 levels around RuBisCO.</explanation>
+    </question>
+    <question>
+        <text>What is the function of PEP carboxylase in C4 photosynthesis?</text>
+        <option>To split water molecules</option>
+        <option>To fix CO2 initially in mesophyll cells</option>
+        <option>To produce glucose</option>
+        <option>To generate ATP</option>
+        <answer>To fix CO2 initially in mesophyll cells</answer>
+        <explanation>PEP carboxylase performs the initial carbon fixation in C4 plants, having a higher affinity for CO2 than RuBisCO and not binding oxygen.</explanation>
+    </question>
+    <question>
+        <text>What adaptation helps CAM plants conserve water?</text>
+        <option>They don't perform photosynthesis</option>
+        <option>They open stomata at night</option>
+        <option>They don't use water</option>
+        <option>They lack chlorophyll</option>
+        <answer>They open stomata at night</answer>
+        <explanation>CAM plants open their stomata at night to collect CO2 and close them during the day, reducing water loss while still performing photosynthesis.</explanation>
+    </question>
+    <question>
+        <text>Which process requires more ATP per glucose produced?</text>
+        <option>C3 photosynthesis</option>
+        <option>C4 photosynthesis</option>
+        <option>CAM photosynthesis</option>
+        <option>Cyclic photophosphorylation</option>
+        <answer>C4 photosynthesis</answer>
+        <explanation>C4 photosynthesis requires more ATP than C3 because it uses additional energy to concentrate CO2 in bundle sheath cells, but this trade-off reduces photorespiration.</explanation>
+    </question>
+</questions>

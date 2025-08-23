@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Fish for Oppa! 🐠</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #E6F3FF 0%, #B6E5FF 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        .ocean-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #FF69B4;
+            margin-bottom: 20px;
+        }
+        svg {
+            animation: swim 3s ease-in-out infinite;
+        }
+        @keyframes swim {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-10px) rotate(-5deg); }
+            75% { transform: translateY(10px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ocean-container">
+        <h1>Kawaii Fish</h1>
+        <svg width="300" height="180" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Main body - chubby and round for kawaii effect -->
+            <ellipse cx="100" cy="60" rx="45" ry="35" fill="#FFB6C1" stroke="#FF69B4" stroke-width="2"/>
+            
+            <!-- Tail fin with heart shape -->
+            <path d="M 55 60 Q 35 45, 25 45 Q 20 50, 20 60 Q 20 70, 25 75 Q 35 75, 55 60" 
+                  fill="#FF91A4" stroke="#FF69B4" stroke-width="2"/>
+            
+            <!-- Top fin -->
+            <path d="M 90 30 Q 95 20, 100 22 Q 105 20, 110 30 Q 105 35, 100 35 Q 95 35, 90 30" 
+                  fill="#FF91A4" stroke="#FF69B4" stroke-width="2"/>
+            
+            <!-- Bottom fin -->
+            <ellipse cx="95" cy="85" rx="8" ry="12" fill="#FF91A4" stroke="#FF69B4" stroke-width="2" transform="rotate(-30 95 85)"/>
+            
+            <!-- Side fin -->
+            <ellipse cx="75" cy="65" rx="12" ry="8" fill="#FFD1DC" stroke="#FF69B4" stroke-width="2" transform="rotate(-20 75 65)"/>
+            
+            <!-- Big kawaii eye -->
+            <circle cx="120" cy="55" r="12" fill="white"/>
+            <circle cx="122" cy="56" r="8" fill="#333"/>
+            <circle cx="124" cy="54" r="3" fill="white"/>
+            <circle cx="120" cy="58" r="1" fill="white"/>
+            
+            <!-- Cute blush -->
+            <ellipse cx="135" cy="65" rx="6" ry="4" fill="#FF889B" opacity="0.6"/>
+            
+            <!-- Happy mouth -->
+            <path d="M 115 70 Q 120 73, 125 70" stroke="#FF69B4" stroke-width="2" fill="none" stroke-linecap="round"/>
+            
+            <!-- Bubbles for extra cuteness -->
+            <circle cx="150" cy="35" r="4" fill="none" stroke="#87CEEB" stroke-width="1" opacity="0.5"/>
+            <circle cx="160" cy="25" r="3" fill="none" stroke="#87CEEB" stroke-width="1" opacity="0.4"/>
+            <circle cx="155" cy="45" r="2" fill="none" stroke="#87CEEB" stroke-width="1" opacity="0.3"/>
+            
+            <!-- Little sparkles -->
+            <text x="140" y="50" font-size="12" fill="#FFB6C1">✨</text>
+        </svg>
+        <p style="color: #FF69B4; margin-top: 20px;">Swimming happily for you 🥰</p>
+    </div>
+</body>
+</html>

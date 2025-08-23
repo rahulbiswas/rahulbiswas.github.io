@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is metabolic flexibility?</text>
+        <option>Random metabolism changes</option>
+        <option>Ability to switch fuel sources</option>
+        <option>Fixed metabolic rate</option>
+        <option>Energy storage only</option>
+        <answer>Ability to switch fuel sources</answer>
+        <explanation>Metabolic flexibility is the ability of cells to switch between different fuel sources (like glucose and fatty acids) based on availability and energy demands.</explanation>
+    </question>
+    <question>
+        <text>How do cells adapt to nutrient availability?</text>
+        <option>They don't adapt</option>
+        <option>By altering metabolic pathways</option>
+        <option>Through random changes</option>
+        <option>By shutting down</option>
+        <answer>By altering metabolic pathways</answer>
+        <explanation>Cells adapt to nutrient availability by regulating metabolic pathways through changes in enzyme activity, gene expression, and hormonal signaling.</explanation>
+    </question>
+    <question>
+        <text>What is the glucose-fatty acid cycle?</text>
+        <option>Random energy use</option>
+        <option>Competition between glucose and fatty acid oxidation</option>
+        <option>Glucose storage</option>
+        <option>Fat production</option>
+        <answer>Competition between glucose and fatty acid oxidation</answer>
+        <explanation>The glucose-fatty acid cycle describes the competitive relationship between glucose and fatty acid oxidation, where increased fatty acid oxidation inhibits glucose utilization.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain metabolic homeostasis?</text>
+        <option>Through random processes</option>
+        <option>Through coordinated regulation</option>
+        <option>By storing everything</option>
+        <option>By constant activity</option>
+        <answer>Through coordinated regulation</answer>
+        <explanation>Cells maintain metabolic homeostasis through coordinated regulation of multiple pathways, involving both rapid responses and long-term adaptations.</explanation>
+    </question>
+    <question>
+        <text>What triggers metabolic adaptation?</text>
+        <option>Only temperature</option>
+        <option>Changes in nutrient availability and energy demands</option>
+        <option>Cell size</option>
+        <option>Time of day only</option>
+        <answer>Changes in nutrient availability and energy demands</answer>
+        <explanation>Metabolic adaptation is triggered by changes in nutrient availability, energy demands, and various environmental and physiological signals.</explanation>
+    </question>
+</questions>

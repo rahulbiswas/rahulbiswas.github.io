@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of citrate in metabolic regulation?</text>
+        <option>Only to participate in the Krebs cycle</option>
+        <option>To inhibit phosphofructokinase-1</option>
+        <option>To activate glycolysis</option>
+        <option>To store energy</option>
+        <answer>To inhibit phosphofructokinase-1</answer>
+        <explanation>Citrate acts as an allosteric inhibitor of phosphofructokinase-1, helping to slow down glycolysis when there are abundant energy molecules available from the Krebs cycle.</explanation>
+    </question>
+    <question>
+        <text>How does acetyl-CoA regulate pyruvate dehydrogenase?</text>
+        <option>It activates the enzyme</option>
+        <option>It inhibits the enzyme</option>
+        <option>It has no effect</option>
+        <option>It breaks down the enzyme</option>
+        <answer>It inhibits the enzyme</answer>
+        <explanation>High levels of acetyl-CoA inhibit pyruvate dehydrogenase through feedback inhibition, preventing excess acetyl-CoA accumulation.</explanation>
+    </question>
+    <question>
+        <text>What role does fructose-2,6-bisphosphate play in metabolism?</text>
+        <option>It inhibits glycolysis</option>
+        <option>It activates phosphofructokinase-1</option>
+        <option>It stores glucose</option>
+        <option>It produces ATP</option>
+        <answer>It activates phosphofructokinase-1</answer>
+        <explanation>Fructose-2,6-bisphosphate is a potent activator of phosphofructokinase-1, helping to stimulate glycolysis when glucose is abundant.</explanation>
+    </question>
+    <question>
+        <text>How does ATP regulate the citric acid cycle?</text>
+        <option>By activating all enzymes</option>
+        <option>By inhibiting key regulatory enzymes</option>
+        <option>By increasing substrate availability</option>
+        <option>By producing more NADH</option>
+        <answer>By inhibiting key regulatory enzymes</answer>
+        <explanation>High ATP levels inhibit several key enzymes in the citric acid cycle, including citrate synthase and isocitrate dehydrogenase, slowing down the cycle when energy is abundant.</explanation>
+    </question>
+    <question>
+        <text>What effect does NADH have on the citric acid cycle?</text>
+        <option>It speeds up the cycle</option>
+        <option>It inhibits the cycle</option>
+        <option>It has no effect</option>
+        <option>It only affects ATP production</option>
+        <answer>It inhibits the cycle</answer>
+        <explanation>High levels of NADH inhibit several dehydrogenases in the citric acid cycle through feedback inhibition, preventing the accumulation of reduced electron carriers.</explanation>
+    </question>
+</questions>

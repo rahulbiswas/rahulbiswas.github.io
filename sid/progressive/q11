@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The business of the United States is business... The man who builds a factory builds a temple, and the man who works there worships there."
+- Calvin Coolidge, speech to newspaper editors, 1925</stimulus>
+        <prompt>This quote best represents which response to Progressive Era reforms?</prompt>
+        <options>
+            <option letter="a">Conservative backlash</option>
+            <option letter="b">Socialist critique</option>
+            <option letter="c">Progressive support</option>
+            <option letter="d">Labor movement approval</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Coolidge's pro-business stance represented a conservative backlash against Progressive Era reforms and a return to limited government regulation of business.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing correlation between women's suffrage states and states with child labor laws, prohibition, and compulsory education laws, 1900-1920]</stimulus>
+        <prompt>This data most strongly suggests that:</prompt>
+        <options>
+            <option letter="a">Women voters prioritized business regulation</option>
+            <option letter="b">Social reforms followed women's suffrage</option>
+            <option letter="c">Immigration caused social reform</option>
+            <option letter="d">Economic factors drove reform</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The correlation shows that states granting women's suffrage were more likely to pass social welfare legislation, supporting Progressive Era claims about women's reform influence.</explanation>
+    </question>
+    <question>
+        <stimulus>"The real heart of the battle was the equal distribution of wealth. How to make the corporation serve the people and not throttle them."
+- Lincoln Steffens, The Autobiography of Lincoln Steffens, 1931</stimulus>
+        <prompt>Which Progressive Era reform most directly addressed this concern?</prompt>
+        <options>
+            <option letter="a">The Sherman Antitrust Act</option>
+            <option letter="b">The Pure Food and Drug Act</option>
+            <option letter="c">The Federal Reserve Act</option>
+            <option letter="d">The Eighteenth Amendment</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Sherman Antitrust Act and its enforcement during the Progressive Era directly targeted corporate monopolies and economic concentration that Progressives believed threatened democracy.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a figure labeled "Direct Primary" breaking chains labeled "Party Boss Control" while voters cheer]</stimulus>
+        <prompt>This cartoon celebrates which Progressive Era political reform?</prompt>
+        <options>
+            <option letter="a">The direct election of senators</option>
+            <option letter="b">The initiative process</option>
+            <option letter="c">The primary election system</option>
+            <option letter="d">The recall provision</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The cartoon celebrates the direct primary system, which allowed voters rather than party bosses to select candidates for office, a key Progressive Era political reform.</explanation>
+    </question>
+</quiz>

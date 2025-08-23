@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of amino acid transporters?</text>
+        <option>To break down amino acids</option>
+        <option>To move amino acids across membranes</option>
+        <option>To synthesize proteins</option>
+        <option>To store amino acids</option>
+        <answer>To move amino acids across membranes</answer>
+        <explanation>Amino acid transporters facilitate the movement of amino acids across cell membranes, allowing for their uptake, distribution, and regulation in cells.</explanation>
+    </question>
+    <question>
+        <text>How are excess amino acids processed?</text>
+        <option>Stored as proteins</option>
+        <option>Converted to glucose or fat</option>
+        <option>Directly excreted</option>
+        <option>Converted to vitamins</option>
+        <answer>Converted to glucose or fat</answer>
+        <explanation>Excess amino acids are deaminated, with their carbon skeletons converted to glucose through gluconeogenesis or to acetyl-CoA for fatty acid synthesis.</explanation>
+    </question>
+    <question>
+        <text>What is the role of transaminases?</text>
+        <option>To break down proteins</option>
+        <option>To transfer amino groups</option>
+        <option>To synthesize proteins</option>
+        <option>To store amino acids</option>
+        <answer>To transfer amino groups</answer>
+        <explanation>Transaminases transfer amino groups from amino acids to α-ketoacids, playing a crucial role in amino acid metabolism and nitrogen distribution.</explanation>
+    </question>
+    <question>
+        <text>What happens to nitrogen from amino acids?</text>
+        <option>It is stored</option>
+        <option>It is converted to urea</option>
+        <option>It is used for energy</option>
+        <option>It is directly exhaled</option>
+        <answer>It is converted to urea</answer>
+        <explanation>Nitrogen from amino acid metabolism is converted to urea through the urea cycle in the liver, allowing for safe excretion in urine.</explanation>
+    </question>
+    <question>
+        <text>Which organ is most important for amino acid metabolism?</text>
+        <option>Brain</option>
+        <option>Liver</option>
+        <option>Kidneys</option>
+        <option>Muscles</option>
+        <answer>Liver</answer>
+        <explanation>The liver is the primary site of amino acid metabolism, including deamination, transamination, and the urea cycle for nitrogen disposal.</explanation>
+    </question>
+</questions>

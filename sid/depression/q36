@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Hoover's statement that "the tide has turned" in 1930:</prompt>
+        <options>
+            <option letter="a">Accurately predicted economic recovery</option>
+            <option letter="b">Demonstrated his misunderstanding of the Depression's severity</option>
+            <option letter="c">Referred to international relations</option>
+            <option letter="d">Announced new relief programs</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When Hoover declared "the tide has turned" in 1930, he severely misjudged the Great Depression's depth and duration. This statement, made as the economic crisis was actually worsening, damaged his credibility and became symbolic of his administration's failure to recognize and effectively address the Depression's severity. The economy continued to deteriorate for several more years.</explanation>
+    </question>
+</quiz>

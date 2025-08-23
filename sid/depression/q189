@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Richard Whitney's stock market intervention attempted to:</prompt>
+        <options>
+            <option letter="a">Implement new regulations</option>
+            <option letter="b">Stop market panic through dramatic purchases</option>
+            <option letter="c">Close the stock exchange</option>
+            <option letter="d">Secure government aid</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Richard Whitney, vice president of the New York Stock Exchange, attempted to stop the market panic on October 24, 1929 ("Black Thursday") by dramatically purchasing large blocks of U.S. Steel shares at above-market prices. This visible display was meant to restore investor confidence, but ultimately failed to prevent the crash, which continued through "Black Tuesday" and helped trigger the Great Depression.</explanation>
+    </question>
+</quiz>

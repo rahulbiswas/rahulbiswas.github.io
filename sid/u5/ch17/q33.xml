@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="129">
+        <prompt>What was the significance of the "Cross of Gold" speech?</prompt>
+        <options>
+            <option letter="a">It secured Bryan's nomination and defined the 1896 campaign</option>
+            <option letter="b">It promoted the gold standard</option>
+            <option letter="c">It united industrial workers</option>
+            <option letter="d">It supported big business</option>
+        </options>
+        <answer>a</answer>
+        <explanation>William Jennings Bryan's "Cross of Gold" speech electrified the 1896 Democratic convention, secured his nomination, and defined the campaign's focus on free silver.</explanation>
+    </question>
+    <question number="130">
+        <prompt>What was the main purpose of the Interstate Commerce Commission?</prompt>
+        <options>
+            <option letter="a">To regulate railroad rates and practices</option>
+            <option letter="b">To promote railroad expansion</option>
+            <option letter="c">To prevent regulation</option>
+            <option letter="d">To protect railroad profits</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Interstate Commerce Commission was created to regulate railroad rates and practices, though it initially lacked effective enforcement powers.</explanation>
+    </question>
+    <question number="131">
+        <prompt>What was the primary effect of the Massachusetts Civil Service Law?</prompt>
+        <options>
+            <option letter="a">It pioneered merit-based government hiring at the state level</option>
+            <option letter="b">It expanded patronage</option>
+            <option letter="c">It reduced efficiency</option>
+            <option letter="d">It increased corruption</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Massachusetts Civil Service Law pioneered merit-based hiring for state government positions, serving as a model for other states and civil service reform.</explanation>
+    </question>
+    <question number="132">
+        <prompt>What was the main goal of the Knights of Labor's cooperative movement?</prompt>
+        <options>
+            <option letter="a">To create worker-owned businesses as alternatives to capitalism</option>
+            <option letter="b">To increase business profits</option>
+            <option letter="c">To support big business</option>
+            <option letter="d">To prevent unionization</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Knights of Labor promoted worker-owned cooperative businesses as alternatives to capitalist enterprises, though most cooperatives ultimately failed.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do symbiotic relationships affect cellular energy metabolism?</text>
+        <option>They always reduce energy efficiency</option>
+        <option>They create mutually beneficial energy exchanges</option>
+        <option>They have no effect on metabolism</option>
+        <option>They only benefit one organism</option>
+        <answer>They create mutually beneficial energy exchanges</answer>
+        <explanation>Symbiotic relationships often involve coordinated energy metabolism between organisms, where each partner provides specific metabolic products or services that benefit the other, enhancing overall energy efficiency.</explanation>
+    </question>
+    <question>
+        <text>What role do mitochondria play in plant-fungal symbioses?</text>
+        <option>They are not involved</option>
+        <option>They coordinate energy exchange between partners</option>
+        <option>They only function in fungi</option>
+        <option>They reduce energy production</option>
+        <answer>They coordinate energy exchange between partners</answer>
+        <explanation>Mitochondria in both plant roots and fungal hyphae coordinate energy metabolism to support the exchange of nutrients and carbohydrates in mycorrhizal associations.</explanation>
+    </question>
+    <question>
+        <text>How do legumes and rhizobia coordinate their energy metabolism?</text>
+        <option>They compete for energy resources</option>
+        <option>They integrate metabolic pathways for nitrogen fixation</option>
+        <option>They function independently</option>
+        <option>They reduce all metabolism</option>
+        <answer>They integrate metabolic pathways for nitrogen fixation</answer>
+        <explanation>Legumes provide carbohydrates to rhizobia while bacteria supply fixed nitrogen, requiring coordinated regulation of energy metabolism in both organisms to maintain this beneficial symbiosis.</explanation>
+    </question>
+    <question>
+        <text>What metabolic adaptations occur in lichens?</text>
+        <option>Partners maintain separate metabolism</option>
+        <option>Fungi and algae develop integrated metabolism</option>
+        <option>Only fungi remain metabolically active</option>
+        <option>Metabolism stops completely</option>
+        <answer>Fungi and algae develop integrated metabolism</answer>
+        <explanation>In lichens, fungal and algal partners develop highly integrated metabolic systems where photosynthetic products from algae support fungal growth while fungi provide protection and minerals.</explanation>
+    </question>
+    <question>
+        <text>How do endosymbiotic relationships affect energy efficiency?</text>
+        <option>They always decrease efficiency</option>
+        <option>They often increase overall energy efficiency</option>
+        <option>They have no effect on efficiency</option>
+        <option>They only benefit the host</option>
+        <answer>They often increase overall energy efficiency</answer>
+        <explanation>Endosymbiotic relationships typically enhance overall energy efficiency through complementary metabolic capabilities, shared resources, and coordinated regulation of energy production and use.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="101">
+        <prompt>What effect did the "coal tipple" have on mining operations?</prompt>
+        <options>
+            <option letter="a">Mechanized coal loading and sorting</option>
+            <option letter="b">Reduced mining efficiency</option>
+            <option letter="c">Increased labor costs</option>
+            <option letter="d">Limited coal production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The coal tipple mechanized the loading and sorting of coal, increasing efficiency in mining operations while reducing manual labor requirements.</explanation>
+    </question>
+    <question number="102">
+        <prompt>How did the "detective agency" affect labor relations?</prompt>
+        <options>
+            <option letter="a">Provided anti-union surveillance and strikebreaking</option>
+            <option letter="b">Protected worker rights</option>
+            <option letter="c">Improved workplace safety</option>
+            <option letter="d">Mediated labor disputes</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Private detective agencies like Pinkerton provided anti-union surveillance, infiltration, and strikebreaking services to business owners.</explanation>
+    </question>
+    <question number="103">
+        <prompt>What was the significance of the "dry goods store" evolution?</prompt>
+        <options>
+            <option letter="a">Transformed into modern department stores</option>
+            <option letter="b">Declined in importance</option>
+            <option letter="c">Limited retail options</option>
+            <option letter="d">Increased prices</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Dry goods stores evolved into modern department stores, revolutionizing retail by offering diverse products under one roof with fixed pricing.</explanation>
+    </question>
+    <question number="104">
+        <prompt>How did the "elevator brake" affect building construction?</prompt>
+        <options>
+            <option letter="a">Enabled safe construction of tall buildings</option>
+            <option letter="b">Limited building height</option>
+            <option letter="c">Increased construction costs</option>
+            <option letter="d">Reduced building safety</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Elisha Otis's elevator brake made tall buildings practical by ensuring passenger safety, contributing to the development of skyscrapers.</explanation>
+    </question></quiz>

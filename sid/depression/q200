@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Scopes Trial's broader significance was as a symbol of:</prompt>
+        <options>
+            <option letter="a">Scientific debate only</option>
+            <option letter="b">The conflict between tradition and modernity</option>
+            <option letter="c">Educational funding issues</option>
+            <option letter="d">Political reform</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1925 Scopes "Monkey" Trial symbolized the broader conflict between tradition and modernity in American society. While ostensibly about teaching evolution, the trial represented deeper tensions between rural religious fundamentalism and urban secular modernism, traditional values and changing social norms, and faith versus science. The extensive media coverage made it a defining moment in the cultural battles of the 1920s.</explanation>
+    </question>
+</quiz>

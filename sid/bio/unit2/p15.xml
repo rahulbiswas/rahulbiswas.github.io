@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of the nuclear pore complex?</text>
+        <option>Selective transport</option>
+        <option>Energy production</option>
+        <option>Protein synthesis</option>
+        <option>Waste disposal</option>
+        <answer>Selective transport</answer>
+        <explanation>Nuclear pore complexes regulate the selective transport of molecules between the nucleus and cytoplasm.</explanation>
+    </question>
+    <question>
+        <text>Which molecule requires active transport into the nucleus?</text>
+        <option>Large proteins</option>
+        <option>Small molecules</option>
+        <option>Water</option>
+        <option>Ions</option>
+        <answer>Large proteins</answer>
+        <explanation>Large proteins require active transport through nuclear pores using specific transport signals and carriers.</explanation>
+    </question>
+    <question>
+        <text>What forms the nuclear lamina?</text>
+        <option>Intermediate filaments</option>
+        <option>Microfilaments</option>
+        <option>Microtubules</option>
+        <option>Motor proteins</option>
+        <answer>Intermediate filaments</answer>
+        <explanation>The nuclear lamina is composed of specialized intermediate filaments called lamins.</explanation>
+    </question>
+    <question>
+        <text>Where does ribosome assembly occur?</text>
+        <option>Nucleolus</option>
+        <option>Cytoplasm</option>
+        <option>Golgi apparatus</option>
+        <option>Mitochondria</option>
+        <answer>Nucleolus</answer>
+        <explanation>The nucleolus is the site of ribosome assembly and rRNA processing.</explanation>
+    </question>
+    <question>
+        <text>What maintains nuclear envelope structure?</text>
+        <option>Nuclear lamina</option>
+        <option>Membrane proteins</option>
+        <option>Lipid rafts</option>
+        <option>Transport vesicles</option>
+        <answer>Nuclear lamina</answer>
+        <explanation>The nuclear lamina provides structural support and helps maintain nuclear envelope shape.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Smoot-Hawley Tariff Act of 1930:</prompt>
+        <options>
+            <option letter="a">Reduced international trade barriers</option>
+            <option letter="b">Raised tariffs to record-high levels</option>
+            <option letter="c">Created a free trade agreement with Europe</option>
+            <option letter="d">Eliminated all import taxes</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Smoot-Hawley Tariff Act raised U.S. tariffs on over 20,000 imported goods to record-high levels. This protectionist measure, intended to help American businesses, actually worsened the Great Depression by prompting retaliatory tariffs from other nations and severely reducing international trade.</explanation>
+    </question>
+</quiz>

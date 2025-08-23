@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main component of plant cell walls?</text>
+        <option>Cellulose</option>
+        <option>Peptidoglycan</option>
+        <option>Chitin</option>
+        <option>Cholesterol</option>
+        <answer>Cellulose</answer>
+        <explanation>Cellulose microfibrils are the primary structural component of plant cell walls.</explanation>
+    </question>
+    <question>
+        <text>Which molecule connects plant cells through cell walls?</text>
+        <option>Plasmodesmata</option>
+        <option>Gap junctions</option>
+        <option>Tight junctions</option>
+        <option>Desmosomes</option>
+        <answer>Plasmodesmata</answer>
+        <explanation>Plasmodesmata are channels through plant cell walls that allow communication between adjacent cells.</explanation>
+    </question>
+    <question>
+        <text>What provides flexibility to plant cell walls?</text>
+        <option>Pectin</option>
+        <option>Lignin</option>
+        <option>Suberin</option>
+        <option>Wax</option>
+        <answer>Pectin</answer>
+        <explanation>Pectin provides flexibility and adhesion between cells in plant cell walls.</explanation>
+    </question>
+    <question>
+        <text>Which layer forms first in plant cell walls?</text>
+        <option>Primary wall</option>
+        <option>Secondary wall</option>
+        <option>Middle lamella</option>
+        <option>Tertiary wall</option>
+        <answer>Primary wall</answer>
+        <explanation>The primary cell wall forms first during plant cell growth and development.</explanation>
+    </question>
+    <question>
+        <text>What makes wood cells rigid?</text>
+        <option>Lignin</option>
+        <option>Cellulose</option>
+        <option>Pectin</option>
+        <option>Hemicellulose</option>
+        <answer>Lignin</answer>
+        <explanation>Lignin provides rigidity and strength to woody plant cell walls, particularly in secondary walls.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The Equal Rights Amendment (ERA) faced opposition from:</prompt>
+        <options>
+            <option letter="a">Only male politicians</option>
+            <option letter="b">Women's groups concerned about protective legislation</option>
+            <option letter="c">Business associations</option>
+            <option letter="d">Civil rights organizations</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The ERA, proposed in 1923, faced significant opposition from women's groups and labor organizations who feared it would eliminate protective legislation for working women. Groups like the Women's Trade Union League worried that the amendment's absolute equality would invalidate laws setting maximum hours and minimum wages for women workers, highlighting divisions within the women's movement over equality versus protection.</explanation>
+    </question>
+</quiz>

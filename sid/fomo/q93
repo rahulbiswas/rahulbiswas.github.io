@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>A bank has a 15% required reserve ratio and $300,000 in deposits. If it's currently holding $60,000 in reserves, how much in excess reserves does it have?</prompt>
+        <options>
+            <option letter="a">$15,000</option>
+            <option letter="b">$45,000</option>
+            <option letter="c">$30,000</option>
+            <option letter="d">$60,000</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Required reserves = 15% × $300,000 = $45,000. The bank is holding $60,000 in actual reserves. Excess reserves = Actual reserves - Required reserves = $60,000 - $45,000 = $15,000. This is the amount the bank could lend out while still meeting its reserve requirement.</explanation>
+    </question>
+</quiz>

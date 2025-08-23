@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>What is the primary function of RuBisCO in the Calvin cycle?</text>
+        <option>Splitting water molecules</option>
+        <option>Capturing light energy</option>
+        <option>Fixing CO2 to RuBP</option>
+        <option>Producing ATP</option>
+        <answer>Fixing CO2 to RuBP</answer>
+        <explanation>RuBisCO (Ribulose-1,5-bisphosphate carboxylase/oxygenase) catalyzes the first major step of carbon fixation, adding CO2 to ribulose-1,5-bisphosphate (RuBP) to form two molecules of 3-phosphoglycerate.</explanation>
+    </question>
+    <question>
+        <text>Why is the Calvin cycle also called the light-independent reactions?</text>
+        <option>Because it occurs only at night</option>
+        <option>Because it doesn't directly require light energy</option>
+        <option>Because it produces light</option>
+        <option>Because it occurs outside the chloroplast</option>
+        <answer>Because it doesn't directly require light energy</answer>
+        <explanation>The Calvin cycle doesn't directly use light energy, but instead uses ATP and NADPH produced by the light-dependent reactions. It can occur in both light and dark conditions as long as these energy carriers are available.</explanation>
+    </question>
+    <question>
+        <text>What is the net product of six turns of the Calvin cycle?</text>
+        <option>Six glucose molecules</option>
+        <option>One glucose molecule</option>
+        <option>Three glucose molecules</option>
+        <option>Two glucose molecules</option>
+        <answer>One glucose molecule</answer>
+        <explanation>It takes six turns of the Calvin cycle to produce enough G3P (glyceraldehyde-3-phosphate) to synthesize one glucose molecule. Each turn fixes one CO2, and glucose contains six carbons.</explanation>
+    </question>
+    <question>
+        <text>Which phase of the Calvin cycle regenerates the CO2 acceptor molecule?</text>
+        <option>Carbon fixation</option>
+        <option>Reduction</option>
+        <option>Regeneration</option>
+        <option>Oxidation</option>
+        <answer>Regeneration</answer>
+        <explanation>The regeneration phase uses ATP to convert some G3P molecules back into RuBP, the CO2 acceptor molecule. This regeneration allows the cycle to continue as long as ATP and NADPH are available.</explanation>
+    </question>
+    <question>
+        <text>How does photorespiration affect the efficiency of the Calvin cycle?</text>
+        <option>It increases glucose production</option>
+        <option>It enhances carbon fixation</option>
+        <option>It reduces the efficiency of carbon fixation</option>
+        <option>It has no effect on the Calvin cycle</option>
+        <answer>It reduces the efficiency of carbon fixation</answer>
+        <explanation>During photorespiration, RuBisCO fixes oxygen instead of CO2, producing products that cells must expend energy to recycle. This process reduces the efficiency of photosynthesis by competing with normal carbon fixation.</explanation>
+    </question>
+</quiz>

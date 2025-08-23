@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the definition of Km in enzyme kinetics?</text>
+        <option>Maximum reaction velocity</option>
+        <option>Substrate concentration at half Vmax</option>
+        <option>Enzyme concentration</option>
+        <option>Product formation rate</option>
+        <answer>Substrate concentration at half Vmax</answer>
+        <explanation>Km is the substrate concentration at which the reaction rate is half of its maximum velocity (Vmax), indicating enzyme-substrate affinity.</explanation>
+    </question>
+    <question>
+        <text>How does a competitive inhibitor affect enzyme kinetics?</text>
+        <option>Decreases Vmax only</option>
+        <option>Increases Km only</option>
+        <option>Affects both Km and Vmax</option>
+        <option>Has no effect on either</option>
+        <answer>Increases Km only</answer>
+        <explanation>Competitive inhibitors increase Km (more substrate needed for half-maximal velocity) while Vmax remains unchanged.</explanation>
+    </question>
+    <question>
+        <text>What does kcat represent in enzyme kinetics?</text>
+        <option>Substrate binding rate</option>
+        <option>Inhibition constant</option>
+        <option>Turnover number</option>
+        <option>Enzyme concentration</option>
+        <answer>Turnover number</answer>
+        <explanation>kcat is the turnover number, representing the maximum number of substrate molecules converted to product per enzyme molecule per second.</explanation>
+    </question>
+    <question>
+        <text>Which plot gives a straight line for enzyme kinetics?</text>
+        <option>Michaelis-Menten plot</option>
+        <option>Lineweaver-Burk plot</option>
+        <option>Substrate concentration plot</option>
+        <option>Product formation plot</option>
+        <answer>Lineweaver-Burk plot</answer>
+        <explanation>The Lineweaver-Burk plot (1/V vs 1/[S]) transforms the hyperbolic Michaelis-Menten curve into a straight line.</explanation>
+    </question>
+    <question>
+        <text>What determines enzyme efficiency?</text>
+        <option>kcat only</option>
+        <option>Km only</option>
+        <option>kcat/Km ratio</option>
+        <option>Substrate concentration</option>
+        <answer>kcat/Km ratio</answer>
+        <explanation>The kcat/Km ratio is a measure of enzyme efficiency, combining the turnover rate with substrate binding affinity.</explanation>
+    </question>
+</questions>

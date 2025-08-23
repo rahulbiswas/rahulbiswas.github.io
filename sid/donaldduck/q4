@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>Why did FDR propose the court-packing plan in 1937?</prompt>
+    <options>
+        <option letter="a">To improve judicial efficiency</option>
+        <option letter="b">To add liberal justices</option>
+        <option letter="c">To reduce court costs</option>
+        <option letter="d">To speed up cases</option>
+    </options>
+    <answer>b</answer>
+    <explanation>FDR wanted to add up to six new Supreme Court justices to overcome the Court's opposition to New Deal programs.</explanation>
+</question>

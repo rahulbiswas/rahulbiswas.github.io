@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question number="41">
+        <prompt>What was the main argument used to justify American imperialism?</prompt>
+        <options>
+            <option letter="a">White Americans had a duty to civilize other peoples</option>
+            <option letter="b">Military conquest was profitable</option>
+            <option letter="c">Territorial expansion was necessary</option>
+            <option letter="d">Other nations threatened U.S. interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The idea of "The White Man's Burden" and social Darwinism were used to justify American imperialism as a moral duty to civilize and Christianize other peoples.</explanation>
+    </question>
+    <question number="42">
+        <prompt>What was the major impact of the depression of 1893-1897?</prompt>
+        <options>
+            <option letter="a">It led to widespread unemployment and labor unrest</option>
+            <option letter="b">It strengthened the gold standard</option>
+            <option letter="c">It increased industrial production</option>
+            <option letter="d">It improved working conditions</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The depression caused massive unemployment, widespread business failures, and significant labor unrest, becoming one of the worst economic crises of the 19th century.</explanation>
+    </question>
+    <question number="43">
+        <prompt>What was the primary purpose of the Immigration Restriction League?</prompt>
+        <options>
+            <option letter="a">To limit immigration from Southern and Eastern Europe</option>
+            <option letter="b">To protect immigrant rights</option>
+            <option letter="c">To promote cultural diversity</option>
+            <option letter="d">To assist immigrant settlement</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Immigration Restriction League sought to limit immigration from Southern and Eastern Europe, arguing these immigrants were racially and culturally inferior to earlier Northern European immigrants.</explanation>
+    </question>
+    <question number="44">
+        <prompt>What was the significance of the massacre at Wounded Knee in 1890?</prompt>
+        <options>
+            <option letter="a">It marked the end of organized Native American resistance</option>
+            <option letter="b">It led to improved Indian policies</option>
+            <option letter="c">It started the Ghost Dance movement</option>
+            <option letter="d">It united tribal nations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The massacre at Wounded Knee effectively marked the end of organized Native American military resistance to U.S. expansion and symbolized the triumph of federal power over native peoples.</explanation>
+    </question>
+</quiz>

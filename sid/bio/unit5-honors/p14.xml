@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of RecA protein in bacteria?</text>
+        <option>Transcribe genes</option>
+        <option>Catalyze homologous recombination</option>
+        <option>Synthesize proteins</option>
+        <option>Process RNA</option>
+        <answer>Catalyze homologous recombination</answer>
+        <explanation>RecA protein facilitates DNA strand exchange during homologous recombination and DNA repair in bacteria.</explanation>
+    </question>
+    
+    <question>
+        <text>Which factor is involved in alternative polyadenylation?</text>
+        <option>Splicing factors</option>
+        <option>CPSF complex</option>
+        <option>DNA polymerase</option>
+        <option>Ribosomes</option>
+        <answer>CPSF complex</answer>
+        <explanation>The Cleavage and Polyadenylation Specificity Factor (CPSF) complex helps select different polyadenylation sites in mRNA.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of nucleoporins?</text>
+        <option>Repair DNA</option>
+        <option>Form nuclear pores</option>
+        <option>Synthesize RNA</option>
+        <option>Fold proteins</option>
+        <answer>Form nuclear pores</answer>
+        <explanation>Nucleoporins are proteins that form the nuclear pore complexes, controlling transport between nucleus and cytoplasm.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires the GCN5 protein?</text>
+        <option>DNA repair</option>
+        <option>Histone acetylation</option>
+        <option>RNA splicing</option>
+        <option>Protein degradation</option>
+        <answer>Histone acetylation</answer>
+        <explanation>GCN5 is a histone acetyltransferase that adds acetyl groups to histones, promoting gene activation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of Dam methylase in bacteria?</text>
+        <option>Repair mismatches</option>
+        <option>Mark original DNA strand</option>
+        <option>Degrade proteins</option>
+        <option>Transcribe genes</option>
+        <answer>Mark original DNA strand</answer>
+        <explanation>Dam methylase methylates GATC sequences in bacterial DNA, marking the original strand for mismatch repair systems.</explanation>
+    </question>
+</questions>

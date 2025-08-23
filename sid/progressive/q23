@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The initiative, referendum, and recall are not substitutes for representative government, but means for restoring it when it becomes misrepresentative... They are the safety valve, not the engine of democracy."
+- William Jennings Bryan, 1911</stimulus>
+        <prompt>This statement best reflects Progressive attitudes toward:</prompt>
+        <options>
+            <option letter="a">Direct democracy reforms</option>
+            <option letter="b">Labor legislation</option>
+            <option letter="c">Immigration policy</option>
+            <option letter="d">Conservation measures</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Bryan's statement reflects Progressive views of direct democracy tools as corrections to representative government rather than replacements for it.</explanation>
+    </question>
+    <question>
+        <stimulus>[Statistics showing correlation between women in state legislatures and passage of public health laws, workplace safety regulations, and education reforms, 1910-1920]</stimulus>
+        <prompt>This data most strongly supports which Progressive Era argument?</prompt>
+        <options>
+            <option letter="a">Women would promote social welfare</option>
+            <option letter="b">Business needed regulation</option>
+            <option letter="c">Cities required reform</option>
+            <option letter="d">Immigration should be restricted</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The correlation between women legislators and social welfare legislation supported arguments that women's political participation would promote social reforms.</explanation>
+    </question>
+    <question>
+        <stimulus>"The saloon is the breeding place of crime, the waiting-room of Hell... It breaks up homes, corrupts politics, and destroys the moral fiber of society."
+- Carrie Nation, Speech to WCTU, 1902</stimulus>
+        <prompt>This rhetoric most directly contributed to:</prompt>
+        <options>
+            <option letter="a">The Eighteenth Amendment</option>
+            <option letter="b">The Federal Reserve Act</option>
+            <option letter="c">The Clayton Antitrust Act</option>
+            <option letter="d">The Pure Food and Drug Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Nation's anti-saloon rhetoric exemplified temperance movement arguments that led to the Eighteenth Amendment establishing Prohibition.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photographs comparing city governments before and after commission plan adoption, showing improved services and reduced corruption]</stimulus>
+        <prompt>These changes most directly reflected Progressive emphasis on:</prompt>
+        <options>
+            <option letter="a">Professional management</option>
+            <option letter="b">Direct democracy</option>
+            <option letter="c">Social justice</option>
+            <option letter="d">Economic regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The improvements under commission government reflected the Progressive emphasis on professional, efficient management of city government.</explanation>
+    </question>
+</quiz>

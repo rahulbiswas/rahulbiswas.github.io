@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Andrew Mellon's "scientific taxation" theory proposed:</prompt>
+        <options>
+            <option letter="a">Higher taxes on wealthy Americans</option>
+            <option letter="b">Tax cuts for the wealthy would increase revenue</option>
+            <option letter="c">Equal taxation for all income levels</option>
+            <option letter="d">Increased government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>As Treasury Secretary, Andrew Mellon's "scientific taxation" theory argued that lowering tax rates on wealthy Americans and businesses would stimulate economic growth and ultimately increase government revenue. This approach, similar to later "supply-side economics," led to significant tax cuts during the 1920s and reflected the pro-business policies of Republican administrations during this period.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>When the Fed reduces the money supply through open market operations, what is the sequence of effects?</prompt>
+        <options>
+            <option letter="a">Money supply ↓, interest rates ↑, investment ↑, AD ↑</option>
+            <option letter="b">Money supply ↓, interest rates ↑, investment ↓, AD ↓</option>
+            <option letter="c">Money supply ↓, interest rates ↓, investment ↑, AD ↑</option>
+            <option letter="d">Money supply ↓, interest rates ↓, investment ↓, AD ↓</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When the Fed reduces money supply by selling securities, it raises interest rates in the money market. Higher interest rates discourage borrowing and investment spending, which leads to a decrease in aggregate demand through the monetary policy transmission mechanism.</explanation>
+    </question>
+</quiz>

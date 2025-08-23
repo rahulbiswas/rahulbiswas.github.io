@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The life of the average city man is a continuous race with the bill collector... The city man's air is not fresh, his sun is not bright, his grass is not clean, his milk is not pure."
+- Ray Stannard Baker, "The Spiritual Unrest," 1910</stimulus>
+        <prompt>This excerpt most directly influenced which Progressive Era development?</prompt>
+        <options>
+            <option letter="a">The creation of national parks</option>
+            <option letter="b">The urban reform movement</option>
+            <option letter="c">The Federal Reserve Act</option>
+            <option letter="d">The women's suffrage movement</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Baker's muckraking journalism about urban conditions contributed to the urban reform movement, which sought to improve city living conditions and regulate urban services.</explanation>
+    </question>
+    <question>
+        <stimulus>[Statistical table showing increase in state workplace safety laws: 1900: 4 states, 1905: 12 states, 1910: 21 states, 1915: 32 states]</stimulus>
+        <prompt>This trend most directly resulted from:</prompt>
+        <options>
+            <option letter="a">Federal government mandates</option>
+            <option letter="b">Labor union advocacy</option>
+            <option letter="c">Corporate initiatives</option>
+            <option letter="d">International pressure</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The increase in state workplace safety laws primarily resulted from labor union advocacy and public pressure following industrial accidents and exposés of dangerous working conditions.</explanation>
+    </question>
+    <question>
+        <stimulus>"I believe in the initiative and referendum, which should be used not to destroy representative government, but to correct it whenever it becomes misrepresentative."
+- Theodore Roosevelt, "A Charter for Democracy," 1912</stimulus>
+        <prompt>This statement best reflects the Progressive Era's commitment to:</prompt>
+        <options>
+            <option letter="a">Direct democracy</option>
+            <option letter="b">Civil service reform</option>
+            <option letter="c">Conservation</option>
+            <option letter="d">Trust regulation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Roosevelt's support for the initiative and referendum reflected the Progressive movement's commitment to direct democracy as a means of giving voters more control over government.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of Hull House residents teaching immigrant children, with captions describing classes in English, citizenship, and vocational skills]</stimulus>
+        <prompt>The primary goal of the activities shown was to:</prompt>
+        <options>
+            <option letter="a">Promote prohibition</option>
+            <option letter="b">Support women's suffrage</option>
+            <option letter="c">Facilitate immigrant assimilation</option>
+            <option letter="d">Reform city government</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Settlement houses like Hull House focused on helping immigrants adapt to American society through education and social services while preserving aspects of their cultural heritage.</explanation>
+    </question>
+</quiz>

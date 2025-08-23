@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Langston Hughes's contribution to the Harlem Renaissance was characterized by:</prompt>
+        <options>
+            <option letter="a">Traditional poetic forms only</option>
+            <option letter="b">Use of vernacular language and jazz rhythms</option>
+            <option letter="c">Avoiding racial themes</option>
+            <option letter="d">Political conservatism</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Langston Hughes's distinctive contribution to the Harlem Renaissance was characterized by his deliberate use of African American vernacular language, jazz rhythms, and blues influences in his poetry. Unlike some of his contemporaries who preferred traditional forms, Hughes embraced Black cultural expressions and everyday speech patterns to celebrate African American life and experience.</explanation>
+    </question>
+</quiz>

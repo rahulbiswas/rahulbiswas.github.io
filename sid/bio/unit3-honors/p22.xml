@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do plant hormones regulate photosynthetic capacity?</text>
+        <option>They have no effect on photosynthesis</option>
+        <option>They coordinate growth with photosynthetic capacity</option>
+        <option>They only affect root growth</option>
+        <option>They reduce photosynthesis always</option>
+        <answer>They coordinate growth with photosynthetic capacity</answer>
+        <explanation>Plant hormones like cytokinins and auxins coordinate photosynthetic capacity with growth demands by regulating chloroplast development, enzyme expression, and carbon allocation patterns.</explanation>
+    </question>
+    <question>
+        <text>What role does sucrose play in photosynthetic regulation?</text>
+        <option>It only provides energy</option>
+        <option>It signals metabolic status and regulates gene expression</option>
+        <option>It has no regulatory function</option>
+        <option>It only affects root growth</option>
+        <answer>It signals metabolic status and regulates gene expression</answer>
+        <explanation>Sucrose acts as both an energy carrier and a signaling molecule, regulating photosynthetic gene expression and metabolism through sugar-sensing pathways that coordinate carbon fixation with cellular energy demands.</explanation>
+    </question>
+    <question>
+        <text>How do chloroplasts signal their functional status to the nucleus?</text>
+        <option>They don't communicate with the nucleus</option>
+        <option>Through retrograde signaling pathways</option>
+        <option>Only through protein changes</option>
+        <option>By changing leaf color</option>
+        <answer>Through retrograde signaling pathways</answer>
+        <explanation>Chloroplasts communicate their functional status to the nucleus through retrograde signaling pathways, using molecules like reactive oxygen species, metabolites, and specific signaling factors to regulate nuclear gene expression.</explanation>
+    </question>
+    <question>
+        <text>What triggers chloroplast movements in leaves?</text>
+        <option>Temperature only</option>
+        <option>Light intensity and direction</option>
+        <option>Water availability</option>
+        <option>Nutrient levels</option>
+        <answer>Light intensity and direction</answer>
+        <explanation>Chloroplasts move in response to light intensity and direction, accumulating under low light to maximize photosynthesis and moving to cell sides under high light to minimize photodamage.</explanation>
+    </question>
+    <question>
+        <text>How do plants adjust their photosynthetic capacity seasonally?</text>
+        <option>They maintain constant capacity</option>
+        <option>They modify enzyme levels and leaf structure</option>
+        <option>They only change leaf color</option>
+        <option>They stop photosynthesis completely</option>
+        <answer>They modify enzyme levels and leaf structure</answer>
+        <explanation>Plants adjust to seasonal changes by modifying their photosynthetic enzyme levels, leaf structure, and chloroplast composition to optimize photosynthetic efficiency under changing environmental conditions.</explanation>
+    </question>
+</quiz>

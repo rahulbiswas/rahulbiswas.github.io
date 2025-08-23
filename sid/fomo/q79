@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If real GDP is growing at 3% annually and velocity is constant, what rate of money supply growth would achieve a 2% inflation target?</prompt>
+        <options>
+            <option letter="a">1%</option>
+            <option letter="b">2%</option>
+            <option letter="c">3%</option>
+            <option letter="d">5%</option>
+        </options>
+        <answer>d</answer>
+        <explanation>Using MV = PY, with constant V, the growth rate of M must equal the growth rate of P plus the growth rate of Y. To achieve 2% inflation (P) with 3% real GDP growth (Y), money supply must grow by 2% + 3% = 5%. This maintains the equation's equality while hitting the inflation target.</explanation>
+    </question>
+</quiz>

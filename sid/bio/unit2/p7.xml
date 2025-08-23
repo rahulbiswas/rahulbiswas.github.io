@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main difference between prokaryotic and eukaryotic cells?</text>
+        <option>Membrane-bound organelles</option>
+        <option>Cell size</option>
+        <option>Carbon content</option>
+        <option>Water content</option>
+        <answer>Membrane-bound organelles</answer>
+        <explanation>The key distinction is that eukaryotic cells have membrane-bound organelles while prokaryotic cells do not.</explanation>
+    </question>
+    <question>
+        <text>Where is DNA located in a prokaryotic cell?</text>
+        <option>Nucleoid region</option>
+        <option>Nucleus</option>
+        <option>Mitochondria</option>
+        <option>Golgi apparatus</option>
+        <answer>Nucleoid region</answer>
+        <explanation>Prokaryotic DNA is located in the nucleoid region, an area that is not membrane-bound like the eukaryotic nucleus.</explanation>
+    </question>
+    <question>
+        <text>What structure is unique to bacterial cells?</text>
+        <option>Peptidoglycan cell wall</option>
+        <option>Nuclear membrane</option>
+        <option>Endoplasmic reticulum</option>
+        <option>Mitochondria</option>
+        <answer>Peptidoglycan cell wall</answer>
+        <explanation>Peptidoglycan cell walls are unique to bacteria and provide structural support and protection.</explanation>
+    </question>
+    <question>
+        <text>Which organelle is absent in prokaryotes?</text>
+        <option>Endoplasmic reticulum</option>
+        <option>Ribosomes</option>
+        <option>Cell membrane</option>
+        <option>Cytoplasm</option>
+        <answer>Endoplasmic reticulum</answer>
+        <explanation>Prokaryotes lack an endoplasmic reticulum, along with other membrane-bound organelles found in eukaryotes.</explanation>
+    </question>
+    <question>
+        <text>What is the function of bacterial flagella?</text>
+        <option>Motility</option>
+        <option>Protein synthesis</option>
+        <option>Energy production</option>
+        <option>DNA replication</option>
+        <answer>Motility</answer>
+        <explanation>Bacterial flagella are specialized structures that enable cell movement and motility in response to environmental stimuli.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Meridian Race Riot" of 1871?</prompt>
+        <options>
+            <option letter="a">Demonstrated the limits of federal protection for African Americans</option>
+            <option letter="b">Led to increased civil rights</option>
+            <option letter="c">Improved race relations</option>
+            <option letter="d">Strengthened Republican control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Meridian Race Riot showed the limitations of federal protection for African Americans when local authorities refused to prosecute white perpetrators of violence.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Fence Laws" affect Southern agriculture?</prompt>
+        <options>
+            <option letter="a">Placed burden on poor farmers to fence livestock</option>
+            <option letter="b">Protected small farmers</option>
+            <option letter="c">Improved agricultural efficiency</option>
+            <option letter="d">Supported sharecroppers</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Fence Laws placed the burden on poor farmers to fence their livestock, rather than requiring plantation owners to fence their crops, creating economic hardship.</explanation>
+    </question>
+    <question>
+        <prompt>What role did "Reading Rooms" play in Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided education and political information to freedmen</option>
+            <option letter="b">Supported Confederate interests</option>
+            <option letter="c">Restricted literacy access</option>
+            <option letter="d">Managed military records</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Reading Rooms established by the Freedmen's Bureau and other organizations provided education and political information to newly freed people.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Property Qualification" for voting?</prompt>
+        <options>
+            <option letter="a">To prevent poor citizens from voting</option>
+            <option letter="b">To increase voter participation</option>
+            <option letter="c">To protect voting rights</option>
+            <option letter="d">To ensure fair elections</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Property Qualifications were used to prevent poor citizens, particularly African Americans, from voting by requiring voters to own property.</explanation>
+    </question>
+</quiz>

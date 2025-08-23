@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was William Jennings Bryan's role in the Populist movement?</prompt>
+        <options>
+            <option letter="a">Original founder of the movement</option>
+            <option letter="b">Democratic candidate who merged Populist ideas</option>
+            <option letter="c">Republican opponent to Populism</option>
+            <option letter="d">Railroad industry spokesperson</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Bryan, the Democratic presidential nominee in 1896, incorporated Populist ideas and received their endorsement, effectively merging the movements.</explanation>
+    </question>
+
+    <question>
+        <prompt>The "Cross of Gold" speech primarily advocated for:</prompt>
+        <options>
+            <option letter="a">Religious reform</option>
+            <option letter="b">Free silver coinage</option>
+            <option letter="c">Railroad regulation</option>
+            <option letter="d">Agricultural subsidies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Bryan's famous "Cross of Gold" speech at the 1896 Democratic Convention dramatically advocated for free silver coinage against the gold standard.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which group opposed the Populists' call for free silver?</prompt>
+        <options>
+            <option letter="a">Western miners</option>
+            <option letter="b">Southern farmers</option>
+            <option letter="c">Eastern bankers</option>
+            <option letter="d">Railroad workers</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Eastern bankers strongly opposed free silver as it would devalue their gold-backed assets and cause inflation.</explanation>
+    </question>
+
+    <question>
+        <prompt>The Populist Party platform of 1892 called for all of the following EXCEPT:</prompt>
+        <options>
+            <option letter="a">Direct election of senators</option>
+            <option letter="b">Graduated income tax</option>
+            <option letter="c">Protective tariffs</option>
+            <option letter="d">Eight-hour workday</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Populists generally opposed high protective tariffs, which they saw as benefiting industrial interests at the expense of farmers.</explanation>
+    </question>
+
+    <question>
+        <prompt>What happened to the Populist Party after the 1896 election?</prompt>
+        <options>
+            <option letter="a">It won the next election</option>
+            <option letter="b">It merged with Republicans</option>
+            <option letter="c">It gradually declined</option>
+            <option letter="d">It became more powerful</option>
+        </options>
+        <answer>c</answer>
+        <explanation>After Bryan's defeat in 1896, the Populist Party gradually declined as its ideas were partially absorbed by the major parties.</explanation>
+    </question>
+</quiz>

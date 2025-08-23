@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the primary purpose of the National Labor Relations Act (Wagner Act)?</prompt>
+    <options>
+        <option letter="a">To protect workers' right to unionize</option>
+        <option letter="b">To establish minimum wage laws</option>
+        <option letter="c">To create public works jobs</option>
+        <option letter="d">To regulate factory safety</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Wagner Act protected workers' rights to form unions and engage in collective bargaining, establishing the National Labor Relations Board to enforce these rights.</explanation>
+</question>

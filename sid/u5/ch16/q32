@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="125">
+        <prompt>What impact did the "grain elevator" have on agriculture?</prompt>
+        <options>
+            <option letter="a">Revolutionized grain storage and distribution</option>
+            <option letter="b">Reduced grain production</option>
+            <option letter="c">Increased storage costs</option>
+            <option letter="d">Limited market access</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Grain elevators revolutionized grain storage and distribution, enabling efficient bulk handling and creating new commodity markets.</explanation>
+    </question>
+    <question number="126">
+        <prompt>How did the "private car line" affect rail transportation?</prompt>
+        <options>
+            <option letter="a">Created specialized freight services while increasing monopoly power</option>
+            <option letter="b">Reduced transportation efficiency</option>
+            <option letter="c">Improved public access</option>
+            <option letter="d">Decreased shipping costs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Private car lines provided specialized freight services but also increased monopolistic practices through control of essential shipping resources.</explanation>
+    </question>
+    <question number="127">
+        <prompt>What was the significance of the "mechanical stoker"?</prompt>
+        <options>
+            <option letter="a">Automated coal feeding in industrial boilers</option>
+            <option letter="b">Decreased energy efficiency</option>
+            <option letter="c">Increased labor costs</option>
+            <option letter="d">Limited power output</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Mechanical stokers automated coal feeding in industrial boilers, increasing efficiency and reducing labor costs in power generation.</explanation>
+    </question>
+    <question number="128">
+        <prompt>How did the "voucher system" affect business accounting?</prompt>
+        <options>
+            <option letter="a">Improved financial record-keeping accuracy</option>
+            <option letter="b">Complicated transactions</option>
+            <option letter="c">Increased accounting errors</option>
+            <option letter="d">Reduced financial control</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The voucher system improved financial record-keeping accuracy and accountability in business transactions, helping standardize accounting practices.</explanation>
+    </question></quiz>

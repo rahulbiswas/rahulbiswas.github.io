@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of condensin proteins?</text>
+        <option>Unfold proteins</option>
+        <option>Compact chromosomes</option>
+        <option>Transcribe DNA</option>
+        <option>Repair DNA damage</option>
+        <answer>Compact chromosomes</answer>
+        <explanation>Condensin proteins help compact and organize chromosomes during cell division by promoting chromosome condensation.</explanation>
+    </question>
+    
+    <question>
+        <text>Which molecule serves as the primer in DNA replication?</text>
+        <option>mRNA</option>
+        <option>Short RNA</option>
+        <option>DNA fragment</option>
+        <option>tRNA</option>
+        <answer>Short RNA</answer>
+        <explanation>Short RNA segments synthesized by primase serve as primers for DNA synthesis during replication.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of iron response elements?</text>
+        <option>Transport iron</option>
+        <option>Regulate gene expression</option>
+        <option>Store iron</option>
+        <option>Synthesize iron</option>
+        <answer>Regulate gene expression</answer>
+        <explanation>Iron response elements are RNA sequences that control gene expression in response to iron levels by affecting mRNA stability or translation.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires the mediator complex?</text>
+        <option>DNA repair</option>
+        <option>Transcription activation</option>
+        <option>Protein folding</option>
+        <option>RNA splicing</option>
+        <answer>Transcription activation</answer>
+        <explanation>The mediator complex helps activate transcription by connecting transcription factors to RNA polymerase II.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of translation elongation factors?</text>
+        <option>Start translation</option>
+        <option>Assist tRNA movement</option>
+        <option>End protein synthesis</option>
+        <option>Add amino acids</option>
+        <answer>Assist tRNA movement</answer>
+        <explanation>Translation elongation factors help move tRNAs through the ribosome and ensure accurate protein synthesis.</explanation>
+    </question>
+</questions>

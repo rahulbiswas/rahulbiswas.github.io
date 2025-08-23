@@ -1,0 +1,31 @@
+.grade-progress {
+  position: relative;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  margin: 1rem 0;
+}
+
+.grade-progress-bar {
+  position: absolute;
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.grade-label {
+  position: absolute;
+  top: 12px;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}

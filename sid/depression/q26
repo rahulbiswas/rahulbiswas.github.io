@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The "Dies Irae" poem by Claude McKay was significant because it:</prompt>
+        <options>
+            <option letter="a">Celebrated the Jazz Age</option>
+            <option letter="b">Expressed African American resistance to oppression</option>
+            <option letter="c">Promoted racial segregation</option>
+            <option letter="d">Described the Great Migration</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Claude McKay's "Dies Irae" (Day of Wrath), like his better-known poem "If We Must Die," was a powerful expression of African American resistance to racial oppression during the 1920s. Written during the "Red Summer" of 1919, it reflected the determination to fight back against racial violence and injustice, becoming an important literary work of the Harlem Renaissance movement.</explanation>
+    </question>
+</quiz>

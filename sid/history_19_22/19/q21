@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What Progressive reform had the MOST significant long-term impact on American politics?</prompt>
+        <options>
+            <option letter="a">The direct election of senators</option>
+            <option letter="b">The initiative and referendum process</option>
+            <option letter="c">Municipal ownership of utilities</option>
+            <option letter="d">Prohibition of alcohol</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The 17th Amendment's requirement for direct election of senators fundamentally changed American democracy by giving voters, rather than state legislatures, control over Senate selections. While initiative and referendum expanded direct democracy in some states, utility ownership remained limited, and Prohibition was eventually repealed, the direct election of senators permanently altered the federal government's relationship with both states and voters, strengthening democratic representation at the national level.</explanation>
+    </question>
+</quiz>

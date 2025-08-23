@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>What is the primary function of the electron transport chain?</text>
+        <option>Breaking down glucose</option>
+        <option>Generating a proton gradient for ATP synthesis</option>
+        <option>Producing carbon dioxide</option>
+        <option>Converting NADH back to NAD+</option>
+        <answer>Generating a proton gradient for ATP synthesis</answer>
+        <explanation>The electron transport chain uses electron flow through protein complexes to pump protons into the intermembrane space, creating a proton gradient. This gradient drives ATP synthesis through chemiosmosis.</explanation>
+    </question>
+    <question>
+        <text>Which molecule serves as the final electron acceptor in aerobic respiration?</text>
+        <option>NAD+</option>
+        <option>Oxygen</option>
+        <option>Carbon dioxide</option>
+        <option>Water</option>
+        <answer>Oxygen</answer>
+        <explanation>Oxygen is the final electron acceptor in aerobic respiration, combining with electrons and protons to form water. This role makes oxygen essential for maintaining electron flow through the ETC and enabling efficient ATP production.</explanation>
+    </question>
+    <question>
+        <text>How does chemiosmosis power ATP synthesis?</text>
+        <option>Through direct electron transfer to ADP</option>
+        <option>By breaking down glucose</option>
+        <option>Through proton flow through ATP synthase</option>
+        <option>By splitting water molecules</option>
+        <answer>Through proton flow through ATP synthase</answer>
+        <explanation>Chemiosmosis uses the potential energy stored in the proton gradient. As protons flow through ATP synthase down their concentration gradient, the energy drives the mechanical rotation of parts of the enzyme, powering ATP synthesis.</explanation>
+    </question>
+    <question>
+        <text>Why does cyanide poisoning rapidly stop cellular respiration?</text>
+        <option>It destroys glucose molecules</option>
+        <option>It blocks electron flow at Complex IV</option>
+        <option>It breaks down ATP directly</option>
+        <option>It prevents glucose uptake</option>
+        <answer>It blocks electron flow at Complex IV</answer>
+        <explanation>Cyanide binds to Complex IV (cytochrome oxidase), preventing electron transfer to oxygen. This blocks electron flow through the entire ETC, stopping proton pumping and ATP production, quickly depleting cellular energy.</explanation>
+    </question>
+    <question>
+        <text>What happens to the energy released by electron transport in the absence of oxygen?</text>
+        <option>It is converted to heat only</option>
+        <option>It is stored as glucose</option>
+        <option>Electrons back up and NADH accumulates</option>
+        <option>It is converted to ATP anyway</option>
+        <answer>Electrons back up and NADH accumulates</answer>
+        <explanation>Without oxygen as the final electron acceptor, electrons cannot flow through the ETC. This causes electrons to back up through the chain, NADH to accumulate, and the proton gradient to collapse, stopping ATP production.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="65">
+        <prompt>What was the significance of the "limited liability" concept?</prompt>
+        <options>
+            <option letter="a">Protected investors from total financial loss</option>
+            <option letter="b">Increased investor risk</option>
+            <option letter="c">Reduced business formation</option>
+            <option letter="d">Restricted company growth</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Limited liability protected investors by limiting their potential losses to their investment amount, encouraging more people to invest in corporations.</explanation>
+    </question>
+    <question number="66">
+        <prompt>How did the "stock ticker" affect financial markets?</prompt>
+        <options>
+            <option letter="a">Enabled real-time stock price transmission</option>
+            <option letter="b">Slowed market transactions</option>
+            <option letter="c">Reduced market participation</option>
+            <option letter="d">Increased price errors</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The stock ticker enabled real-time transmission of stock prices across the country, revolutionizing financial markets and speculation.</explanation>
+    </question>
+    <question number="67">
+        <prompt>What impact did the "refrigerated railcar" have on agriculture?</prompt>
+        <options>
+            <option letter="a">Enabled nationwide distribution of perishable goods</option>
+            <option letter="b">Limited food transportation</option>
+            <option letter="c">Increased food costs</option>
+            <option letter="d">Reduced farm production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Refrigerated railcars revolutionized food distribution by allowing perishable goods to be shipped nationwide, transforming agricultural markets and food consumption patterns.</explanation>
+    </question>
+    <question number="68">
+        <prompt>How did the "settlement house" movement affect urban life?</prompt>
+        <options>
+            <option letter="a">Provided social services to urban immigrants</option>
+            <option letter="b">Restricted immigrant access</option>
+            <option letter="c">Promoted segregation</option>
+            <option letter="d">Increased urban poverty</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Settlement houses provided education, healthcare, and social services to urban immigrants, helping them adapt to American life while promoting social reform.</explanation>
+    </question></quiz>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the main component of bacterial cell walls?</text>
+        <option>Peptidoglycan</option>
+        <option>Cellulose</option>
+        <option>Chitin</option>
+        <option>Cholesterol</option>
+        <answer>Peptidoglycan</answer>
+        <explanation>Peptidoglycan is the primary structural component of bacterial cell walls, providing strength and shape.</explanation>
+    </question>
+    <question>
+        <text>What distinguishes Gram-positive from Gram-negative bacteria?</text>
+        <option>Thick peptidoglycan layer</option>
+        <option>Presence of nucleus</option>
+        <option>Cell size</option>
+        <option>Growth rate</option>
+        <answer>Thick peptidoglycan layer</answer>
+        <explanation>Gram-positive bacteria have a much thicker peptidoglycan layer than Gram-negative bacteria.</explanation>
+    </question>
+    <question>
+        <text>What is unique to Gram-negative cell walls?</text>
+        <option>Outer membrane</option>
+        <option>Inner membrane</option>
+        <option>Thick peptidoglycan</option>
+        <option>Cell membrane</option>
+        <answer>Outer membrane</answer>
+        <explanation>Gram-negative bacteria have an additional outer membrane containing lipopolysaccharides.</explanation>
+    </question>
+    <question>
+        <text>What protects bacteria from osmotic lysis?</text>
+        <option>Cell wall</option>
+        <option>Membrane proteins</option>
+        <option>Cytoplasm</option>
+        <option>Flagella</option>
+        <answer>Cell wall</answer>
+        <explanation>The cell wall provides structural support and prevents bacterial cells from bursting due to osmotic pressure.</explanation>
+    </question>
+    <question>
+        <text>What is the function of teichoic acids?</text>
+        <option>Surface adhesion</option>
+        <option>Energy storage</option>
+        <option>Protein synthesis</option>
+        <option>DNA replication</option>
+        <answer>Surface adhesion</answer>
+        <explanation>Teichoic acids in Gram-positive bacteria help with surface adhesion and ion regulation.</explanation>
+    </question>
+</questions>

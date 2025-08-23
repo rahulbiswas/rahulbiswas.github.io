@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What impact did the Molly Maguires have on coal mining labor relations?</prompt>
+        <options>
+            <option letter="a">They represented militant labor resistance and faced violent suppression</option>
+            <option letter="b">They supported mine owners</option>
+            <option letter="c">They improved safety peacefully</option>
+            <option letter="d">They had minimal industry impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Molly Maguires represented militant labor resistance in Pennsylvania coal mines, leading to violent confrontations and eventual suppression through controversial trials.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Great Railroad Strike of 1877 affect labor relations?</prompt>
+        <options>
+            <option letter="a">It demonstrated the power of worker solidarity and government opposition</option>
+            <option letter="b">It improved worker conditions</option>
+            <option letter="c">It strengthened unions</option>
+            <option letter="d">It had minimal labor impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Great Railroad Strike showed both the potential power of worker solidarity and the willingness of government to use military force against strikers.</explanation>
+    </question>
+    <question>
+        <prompt>What role did blacklists play in labor relations?</prompt>
+        <options>
+            <option letter="a">They prevented union activists from finding employment across industries</option>
+            <option letter="b">They protected worker rights</option>
+            <option letter="c">They improved job security</option>
+            <option letter="d">They had minimal employment impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Blacklists were used by employers to prevent known union activists and organizers from finding work, effectively suppressing labor organization.</explanation>
+    </question>
+    <question>
+        <prompt>How did yellow-dog contracts affect union organization?</prompt>
+        <options>
+            <option letter="a">They forced workers to agree not to join unions as a condition of employment</option>
+            <option letter="b">They protected union rights</option>
+            <option letter="c">They increased union membership</option>
+            <option letter="d">They had minimal labor impact</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Yellow-dog contracts required workers to promise not to join unions as a condition of employment, effectively preventing union organization.</explanation>
+    </question>
+</quiz>

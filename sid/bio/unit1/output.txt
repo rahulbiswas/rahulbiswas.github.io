@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What role do boundary elements play in chromatin?</text>
+        <option>No role</option>
+        <option>Separate chromatin domains</option>
+        <option>Break down DNA</option>
+        <option>Synthesize proteins</option>
+        <answer>Separate chromatin domains</answer>
+        <explanation>Boundary elements help separate different chromatin domains and prevent inappropriate regulatory interactions.</explanation>
+    </question>
+    <question>
+        <text>How do cells regulate DNA recombination?</text>
+        <option>They don't regulate it</option>
+        <option>Through multiple control mechanisms</option>
+        <option>Only during division</option>
+        <option>Random processes</option>
+        <answer>Through multiple control mechanisms</answer>
+        <explanation>Cells regulate DNA recombination through multiple mechanisms to ensure accurate genetic exchange.</explanation>
+    </question>
+    <question>
+        <text>What determines nuclear organization?</text>
+        <option>Random arrangement</option>
+        <option>Specific organizational principles</option>
+        <option>Only cell size</option>
+        <option>Only protein content</option>
+        <answer>Specific organizational principles</answer>
+        <explanation>Nuclear organization follows specific principles involving chromosome territories, nuclear bodies, and regulatory regions.</explanation>
+    </question>
+    <question>
+        <text>How do cells maintain genome integrity?</text>
+        <option>No maintenance needed</option>
+        <option>Multiple surveillance mechanisms</option>
+        <option>Only during division</option>
+        <option>Random processes</option>
+        <answer>Multiple surveillance mechanisms</answer>
+        <explanation>Cells maintain genome integrity through multiple surveillance and repair mechanisms that detect and fix DNA damage.</explanation>
+    </question>
+    <question>
+        <text>What role does chromatin play in DNA repair?</text>
+        <option>No role</option>
+        <option>Regulates repair access</option>
+        <option>Only structural support</option>
+        <option>Prevents repair</option>
+        <answer>Regulates repair access</answer>
+        <explanation>Chromatin structure regulates access to DNA damage and plays an active role in the repair process.</explanation>
+    </question>
+</questions>

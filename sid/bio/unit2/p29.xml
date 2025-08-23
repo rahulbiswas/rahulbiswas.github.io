@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of microtubules in cell division?</text>
+        <option>Form mitotic spindle</option>
+        <option>Energy production</option>
+        <option>Protein synthesis</option>
+        <option>Waste removal</option>
+        <answer>Form mitotic spindle</answer>
+        <explanation>Microtubules organize into the mitotic spindle to separate chromosomes during cell division.</explanation>
+    </question>
+    <question>
+        <text>Which structure organizes microtubules in animal cells?</text>
+        <option>Centrosome</option>
+        <option>Nucleus</option>
+        <option>Golgi apparatus</option>
+        <option>Mitochondria</option>
+        <answer>Centrosome</answer>
+        <explanation>The centrosome is the primary microtubule organizing center in animal cells.</explanation>
+    </question>
+    <question>
+        <text>What causes dynamic instability in microtubules?</text>
+        <option>GTP hydrolysis</option>
+        <option>ATP synthesis</option>
+        <option>Protein binding</option>
+        <option>Ion exchange</option>
+        <answer>GTP hydrolysis</answer>
+        <explanation>GTP hydrolysis at the plus end of microtubules contributes to their dynamic instability.</explanation>
+    </question>
+    <question>
+        <text>How do microtubules maintain cell shape?</text>
+        <option>Structural support</option>
+        <option>Membrane synthesis</option>
+        <option>Protein production</option>
+        <option>Energy storage</option>
+        <answer>Structural support</answer>
+        <explanation>Microtubules provide structural support and help maintain cell shape through their rigid tubular structure.</explanation>
+    </question>
+    <question>
+        <text>What is the function of cilia?</text>
+        <option>Cell movement</option>
+        <option>Protein transport</option>
+        <option>Energy generation</option>
+        <option>Waste storage</option>
+        <answer>Cell movement</answer>
+        <explanation>Cilia are microtubule-based structures that enable cell movement or move materials across cell surfaces.</explanation>
+    </question>
+</questions>

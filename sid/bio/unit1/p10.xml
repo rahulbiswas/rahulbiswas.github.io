@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of triglycerides in organisms?</text>
+        <option>Membrane structure</option>
+        <option>Energy storage</option>
+        <option>Cell signaling</option>
+        <option>Enzyme regulation</option>
+        <answer>Energy storage</answer>
+        <explanation>Triglycerides are the main form of energy storage in animals, providing more energy per gram than carbohydrates.</explanation>
+    </question>
+    <question>
+        <text>Which characteristic distinguishes saturated from unsaturated fatty acids?</text>
+        <option>Presence of double bonds</option>
+        <option>Number of carbon atoms</option>
+        <option>Presence of phosphate groups</option>
+        <option>Molecular weight</option>
+        <answer>Presence of double bonds</answer>
+        <explanation>Unsaturated fatty acids contain one or more double bonds between carbon atoms, while saturated fatty acids have only single bonds.</explanation>
+    </question>
+    <question>
+        <text>What role does cholesterol play in cell membranes?</text>
+        <option>Energy storage</option>
+        <option>Membrane fluidity regulation</option>
+        <option>Protein synthesis</option>
+        <option>Sugar transport</option>
+        <answer>Membrane fluidity regulation</answer>
+        <explanation>Cholesterol regulates membrane fluidity by inserting between phospholipids, affecting membrane stability and function.</explanation>
+    </question>
+    <question>
+        <text>Which lipids are amphipathic molecules?</text>
+        <option>Triglycerides</option>
+        <option>Phospholipids</option>
+        <option>Steroids</option>
+        <option>Waxes</option>
+        <answer>Phospholipids</answer>
+        <explanation>Phospholipids have both hydrophilic (head) and hydrophobic (tail) regions, making them amphipathic molecules.</explanation>
+    </question>
+    <question>
+        <text>What happens to membrane fluidity when saturated fatty acid content increases?</text>
+        <option>Increases</option>
+        <option>Decreases</option>
+        <option>Remains unchanged</option>
+        <option>Becomes more variable</option>
+        <answer>Decreases</answer>
+        <explanation>Higher levels of saturated fatty acids allow tighter packing of membrane lipids, decreasing membrane fluidity.</explanation>
+    </question>
+</questions>

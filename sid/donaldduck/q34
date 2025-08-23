@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What did United States v. Butler decide?</prompt>
+    <options>
+        <option letter="a">AAA was unconstitutional</option>
+        <option letter="b">NRA could continue</option>
+        <option letter="c">TVA was legal</option>
+        <option letter="d">CCC could expand</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Supreme Court ruled in United States v. Butler that the Agricultural Adjustment Act's processing tax was unconstitutional.</explanation>
+</question>

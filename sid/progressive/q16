@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The real issue is whether the government shall regulate the railroads or whether the railroads shall regulate the government... The people of this country have made up their minds that the railroads shall be their servants and not their masters."
+- Robert La Follette, Speech to Congress, 1908</stimulus>
+        <prompt>This statement most directly supported which Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">The Hepburn Act</option>
+            <option letter="b">The Pure Food and Drug Act</option>
+            <option letter="c">The Federal Reserve Act</option>
+            <option letter="d">The Clayton Antitrust Act</option>
+        </options>
+        <answer>a</answer>
+        <explanation>La Follette's argument supported the Hepburn Act of 1906, which strengthened the Interstate Commerce Commission's power to regulate railroad rates.</explanation>
+    </question>
+    <question>
+        <stimulus>[Series of photographs showing working conditions before and after workplace safety reforms, including improved ventilation, lighting, and safety equipment]</stimulus>
+        <prompt>These changes most directly resulted from:</prompt>
+        <options>
+            <option letter="a">State factory inspection laws</option>
+            <option letter="b">Federal reserve policies</option>
+            <option letter="c">Immigration restrictions</option>
+            <option letter="d">Prohibition enforcement</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Progressive Era state factory inspection laws, often passed in response to industrial accidents and muckraking exposés, led to improved workplace safety conditions.</explanation>
+    </question>
+    <question>
+        <stimulus>"The initiative, referendum, and recall, when properly safeguarded... are really taking our government back to first principles, and restoring the sovereignty of the people."
+- Hiram Johnson, Inaugural Address as Governor of California, 1911</stimulus>
+        <prompt>These reforms most directly addressed Progressive concerns about:</prompt>
+        <options>
+            <option letter="a">Political corruption</option>
+            <option letter="b">Economic inequality</option>
+            <option letter="c">Social injustice</option>
+            <option letter="d">Environmental degradation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Direct democracy reforms like the initiative, referendum, and recall addressed Progressive concerns about political corruption by giving voters more direct control over government.</explanation>
+    </question>
+    <question>
+        <stimulus>[Graph showing increase in public high school attendance and decrease in child labor, 1890-1920, with overlapping trend lines]</stimulus>
+        <prompt>The relationship shown in the graph most directly reflected the impact of:</prompt>
+        <options>
+            <option letter="a">Compulsory education laws</option>
+            <option letter="b">Immigration restriction</option>
+            <option letter="c">Labor union growth</option>
+            <option letter="d">Federal reserve policies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The inverse relationship between school attendance and child labor reflected the impact of Progressive Era compulsory education laws and child labor restrictions.</explanation>
+    </question>
+</quiz>

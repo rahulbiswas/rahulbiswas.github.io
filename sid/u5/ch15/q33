@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Camilla Massacre" in Georgia?</prompt>
+        <options>
+            <option letter="a">Violent suppression of African American political activity</option>
+            <option letter="b">Labor dispute resolution</option>
+            <option letter="c">Educational reform protest</option>
+            <option letter="d">Economic policy debate</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Camilla Massacre of 1868 involved the violent suppression of African American political activity in Georgia, demonstrating the dangers faced by black voters.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "crop-lien" system affect Southern agriculture?</prompt>
+        <options>
+            <option letter="a">Created a cycle of debt for farmers</option>
+            <option letter="b">Improved agricultural productivity</option>
+            <option letter="c">Increased farmer independence</option>
+            <option letter="d">Reduced cotton production</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The crop-lien system created a cycle of debt for farmers who had to mortgage their future crops for current supplies at high interest rates.</explanation>
+    </question>
+    <question>
+        <prompt>What role did the "Union Aid Societies" play during Reconstruction?</prompt>
+        <options>
+            <option letter="a">Provided assistance to freedmen and poor whites</option>
+            <option letter="b">Supported Confederate veterans</option>
+            <option letter="c">Opposed Reconstruction policies</option>
+            <option letter="d">Managed military operations</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union Aid Societies provided food, clothing, education, and other assistance to freedmen and poor whites during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Alabama Claims"?</prompt>
+        <options>
+            <option letter="a">To seek compensation from Britain for Civil War damages</option>
+            <option letter="b">To distribute land to freedmen</option>
+            <option letter="c">To establish voting rights</option>
+            <option letter="d">To fund education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Alabama Claims sought compensation from Britain for damages caused by Confederate ships built in British shipyards during the Civil War.</explanation>
+    </question>
+</quiz>

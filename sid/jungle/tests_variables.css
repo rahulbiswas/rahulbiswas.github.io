@@ -1,0 +1,48 @@
+:root {
+    --bauhaus-red: #D91F35;
+    --bauhaus-yellow: #E6A700;
+    --bauhaus-blue: #182B47;
+    --bauhaus-light-blue: #2B557A;
+    --bauhaus-cream: #F7F3E3;
+    --bauhaus-gray: #1A1A1A;
+    --bauhaus-light-gray: #666666;
+    --status-pass: #0A8A5C;
+    --status-fail: #D91F35;
+}
+
+body {
+    background-color: var(--bauhaus-cream);
+    color: var(--bauhaus-gray);
+}
+
+.suite h2 {
+    background-color: var(--bauhaus-blue);
+    color: var(--bauhaus-cream);
+    border-left: 5px solid var(--bauhaus-yellow);
+    transition: all 0.2s;
+}
+
+.suite h2:hover {
+    background-color: var(--bauhaus-light-blue);
+    transform: translateX(2px);
+}
+
+.suite h2:before {
+    color: var(--bauhaus-yellow);
+}
+
+.test {
+    background-color: white;
+    border: none;
+    border-left: 4px solid var(--bauhaus-light-gray);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+.test.pass {
+    border-left-color: var(--status-pass);
+}
+
+.test.fail {
+    border-left-color: var(--status-fail);
+}

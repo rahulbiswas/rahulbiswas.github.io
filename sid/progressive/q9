@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <stimulus>"The large proportion of foreign-born women workers makes the task of organization especially difficult... They do not speak English, and each group speaks a different language. They are ignorant of their rights and afraid to assert the few rights they do know."
+- Women's Trade Union League Report, 1909</stimulus>
+        <prompt>This excerpt best illustrates which challenge to Progressive Era reform?</prompt>
+        <options>
+            <option letter="a">Language and cultural barriers</option>
+            <option letter="b">Government corruption</option>
+            <option letter="c">Corporate resistance</option>
+            <option letter="d">Religious differences</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The report highlights how language and cultural barriers among immigrant workers complicated labor organizing efforts, a significant challenge to Progressive reforms.</explanation>
+    </question>
+    <question>
+        <stimulus>[Photograph of a city street showing before/after implementation of the City Beautiful movement, with improved architecture, parks, and civic spaces]</stimulus>
+        <prompt>This urban planning movement most directly reflected Progressive Era beliefs about:</prompt>
+        <options>
+            <option letter="a">Environmental influence on behavior</option>
+            <option letter="b">Economic regulation</option>
+            <option letter="c">Political corruption</option>
+            <option letter="d">Immigration restriction</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The City Beautiful movement reflected Progressive beliefs that improving the urban environment would promote civic virtue and social order among city residents.</explanation>
+    </question>
+    <question>
+        <stimulus>"The Federal Reserve Act is the most important piece of financial legislation which has been enacted... It provides machinery for free and elastic movements of credit."
+- Woodrow Wilson, Statement on signing the Federal Reserve Act, 1913</stimulus>
+        <prompt>The primary purpose of this legislation was to:</prompt>
+        <options>
+            <option letter="a">Regulate the stock market</option>
+            <option letter="b">Stabilize the banking system</option>
+            <option letter="c">Break up monopolies</option>
+            <option letter="d">Establish income tax</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Reserve Act created a central banking system to stabilize the nation's money supply and prevent banking panics, a key Progressive Era economic reform.</explanation>
+    </question>
+    <question>
+        <stimulus>[Political cartoon showing a woman carrying a banner "Votes for Women" while sweeping away corruption, child labor, and unsafe working conditions]</stimulus>
+        <prompt>This cartoon most accurately reflects the Progressive Era belief that:</prompt>
+        <options>
+            <option letter="a">Women's suffrage would lead to broader social reforms</option>
+            <option letter="b">Women should focus solely on temperance</option>
+            <option letter="c">Social reforms should precede political rights</option>
+            <option letter="d">Political corruption was the only important issue</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The cartoon reflects the Progressive belief that women's suffrage would lead to broader social reforms due to women's presumed moral influence and social reform interests.</explanation>
+    </question>
+</quiz>

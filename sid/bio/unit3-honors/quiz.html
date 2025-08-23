@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Quiz ✿</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .hidden { display: none; }
+        .show-answer {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background: #ff99cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .show-answer:hover { background: #ff66aa; }
+        .loading { color: #ff66aa; }
+    </style>
+</head>
+<body>
+    <div class="unit unit-3-honors">
+        <h1>Unit Quiz</h1>
+
+        <div class="key-concept">
+            <h2>화이팅! Let's Test Your Knowledge! ⭐️</h2>
+            <p>Ready to show what you've learned about cellular energetics~?</p>
+        </div>
+
+        <div id="quizContent">
+            <p class="loading">Loading questions... 잠시만요~</p>
+        </div>
+
+        <div class="study-tips">
+            <h3>💕 Quiz Tips</h3>
+            <ul>
+                <li>Read each question carefully</li>
+                <li>Take your time - 천천히!</li>
+                <li>Review wrong answers</li>
+                <li>You can do it! 할 수 있어요!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const xmlFiles = Array.from({length: 40}, (_, i) => `p${i + 1}.xml`);
+
+        let allQuestions = [];
+
+        async function loadQuizData() {
+            try {
+                const questionPromises = xmlFiles.map(file => 
+                    fetch(file)
+                        .then(response => response.text())
+                        .then(str => new DOMParser().parseFromString(str, 'text/xml'))
+                );
+
+                const xmlDocs = await Promise.all(questionPromises);
+                
+                xmlDocs.forEach(doc => {
+                    const questions = doc.getElementsByTagName('question');
+                    Array.from(questions).forEach(q => {
+                        allQuestions.push({
+                            text: q.getElementsByTagName('text')[0].textContent,
+                            options: Array.from(q.getElementsByTagName('option'))
+                                        .map(opt => opt.textContent),
+                            answer: q.getElementsByTagName('answer')[0].textContent,
+                            explanation: q.getElementsByTagName('explanation')[0].textContent
+                        });
+                    });
+                });
+
+                displayQuiz();
+            } catch (error) {
+                console.error('Error loading quiz data:', error);
+                document.getElementById('quizContent').innerHTML = 
+                    '<p>아이고... Error loading quiz. Please try again! ㅠㅠ</p>';
+            }
+        }
+
+        function displayQuiz() {
+            const quizHtml = allQuestions.map((q, index) => `
+                <div class="practice">
+                    <div class="question">
+                        <p>${index + 1}. ${q.text}</p>
+                        <ul>
+                            ${q.options.map(opt => `<li>${opt}</li>`).join('')}
+                        </ul>
+                        <button class="show-answer">See Answer (◕‿◕✿)</button>
+                        <div class="answer hidden">
+                            <p><strong>Answer:</strong> ${q.answer}</p>
+                            <p><strong>Explanation:</strong> ${q.explanation}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('quizContent').innerHTML = quizHtml;
+
+            document.querySelectorAll('.show-answer').forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    answer.classList.toggle('hidden');
+                    button.textContent = answer.classList.contains('hidden') ? 
+                        'See Answer (◕‿◕✿)' : 'Hide Answer (｡♥‿♥｡)';
+                });
+            });
+        }
+
+        window.addEventListener('load', loadQuizData);
+    </script>
+</body>
+</html>

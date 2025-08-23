@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Countee Cullen's approach to poetry during the Harlem Renaissance:</prompt>
+        <options>
+            <option letter="a">Rejected traditional forms</option>
+            <option letter="b">Used classical forms to address racial themes</option>
+            <option letter="c">Avoided racial topics</option>
+            <option letter="d">Focused on political protest</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Countee Cullen approached poetry during the Harlem Renaissance by using traditional, classical poetic forms to address racial themes and African American experiences. Unlike some of his contemporaries who embraced new forms, Cullen deliberately employed conventional European poetic structures while exploring questions of racial identity and experience, demonstrating that African American themes could be expressed through traditional forms.</explanation>
+    </question>
+</quiz>

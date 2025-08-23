@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of ALKBH5?</text>
+        <option>Process RNA</option>
+        <option>Remove m6A from RNA</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>Remove m6A from RNA</answer>
+        <explanation>ALKBH5 is an m6A demethylase that removes methyl groups from RNA molecules.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex loads condensin?</text>
+        <option>NIPBL</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>NIPBL</answer>
+        <explanation>NIPBL facilitates the loading of condensin complexes onto chromatin during chromosome condensation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of PCGF1?</text>
+        <option>Transcribe genes</option>
+        <option>Target PRC1</option>
+        <option>Process RNA</option>
+        <option>Modify proteins</option>
+        <answer>Target PRC1</answer>
+        <explanation>PCGF1 helps target the PRC1 complex to specific genes for transcriptional repression.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein recognizes poly(G) sequences?</text>
+        <option>hnRNP H</option>
+        <option>SRSF1</option>
+        <option>U2AF</option>
+        <option>PTB</option>
+        <answer>hnRNP H</answer>
+        <explanation>hnRNP H specifically recognizes and binds to G-rich sequences in RNA molecules.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of BAF complex?</text>
+        <option>Process RNA</option>
+        <option>Remodel chromatin</option>
+        <option>Repair DNA</option>
+        <option>Degrade proteins</option>
+        <answer>Remodel chromatin</answer>
+        <explanation>The BAF (SWI/SNF) complex remodels chromatin structure to regulate gene accessibility.</explanation>
+    </question>
+</questions>

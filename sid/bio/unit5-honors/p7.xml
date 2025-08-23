@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of topoisomerase during DNA replication?</text>
+        <option>Adds nucleotides</option>
+        <option>Relieves supercoiling</option>
+        <option>Joins fragments</option>
+        <option>Adds primers</option>
+        <answer>Relieves supercoiling</answer>
+        <explanation>Topoisomerase relieves the tension in DNA by breaking and rejoining DNA strands to prevent supercoiling during replication.</explanation>
+    </question>
+    
+    <question>
+        <text>Which modification marks genes for silencing?</text>
+        <option>Histone acetylation</option>
+        <option>H3K9 methylation</option>
+        <option>DNA phosphorylation</option>
+        <option>RNA editing</option>
+        <answer>H3K9 methylation</answer>
+        <explanation>Methylation of histone H3 at lysine 9 (H3K9) is associated with gene silencing and heterochromatin formation.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of the TATA box?</text>
+        <option>Ends translation</option>
+        <option>Positions RNA polymerase</option>
+        <option>Signals splicing</option>
+        <option>Adds poly-A tail</option>
+        <answer>Positions RNA polymerase</answer>
+        <explanation>The TATA box is a promoter sequence that helps position RNA polymerase II correctly to begin transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires ubiquitin?</text>
+        <option>DNA repair</option>
+        <option>Protein degradation</option>
+        <option>RNA synthesis</option>
+        <option>Gene activation</option>
+        <answer>Protein degradation</answer>
+        <explanation>Ubiquitin tags proteins for degradation by the proteasome, helping regulate protein levels in cells.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of the branch point in splicing?</text>
+        <option>Starts translation</option>
+        <option>Forms lariat structure</option>
+        <option>Begins replication</option>
+        <option>Adds cap</option>
+        <answer>Forms lariat structure</answer>
+        <explanation>The branch point adenosine forms a unique bond creating the lariat structure necessary for intron removal during splicing.</explanation>
+    </question>
+</questions>

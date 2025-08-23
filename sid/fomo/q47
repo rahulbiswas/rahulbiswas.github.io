@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>When the economy is in a liquidity trap, why might the Fed turn to quantitative easing?</prompt>
+        <options>
+            <option letter="a">To raise interest rates above zero</option>
+            <option letter="b">To directly affect long-term interest rates when short-term rates are at zero</option>
+            <option letter="c">To reduce the money supply</option>
+            <option letter="d">To increase bank reserve requirements</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In a liquidity trap, when short-term interest rates are at zero, traditional monetary policy becomes ineffective. The Fed may use quantitative easing (buying long-term securities) to directly influence longer-term interest rates and stimulate the economy through other channels.</explanation>
+    </question>
+</quiz>

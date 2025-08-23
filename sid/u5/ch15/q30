@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Easter Monday" election riots?</prompt>
+        <options>
+            <option letter="a">Demonstrated violent resistance to black voting rights</option>
+            <option letter="b">Led to increased voter turnout</option>
+            <option letter="c">Improved election security</option>
+            <option letter="d">Strengthened federal oversight</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Easter Monday election riots showed the violent resistance to African American voting rights and the difficulties in protecting black voters during Reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>How did the end of Reconstruction affect land ownership?</prompt>
+        <options>
+            <option letter="a">Reversed many freedmen's land gains</option>
+            <option letter="b">Increased black land ownership</option>
+            <option letter="c">Distributed more federal land</option>
+            <option letter="d">Created new homestead programs</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to the reversal of many freedmen's land gains as former Confederate owners reclaimed property and new restrictions limited land acquisition.</explanation>
+    </question>
+    <question>
+        <prompt>What role did the "Union League Clubs" play in Northern cities?</prompt>
+        <options>
+            <option letter="a">Supported Southern Reconstruction policies</option>
+            <option letter="b">Opposed civil rights</option>
+            <option letter="c">Promoted segregation</option>
+            <option letter="d">Defended Confederate interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Union League Clubs in Northern cities provided political and financial support for Reconstruction policies and advocated for civil rights enforcement.</explanation>
+    </question>
+    <question>
+        <prompt>What was the impact of the "Georgia Returns" case?</prompt>
+        <options>
+            <option letter="a">Required Georgia to readmit black legislators</option>
+            <option letter="b">Ended Reconstruction in Georgia</option>
+            <option letter="c">Created new voting laws</option>
+            <option letter="d">Established segregation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Georgia Returns case forced Georgia to readmit black legislators who had been expelled from the state legislature, temporarily maintaining Reconstruction authority.</explanation>
+    </question>
+</quiz>

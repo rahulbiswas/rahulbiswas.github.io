@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which fiscal policy combination would be most appropriate during an inflationary gap?</prompt>
+        <options>
+            <option letter="a">Decrease taxes and increase government spending</option>
+            <option letter="b">Increase taxes and decrease government spending</option>
+            <option letter="c">Increase both taxes and government spending</option>
+            <option letter="d">Decrease both taxes and government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During an inflationary gap, contractionary fiscal policy is needed. Increasing taxes and decreasing government spending both work to reduce aggregate demand and close the inflationary gap.</explanation>
+    </question>
+
+    <question>
+        <prompt>An increase in the velocity of money would most likely cause:</prompt>
+        <options>
+            <option letter="a">A decrease in the price level</option>
+            <option letter="b">A decrease in nominal GDP</option>
+            <option letter="c">An increase in the price level</option>
+            <option letter="d">No change in the price level</option>
+        </options>
+        <answer>c</answer>
+        <explanation>According to the quantity theory of money, an increase in velocity, holding money supply constant, leads to higher nominal GDP and price level as each dollar is used more frequently in transactions.</explanation>
+    </question>
+
+    <question>
+        <prompt>If the MPC is 0.8, the multiplier effect of a $100 billion increase in government spending would be:</prompt>
+        <options>
+            <option letter="a">$400 billion</option>
+            <option letter="b">$500 billion</option>
+            <option letter="c">$800 billion</option>
+            <option letter="d">$1000 billion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>With an MPC of 0.8, the multiplier is 1/(1-0.8) = 5. Therefore, a $100 billion increase in spending results in a $500 billion increase in GDP.</explanation>
+    </question>
+
+    <question>
+        <prompt>A decrease in net exports would shift the:</prompt>
+        <options>
+            <option letter="a">AD curve right</option>
+            <option letter="b">AD curve left</option>
+            <option letter="c">SRAS curve right</option>
+            <option letter="d">SRAS curve left</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Net exports are a component of aggregate demand. A decrease in net exports reduces total spending in the economy, shifting the AD curve to the left.</explanation>
+    </question>
+</quiz>

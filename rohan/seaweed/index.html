@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>
+			Seaweed (1929)
+		</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="game-container">
+			<div class="board-container">
+				<div class="grid-container"></div>
+			</div>
+			<div class="controls-container">
+				<button id="prevButton" onclick="prevPuzzle()">←</button>
+				<button id="nextButton" onclick="nextPuzzle()">→</button>
+				PUZZLE <span id="puzzleCount">1&nbsp/&nbsp1</span>
+				<button id="resetButton" onclick="resetPuzzle()">R</button>
+				<br><br>
+				<span id="targetCount" class="count-target" style="display: none;">
+					0
+				</span>
+			</div>
+		</div>
+		<script type="module" src="background.js"></script>
+		<script type="module" src="game.js"></script>
+	</body>
+</html>

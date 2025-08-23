@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Georgia Platform" of 1870?</prompt>
+        <options>
+            <option letter="a">Marked the return of conservative Democratic control</option>
+            <option letter="b">Expanded civil rights protections</option>
+            <option letter="c">Supported Reconstruction policies</option>
+            <option letter="d">Created public education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Georgia Platform marked the return of conservative Democratic control and the effective end of Reconstruction in Georgia through political reorganization.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "White League" affect Louisiana politics?</prompt>
+        <options>
+            <option letter="a">Used violence to overthrow Republican government</option>
+            <option letter="b">Supported racial equality</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Promoted education</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The White League used organized violence to overthrow the Republican government in Louisiana and restore Democratic control.</explanation>
+    </question>
+    <question>
+        <prompt>What role did "Radical Republicans" play in Congressional Reconstruction?</prompt>
+        <options>
+            <option letter="a">Pushed for stronger civil rights protection</option>
+            <option letter="b">Supported moderate policies</option>
+            <option letter="c">Opposed federal intervention</option>
+            <option letter="d">Protected Confederate interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Radical Republicans pushed for stronger civil rights protection and more extensive federal intervention in Southern reconstruction.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the "Educational Association" in South Carolina?</prompt>
+        <options>
+            <option letter="a">To establish schools for freed people</option>
+            <option letter="b">To restrict education access</option>
+            <option letter="c">To support segregation</option>
+            <option letter="d">To train Confederate veterans</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Educational Association worked to establish schools for freed people and provide educational opportunities during Reconstruction.</explanation>
+    </question>
+</quiz>

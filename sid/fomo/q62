@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the loanable funds market, what happens when new investment opportunities emerge in the economy?</prompt>
+        <options>
+            <option letter="a">Supply curve shifts right, interest rates fall</option>
+            <option letter="b">Supply curve shifts left, interest rates rise</option>
+            <option letter="c">Demand curve shifts right, interest rates rise</option>
+            <option letter="d">Demand curve shifts left, interest rates fall</option>
+        </options>
+        <answer>c</answer>
+        <explanation>When new investment opportunities emerge, businesses want to borrow more funds at every interest rate to take advantage of these opportunities. This increases the demand for loanable funds (shifts the demand curve right), resulting in higher equilibrium interest rates and a larger quantity of funds borrowed.</explanation>
+    </question>
+</quiz>

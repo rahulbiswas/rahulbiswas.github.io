@@ -1,0 +1,121 @@
+/* General Body & Font Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1e9; /* A warm, paper-like off-white */
+    color: #3d2c21; /* Dark brown for text */
+}
+
+/* Main Container for Centering Content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    /* Placeholder for a potential background texture */
+    /* background-image: url('assets/images/fabric-texture.png'); */
+}
+
+/* Header Styling */
+.game-header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #8c5a3b; /* A rich, earthy brown */
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #6b4a32;
+}
+
+/* Navigation Buttons */
+.main-nav {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid #8c5a3b;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #8c5a3b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #8c5a3b;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styling for the main "Play Game" button */
+.nav-button.play-button {
+    background-color: #8c5a3b;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.nav-button.play-button:hover {
+    background-color: #6b4a32; /* A slightly darker shade for hover */
+}
+
+
+/* Footer */
+.page-footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9rem;
+    color: #a1887f;
+}
+
+/* Reverted pit style */
+.pit {
+    background-color: #d7ccc8;
+    border-radius: 50%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 3px solid #8d6e63;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pit:hover {
+    background-color: #bcaaa4;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (min-width: 600px) {
+    .main-nav {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-header h1 {
+        font-size: 3rem;
+    }
+}

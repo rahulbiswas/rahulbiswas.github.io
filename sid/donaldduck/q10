@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What was the main purpose of the FDIC?</prompt>
+    <options>
+        <option letter="a">To insure bank deposits</option>
+        <option letter="b">To regulate stock sales</option>
+        <option letter="c">To control inflation</option>
+        <option letter="d">To manage foreclosures</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Federal Deposit Insurance Corporation protected bank depositors by insuring their accounts, helping prevent bank runs and restore confidence in the banking system.</explanation>
+</question>

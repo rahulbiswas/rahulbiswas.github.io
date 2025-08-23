@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If nominal interest rates are 6% and real interest rates are 2%, what is the expected inflation rate?</prompt>
+        <options>
+            <option letter="a">8%</option>
+            <option letter="b">4%</option>
+            <option letter="c">3%</option>
+            <option letter="d">12%</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Using the Fisher equation, nominal interest rate = real interest rate + expected inflation rate. Therefore, expected inflation = nominal rate - real rate = 6% - 2% = 4%. This represents what people expect inflation to be based on the difference between nominal and real interest rates.</explanation>
+    </question>
+</quiz>

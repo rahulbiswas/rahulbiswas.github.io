@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of MCM proteins?</text>
+        <option>Repair DNA damage</option>
+        <option>Unwind DNA at origins</option>
+        <option>Modify histones</option>
+        <option>Process RNA</option>
+        <answer>Unwind DNA at origins</answer>
+        <explanation>MCM (Mini-Chromosome Maintenance) proteins serve as the replicative helicase, unwinding DNA at replication origins.</explanation>
+    </question>
+    
+    <question>
+        <text>Which process requires the CBC complex?</text>
+        <option>DNA repair</option>
+        <option>RNA export</option>
+        <option>Protein synthesis</option>
+        <option>DNA replication</option>
+        <answer>RNA export</answer>
+        <explanation>The Cap Binding Complex (CBC) binds to the 5' cap of mRNAs and helps coordinate their export from the nucleus.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of MutS protein?</text>
+        <option>Break DNA strands</option>
+        <option>Recognize mismatches</option>
+        <option>Synthesize proteins</option>
+        <option>Process RNA</option>
+        <answer>Recognize mismatches</answer>
+        <explanation>MutS protein recognizes and binds to mismatched base pairs during DNA mismatch repair.</explanation>
+    </question>
+    
+    <question>
+        <text>Which modification is added by METTL3?</text>
+        <option>DNA methylation</option>
+        <option>m6A RNA modification</option>
+        <option>Histone acetylation</option>
+        <option>Protein phosphorylation</option>
+        <answer>m6A RNA modification</answer>
+        <explanation>METTL3 is a methyltransferase that adds m6A modifications to mRNA, affecting RNA processing and function.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of FACT complex?</text>
+        <option>Repair DNA</option>
+        <option>Facilitate transcription</option>
+        <option>Degrade proteins</option>
+        <option>Process RNA</option>
+        <answer>Facilitate transcription</answer>
+        <explanation>The FACT complex helps RNA polymerase transcribe through chromatin by temporarily disrupting nucleosomes.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of bacterial pili?</text>
+        <option>Cell attachment</option>
+        <option>Cell division</option>
+        <option>Energy production</option>
+        <option>Protein synthesis</option>
+        <answer>Cell attachment</answer>
+        <explanation>Pili are protein structures that allow bacteria to attach to surfaces or other cells.</explanation>
+    </question>
+    <question>
+        <text>How do bacterial flagella function?</text>
+        <option>Rotary motion</option>
+        <option>Linear movement</option>
+        <option>Random vibration</option>
+        <option>Static position</option>
+        <answer>Rotary motion</answer>
+        <explanation>Bacterial flagella rotate like microscopic propellers to drive cell movement.</explanation>
+    </question>
+    <question>
+        <text>What is the function of bacterial capsules?</text>
+        <option>Protection from immune system</option>
+        <option>Energy storage</option>
+        <option>Protein production</option>
+        <option>Cell division</option>
+        <answer>Protection from immune system</answer>
+        <explanation>Capsules protect bacteria from host immune responses and aid in attachment.</explanation>
+    </question>
+    <question>
+        <text>Where is bacterial DNA located?</text>
+        <option>Nucleoid region</option>
+        <option>Membrane</option>
+        <option>Cell wall</option>
+        <option>Capsule</option>
+        <answer>Nucleoid region</answer>
+        <explanation>Bacterial DNA is concentrated in the nucleoid region without a nuclear membrane.</explanation>
+    </question>
+    <question>
+        <text>What are plasmids used for?</text>
+        <option>Extra genetic traits</option>
+        <option>Energy storage</option>
+        <option>Waste disposal</option>
+        <option>Cell structure</option>
+        <answer>Extra genetic traits</answer>
+        <explanation>Plasmids carry additional genes that can provide beneficial traits like antibiotic resistance.</explanation>
+    </question>
+</questions>

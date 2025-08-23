@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of fermentation?</text>
+        <option>To produce large amounts of ATP</option>
+        <option>To regenerate NAD+ for glycolysis</option>
+        <option>To create glucose</option>
+        <option>To use oxygen</option>
+        <answer>To regenerate NAD+ for glycolysis</answer>
+        <explanation>Fermentation regenerates NAD+ from NADH, allowing glycolysis to continue producing ATP when oxygen is unavailable for cellular respiration.</explanation>
+    </question>
+    <question>
+        <text>What is the end product of lactic acid fermentation?</text>
+        <option>Ethanol</option>
+        <option>Lactate</option>
+        <option>Pyruvate</option>
+        <option>Acetyl-CoA</option>
+        <answer>Lactate</answer>
+        <explanation>Lactic acid fermentation converts pyruvate to lactate (lactic acid) while regenerating NAD+, commonly occurring in muscle cells during intense exercise.</explanation>
+    </question>
+    <question>
+        <text>What organisms typically perform alcoholic fermentation?</text>
+        <option>Muscle cells</option>
+        <option>Yeasts</option>
+        <option>Plant cells</option>
+        <option>Bacteria</option>
+        <answer>Yeasts</answer>
+        <explanation>Yeasts primarily perform alcoholic fermentation, converting pyruvate to ethanol and CO2 while regenerating NAD+ for continued glycolysis.</explanation>
+    </question>
+    <question>
+        <text>How many ATP molecules are produced during fermentation?</text>
+        <option>0 ATP</option>
+        <option>2 ATP</option>
+        <option>32 ATP</option>
+        <option>36 ATP</option>
+        <answer>2 ATP</answer>
+        <explanation>Fermentation itself produces no ATP, but the glycolysis that precedes it produces a net 2 ATP molecules per glucose molecule.</explanation>
+    </question>
+    <question>
+        <text>What causes muscle fatigue during intense exercise?</text>
+        <option>Excess oxygen</option>
+        <option>Lactate buildup</option>
+        <option>Too much ATP</option>
+        <option>Excess glucose</option>
+        <answer>Lactate buildup</answer>
+        <explanation>During intense exercise, muscles perform lactic acid fermentation, leading to lactate accumulation which contributes to muscle fatigue and soreness.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of NELF?</text>
+        <option>Process RNA</option>
+        <option>Pause transcription</option>
+        <option>Repair DNA</option>
+        <option>Modify histones</option>
+        <answer>Pause transcription</answer>
+        <explanation>NELF (Negative Elongation Factor) induces RNA polymerase II pausing near promoters to regulate transcription.</explanation>
+    </question>
+    
+    <question>
+        <text>Which complex modifies snRNAs?</text>
+        <option>SMN complex</option>
+        <option>Ribosome</option>
+        <option>Spliceosome</option>
+        <option>Proteasome</option>
+        <answer>SMN complex</answer>
+        <explanation>The SMN complex assembles and modifies small nuclear RNPs (snRNPs) in the cytoplasm.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the role of KDM4A?</text>
+        <option>Add methylation</option>
+        <option>Remove H3K36me3</option>
+        <option>Process RNA</option>
+        <option>Repair DNA</option>
+        <answer>Remove H3K36me3</answer>
+        <explanation>KDM4A is a histone demethylase that removes tri-methylation marks from H3K36.</explanation>
+    </question>
+    
+    <question>
+        <text>Which protein stabilizes DNA loops?</text>
+        <option>CTCF</option>
+        <option>RAD21</option>
+        <option>SMC3</option>
+        <option>WAPL</option>
+        <answer>CTCF</answer>
+        <explanation>CTCF helps establish and maintain DNA loops that organize chromosome domains and regulate gene expression.</explanation>
+    </question>
+    
+    <question>
+        <text>What is the function of ARID1A?</text>
+        <option>Process RNA</option>
+        <option>Target BAF complex</option>
+        <option>Repair DNA</option>
+        <option>Modify proteins</option>
+        <answer>Target BAF complex</answer>
+        <explanation>ARID1A helps target the BAF chromatin remodeling complex to specific genomic locations.</explanation>
+    </question>
+</questions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the role of the proton gradient in cellular energetics?</text>
+        <option>To break down glucose</option>
+        <option>To drive ATP synthesis</option>
+        <option>To fix carbon dioxide</option>
+        <option>To split water molecules</option>
+        <answer>To drive ATP synthesis</answer>
+        <explanation>The proton gradient creates chemiosmotic potential that drives ATP synthesis through ATP synthase, converting ADP to ATP in both photosynthesis and cellular respiration.</explanation>
+    </question>
+    <question>
+        <text>Which process occurs in the mitochondrial matrix?</text>
+        <option>Electron transport chain</option>
+        <option>Glycolysis</option>
+        <option>Krebs cycle</option>
+        <option>Light-dependent reactions</option>
+        <answer>Krebs cycle</answer>
+        <explanation>The Krebs cycle (citric acid cycle) occurs in the mitochondrial matrix, oxidizing acetyl-CoA to generate NADH, FADH2, and ATP.</explanation>
+    </question>
+    <question>
+        <text>What is the primary purpose of cellular respiration?</text>
+        <option>To produce glucose</option>
+        <option>To generate ATP from glucose</option>
+        <option>To fix carbon dioxide</option>
+        <option>To produce oxygen</option>
+        <answer>To generate ATP from glucose</answer>
+        <explanation>Cellular respiration breaks down glucose to generate ATP, which provides energy for cellular processes through controlled oxidation reactions.</explanation>
+    </question>
+    <question>
+        <text>Where does glycolysis take place in the cell?</text>
+        <option>Mitochondrial matrix</option>
+        <option>Cytoplasm</option>
+        <option>Chloroplast stroma</option>
+        <option>Thylakoid membrane</option>
+        <answer>Cytoplasm</answer>
+        <explanation>Glycolysis occurs in the cytoplasm of the cell, breaking down glucose into pyruvate while generating a small amount of ATP and NADH.</explanation>
+    </question>
+    <question>
+        <text>What happens to pyruvate in the presence of oxygen?</text>
+        <option>It undergoes fermentation</option>
+        <option>It is converted to lactate</option>
+        <option>It enters the mitochondria</option>
+        <option>It is converted to glucose</option>
+        <answer>It enters the mitochondria</answer>
+        <explanation>In aerobic conditions, pyruvate enters the mitochondria where it is converted to acetyl-CoA, which then enters the Krebs cycle.</explanation>
+    </question>
+</questions>

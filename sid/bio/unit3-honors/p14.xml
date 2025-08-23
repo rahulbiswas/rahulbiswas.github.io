@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do substrate-level phosphorylation and oxidative phosphorylation differ?</text>
+        <option>They produce the same amount of ATP</option>
+        <option>They occur in different cellular locations</option>
+        <option>Only one requires oxygen</option>
+        <option>Only one produces ATP directly from ADP</option>
+        <answer>Only one produces ATP directly from ADP</answer>
+        <explanation>Substrate-level phosphorylation directly transfers a phosphate group from a substrate to ADP, while oxidative phosphorylation uses electron transport and chemiosmosis to power ATP synthesis through ATP synthase.</explanation>
+    </question>
+    <question>
+        <text>What happens to pyruvate during the transition between glycolysis and the citric acid cycle?</text>
+        <option>It is directly used in the citric acid cycle</option>
+        <option>It is converted to acetyl-CoA</option>
+        <option>It is broken down into glucose</option>
+        <option>It is converted to lactate</option>
+        <answer>It is converted to acetyl-CoA</answer>
+        <explanation>Pyruvate is transported into the mitochondrial matrix and oxidatively decarboxylated by the pyruvate dehydrogenase complex to form acetyl-CoA, CO2, and NADH before entering the citric acid cycle.</explanation>
+    </question>
+    <question>
+        <text>Why is the electron transport chain called a proton pump?</text>
+        <option>Because it directly produces water</option>
+        <option>Because it moves electrons across membranes</option>
+        <option>Because it uses electron flow to pump H+ ions</option>
+        <option>Because it breaks down glucose</option>
+        <answer>Because it uses electron flow to pump H+ ions</answer>
+        <explanation>The electron transport chain uses the energy from electron transfer to pump protons (H+ ions) from the matrix into the intermembrane space, creating the proton gradient needed for ATP synthesis.</explanation>
+    </question>
+    <question>
+        <text>How does feedback inhibition regulate cellular respiration?</text>
+        <option>By controlling glucose uptake only</option>
+        <option>By monitoring final products and adjusting pathway activity</option>
+        <option>By changing cell temperature</option>
+        <option>By producing more enzymes</option>
+        <answer>By monitoring final products and adjusting pathway activity</answer>
+        <explanation>High levels of ATP and NADH inhibit key enzymes in cellular respiration pathways, while high ADP and NAD+ levels activate them. This feedback mechanism helps maintain appropriate energy levels in cells.</explanation>
+    </question>
+    <question>
+        <text>What role does CoA play in cellular respiration?</text>
+        <option>It directly produces ATP</option>
+        <option>It carries electrons between complexes</option>
+        <option>It transfers acetyl groups between molecules</option>
+        <option>It splits glucose molecules</option>
+        <answer>It transfers acetyl groups between molecules</answer>
+        <explanation>Coenzyme A (CoA) acts as a carrier molecule for acetyl groups, forming acetyl-CoA from pyruvate and transferring the acetyl group to oxaloacetate to initiate the citric acid cycle.</explanation>
+    </question>
+</quiz>

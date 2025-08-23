@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which president did the MOST to advance African American civil rights during their administration?</prompt>
+        <options>
+            <option letter="a">Theodore Roosevelt (1901-1909)</option>
+            <option letter="b">William Howard Taft (1909-1913)</option>
+            <option letter="c">Woodrow Wilson (1913-1921)</option>
+            <option letter="d">Warren G. Harding (1921-1923)</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Though all these presidents had mixed records on race, Theodore Roosevelt took several unprecedented steps including inviting Booker T. Washington to dine at the White House, appointing African Americans to federal positions, and speaking out against lynching. Wilson actually segregated federal offices, while Taft reduced African American appointments. Harding spoke in favor of civil rights but took little concrete action.</explanation>
+    </question>
+</quiz>

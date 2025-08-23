@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What led to the overthrow of the Hawaiian monarchy?</prompt>
+        <options>
+            <option letter="a">Natural disasters</option>
+            <option letter="b">American business interests</option>
+            <option letter="c">British invasion</option>
+            <option letter="d">Local uprising</option>
+        </options>
+        <answer>b</answer>
+        <explanation>American business interests, particularly sugar planters, led a coup against Queen Liliuokalani in 1893 with U.S. military support.</explanation>
+    </question>
+
+    <question>
+        <prompt>Who was Queen Liliuokalani?</prompt>
+        <options>
+            <option letter="a">A Spanish noble</option>
+            <option letter="b">Hawaii's last monarch</option>
+            <option letter="c">A Filipino leader</option>
+            <option letter="d">An American diplomat</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Queen Liliuokalani was the last monarch of Hawaii, deposed in 1893 when American interests overthrew her government.</explanation>
+    </question>
+
+    <question>
+        <prompt>When was Hawaii officially annexed by the United States?</prompt>
+        <options>
+            <option letter="a">1893</option>
+            <option letter="b">1898</option>
+            <option letter="c">1900</option>
+            <option letter="d">1959</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The United States officially annexed Hawaii in 1898, during the Spanish-American War.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the primary economic interest in Hawaii?</prompt>
+        <options>
+            <option letter="a">Oil</option>
+            <option letter="b">Sugar</option>
+            <option letter="c">Coffee</option>
+            <option letter="d">Cotton</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Sugar plantations were the primary economic interest driving American involvement in Hawaii.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the significance of Pearl Harbor in 1890s Hawaii?</prompt>
+        <options>
+            <option letter="a">Tourist destination</option>
+            <option letter="b">Naval base location</option>
+            <option letter="c">Sugar plantation</option>
+            <option letter="d">Tribal ground</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Pearl Harbor was valued as a strategic naval base location, providing the U.S. with a Pacific military presence.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was sharecropping?</prompt>
+        <options>
+            <option letter="a">A system where farmers worked land in exchange for a share of the crop</option>
+            <option letter="b">A federal program to distribute land to freedmen</option>
+            <option letter="c">A method of organizing plantation labor cooperatives</option>
+            <option letter="d">A system of communal farming</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Sharecropping was a post-war agricultural system where farmers (often former slaves) worked landowners' fields in exchange for a portion of the harvest, though this often led to cycles of debt.</explanation>
+    </question>
+    <question>
+        <prompt>What was the "forty acres and a mule" promise?</prompt>
+        <options>
+            <option letter="a">Special Field Order No. 15 by General Sherman</option>
+            <option letter="b">A Congressional Reconstruction Act</option>
+            <option letter="c">A Freedmen's Bureau policy</option>
+            <option letter="d">A state law in Georgia</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Special Field Order No. 15, issued by General Sherman in 1865, promised 40 acres of confiscated Confederate land and a mule to freed families, though this was later reversed by President Johnson.</explanation>
+    </question>
+    <question>
+        <prompt>What economic system largely replaced slavery in the post-war South?</prompt>
+        <options>
+            <option letter="a">Tenant farming and sharecropping</option>
+            <option letter="b">Industrial wage labor</option>
+            <option letter="c">Agricultural cooperatives</option>
+            <option letter="d">Small independent farms</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Tenant farming and sharecropping became the dominant agricultural systems in the post-war South, creating new forms of economic dependency for both black and white farmers.</explanation>
+    </question>
+    <question>
+        <prompt>What was the primary purpose of the crop-lien system?</prompt>
+        <options>
+            <option letter="a">To provide credit to farmers using future crops as collateral</option>
+            <option letter="b">To regulate agricultural prices</option>
+            <option letter="c">To organize collective farming</option>
+            <option letter="d">To distribute government farming subsidies</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The crop-lien system provided credit to farmers using their future crops as collateral, though high interest rates often trapped farmers in cycles of debt.</explanation>
+    </question>
+</quiz>

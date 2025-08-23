@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the significance of the "Enforcement Acts" collectively?</prompt>
+        <options>
+            <option letter="a">Created federal power to protect civil rights and voting</option>
+            <option letter="b">Reduced federal authority</option>
+            <option letter="c">Supported state sovereignty</option>
+            <option letter="d">Protected Confederate rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Acts collectively created federal authority to protect civil rights and voting rights through military and legal intervention.</explanation>
+    </question>
+    <question>
+        <prompt>How did the end of Reconstruction affect African American political participation?</prompt>
+        <options>
+            <option letter="a">Led to widespread disenfranchisement</option>
+            <option letter="b">Increased political power</option>
+            <option letter="c">Improved voting rights</option>
+            <option letter="d">Strengthened representation</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The end of Reconstruction led to widespread disenfranchisement of African Americans through various legal and extralegal means.</explanation>
+    </question>
+    <question>
+        <prompt>What was the overall impact of the "Redeemer" period on the South?</prompt>
+        <options>
+            <option letter="a">Restored white Democratic control and racial segregation</option>
+            <option letter="b">Improved civil rights</option>
+            <option letter="c">Increased economic equality</option>
+            <option letter="d">Strengthened federal oversight</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Redeemer period restored white Democratic control and established racial segregation across the South, effectively ending Reconstruction reforms.</explanation>
+    </question>
+    <question>
+        <prompt>What was the lasting legacy of Reconstruction on American civil rights?</prompt>
+        <options>
+            <option letter="a">Set precedents for federal civil rights protection</option>
+            <option letter="b">Permanently secured equality</option>
+            <option letter="c">Ended racial discrimination</option>
+            <option letter="d">Created lasting integration</option>
+        </options>
+        <answer>a</answer>
+        <explanation>While ultimately limited, Reconstruction established important precedents for federal civil rights protection and constitutional amendments that would be built upon in the 20th century.</explanation>
+    </question>
+</quiz>

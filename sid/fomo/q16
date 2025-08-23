@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>In the money market, why is the money supply curve typically drawn as a vertical line?</prompt>
+        <options>
+            <option letter="a">Because money supply responds to changes in GDP</option>
+            <option letter="b">Because money supply is determined by the Fed, regardless of interest rate</option>
+            <option letter="c">Because money supply changes with inflation</option>
+            <option letter="d">Because money supply depends on bank lending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The money supply curve is vertical because it is fixed by Federal Reserve policy at any given time and does not automatically respond to changes in the interest rate. The Fed determines the money supply through its monetary policy tools, making it independent of the market interest rate.</explanation>
+    </question>
+</quiz>

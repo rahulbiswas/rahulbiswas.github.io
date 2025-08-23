@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>Which of the following would shift the LRAS curve to the right?</prompt>
+        <options>
+            <option letter="a">An increase in the money supply</option>
+            <option letter="b">A decrease in income tax rates</option>
+            <option letter="c">An improvement in technology</option>
+            <option letter="d">An increase in consumer confidence</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Technological improvement increases the economy's productive capacity, shifting the long-run aggregate supply curve to the right as more output can be produced at any price level.</explanation>
+    </question>
+
+    <question>
+        <prompt>Crowding out occurs when:</prompt>
+        <options>
+            <option letter="a">Government spending decreases private investment</option>
+            <option letter="b">Imports exceed exports</option>
+            <option letter="c">Tax revenues exceed government spending</option>
+            <option letter="d">The money supply decreases</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Crowding out occurs when increased government spending raises interest rates, reducing private investment as borrowing becomes more expensive.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which policy combination would most likely result in higher real GDP with stable prices?</prompt>
+        <options>
+            <option letter="a">Expansionary fiscal policy and contractionary monetary policy</option>
+            <option letter="b">Contractionary fiscal policy and expansionary monetary policy</option>
+            <option letter="c">Expansionary supply-side policy and contractionary demand policy</option>
+            <option letter="d">Expansionary supply-side policy and expansionary demand policy</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Expanding aggregate supply while controlling aggregate demand can increase output while maintaining price stability.</explanation>
+    </question>
+
+    <question>
+        <prompt>A decrease in the federal funds rate would most directly affect:</prompt>
+        <options>
+            <option letter="a">The money multiplier</option>
+            <option letter="b">Bank lending</option>
+            <option letter="c">The reserve requirement</option>
+            <option letter="d">Government spending</option>
+        </options>
+        <answer>b</answer>
+        <explanation>A lower federal funds rate directly affects bank lending by reducing the cost of borrowing between banks, making it easier for banks to lend to customers.</explanation>
+    </question>
+</quiz>

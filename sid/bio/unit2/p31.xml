@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the function of collagen in ECM?</text>
+        <option>Structural support</option>
+        <option>Energy storage</option>
+        <option>Ion transport</option>
+        <option>Protein synthesis</option>
+        <answer>Structural support</answer>
+        <explanation>Collagen fibers provide structural support and tensile strength to the extracellular matrix.</explanation>
+    </question>
+    <question>
+        <text>Which molecule provides tissue elasticity?</text>
+        <option>Elastin</option>
+        <option>Collagen</option>
+        <option>Fibronectin</option>
+        <option>Laminin</option>
+        <answer>Elastin</answer>
+        <explanation>Elastin fibers allow tissues to stretch and return to their original shape.</explanation>
+    </question>
+    <question>
+        <text>What role do proteoglycans play?</text>
+        <option>Water retention</option>
+        <option>Protein synthesis</option>
+        <option>Energy storage</option>
+        <option>Cell division</option>
+        <answer>Water retention</answer>
+        <explanation>Proteoglycans attract and hold water, creating a hydrated gel-like environment in tissues.</explanation>
+    </question>
+    <question>
+        <text>How do cells attach to the ECM?</text>
+        <option>Integrin receptors</option>
+        <option>Ion channels</option>
+        <option>Transport proteins</option>
+        <option>Gap junctions</option>
+        <answer>Integrin receptors</answer>
+        <explanation>Integrin receptors on cell surfaces bind to specific ECM proteins, anchoring cells to the matrix.</explanation>
+    </question>
+    <question>
+        <text>What forms the basement membrane?</text>
+        <option>Type IV collagen</option>
+        <option>Type I collagen</option>
+        <option>Elastin fibers</option>
+        <option>Proteoglycans</option>
+        <answer>Type IV collagen</answer>
+        <explanation>Type IV collagen forms a specialized network that is the main component of basement membranes.</explanation>
+    </question>
+</questions>

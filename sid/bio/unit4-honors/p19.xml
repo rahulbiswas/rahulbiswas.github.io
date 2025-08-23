@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>What is the primary function of the pentose phosphate pathway?</text>
+        <option>To produce ATP</option>
+        <option>To generate NADPH and ribose-5-phosphate</option>
+        <option>To break down glucose</option>
+        <option>To synthesize fatty acids</option>
+        <answer>To generate NADPH and ribose-5-phosphate</answer>
+        <explanation>The pentose phosphate pathway produces NADPH for biosynthetic reactions and ribose-5-phosphate for nucleotide synthesis, making it crucial for cellular redox balance and growth.</explanation>
+    </question>
+    <question>
+        <text>Where does the pentose phosphate pathway occur?</text>
+        <option>Mitochondria</option>
+        <option>Cytosol</option>
+        <option>Chloroplasts</option>
+        <option>Nucleus</option>
+        <answer>Cytosol</answer>
+        <explanation>The pentose phosphate pathway takes place in the cytosol, parallel to glycolysis, using glucose-6-phosphate as its starting molecule.</explanation>
+    </question>
+    <question>
+        <text>What is the oxidative phase of the pentose phosphate pathway?</text>
+        <option>The production of ATP</option>
+        <option>The generation of NADPH</option>
+        <option>The synthesis of glucose</option>
+        <option>The breakdown of ribose</option>
+        <answer>The generation of NADPH</answer>
+        <explanation>The oxidative phase converts glucose-6-phosphate to ribulose-5-phosphate while generating NADPH through two dehydrogenation reactions.</explanation>
+    </question>
+    <question>
+        <text>Why is NADPH important for cells?</text>
+        <option>It produces ATP</option>
+        <option>It provides reducing power for biosynthesis</option>
+        <option>It breaks down glucose</option>
+        <option>It generates heat</option>
+        <answer>It provides reducing power for biosynthesis</answer>
+        <explanation>NADPH provides reducing power for biosynthetic reactions like fatty acid and cholesterol synthesis, and helps maintain cellular redox balance.</explanation>
+    </question>
+    <question>
+        <text>What is the non-oxidative phase of the pentose phosphate pathway?</text>
+        <option>The breakdown of glucose</option>
+        <option>The interconversion of sugar phosphates</option>
+        <option>The production of ATP</option>
+        <option>The synthesis of NADPH</option>
+        <answer>The interconversion of sugar phosphates</answer>
+        <explanation>The non-oxidative phase involves reversible reactions that interconvert various sugar phosphates, allowing the cell to generate either ribose-5-phosphate or other metabolic intermediates as needed.</explanation>
+    </question>
+</questions>

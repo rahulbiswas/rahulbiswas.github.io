@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>What type of projects did the PWA typically build?</prompt>
+    <options>
+        <option letter="a">Large infrastructure</option>
+        <option letter="b">Small repairs</option>
+        <option letter="c">Private homes</option>
+        <option letter="d">Art museums</option>
+    </options>
+    <answer>a</answer>
+    <explanation>The Public Works Administration focused on large infrastructure projects like dams, bridges, schools, and hospitals using private contractors.</explanation>
+</question>

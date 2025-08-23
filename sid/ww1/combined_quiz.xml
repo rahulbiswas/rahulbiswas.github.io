@@ -1,0 +1,1182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question number="1">
+        <prompt>How did World War I affect America's international role?</prompt>
+        <options>
+            <option letter="a">America became more isolationist</option>
+            <option letter="b">America emerged as a world power</option>
+            <option letter="c">America joined the League of Nations</option>
+            <option letter="d">America reduced its military</option>
+        </options>
+        <answer>b</answer>
+        <explanation>World War I transformed America into a major world power, establishing its military and economic dominance, though the country later retreated into relative isolationism.</explanation>
+    </question>
+
+    <question number="2">
+        <prompt>What role did Bernard Baruch play during World War I?</prompt>
+        <options>
+            <option letter="a">He was a military general</option>
+            <option letter="b">He led the War Industries Board</option>
+            <option letter="c">He was a peace negotiator</option>
+            <option letter="d">He commanded the navy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Bernard Baruch headed the War Industries Board, coordinating and directing America's industrial production efforts during World War I to support the war effort.</explanation>
+    </question>
+
+    <question number="3">
+        <prompt>What characterized the relationship between Theodore Roosevelt and William Howard Taft?</prompt>
+        <options>
+            <option letter="a">They were always enemies</option>
+            <option letter="b">They went from friends to political rivals</option>
+            <option letter="c">They remained close allies</option>
+            <option letter="d">They never interacted</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt and Taft were close friends until political differences, especially over progressive reforms, led to their famous split and the creation of Roosevelt's Bull Moose Party.</explanation>
+    </question>
+
+    <question number="4">
+        <prompt>What was the main consequence of the Mexican Revolution for U.S. foreign policy?</prompt>
+        <options>
+            <option letter="a">The U.S. annexed Mexico</option>
+            <option letter="b">It led to multiple U.S. interventions</option>
+            <option letter="c">The U.S. supported Porfirio Díaz</option>
+            <option letter="d">Mexico joined World War I</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mexican Revolution led to multiple U.S. military interventions, including the occupation of Veracruz and Pershing's expedition to capture Pancho Villa.</explanation>
+    </question>
+
+    <question number="5">
+        <prompt>How did the Supreme Court's decisions generally affect progressive reforms?</prompt>
+        <options>
+            <option letter="a">They consistently supported reforms</option>
+            <option letter="b">They often opposed labor and social legislation</option>
+            <option letter="c">They remained neutral</option>
+            <option letter="d">They only addressed voting rights</option>
+        </options>
+        <answer>b</answer>
+        <explanation>During the "Lochner era," the Supreme Court often struck down progressive labor and social legislation, citing freedom of contract and limiting government regulation of business.</explanation>
+    </question>
+<question number="6">
+        <prompt>What role did Mother Jones play in the labor movement?</prompt>
+        <options>
+            <option letter="a">She was a factory owner</option>
+            <option letter="b">She organized workers and fought child labor</option>
+            <option letter="c">She was a government official</option>
+            <option letter="d">She wrote fiction about workers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Mother Jones was a prominent labor organizer who fought against child labor and for workers' rights, earning the nickname "the most dangerous woman in America" for her activist work.</explanation>
+    </question>
+
+    <question number="7">
+        <prompt>How did the Supreme Court case Buck v. Bell impact American society?</prompt>
+        <options>
+            <option letter="a">It protected civil rights</option>
+            <option letter="b">It allowed forced sterilization</option>
+            <option letter="c">It expanded voting rights</option>
+            <option letter="d">It regulated business practices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Buck v. Bell (1927) allowed states to forcibly sterilize people deemed "unfit," supporting eugenics policies that disproportionately affected poor and minority populations.</explanation>
+    </question>
+
+    <question number="8">
+        <prompt>What was the primary impact of William Randolph Hearst on American society?</prompt>
+        <options>
+            <option letter="a">He invented the telephone</option>
+            <option letter="b">He pioneered yellow journalism</option>
+            <option letter="c">He was a military leader</option>
+            <option letter="d">He wrote the Constitution</option>
+        </options>
+        <answer>b</answer>
+        <explanation>William Randolph Hearst pioneered yellow journalism through his newspaper empire, significantly influencing public opinion and contributing to support for the Spanish-American War.</explanation>
+    </question>
+
+    <question number="9">
+        <prompt>What distinguished Jane Addams's work at Hull House?</prompt>
+        <options>
+            <option letter="a">It was a luxury hotel</option>
+            <option letter="b">It provided social services to immigrants</option>
+            <option letter="c">It was a government office</option>
+            <option letter="d">It manufactured goods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Jane Addams's Hull House was a settlement house that provided educational, cultural, and social services to immigrants and the poor, becoming a model for social reform.</explanation>
+    </question>
+
+    <question number="10">
+        <prompt>How did Henry Ford change American industry?</prompt>
+        <options>
+            <option letter="a">He invented electricity</option>
+            <option letter="b">He pioneered the assembly line</option>
+            <option letter="c">He started labor unions</option>
+            <option letter="d">He created the railroad</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Henry Ford revolutionized American industry by implementing the assembly line in automobile production, making cars affordable for average Americans and changing manufacturing methods forever.</explanation>
+    </question>
+<question number="11">
+        <prompt>What was Theodore Roosevelt's "Square Deal" policy primarily focused on?</prompt>
+        <options>
+            <option letter="a">Foreign military intervention</option>
+            <option letter="b">Consumer protection and business regulation</option>
+            <option letter="c">Women's suffrage rights</option>
+            <option letter="d">Immigration restrictions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt's Square Deal focused on consumer protection, business regulation, and conservation efforts, including the Pure Food and Drug Act and meat inspection reforms.</explanation>
+    </question>
+
+    <question number="12">
+        <prompt>What was the main purpose of the Federal Reserve Act of 1913?</prompt>
+        <options>
+            <option letter="a">To create Social Security</option>
+            <option letter="b">To establish a central banking system</option>
+            <option letter="c">To regulate food and drugs</option>
+            <option letter="d">To break up monopolies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Reserve Act, passed under Wilson, created America's central banking system to stabilize the nation's monetary and financial system.</explanation>
+    </question>
+
+    <question number="13">
+        <prompt>Which event directly led to the United States entering World War I?</prompt>
+        <options>
+            <option letter="a">The sinking of the Lusitania</option>
+            <option letter="b">The assassination of Archduke Franz Ferdinand</option>
+            <option letter="c">Germany's unrestricted submarine warfare</option>
+            <option letter="d">The Russian Revolution</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Germany's resumption of unrestricted submarine warfare in 1917 was the direct cause of U.S. entry into WWI, though the Lusitania sinking had built public anger earlier.</explanation>
+    </question>
+
+    <question number="14">
+        <prompt>What was the Tulsa Massacre of 1921 primarily about?</prompt>
+        <options>
+            <option letter="a">A labor union dispute</option>
+            <option letter="b">The destruction of a prosperous Black community</option>
+            <option letter="c">A prohibition-related riot</option>
+            <option letter="d">An anti-war protest</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Tulsa Massacre involved the destruction of the prosperous Black community of Greenwood (known as "Black Wall Street") by a white mob, resulting in hundreds of deaths and widespread destruction.</explanation>
+    </question>
+
+    <question number="15">
+        <prompt>What was William Howard Taft's "Dollar Diplomacy"?</prompt>
+        <options>
+            <option letter="a">Using military force in foreign affairs</option>
+            <option letter="b">Using economic investment to gain influence abroad</option>
+            <option letter="c">Isolationist foreign policy</option>
+            <option letter="d">Giving foreign aid to allies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Dollar Diplomacy was Taft's foreign policy of using American economic power and private investment to further U.S. interests abroad, particularly in Latin America and Asia.</explanation>
+    </question>
+<question number="16">
+        <prompt>How did the Spanish Flu pandemic affect military operations in WWI?</prompt>
+        <options>
+            <option letter="a">It had no effect on military operations</option>
+            <option letter="b">It killed more troops than combat</option>
+            <option letter="c">It only affected civilian populations</option>
+            <option letter="d">It improved military medicine</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Spanish Flu severely impacted military operations, killing more American troops than combat deaths in WWI, affecting troop movements and military effectiveness on both sides.</explanation>
+    </question>
+
+    <question number="17">
+        <prompt>What was significant about Theodore Roosevelt's conservation policies?</prompt>
+        <options>
+            <option letter="a">They eliminated all logging</option>
+            <option letter="b">They greatly expanded protected federal lands</option>
+            <option letter="c">They focused only on urban parks</option>
+            <option letter="d">They privatized all public lands</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt's conservation policies dramatically expanded protected federal lands, establishing 150 national forests, 51 federal bird reserves, 4 national game preserves, and 5 national parks.</explanation>
+    </question>
+
+    <question number="18">
+        <prompt>How did the Palmer Raids affect civil liberties?</prompt>
+        <options>
+            <option letter="a">They protected immigrant rights</option>
+            <option letter="b">They violated constitutional rights</option>
+            <option letter="c">They expanded voting rights</option>
+            <option letter="d">They had no legal impact</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Palmer Raids during the Red Scare violated constitutional rights through mass arrests and deportations of suspected radicals without due process, setting dangerous precedents for civil liberties.</explanation>
+    </question>
+
+    <question number="19">
+        <prompt>What distinguished Progressive Era journalism?</prompt>
+        <options>
+            <option letter="a">Focus on entertainment news</option>
+            <option letter="b">Investigative reporting of social issues</option>
+            <option letter="c">Support for big business</option>
+            <option letter="d">Avoiding controversial topics</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Progressive Era journalism was characterized by muckraking - investigative reporting that exposed social problems, corporate corruption, and political scandals to drive reform.</explanation>
+    </question>
+
+    <question number="20">
+        <prompt>How did American cities change during this period?</prompt>
+        <options>
+            <option letter="a">They became smaller</option>
+            <option letter="b">They grew rapidly with immigration</option>
+            <option letter="c">They eliminated poverty</option>
+            <option letter="d">They banned industry</option>
+        </options>
+        <answer>b</answer>
+        <explanation>American cities grew rapidly during this period due to immigration and industrialization, leading to both new opportunities and social challenges like overcrowding and poverty.</explanation>
+    </question>
+<question number="21">
+        <prompt>What impact did the Underwood-Simmons Tariff have on the American economy?</prompt>
+        <options>
+            <option letter="a">It raised tariff rates to record highs</option>
+            <option letter="b">It significantly reduced tariff rates</option>
+            <option letter="c">It eliminated all tariffs</option>
+            <option letter="d">It only affected luxury goods</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Underwood-Simmons Tariff of 1913 significantly reduced tariff rates for the first time since the Civil War, marking a major shift in U.S. economic policy under Wilson's administration.</explanation>
+    </question>
+
+    <question number="22">
+        <prompt>What was the significance of the 16th Amendment?</prompt>
+        <options>
+            <option letter="a">It banned alcohol</option>
+            <option letter="b">It established federal income tax</option>
+            <option letter="c">It gave women voting rights</option>
+            <option letter="d">It abolished slavery</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 16th Amendment, ratified in 1913, established the federal government's right to collect income tax directly from citizens, dramatically changing federal revenue collection.</explanation>
+    </question>
+
+    <question number="23">
+        <prompt>How did the creation of the Federal Trade Commission affect business?</prompt>
+        <options>
+            <option letter="a">It eliminated all regulations</option>
+            <option letter="b">It investigated unfair business practices</option>
+            <option letter="c">It set all prices</option>
+            <option letter="d">It managed international trade only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Trade Commission, established in 1914, was empowered to investigate and prevent unfair business practices, adding another layer of federal oversight to business activities.</explanation>
+    </question>
+
+    <question number="24">
+        <prompt>What characterized American neutrality before entering WWI?</prompt>
+        <options>
+            <option letter="a">Complete isolation from Europe</option>
+            <option letter="b">Trading primarily with Germany</option>
+            <option letter="c">Trading mainly with Allied powers</option>
+            <option letter="d">Equal trade with both sides</option>
+        </options>
+        <answer>c</answer>
+        <explanation>During American "neutrality," the U.S. traded primarily with Allied powers due to the British naval blockade of Germany, showing the limits of true neutrality in practice.</explanation>
+    </question>
+
+    <question number="25">
+        <prompt>How did the Adamson Act affect railroad workers?</prompt>
+        <options>
+            <option letter="a">It banned unions</option>
+            <option letter="b">It established the 8-hour workday</option>
+            <option letter="c">It reduced wages</option>
+            <option letter="d">It increased working hours</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Adamson Act of 1916 established an 8-hour workday for railroad workers with additional pay for overtime, representing a major victory for labor rights.</explanation>
+    </question>
+<question number="26">
+        <prompt>What characterized Woodrow Wilson's attitude toward civil rights?</prompt>
+        <options>
+            <option letter="a">He strongly supported racial equality</option>
+            <option letter="b">He segregated the federal government</option>
+            <option letter="c">He passed anti-discrimination laws</option>
+            <option letter="d">He appointed Black cabinet members</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Wilson actually increased segregation by segregating the federal government workforce, showing his support for Jim Crow policies despite his progressive stance on other issues.</explanation>
+    </question>
+
+    <question number="27">
+        <prompt>What was the primary role of the Committee on Public Information?</prompt>
+        <options>
+            <option letter="a">Gathering military intelligence</option>
+            <option letter="b">Creating pro-war propaganda</option>
+            <option letter="c">Regulating newspapers</option>
+            <option letter="d">Managing food supplies</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Committee on Public Information, led by George Creel, created and distributed propaganda to build public support for America's involvement in World War I.</explanation>
+    </question>
+
+    <question number="28">
+        <prompt>How did Native Americans fare during this period?</prompt>
+        <options>
+            <option letter="a">They gained full citizenship rights</option>
+            <option letter="b">They faced forced assimilation</option>
+            <option letter="c">They received vast land grants</option>
+            <option letter="d">They gained political power</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Native Americans faced forced assimilation through boarding schools, continued land loss, and weren't granted citizenship until 1924, while enduring various forms of discrimination.</explanation>
+    </question>
+
+    <question number="29">
+        <prompt>What was significant about D.W. Griffith's "Birth of a Nation"?</prompt>
+        <options>
+            <option letter="a">It promoted racial equality</option>
+            <option letter="b">It glorified the KKK</option>
+            <option letter="c">It documented the Civil War accurately</option>
+            <option letter="d">It was about American independence</option>
+        </options>
+        <answer>b</answer>
+        <explanation>While technically innovative, "Birth of a Nation" was deeply racist, glorified the KKK, and contributed to its revival, leading to protests by the NAACP and others.</explanation>
+    </question>
+
+    <question number="30">
+        <prompt>What was Carrie Chapman Catt's main contribution to women's rights?</prompt>
+        <options>
+            <option letter="a">She opposed women's suffrage</option>
+            <option letter="b">She led NAWSA to achieve voting rights</option>
+            <option letter="c">She focused on prohibition</option>
+            <option letter="d">She promoted women in sports</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Carrie Chapman Catt led the National American Woman Suffrage Association (NAWSA) and developed the successful "Winning Plan" that helped achieve the passage of the 19th Amendment.</explanation>
+    </question>
+<question number="31">
+        <prompt>What was Admiral George Dewey's significance in American foreign policy?</prompt>
+        <options>
+            <option letter="a">He commanded Arctic exploration</option>
+            <option letter="b">He led naval operations in the Philippines</option>
+            <option letter="c">He developed naval technology</option>
+            <option letter="d">He negotiated with Japan</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Admiral George Dewey led crucial naval operations in the Philippines, becoming a naval hero and the first U.S. Admiral of the Navy, symbolizing America's growing naval power.</explanation>
+    </question>
+
+    <question number="32">
+        <prompt>What role did Edward House play in Wilson's administration?</prompt>
+        <options>
+            <option letter="a">Secretary of State</option>
+            <option letter="b">Wilson's personal advisor and negotiator</option>
+            <option letter="c">Military commander</option>
+            <option letter="d">Supreme Court Justice</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Edward House served as Wilson's closest advisor and personal diplomat, negotiating with European powers during WWI and being known as "Wilson's alter ego."</explanation>
+    </question>
+
+    <question number="33">
+        <prompt>How did Ida B. Wells contribute to civil rights?</prompt>
+        <options>
+            <option letter="a">She led the Women's Suffrage Party</option>
+            <option letter="b">She documented and fought against lynching</option>
+            <option letter="c">She served in Congress</option>
+            <option letter="d">She founded a college</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Ida B. Wells was a pioneering investigative journalist who documented and crusaded against lynching, while also fighting for women's rights and co-founding the NAACP.</explanation>
+    </question>
+
+    <question number="34">
+        <prompt>What distinguished Booker T. Washington's approach to racial advancement?</prompt>
+        <options>
+            <option letter="a">Immediate political confrontation</option>
+            <option letter="b">Gradual economic improvement</option>
+            <option letter="c">Armed resistance</option>
+            <option letter="d">International pressure</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Booker T. Washington advocated for gradual racial advancement through economic self-improvement and industrial education, as outlined in his Atlanta Compromise speech.</explanation>
+    </question>
+
+    <question number="35">
+        <prompt>What was the significance of the Zimmermann Telegram?</prompt>
+        <options>
+            <option letter="a">It was a peace proposal</option>
+            <option letter="b">It proposed a German-Mexican alliance against the US</option>
+            <option letter="c">It discussed trade agreements</option>
+            <option letter="d">It was about submarine warfare</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Zimmermann Telegram was a secret German diplomatic communication proposing a military alliance with Mexico against the United States, helping push America toward entering WWI.</explanation>
+    </question>
+<question number="36">
+        <prompt>What was the main focus of Booker T. Washington's Atlanta Compromise?</prompt>
+        <options>
+            <option letter="a">Immediate political equality</option>
+            <option letter="b">Economic self-improvement before political rights</option>
+            <option letter="c">Armed resistance to segregation</option>
+            <option letter="d">Integration of public schools</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Atlanta Compromise advocated for African Americans to focus on economic self-improvement and industrial education before pursuing political rights, accepting temporary social segregation.</explanation>
+    </question>
+
+    <question number="37">
+        <prompt>How did the Mexican Revolution affect U.S.-Mexico relations?</prompt>
+        <options>
+            <option letter="a">It led to peaceful cooperation</option>
+            <option letter="b">It caused multiple U.S. military interventions</option>
+            <option letter="c">Mexico joined the Allied Powers</option>
+            <option letter="d">The U.S. purchased Mexican territory</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mexican Revolution led to several U.S. military interventions, including the occupation of Veracruz and Pershing's Punitive Expedition, straining U.S.-Mexico relations.</explanation>
+    </question>
+
+    <question number="38">
+        <prompt>What was the primary purpose of the War Industries Board?</prompt>
+        <options>
+            <option letter="a">To recruit soldiers</option>
+            <option letter="b">To coordinate industrial production for WWI</option>
+            <option letter="c">To ration food supplies</option>
+            <option letter="d">To censor newspapers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The War Industries Board, under Bernard Baruch, coordinated American industrial production during WWI, converting peacetime industries to war production and setting priorities.</explanation>
+    </question>
+
+    <question number="39">
+        <prompt>How did the Supreme Court's Muller v. Oregon decision affect women workers?</prompt>
+        <options>
+            <option letter="a">It banned women from working</option>
+            <option letter="b">It allowed special protections for women workers</option>
+            <option letter="c">It required equal pay</option>
+            <option letter="d">It eliminated gender discrimination</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Muller v. Oregon (1908) upheld laws limiting women's working hours, establishing that women could receive special workplace protections, though based on assumptions about women's "weakness."</explanation>
+    </question>
+
+    <question number="40">
+        <prompt>What was the significance of the Standard Oil antitrust case?</prompt>
+        <options>
+            <option letter="a">It strengthened monopolies</option>
+            <option letter="b">It broke up the largest corporate trust</option>
+            <option letter="c">It nationalized the oil industry</option>
+            <option letter="d">It reduced oil prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1911 Standard Oil antitrust case resulted in the breakup of the largest corporate trust in America, setting a precedent for future antitrust actions and establishing the "rule of reason" doctrine.</explanation>
+    </question>
+<question number="41">
+        <prompt>What was the primary goal of the American Protective League during WWI?</prompt>
+        <options>
+            <option letter="a">To protect the president</option>
+            <option letter="b">To spy on fellow citizens</option>
+            <option letter="c">To distribute war bonds</option>
+            <option letter="d">To train soldiers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The American Protective League was a volunteer organization that worked with the Justice Department to spy on and report fellow citizens suspected of being "un-American" or disloyal during WWI.</explanation>
+    </question>
+
+    <question number="42">
+        <prompt>How did Wilson's stroke affect his presidency?</prompt>
+        <options>
+            <option letter="a">He recovered quickly</option>
+            <option letter="b">His wife secretly managed affairs</option>
+            <option letter="c">He resigned immediately</option>
+            <option letter="d">Congress took control</option>
+        </options>
+        <answer>b</answer>
+        <explanation>After Wilson's severe stroke in 1919, his wife Edith effectively managed many presidential duties, keeping his condition secret from the public and making many decisions herself.</explanation>
+    </question>
+
+    <question number="43">
+        <prompt>What was the main achievement of the Washington Naval Conference?</prompt>
+        <options>
+            <option letter="a">It increased naval armaments</option>
+            <option letter="b">It limited naval construction</option>
+            <option letter="c">It created new alliances</option>
+            <option letter="d">It started an arms race</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Washington Naval Conference of 1921-1922 resulted in agreements limiting naval construction among major powers, marking a significant attempt at international arms control.</explanation>
+    </question>
+
+    <question number="44">
+        <prompt>How did the Triangle Shirtwaist Factory fire impact labor laws?</prompt>
+        <options>
+            <option letter="a">It had no effect</option>
+            <option letter="b">It led to workplace safety reforms</option>
+            <option letter="c">It weakened unions</option>
+            <option letter="d">It closed all factories</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1911 Triangle Shirtwaist Factory fire led to significant workplace safety reforms and labor laws, as public outrage over the deaths of 146 workers sparked progressive reform efforts.</explanation>
+    </question>
+
+    <question number="45">
+        <prompt>What characterized the relationship between business and government during this era?</prompt>
+        <options>
+            <option letter="a">Complete separation</option>
+            <option letter="b">Increased government regulation</option>
+            <option letter="c">Corporate control of government</option>
+            <option letter="d">No interaction</option>
+        </options>
+        <answer>b</answer>
+        <explanation>This era saw increased government regulation of business through antitrust actions, the creation of regulatory agencies, and new laws controlling corporate behavior.</explanation>
+    </question>
+<question number="46">
+        <prompt>What was General John Pershing's main contribution to WWI?</prompt>
+        <options>
+            <option letter="a">He negotiated the peace treaty</option>
+            <option letter="b">He commanded American forces in Europe</option>
+            <option letter="c">He developed new weapons</option>
+            <option letter="d">He organized war funding</option>
+        </options>
+        <answer>b</answer>
+        <explanation>General John Pershing commanded the American Expeditionary Forces in Europe during WWI, insisting on keeping US forces independent and leading them in major battles like the Meuse-Argonne Offensive.</explanation>
+    </question>
+
+    <question number="47">
+        <prompt>How did the Supreme Court's decision in Schenck v. United States affect free speech?</prompt>
+        <options>
+            <option letter="a">It expanded free speech protections</option>
+            <option letter="b">It limited speech during wartime</option>
+            <option letter="c">It only affected newspapers</option>
+            <option letter="d">It protected all political speech</option>
+        </options>
+        <answer>b</answer>
+        <explanation>In Schenck v. United States (1919), the Supreme Court established the "clear and present danger" test, limiting free speech during wartime and upholding the Espionage Act.</explanation>
+    </question>
+
+    <question number="48">
+        <prompt>What was the primary impact of the Clayton Anti-Trust Act?</prompt>
+        <options>
+            <option letter="a">It created new monopolies</option>
+            <option letter="b">It strengthened anti-trust regulation</option>
+            <option letter="c">It regulated food safety</option>
+            <option letter="d">It controlled immigration</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Clayton Anti-Trust Act (1914) strengthened anti-trust regulation by clarifying and expanding the Sherman Act, specifically addressing practices like price discrimination and interlocking directorates.</explanation>
+    </question>
+
+    <question number="49">
+        <prompt>What characterized the Progressive Era approach to reform?</prompt>
+        <options>
+            <option letter="a">Reliance on private charity only</option>
+            <option letter="b">Government regulation and scientific efficiency</option>
+            <option letter="c">Complete economic revolution</option>
+            <option letter="d">Return to traditional values</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Progressive Era reforms emphasized using government regulation and scientific efficiency to address social and economic problems, believing that expertise and rational planning could solve society's issues.</explanation>
+    </question>
+
+    <question number="50">
+        <prompt>What was the significance of Louis Brandeis's Supreme Court appointment?</prompt>
+        <options>
+            <option letter="a">He was the first Catholic justice</option>
+            <option letter="b">He was the first Jewish justice</option>
+            <option letter="c">He was the youngest justice</option>
+            <option letter="d">He was the first minority justice</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Louis Brandeis became the first Jewish Supreme Court Justice in 1916, breaking a significant barrier and bringing progressive legal thought to the Court through his detailed factual analysis approach.</explanation>
+    </question>
+<question number="51">
+        <prompt>What impact did Henry Ford's assembly line have on American industry?</prompt>
+        <options>
+            <option letter="a">It decreased production efficiency</option>
+            <option letter="b">It revolutionized mass production</option>
+            <option letter="c">It eliminated factory jobs</option>
+            <option letter="d">It increased product costs</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Henry Ford's assembly line revolutionized mass production by making manufacturing more efficient, reducing costs, and making automobiles affordable for average Americans while influencing all manufacturing.</explanation>
+    </question>
+
+    <question number="52">
+        <prompt>How did the Mexican Revolution affect U.S. border states?</prompt>
+        <options>
+            <option letter="a">It had no effect</option>
+            <option letter="b">It led to increased immigration and border tensions</option>
+            <option letter="c">It improved economic relations</option>
+            <option letter="d">It created new states</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mexican Revolution caused increased Mexican immigration to U.S. border states, created security concerns after Pancho Villa's raids, and led to military interventions and border tensions.</explanation>
+    </question>
+
+    <question number="53">
+        <prompt>What was the significance of the Hull House?</prompt>
+        <options>
+            <option letter="a">It was a government building</option>
+            <option letter="b">It provided social services to immigrants</option>
+            <option letter="c">It was a military facility</option>
+            <option letter="d">It was a luxury hotel</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Hull House, founded by Jane Addams, was a settlement house that provided educational, cultural, and social services to immigrants and the poor, becoming a model for social reform efforts.</explanation>
+    </question>
+
+    <question number="54">
+        <prompt>How did World War I affect women's roles in society?</prompt>
+        <options>
+            <option letter="a">Women were restricted to domestic roles</option>
+            <option letter="b">Women took on new industrial and civic roles</option>
+            <option letter="c">Women were banned from working</option>
+            <option letter="d">Women's roles remained unchanged</option>
+        </options>
+        <answer>b</answer>
+        <explanation>WWI led women to take on new roles in industry, civic organizations, and public life as they filled jobs vacated by men serving in the military, contributing to support for women's suffrage.</explanation>
+    </question>
+
+    <question number="55">
+        <prompt>What was the main purpose of the Committee on Public Information?</prompt>
+        <options>
+            <option letter="a">To censor all media</option>
+            <option letter="b">To generate pro-war propaganda</option>
+            <option letter="c">To report war casualties</option>
+            <option letter="d">To regulate newspapers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Committee on Public Information, led by George Creel, was created to generate propaganda supporting America's war effort, build public morale, and promote American war aims during WWI.</explanation>
+    </question>
+<question number="56">
+        <prompt>What was the main contribution of George Creel during World War I?</prompt>
+        <options>
+            <option letter="a">Military strategy</option>
+            <option letter="b">Managing wartime propaganda</option>
+            <option letter="c">Diplomatic negotiations</option>
+            <option letter="d">Economic planning</option>
+        </options>
+        <answer>b</answer>
+        <explanation>George Creel headed the Committee on Public Information, which managed government propaganda and public information during WWI, coordinating efforts to build public support for the war.</explanation>
+    </question>
+
+    <question number="57">
+        <prompt>How did the Pure Food and Drug Act affect American consumers?</prompt>
+        <options>
+            <option letter="a">It increased food prices</option>
+            <option letter="b">It required honest labeling and inspection</option>
+            <option letter="c">It reduced food variety</option>
+            <option letter="d">It closed most restaurants</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Pure Food and Drug Act of 1906 protected consumers by requiring honest labeling of foods and drugs, prohibiting harmful additives, and establishing federal inspection of meat products.</explanation>
+    </question>
+
+    <question number="58">
+        <prompt>What was the main accomplishment of Alice Paul's militant suffrage movement?</prompt>
+        <options>
+            <option letter="a">Peaceful negotiations</option>
+            <option letter="b">Pressuring Wilson through protests</option>
+            <option letter="c">Organizing boycotts</option>
+            <option letter="d">Running for office</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Alice Paul's militant tactics, including White House protests and hunger strikes, successfully pressured President Wilson to support women's suffrage, contributing to the 19th Amendment's passage.</explanation>
+    </question>
+
+    <question number="59">
+        <prompt>How did the Clayton Antitrust Act differ from the Sherman Antitrust Act?</prompt>
+        <options>
+            <option letter="a">It was weaker</option>
+            <option letter="b">It specified illegal practices</option>
+            <option letter="c">It only affected railroads</option>
+            <option letter="d">It eliminated all regulation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Clayton Antitrust Act (1914) strengthened antitrust law by specifically identifying illegal practices like price discrimination and interlocking directorates, clarifying the Sherman Act's broader provisions.</explanation>
+    </question>
+
+    <question number="60">
+        <prompt>What impact did the Zimmermann Telegram have on U.S. entry into WWI?</prompt>
+        <options>
+            <option letter="a">It delayed U.S. entry</option>
+            <option letter="b">It helped push America into war</option>
+            <option letter="c">It had no effect</option>
+            <option letter="d">It prevented U.S. entry</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Zimmermann Telegram, proposing a German alliance with Mexico against the U.S., helped push American public opinion toward entering WWI when it was revealed in 1917.</explanation>
+    </question>
+<question number="61">
+        <prompt>What was the main goal of the Niagara Movement led by W.E.B. Du Bois?</prompt>
+        <options>
+            <option letter="a">Environmental conservation near Niagara Falls</option>
+            <option letter="b">Immediate equal rights for African Americans</option>
+            <option letter="c">Gradual economic improvement for blacks</option>
+            <option letter="d">Hydroelectric power development</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Niagara Movement, founded in 1905, demanded immediate equal rights and an end to racial discrimination, rejecting Booker T. Washington's more gradual approach to racial equality.</explanation>
+    </question>
+
+    <question number="62">
+        <prompt>Which legislation authorized the government to arrest and deport suspected anarchists and radicals?</prompt>
+        <options>
+            <option letter="a">The Selective Service Act</option>
+            <option letter="b">The Espionage Act</option>
+            <option letter="c">The Sedition Act</option>
+            <option letter="d">The Immigration Act</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The Sedition Act of 1918 expanded the Espionage Act to allow the government to arrest and deport suspected radicals and anarchists, especially during the Red Scare period.</explanation>
+    </question>
+
+    <question number="63">
+        <prompt>What was the primary function of the War Industries Board during World War I?</prompt>
+        <options>
+            <option letter="a">Recruiting soldiers</option>
+            <option letter="b">Coordinating industrial production</option>
+            <option letter="c">Censoring newspapers</option>
+            <option letter="d">Managing food rationing</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The War Industries Board, led by Bernard Baruch, coordinated industrial production during WWI, converting peacetime factories to war production and setting production priorities.</explanation>
+    </question>
+
+    <question number="64">
+        <prompt>Why was the Spanish Flu pandemic particularly unusual?</prompt>
+        <options>
+            <option letter="a">It originated in Spain</option>
+            <option letter="b">It mainly affected young, healthy adults</option>
+            <option letter="c">It only infected military personnel</option>
+            <option letter="d">It was easily cured</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Spanish Flu was unusual because it was particularly deadly for young, healthy adults, unlike typical flu strains that mainly affect the very young and elderly.</explanation>
+    </question>
+
+    <question number="65">
+        <prompt>What was the Roosevelt Corollary to the Monroe Doctrine?</prompt>
+        <options>
+            <option letter="a">A policy of complete isolation from Europe</option>
+            <option letter="b">The right of the US to intervene in Latin America</option>
+            <option letter="c">A naval expansion program</option>
+            <option letter="d">An alliance with European powers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Roosevelt Corollary (1904) claimed the right for the US to intervene in Latin American countries to prevent European intervention, extending the Monroe Doctrine's scope.</explanation>
+    </question>
+<question number="66">
+        <prompt>How did the Spanish Flu pandemic specifically affect India?</prompt>
+        <options>
+            <option letter="a">It had minimal impact due to British protection</option>
+            <option letter="b">It caused the highest death toll of any country</option>
+            <option letter="c">It only affected urban areas</option>
+            <option letter="d">It strengthened the healthcare system</option>
+        </options>
+        <answer>b</answer>
+        <explanation>India suffered the highest death toll globally from the Spanish Flu, with 17-18 million deaths, exacerbated by British colonial policies, drought, and poor healthcare infrastructure.</explanation>
+    </question>
+
+    <question number="67">
+        <prompt>What was the main purpose of the Selective Service Act of 1917?</prompt>
+        <options>
+            <option letter="a">To create a volunteer army</option>
+            <option letter="b">To implement the first military draft</option>
+            <option letter="c">To train officers only</option>
+            <option letter="d">To build military bases</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Selective Service Act of 1917 implemented the first nationwide military draft since the Civil War, requiring all men aged 21-30 to register for potential military service.</explanation>
+    </question>
+
+    <question number="68">
+        <prompt>What role did Jacob Lawrence play in documenting African American history?</prompt>
+        <options>
+            <option letter="a">He wrote newspaper articles</option>
+            <option letter="b">He created paintings about the Great Migration</option>
+            <option letter="c">He was a political leader</option>
+            <option letter="d">He composed music</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Jacob Lawrence created "The Migration Series," 60 paintings that powerfully documented the Great Migration of African Americans from South to North, becoming a crucial artistic record of this historical movement.</explanation>
+    </question>
+
+    <question number="69">
+        <prompt>What was the significance of Eugene V. Debs during this period?</prompt>
+        <options>
+            <option letter="a">He was a military general</option>
+            <option letter="b">He ran for president while imprisoned</option>
+            <option letter="c">He invented new weapons</option>
+            <option letter="d">He was a prohibition leader</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Eugene V. Debs, a Socialist Party leader, was imprisoned under the Espionage Act for opposing WWI, and famously ran for president in 1920 while still in prison.</explanation>
+    </question>
+
+    <question number="70">
+        <prompt>What was the main achievement of Alice Paul and the militant suffragists?</prompt>
+        <options>
+            <option letter="a">Getting women into combat roles</option>
+            <option letter="b">Pressuring for the 19th Amendment</option>
+            <option letter="c">Creating women's colleges</option>
+            <option letter="d">Running for Congress</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Alice Paul and militant suffragists used aggressive tactics like White House protests and hunger strikes to pressure Wilson's administration to support women's suffrage, leading to the 19th Amendment.</explanation>
+    </question>
+<question number="71">
+        <prompt>What was the significance of the Lochner v. New York Supreme Court case?</prompt>
+        <options>
+            <option letter="a">It supported labor laws</option>
+            <option letter="b">It struck down workplace regulations</option>
+            <option letter="c">It established minimum wage</option>
+            <option letter="d">It protected unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Lochner v. New York (1905) struck down state laws limiting bakery working hours, establishing the "Lochner era" of court decisions that opposed government regulation of business practices.</explanation>
+    </question>
+
+    <question number="72">
+        <prompt>How did Pancho Villa's raids affect U.S.-Mexico relations?</prompt>
+        <options>
+            <option letter="a">They improved diplomatic ties</option>
+            <option letter="b">They triggered a U.S. military expedition</option>
+            <option letter="c">They led to Mexican territory purchase</option>
+            <option letter="d">They had no effect</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Pancho Villa's 1916 raids on U.S. border towns triggered the Pershing Expedition into Mexico, increasing tensions between the two countries and complicating U.S.-Mexico relations.</explanation>
+    </question>
+
+    <question number="73">
+        <prompt>What distinguished the Niagara Movement from other civil rights organizations?</prompt>
+        <options>
+            <option letter="a">It supported segregation</option>
+            <option letter="b">It demanded immediate equal rights</option>
+            <option letter="c">It focused on economic issues only</option>
+            <option letter="d">It opposed voting rights</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Niagara Movement, led by W.E.B. Du Bois, distinguished itself by demanding immediate equal rights and opposing Booker T. Washington's gradualist approach to racial advancement.</explanation>
+    </question>
+
+    <question number="74">
+        <prompt>What was the main result of the Standard Oil antitrust case?</prompt>
+        <options>
+            <option letter="a">Standard Oil expanded</option>
+            <option letter="b">The company was broken up</option>
+            <option letter="c">Oil prices increased</option>
+            <option letter="d">Government ownership</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1911 Standard Oil antitrust case resulted in the company being broken up into 34 separate companies, marking a major victory for the government's trust-busting efforts.</explanation>
+    </question>
+
+    <question number="75">
+        <prompt>What characterized Justice Louis Brandeis's approach to law?</prompt>
+        <options>
+            <option letter="a">Conservative interpretation</option>
+            <option letter="b">Fact-based analysis of social issues</option>
+            <option letter="c">Strict constructionism</option>
+            <option letter="d">Political partisanship</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Justice Brandeis was known for his detailed factual analysis of social and economic issues, introducing "Brandeis briefs" that used social science evidence to support legal arguments.</explanation>
+    </question>
+<question number="76">
+        <prompt>What was the primary impact of the Teapot Dome scandal?</prompt>
+        <options>
+            <option letter="a">It improved oil production</option>
+            <option letter="b">It exposed government corruption</option>
+            <option letter="c">It created new regulations</option>
+            <option letter="d">It increased presidential power</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Teapot Dome scandal exposed corruption in Harding's administration, revealing the illegal leasing of naval oil reserves and leading to the first conviction of a cabinet member for a crime committed in office.</explanation>
+    </question>
+
+    <question number="77">
+        <prompt>How did Native American boarding schools affect tribal communities?</prompt>
+        <options>
+            <option letter="a">They preserved tribal cultures</option>
+            <option letter="b">They forced cultural assimilation</option>
+            <option letter="c">They improved tribal economies</option>
+            <option letter="d">They increased tribal autonomy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Native American boarding schools forcibly assimilated Native children by removing them from their families, forbidding their languages and customs, and attempting to erase their cultural identities.</explanation>
+    </question>
+
+    <question number="78">
+        <prompt>What was the main goal of the Antiquities Act of 1906?</prompt>
+        <options>
+            <option letter="a">To sell federal lands</option>
+            <option letter="b">To protect historical sites</option>
+            <option letter="c">To build museums</option>
+            <option letter="d">To fund archaeology</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Antiquities Act of 1906 gave presidents the power to protect historical and natural sites as national monuments, significantly expanding federal conservation efforts.</explanation>
+    </question>
+
+    <question number="79">
+        <prompt>What characterized the relationship between Theodore Roosevelt and the press?</prompt>
+        <options>
+            <option letter="a">He avoided all contact</option>
+            <option letter="b">He actively managed media relations</option>
+            <option letter="c">He censored newspapers</option>
+            <option letter="d">He ignored the press</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Roosevelt actively managed his relationship with the press, giving reporters unprecedented access, using them to promote his policies, and becoming the first president to make media relations a priority.</explanation>
+    </question>
+
+    <question number="80">
+        <prompt>How did the Federal Farm Loan Act affect American farmers?</prompt>
+        <options>
+            <option letter="a">It eliminated all farm loans</option>
+            <option letter="b">It provided easier access to credit</option>
+            <option letter="c">It raised interest rates</option>
+            <option letter="d">It reduced farm production</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Farm Loan Act of 1916 created a network of land banks that provided farmers with easier access to credit at lower interest rates, helping to stabilize agricultural financing.</explanation>
+    </question>
+<question number="81">
+        <prompt>What role did Colonel Edward House play in Wilson's wartime diplomacy?</prompt>
+        <options>
+            <option letter="a">He led military campaigns</option>
+            <option letter="b">He conducted personal diplomatic missions</option>
+            <option letter="c">He managed domestic policy</option>
+            <option letter="d">He commanded the navy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Colonel Edward House served as Wilson's personal diplomat and closest advisor, conducting crucial diplomatic missions in Europe before and during WWI, earning the nickname "Wilson's alter ego."</explanation>
+    </question>
+
+    <question number="82">
+        <prompt>How did the Nineteenth Amendment change American society?</prompt>
+        <options>
+            <option letter="a">It granted women property rights</option>
+            <option letter="b">It gave women the right to vote</option>
+            <option letter="c">It established equal pay</option>
+            <option letter="d">It banned gender discrimination</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Nineteenth Amendment, ratified in 1920, gave women the right to vote nationwide, marking a major victory for the women's suffrage movement after decades of struggle.</explanation>
+    </question>
+
+    <question number="83">
+        <prompt>What was the primary focus of Jane Addams's work?</prompt>
+        <options>
+            <option letter="a">Military strategy</option>
+            <option letter="b">Social reform and settlement houses</option>
+            <option letter="c">Banking reform</option>
+            <option letter="d">Agricultural policy</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Jane Addams focused on social reform through settlement houses, particularly Hull House, providing education and social services to immigrants and the poor while advocating for peace and women's rights.</explanation>
+    </question>
+
+    <question number="84">
+        <prompt>How did the Selective Service Act of 1917 differ from previous military recruitment?</prompt>
+        <options>
+            <option letter="a">It relied only on volunteers</option>
+            <option letter="b">It created a fair and efficient draft system</option>
+            <option letter="c">It excluded minorities</option>
+            <option letter="d">It only drafted officers</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Selective Service Act of 1917 created a more fair and efficient draft system than previous methods, requiring all men within certain age ranges to register regardless of social status.</explanation>
+    </question>
+
+    <question number="85">
+        <prompt>What was the main effect of the Federal Reserve Act of 1913?</prompt>
+        <options>
+            <option letter="a">It eliminated all banks</option>
+            <option letter="b">It created a central banking system</option>
+            <option letter="c">It banned paper money</option>
+            <option letter="d">It increased inflation</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Reserve Act of 1913 created America's central banking system, providing a more stable and flexible banking structure through a network of regional Federal Reserve banks.</explanation>
+    </question>
+<question number="86">
+        <prompt>How did Theodore Roosevelt earn his Nobel Peace Prize?</prompt>
+        <options>
+            <option letter="a">Ending the Civil War</option>
+            <option letter="b">Mediating the Russo-Japanese War</option>
+            <option letter="c">Creating national parks</option>
+            <option letter="d">Building the Panama Canal</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Theodore Roosevelt won the 1906 Nobel Peace Prize for successfully mediating the Treaty of Portsmouth, which ended the Russo-Japanese War of 1904-1905.</explanation>
+    </question>
+
+    <question number="87">
+        <prompt>What was the main achievement of the Pure Food and Drug Act of 1906?</prompt>
+        <options>
+            <option letter="a">It banned all imported food</option>
+            <option letter="b">It required honest labeling and inspection</option>
+            <option letter="c">It made all drugs illegal</option>
+            <option letter="d">It regulated farm prices</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Pure Food and Drug Act required truthful labeling of food and drugs, prohibited harmful additives, and established federal inspection of meat products, protecting consumer safety.</explanation>
+    </question>
+
+    <question number="88">
+        <prompt>What was unique about Warren G. Harding's "Return to Normalcy" policy?</prompt>
+        <options>
+            <option letter="a">It increased international involvement</option>
+            <option letter="b">It emphasized domestic focus over foreign affairs</option>
+            <option letter="c">It expanded progressive reforms</option>
+            <option letter="d">It strengthened military presence</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Harding's "Return to Normalcy" policy marked a shift away from Wilson's internationalism, emphasizing domestic issues and reducing American involvement in foreign affairs.</explanation>
+    </question>
+
+    <question number="89">
+        <prompt>How did the Federal Reserve Act change America's banking system?</prompt>
+        <options>
+            <option letter="a">It eliminated all private banks</option>
+            <option letter="b">It created a central banking system</option>
+            <option letter="c">It banned paper money</option>
+            <option letter="d">It increased interest rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Federal Reserve Act of 1913 established America's central banking system, creating a more stable and flexible banking system through regional Federal Reserve banks.</explanation>
+    </question>
+
+    <question number="90">
+        <prompt>What characterized America's naval policy during this period?</prompt>
+        <options>
+            <option letter="a">Complete disarmament</option>
+            <option letter="b">Expansion of naval power</option>
+            <option letter="c">Focus on submarines only</option>
+            <option letter="d">Defensive positions only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>This period saw significant naval expansion, with Theodore Roosevelt's Great White Fleet demonstrating American naval power globally and supporting an increasingly assertive foreign policy.</explanation>
+    </question>
+<question number="91">
+        <prompt>What was Marcus Garvey's main contribution to the African American community?</prompt>
+        <options>
+            <option letter="a">Creating the NAACP</option>
+            <option letter="b">Promoting Black pride and self-reliance</option>
+            <option letter="c">Integrating public schools</option>
+            <option letter="d">Leading the Civil Rights Movement</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Marcus Garvey founded the Universal Negro Improvement Association (UNIA) and promoted Black pride, self-reliance, and economic independence through his "Back to Africa" movement and Black-owned businesses.</explanation>
+    </question>
+
+    <question number="92">
+        <prompt>What was the primary cause of the Red Scare of 1919-1920?</prompt>
+        <options>
+            <option letter="a">Fear of Native American uprisings</option>
+            <option letter="b">Fear of communist revolution in America</option>
+            <option letter="c">Fear of Spanish Flu</option>
+            <option letter="d">Fear of German invasion</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Red Scare was driven by fear of communist revolution in America following the Russian Revolution, leading to widespread paranoia, deportations, and violations of civil liberties.</explanation>
+    </question>
+
+    <question number="93">
+        <prompt>What was the main result of the Treaty of Versailles for America?</prompt>
+        <options>
+            <option letter="a">America joined the League of Nations</option>
+            <option letter="b">America gained new territories</option>
+            <option letter="c">The Senate rejected the treaty</option>
+            <option letter="d">America received war reparations</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The U.S. Senate rejected the Treaty of Versailles, largely due to opposition to joining the League of Nations, leading America to make separate peace with Germany.</explanation>
+    </question>
+
+    <question number="94">
+        <prompt>What was the significance of the 18th Amendment?</prompt>
+        <options>
+            <option letter="a">It gave women the right to vote</option>
+            <option letter="b">It prohibited alcohol nationwide</option>
+            <option letter="c">It abolished slavery</option>
+            <option letter="d">It created the income tax</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 18th Amendment, ratified in 1919, prohibited the manufacture, sale, and transportation of alcohol nationwide, leading to the Prohibition era and rise of organized crime.</explanation>
+    </question>
+
+    <question number="95">
+        <prompt>How did World War I affect women's roles in American society?</prompt>
+        <options>
+            <option letter="a">Women lost their jobs after the war</option>
+            <option letter="b">Women gained new work opportunities</option>
+            <option letter="c">Women were banned from working</option>
+            <option letter="d">Women's roles stayed exactly the same</option>
+        </options>
+        <answer>b</answer>
+        <explanation>World War I created new opportunities for women in the workforce as they took over jobs previously held by men who were fighting, contributing to the eventual passage of women's suffrage.</explanation>
+    </question>
+<question number="96">
+        <prompt>What was the main achievement of the NAACP during this period?</prompt>
+        <options>
+            <option letter="a">Winning voting rights for all Americans</option>
+            <option letter="b">Fighting segregation through legal challenges</option>
+            <option letter="c">Creating the first Black political party</option>
+            <option letter="d">Organizing labor unions</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The NAACP, founded in 1909, primarily fought racial discrimination through legal challenges in courts, conducting research, and running education campaigns to combat segregation and racial injustice.</explanation>
+    </question>
+
+    <question number="97">
+        <prompt>What was the primary goal of the American Protective League during WWI?</prompt>
+        <options>
+            <option letter="a">Protecting American borders</option>
+            <option letter="b">Spying on fellow citizens for "un-American" activities</option>
+            <option letter="c">Organizing war bond drives</option>
+            <option letter="d">Protecting government buildings</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The American Protective League was a volunteer organization that worked with the Justice Department to spy on and report fellow citizens suspected of "un-American" activities during WWI.</explanation>
+    </question>
+
+    <question number="98">
+        <prompt>What was the significance of the Panama Canal Zone acquisition?</prompt>
+        <options>
+            <option letter="a">It provided oil resources</option>
+            <option letter="b">It connected Atlantic and Pacific shipping</option>
+            <option letter="c">It created a new US state</option>
+            <option letter="d">It established a military base only</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Panama Canal Zone, acquired in 1903, was crucial for connecting Atlantic and Pacific shipping routes, significantly improving naval mobility and international trade capabilities.</explanation>
+    </question>
+
+    <question number="99">
+        <prompt>What characterized Woodrow Wilson's foreign policy of "moral diplomacy"?</prompt>
+        <options>
+            <option letter="a">Complete isolation from world affairs</option>
+            <option letter="b">Military intervention in all conflicts</option>
+            <option letter="c">Spreading democracy through intervention</option>
+            <option letter="d">Focusing only on trade relations</option>
+        </options>
+        <answer>c</answer>
+        <explanation>Wilson's moral diplomacy focused on spreading American democratic values and intervening in other nations to promote what he saw as moral international behavior and democracy.</explanation>
+    </question>
+
+    <question number="100">
+        <prompt>What was the main impact of the Espionage Act of 1917?</prompt>
+        <options>
+            <option letter="a">It promoted free speech</option>
+            <option letter="b">It restricted civil liberties during wartime</option>
+            <option letter="c">It regulated business practices</option>
+            <option letter="d">It improved worker safety</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Espionage Act of 1917 significantly restricted civil liberties by making it illegal to interfere with military operations or support enemies during wartime, leading to many arrests and prosecutions.</explanation>
+    </question>
+</quiz>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the Mississippi Plan of 1890?</prompt>
+        <options>
+            <option letter="a">A civil rights program</option>
+            <option letter="b">A method to disenfranchise Black voters</option>
+            <option letter="c">An economic development plan</option>
+            <option letter="d">A public education system</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The Mississippi Plan used literacy tests, poll taxes, and other methods to systematically disenfranchise African American voters.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was the "grandfather clause" used for?</prompt>
+        <options>
+            <option letter="a">Protecting elderly voters</option>
+            <option letter="b">Exempting whites from voting restrictions</option>
+            <option letter="c">Establishing property rights</option>
+            <option letter="d">Creating family businesses</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The grandfather clause exempted people whose ancestors could vote before 1867 from literacy tests, effectively allowing poor whites to vote while excluding blacks.</explanation>
+    </question>
+
+    <question>
+        <prompt>How did poll taxes affect voting rights?</prompt>
+        <options>
+            <option letter="a">They encouraged more voting</option>
+            <option letter="b">They prevented poor people from voting</option>
+            <option letter="c">They only applied to women</option>
+            <option letter="d">They increased voter turnout</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Poll taxes required payment to vote, effectively preventing many poor people, especially African Americans, from exercising their voting rights.</explanation>
+    </question>
+
+    <question>
+        <prompt>What was a common feature of literacy tests in the South?</prompt>
+        <options>
+            <option letter="a">They were fairly administered</option>
+            <option letter="b">They were deliberately complex and arbitrary</option>
+            <option letter="c">They were only given to whites</option>
+            <option letter="d">They were optional</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Literacy tests were deliberately complex and arbitrarily administered to prevent African Americans from passing, regardless of their actual literacy.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which Supreme Court case upheld the use of poll taxes?</prompt>
+        <options>
+            <option letter="a">Plessy v. Ferguson</option>
+            <option letter="b">Williams v. Mississippi</option>
+            <option letter="c">Brown v. Board</option>
+            <option letter="d">Dred Scott v. Sandford</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Williams v. Mississippi (1898) upheld the use of poll taxes and literacy tests, finding they did not violate the 14th Amendment.</explanation>
+    </question>
+</quiz>

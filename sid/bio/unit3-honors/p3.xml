@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>During glycolysis, what is the net ATP yield from one glucose molecule?</text>
+        <option>4 ATP molecules</option>
+        <option>2 ATP molecules</option>
+        <option>6 ATP molecules</option>
+        <option>8 ATP molecules</option>
+        <answer>2 ATP molecules</answer>
+        <explanation>While glycolysis produces 4 ATP molecules total, it also uses 2 ATP molecules in the energy investment phase. Therefore, the net ATP production is 2 ATP per glucose molecule processed through glycolysis.</explanation>
+    </question>
+    <question>
+        <text>Which enzyme catalyzes the first committed step of glycolysis?</text>
+        <option>Hexokinase</option>
+        <option>Phosphofructokinase</option>
+        <option>Pyruvate kinase</option>
+        <option>Glucose isomerase</option>
+        <answer>Phosphofructokinase</answer>
+        <explanation>Phosphofructokinase (PFK) catalyzes the phosphorylation of fructose-6-phosphate to fructose-1,6-bisphosphate. This is considered the first committed step of glycolysis because it's irreversible and highly regulated based on the cell's energy status.</explanation>
+    </question>
+    <question>
+        <text>What happens to pyruvate when oxygen is not available?</text>
+        <option>It enters the citric acid cycle directly</option>
+        <option>It undergoes fermentation to regenerate NAD+</option>
+        <option>It is converted back to glucose</option>
+        <option>It is stored in mitochondria</option>
+        <answer>It undergoes fermentation to regenerate NAD+</answer>
+        <explanation>Without oxygen, pyruvate undergoes fermentation (either lactic acid or alcohol fermentation) to regenerate NAD+, which is essential for glycolysis to continue. This process allows cells to produce some ATP when oxygen is unavailable.</explanation>
+    </question>
+    <question>
+        <text>Which molecule is both a product and a critical requirement for continued glycolysis?</text>
+        <option>ATP</option>
+        <option>NAD+</option>
+        <option>Glucose</option>
+        <option>Pyruvate</option>
+        <answer>NAD+</answer>
+        <explanation>NAD+ is required as an electron acceptor during glycolysis, where it's converted to NADH. The cell must continuously regenerate NAD+ (through the electron transport chain or fermentation) for glycolysis to continue operating.</explanation>
+    </question>
+    <question>
+        <text>Why is glycolysis considered a universal process among living organisms?</text>
+        <option>It requires oxygen</option>
+        <option>It occurs only in animal cells</option>
+        <option>It evolved early and is preserved across species</option>
+        <option>It produces the most ATP of any metabolic pathway</option>
+        <answer>It evolved early and is preserved across species</answer>
+        <explanation>Glycolysis is found in virtually all living organisms, from bacteria to humans, suggesting it evolved very early in life's history. Its universal presence and conservation indicate its fundamental importance in cellular metabolism.</explanation>
+    </question>
+</quiz>

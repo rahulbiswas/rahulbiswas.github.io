@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the "Enforcement Act" of 1870 primarily designed to do?</prompt>
+        <options>
+            <option letter="a">Protect African American voting rights</option>
+            <option letter="b">Regulate commerce</option>
+            <option letter="c">Manage land distribution</option>
+            <option letter="d">Control military forces</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Enforcement Act of 1870 was designed to protect African American voting rights by providing federal enforcement of the 15th Amendment.</explanation>
+    </question>
+    <question>
+        <prompt>How did the "Poll Tax" affect voting rights?</prompt>
+        <options>
+            <option letter="a">Prevented poor citizens from voting through fees</option>
+            <option letter="b">Increased voter participation</option>
+            <option letter="c">Protected voting rights</option>
+            <option letter="d">Improved election security</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Poll Tax effectively prevented many poor citizens, especially African Americans, from voting by requiring payment of a fee to vote.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the "Force Bill" of 1871?</prompt>
+        <options>
+            <option letter="a">Gave presidents power to combat Klan violence</option>
+            <option letter="b">Restricted federal authority</option>
+            <option letter="c">Protected Confederate rights</option>
+            <option letter="d">Regulated commerce</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Force Bill gave presidents the authority to use military force to combat Ku Klux Klan violence and protect civil rights.</explanation>
+    </question>
+    <question>
+        <prompt>What role did the "Fusion Movement" play in Southern politics?</prompt>
+        <options>
+            <option letter="a">United black and white voters against Democratic control</option>
+            <option letter="b">Supported segregation</option>
+            <option letter="c">Opposed civil rights</option>
+            <option letter="d">Protected plantation interests</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Fusion Movement attempted to unite black and white voters against Democratic control through political coalitions in Southern states.</explanation>
+    </question>
+</quiz>

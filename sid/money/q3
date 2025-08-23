@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What typically happens to bond prices when interest rates rise?</prompt>
+        <options>
+            <option letter="a">Bond prices rise</option>
+            <option letter="b">Bond prices fall</option>
+            <option letter="c">Bond prices stay the same</option>
+            <option letter="d">Bond prices become more volatile</option>
+        </options>
+        <answer>b</answer>
+        <explanation>When interest rates rise, existing bonds become less attractive because newer bonds offer higher yields, causing existing bond prices to fall.</explanation>
+    </question>
+
+    <question>
+        <prompt>The federal funds rate is:</prompt>
+        <options>
+            <option letter="a">The rate the Fed charges banks for loans</option>
+            <option letter="b">The rate banks charge their best customers</option>
+            <option letter="c">The rate banks charge each other for overnight loans</option>
+            <option letter="d">The rate the government pays on Treasury bills</option>
+        </options>
+        <answer>c</answer>
+        <explanation>The federal funds rate is the interest rate at which banks lend reserve balances to other banks overnight.</explanation>
+    </question>
+
+    <question>
+        <prompt>Which of these is considered the safest type of bond?</prompt>
+        <options>
+            <option letter="a">Corporate bonds</option>
+            <option letter="b">Municipal bonds</option>
+            <option letter="c">U.S. Treasury bonds</option>
+            <option letter="d">Junk bonds</option>
+        </options>
+        <answer>c</answer>
+        <explanation>U.S. Treasury bonds are considered the safest because they are backed by the full faith and credit of the U.S. government.</explanation>
+    </question>
+
+    <question>
+        <prompt>When the Fed conducts monetary policy, which interest rate changes first?</prompt>
+        <options>
+            <option letter="a">Mortgage rates</option>
+            <option letter="b">Federal funds rate</option>
+            <option letter="c">Corporate bond rates</option>
+            <option letter="d">Credit card rates</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The federal funds rate is the first to change as it's directly influenced by Fed policy, then other rates follow in what's called the monetary transmission mechanism.</explanation>
+    </question>
+
+    <question>
+        <prompt>What is the term structure of interest rates also known as?</prompt>
+        <options>
+            <option letter="a">The yield curve</option>
+            <option letter="b">The Phillips curve</option>
+            <option letter="c">The Laffer curve</option>
+            <option letter="d">The demand curve</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The term structure of interest rates is commonly known as the yield curve, which shows interest rates for bonds of different maturities.</explanation>
+    </question>
+</quiz>

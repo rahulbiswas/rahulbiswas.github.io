@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>If nominal GDP is $24 trillion and velocity is 6, what happens to the money supply (M) if velocity drops to 4 and nominal GDP falls to $20 trillion?</prompt>
+        <options>
+            <option letter="a">M increases from $4T to $5T</option>
+            <option letter="b">M decreases from $4T to $3T</option>
+            <option letter="c">M remains constant at $4T</option>
+            <option letter="d">M increases from $4T to $6T</option>
+        </options>
+        <answer>a</answer>
+        <explanation>Initial M = $24T/6 = $4T. After changes, new M = $20T/4 = $5T. Despite nominal GDP falling, the larger proportional drop in velocity (from 6 to 4) means more money is needed to support the new level of transactions. M increases by $1T to maintain the equation of exchange.</explanation>
+    </question>
+</quiz>

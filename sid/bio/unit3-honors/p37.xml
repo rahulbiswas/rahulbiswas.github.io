@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question>
+        <text>How do hibernating animals modify their energy metabolism?</text>
+        <option>They maintain normal metabolism</option>
+        <option>They dramatically reduce metabolic rate and modify pathways</option>
+        <option>They increase energy use</option>
+        <option>They only use glucose</option>
+        <answer>They dramatically reduce metabolic rate and modify pathways</answer>
+        <explanation>Hibernating animals reduce their metabolic rate significantly and shift to using stored fat as primary energy source, while maintaining essential functions through modified metabolic pathways.</explanation>
+    </question>
+    <question>
+        <text>What metabolic adaptations occur during dormancy?</text>
+        <option>Normal metabolism continues</option>
+        <option>Multiple systems adjust to conserve energy</option>
+        <option>Metabolism stops completely</option>
+        <option>Only heart rate changes</option>
+        <answer>Multiple systems adjust to conserve energy</answer>
+        <explanation>During dormancy, organisms adjust multiple metabolic systems to minimize energy use while maintaining vital functions, including reduced heart rate, body temperature, and cellular activity.</explanation>
+    </question>
+    <question>
+        <text>How do animals prepare for hibernation metabolically?</text>
+        <option>No preparation needed</option>
+        <option>They accumulate energy reserves and modify metabolism</option>
+        <option>They only sleep more</option>
+        <option>They increase activity</option>
+        <answer>They accumulate energy reserves and modify metabolism</answer>
+        <explanation>Animals prepare for hibernation by accumulating fat reserves, adjusting hormone levels, and modifying metabolic pathways to prepare for extended periods of reduced energy intake.</explanation>
+    </question>
+    <question>
+        <text>What role does brown fat play in hibernation?</text>
+        <option>It has no role</option>
+        <option>It generates heat during arousal periods</option>
+        <option>It stores water only</option>
+        <option>It produces glucose</option>
+        <answer>It generates heat during arousal periods</answer>
+        <explanation>Brown fat plays a crucial role in hibernation by generating heat through uncoupled respiration during periodic arousal, helping maintain minimum body temperature and vital functions.</explanation>
+    </question>
+    <question>
+        <text>How is cellular damage prevented during hibernation?</text>
+        <option>It isn't prevented</option>
+        <option>Through multiple protective mechanisms</option>
+        <option>Only through sleeping</option>
+        <option>By increasing metabolism</option>
+        <answer>Through multiple protective mechanisms</answer>
+        <explanation>Hibernating animals prevent cellular damage through multiple mechanisms including increased antioxidant production, cellular repair processes, and protective proteins that maintain tissue integrity during dormancy.</explanation>
+    </question>
+</quiz>

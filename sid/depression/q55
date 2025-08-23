@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The KKK's resurgence in the 1920s differed from its earlier incarnation by:</prompt>
+        <options>
+            <option letter="a">Being less violent</option>
+            <option letter="b">Expanding its targets beyond African Americans</option>
+            <option letter="c">Supporting civil rights</option>
+            <option letter="d">Opposing Protestant values</option>
+        </options>
+        <answer>b</answer>
+        <explanation>The 1920s KKK expanded its targets beyond African Americans to include Catholics, Jews, immigrants, and others perceived as threatening "traditional" American values. This broader focus reflected post-WWI nativism and cultural anxieties. The organization gained millions of members nationwide and significant political influence before declining due to scandals and internal conflicts.</explanation>
+    </question>
+</quiz>

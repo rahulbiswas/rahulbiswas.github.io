@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>What was the primary goal of the Ku Klux Klan during Reconstruction?</prompt>
+        <options>
+            <option letter="a">To terrorize African Americans and Republicans into political submission</option>
+            <option letter="b">To promote economic development</option>
+            <option letter="c">To support federal policies</option>
+            <option letter="d">To protect voting rights</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Ku Klux Klan used violence and intimidation to terrorize African Americans and their white Republican allies, aiming to restore Democratic control and white supremacy.</explanation>
+    </question>
+    <question>
+        <prompt>How did the Civil Rights Act of 1866 define citizenship?</prompt>
+        <options>
+            <option letter="a">All persons born in the United States regardless of race</option>
+            <option letter="b">Only white males over 21</option>
+            <option letter="c">Anyone who owned property</option>
+            <option letter="d">Former Union soldiers only</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Civil Rights Act of 1866 defined citizenship as belonging to all persons born in the United States, regardless of race or previous condition of servitude.</explanation>
+    </question>
+    <question>
+        <prompt>What was the purpose of the Southern Homestead Act of 1866?</prompt>
+        <options>
+            <option letter="a">To provide land opportunities to freedmen and poor whites</option>
+            <option letter="b">To return land to Confederate veterans</option>
+            <option letter="c">To establish military bases</option>
+            <option letter="d">To create national parks</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Southern Homestead Act opened public lands in five Southern states exclusively to freedmen and loyal whites, though its impact was limited by various factors.</explanation>
+    </question>
+    <question>
+        <prompt>What was the significance of the Reconstruction Act of 1867's requirement for new state constitutions?</prompt>
+        <options>
+            <option letter="a">Required states to guarantee universal male suffrage</option>
+            <option letter="b">Maintained existing voting restrictions</option>
+            <option letter="c">Limited voting to property owners</option>
+            <option letter="d">Excluded former slaves from voting</option>
+        </options>
+        <answer>a</answer>
+        <explanation>The Reconstruction Act required Southern states to write new constitutions guaranteeing universal male suffrage, including African Americans, as a condition for readmission to the Union.</explanation>
+    </question>
+</quiz>

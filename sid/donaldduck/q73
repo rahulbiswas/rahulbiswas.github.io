@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<question>
+    <prompt>How did welfare programs treat minorities?</prompt>
+    <options>
+        <option letter="a">Unequal benefits</option>
+        <option letter="b">Special preference</option>
+        <option letter="c">Equal treatment</option>
+        <option letter="d">Extra funding</option>
+    </options>
+    <answer>a</answer>
+    <explanation>New Deal welfare programs often discriminated against minorities through local control of benefits and exclusion of agricultural and domestic workers.</explanation>
+</question>

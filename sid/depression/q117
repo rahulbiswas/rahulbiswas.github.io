@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz>
+    <question>
+        <prompt>The significance of Charles Lindbergh's transatlantic flight was its:</prompt>
+        <options>
+            <option letter="a">Military importance</option>
+            <option letter="b">Impact on popular culture and aviation</option>
+            <option letter="c">Political influence</option>
+            <option letter="d">Economic benefits</option>
+        </options>
+        <answer>b</answer>
+        <explanation>Lindbergh's 1927 solo flight across the Atlantic significantly impacted popular culture and aviation development. His achievement captured the public imagination, symbolized American technological progress, and sparked widespread interest in aviation. The flight made Lindbergh an international celebrity and helped stimulate the growth of commercial aviation, embodying the spirit of innovation and individual achievement in the 1920s.</explanation>
+    </question>
+</quiz>
