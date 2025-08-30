@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dada's Item Lister</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #1a237e;
+            text-align: center;
+            margin-top: 0;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        button {
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #303f9f;
+        }
+        #createListBtn {
+            display: block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #e8eaf6;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+        .item-text {
+            flex-grow: 1;
+        }
+        .controls button {
+            background: #7986cb;
+            margin-left: 5px;
+            padding: 5px 8px;
+            font-size: 0.8rem;
+            width: 65px; /* Wider buttons for a uniform look! */
+            text-align: center;
+        }
+        .controls button:hover {
+            background: #5c6bc0;
+        }
+        .controls button.delete {
+            background-color: #e57373;
+        }
+        .controls button.delete:hover {
+            background-color: #ef5350;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Item Ordering List</h1>
+        <textarea id="itemInput" placeholder="Paste your items here, one per line..."></textarea>
+        <button id="createListBtn">Create List</button>
+        <ul id="itemList"></ul>
+    </div>
+
+    <script>
+        const createListBtn = document.getElementById('createListBtn');
+        const itemInput = document.getElementById('itemInput');
+        const itemList = document.getElementById('itemList');
+
+        // This is our new function, Dada! It keeps the text box in sync.
+        function updateTextArea() {
+            // Get all the span elements with the item text
+            const currentItems = itemList.querySelectorAll('.item-text');
+            // Create an array from their text content
+            const textArray = Array.from(currentItems).map(item => item.textContent);
+            // Join them with newlines and update the textarea
+            itemInput.value = textArray.join('\n');
+        }
+
+        createListBtn.addEventListener('click', () => {
+            const items = itemInput.value.trim().split('\n').filter(item => item.trim() !== '');
+            itemList.innerHTML = '';
+
+            items.forEach(text => {
+                const li = document.createElement('li');
+                const itemText = document.createElement('span');
+                itemText.className = 'item-text';
+                itemText.textContent = text;
+                const controls = document.createElement('div');
+                controls.className = 'controls';
+
+                const upBtn = document.createElement('button');
+                upBtn.textContent = '▲ Up';
+                upBtn.className = 'move-up';
+                const downBtn = document.createElement('button');
+                downBtn.textContent = '▼ Down';
+                downBtn.className = 'move-down';
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Del';
+                deleteBtn.className = 'delete';
+
+                controls.appendChild(upBtn);
+                controls.appendChild(downBtn);
+                controls.appendChild(deleteBtn);
+                li.appendChild(itemText);
+                li.appendChild(controls);
+                itemList.appendChild(li);
+            });
+        });
+
+        itemList.addEventListener('click', (event) => {
+            const button = event.target;
+            const li = button.closest('li');
+
+            if (!li) return;
+
+            let listChanged = false;
+
+            if (button.classList.contains('move-up')) {
+                const prevLi = li.previousElementSibling;
+                if (prevLi) {
+                    itemList.insertBefore(li, prevLi);
+                    listChanged = true;
+                }
+            } else if (button.classList.contains('move-down')) {
+                const nextLi = li.nextElementSibling;
+                if (nextLi) {
+                    itemList.insertBefore(nextLi, li);
+                    listChanged = true;
+                }
+            } else if (button.classList.contains('delete')) {
+                itemList.removeChild(li);
+                listChanged = true;
+            }
+
+            // If we made a change, we call our new function!
+            if (listChanged) {
+                updateTextArea();
+            }
+        });
+    </script>
+
+</body>
+</html>
