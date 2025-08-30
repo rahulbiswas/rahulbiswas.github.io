@@ -5,33 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dada's Item Lister</title>
     <style>
+        :root {
+            /* We define our color "nicknames" here! */
+            --bg-color: #fdf0f5;
+            --text-color: #595168;
+            --header-color: #ff8fab;
+            --accent-color: #ff8fab;
+            --accent-hover: #f8799a;
+            --shadow-color: rgba(231, 171, 184, 0.25);
+            --input-border: #e1bee7;
+            --list-item-bg: #f3e5f5;
+            --controls-bg: #a7c7e7;
+            --controls-hover: #9ab8d9;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f7f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
+            padding: 2rem 0;
+            display: flex; /* Added for centering */
+            justify-content: center; /* Added for centering */
+            align-items: center; /* Added for centering */
+            min-height: 100vh; /* Added for centering */
+            box-sizing: border-box; /* Added for centering */
         }
+        
+        #palette-picker {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .swatch:hover {
+            transform: scale(1.1);
+        }
+        .swatch.active {
+            border-color: var(--header-color);
+            box-shadow: 0 0 10px var(--header-color);
+        }
+        /* No more gradients, Dada! Just flat colors! */
+        #swatch-kawaii { background: #ff8fab; }
+        #swatch-ocean { background: #0077b6; }
+        #swatch-sunset { background: #ff6a88; }
+        #swatch-graphite { background: #434343; }
+
         .container {
             background: white;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px var(--shadow-color);
             width: 90%;
             max-width: 500px;
         }
         h1 {
-            color: #1a237e;
+            color: var(--header-color);
             text-align: center;
             margin-top: 0;
         }
         textarea {
             width: 100%;
             height: 150px;
-            border: 2px solid #ccc;
+            border: 2px solid var(--input-border);
             border-radius: 8px;
             padding: 10px;
             box-sizing: border-box;
@@ -39,7 +86,7 @@
             margin-bottom: 1rem;
         }
         button {
-            background-color: #3f51b5;
+            background-color: var(--accent-color);
             color: white;
             border: none;
             padding: 10px 15px;
@@ -49,7 +96,7 @@
             transition: background-color 0.2s;
         }
         button:hover {
-            background-color: #303f9f;
+            background-color: var(--accent-hover);
         }
         #createListBtn {
             display: block;
@@ -64,7 +111,7 @@
             display: flex;
             align-items: center;
             padding: 12px;
-            background: #e8eaf6;
+            background: var(--list-item-bg);
             border-radius: 5px;
             margin-bottom: 8px;
         }
@@ -72,30 +119,31 @@
             flex-grow: 1;
         }
         .controls button {
-            background: #7986cb;
+            background: var(--controls-bg);
             margin-left: 5px;
             padding: 5px 8px;
             font-size: 0.8rem;
-            width: 65px; /* Wider buttons for a uniform look! */
+            width: 65px;
             text-align: center;
         }
         .controls button:hover {
-            background: #5c6bc0;
-        }
-        .controls button.delete {
-            background-color: #e57373;
-        }
-        .controls button.delete:hover {
-            background-color: #ef5350;
+            background: var(--controls-hover);
         }
     </style>
 </head>
 <body>
 
+    <div id="palette-picker">
+        <button class="swatch active" id="swatch-kawaii" data-palette="kawaii"></button>
+        <button class="swatch" id="swatch-ocean" data-palette="ocean"></button>
+        <button class="swatch" id="swatch-sunset" data-palette="sunset"></button>
+        <button class="swatch" id="swatch-graphite" data-palette="graphite"></button>
+    </div>
+
     <div class="container">
-        <h1>Item Ordering List</h1>
-        <textarea id="itemInput" placeholder="Paste your items here, one per line..."></textarea>
-        <button id="createListBtn">Create List</button>
+        <h1>sort</h1>
+        <textarea id="itemInput" placeholder="paste your items here, one per line..."></textarea>
+        <button id="createListBtn">create list</button>
         <ul id="itemList"></ul>
     </div>
 
@@ -103,14 +151,43 @@
         const createListBtn = document.getElementById('createListBtn');
         const itemInput = document.getElementById('itemInput');
         const itemList = document.getElementById('itemList');
+        const palettePicker = document.getElementById('palette-picker');
 
-        // This is our new function, Dada! It keeps the text box in sync.
+        const palettes = {
+            kawaii: {
+                '--bg-color': '#fdf0f5', '--text-color': '#595168', '--header-color': '#ff8fab', '--accent-color': '#ff8fab', '--accent-hover': '#f8799a', '--shadow-color': 'rgba(231, 171, 184, 0.25)', '--input-border': '#e1bee7', '--list-item-bg': '#f3e5f5', '--controls-bg': '#a7c7e7', '--controls-hover': '#9ab8d9'
+            },
+            ocean: {
+                '--bg-color': '#f0f8ff', '--text-color': '#03254c', '--header-color': '#0077b6', '--accent-color': '#0096c7', '--accent-hover': '#0077b6', '--shadow-color': 'rgba(144, 224, 239, 0.3)', '--input-border': '#90e0ef', '--list-item-bg': '#caf0f8', '--controls-bg': '#48cae4', '--controls-hover': '#00b4d8'
+            },
+            sunset: {
+                '--bg-color': '#fff0f0', '--text-color': '#4c1c24', '--header-color': '#ff6a88', '--accent-color': '#ff8c6b', '--accent-hover': '#ff7854', '--shadow-color': 'rgba(255, 154, 139, 0.3)', '--input-border': '#ffc3a0', '--list-item-bg': '#ffd8c4', '--controls-bg': '#ff9a8b', '--controls-hover': '#ff8a7a'
+            },
+            graphite: {
+                '--bg-color': '#f5f5f5', '--text-color': '#333333', '--header-color': '#434343', '--accent-color': '#5a5a5a', '--accent-hover': '#434343', '--shadow-color': 'rgba(0, 0, 0, 0.1)', '--input-border': '#cccccc', '--list-item-bg': '#eeeeee', '--controls-bg': '#a9a9a9', '--controls-hover': '#8c8c8c'
+            }
+        };
+
+        function applyPalette(paletteName) {
+            const selectedPalette = palettes[paletteName];
+            for (const [key, value] of Object.entries(selectedPalette)) {
+                document.documentElement.style.setProperty(key, value);
+            }
+            // Update active swatch
+            document.querySelector('.swatch.active').classList.remove('active');
+            document.querySelector(`#swatch-${paletteName}`).classList.add('active');
+        }
+
+        palettePicker.addEventListener('click', (event) => {
+            const swatch = event.target.closest('.swatch');
+            if (swatch) {
+                applyPalette(swatch.dataset.palette);
+            }
+        });
+
         function updateTextArea() {
-            // Get all the span elements with the item text
             const currentItems = itemList.querySelectorAll('.item-text');
-            // Create an array from their text content
             const textArray = Array.from(currentItems).map(item => item.textContent);
-            // Join them with newlines and update the textarea
             itemInput.value = textArray.join('\n');
         }
 
@@ -127,22 +204,20 @@
                 controls.className = 'controls';
 
                 const upBtn = document.createElement('button');
-                upBtn.textContent = '▲ Up';
+                upBtn.textContent = '▲ up';
                 upBtn.className = 'move-up';
                 const downBtn = document.createElement('button');
-                downBtn.textContent = '▼ Down';
+                downBtn.textContent = '▼ down';
                 downBtn.className = 'move-down';
-                const deleteBtn = document.createElement('button');
-                deleteBtn.textContent = 'Del';
-                deleteBtn.className = 'delete';
 
                 controls.appendChild(upBtn);
                 controls.appendChild(downBtn);
-                controls.appendChild(deleteBtn);
                 li.appendChild(itemText);
                 li.appendChild(controls);
                 itemList.appendChild(li);
             });
+            
+            createListBtn.textContent = 'update list';
         });
 
         itemList.addEventListener('click', (event) => {
@@ -150,7 +225,6 @@
             const li = button.closest('li');
 
             if (!li) return;
-
             let listChanged = false;
 
             if (button.classList.contains('move-up')) {
@@ -165,16 +239,15 @@
                     itemList.insertBefore(nextLi, li);
                     listChanged = true;
                 }
-            } else if (button.classList.contains('delete')) {
-                itemList.removeChild(li);
-                listChanged = true;
             }
 
-            // If we made a change, we call our new function!
             if (listChanged) {
                 updateTextArea();
             }
         });
+
+        // Set the initial theme on load
+        applyPalette('kawaii');
     </script>
 
 </body>
