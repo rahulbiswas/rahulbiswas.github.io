@@ -1,0 +1,200 @@
+{
+  "california_environmental_events_2024": [
+    {
+      "event_id": 1,
+      "event_name": "July 2024 Record-Breaking Heat Wave",
+      "event_type": "heat_wave",
+      "start_date": "2024-07-01",
+      "end_date": "2024-07-15",
+      "location_name": "Central Valley, Fresno",
+      "bounds": [
+        [-120.0000, 37.5000],
+        [-120.0000, 36.0000],
+        [-119.0000, 36.0000],
+        [-119.0000, 37.5000],
+        [-120.0000, 37.5000]
+      ],
+      "center_lat": 36.7500,
+      "center_lng": -119.5000,
+      "description": "Temperatures exceeded 110°F, Fresno reached 115°F",
+      "ecostress_relevance": "extreme_heat_signature"
+    },
+    {
+      "event_id": 2,
+      "event_name": "Park Fire",
+      "event_type": "wildfire",
+      "start_date": "2024-07-24",
+      "end_date": "2024-09-30",
+      "location_name": "Butte and Tehama Counties",
+      "bounds": [
+        [-122.0000, 40.2000],
+        [-122.0000, 39.5000],
+        [-121.0000, 39.5000],
+        [-121.0000, 40.2000],
+        [-122.0000, 40.2000]
+      ],
+      "center_lat": 39.8500,
+      "center_lng": -121.5000,
+      "description": "429,603 acres burned, 709 structures destroyed",
+      "ecostress_relevance": "fire_heat_signature"
+    },
+    {
+      "event_id": 3,
+      "event_name": "February Atmospheric River Flooding",
+      "event_type": "flooding",
+      "start_date": "2024-02-04",
+      "end_date": "2024-02-07",
+      "location_name": "Los Angeles Basin",
+      "bounds": [
+        [-118.7000, 34.3000],
+        [-118.7000, 33.7000],
+        [-117.9000, 33.7000],
+        [-117.9000, 34.3000],
+        [-118.7000, 34.3000]
+      ],
+      "center_lat": 34.0000,
+      "center_lng": -118.3000,
+      "description": "4.1 inches rain in one day, 850,000 without power",
+      "ecostress_relevance": "water_temperature_contrast"
+    },
+    {
+      "event_id": 4,
+      "event_name": "September Heat Wave",
+      "event_type": "heat_wave",
+      "start_date": "2024-09-04",
+      "end_date": "2024-09-10",
+      "location_name": "Southern California",
+      "bounds": [
+        [-119.0000, 34.5000],
+        [-119.0000, 33.5000],
+        [-117.0000, 33.5000],
+        [-117.0000, 34.5000],
+        [-119.0000, 34.5000]
+      ],
+      "center_lat": 34.0000,
+      "center_lng": -118.0000,
+      "description": "10-20°F above normal, heat-related ER visits doubled",
+      "ecostress_relevance": "urban_heat_island"
+    },
+    {
+      "event_id": 5,
+      "event_name": "October Drought Expansion",
+      "event_type": "drought",
+      "start_date": "2024-10-01",
+      "end_date": "2024-10-31",
+      "location_name": "Central California",
+      "bounds": [
+        [-121.5000, 37.5000],
+        [-121.5000, 35.5000],
+        [-119.5000, 35.5000],
+        [-119.5000, 37.5000],
+        [-121.5000, 37.5000]
+      ],
+      "center_lat": 36.5000,
+      "center_lng": -120.5000,
+      "description": "85.47% of region in drought conditions",
+      "ecostress_relevance": "vegetation_stress"
+    },
+    {
+      "event_id": 6,
+      "event_name": "Borel Fire",
+      "event_type": "wildfire",
+      "start_date": "2024-07-25",
+      "end_date": "2024-08-31",
+      "location_name": "Sequoia National Forest",
+      "bounds": [
+        [-118.8000, 36.2000],
+        [-118.8000, 35.8000],
+        [-118.2000, 35.8000],
+        [-118.2000, 36.2000],
+        [-118.8000, 36.2000]
+      ],
+      "center_lat": 36.0000,
+      "center_lng": -118.5000,
+      "description": "Rapid fire spread in Sequoia National Forest",
+      "ecostress_relevance": "fire_heat_signature"
+    },
+    {
+      "event_id": 7,
+      "event_name": "San Diego January Flooding",
+      "event_type": "flooding",
+      "start_date": "2024-01-21",
+      "end_date": "2024-01-23",
+      "location_name": "San Diego County",
+      "bounds": [
+        [-117.5000, 33.2000],
+        [-117.5000, 32.5000],
+        [-116.8000, 32.5000],
+        [-116.8000, 33.2000],
+        [-117.5000, 33.2000]
+      ],
+      "center_lat": 32.8500,
+      "center_lng": -117.1500,
+      "description": "Fourth wettest day, stormwater system overwhelmed",
+      "ecostress_relevance": "water_temperature_contrast"
+    },
+    {
+      "event_id": 8,
+      "event_name": "Line, Bridge, and Airport Fires",
+      "event_type": "wildfire",
+      "start_date": "2024-09-05",
+      "end_date": "2024-09-30",
+      "location_name": "San Bernardino and Orange Counties",
+      "bounds": [
+        [-117.8000, 34.2000],
+        [-117.8000, 33.6000],
+        [-117.2000, 33.6000],
+        [-117.2000, 34.2000],
+        [-117.8000, 34.2000]
+      ],
+      "center_lat": 33.9000,
+      "center_lng": -117.5000,
+      "description": "Multiple fires during extreme heat period",
+      "ecostress_relevance": "fire_heat_signature"
+    },
+    {
+      "event_id": 9,
+      "event_name": "Early June Heat Wave",
+      "event_type": "heat_wave",
+      "start_date": "2024-06-04",
+      "end_date": "2024-06-07",
+      "location_name": "Central Valley",
+      "bounds": [
+        [-122.0000, 38.5000],
+        [-122.0000, 37.0000],
+        [-120.5000, 37.0000],
+        [-120.5000, 38.5000],
+        [-122.0000, 38.5000]
+      ],
+      "center_lat": 37.7500,
+      "center_lng": -121.2500,
+      "description": "First major heat wave, 105°F in Central Valley",
+      "ecostress_relevance": "agricultural_heat_stress"
+    },
+    {
+      "event_id": 10,
+      "event_name": "Death Valley Extreme Heat",
+      "event_type": "extreme_heat",
+      "start_date": "2024-07-05",
+      "end_date": "2024-07-10",
+      "location_name": "Death Valley",
+      "bounds": [
+        [-117.2000, 37.0000],
+        [-117.2000, 36.0000],
+        [-116.4000, 36.0000],
+        [-116.4000, 37.0000],
+        [-117.2000, 37.0000]
+      ],
+      "center_lat": 36.5000,
+      "center_lng": -116.8000,
+      "description": "Approached 130°F, near world record temperatures",
+      "ecostress_relevance": "extreme_heat_signature"
+    }
+  ],
+  "metadata": {
+    "source": "California 2024 Environmental Events Analysis",
+    "ecostress_bands": ["LST", "ET", "ESI", "WUE"],
+    "recommended_visualization": "thermal_anomaly",
+    "coordinate_system": "WGS84"
+  }
+}
