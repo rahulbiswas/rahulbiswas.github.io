@@ -17,7 +17,10 @@ function initMap() {
 function temperatureToColor(temp, minTemp, maxTemp) {
     if (temp === null) return [0, 0, 0, 0]; // Transparent for null
     
-    const normalized = (temp - minTemp) / (maxTemp - minTemp);
+    // Clamp the temperature to the range to avoid colors going out of bounds
+    const clampedTemp = Math.max(minTemp, Math.min(temp, maxTemp));
+    
+    const normalized = (clampedTemp - minTemp) / (maxTemp - minTemp);
     const colors = [
         [0, 0, 128],      // Dark blue
         [0, 128, 255],    // Light blue  
@@ -51,8 +54,8 @@ function createThermalOverlay(dateData) {
     const ctx = canvas.getContext('2d');
     const imageData = ctx.createImageData(canvas.width, canvas.height);
     
-    const minTemp = thermalData.global_temp_range.min;
-    const maxTemp = thermalData.global_temp_range.max;
+    const minTemp = 40;
+    const maxTemp = 110;
     
     let pixelIndex = 0;
     for (let row = 0; row < dateData.shape[0]; row++) {
@@ -95,8 +98,21 @@ function updateDisplay(index) {
     currentOverlay = createThermalOverlay(dateData);
     currentOverlay.addTo(map);
     
+    // Convert UTC time to local Pacific time for display
+    let displayTime = '';
+    if (dateData.time_utc) {
+        const timeString = dateData.time_utc.replace(' UTC', '');
+        const utcDate = new Date(`${dateData.date}T${timeString}Z`);
+        displayTime = utcDate.toLocaleTimeString('en-US', {
+            timeZone: 'America/Los_Angeles',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        });
+    }
+
     // Update UI
-    document.getElementById('current-date').textContent = dateData.date;
+    document.getElementById('current-date').textContent = `${dateData.date} at ${displayTime}`;
     document.getElementById('temp-stats').textContent = 
         `Min: ${dateData.stats.min}°F | Max: ${dateData.stats.max}°F | Mean: ${dateData.stats.mean}°F`;
     
@@ -139,8 +155,8 @@ function initControls() {
     slider.max = thermalData.dates.length - 1;
     startDate.textContent = thermalData.dates[0].date;
     endDate.textContent = thermalData.dates[thermalData.dates.length - 1].date;
-    tempMin.textContent = thermalData.global_temp_range.min + '°F';
-    tempMax.textContent = thermalData.global_temp_range.max + '°F';
+    tempMin.textContent = '40°F';
+    tempMax.textContent = '110°F';
     
     slider.addEventListener('input', function() {
         updateDisplay(parseInt(this.value));
@@ -157,7 +173,7 @@ function initControls() {
 // Load thermal data
 async function loadThermalData() {
     try {
-        const response = await fetch('bayarea_data.json');
+        const response = await fetch('paloalto_data.json');
         thermalData = await response.json();
         
         console.log('Loaded thermal data:', thermalData);
@@ -168,7 +184,7 @@ async function loadThermalData() {
             (firstBounds.north + firstBounds.south) / 2,
             (firstBounds.east + firstBounds.west) / 2
         ];
-        map.setView(center, 9);
+        map.setView(center, 12);
         
         initControls();
         updateDisplay(0);
@@ -176,7 +192,7 @@ async function loadThermalData() {
     } catch (error) {
         console.error('Error loading thermal data:', error);
         document.getElementById('loading').innerHTML = 
-            '<h3>❌ Error loading data</h3><p>Make sure bayarea_data.json exists in the same directory</p>';
+            '<h3>❌ Error loading data</h3><p>Make sure paloalto_data.json exists in the same directory</p>';
     }
 }
 
