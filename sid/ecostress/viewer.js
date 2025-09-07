@@ -153,8 +153,6 @@ function initControls(manifest) {
     slider.value = 0;
     document.getElementById('start-date').textContent = manifest.dates[0].date;
     document.getElementById('end-date').textContent = manifest.dates[manifest.dates.length - 1].date;
-    document.getElementById('temp-min').textContent = `${manifest.display_temp_range.min}°F`;
-    document.getElementById('temp-max').textContent = `${manifest.display_temp_range.max}°F`;
 }
 
 function generateManifestFilename(event) {
