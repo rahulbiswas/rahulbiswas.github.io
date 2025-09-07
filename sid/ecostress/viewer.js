@@ -7,7 +7,6 @@ let currentIndex = 0;
 let playInterval;
 let isPlaying = false;
 
-// The new home for our data in the cloud!
 const GCS_BASE_URL = 'https://storage.googleapis.com/ecostress-siddhartha/';
 
 // Initialize map
@@ -145,7 +144,7 @@ function togglePlay() {
         playInterval = setInterval(() => {
             let nextIndex = (currentIndex + 1) % currentManifest.dates.length;
             updateDisplay(nextIndex);
-        }, 1200);
+        }, 1200); // Slower interval to allow for fetching
     }
 }
 
@@ -163,7 +162,7 @@ function generateManifestFilename(event) {
 }
 
 async function loadEventManifest(event) {
-    shardCache = {};
+    shardCache = {}; // Clear cache for the new event
     document.getElementById('loading').style.display = 'block';
     document.getElementById('loading').innerHTML = `<h3>🔥 Loading manifest for ${event.event_name}...</h3>`;
     document.getElementById('map-controls').style.display = 'none';
@@ -185,14 +184,14 @@ async function loadEventManifest(event) {
         map.fitBounds([[bounds.south, bounds.west], [bounds.north, bounds.east]]);
 
         initControls(currentManifest);
-        await updateDisplay(0);
+        await updateDisplay(0); // Load the first day's data
 
         document.getElementById('map-controls').style.display = 'block';
         document.getElementById('colorbar').style.display = 'block';
 
     } catch (error) {
         console.error('Error loading event manifest:', error);
-        document.getElementById('loading').innerHTML = `<h3>❌ Error loading manifest for ${event.event_name}</h3><p>Make sure the manifest file exists in the cloud.</p>`;
+        document.getElementById('loading').innerHTML = `<h3>❌ Error loading manifest for ${event.event_name}</h3><p>Make sure the manifest file exists and is public on GCS.</p>`;
     }
 }
 
@@ -213,7 +212,7 @@ function populateChooser(events) {
 
 async function initDashboard() {
     try {
-        const response = await fetch(`${GCS_BASE_URL}events.json`);
+        const response = await fetch('events.json'); // This stays local
         const eventsData = await response.json();
         allEvents = eventsData.california_environmental_events_2024;
 
@@ -221,11 +220,11 @@ async function initDashboard() {
 
         populateChooser(allEvents);
         document.getElementById('controls').style.display = 'block';
-        await loadEventManifest(allEvents[0]);
+        await loadEventManifest(allEvents[0]); // Load the first event by default
 
     } catch (error) {
         console.error('Error initializing dashboard:', error);
-        document.getElementById('loading').innerHTML = '<h3>❌ Error loading event list</h3><p>Make sure events.json exists and is public.</p>';
+        document.getElementById('loading').innerHTML = '<h3>❌ Error loading event list</h3><p>Make sure events.json exists and is valid.</p>';
     }
 }
 
