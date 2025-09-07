@@ -39,25 +39,6 @@
       "ecostress_relevance": "fire_heat_signature"
     },
     {
-      "event_id": 3,
-      "event_name": "February Atmospheric River Flooding",
-      "event_type": "flooding",
-      "start_date": "2024-02-04",
-      "end_date": "2024-02-07",
-      "location_name": "Los Angeles Basin",
-      "bounds": [
-        [-118.7000, 34.3000],
-        [-118.7000, 33.7000],
-        [-117.9000, 33.7000],
-        [-117.9000, 34.3000],
-        [-118.7000, 34.3000]
-      ],
-      "center_lat": 34.0000,
-      "center_lng": -118.3000,
-      "description": "4.1 inches rain in one day, 850,000 without power",
-      "ecostress_relevance": "water_temperature_contrast"
-    },
-    {
       "event_id": 4,
       "event_name": "September Heat Wave",
       "event_type": "heat_wave",
@@ -115,25 +96,6 @@
       "ecostress_relevance": "fire_heat_signature"
     },
     {
-      "event_id": 7,
-      "event_name": "San Diego January Flooding",
-      "event_type": "flooding",
-      "start_date": "2024-01-21",
-      "end_date": "2024-01-23",
-      "location_name": "San Diego County",
-      "bounds": [
-        [-117.5000, 33.2000],
-        [-117.5000, 32.5000],
-        [-116.8000, 32.5000],
-        [-116.8000, 33.2000],
-        [-117.5000, 33.2000]
-      ],
-      "center_lat": 32.8500,
-      "center_lng": -117.1500,
-      "description": "Fourth wettest day, stormwater system overwhelmed",
-      "ecostress_relevance": "water_temperature_contrast"
-    },
-    {
       "event_id": 8,
       "event_name": "Line, Bridge, and Airport Fires",
       "event_type": "wildfire",
@@ -151,25 +113,6 @@
       "center_lng": -117.5000,
       "description": "Multiple fires during extreme heat period",
       "ecostress_relevance": "fire_heat_signature"
-    },
-    {
-      "event_id": 9,
-      "event_name": "Early June Heat Wave",
-      "event_type": "heat_wave",
-      "start_date": "2024-06-04",
-      "end_date": "2024-06-07",
-      "location_name": "Central Valley",
-      "bounds": [
-        [-122.0000, 38.5000],
-        [-122.0000, 37.0000],
-        [-120.5000, 37.0000],
-        [-120.5000, 38.5000],
-        [-122.0000, 38.5000]
-      ],
-      "center_lat": 37.7500,
-      "center_lng": -121.2500,
-      "description": "First major heat wave, 105°F in Central Valley",
-      "ecostress_relevance": "agricultural_heat_stress"
     },
     {
       "event_id": 10,
