@@ -9,25 +9,33 @@
 </head>
 <body>
     <div id="loading" class="loading">
-        <h3>🔥 Loading thermal data...</h3>
-        <p>Please wait while we process the temperature maps</p>
+        <h3>🔥 Loading event data...</h3>
+        <p>Please wait while we build the event dashboard</p>
     </div>
 
     <div id="map"></div>
     
     <div class="controls" style="display: none;" id="controls">
-        <h3>🌡️ Thermal Data Viewer</h3>
-        <div>
-            <strong>Date: <span id="current-date">Loading...</span></strong>
+        <h3>🌡️ CA Environmental Event Viewer</h3>
+        
+        <div style="margin-bottom: 15px; text-align: left;">
+            <strong>Select an Event:</strong><br>
+            <select id="event-chooser" style="width: 100%; padding: 5px; margin-top: 5px;"></select>
         </div>
-        <input type="range" id="time-slider" class="time-slider" min="0" max="0" value="0">
-        <div class="date-labels">
-            <span id="start-date">Start</span>
-            <span id="end-date">End</span>
-        </div>
-        <button id="play-pause-btn" class="play-btn">▶️ Play</button>
-        <div class="stats">
-            <span id="temp-stats">Min: --°F | Max: --°F | Mean: --°F</span>
+        
+        <div id="map-controls" style="display: none;">
+            <div>
+                <strong>Date: <span id="current-date">Loading...</span></strong>
+            </div>
+            <input type="range" id="time-slider" class="time-slider" min="0" max="0" value="0">
+            <div class="date-labels">
+                <span id="start-date">Start</span>
+                <span id="end-date">End</span>
+            </div>
+            <button id="play-pause-btn" class="play-btn">▶️ Play</button>
+            <div class="stats">
+                <span id="temp-stats">Min: --°F | Max: --°F | Mean: --°F</span>
+            </div>
         </div>
     </div>
 
