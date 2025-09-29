@@ -1,0 +1,884 @@
+[
+    {
+        "date": "1946-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 152
+    },
+    {
+        "date": "1946-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 5
+    },
+    {
+        "date": "1947-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 179
+    },
+    {
+        "date": "1947-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1948-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 150
+    },
+    {
+        "date": "1948-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1949-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 148
+    },
+    {
+        "date": "1949-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1950-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 149
+    },
+    {
+        "date": "1950-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1951-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 123
+    },
+    {
+        "date": "1951-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1952-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 133
+    },
+    {
+        "date": "1952-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1953-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 133
+    },
+    {
+        "date": "1953-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1954-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 132
+    },
+    {
+        "date": "1954-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1955-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 104
+    },
+    {
+        "date": "1955-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 2
+    },
+    {
+        "date": "1956-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 101
+    },
+    {
+        "date": "1956-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 2
+    },
+    {
+        "date": "1957-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 142
+    },
+    {
+        "date": "1957-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1958-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 156
+    },
+    {
+        "date": "1958-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 5
+    },
+    {
+        "date": "1959-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 165
+    },
+    {
+        "date": "1959-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 2
+    },
+    {
+        "date": "1960-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 109
+    },
+    {
+        "date": "1960-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1961-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 120
+    },
+    {
+        "date": "1961-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1962-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 110
+    },
+    {
+        "date": "1962-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 2
+    },
+    {
+        "date": "1963-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 114
+    },
+    {
+        "date": "1963-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 1
+    },
+    {
+        "date": "1964-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 101
+    },
+    {
+        "date": "1964-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1965-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 105
+    },
+    {
+        "date": "1965-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 0
+    },
+    {
+        "date": "1966-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 150
+    },
+    {
+        "date": "1966-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1967-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 136
+    },
+    {
+        "date": "1967-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1968-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 146
+    },
+    {
+        "date": "1968-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1969-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 195
+    },
+    {
+        "date": "1969-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 1
+    },
+    {
+        "date": "1970-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 119
+    },
+    {
+        "date": "1970-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 5
+    },
+    {
+        "date": "1971-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 126
+    },
+    {
+        "date": "1971-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1972-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 152
+    },
+    {
+        "date": "1972-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 3
+    },
+    {
+        "date": "1973-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 164
+    },
+    {
+        "date": "1973-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 9
+    },
+    {
+        "date": "1974-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 155
+    },
+    {
+        "date": "1974-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 1
+    },
+    {
+        "date": "1975-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 101
+    },
+    {
+        "date": "1975-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 2
+    },
+    {
+        "date": "1976-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 189
+    },
+    {
+        "date": "1976-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 15
+    },
+    {
+        "date": "1977-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 186
+    },
+    {
+        "date": "1977-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 6
+    },
+    {
+        "date": "1978-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 189
+    },
+    {
+        "date": "1978-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 12
+    },
+    {
+        "date": "1979-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 184
+    },
+    {
+        "date": "1979-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 7
+    },
+    {
+        "date": "1980-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 167
+    },
+    {
+        "date": "1980-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1981-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 174
+    },
+    {
+        "date": "1981-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 13
+    },
+    {
+        "date": "1982-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 158
+    },
+    {
+        "date": "1982-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 4
+    },
+    {
+        "date": "1983-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 174
+    },
+    {
+        "date": "1983-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1984-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 175
+    },
+    {
+        "date": "1984-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 13
+    },
+    {
+        "date": "1985-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 178
+    },
+    {
+        "date": "1985-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 7
+    },
+    {
+        "date": "1986-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 203
+    },
+    {
+        "date": "1986-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 1
+    },
+    {
+        "date": "1987-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 188
+    },
+    {
+        "date": "1987-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1988-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 189
+    },
+    {
+        "date": "1988-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 5
+    },
+    {
+        "date": "1989-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 187
+    },
+    {
+        "date": "1989-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1990-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 202
+    },
+    {
+        "date": "1990-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 5
+    },
+    {
+        "date": "1991-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 174
+    },
+    {
+        "date": "1991-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 8
+    },
+    {
+        "date": "1992-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 223
+    },
+    {
+        "date": "1992-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 9
+    },
+    {
+        "date": "1993-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 211
+    },
+    {
+        "date": "1993-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "X",
+        "value": 14
+    },
+    {
+        "date": "1999-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 145
+    },
+    {
+        "date": "1999-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 8
+    },
+    {
+        "date": "2000-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 166
+    },
+    {
+        "date": "2000-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 8
+    },
+    {
+        "date": "2001-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 179
+    },
+    {
+        "date": "2001-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 10
+    },
+    {
+        "date": "2002-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 168
+    },
+    {
+        "date": "2002-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 12
+    },
+    {
+        "date": "2003-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 172
+    },
+    {
+        "date": "2003-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 16
+    },
+    {
+        "date": "2004-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 182
+    },
+    {
+        "date": "2004-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 13
+    },
+    {
+        "date": "2005-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "B",
+        "value": 176
+    },
+    {
+        "date": "2005-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "B",
+        "value": 3
+    },
+    {
+        "date": "2006-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 168
+    },
+    {
+        "date": "2006-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 10
+    },
+    {
+        "date": "2007-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 178
+    },
+    {
+        "date": "2007-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 3
+    },
+    {
+        "date": "2011-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 166
+    },
+    {
+        "date": "2011-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 5
+    },
+    {
+        "date": "2012-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 178
+    },
+    {
+        "date": "2012-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 3
+    },
+    {
+        "date": "2013-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 191
+    },
+    {
+        "date": "2013-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 4
+    },
+    {
+        "date": "2014-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 225
+    },
+    {
+        "date": "2014-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 7
+    },
+    {
+        "date": "2016-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 213
+    },
+    {
+        "date": "2016-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 8
+    },
+    {
+        "date": "2017-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 193
+    },
+    {
+        "date": "2017-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USW00023244",
+        "attributes": "W",
+        "value": 13
+    }
+]

@@ -1,0 +1,198 @@
+[
+    {
+        "date": "2000-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 191
+    },
+    {
+        "date": "2000-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 38
+    },
+    {
+        "date": "2009-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 199
+    },
+    {
+        "date": "2009-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 41
+    },
+    {
+        "date": "2011-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 156
+    },
+    {
+        "date": "2011-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 21
+    },
+    {
+        "date": "2012-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 185
+    },
+    {
+        "date": "2012-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 24
+    },
+    {
+        "date": "2013-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 196
+    },
+    {
+        "date": "2013-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 18
+    },
+    {
+        "date": "2014-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 214
+    },
+    {
+        "date": "2014-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 29
+    },
+    {
+        "date": "2015-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 212
+    },
+    {
+        "date": "2015-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 25
+    },
+    {
+        "date": "2016-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 187
+    },
+    {
+        "date": "2016-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 28
+    },
+    {
+        "date": "2017-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 185
+    },
+    {
+        "date": "2017-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 30
+    },
+    {
+        "date": "2018-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 196
+    },
+    {
+        "date": "2018-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 30
+    },
+    {
+        "date": "2019-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 184
+    },
+    {
+        "date": "2019-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 24
+    },
+    {
+        "date": "2020-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 190
+    },
+    {
+        "date": "2020-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 37
+    },
+    {
+        "date": "2023-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 172
+    },
+    {
+        "date": "2023-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 26
+    },
+    {
+        "date": "2024-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 185
+    },
+    {
+        "date": "2024-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CLGA",
+        "attributes": "U",
+        "value": 43
+    }
+]
