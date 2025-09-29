@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">&larr; Back to All Stations</a>
+        <h1>Data for <span id="station-name">Loading...</span></h1>
+        <div class="trend-summary">
+            <p><strong>DX70 Trend:</strong> <span id="dx70-trend-summary">Calculating...</span></p>
+            <p><strong>DX90 Trend:</strong> <span id="dx90-trend-summary">Calculating...</span></p>
+        </div>
+    </header>
+    
+    <!-- The wrapper now has the map first, then the chart -->
+    <main class="details-content-wrapper">
+        <!-- The individual station map is now on the left -->
+        <div class="station-map-container">
+            <h2>Station Location</h2>
+            <img id="station-map-image" src="" alt="Map showing the station location">
+        </div>
+
+        <!-- The chart is now on the right -->
+        <div class="chart-container">
+            <canvas id="weather-chart"></canvas>
+        </div>
+    </main>
+
+    <div id="custom-tooltip" class="chart-tooltip"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="station_chart.js"></script>
+</body>
+</html>

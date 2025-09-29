@@ -1,0 +1,254 @@
+[
+    {
+        "date": "2004-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 164
+    },
+    {
+        "date": "2004-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 8
+    },
+    {
+        "date": "2005-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 150
+    },
+    {
+        "date": "2005-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 24
+    },
+    {
+        "date": "2006-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 155
+    },
+    {
+        "date": "2006-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 24
+    },
+    {
+        "date": "2007-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 159
+    },
+    {
+        "date": "2007-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 11
+    },
+    {
+        "date": "2008-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 164
+    },
+    {
+        "date": "2008-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 21
+    },
+    {
+        "date": "2009-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 153
+    },
+    {
+        "date": "2009-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 30
+    },
+    {
+        "date": "2013-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 160
+    },
+    {
+        "date": "2013-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 12
+    },
+    {
+        "date": "2014-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 183
+    },
+    {
+        "date": "2014-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 19
+    },
+    {
+        "date": "2015-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 174
+    },
+    {
+        "date": "2015-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 16
+    },
+    {
+        "date": "2016-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 162
+    },
+    {
+        "date": "2016-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 23
+    },
+    {
+        "date": "2017-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 162
+    },
+    {
+        "date": "2017-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 26
+    },
+    {
+        "date": "2018-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 168
+    },
+    {
+        "date": "2018-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 11
+    },
+    {
+        "date": "2019-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 159
+    },
+    {
+        "date": "2019-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 16
+    },
+    {
+        "date": "2020-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 173
+    },
+    {
+        "date": "2020-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 25
+    },
+    {
+        "date": "2021-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 163
+    },
+    {
+        "date": "2021-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 22
+    },
+    {
+        "date": "2022-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 165
+    },
+    {
+        "date": "2022-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 18
+    },
+    {
+        "date": "2023-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 149
+    },
+    {
+        "date": "2023-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 17
+    },
+    {
+        "date": "2024-01-01T00:00:00",
+        "datatype": "DX70",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 165
+    },
+    {
+        "date": "2024-01-01T00:00:00",
+        "datatype": "DX90",
+        "station": "GHCND:USR0000CPOV",
+        "attributes": "U",
+        "value": 43
+    }
+]

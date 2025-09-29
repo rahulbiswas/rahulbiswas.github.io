@@ -1,0 +1,128 @@
+[
+    {
+        "id": "GHCND:USC00043417",
+        "name": "GILROY, CA US",
+        "start_year": "1958",
+        "end_year": "2021",
+        "num_years": 34,
+        "data_file": "GHCND_USC00043417.json",
+        "map_file": "map_GHCND_USC00043417.png"
+    },
+    {
+        "id": "GHCND:USR0000CALT",
+        "name": "LOS ALTOS CALIFORNIA, CA US",
+        "start_year": "2000",
+        "end_year": "2024",
+        "num_years": 16,
+        "data_file": "GHCND_USR0000CALT.json",
+        "map_file": "map_GHCND_USR0000CALT.png"
+    },
+    {
+        "id": "GHCND:USR0000CLGA",
+        "name": "LOS GATOS CALIFORNIA, CA US",
+        "start_year": "2000",
+        "end_year": "2024",
+        "num_years": 14,
+        "data_file": "GHCND_USR0000CLGA.json",
+        "map_file": "map_GHCND_USR0000CLGA.png"
+    },
+    {
+        "id": "GHCND:USC00045123",
+        "name": "LOS GATOS, CA US",
+        "start_year": "1893",
+        "end_year": "2010",
+        "num_years": 105,
+        "data_file": "GHCND_USC00045123.json",
+        "map_file": "map_GHCND_USC00045123.png"
+    },
+    {
+        "id": "GHCND:USW00023244",
+        "name": "MOFFETT FEDERAL AIRFIELD, CA US",
+        "start_year": "1946",
+        "end_year": "2017",
+        "num_years": 63,
+        "data_file": "GHCND_USW00023244.json",
+        "map_file": "map_GHCND_USW00023244.png"
+    },
+    {
+        "id": "GHCND:USC00045933",
+        "name": "MOUNT HAMILTON, CA US",
+        "start_year": "1952",
+        "end_year": "2024",
+        "num_years": 58,
+        "data_file": "GHCND_USC00045933.json",
+        "map_file": "map_GHCND_USC00045933.png"
+    },
+    {
+        "id": "GHCND:USC00046646",
+        "name": "PALO ALTO, CA US",
+        "start_year": "1954",
+        "end_year": "2012",
+        "num_years": 31,
+        "data_file": "GHCND_USC00046646.json",
+        "map_file": "map_GHCND_USC00046646.png"
+    },
+    {
+        "id": "GHCND:USC00046642",
+        "name": "PALO ALTO, CA US",
+        "start_year": "1923",
+        "end_year": "1952",
+        "num_years": 26,
+        "data_file": "GHCND_USC00046642.json",
+        "map_file": "map_GHCND_USC00046642.png"
+    },
+    {
+        "id": "GHCND:USR0000CPOV",
+        "name": "POVERTY CALIFORNIA, CA US",
+        "start_year": "2004",
+        "end_year": "2024",
+        "num_years": 18,
+        "data_file": "GHCND_USR0000CPOV.json",
+        "map_file": "map_GHCND_USR0000CPOV.png"
+    },
+    {
+        "id": "GHCND:USC00047821",
+        "name": "SAN JOSE, CA US",
+        "start_year": "1893",
+        "end_year": "2006",
+        "num_years": 93,
+        "data_file": "GHCND_USC00047821.json",
+        "map_file": "map_GHCND_USC00047821.png"
+    },
+    {
+        "id": "GHCND:USW00023293",
+        "name": "SAN JOSE, CA US",
+        "start_year": "1999",
+        "end_year": "2024",
+        "num_years": 24,
+        "data_file": "GHCND_USW00023293.json",
+        "map_file": "map_GHCND_USW00023293.png"
+    },
+    {
+        "id": "GHCND:USC00047912",
+        "name": "SANTA CLARA UNIVERSI, CA US",
+        "start_year": "1904",
+        "end_year": "1975",
+        "num_years": 60,
+        "data_file": "GHCND_USC00047912.json",
+        "map_file": "map_GHCND_USC00047912.png"
+    },
+    {
+        "id": "GHCND:USC00048273",
+        "name": "SKYLINE RIDGE PRESERVE, CA US",
+        "start_year": "2010",
+        "end_year": "2023",
+        "num_years": 9,
+        "data_file": "GHCND_USC00048273.json",
+        "map_file": "map_GHCND_USC00048273.png"
+    },
+    {
+        "id": "GHCND:USC00049814",
+        "name": "WRIGHTS, CA US",
+        "start_year": "1925",
+        "end_year": "1933",
+        "num_years": 7,
+        "data_file": "GHCND_USC00049814.json",
+        "map_file": "map_GHCND_USC00049814.png"
+    }
+]
