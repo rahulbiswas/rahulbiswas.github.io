@@ -17,69 +17,16 @@ function initMap() {
     }).addTo(map);
 }
 
-// Convert temperature array to color values
-function temperatureToColor(temp, minTemp, maxTemp) {
-    if (temp === null) return [0, 0, 0, 0]; // Transparent for null
-    
-    const clampedTemp = Math.max(minTemp, Math.min(temp, maxTemp));
-    const normalized = (clampedTemp - minTemp) / (maxTemp - minTemp);
-    const colors = [
-        [0, 0, 128],      // Dark blue
-        [0, 128, 255],    // Light blue  
-        [0, 255, 255],    // Cyan
-        [128, 255, 0],    // Light green
-        [255, 255, 0],    // Yellow
-        [255, 128, 0],    // Orange
-        [255, 0, 0]       // Red
-    ];
-    
-    const segmentSize = 1 / (colors.length - 1);
-    const segmentIndex = Math.floor(normalized / segmentSize);
-    const segmentProgress = (normalized - segmentIndex * segmentSize) / segmentSize;
-    
-    const startColor = colors[Math.min(segmentIndex, colors.length - 1)];
-    const endColor = colors[Math.min(segmentIndex + 1, colors.length - 1)];
-    
-    return [
-        Math.round(startColor[0] + (endColor[0] - startColor[0]) * segmentProgress),
-        Math.round(startColor[1] + (endColor[1] - startColor[1]) * segmentProgress),
-        Math.round(startColor[2] + (endColor[2] - startColor[2]) * segmentProgress),
-        255
-    ];
-}
-
 // Create image overlay from a daily data shard
-function createThermalOverlay(shardData, manifest) {
-    const canvas = document.createElement('canvas');
-    canvas.width = shardData.shape[1];
-    canvas.height = shardData.shape[0];
-    const ctx = canvas.getContext('2d');
-    const imageData = ctx.createImageData(canvas.width, canvas.height);
-    
-    const minTemp = manifest.display_temp_range.min;
-    const maxTemp = manifest.display_temp_range.max;
-    
-    let pixelIndex = 0;
-    for (let row = 0; row < shardData.shape[0]; row++) {
-        for (let col = 0; col < shardData.shape[1]; col++) {
-            const temp = shardData.temperatures[row][col];
-            const color = temperatureToColor(temp, minTemp, maxTemp);
-            imageData.data[pixelIndex + 0] = color[0]; // R
-            imageData.data[pixelIndex + 1] = color[1]; // G
-            imageData.data[pixelIndex + 2] = color[2]; // B
-            imageData.data[pixelIndex + 3] = color[3]; // A
-            pixelIndex += 4;
-        }
-    }
-    
-    ctx.putImageData(imageData, 0, 0);
+function createThermalOverlay(shardData) {
+    const imageUrl = GCS_BASE_URL + shardData.image_file;
     
     const bounds = L.latLngBounds(
         [shardData.bounds.south, shardData.bounds.west],
         [shardData.bounds.north, shardData.bounds.east]
     );
     
-    return L.imageOverlay(canvas.toDataURL(), bounds, { opacity: 0.7 });
+    return L.imageOverlay(imageUrl, bounds, { opacity: 0.7 });
 }
 
 // Fetches a daily shard (from cache if possible) and updates the map
@@ -87,28 +34,29 @@ async function updateDisplay(index) {
     if (!currentManifest) return;
     
     const dateEntry = currentManifest.dates[index];
-    const dateStr = dateEntry.date;
     document.getElementById('loading').style.display = 'block';
 
     try {
         let shardData;
-        if (shardCache[dateStr]) {
-            shardData = shardCache[dateStr]; // Use cached data
+        const shardFilename = dateEntry.shard_file;
+        
+        if (shardCache[shardFilename]) {
+            shardData = shardCache[shardFilename]; // Use cached data
         } else {
-            const shardFilename = dateEntry.shard_file;
             const response = await fetch(`${GCS_BASE_URL}${shardFilename}`);
             if (!response.ok) throw new Error(`Failed to fetch ${shardFilename}`);
             shardData = await response.json();
-            shardCache[dateStr] = shardData; // Save to cache
+            shardCache[shardFilename] = shardData; // Save to cache
         }
 
         if (currentOverlay) {
             map.removeLayer(currentOverlay);
         }
         
-        currentOverlay = createThermalOverlay(shardData, currentManifest);
+        currentOverlay = createThermalOverlay(shardData);
         currentOverlay.addTo(map);
         
+        const dateStr = shardData.date;
         let displayTime = '';
         if (shardData.time_utc) {
             const timeString = shardData.time_utc.replace(' UTC', '');
@@ -144,7 +92,7 @@ function togglePlay() {
         playInterval = setInterval(() => {
             let nextIndex = (currentIndex + 1) % currentManifest.dates.length;
             updateDisplay(nextIndex);
-        }, 1200); // Slower interval to allow for fetching
+        }, 200); // Much faster interval now that images are pre-rendered
     }
 }
 
@@ -156,12 +104,8 @@ function initControls(manifest) {
     document.getElementById('end-date').textContent = manifest.dates[manifest.dates.length - 1].date;
 }
 
-function generateManifestFilename(event) {
-    const eventNameSlug = event.event_name.toLowerCase().replace(/ /g, '_').replace(/,/g, '');
-    return `${String(event.event_id).padStart(2, '0')}_${eventNameSlug}_manifest.json`;
-}
-
 async function loadEventManifest(event) {
+    const event_dir_name = event.event_name.toLowerCase().replace(/ /g, '_').replace(/,/g, '');
     shardCache = {}; // Clear cache for the new event
     document.getElementById('loading').style.display = 'block';
     document.getElementById('loading').innerHTML = `<h3>🔥 Loading manifest for ${event.event_name}...</h3>`;
@@ -169,7 +113,7 @@ async function loadEventManifest(event) {
     document.getElementById('colorbar').style.display = 'none';
 
     try {
-        const manifestFilename = generateManifestFilename(event);
+        const manifestFilename = `${event_dir_name}_manifest.json`;
         const response = await fetch(`${GCS_BASE_URL}${manifestFilename}`);
         if (!response.ok) throw new Error(`Failed to fetch ${manifestFilename}`);
         currentManifest = await response.json();
@@ -233,6 +177,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initDashboard();
     document.getElementById('play-pause-btn').addEventListener('click', togglePlay);
     document.getElementById('time-slider').addEventListener('input', function() {
+        if(isPlaying) {
+            togglePlay(); // Pause if user starts scrubbing
+        }
         updateDisplay(parseInt(this.value));
     });
 });
