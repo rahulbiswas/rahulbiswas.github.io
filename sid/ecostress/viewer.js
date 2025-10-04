@@ -34,7 +34,6 @@ async function updateDisplay(index) {
     if (!currentManifest) return;
     
     const dateEntry = currentManifest.dates[index];
-    document.getElementById('loading').style.display = 'block';
 
     try {
         let shardData;
@@ -73,8 +72,6 @@ async function updateDisplay(index) {
 
     } catch (error) {
         console.error("Error fetching or displaying shard:", error);
-    } finally {
-        document.getElementById('loading').style.display = 'none';
     }
 }
 
