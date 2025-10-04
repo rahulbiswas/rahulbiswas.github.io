@@ -105,7 +105,6 @@ function initControls(manifest) {
 }
 
 async function loadEventManifest(event) {
-    const event_dir_name = event.event_name.toLowerCase().replace(/ /g, '_').replace(/,/g, '');
     shardCache = {}; // Clear cache for the new event
     document.getElementById('loading').style.display = 'block';
     document.getElementById('loading').innerHTML = `<h3>🔥 Loading manifest for ${event.event_name}...</h3>`;
@@ -113,7 +112,9 @@ async function loadEventManifest(event) {
     document.getElementById('colorbar').style.display = 'none';
 
     try {
-        const manifestFilename = `${event_dir_name}_manifest.json`;
+        const eventNameSlug = event.event_name.toLowerCase().replace(/ /g, '_').replace(/,/g, '');
+        const manifestFilename = `${String(event.event_id).padStart(2, '0')}_${eventNameSlug}_manifest.json`;
+        
         const response = await fetch(`${GCS_BASE_URL}${manifestFilename}`);
         if (!response.ok) throw new Error(`Failed to fetch ${manifestFilename}`);
         currentManifest = await response.json();
