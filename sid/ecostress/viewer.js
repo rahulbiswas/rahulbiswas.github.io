@@ -92,7 +92,7 @@ function togglePlay() {
         playInterval = setInterval(() => {
             let nextIndex = (currentIndex + 1) % currentManifest.dates.length;
             updateDisplay(nextIndex);
-        }, 200); // Much faster interval now that images are pre-rendered
+        }, 1000); // 1 second per frame for clear viewing
     }
 }
 
@@ -106,8 +106,6 @@ function initControls(manifest) {
 
 async function loadEventManifest(event) {
     shardCache = {}; // Clear cache for the new event
-    document.getElementById('loading').style.display = 'block';
-    document.getElementById('loading').innerHTML = `<h3>🔥 Loading manifest for ${event.event_name}...</h3>`;
     document.getElementById('map-controls').style.display = 'none';
     document.getElementById('colorbar').style.display = 'none';
 
