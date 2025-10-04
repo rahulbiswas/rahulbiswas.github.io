@@ -134,7 +134,6 @@ async function loadEventManifest(event) {
 
     } catch (error) {
         console.error('Error loading event manifest:', error);
-        document.getElementById('loading').innerHTML = `<h3>❌ Error loading manifest for ${event.event_name}</h3><p>Make sure the manifest file exists and is public on GCS.</p>`;
     }
 }
 
@@ -167,7 +166,6 @@ async function initDashboard() {
 
     } catch (error) {
         console.error('Error initializing dashboard:', error);
-        document.getElementById('loading').innerHTML = '<h3>❌ Error loading event list</h3><p>Make sure events.json exists and is valid.</p>';
     }
 }
 
