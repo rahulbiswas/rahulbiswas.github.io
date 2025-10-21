@@ -55,16 +55,21 @@
     <div id="container">
         <h1>Character Counter</h1>
         <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
-        <p id="counter">Character Count: <span id="count-value">0</span></p>
+        <p id="counter">Characters: <span id="char-count">0</span> | Words: <span id="word-count">0</span></p>
     </div>
 
     <script>
         const textInput = document.getElementById('text-input');
-        const countValue = document.getElementById('count-value');
+        const charCount = document.getElementById('char-count');
+        const wordCount = document.getElementById('word-count');
 
         textInput.addEventListener('input', () => {
-            const count = textInput.value.length;
-            countValue.textContent = count;
+            const text = textInput.value;
+            const chars = text.length;
+            const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+            
+            charCount.textContent = chars;
+            wordCount.textContent = words;
         });
     </script>
 </body>
