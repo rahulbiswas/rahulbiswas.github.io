@@ -11,10 +11,6 @@ class GameManager {
     }
   }
 
-  handleBackClick() {
-    window.dispatchEvent(new CustomEvent('back-to-menu'))
-  }
-
   handlePieceSelection(pos) {
     this.debugLog('Piece selection:', pos)
     if (!window.gameState.isPlayerTurn || window.gameState.winner) {

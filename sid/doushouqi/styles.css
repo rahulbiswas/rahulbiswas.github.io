@@ -54,33 +54,6 @@ body, html {
     animation: pulse 1.5s ease-in-out infinite;
 }
 
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 8px 16px;
-    font-family: 'Impact', Arial Black, sans-serif;
-    font-size: 16px;
-    color: #F5E6D3;
-    background: linear-gradient(to bottom, #8B4513, #654321);
-    border: 1px solid #2F4F4F;
-    border-radius: 4px;
-    cursor: pointer;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.back-button:hover {
-    background: linear-gradient(to bottom, #9B5523, #755331);
-    transform: translateY(-1px);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
-
-.back-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
 .debug-info {
     position: absolute;
     left: 10px;
