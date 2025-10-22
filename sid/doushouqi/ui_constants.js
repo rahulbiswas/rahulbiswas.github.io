@@ -22,15 +22,5 @@ const TRAP_SQUARES = {
   ]
 }
 
-const ruleScreens = [
-  'agilityrules',
-  'eatinganimals',
-  'howtowin',
-  'jumpingoverwater',
-  'ratsarespecial',
-  'traps'
-]
-
-window.ruleScreens = ruleScreens
 window.DENS = DENS
 window.TRAP_SQUARES = TRAP_SQUARES
