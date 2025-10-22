@@ -1,9 +1,0 @@
-- Fiscal policy influences AD similarly to monetary policy
-- Spending multiplier = 1 / (1 - MPC)
-- Balanced budget multiplier = 1
-- Automatic stabilizers = income tax, TANF
-
-Treasury Debt
-- < 1 year, bill
-- 1 - 5 years, note
-- 6 - 30 years, bond
