@@ -1,5 +1,5 @@
 const JungleGame = () => {
-  const [currentWindow, setCurrentWindow] = React.useState('home')
+  const [currentWindow, setCurrentWindow] = React.useState('game')
   const [pieces, setPieces] = React.useState(initialPieces)
   const [selectedPieceKey, setSelectedPieceKey] = React.useState(null)
   const [lastMove, setLastMove] = React.useState(null)
@@ -33,15 +33,6 @@ const JungleGame = () => {
   }, [pieces, winner, isPlayerTurn])
 
   React.useEffect(() => {
-    const handleBackToMenu = () => {
-      setCurrentWindow('home')
-      resetGame()
-    }
-    
-    const handleStartGame = () => {
-      setCurrentWindow('game')
-    }
-    
     const handleSelectPiece = (event) => {
       const position = event.detail.position
       setSelectedPieceKey(position)
@@ -79,8 +70,6 @@ const JungleGame = () => {
       setValidMoves(new Set())
     }
 
-    window.addEventListener('back-to-menu', handleBackToMenu)
-    window.addEventListener('start-game', handleStartGame)
     window.addEventListener('select-piece', handleSelectPiece)
     window.addEventListener('deselect-piece', handleDeselectPiece)
     window.addEventListener('make-move', handleMakeMove)
@@ -93,8 +82,6 @@ const JungleGame = () => {
     }
 
     return () => {
-      window.removeEventListener('back-to-menu', handleBackToMenu)
-      window.removeEventListener('start-game', handleStartGame)
       window.removeEventListener('select-piece', handleSelectPiece)
       window.removeEventListener('deselect-piece', handleDeselectPiece)
       window.removeEventListener('make-move', handleMakeMove)
@@ -113,21 +100,18 @@ const JungleGame = () => {
   return React.createElement('div', {
     className: 'game-container'
   },
-    currentWindow === 'home' && React.createElement(HomeMenu),
-    currentWindow === 'game' && (
-      winner !== null
-        ? React.createElement(VictoryScreen, {
-          winner: winner,
-          onPlayAgain: resetGame
-        })
-        : React.createElement(GameBoardContainer, {
-          pieces: pieces,
-          lastMove: lastMove,
-          selectedPieceKey: selectedPieceKey,
-          isPlayerTurn: isPlayerTurn,
-          validMoves: validMoves
-        })
-    )
+    winner !== null
+      ? React.createElement(VictoryScreen, {
+        winner: winner,
+        onPlayAgain: resetGame
+      })
+      : React.createElement(GameBoardContainer, {
+        pieces: pieces,
+        lastMove: lastMove,
+        selectedPieceKey: selectedPieceKey,
+        isPlayerTurn: isPlayerTurn,
+        validMoves: validMoves
+      })
   )
 }
 

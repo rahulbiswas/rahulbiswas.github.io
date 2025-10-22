@@ -88,11 +88,6 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
       boardDimensions,
       isPlayerTurn
     }),
-    React.createElement('button', {
-      id: 'back-button',
-      onClick: () => window.gameManager.handleBackClick(),
-      className: 'back-button'
-    }, 'BACK'),
     debugEnabled ? React.createElement('div', {
       className: 'debug-info',
       id: 'ai-depth-info'
