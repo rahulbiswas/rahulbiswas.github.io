@@ -1,0 +1,280 @@
+{
+  "event_name": "05_october_drought_expansion",
+  "overall_bounds": {
+    "north": 37.50060142201619,
+    "south": 35.499495054435286,
+    "east": -119.49949233193172,
+    "west": -121.50059005157132
+  },
+  "display_temp_range": {
+    "min": 40,
+    "max": 110
+  },
+  "dates": [
+    {
+      "date": "2024-10-01",
+      "time_utc": "19:15:49 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-01_191549.json"
+    },
+    {
+      "date": "2024-10-01",
+      "time_utc": "19:15:49 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-01_191549.json"
+    },
+    {
+      "date": "2024-10-04",
+      "time_utc": "18:26:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-04_182656.json"
+    },
+    {
+      "date": "2024-10-04",
+      "time_utc": "18:26:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-04_182656.json"
+    },
+    {
+      "date": "2024-10-05",
+      "time_utc": "17:39:18 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-05_173918.json"
+    },
+    {
+      "date": "2024-10-05",
+      "time_utc": "17:39:18 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-05_173918.json"
+    },
+    {
+      "date": "2024-10-07",
+      "time_utc": "00:59:04 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-07_005904.json"
+    },
+    {
+      "date": "2024-10-07",
+      "time_utc": "00:59:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-07_005956.json"
+    },
+    {
+      "date": "2024-10-08",
+      "time_utc": "16:52:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-08_165256.json"
+    },
+    {
+      "date": "2024-10-08",
+      "time_utc": "16:52:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-08_165256.json"
+    },
+    {
+      "date": "2024-10-09",
+      "time_utc": "16:05:06 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-09_160506.json"
+    },
+    {
+      "date": "2024-10-09",
+      "time_utc": "16:05:06 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-09_160506.json"
+    },
+    {
+      "date": "2024-10-10",
+      "time_utc": "23:24:04 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-10_232404.json"
+    },
+    {
+      "date": "2024-10-10",
+      "time_utc": "23:24:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-10_232456.json"
+    },
+    {
+      "date": "2024-10-11",
+      "time_utc": "22:36:05 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-11_223605.json"
+    },
+    {
+      "date": "2024-10-11",
+      "time_utc": "22:36:05 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-11_223605.json"
+    },
+    {
+      "date": "2024-10-11",
+      "time_utc": "22:36:57 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-11_223657.json"
+    },
+    {
+      "date": "2024-10-11",
+      "time_utc": "22:36:57 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-11_223657.json"
+    },
+    {
+      "date": "2024-10-12",
+      "time_utc": "15:17:32 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-12_151732.json"
+    },
+    {
+      "date": "2024-10-12",
+      "time_utc": "15:17:32 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-12_151732.json"
+    },
+    {
+      "date": "2024-10-13",
+      "time_utc": "14:29:13 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-13_142913.json"
+    },
+    {
+      "date": "2024-10-13",
+      "time_utc": "14:29:13 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-13_142913.json"
+    },
+    {
+      "date": "2024-10-14",
+      "time_utc": "21:48:28 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-14_214828.json"
+    },
+    {
+      "date": "2024-10-14",
+      "time_utc": "21:49:20 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-14_214920.json"
+    },
+    {
+      "date": "2024-10-14",
+      "time_utc": "21:49:20 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-14_214920.json"
+    },
+    {
+      "date": "2024-10-16",
+      "time_utc": "13:41:04 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-16_134104.json"
+    },
+    {
+      "date": "2024-10-16",
+      "time_utc": "13:41:04 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-16_134104.json"
+    },
+    {
+      "date": "2024-10-17",
+      "time_utc": "12:52:48 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-17_125248.json"
+    },
+    {
+      "date": "2024-10-17",
+      "time_utc": "12:52:48 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-17_125248.json"
+    },
+    {
+      "date": "2024-10-18",
+      "time_utc": "20:11:29 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-18_201129.json"
+    },
+    {
+      "date": "2024-10-19",
+      "time_utc": "12:52:52 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-19_125252.json"
+    },
+    {
+      "date": "2024-10-19",
+      "time_utc": "19:23:05 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-19_192305.json"
+    },
+    {
+      "date": "2024-10-19",
+      "time_utc": "19:23:05 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-19_192305.json"
+    },
+    {
+      "date": "2024-10-19",
+      "time_utc": "19:23:57 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-19_192357.json"
+    },
+    {
+      "date": "2024-10-19",
+      "time_utc": "19:23:57 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-19_192357.json"
+    },
+    {
+      "date": "2024-10-20",
+      "time_utc": "12:04:16 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-20_120416.json"
+    },
+    {
+      "date": "2024-10-20",
+      "time_utc": "12:04:16 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-20_120416.json"
+    },
+    {
+      "date": "2024-10-22",
+      "time_utc": "18:34:43 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-22_183443.json"
+    },
+    {
+      "date": "2024-10-22",
+      "time_utc": "18:34:43 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-22_183443.json"
+    },
+    {
+      "date": "2024-10-23",
+      "time_utc": "11:15:13 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-23_111513.json"
+    },
+    {
+      "date": "2024-10-23",
+      "time_utc": "17:45:28 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-23_174528.json"
+    },
+    {
+      "date": "2024-10-23",
+      "time_utc": "17:46:20 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-23_174620.json"
+    },
+    {
+      "date": "2024-10-23",
+      "time_utc": "17:46:20 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-23_174620.json"
+    },
+    {
+      "date": "2024-10-27",
+      "time_utc": "09:37:26 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-27_093726.json"
+    },
+    {
+      "date": "2024-10-27",
+      "time_utc": "09:37:26 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-27_093726.json"
+    },
+    {
+      "date": "2024-10-28",
+      "time_utc": "08:48:31 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-28_084831.json"
+    },
+    {
+      "date": "2024-10-28",
+      "time_utc": "08:48:31 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-28_084831.json"
+    },
+    {
+      "date": "2024-10-30",
+      "time_utc": "15:17:04 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-30_151704.json"
+    },
+    {
+      "date": "2024-10-30",
+      "time_utc": "15:17:04 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-30_151704.json"
+    },
+    {
+      "date": "2024-10-30",
+      "time_utc": "15:17:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-30_151756.json"
+    },
+    {
+      "date": "2024-10-30",
+      "time_utc": "15:17:56 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-30_151756.json"
+    },
+    {
+      "date": "2024-10-31",
+      "time_utc": "07:57:34 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-31_075734.json"
+    },
+    {
+      "date": "2024-10-31",
+      "time_utc": "07:57:34 UTC",
+      "shard_file": "05_october_drought_expansion_2024-10-31_075734.json"
+    }
+  ]
+}

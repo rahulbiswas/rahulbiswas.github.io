@@ -1,0 +1,85 @@
+{
+  "event_name": "01_july_2024_record-breaking_heat_wave",
+  "overall_bounds": {
+    "north": 37.50060142201619,
+    "south": 35.99975480436287,
+    "east": -118.9996596217924,
+    "west": -120.00046859030266
+  },
+  "display_temp_range": {
+    "min": 40,
+    "max": 110
+  },
+  "dates": [
+    {
+      "date": "2024-07-03",
+      "time_utc": "14:27:15 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-03_142715.json"
+    },
+    {
+      "date": "2024-07-03",
+      "time_utc": "14:27:15 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-03_142715.json"
+    },
+    {
+      "date": "2024-07-04",
+      "time_utc": "07:08:00 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-04_070800.json"
+    },
+    {
+      "date": "2024-07-04",
+      "time_utc": "07:08:00 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-04_070800.json"
+    },
+    {
+      "date": "2024-07-05",
+      "time_utc": "06:20:01 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-05_062001.json"
+    },
+    {
+      "date": "2024-07-05",
+      "time_utc": "06:20:01 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-05_062001.json"
+    },
+    {
+      "date": "2024-07-05",
+      "time_utc": "06:20:53 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-05_062053.json"
+    },
+    {
+      "date": "2024-07-07",
+      "time_utc": "12:51:55 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-07_125155.json"
+    },
+    {
+      "date": "2024-07-07",
+      "time_utc": "12:51:55 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-07_125155.json"
+    },
+    {
+      "date": "2024-07-08",
+      "time_utc": "05:32:41 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-08_053241.json"
+    },
+    {
+      "date": "2024-07-08",
+      "time_utc": "05:32:41 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-08_053241.json"
+    },
+    {
+      "date": "2024-07-08",
+      "time_utc": "12:03:21 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-08_120321.json"
+    },
+    {
+      "date": "2024-07-13",
+      "time_utc": "03:08:51 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-13_030851.json"
+    },
+    {
+      "date": "2024-07-13",
+      "time_utc": "03:08:51 UTC",
+      "shard_file": "01_july_2024_record-breaking_heat_wave_2024-07-13_030851.json"
+    }
+  ]
+}

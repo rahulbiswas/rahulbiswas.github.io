@@ -1,0 +1,70 @@
+{
+  "event_name": "06_borel_fire",
+  "overall_bounds": {
+    "north": 36.200419326154076,
+    "south": 35.79982566126887,
+    "east": -118.19973453157786,
+    "west": -118.80030960082308
+  },
+  "display_temp_range": {
+    "min": 40,
+    "max": 110
+  },
+  "dates": [
+    {
+      "date": "2024-07-27",
+      "time_utc": "04:48:53 UTC",
+      "shard_file": "06_borel_fire_2024-07-27_044853.json"
+    },
+    {
+      "date": "2024-07-31",
+      "time_utc": "19:50:56 UTC",
+      "shard_file": "06_borel_fire_2024-07-31_195056.json"
+    },
+    {
+      "date": "2024-08-04",
+      "time_utc": "18:15:51 UTC",
+      "shard_file": "06_borel_fire_2024-08-04_181551.json"
+    },
+    {
+      "date": "2024-08-14",
+      "time_utc": "21:35:12 UTC",
+      "shard_file": "06_borel_fire_2024-08-14_213512.json"
+    },
+    {
+      "date": "2024-08-15",
+      "time_utc": "14:15:22 UTC",
+      "shard_file": "06_borel_fire_2024-08-15_141522.json"
+    },
+    {
+      "date": "2024-08-16",
+      "time_utc": "13:26:49 UTC",
+      "shard_file": "06_borel_fire_2024-08-16_132649.json"
+    },
+    {
+      "date": "2024-08-21",
+      "time_utc": "19:07:28 UTC",
+      "shard_file": "06_borel_fire_2024-08-21_190728.json"
+    },
+    {
+      "date": "2024-08-23",
+      "time_utc": "10:59:09 UTC",
+      "shard_file": "06_borel_fire_2024-08-23_105909.json"
+    },
+    {
+      "date": "2024-08-25",
+      "time_utc": "17:30:46 UTC",
+      "shard_file": "06_borel_fire_2024-08-25_173046.json"
+    },
+    {
+      "date": "2024-08-30",
+      "time_utc": "15:07:05 UTC",
+      "shard_file": "06_borel_fire_2024-08-30_150705.json"
+    },
+    {
+      "date": "2024-08-31",
+      "time_utc": "07:48:11 UTC",
+      "shard_file": "06_borel_fire_2024-08-31_074811.json"
+    }
+  ]
+}
