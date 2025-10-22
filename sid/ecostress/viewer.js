@@ -7,7 +7,7 @@ let currentIndex = 0;
 let playInterval;
 let isPlaying = false;
 
-const GCS_BASE_URL = 'https://storage.googleapis.com/ecostress-siddhartha/';
+const GCS_BASE_URL = 'data/';
 
 // Initialize map
 function initMap() {

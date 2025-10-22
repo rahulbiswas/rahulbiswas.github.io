@@ -1,0 +1,50 @@
+{
+  "event_name": "04_september_heat_wave",
+  "overall_bounds": {
+    "north": 34.500601230061875,
+    "south": 33.49942265062748,
+    "east": -116.99949540923659,
+    "west": -119.00037153040036
+  },
+  "display_temp_range": {
+    "min": 40,
+    "max": 110
+  },
+  "dates": [
+    {
+      "date": "2024-09-04",
+      "time_utc": "06:14:21 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-04_061421.json"
+    },
+    {
+      "date": "2024-09-05",
+      "time_utc": "05:26:21 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-05_052621.json"
+    },
+    {
+      "date": "2024-09-06",
+      "time_utc": "12:47:10 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-06_124710.json"
+    },
+    {
+      "date": "2024-09-06",
+      "time_utc": "12:48:02 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-06_124802.json"
+    },
+    {
+      "date": "2024-09-08",
+      "time_utc": "04:41:23 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-08_044123.json"
+    },
+    {
+      "date": "2024-09-09",
+      "time_utc": "03:54:14 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-09_035414.json"
+    },
+    {
+      "date": "2024-09-10",
+      "time_utc": "11:15:49 UTC",
+      "shard_file": "04_september_heat_wave_2024-09-10_111549.json"
+    }
+  ]
+}
