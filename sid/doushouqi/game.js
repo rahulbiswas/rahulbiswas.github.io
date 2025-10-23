@@ -6,6 +6,7 @@ const JungleGame = () => {
   const [winner, setWinner] = React.useState(null)
   const [isPlayerTurn, setIsPlayerTurn] = React.useState(true)
   const [validMoves, setValidMoves] = React.useState(new Set())
+  const [showRulesModal, setShowRulesModal] = React.useState(false)
 
   React.useEffect(() => {
     if (!isPlayerTurn && !winner) {
@@ -110,8 +111,13 @@ const JungleGame = () => {
         lastMove: lastMove,
         selectedPieceKey: selectedPieceKey,
         isPlayerTurn: isPlayerTurn,
-        validMoves: validMoves
-      })
+        validMoves: validMoves,
+        showRulesModal: showRulesModal,
+        setShowRulesModal: setShowRulesModal
+      }),
+    showRulesModal && React.createElement(RulesModal, {
+      onClose: () => setShowRulesModal(false)
+    })
   )
 }
 
