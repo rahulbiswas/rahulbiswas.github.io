@@ -1,4 +1,4 @@
-const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves}) => {
+const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves, showRulesModal, setShowRulesModal}) => {
   const [debugMode, setDebugMode] = React.useState(false)
   const [lastMoveTime, setLastMoveTime] = React.useState(null)
   const [boardDimensions, setBoardDimensions] = React.useState({
@@ -96,7 +96,11 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
       className: 'debug-info',
       id: 'ai-move-time'
     }, `Last AI move: ${lastMoveTime.toFixed(2)}ms`) : null,
-    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null
+    debugEnabled ? React.createElement(DebugButton, {debugMode, setDebugMode}) : null,
+    React.createElement('button', {
+      className: 'rules-button',
+      onClick: () => setShowRulesModal(!showRulesModal)
+    }, 'RULES')
   )
 }
 
