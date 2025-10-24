@@ -5,7 +5,8 @@ const GameBoardRenderer = ({
   validMoves,
   debugMode,
   boardDimensions,
-  isPlayerTurn
+  isPlayerTurn,
+  language
 }) => {
   const handleSquareClick = (x, y) => {
     const pos = `${x}_${y}`
@@ -69,7 +70,7 @@ const GameBoardRenderer = ({
     },
     renderSquares(),
     React.createElement(DebugOverlay, {debugMode}),
-    window.boardRenderer.renderPieces(pieces, handleSquareClick),
+    window.boardRenderer.renderPieces(pieces, handleSquareClick, language),
     window.boardRenderer.renderValidMoveIndicators(validMoves),
     window.boardRenderer.renderMoveIndicators(lastMove, !isPlayerTurn ? PLAYERS.RED : PLAYERS.YELLOW)
   )

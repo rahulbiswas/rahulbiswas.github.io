@@ -1,4 +1,4 @@
-const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves, showRulesModal, setShowRulesModal}) => {
+const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves, showRulesModal, setShowRulesModal, language, setLanguage}) => {
   const [debugMode, setDebugMode] = React.useState(false)
   const [lastMoveTime, setLastMoveTime] = React.useState(null)
   const [boardDimensions, setBoardDimensions] = React.useState({
@@ -86,7 +86,8 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
       validMoves,
       debugMode,
       boardDimensions,
-      isPlayerTurn
+      isPlayerTurn,
+      language
     }),
     debugEnabled ? React.createElement('div', {
       className: 'debug-info',
@@ -100,7 +101,11 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
     React.createElement('button', {
       className: 'rules-button',
       onClick: () => setShowRulesModal(!showRulesModal)
-    }, 'RULES')
+    }, language === 'c' ? '规则' : 'RULES'),
+    React.createElement('button', {
+      className: 'language-button',
+      onClick: () => setLanguage(language === 'en' ? 'c' : 'en')
+    }, language === 'en' ? '中文' : 'EN')
   )
 }
 
