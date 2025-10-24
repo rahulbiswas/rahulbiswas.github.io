@@ -135,8 +135,8 @@ body, html {
 
 .avatar-button {
     position: absolute;
-    top: 90px;
-    left: 20px;
+    top: 20px;
+    left: 140px;
     padding: 8px;
     width: 80px;
     height: 80px;
@@ -146,9 +146,6 @@ body, html {
     cursor: pointer;
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .avatar-button:hover {
