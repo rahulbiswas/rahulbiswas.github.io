@@ -1,10 +1,12 @@
 const CharacterSelector = ({selectedAvatar, onSelectAvatar, onClose, language}) => {
   const avatars = [
     {id: 'meilin', nameEn: 'Meilin', nameCn: '美琳', file: 'images/avatar_0.svg'},
-    {id: 'feizi', nameEn: 'Feizi', nameCn: '非子', file: 'images/avatar_1.svg'},
-    {id: 'hana', nameEn: 'Hana', nameCn: '哈娜', file: 'images/avatar_2.svg'},
     {id: 'gobinda', nameEn: 'Gobinda', nameCn: '戈宾达', file: 'images/avatar_3.svg'},
-    {id: 'amelie', nameEn: 'Amélie', nameCn: '阿梅莉', file: 'images/avatar_4.svg'}
+    {id: 'amelie', nameEn: 'Amélie', nameCn: '阿梅莉', file: 'images/avatar_4.svg'},
+    {id: 'feizi', nameEn: 'Feizi', nameCn: '非子', file: 'images/avatar_1.svg'},
+    {id: 'lucia', nameEn: 'Lucia', nameCn: '露西亚', file: 'images/avatar_6.svg'},
+    {id: 'kofi', nameEn: 'Kofi', nameCn: '科菲', file: 'images/avatar_5.svg'},
+    {id: 'hana', nameEn: 'Hana', nameCn: '哈娜', file: 'images/avatar_2.svg'}
   ]
 
   const currentIndex = avatars.findIndex(a => a.id === selectedAvatar)
