@@ -20,9 +20,10 @@ class PositionEvaluator {
 
     let score = 0
     const isAggressive = personality === 'meilin'
-    const denDistanceWeight = isAggressive ? 0.2 : 0.1
-    const trapBonus = isAggressive ? 1.0 : 0.5
-    const dangerPenalty = isAggressive ? 0.3 : 0.5
+    const isDefensive = personality === 'hana'
+    const denDistanceWeight = isDefensive ? 0.05 : (isAggressive ? 0.2 : 0.1)
+    const trapBonus = isDefensive ? 0.6 : (isAggressive ? 1.0 : 0.5)
+    const dangerPenalty = isDefensive ? 0.7 : (isAggressive ? 0.3 : 0.5)
 
     Object.entries(pieces).forEach(([pos, piece]) => {
       const [x, y] = pos.split('_').map(Number)

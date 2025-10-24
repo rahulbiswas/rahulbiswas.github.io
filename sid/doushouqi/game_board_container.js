@@ -67,7 +67,9 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
   const urlParams = new URLSearchParams(window.location.search)
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
-  const avatarFile = selectedAvatar === 'meilin' ? 'images/avatar_0.svg' : 'images/avatar_1.svg'
+  const avatarFile = selectedAvatar === 'meilin' ? 'images/avatar_0.svg' : 
+                     selectedAvatar === 'hanfeizi' ? 'images/avatar_1.svg' : 
+                     'images/avatar_2.svg'
 
   return React.createElement('div', {
       id: 'game-board',
