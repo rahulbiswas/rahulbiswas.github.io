@@ -133,6 +133,33 @@ body, html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.language-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 16px 32px;
+    font-family: 'Impact', Arial Black, sans-serif;
+    font-size: 24px;
+    color: #F5E6D3;
+    background: linear-gradient(to bottom, #2B557A, #182B47);
+    border: 2px solid #0F1F35;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-button:hover {
+    background: linear-gradient(to bottom, #3B658A, #283B57);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.language-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .rules-modal-overlay {
     position: fixed;
     top: 0;

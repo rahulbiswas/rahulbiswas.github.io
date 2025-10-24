@@ -18,8 +18,9 @@ class BoardRenderer {
     }
   }
 
-  renderPieces(pieces, onPieceClick) {
+  renderPieces(pieces, onPieceClick, language = 'en') {
     const urlParams = new URLSearchParams(window.location.search)
+    const langSuffix = language === 'c' ? 'c' : ''
 
     return Object.entries(pieces).map(([position, piece]) => {
       const [x, y] = position.split('_')
@@ -40,7 +41,7 @@ class BoardRenderer {
           id: `piece-base-${position}`
         }),
         React.createElement('image', {
-          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}.svg`,
+          href: `images/${piece.player === PLAYERS.YELLOW ? 'a' : 'b'}${piece.animal}${langSuffix}.svg`,
           width: 0.75,
           height: 0.75,
           id: `piece-animal-${position}`

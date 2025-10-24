@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Red_Icons" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 97.2 97.2">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #be1e2d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .st1 {
+        fill: #be1e2d;
+      }
+    </style>
+  </defs>
+  <g>
+    <ellipse class="st1" cx="69" cy="57.1" rx="1.1" ry="1.8"/>
+    <path class="st0" d="M51.2,48.3c-3.6-3-8.7-4.9-14.2-4.9-10.9,0-19.8,7.1-19.8,15.9,0,0-.3,12.7,15.9,10.8,16.2-2,31.5.3,35.1,5.6"/>
+    <path class="st0" d="M52.2,49.2c-5.9-6.3,0-15.6,8.2-14.2,9.9,1.7,9.1,14.7,9.1,14.7.4.1,10.9,11.3,12.2,13.4s-1.1,4.7-5.3,4.6-12-.6-14.7-2.5"/>
+  </g>
+  <path class="st0" d="M39.6,30.4c0,0,.1.2.1.2s0,0-.2,0h-13c-.4,0-.8,0-1.1.2l-.4-.6c.5,0,.9,0,1.2,0h11.7l.7-1.1,1.1,1.1Z"/>
+</svg>
