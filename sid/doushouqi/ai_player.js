@@ -7,6 +7,10 @@ class AIPlayer {
     console.log(`AI configured with max search depth: ${this.maxDepth}`)
   }
 
+  setPersonality(personality) {
+    this.engine.setPersonality(personality)
+  }
+
   getAIMove(pieces, player) {
     console.group('AI Move Evaluation')
     console.log('Evaluating moves for player:', player === PLAYERS.RED ? 'RED' : 'YELLOW')

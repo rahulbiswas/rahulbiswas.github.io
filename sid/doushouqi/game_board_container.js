@@ -1,4 +1,4 @@
-const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves, showRulesModal, setShowRulesModal, language, setLanguage}) => {
+const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, validMoves, showRulesModal, setShowRulesModal, language, setLanguage, selectedAvatar, showAvatarModal, setShowAvatarModal}) => {
   const [debugMode, setDebugMode] = React.useState(false)
   const [lastMoveTime, setLastMoveTime] = React.useState(null)
   const [boardDimensions, setBoardDimensions] = React.useState({
@@ -67,6 +67,8 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
   const urlParams = new URLSearchParams(window.location.search)
   debugEnabled = parseInt(urlParams.get('debug')) || 0
 
+  const avatarFile = selectedAvatar === 'meilin' ? 'images/avatar_0.svg' : 'images/avatar_1.svg'
+
   return React.createElement('div', {
       id: 'game-board',
       ref: containerRef,
@@ -102,6 +104,15 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
       className: 'rules-button',
       onClick: () => setShowRulesModal(!showRulesModal)
     }, language === 'c' ? '规则' : 'RULES'),
+    React.createElement('button', {
+      className: 'avatar-button',
+      onClick: () => setShowAvatarModal(!showAvatarModal)
+    },
+      React.createElement('img', {
+        src: avatarFile,
+        alt: 'AI Opponent'
+      })
+    ),
     React.createElement('button', {
       className: 'language-button',
       onClick: () => setLanguage(language === 'en' ? 'c' : 'en')

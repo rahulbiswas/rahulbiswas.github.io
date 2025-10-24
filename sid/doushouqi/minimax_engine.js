@@ -2,14 +2,20 @@ class MinimaxEngine {
   constructor(evaluator) {
     this.evaluator = evaluator
     this.cache = new Map()
+    this.personality = 'hanfeizi'
+  }
+
+  setPersonality(personality) {
+    this.personality = personality
+    this.cache.clear()
   }
 
   minimax(pieces, depth, isMaximizingPlayer, player, alpha = -Infinity, beta = Infinity) {
     if (depth === 0 || this.isGameOver(pieces)) {
-      return [null, this.evaluator.evaluatePosition(pieces, player)]
+      return [null, this.evaluator.evaluatePosition(pieces, player, this.personality)]
     }
 
-    const cacheKey = JSON.stringify([pieces, depth, isMaximizingPlayer])
+    const cacheKey = JSON.stringify([pieces, depth, isMaximizingPlayer, this.personality])
     if (this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey)
     }
