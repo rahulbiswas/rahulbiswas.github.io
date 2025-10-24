@@ -23,9 +23,11 @@ class PositionEvaluator {
     const isDefensive = personality === 'hana'
     const isPatient = personality === 'gobinda'
     const isElegant = personality === 'amelie'
-    const denDistanceWeight = isDefensive ? 0.05 : (isPatient ? 0.08 : (isElegant ? 0.12 : (isAggressive ? 0.2 : 0.1)))
-    const trapBonus = isDefensive ? 0.6 : (isPatient ? 0.7 : (isElegant ? 0.8 : (isAggressive ? 1.0 : 0.5)))
-    const dangerPenalty = isDefensive ? 0.7 : (isPatient ? 0.6 : (isElegant ? 0.4 : (isAggressive ? 0.3 : 0.5)))
+    const isBold = personality === 'kofi'
+    const isPassionate = personality === 'lucia'
+    const denDistanceWeight = isDefensive ? 0.05 : (isPatient ? 0.08 : (isElegant ? 0.12 : (isPassionate ? 0.13 : (isBold ? 0.15 : (isAggressive ? 0.2 : 0.1)))))
+    const trapBonus = isDefensive ? 0.6 : (isPassionate ? 0.65 : (isPatient ? 0.7 : (isElegant ? 0.8 : (isBold ? 0.5 : (isAggressive ? 1.0 : 0.5)))))
+    const dangerPenalty = isDefensive ? 0.7 : (isPatient ? 0.6 : (isPassionate ? 0.45 : (isElegant ? 0.4 : (isBold ? 0.4 : (isAggressive ? 0.3 : 0.5)))))
 
     Object.entries(pieces).forEach(([pos, piece]) => {
       const [x, y] = pos.split('_').map(Number)

@@ -71,7 +71,9 @@ const GameBoardContainer = ({pieces, lastMove, selectedPieceKey, isPlayerTurn, v
                      selectedAvatar === 'feizi' ? 'images/avatar_1.svg' : 
                      selectedAvatar === 'hana' ? 'images/avatar_2.svg' :
                      selectedAvatar === 'gobinda' ? 'images/avatar_3.svg' :
-                     'images/avatar_4.svg'
+                     selectedAvatar === 'amelie' ? 'images/avatar_4.svg' :
+                     selectedAvatar === 'kofi' ? 'images/avatar_5.svg' :
+                     'images/avatar_6.svg'
 
   return React.createElement('div', {
       id: 'game-board',
