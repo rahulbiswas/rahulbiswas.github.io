@@ -12,13 +12,17 @@ class PositionEvaluator {
 
   WINNING_SCORE = 1000
 
-  evaluatePosition(pieces, player) {
+  evaluatePosition(pieces, player, personality = 'hanfeizi') {
     const winner = window.checkWinCondition(pieces)
     if (winner !== null) {
       return winner === player ? this.WINNING_SCORE : -this.WINNING_SCORE
     }
 
     let score = 0
+    const isAggressive = personality === 'meilin'
+    const denDistanceWeight = isAggressive ? 0.2 : 0.1
+    const trapBonus = isAggressive ? 1.0 : 0.5
+    const dangerPenalty = isAggressive ? 0.3 : 0.5
 
     Object.entries(pieces).forEach(([pos, piece]) => {
       const [x, y] = pos.split('_').map(Number)
@@ -28,15 +32,15 @@ class PositionEvaluator {
 
       const targetDen = piece.player === PLAYERS.RED ? DENS.YELLOW : DENS.RED
       const distanceToDen = Math.abs(x - targetDen.X) + Math.abs(y - targetDen.Y)
-      score += (10 - distanceToDen) * 0.1 * multiplier
+      score += (10 - distanceToDen) * denDistanceWeight * multiplier
 
       const enemyTraps = piece.player === PLAYERS.RED ? TRAP_SQUARES.YELLOW : TRAP_SQUARES.RED
       if (enemyTraps.some(trap => trap.X === x && trap.Y === y)) {
-        score += 0.5 * multiplier
+        score += trapBonus * multiplier
       }
 
       if (this.isPieceInDanger(pos, piece, pieces)) {
-        score -= this.PIECE_VALUES[piece.animal] * 0.5 * multiplier
+        score -= this.PIECE_VALUES[piece.animal] * dangerPenalty * multiplier
       }
     })
 

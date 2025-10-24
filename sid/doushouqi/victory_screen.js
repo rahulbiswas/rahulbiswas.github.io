@@ -1,4 +1,9 @@
-const VictoryScreen = ({winner, onPlayAgain}) => {
+const VictoryScreen = ({winner, onPlayAgain, language}) => {
+  const winnerTextEn = winner === PLAYERS.RED ? 'RED WINS!' : 'YELLOW WINS!'
+  const winnerTextCn = winner === PLAYERS.RED ? '红方胜利!' : '黄方胜利!'
+  const winnerText = language === 'c' ? winnerTextCn : winnerTextEn
+  const playAgainText = language === 'c' ? '再玩一次' : 'PLAY AGAIN'
+
   return React.createElement('svg', {viewBox: '0 0 100 100'},
     React.createElement('defs', null,
       React.createElement('linearGradient', {id: 'buttonGradient', x1: '0%', y1: '0%', x2: '0%', y2: '100%'},
@@ -31,7 +36,7 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
       fontSize: '8',
       fontFamily: 'Impact',
       filter: 'url(#textShadow)'
-    }, `${winner === PLAYERS.RED ? 'RED' : 'YELLOW'} WINS!`),
+    }, winnerText),
 
     React.createElement('g', {
         transform: 'translate(50, 50)',
@@ -54,7 +59,7 @@ const VictoryScreen = ({winner, onPlayAgain}) => {
         fontSize: '5',
         fontFamily: 'Arial',
         filter: 'url(#textShadow)'
-      }, 'PLAY AGAIN')
+      }, playAgainText)
     )
   )
 }

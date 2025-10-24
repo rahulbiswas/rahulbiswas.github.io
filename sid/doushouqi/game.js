@@ -8,6 +8,12 @@ const JungleGame = () => {
   const [validMoves, setValidMoves] = React.useState(new Set())
   const [showRulesModal, setShowRulesModal] = React.useState(false)
   const [language, setLanguage] = React.useState('en')
+  const [selectedAvatar, setSelectedAvatar] = React.useState('meilin')
+  const [showAvatarModal, setShowAvatarModal] = React.useState(false)
+
+  React.useEffect(() => {
+    window.aiPlayer.setPersonality(selectedAvatar)
+  }, [selectedAvatar])
 
   React.useEffect(() => {
     if (!isPlayerTurn && !winner) {
@@ -105,7 +111,8 @@ const JungleGame = () => {
     winner !== null
       ? React.createElement(VictoryScreen, {
         winner: winner,
-        onPlayAgain: resetGame
+        onPlayAgain: resetGame,
+        language: language
       })
       : React.createElement(GameBoardContainer, {
         pieces: pieces,
@@ -116,10 +123,19 @@ const JungleGame = () => {
         showRulesModal: showRulesModal,
         setShowRulesModal: setShowRulesModal,
         language: language,
-        setLanguage: setLanguage
+        setLanguage: setLanguage,
+        selectedAvatar: selectedAvatar,
+        showAvatarModal: showAvatarModal,
+        setShowAvatarModal: setShowAvatarModal
       }),
     showRulesModal && React.createElement(RulesModal, {
       onClose: () => setShowRulesModal(false),
+      language: language
+    }),
+    showAvatarModal && React.createElement(CharacterSelector, {
+      selectedAvatar: selectedAvatar,
+      onSelectAvatar: setSelectedAvatar,
+      onClose: () => setShowAvatarModal(false),
       language: language
     })
   )
