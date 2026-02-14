@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play Xiangqi (Chinese Chess) online with friends. Free multiplayer Chinese chess game with traditional rules.">
+  <meta name="keywords" content="xiangqi, chinese chess, online game, multiplayer, strategy">
+  <meta name="author" content="Xiangqi Game Developer">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Xiangqi Online - Chinese Chess Game">
+  <meta property="og:description" content="Play traditional Chinese Chess online">
+  <meta property="og:url" content="#">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Xiangqi Online">
+  <meta name="twitter:description" content="Traditional Chinese Chess Game">
+  
+  <title>Xiangqi Online - Play Chinese Chess</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <header>
+      <div class="header-left">
+        <button id="rules-btn" class="btn btn-info">📖 Rules 规则</button>
+        <button id="game-mode-btn" class="btn btn-secondary">👥 vs Human</button>
+      </div>
+      <h1>象棋 Xiangqi</h1>
+      <div class="header-right">
+        <div id="game-status">Red to move</div>
+      </div>
+    </header>
+    
+    <main>
+      <div id="game-board-container">
+        <div id="game-board"></div>
+        <div id="captured-pieces">
+          <div id="black-captured">
+            <h4>Black Captured</h4>
+            <div class="captured-list"></div>
+          </div>
+          <div id="red-captured">
+            <h4>Red Captured</h4>
+            <div class="captured-list"></div>
+          </div>
+        </div>
+      </div>
+      
+      <aside id="game-controls">
+        <div id="player-info">
+          <div id="current-player">
+            <span class="player-indicator red-indicator active">红 Red</span>
+            <span class="player-indicator black-indicator">黑 Black</span>
+          </div>
+          <div id="game-timer">
+            <div class="timer red-timer">30:00</div>
+            <div class="timer black-timer">30:00</div>
+          </div>
+        </div>
+        
+        <div id="game-actions">
+          <button id="new-game" class="btn btn-primary">New Game</button>
+          <button id="undo-move" class="btn btn-secondary" disabled>Undo</button>
+          <button id="resign" class="btn btn-danger">Resign</button>
+        </div>
+        
+        <div id="move-history">
+          <h3>Move History</h3>
+          <div id="moves-list"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  
+  <script src="js/utils/Constants.js"></script>
+  <script src="js/utils/Helpers.js"></script>
+  <script src="js/game/Piece.js"></script>
+  <script src="js/game/Board.js"></script>
+  <script src="js/game/MoveValidator.js"></script>
+  <script src="js/game/GameState.js"></script>
+  <script src="js/game/Game.js"></script>
+  <script src="js/game/XiangqiAI.js"></script>
+  <script src="js/ui/BoardUI.js"></script>
+  <script src="js/ui/PieceUI.js"></script>
+  <script src="js/ui/GameControls.js"></script>
+  <script src="js/ui/StatusDisplay.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

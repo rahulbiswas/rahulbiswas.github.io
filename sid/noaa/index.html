@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Clara Weather Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analyzing Santa Clara County Climate Trends</h1>
+        <!-- This new section explains the whole project! -->
+        <div class="project-description">
+            <p>
+                This project is a data analysis tool designed to visualize and understand long-term climate trends in Santa Clara County. By processing historical weather data from NOAA's Global Historical Climatology Network (GHCND), we can observe how the frequency of warm and hot days has changed over several decades.
+            </p>
+            <p>
+                The primary metrics analyzed are <strong>DX70</strong> (the number of days in a year where the maximum temperature exceeded 70°F) and <strong>DX90</strong> (days exceeding 90°F). These serve as clear indicators of shifting local weather patterns.
+            </p>
+            <p>
+                Below, a map displays the locations of the weather stations providing this data. The table offers a sortable summary. <strong>Click on any station</strong> to view a detailed, year-by-year analysis, complete with a scatter plot and a calculated trend line showing the average change per year.
+            </p>
+        </div>
+    </header>
+
+    <main class="index-wrapper">
+        <div class="map-container">
+            <h2>Station Locations Overview</h2>
+            <img src="maps/all_stations_map.png" alt="Map of all weather stations in Santa Clara County">
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="sortable-header" data-sort-by="name">Station Name</th>
+                        <th class="sortable-header" data-sort-by="id">Station ID</th>
+                        <th class="sortable-header" data-sort-by="start_year">Start Year</th>
+                        <th class="sortable-header" data-sort-by="end_year">End Year</th>
+                        <th class="sortable-header" data-sort-by="num_years">Total Years of Data</th>
+                    </tr>
+                </thead>
+                <tbody id="station-table-body">
+                    <!-- Data rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

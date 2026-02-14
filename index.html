@@ -1,30 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=siddhartha/jungle/">
+		<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+		<meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" content="Personal family page for the Biswas family members">
+    <meta name="keywords" content="family, personal page, directory">
+    <title>Biswas</title>
     <style>
-        .title {
-            text-align: center;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
         }
-        .title-link {
-            color: #ff0000;
-            font-family: Arial, sans-serif;
-            font-size: 2.5rem;
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
             text-decoration: none;
         }
-        .title-link:hover {
-            text-decoration: underline;
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        img:hover {
+            transform: scale(1.05);
+        }
+        .grid-container h3 {
+            margin-top: 0.75rem;
+            color: #333;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-    <header class="title">
-        <h1>
-            <a href="siddhartha/jungle/" class="title-link">
-                Dou Shou Qi by Siddhartha Biswas
-            </a>
-        </h1>
-    </header>
-    <p>If you are not redirected automatically, <a href="siddhartha/jungle/">click here</a>.</p>
+    <h1>Biswas</h1>
+    <div class="grid-container">
+        <a href="rahul/sort/">
+            <img src="rahul.png" alt="Rahul">
+            <h3>Rahul</h3>
+        </a>
+        <a href="sid/">
+            <img src="sid.png" alt="Sid">
+            <h3>Sid</h3>
+        </a>
+        <a href="rohan/">
+            <img src="rohan.png" alt="Rohan">
+            <h3>Rohan</h3>
+        </a>
+        <a href="ellie/">
+            <img src="ellie.png" alt="Ellie">
+            <h3>Ellie</h3>
+        </a>
+    </div>
 </body>
 </html>

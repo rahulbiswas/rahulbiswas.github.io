@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiangqi Rules - 象棋规则</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/rules.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
+  </style>
+</head>
+<body class="rules-page">
+  <div id="rules-container">
+    <header class="rules-header">
+      <div class="header-content">
+        <button id="back-to-game" class="btn btn-secondary">
+          <span>← Back to Game</span>
+        </button>
+        <h1>象棋规则 Xiangqi Rules</h1>
+        <div class="header-decoration">
+          <span class="chinese-seal">印</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="rules-content">
+      <div class="rules-section">
+        <h2>游戏概述 Game Overview</h2>
+        <div class="section-content">
+          <p>象棋 (Xiangqi), also known as Chinese Chess, is an ancient strategy board game played between two players. The objective is to capture the opponent's General (King) through checkmate.</p>
+          <p>象棋是中国古代的策略棋类游戏，两人对弈，目标是通过将军将对方的"将"或"帅"擒获。</p>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <h2>棋盘设置 Board Setup</h2>
+        <div class="section-content">
+          <div class="board-info">
+            <div class="board-diagram">
+              <div class="mini-board">
+                <div class="board-grid"></div>
+                <div class="river-label">楚河汉界</div>
+              </div>
+            </div>
+            <div class="board-details">
+              <ul>
+                <li><strong>Board Size:</strong> 9×10 lines creating 8×9 squares</li>
+                <li><strong>River (楚河汉界):</strong> Divides the board horizontally</li>
+                <li><strong>Palace (九宫):</strong> 3×3 area at each end for Generals and Advisors</li>
+                <li><strong>Starting Position:</strong> All pieces begin in traditional setup</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <h2>棋子介绍 Piece Descriptions</h2>
+        <div class="section-content">
+          
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">帥</span>
+              <span class="piece-char black">將</span>
+              <h3>General 将/帅</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Movement:</strong> One point orthogonally within the palace</p>
+              <p><strong>Special Rule:</strong> Cannot face the opponent's General directly (Flying General rule)</p>
+              <p><strong>Objective:</strong> Capture this piece to win the game</p>
+            </div>
+          </div>
+
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">仕</span>
+              <span class="piece-char black">士</span>
+              <h3>Advisor 士/仕</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Movement:</strong> One point diagonally within the palace only</p>
+              <p><strong>Count:</strong> 2 pieces per side</p>
+              <p><strong>Purpose:</strong> Defend the General</p>
+            </div>
+          </div>
+
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">相</span>
+              <span class="piece-char black">象</span>
+              <h3>Elephant 象/相</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Movement:</strong> Exactly two points diagonally</p>
+              <p><strong>Blocking:</strong> Cannot jump over pieces</p>
+              <p><strong>Restriction:</strong> Cannot cross the river</p>
+              <p><strong>Count:</strong> 2 pieces per side</p>
+            </div>
+          </div>
+
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">馬</span>
+              <span class="piece-char black">馬</span>
+              <h3>Horse 马</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Movement:</strong> One point orthogonally, then one point diagonally</p>
+              <p><strong>Blocking:</strong> Can be "hobbled" by adjacent pieces</p>
+              <p><strong>Pattern:</strong> L-shaped move like a chess knight</p>
+              <p><strong>Count:</strong> 2 pieces per side</p>
+            </div>
+          </div>
+
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">車</span>
+              <span class="piece-char black">車</span>
+              <h3>Chariot 车</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Movement:</strong> Any number of points orthogonally</p>
+              <p><strong>Blocking:</strong> Cannot jump over pieces</p>
+              <p><strong>Power:</strong> Most powerful piece after the General</p>
+              <p><strong>Count:</strong> 2 pieces per side</p>
+            </div>
+          </div>
+
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">炮</span>
+              <span class="piece-char black">砲</span>
+              <h3>Cannon 炮/砲</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Normal Move:</strong> Like a Chariot when not capturing</p>
+              <p><strong>Capture:</strong> Must jump exactly one piece to capture</p>
+              <p><strong>Unique:</strong> Only piece that captures differently than it moves</p>
+              <p><strong>Count:</strong> 2 pieces per side</p>
+            </div>
+          </div>
+
+          <div class="piece-info">
+            <div class="piece-header">
+              <span class="piece-char red">兵</span>
+              <span class="piece-char black">卒</span>
+              <h3>Soldier 兵/卒</h3>
+            </div>
+            <div class="piece-movement">
+              <p><strong>Before River:</strong> One point forward only</p>
+              <p><strong>After River:</strong> One point forward or sideways</p>
+              <p><strong>No Retreat:</strong> Cannot move backward</p>
+              <p><strong>Count:</strong> 5 pieces per side</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <h2>特殊规则 Special Rules</h2>
+        <div class="section-content">
+          <div class="rule-item">
+            <h4>将军 Check</h4>
+            <p>When the General is under attack, it must be moved to safety or the attacking piece must be blocked/captured.</p>
+          </div>
+          
+          <div class="rule-item">
+            <h4>将死 Checkmate</h4>
+            <p>When the General is in check and cannot escape capture on the next move, the game ends.</p>
+          </div>
+          
+          <div class="rule-item">
+            <h4>飞将 Flying General</h4>
+            <p>The two Generals cannot face each other on the same file without any pieces between them.</p>
+          </div>
+          
+          <div class="rule-item">
+            <h4>困毙 Stalemate</h4>
+            <p>If a player has no legal moves but is not in check, the game is a draw.</p>
+          </div>
+          
+          <div class="rule-item">
+            <h4>长将 Perpetual Check</h4>
+            <p>Repeatedly checking the opponent without making progress is not allowed and results in a draw.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <h2>游戏流程 Game Flow</h2>
+        <div class="section-content">
+          <ol class="game-flow">
+            <li><strong>开始:</strong> Red (帅) moves first</li>
+            <li><strong>轮流:</strong> Players alternate turns</li>
+            <li><strong>移动:</strong> Move one piece per turn</li>
+            <li><strong>吃子:</strong> Capture by moving to opponent's piece location</li>
+            <li><strong>胜负:</strong> Win by checkmating opponent's General</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <h2>策略提示 Strategy Tips</h2>
+        <div class="section-content">
+          <div class="tips-grid">
+            <div class="tip-card">
+              <h4>开局 Opening</h4>
+              <p>Develop pieces quickly, control the center, protect your General early.</p>
+            </div>
+            <div class="tip-card">
+              <h4>中局 Middlegame</h4>
+              <p>Create threats, coordinate pieces, look for tactical combinations.</p>
+            </div>
+            <div class="tip-card">
+              <h4>残局 Endgame</h4>
+              <p>Activate your General, promote Soldiers, create mating attacks.</p>
+            </div>
+            <div class="tip-card">
+              <h4>防守 Defense</h4>
+              <p>Keep Advisors and Elephants to protect the General, control key points.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <h2>记谱法 Notation System</h2>
+        <div class="section-content">
+          <p>Xiangqi uses a unique notation system based on Chinese characters and numbers:</p>
+          <div class="notation-example">
+            <div class="notation-format">
+              <span class="piece-example">炮</span>
+              <span class="file-example">二</span>
+              <span class="direction-example">平</span>
+              <span class="destination-example">五</span>
+            </div>
+            <div class="notation-explanation">
+              <p><strong>Piece</strong> + <strong>File</strong> + <strong>Direction</strong> + <strong>Destination</strong></p>
+              <ul>
+                <li><strong>进 (Forward)</strong> - Moving toward opponent</li>
+                <li><strong>退 (Backward)</strong> - Moving away from opponent</li>
+                <li><strong>平 (Sideways)</strong> - Moving horizontally</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="rules-footer">
+      <div class="footer-content">
+        <p>学而时习之，不亦说乎 - Practice makes perfect</p>
+        <button id="start-playing" class="btn btn-primary">Start Playing 开始游戏</button>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('back-to-game').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('start-playing').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

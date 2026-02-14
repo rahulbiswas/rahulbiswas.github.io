@@ -1,0 +1,250 @@
+{
+  "event_name": "02_park_fire",
+  "overall_bounds": {
+    "north": 40.20041178404301,
+    "south": 39.49984305691176,
+    "east": -120.99941791325091,
+    "west": -122.00048108165582
+  },
+  "display_temp_range": {
+    "min": 40,
+    "max": 110
+  },
+  "dates": [
+    {
+      "date": "2024-07-26",
+      "time_utc": "22:17:59 UTC",
+      "shard_file": "02_park_fire_2024-07-26_221759.json"
+    },
+    {
+      "date": "2024-07-29",
+      "time_utc": "21:28:31 UTC",
+      "shard_file": "02_park_fire_2024-07-29_212831.json"
+    },
+    {
+      "date": "2024-07-30",
+      "time_utc": "20:39:27 UTC",
+      "shard_file": "02_park_fire_2024-07-30_203927.json"
+    },
+    {
+      "date": "2024-07-30",
+      "time_utc": "20:40:19 UTC",
+      "shard_file": "02_park_fire_2024-07-30_204019.json"
+    },
+    {
+      "date": "2024-07-31",
+      "time_utc": "03:09:16 UTC",
+      "shard_file": "02_park_fire_2024-07-31_030916.json"
+    },
+    {
+      "date": "2024-08-02",
+      "time_utc": "19:52:02 UTC",
+      "shard_file": "02_park_fire_2024-08-02_195202.json"
+    },
+    {
+      "date": "2024-08-03",
+      "time_utc": "19:03:51 UTC",
+      "shard_file": "02_park_fire_2024-08-03_190351.json"
+    },
+    {
+      "date": "2024-08-03",
+      "time_utc": "19:04:43 UTC",
+      "shard_file": "02_park_fire_2024-08-03_190443.json"
+    },
+    {
+      "date": "2024-08-06",
+      "time_utc": "18:16:31 UTC",
+      "shard_file": "02_park_fire_2024-08-06_181631.json"
+    },
+    {
+      "date": "2024-08-06",
+      "time_utc": "18:17:23 UTC",
+      "shard_file": "02_park_fire_2024-08-06_181723.json"
+    },
+    {
+      "date": "2024-08-07",
+      "time_utc": "17:28:18 UTC",
+      "shard_file": "02_park_fire_2024-08-07_172818.json"
+    },
+    {
+      "date": "2024-08-07",
+      "time_utc": "17:29:10 UTC",
+      "shard_file": "02_park_fire_2024-08-07_172910.json"
+    },
+    {
+      "date": "2024-08-14",
+      "time_utc": "15:04:24 UTC",
+      "shard_file": "02_park_fire_2024-08-14_150424.json"
+    },
+    {
+      "date": "2024-08-14",
+      "time_utc": "21:33:28 UTC",
+      "shard_file": "02_park_fire_2024-08-14_213328.json"
+    },
+    {
+      "date": "2024-08-14",
+      "time_utc": "21:34:20 UTC",
+      "shard_file": "02_park_fire_2024-08-14_213420.json"
+    },
+    {
+      "date": "2024-08-15",
+      "time_utc": "14:15:22 UTC",
+      "shard_file": "02_park_fire_2024-08-15_141522.json"
+    },
+    {
+      "date": "2024-08-15",
+      "time_utc": "20:45:09 UTC",
+      "shard_file": "02_park_fire_2024-08-15_204509.json"
+    },
+    {
+      "date": "2024-08-22",
+      "time_utc": "11:47:47 UTC",
+      "shard_file": "02_park_fire_2024-08-22_114747.json"
+    },
+    {
+      "date": "2024-08-25",
+      "time_utc": "10:59:19 UTC",
+      "shard_file": "02_park_fire_2024-08-25_105919.json"
+    },
+    {
+      "date": "2024-08-26",
+      "time_utc": "10:10:41 UTC",
+      "shard_file": "02_park_fire_2024-08-26_101041.json"
+    },
+    {
+      "date": "2024-08-26",
+      "time_utc": "10:11:33 UTC",
+      "shard_file": "02_park_fire_2024-08-26_101133.json"
+    },
+    {
+      "date": "2024-08-26",
+      "time_utc": "16:40:53 UTC",
+      "shard_file": "02_park_fire_2024-08-26_164053.json"
+    },
+    {
+      "date": "2024-08-29",
+      "time_utc": "09:23:46 UTC",
+      "shard_file": "02_park_fire_2024-08-29_092346.json"
+    },
+    {
+      "date": "2024-08-30",
+      "time_utc": "08:35:54 UTC",
+      "shard_file": "02_park_fire_2024-08-30_083554.json"
+    },
+    {
+      "date": "2024-09-02",
+      "time_utc": "07:49:55 UTC",
+      "shard_file": "02_park_fire_2024-09-02_074955.json"
+    },
+    {
+      "date": "2024-09-02",
+      "time_utc": "14:19:55 UTC",
+      "shard_file": "02_park_fire_2024-09-02_141955.json"
+    },
+    {
+      "date": "2024-09-03",
+      "time_utc": "07:02:04 UTC",
+      "shard_file": "02_park_fire_2024-09-03_070204.json"
+    },
+    {
+      "date": "2024-09-03",
+      "time_utc": "13:32:27 UTC",
+      "shard_file": "02_park_fire_2024-09-03_133227.json"
+    },
+    {
+      "date": "2024-09-06",
+      "time_utc": "06:15:49 UTC",
+      "shard_file": "02_park_fire_2024-09-06_061549.json"
+    },
+    {
+      "date": "2024-09-06",
+      "time_utc": "12:46:18 UTC",
+      "shard_file": "02_park_fire_2024-09-06_124618.json"
+    },
+    {
+      "date": "2024-09-07",
+      "time_utc": "05:28:34 UTC",
+      "shard_file": "02_park_fire_2024-09-07_052834.json"
+    },
+    {
+      "date": "2024-09-07",
+      "time_utc": "05:29:26 UTC",
+      "shard_file": "02_park_fire_2024-09-07_052926.json"
+    },
+    {
+      "date": "2024-09-11",
+      "time_utc": "03:56:33 UTC",
+      "shard_file": "02_park_fire_2024-09-11_035633.json"
+    },
+    {
+      "date": "2024-09-11",
+      "time_utc": "03:57:25 UTC",
+      "shard_file": "02_park_fire_2024-09-11_035725.json"
+    },
+    {
+      "date": "2024-09-11",
+      "time_utc": "10:26:29 UTC",
+      "shard_file": "02_park_fire_2024-09-11_102629.json"
+    },
+    {
+      "date": "2024-09-14",
+      "time_utc": "03:11:07 UTC",
+      "shard_file": "02_park_fire_2024-09-14_031107.json"
+    },
+    {
+      "date": "2024-09-15",
+      "time_utc": "02:23:26 UTC",
+      "shard_file": "02_park_fire_2024-09-15_022326.json"
+    },
+    {
+      "date": "2024-09-15",
+      "time_utc": "02:24:18 UTC",
+      "shard_file": "02_park_fire_2024-09-15_022418.json"
+    },
+    {
+      "date": "2024-09-15",
+      "time_utc": "08:54:00 UTC",
+      "shard_file": "02_park_fire_2024-09-15_085400.json"
+    },
+    {
+      "date": "2024-09-19",
+      "time_utc": "00:49:42 UTC",
+      "shard_file": "02_park_fire_2024-09-19_004942.json"
+    },
+    {
+      "date": "2024-09-22",
+      "time_utc": "00:02:52 UTC",
+      "shard_file": "02_park_fire_2024-09-22_000252.json"
+    },
+    {
+      "date": "2024-09-22",
+      "time_utc": "23:15:42 UTC",
+      "shard_file": "02_park_fire_2024-09-22_231542.json"
+    },
+    {
+      "date": "2024-09-25",
+      "time_utc": "22:28:22 UTC",
+      "shard_file": "02_park_fire_2024-09-25_222822.json"
+    },
+    {
+      "date": "2024-09-26",
+      "time_utc": "21:39:55 UTC",
+      "shard_file": "02_park_fire_2024-09-26_213955.json"
+    },
+    {
+      "date": "2024-09-26",
+      "time_utc": "21:40:46 UTC",
+      "shard_file": "02_park_fire_2024-09-26_214046.json"
+    },
+    {
+      "date": "2024-09-29",
+      "time_utc": "20:52:28 UTC",
+      "shard_file": "02_park_fire_2024-09-29_205228.json"
+    },
+    {
+      "date": "2024-09-30",
+      "time_utc": "20:04:07 UTC",
+      "shard_file": "02_park_fire_2024-09-30_200407.json"
+    }
+  ]
+}

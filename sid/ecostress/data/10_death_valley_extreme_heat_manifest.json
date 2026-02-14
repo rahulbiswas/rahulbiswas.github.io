@@ -1,0 +1,30 @@
+{
+  "event_name": "10_death_valley_extreme_heat",
+  "overall_bounds": {
+    "north": 37.00043562894666,
+    "south": 35.999502782738205,
+    "east": -116.39978076229215,
+    "west": -117.20056569427015
+  },
+  "display_temp_range": {
+    "min": 40,
+    "max": 110
+  },
+  "dates": [
+    {
+      "date": "2024-07-05",
+      "time_utc": "06:20:53 UTC",
+      "shard_file": "10_death_valley_extreme_heat_2024-07-05_062053.json"
+    },
+    {
+      "date": "2024-07-07",
+      "time_utc": "12:51:55 UTC",
+      "shard_file": "10_death_valley_extreme_heat_2024-07-07_125155.json"
+    },
+    {
+      "date": "2024-07-07",
+      "time_utc": "12:52:47 UTC",
+      "shard_file": "10_death_valley_extreme_heat_2024-07-07_125247.json"
+    }
+  ]
+}
