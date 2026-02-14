@@ -1,10 +1,13 @@
 // Configuration variables
 var textContent = "Hello there!";
-var fontSize = "100px";
+var isMobile = window.innerWidth <= 768;
+var fontSize = isMobile ? "14vw" : "100px";
 var fontFamily = "Brush Script MT, cursive";
 
 var redButtonText = "Not interested";
 var greenButtonText = "Interested";
+var btnFontSize = isMobile ? "18px" : "24px";
+var btnPadding = isMobile ? "12px 28px" : "15px 40px";
 
 // Shared response for interested buttons
 function showInterestedResponse() {
@@ -70,8 +73,8 @@ var redButton = document.createElement("button");
 redButton.textContent = redButtonText;
 redButton.style.backgroundColor = "red";
 redButton.style.color = "white";
-redButton.style.padding = "15px 40px";
-redButton.style.fontSize = "24px";
+redButton.style.padding = btnPadding;
+redButton.style.fontSize = btnFontSize;
 redButton.style.border = "none";
 redButton.style.borderRadius = "10px";
 redButton.style.cursor = "pointer";
@@ -86,7 +89,7 @@ redButton.onclick = function() {
 
     var warning = document.createElement("div");
     warning.textContent = "RECONSIDER";
-    warning.style.fontSize = "80px";
+    warning.style.fontSize = isMobile ? "12vw" : "80px";
     warning.style.fontWeight = "bold";
     warning.style.color = "white";
     document.body.appendChild(warning);
@@ -121,8 +124,8 @@ var greenButton = document.createElement("button");
 greenButton.textContent = greenButtonText;
 greenButton.style.backgroundColor = "green";
 greenButton.style.color = "white";
-greenButton.style.padding = "15px 40px";
-greenButton.style.fontSize = "24px";
+greenButton.style.padding = btnPadding;
+greenButton.style.fontSize = btnFontSize;
 greenButton.style.border = "none";
 greenButton.style.borderRadius = "10px";
 greenButton.style.cursor = "pointer";

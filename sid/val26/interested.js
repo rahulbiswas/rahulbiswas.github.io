@@ -1,18 +1,30 @@
 // Interested page script
 var textContent = "Happy Valentine's Dayyyyy!";
-var fontSize = "100px";
+var isMobile = window.innerWidth <= 768;
+var fontSize = isMobile ? "10vw" : "100px";
 var fontFamily = "Brush Script MT, cursive";
 
 // Valentine's buttons
 var redButtonText = "No";
 var greenButtonText = "Obviously";
+var btnFontSize = isMobile ? "18px" : "24px";
+var btnPadding = isMobile ? "12px 28px" : "15px 40px";
+var imgSize = isMobile ? "80px" : "150px";
 
 // Video
 var videoFile = "randomvideo.mov";
 var audioFile = "videoaudio.mov";
 
 // Images to display around the page
-var images = [
+var images = isMobile ? [
+    // On mobile, show fewer images to avoid crowding
+    { src: "penguin.jpg", top: "2%", left: "2%", rotation: -15 },
+    { src: "heart.jpg", top: "2%", right: "2%", rotation: 15 },
+    { src: "bear.jpg", bottom: "2%", left: "2%", rotation: 10 },
+    { src: "flowers.jpg", bottom: "2%", right: "2%", rotation: -10 },
+    { src: "heart.jpg", bottom: "22%", left: "3%", rotation: -8 },
+    { src: "penguin.jpg", bottom: "22%", right: "3%", rotation: 8 }
+] : [
     // Top corners
     { src: "penguin.jpg", top: "3%", left: "3%", rotation: -15 },
     { src: "heart.jpg", top: "3%", right: "3%", rotation: 15 },
@@ -46,6 +58,7 @@ textBox.style.transform = "translate(-50%, -50%)";
 textBox.style.fontSize = fontSize;
 textBox.style.fontFamily = fontFamily;
 textBox.style.textAlign = "center";
+textBox.style.width = isMobile ? "90vw" : "auto";
 
 document.body.appendChild(textBox);
 
@@ -63,8 +76,8 @@ var redButton = document.createElement("button");
 redButton.textContent = redButtonText;
 redButton.style.backgroundColor = "red";
 redButton.style.color = "white";
-redButton.style.padding = "15px 40px";
-redButton.style.fontSize = "24px";
+redButton.style.padding = btnPadding;
+redButton.style.fontSize = btnFontSize;
 redButton.style.border = "none";
 redButton.style.borderRadius = "10px";
 redButton.style.cursor = "pointer";
@@ -107,6 +120,41 @@ document.addEventListener("mousemove", function(e) {
     }
 });
 
+// Touch support - move button when finger gets near it
+document.addEventListener("touchstart", function(e) {
+    var touch = e.touches[0];
+    var rect = redButton.getBoundingClientRect();
+    var buttonCenterX = rect.left + rect.width / 2;
+    var buttonCenterY = rect.top + rect.height / 2;
+
+    var distance = Math.sqrt(
+        Math.pow(touch.clientX - buttonCenterX, 2) +
+        Math.pow(touch.clientY - buttonCenterY, 2)
+    );
+
+    if (distance < detectionRadius + rect.width / 2 + 30) {
+        e.preventDefault();
+        moveRedButton();
+    }
+}, { passive: false });
+
+document.addEventListener("touchmove", function(e) {
+    var touch = e.touches[0];
+    var rect = redButton.getBoundingClientRect();
+    var buttonCenterX = rect.left + rect.width / 2;
+    var buttonCenterY = rect.top + rect.height / 2;
+
+    var distance = Math.sqrt(
+        Math.pow(touch.clientX - buttonCenterX, 2) +
+        Math.pow(touch.clientY - buttonCenterY, 2)
+    );
+
+    if (distance < detectionRadius + rect.width / 2 + 30) {
+        e.preventDefault();
+        moveRedButton();
+    }
+}, { passive: false });
+
 function isOverlappingImage(x, y, width, height) {
     for (var i = 0; i < imageRects.length; i++) {
         var rect = imageRects[i];
@@ -127,8 +175,8 @@ var greenButton = document.createElement("button");
 greenButton.textContent = greenButtonText;
 greenButton.style.backgroundColor = "green";
 greenButton.style.color = "white";
-greenButton.style.padding = "15px 40px";
-greenButton.style.fontSize = "24px";
+greenButton.style.padding = btnPadding;
+greenButton.style.fontSize = btnFontSize;
 greenButton.style.border = "none";
 greenButton.style.borderRadius = "10px";
 greenButton.style.cursor = "pointer";
@@ -153,6 +201,8 @@ function playVideo() {
         var video = document.createElement("video");
         video.src = videoFile;
         video.muted = true;
+        video.playsInline = true;
+        video.setAttribute("playsinline", "");
         video.style.position = "fixed";
         video.style.top = "0";
         video.style.left = "0";
@@ -191,8 +241,8 @@ function showVideoEndButtons(video, audio) {
     rewatchBtn.style.position = "fixed";
     rewatchBtn.style.top = "20px";
     rewatchBtn.style.left = "20px";
-    rewatchBtn.style.padding = "15px 30px";
-    rewatchBtn.style.fontSize = "20px";
+    rewatchBtn.style.padding = isMobile ? "10px 20px" : "15px 30px";
+    rewatchBtn.style.fontSize = isMobile ? "16px" : "20px";
     rewatchBtn.style.backgroundColor = "rgba(255,255,255,0.9)";
     rewatchBtn.style.border = "none";
     rewatchBtn.style.borderRadius = "10px";
@@ -219,8 +269,8 @@ function showVideoEndButtons(video, audio) {
     doneBtn.style.position = "fixed";
     doneBtn.style.top = "20px";
     doneBtn.style.right = "20px";
-    doneBtn.style.padding = "15px 30px";
-    doneBtn.style.fontSize = "20px";
+    doneBtn.style.padding = isMobile ? "10px 20px" : "15px 30px";
+    doneBtn.style.fontSize = isMobile ? "16px" : "20px";
     doneBtn.style.backgroundColor = "rgba(255,255,255,0.9)";
     doneBtn.style.border = "none";
     doneBtn.style.borderRadius = "10px";
@@ -245,11 +295,12 @@ function showCelebration() {
     message.style.top = "50%";
     message.style.left = "50%";
     message.style.transform = "translate(-50%, -50%)";
-    message.style.fontSize = "80px";
+    message.style.fontSize = isMobile ? "10vw" : "80px";
     message.style.fontFamily = "Brush Script MT, cursive";
     message.style.textAlign = "center";
     message.style.color = "#d63384";
     message.style.zIndex = "100";
+    message.style.width = isMobile ? "90vw" : "auto";
     document.body.appendChild(message);
 
     // Confetti and balloons
@@ -315,7 +366,7 @@ images.forEach(function(imgData) {
     var img = document.createElement("img");
     img.src = imgData.src;
     img.style.position = "absolute";
-    img.style.width = "150px";
+    img.style.width = imgSize;
     img.style.height = "auto";
     img.style.borderRadius = "15px";
     img.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
