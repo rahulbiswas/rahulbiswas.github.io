@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Parallel Web Workers Chopper</title>
+</head>
+<body>
+
+    <h1>The Parallel Web Worker Chopper</h1>
+    
+    <p id="progress">Waiting to start parallel workers...</p>
+    
+    <button id="startBtn">Start Chopping (Parallel!)</button>
+    <br><br>
+    
+    <p>Try mashing this button while it's chopping:</p>
+    <button onclick="console.log('Test button clicked!'); alert('The UI is completely free! 😎');">Test
+UI Button</button>
+
+    <!-- Main thread script -->
+    <script src="multiple.js"></script>
+</body>
+</html>
