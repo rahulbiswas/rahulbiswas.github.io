@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcutta Greens - Apartment Price Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #333;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 800px;
+        }
+        .result-box {
+            margin-top: 30px;
+            background: white;
+            border-radius: 12px;
+            padding: 24px 30px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+        .result-box h2 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+        }
+        .result-row:last-child {
+            border-bottom: none;
+        }
+        .result-row .label {
+            color: #666;
+        }
+        .result-row .value {
+            font-weight: 600;
+            color: #333;
+        }
+        .highlight {
+            color: #e63946 !important;
+            font-size: 18px !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcutta Greens — Price Analysis</h1>
+    <p class="subtitle">Survey Park, Santoshpur, Kolkata · Linear Regression on Active Listings · March 2026</p>
+
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="result-box">
+        <h2>Your Apartment (Tower 2, A-2/05/18)</h2>
+        <div class="result-row">
+            <span class="label">Size</span>
+            <span class="value">1,560 sqft · 4BR / 3BA · 3 Balconies</span>
+        </div>
+        <div class="result-row">
+            <span class="label">Floor</span>
+            <span class="value">5</span>
+        </div>
+        <div class="result-row">
+            <span class="label">Condition</span>
+            <span class="value">Vacant since 2004 · Needs renovation</span>
+        </div>
+        <div class="result-row">
+            <span class="label">Predicted Price (regression)</span>
+            <span class="value highlight" id="predicted-price">calculating...</span>
+        </div>
+        <div class="result-row">
+            <span class="label">Predicted Price (USD approx)</span>
+            <span class="value" id="predicted-usd">calculating...</span>
+        </div>
+        <div class="result-row">
+            <span class="label">As-Is Discount Estimate (15-20%)</span>
+            <span class="value" id="discounted-price">calculating...</span>
+        </div>
+    </div>
+
+    <script src="analysis.js"></script>
+</body>
+</html>
