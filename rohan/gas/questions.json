@@ -1,0 +1,552 @@
+[
+  {
+    "prompt": "What relationship does Boyle's Law describe?",
+    "options": [
+      { "letter": "a", "text": "Pressure and Temperature" },
+      { "letter": "b", "text": "Volume and Temperature" },
+      { "letter": "c", "text": "Pressure and Volume" },
+      { "letter": "d", "text": "Volume and Moles" }
+    ],
+    "answer": "c",
+    "explanation": "Boyle's Law describes the inverse relationship between the pressure and volume of a gas."
+  },
+  {
+    "prompt": "According to Boyle's Law, what happens to the volume of a gas if its pressure is doubled at a constant temperature?",
+    "options": [
+      { "letter": "a", "text": "It doubles" },
+      { "letter": "b", "text": "It is halved" },
+      { "letter": "c", "text": "It quadruples" },
+      { "letter": "d", "text": "It remains the same" }
+    ],
+    "answer": "b",
+    "explanation": "Since pressure and volume are inversely proportional, doubling the pressure halves the volume."
+  },
+  {
+    "prompt": "Which mathematical equation correctly represents Boyle's Law?",
+    "options": [
+      { "letter": "a", "text": "V1/T1 = V2/T2" },
+      { "letter": "b", "text": "P1V1 = P2V2" },
+      { "letter": "c", "text": "P1/T1 = P2/T2" },
+      { "letter": "d", "text": "V1/n1 = V2/n2" }
+    ],
+    "answer": "b",
+    "explanation": "P1V1 = P2V2 represents Boyle's Law, showing that the product of initial pressure and volume equals the product of final pressure and volume."
+  },
+  {
+    "prompt": "Which variables must be kept constant for Boyle's Law to apply?",
+    "options": [
+      { "letter": "a", "text": "Temperature and number of moles" },
+      { "letter": "b", "text": "Pressure and volume" },
+      { "letter": "c", "text": "Volume and temperature" },
+      { "letter": "d", "text": "Pressure and temperature" }
+    ],
+    "answer": "a",
+    "explanation": "Boyle's Law is only valid when the temperature (T) and the amount of gas (n) remain constant."
+  },
+  {
+    "prompt": "A gas occupies 4.0 L at 1.0 atm. What will its volume be at 2.0 atm if temperature is constant?",
+    "options": [
+      { "letter": "a", "text": "1.0 L" },
+      { "letter": "b", "text": "2.0 L" },
+      { "letter": "c", "text": "4.0 L" },
+      { "letter": "d", "text": "8.0 L" }
+    ],
+    "answer": "b",
+    "explanation": "Using P1V1 = P2V2: (1.0 atm)(4.0 L) = (2.0 atm)(V2). V2 = 4.0 / 2.0 = 2.0 L."
+  },
+  {
+    "prompt": "If a 10.0 L gas sample at 3.0 atm is expanded to 15.0 L, what is the new pressure?",
+    "options": [
+      { "letter": "a", "text": "2.0 atm" },
+      { "letter": "b", "text": "4.5 atm" },
+      { "letter": "c", "text": "5.0 atm" },
+      { "letter": "d", "text": "1.5 atm" }
+    ],
+    "answer": "a",
+    "explanation": "Using P1V1 = P2V2: (3.0 atm)(10.0 L) = (P2)(15.0 L). 30.0 = 15.0 * P2. P2 = 2.0 atm."
+  },
+  {
+    "prompt": "The graph of Pressure vs. Volume for an ideal gas at constant temperature yields what shape?",
+    "options": [
+      { "letter": "a", "text": "A straight horizontal line" },
+      { "letter": "b", "text": "A straight diagonal line through the origin" },
+      { "letter": "c", "text": "A hyperbola (curve)" },
+      { "letter": "d", "text": "A parabola" }
+    ],
+    "answer": "c",
+    "explanation": "Because P and V are inversely proportional, plotting P against V yields a curved line called a hyperbola."
+  },
+  {
+    "prompt": "Which of the following real-world scenarios is an example of Boyle's Law?",
+    "options": [
+      { "letter": "a", "text": "A hot air balloon rising" },
+      { "letter": "b", "text": "A tire deflating in the cold" },
+      { "letter": "c", "text": "Squeezing a sealed balloon to make it smaller" },
+      { "letter": "d", "text": "An aerosol can exploding in a fire" }
+    ],
+    "answer": "c",
+    "explanation": "Squeezing a balloon reduces its volume and increases its internal pressure, demonstrating Boyle's Law."
+  },
+  {
+    "prompt": "What happens to the pressure of a gas if its volume is reduced to one-third of its original value?",
+    "options": [
+      { "letter": "a", "text": "It is reduced to one-third" },
+      { "letter": "b", "text": "It triples" },
+      { "letter": "c", "text": "It stays the same" },
+      { "letter": "d", "text": "It increases by one-third" }
+    ],
+    "answer": "b",
+    "explanation": "Since P and V are inversely related, dividing the volume by 3 means the pressure is multiplied by 3."
+  },
+  {
+    "prompt": "Who discovered the inverse relationship between the pressure and volume of a gas?",
+    "options": [
+      { "letter": "a", "text": "Jacques Charles" },
+      { "letter": "b", "text": "Robert Boyle" },
+      { "letter": "c", "text": "Amedeo Avogadro" },
+      { "letter": "d", "text": "Joseph Louis Gay-Lussac" }
+    ],
+    "answer": "b",
+    "explanation": "The 17th-century chemist Robert Boyle is credited with discovering this relationship."
+  },
+  {
+    "prompt": "A diver's lungs hold 6.0 L of air at 1.0 atm at the surface. If the diver swims down to where the pressure is 3.0 atm, what is the new volume of the air?",
+    "options": [
+      { "letter": "a", "text": "2.0 L" },
+      { "letter": "b", "text": "3.0 L" },
+      { "letter": "c", "text": "18.0 L" },
+      { "letter": "d", "text": "0.5 L" }
+    ],
+    "answer": "a",
+    "explanation": "(1.0 atm)(6.0 L) = (3.0 atm)(V2). V2 = 6.0 / 3.0 = 2.0 L."
+  },
+  {
+    "prompt": "In Boyle's Law, what does the term 'inversely proportional' mean?",
+    "options": [
+      { "letter": "a", "text": "As one variable increases, the other increases" },
+      { "letter": "b", "text": "Both variables decrease together" },
+      { "letter": "c", "text": "As one variable increases, the other decreases" },
+      { "letter": "d", "text": "One variable is always zero" }
+    ],
+    "answer": "c",
+    "explanation": "Inversely proportional means that an increase in one variable results in a proportional decrease in the other."
+  },
+  {
+    "prompt": "If P1 = 760 mmHg and V1 = 500 mL, what is P2 if the volume expands to 1000 mL?",
+    "options": [
+      { "letter": "a", "text": "1520 mmHg" },
+      { "letter": "b", "text": "760 mmHg" },
+      { "letter": "c", "text": "380 mmHg" },
+      { "letter": "d", "text": "190 mmHg" }
+    ],
+    "answer": "c",
+    "explanation": "The volume doubled (from 500 to 1000 mL), so the pressure must halve (from 760 to 380 mmHg)."
+  },
+  {
+    "prompt": "What relationship does Charles's Law describe?",
+    "options": [
+      { "letter": "a", "text": "Pressure and Volume" },
+      { "letter": "b", "text": "Volume and Temperature" },
+      { "letter": "c", "text": "Pressure and Temperature" },
+      { "letter": "d", "text": "Volume and Moles" }
+    ],
+    "answer": "b",
+    "explanation": "Charles's Law describes the direct relationship between the volume and absolute temperature of a gas."
+  },
+  {
+    "prompt": "Which variables must be held constant to apply Charles's Law?",
+    "options": [
+      { "letter": "a", "text": "Pressure and number of moles" },
+      { "letter": "b", "text": "Volume and number of moles" },
+      { "letter": "c", "text": "Temperature and pressure" },
+      { "letter": "d", "text": "Temperature and volume" }
+    ],
+    "answer": "a",
+    "explanation": "Charles's Law assumes that both the pressure of the gas and the amount of gas (moles) remain constant."
+  },
+  {
+    "prompt": "Which mathematical equation correctly represents Charles's Law?",
+    "options": [
+      { "letter": "a", "text": "P1V1 = P2V2" },
+      { "letter": "b", "text": "V1/n1 = V2/n2" },
+      { "letter": "c", "text": "P1/T1 = P2/T2" },
+      { "letter": "d", "text": "V1/T1 = V2/T2" }
+    ],
+    "answer": "d",
+    "explanation": "Charles's Law states that the ratio of volume to temperature is constant, so V1/T1 = V2/T2."
+  },
+  {
+    "prompt": "When using Charles's Law, in what unit must temperature always be measured?",
+    "options": [
+      { "letter": "a", "text": "Celsius" },
+      { "letter": "b", "text": "Fahrenheit" },
+      { "letter": "c", "text": "Kelvin" },
+      { "letter": "d", "text": "Rankine" }
+    ],
+    "answer": "c",
+    "explanation": "Gas law calculations involving temperature require the absolute temperature scale, which is Kelvin."
+  },
+  {
+    "prompt": "A gas has a volume of 2.0 L at 300 K. What will its volume be at 600 K if pressure is constant?",
+    "options": [
+      { "letter": "a", "text": "1.0 L" },
+      { "letter": "b", "text": "2.0 L" },
+      { "letter": "c", "text": "3.0 L" },
+      { "letter": "d", "text": "4.0 L" }
+    ],
+    "answer": "d",
+    "explanation": "Since temperature doubles (from 300 K to 600 K), the volume must also double (from 2.0 L to 4.0 L) because they are directly proportional."
+  },
+  {
+    "prompt": "If a balloon has a volume of 5.0 L at 200 K, at what temperature will its volume be 10.0 L?",
+    "options": [
+      { "letter": "a", "text": "100 K" },
+      { "letter": "b", "text": "300 K" },
+      { "letter": "c", "text": "400 K" },
+      { "letter": "d", "text": "500 K" }
+    ],
+    "answer": "c",
+    "explanation": "V1/T1 = V2/T2. (5.0/200) = (10.0/T2). T2 = 400 K."
+  },
+  {
+    "prompt": "What happens to a balloon if you place it in a freezer?",
+    "options": [
+      { "letter": "a", "text": "It expands" },
+      { "letter": "b", "text": "It shrinks" },
+      { "letter": "c", "text": "It pops immediately" },
+      { "letter": "d", "text": "Its volume stays the same" }
+    ],
+    "answer": "b",
+    "explanation": "According to Charles's Law, as the temperature decreases, the volume of the gas also decreases."
+  },
+  {
+    "prompt": "The graph of Volume vs. Temperature (in Kelvin) for a gas at constant pressure is:",
+    "options": [
+      { "letter": "a", "text": "A hyperbola" },
+      { "letter": "b", "text": "A parabola" },
+      { "letter": "c", "text": "A straight line passing through the origin" },
+      { "letter": "d", "text": "A flat horizontal line" }
+    ],
+    "answer": "c",
+    "explanation": "A direct proportion yields a straight line that points back to the origin (0 K, 0 Volume)."
+  },
+  {
+    "prompt": "A gas occupies 1.0 L at 27°C. What will its volume be at 327°C?",
+    "options": [
+      { "letter": "a", "text": "0.5 L" },
+      { "letter": "b", "text": "2.0 L" },
+      { "letter": "c", "text": "12.1 L" },
+      { "letter": "d", "text": "3.0 L" }
+    ],
+    "answer": "b",
+    "explanation": "First convert to Kelvin: 27°C = 300 K and 327°C = 600 K. Since temp doubles from 300 K to 600 K, volume doubles from 1.0 L to 2.0 L."
+  },
+  {
+    "prompt": "Which real-world example best demonstrates Charles's Law?",
+    "options": [
+      { "letter": "a", "text": "A hot air balloon expanding and rising as the air inside is heated" },
+      { "letter": "b", "text": "Breathing out air from lungs" },
+      { "letter": "c", "text": "Pumping up a bicycle tire" },
+      { "letter": "d", "text": "A scuba diver descending" }
+    ],
+    "answer": "a",
+    "explanation": "Heating the air increases its volume (Charles's Law), decreasing its density and causing the hot air balloon to rise."
+  },
+  {
+    "prompt": "According to Charles's Law, at absolute zero (0 K), the theoretical volume of an ideal gas would be:",
+    "options": [
+      { "letter": "a", "text": "Infinite" },
+      { "letter": "b", "text": "1 Liter" },
+      { "letter": "c", "text": "22.4 Liters" },
+      { "letter": "d", "text": "Zero" }
+    ],
+    "answer": "d",
+    "explanation": "Charles's Law predicts that as temperature approaches absolute zero, the volume of an ideal gas theoretically approaches zero."
+  },
+  {
+    "prompt": "If the absolute temperature of a gas is cut in half, what happens to its volume?",
+    "options": [
+      { "letter": "a", "text": "It doubles" },
+      { "letter": "b", "text": "It is cut in half" },
+      { "letter": "c", "text": "It squares" },
+      { "letter": "d", "text": "It does not change" }
+    ],
+    "answer": "b",
+    "explanation": "Volume and temperature are directly proportional. Halving the temperature halves the volume."
+  },
+  {
+    "prompt": "Who is credited with the formulation of Charles's Law?",
+    "options": [
+      { "letter": "a", "text": "Robert Boyle" },
+      { "letter": "b", "text": "Jacques Charles" },
+      { "letter": "c", "text": "Amedeo Avogadro" },
+      { "letter": "d", "text": "Blaise Pascal" }
+    ],
+    "answer": "b",
+    "explanation": "The French inventor and scientist Jacques Charles formulated this law in the 1780s."
+  },
+  {
+    "prompt": "What relationship does Gay-Lussac's Law describe?",
+    "options": [
+      { "letter": "a", "text": "Volume and Temperature" },
+      { "letter": "b", "text": "Pressure and Volume" },
+      { "letter": "c", "text": "Pressure and Temperature" },
+      { "letter": "d", "text": "Pressure and Moles" }
+    ],
+    "answer": "c",
+    "explanation": "Gay-Lussac's Law states that the pressure of a gas is directly proportional to its absolute temperature."
+  },
+  {
+    "prompt": "Which variables must be held constant for Gay-Lussac's Law to apply?",
+    "options": [
+      { "letter": "a", "text": "Volume and number of moles" },
+      { "letter": "b", "text": "Pressure and volume" },
+      { "letter": "c", "text": "Temperature and moles" },
+      { "letter": "d", "text": "Temperature and pressure" }
+    ],
+    "answer": "a",
+    "explanation": "Gay-Lussac's Law requires a rigid container (constant volume) and a closed system (constant number of moles)."
+  },
+  {
+    "prompt": "Which mathematical equation correctly represents Gay-Lussac's Law?",
+    "options": [
+      { "letter": "a", "text": "P1V1 = P2V2" },
+      { "letter": "b", "text": "V1/T1 = V2/T2" },
+      { "letter": "c", "text": "P1/T1 = P2/T2" },
+      { "letter": "d", "text": "P1/n1 = P2/n2" }
+    ],
+    "answer": "c",
+    "explanation": "The ratio of pressure to temperature is constant, so P1/T1 = P2/T2."
+  },
+  {
+    "prompt": "A gas has a pressure of 1.0 atm at 300 K. If the temperature is raised to 600 K in a rigid container, what is the new pressure?",
+    "options": [
+      { "letter": "a", "text": "0.5 atm" },
+      { "letter": "b", "text": "1.0 atm" },
+      { "letter": "c", "text": "2.0 atm" },
+      { "letter": "d", "text": "4.0 atm" }
+    ],
+    "answer": "c",
+    "explanation": "Temperature doubled (from 300 K to 600 K), so the pressure must also double (from 1.0 atm to 2.0 atm)."
+  },
+  {
+    "prompt": "A gas exerts 3.0 atm of pressure at 400 K. At what temperature will the pressure drop to 1.5 atm?",
+    "options": [
+      { "letter": "a", "text": "100 K" },
+      { "letter": "b", "text": "200 K" },
+      { "letter": "c", "text": "600 K" },
+      { "letter": "d", "text": "800 K" }
+    ],
+    "answer": "b",
+    "explanation": "Since the pressure halved (from 3.0 to 1.5 atm), the absolute temperature must also halve (from 400 K to 200 K)."
+  },
+  {
+    "prompt": "Why should you never throw an aerosol can into a fire?",
+    "options": [
+      { "letter": "a", "text": "The volume will decrease until it implodes" },
+      { "letter": "b", "text": "The temperature drops rapidly" },
+      { "letter": "c", "text": "The gas pressure increases with temperature until it explodes" },
+      { "letter": "d", "text": "The moles of gas multiply" }
+    ],
+    "answer": "c",
+    "explanation": "Gay-Lussac's Law explains that heating a gas in a closed, rigid container causes a dangerous increase in pressure, leading to an explosion."
+  },
+  {
+    "prompt": "What happens to the pressure in your car tires during a cold winter night?",
+    "options": [
+      { "letter": "a", "text": "It increases significantly" },
+      { "letter": "b", "text": "It decreases" },
+      { "letter": "c", "text": "It stays exactly the same" },
+      { "letter": "d", "text": "The tires expand" }
+    ],
+    "answer": "b",
+    "explanation": "As the temperature drops, the pressure of the air inside the tires drops, following Gay-Lussac's Law."
+  },
+  {
+    "prompt": "The graph of Pressure vs. Temperature (in Kelvin) for a gas at constant volume is:",
+    "options": [
+      { "letter": "a", "text": "A straight line passing through the origin" },
+      { "letter": "b", "text": "A curved hyperbola" },
+      { "letter": "c", "text": "A horizontal line" },
+      { "letter": "d", "text": "A vertical line" }
+    ],
+    "answer": "a",
+    "explanation": "The direct proportionality between pressure and Kelvin temperature results in a straight line that intersects the origin."
+  },
+  {
+    "prompt": "A gas is at 2.0 atm and 27°C. What is the pressure if it is heated to 127°C?",
+    "options": [
+      { "letter": "a", "text": "2.67 atm" },
+      { "letter": "b", "text": "9.4 atm" },
+      { "letter": "c", "text": "4.0 atm" },
+      { "letter": "d", "text": "1.5 atm" }
+    ],
+    "answer": "a",
+    "explanation": "Convert to Kelvin: 300 K and 400 K. P1/T1 = P2/T2. (2.0/300) = (P2/400). P2 = 800/300 = 2.67 atm."
+  },
+  {
+    "prompt": "If the Kelvin temperature of a gas in a rigid container is tripled, the pressure will:",
+    "options": [
+      { "letter": "a", "text": "Triple" },
+      { "letter": "b", "text": "Be reduced to one-third" },
+      { "letter": "c", "text": "Increase by nine times" },
+      { "letter": "d", "text": "Remain constant" }
+    ],
+    "answer": "a",
+    "explanation": "Pressure and absolute temperature are directly proportional, so tripling the temperature triples the pressure."
+  },
+  {
+    "prompt": "Which temperature scale must be used for calculations involving Gay-Lussac's Law?",
+    "options": [
+      { "letter": "a", "text": "Celsius" },
+      { "letter": "b", "text": "Fahrenheit" },
+      { "letter": "c", "text": "Kelvin" },
+      { "letter": "d", "text": "Centigrade" }
+    ],
+    "answer": "c",
+    "explanation": "All gas laws involving temperature require the Kelvin scale to ensure temperature values are absolute and positive."
+  },
+  {
+    "prompt": "Gay-Lussac's Law is sometimes also referred to by the name of another scientist who studied it earlier. Who is it?",
+    "options": [
+      { "letter": "a", "text": "Guillaume Amontons" },
+      { "letter": "b", "text": "Evangelista Torricelli" },
+      { "letter": "c", "text": "Dmitri Mendeleev" },
+      { "letter": "d", "text": "Antoine Lavoisier" }
+    ],
+    "answer": "a",
+    "explanation": "The law is often called Amontons's Law, after Guillaume Amontons, who first discovered the relationship between pressure and temperature."
+  },
+  {
+    "prompt": "What relationship does Avogadro's Law describe?",
+    "options": [
+      { "letter": "a", "text": "Pressure and Volume" },
+      { "letter": "b", "text": "Volume and Moles" },
+      { "letter": "c", "text": "Pressure and Temperature" },
+      { "letter": "d", "text": "Moles and Temperature" }
+    ],
+    "answer": "b",
+    "explanation": "Avogadro's Law states that the volume of a gas is directly proportional to the number of moles of the gas."
+  },
+  {
+    "prompt": "Which variables are held constant in Avogadro's Law?",
+    "options": [
+      { "letter": "a", "text": "Pressure and Temperature" },
+      { "letter": "b", "text": "Volume and Temperature" },
+      { "letter": "c", "text": "Pressure and Moles" },
+      { "letter": "d", "text": "Volume and Moles" }
+    ],
+    "answer": "a",
+    "explanation": "Avogadro's Law holds true when both the pressure and the temperature of the gas remain constant."
+  },
+  {
+    "prompt": "Which mathematical equation correctly represents Avogadro's Law?",
+    "options": [
+      { "letter": "a", "text": "P1V1 = P2V2" },
+      { "letter": "b", "text": "V1/T1 = V2/T2" },
+      { "letter": "c", "text": "P1/T1 = P2/T2" },
+      { "letter": "d", "text": "V1/n1 = V2/n2" }
+    ],
+    "answer": "d",
+    "explanation": "The ratio of volume to the number of moles is constant, so V1/n1 = V2/n2."
+  },
+  {
+    "prompt": "According to Avogadro's Law, equal volumes of different gases at the same temperature and pressure contain:",
+    "options": [
+      { "letter": "a", "text": "The same mass" },
+      { "letter": "b", "text": "The same density" },
+      { "letter": "c", "text": "The same number of molecules (moles)" },
+      { "letter": "d", "text": "The same molecular weight" }
+    ],
+    "answer": "c",
+    "explanation": "Equal volumes of any ideal gas at the same temperature and pressure contain an equal number of particles or moles."
+  },
+  {
+    "prompt": "What is the volume of 1 mole of any ideal gas at Standard Temperature and Pressure (STP)?",
+    "options": [
+      { "letter": "a", "text": "1.0 L" },
+      { "letter": "b", "text": "100 L" },
+      { "letter": "c", "text": "22.4 L" },
+      { "letter": "d", "text": "24.5 L" }
+    ],
+    "answer": "c",
+    "explanation": "At STP (0°C and 1 atm), 1 mole of an ideal gas occupies exactly 22.4 Liters."
+  },
+  {
+    "prompt": "A 10.0 L balloon contains 1.0 mole of gas. If another 1.0 mole of gas is added at constant P and T, what is the new volume?",
+    "options": [
+      { "letter": "a", "text": "5.0 L" },
+      { "letter": "b", "text": "10.0 L" },
+      { "letter": "c", "text": "20.0 L" },
+      { "letter": "d", "text": "15.0 L" }
+    ],
+    "answer": "c",
+    "explanation": "Doubling the number of moles (from 1.0 to 2.0) doubles the volume (from 10.0 L to 20.0 L)."
+  },
+  {
+    "prompt": "A 5.0 L sample of gas contains 0.5 moles. How many moles are needed to expand the volume to 15.0 L?",
+    "options": [
+      { "letter": "a", "text": "1.0 mole" },
+      { "letter": "b", "text": "1.5 moles" },
+      { "letter": "c", "text": "2.0 moles" },
+      { "letter": "d", "text": "3.0 moles" }
+    ],
+    "answer": "b",
+    "explanation": "V1/n1 = V2/n2. (5.0/0.5) = (15.0/n2). 10 = 15.0/n2. n2 = 1.5 moles."
+  },
+  {
+    "prompt": "Which everyday action is the best example of Avogadro's Law?",
+    "options": [
+      { "letter": "a", "text": "Heating a meal in a microwave" },
+      { "letter": "b", "text": "Blowing air into a flat balloon to inflate it" },
+      { "letter": "c", "text": "A tire deflating in the cold" },
+      { "letter": "d", "text": "Squeezing a stress ball" }
+    ],
+    "answer": "b",
+    "explanation": "Blowing air into a balloon adds more gas molecules (moles), which directly increases its volume."
+  },
+  {
+    "prompt": "The graph of Volume vs. Number of moles (n) at constant T and P is:",
+    "options": [
+      { "letter": "a", "text": "A straight line passing through the origin" },
+      { "letter": "b", "text": "A curved line" },
+      { "letter": "c", "text": "A horizontal line" },
+      { "letter": "d", "text": "A jagged line" }
+    ],
+    "answer": "a",
+    "explanation": "Because volume and moles are directly proportional, their graph is a straight line through the origin."
+  },
+  {
+    "prompt": "If gas leaks out of a flexible container (like a balloon), what happens to its volume according to Avogadro's Law?",
+    "options": [
+      { "letter": "a", "text": "It increases" },
+      { "letter": "b", "text": "It decreases" },
+      { "letter": "c", "text": "It remains constant" },
+      { "letter": "d", "text": "It fluctuates" }
+    ],
+    "answer": "b",
+    "explanation": "Losing gas means a decrease in the number of moles. Since V and n are directly proportional, the volume decreases."
+  },
+  {
+    "prompt": "If 2.0 moles of Oxygen gas occupy 40 L, what volume would 1.0 mole of Nitrogen gas occupy under the same conditions?",
+    "options": [
+      { "letter": "a", "text": "10 L" },
+      { "letter": "b", "text": "20 L" },
+      { "letter": "c", "text": "40 L" },
+      { "letter": "d", "text": "80 L" }
+    ],
+    "answer": "b",
+    "explanation": "If 2.0 moles occupy 40 L, 1.0 mole will occupy half the volume, which is 20 L. Gas type doesn't matter for ideal gases."
+  },
+  {
+    "prompt": "Who proposed the principle that relates gas volume to the number of molecules?",
+    "options": [
+      { "letter": "a", "text": "Amedeo Avogadro" },
+      { "letter": "b", "text": "Johannes van der Waals" },
+      { "letter": "c", "text": "Robert Boyle" },
+      { "letter": "d", "text": "John Dalton" }
+    ],
+    "answer": "a",
+    "explanation": "The Italian scientist Amedeo Avogadro proposed this foundational principle of chemistry in 1811."
+  }
+]
