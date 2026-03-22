@@ -1,19 +1,19 @@
 const calculateAssignmentPercentage = (assignments) => {
-  if (!assignments || assignments.length === 0) return 0
+  if (!assignments || assignments.length === 0) return NaN
 
   const validAssignments = assignments.filter(
     (assignment) =>
       assignment.status !== 'pending' && assignment.status !== 'exempt'
   )
 
-  if (validAssignments.length === 0) return 0
+  if (validAssignments.length === 0) return NaN
 
   const totalPoints = validAssignments.reduce(
     (sum, assignment) => sum + Number(assignment.total),
     0
   )
 
-  if (totalPoints === 0) return 0
+  if (totalPoints === 0) return NaN
 
   const earnedPoints = validAssignments.reduce(
     (sum, assignment) => sum + Number(assignment.score),
