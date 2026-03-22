@@ -19,7 +19,7 @@ const parseXMLData = (xmlDoc) => {
           status: assignment.getAttribute('status'),
         })).filter(
           (assignment) =>
-            assignment.score !== 0 || assignment.total !== 0
+            assignment.score !== 0 || assignment.total !== 0 || assignment.status === 'pending' || assignment.status === 'exempt'
         ),
       }))
 
@@ -30,6 +30,14 @@ const parseXMLData = (xmlDoc) => {
         grade: courseGrade,
         categories: categories,
       }
+    })
+    .filter((course) => {
+      return course.categories.some((category) =>
+        category.assignments.some(
+          (assignment) =>
+            assignment.status !== 'pending' && assignment.status !== 'exempt'
+        )
+      )
     })
     .sort((a, b) => b.grade - a.grade)
 }
