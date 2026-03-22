@@ -1,14 +1,29 @@
 const GradeProgress = ({grade}) => {
+   const gradeInfo = getGradeInfo(grade)
+   const GRADE_ORDER = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F']
+   
+   let currentIdx = GRADE_ORDER.indexOf(gradeInfo.current)
+   if (currentIdx === -1) currentIdx = 0
+   
+   let midIdx = currentIdx
+   if (midIdx === 0) midIdx = 1
+   if (midIdx === GRADE_ORDER.length - 1) midIdx = GRADE_ORDER.length - 2
+   
+   const leftIdx = midIdx + 1
+   const rightIdx = midIdx - 1
+   
+   const leftLabel = GRADE_ORDER[leftIdx]
+   const midLabel = GRADE_ORDER[midIdx]
+   const rightLabel = GRADE_ORDER[rightIdx]
+   
+   const leftVal = GRADE_CUTOFFS[leftLabel]
+   const midVal = GRADE_CUTOFFS[midLabel]
+   const rightVal = GRADE_CUTOFFS[rightLabel]
+   
    const width = 100
-   const position = Math.min(
-      Math.max(
-         ((grade - GRADE_CUTOFFS['B+']) /
-            (GRADE_CUTOFFS.A - GRADE_CUTOFFS['B+'])) *
-         width,
-         0,
-      ),
-      width,
-   )
+   const range = rightVal - leftVal || 1
+   const position = Math.min(Math.max(((grade - leftVal) / range) * width, 0), width)
+   const midPosition = ((midVal - leftVal) / range) * width
 
    return React.createElement(
       'div',
@@ -27,15 +42,16 @@ const GradeProgress = ({grade}) => {
                className:
                   'absolute top-3 left-0 -translate-x-1/2 text-xs text-yellow-600 font-medium',
             },
-            'B+',
+            leftLabel,
          ),
          React.createElement(
             'span',
             {
                className:
-                  'absolute top-3 left-1/2 -translate-x-1/2 text-xs text-yellow-700 font-medium',
+                  'absolute top-3 -translate-x-1/2 text-xs text-yellow-700 font-medium',
+               style: {left: `${midPosition}%`},
             },
-            'A-',
+            midLabel,
          ),
          React.createElement(
             'span',
@@ -43,8 +59,10 @@ const GradeProgress = ({grade}) => {
                className:
                   'absolute top-3 right-0 translate-x-1/2 text-xs text-green-600 font-medium',
             },
-            'A',
+            rightLabel,
          ),
       ],
    )
 }
+
+window.GradeProgress = GradeProgress
