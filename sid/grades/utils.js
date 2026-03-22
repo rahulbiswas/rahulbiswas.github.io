@@ -19,7 +19,8 @@ const parseXMLData = (xmlDoc) => {
           status: assignment.getAttribute('status'),
         })).filter(
           (assignment) =>
-            assignment.score !== 0 || assignment.total !== 0 || assignment.status === 'pending' || assignment.status === 'exempt'
+            (assignment.score !== 0 || assignment.total !== 0 || assignment.status === 'pending' || assignment.status === 'exempt') &&
+            !(assignment.score === 0 && assignment.total === 0 && assignment.status !== 'pending' && assignment.status !== 'exempt')
         ),
       }))
 
