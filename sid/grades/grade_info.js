@@ -1,4 +1,5 @@
 const GRADE_CUTOFFS = {
+  'A+': 96.5,
   'A': 92.5,
   'A-': 89.5,
   'B+': 86.5,
@@ -13,7 +14,7 @@ const GRADE_CUTOFFS = {
   'F': 0.0
 }
 
-const GRADE_ORDER = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F']
+const GRADE_ORDER = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F']
 
 const getGradeInfo = (currentGrade) => {
   let currentIndex = GRADE_ORDER.length - 1
