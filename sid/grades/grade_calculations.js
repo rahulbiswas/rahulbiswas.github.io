@@ -27,7 +27,7 @@ const findDroppedAssignments = (categories, courseName, hypotheticalAssignments 
   let allCompletedAssignments = []
   categories.forEach(category => {
     let assignments = [...category.assignments]
-    hypotheticalKey = courseName + category.name;
+    let hypotheticalKey = courseName + category.name;
     if (hypotheticalAssignments[hypotheticalKey]) {
       assignments = [...assignments, ...hypotheticalAssignments[hypotheticalKey]]
     }
@@ -57,13 +57,15 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
 
   let totalWeight = 0
   let weightedSum = 0
+  let totalEarnedPoints = 0
+  let totalPossiblePoints = 0
   
   const droppedAssignments = findDroppedAssignments(categories, courseName, hypotheticalAssignments)
 
   categories.forEach((category) => {
     let assignments = [...category.assignments]
 
-    hypotheticalKey = courseName + category.name;
+    let hypotheticalKey = courseName + category.name;
     if (hypotheticalAssignments[hypotheticalKey]) {
       assignments = [...assignments, ...hypotheticalAssignments[hypotheticalKey]]
     }
@@ -77,6 +79,15 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
       )
     )
 
+    const validAssignments = assignments.filter(
+      (a) => a.status !== 'pending' && a.status !== 'exempt'
+    )
+
+    validAssignments.forEach((a) => {
+      totalEarnedPoints += Number(a.score)
+      totalPossiblePoints += Number(a.total)
+    })
+
     const percentage = calculateAssignmentPercentage(assignments)
     if (!isNaN(percentage)) {
       weightedSum += percentage * (category.weight / 100)
@@ -84,7 +95,11 @@ const calculateCourseGrade = (categories, courseName, hypotheticalAssignments = 
     }
   })
 
-  return totalWeight > 0 ? weightedSum / totalWeight : 0
+  if (totalWeight > 0) {
+    return weightedSum / totalWeight
+  }
+
+  return totalPossiblePoints > 0 ? (totalEarnedPoints / totalPossiblePoints) * 100 : 0
 }
 
 window.calculateAssignmentPercentage = calculateAssignmentPercentage
