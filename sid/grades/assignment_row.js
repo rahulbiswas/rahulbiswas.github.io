@@ -1,4 +1,5 @@
 const AssignmentRow = ({assignment, isDropped, dropNumber}) => {
+   if (assignment.status === 'pending') return null
    return React.createElement(
       'div',
       {
