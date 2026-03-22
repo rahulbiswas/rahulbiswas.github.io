@@ -13,12 +13,12 @@ const CategorySection = ({category, idx, courseName, hypotheticalAssignments, on
 
   const categoryPercentage = calculateAssignmentPercentage(activeAssignments)
 
-  const totalEarned = activeAssignments
+  const totalEarned = Number(activeAssignments
     .filter(a => a.status !== 'pending' && a.status !== 'exempt')
-    .reduce((sum, a) => sum + Number(a.score), 0)
-  const totalPossible = activeAssignments
+    .reduce((sum, a) => sum + Number(a.score), 0).toFixed(2))
+  const totalPossible = Number(activeAssignments
     .filter(a => a.status !== 'pending' && a.status !== 'exempt')
-    .reduce((sum, a) => sum + Number(a.total), 0)
+    .reduce((sum, a) => sum + Number(a.total), 0).toFixed(2))
 
   return React.createElement(
     'div',
