@@ -1,552 +1,552 @@
 [
   {
-    "prompt": "Jisoo is packing hairspray for the 'Born Pink' tour. The 100 mL can is pressurized at 2.0 atm. If the gas is compressed to 50 mL inside the pump mechanism at constant temperature, what is the new pressure?",
+    "prompt": "Jisoo is playing with a sealed, empty syringe backstage. When she pushes the plunger in without letting air escape, what happens to the gas pressure inside?",
     "options": [
-      { "letter": "a", "text": "1.0 atm" },
-      { "letter": "b", "text": "2.0 atm" },
-      { "letter": "c", "text": "4.0 atm" },
-      { "letter": "d", "text": "8.0 atm" }
-    ],
-    "answer": "c",
-    "explanation": "Boyle's Law (P1V1 = P2V2): (2.0)(100) = (P2)(50). P2 = 200/50 = 4.0 atm."
-  },
-  {
-    "prompt": "Lisa drops a prop diamond into a water tank during a music video shoot. An air bubble from the bottom at 5.0 atm has a volume of 10.0 mL. As it rises to the surface (1.0 atm), what is its new volume?",
-    "options": [
-      { "letter": "a", "text": "2.0 mL" },
-      { "letter": "b", "text": "10.0 mL" },
-      { "letter": "c", "text": "25.0 mL" },
-      { "letter": "d", "text": "50.0 mL" }
-    ],
-    "answer": "d",
-    "explanation": "Boyle's Law: (5.0)(10.0) = (1.0)(V2). V2 = 50.0 mL."
-  },
-  {
-    "prompt": "Rosé's sealed snack bag has a volume of 2.0 L at 1.0 atm on the ground. When BLACKPINK's private jet reaches altitude, the cabin pressure drops to 0.8 atm. What is the new volume of the bag?",
-    "options": [
-      { "letter": "a", "text": "1.6 L" },
-      { "letter": "b", "text": "2.5 L" },
-      { "letter": "c", "text": "3.0 L" },
-      { "letter": "d", "text": "4.0 L" }
+      { "letter": "a", "text": "It decreases because the gas particles slow down" },
+      { "letter": "b", "text": "It increases because the gas particles are squeezed into a smaller space" },
+      { "letter": "c", "text": "It stays exactly the same" },
+      { "letter": "d", "text": "It drops to zero" }
     ],
     "answer": "b",
-    "explanation": "Boyle's Law: (1.0)(2.0) = (0.8)(V2). V2 = 2.0 / 0.8 = 2.5 L."
+    "explanation": "According to Boyle's Law, when volume decreases, the gas particles hit the container walls more frequently, causing an increase in pressure."
   },
   {
-    "prompt": "Jennie is setting up a confetti cannon. The gas chamber contains 5.0 L of air at 4.0 atm. If the chamber expands to 10.0 L before firing, what is the pressure inside?",
+    "prompt": "During a music video shoot, Lisa releases a balloon underwater. As the balloon rises to the surface where the water pressure is lower, what happens to the size of the balloon?",
     "options": [
-      { "letter": "a", "text": "1.0 atm" },
-      { "letter": "b", "text": "2.0 atm" },
-      { "letter": "c", "text": "4.0 atm" },
-      { "letter": "d", "text": "8.0 atm" }
+      { "letter": "a", "text": "It shrinks" },
+      { "letter": "b", "text": "It stays the same size" },
+      { "letter": "c", "text": "It expands" },
+      { "letter": "d", "text": "It freezes" }
+    ],
+    "answer": "c",
+    "explanation": "Boyle's Law states that pressure and volume are inversely proportional. As external pressure decreases near the surface, the balloon's volume increases."
+  },
+  {
+    "prompt": "Which statement best describes the relationship in Boyle's Law?",
+    "options": [
+      { "letter": "a", "text": "Pressure and Volume are directly proportional" },
+      { "letter": "b", "text": "Pressure and Volume are inversely proportional" },
+      { "letter": "c", "text": "Volume and Temperature are directly proportional" },
+      { "letter": "d", "text": "Pressure and Temperature are inversely proportional" }
     ],
     "answer": "b",
-    "explanation": "Boyle's Law: (4.0)(5.0) = (P2)(10.0). P2 = 20.0 / 10.0 = 2.0 atm."
+    "explanation": "Boyle's Law is an inverse relationship: if you increase the volume, the pressure drops, and if you decrease the volume, the pressure rises."
   },
   {
-    "prompt": "During a backstage skit, Jisoo playfully pushes a large 60.0 mL syringe blocked at the end. The initial pressure is 1.0 atm. She pushes the plunger down to 15.0 mL. What is the new pressure?",
+    "prompt": "Rosé buys a sealed bag of chips at sea level. When BLACKPINK's private jet reaches cruising altitude (where cabin pressure is lower), the bag puffs up. Why?",
     "options": [
-      { "letter": "a", "text": "0.25 atm" },
-      { "letter": "b", "text": "2.0 atm" },
-      { "letter": "c", "text": "3.0 atm" },
-      { "letter": "d", "text": "4.0 atm" }
-    ],
-    "answer": "d",
-    "explanation": "Boyle's Law: (1.0)(60.0) = (P2)(15.0). P2 = 60.0 / 15.0 = 4.0 atm."
-  },
-  {
-    "prompt": "Boyle's Law requires which two variables to be held constant?",
-    "options": [
-      { "letter": "a", "text": "Pressure and Volume" },
-      { "letter": "b", "text": "Temperature and Amount of gas (moles)" },
-      { "letter": "c", "text": "Pressure and Temperature" },
-      { "letter": "d", "text": "Volume and Temperature" }
-    ],
-    "answer": "b",
-    "explanation": "Boyle's Law only examines the relationship between Pressure and Volume, meaning Temperature and Moles must remain constant."
-  },
-  {
-    "prompt": "Lisa brings a 15.0 L helium balloon from a 2.0 atm pressure room to a standard 1.0 atm room. What is the balloon's new volume?",
-    "options": [
-      { "letter": "a", "text": "7.5 L" },
-      { "letter": "b", "text": "15.0 L" },
-      { "letter": "c", "text": "30.0 L" },
-      { "letter": "d", "text": "45.0 L" }
+      { "letter": "a", "text": "The gas particles inside get hotter" },
+      { "letter": "b", "text": "More gas was pumped into the bag" },
+      { "letter": "c", "text": "The decreased outside pressure allows the trapped gas to expand" },
+      { "letter": "d", "text": "The gas particles undergo a chemical reaction" }
     ],
     "answer": "c",
-    "explanation": "Boyle's Law: (2.0)(15.0) = (1.0)(V2). V2 = 30.0 L. Pressure halved, so volume doubled."
+    "explanation": "Because the external pressure dropped, the internal pressure pushes the bag outward, increasing the volume (Boyle's Law)."
   },
   {
-    "prompt": "A stage pump for BLACKPINK's inflatable props holds 100 mL of air at 1.0 atm. If compressed to 25 mL, what does the pressure gauge read?",
+    "prompt": "To observe Boyle's Law in a chemistry lab, which two variables must Jennie keep perfectly constant?",
     "options": [
-      { "letter": "a", "text": "2.0 atm" },
-      { "letter": "b", "text": "4.0 atm" },
-      { "letter": "c", "text": "6.0 atm" },
-      { "letter": "d", "text": "8.0 atm" }
-    ],
-    "answer": "b",
-    "explanation": "Boyle's Law: (1.0)(100) = (P2)(25). P2 = 100 / 25 = 4.0 atm."
-  },
-  {
-    "prompt": "If Rosé measures a gas at 50 mL and 3.0 atm, what volume will it occupy at 1.0 atm assuming constant temperature?",
-    "options": [
-      { "letter": "a", "text": "16.7 mL" },
-      { "letter": "b", "text": "50 mL" },
-      { "letter": "c", "text": "100 mL" },
-      { "letter": "d", "text": "150 mL" }
-    ],
-    "answer": "d",
-    "explanation": "Boyle's Law: (3.0)(50) = (1.0)(V2). V2 = 150 mL."
-  },
-  {
-    "prompt": "Which curve accurately represents the relationship between Pressure and Volume in Boyle's Law?",
-    "options": [
-      { "letter": "a", "text": "A straight line sloping upwards" },
-      { "letter": "b", "text": "A downward sloping hyperbola" },
-      { "letter": "c", "text": "A horizontal line" },
-      { "letter": "d", "text": "An upward opening parabola" }
-    ],
-    "answer": "b",
-    "explanation": "Pressure and Volume are inversely proportional. Graphing them creates a downward sloping hyperbola (an inverse curve)."
-  },
-  {
-    "prompt": "Rosé's giant swan float has a volume of 10.0 L at 300 K. Left in the hot concert sun, it heats to 330 K. What is the new volume? (Assume constant pressure)",
-    "options": [
-      { "letter": "a", "text": "9.0 L" },
-      { "letter": "b", "text": "10.0 L" },
-      { "letter": "c", "text": "11.0 L" },
-      { "letter": "d", "text": "12.0 L" }
+      { "letter": "a", "text": "Volume and Pressure" },
+      { "letter": "b", "text": "Pressure and Temperature" },
+      { "letter": "c", "text": "Temperature and the amount of gas (moles)" },
+      { "letter": "d", "text": "Volume and the amount of gas (moles)" }
     ],
     "answer": "c",
-    "explanation": "Charles's Law (V1/T1 = V2/T2): 10.0 / 300 = V2 / 330. V2 = (10.0 * 330) / 300 = 11.0 L."
+    "explanation": "Boyle's Law only isolates the relationship between Pressure and Volume, meaning Temperature and the amount of gas must remain unchanged."
   },
   {
-    "prompt": "Lisa's decorative stage balloon has a volume of 4.0 L at 200 K. The stage pyrotechnics heat the air until the balloon reaches 8.0 L. What is the new temperature?",
+    "prompt": "If Jisoo graphs the relationship between Pressure and Volume for an ideal gas at a constant temperature, what will the line look like?",
     "options": [
-      { "letter": "a", "text": "100 K" },
-      { "letter": "b", "text": "300 K" },
-      { "letter": "c", "text": "400 K" },
-      { "letter": "d", "text": "800 K" }
+      { "letter": "a", "text": "A straight, upward-sloping line" },
+      { "letter": "b", "text": "A straight, horizontal line" },
+      { "letter": "c", "text": "A downward-sloping curve (hyperbola)" },
+      { "letter": "d", "text": "A perfect circle" }
     ],
     "answer": "c",
-    "explanation": "Charles's Law: 4.0 / 200 = 8.0 / T2. T2 = (8.0 * 200) / 4.0 = 400 K."
+    "explanation": "Because Pressure and Volume are inversely related, graphing them creates a downward curve, indicating that as one gets larger, the other gets smaller."
   },
   {
-    "prompt": "Jennie's tour bus tire has a volume of 30.0 L at 300 K. As they drive into a snowy city, the temperature drops to 250 K. What is the new volume if pressure is constant?",
+    "prompt": "Lisa is deep-sea diving on vacation. Why is it dangerous for her to hold her breath while swimming quickly up to the surface?",
     "options": [
-      { "letter": "a", "text": "20.0 L" },
-      { "letter": "b", "text": "25.0 L" },
-      { "letter": "c", "text": "30.0 L" },
-      { "letter": "d", "text": "35.0 L" }
-    ],
-    "answer": "b",
-    "explanation": "Charles's Law: 30.0 / 300 = V2 / 250. V2 = (30.0 * 250) / 300 = 25.0 L."
-  },
-  {
-    "prompt": "Jisoo sets up an outdoor inflatable prop. At 280 K, it holds 5.0 L of air. As the sun rises, the temperature reaches 336 K. What is the new volume?",
-    "options": [
-      { "letter": "a", "text": "4.0 L" },
-      { "letter": "b", "text": "5.5 L" },
-      { "letter": "c", "text": "6.0 L" },
-      { "letter": "d", "text": "7.0 L" }
-    ],
-    "answer": "c",
-    "explanation": "Charles's Law: 5.0 / 280 = V2 / 336. V2 = (5.0 * 336) / 280 = 6.0 L."
-  },
-  {
-    "prompt": "Rosé is baking bread for the girls. The gas bubbles in the dough occupy 2.0 L at 300 K. If the dough expands to 4.0 L in the oven, what is the temperature in the oven? (Assume constant pressure)",
-    "options": [
-      { "letter": "a", "text": "150 K" },
-      { "letter": "b", "text": "400 K" },
-      { "letter": "c", "text": "500 K" },
-      { "letter": "d", "text": "600 K" }
-    ],
-    "answer": "d",
-    "explanation": "Charles's Law: Volume doubled (2.0 to 4.0 L), so Kelvin temperature must double (300 K to 600 K)."
-  },
-  {
-    "prompt": "Lisa wants to ride a hot air balloon for a photoshoot. The balloon holds 1000 L of air at 300 K. The burner heats the air to 360 K. What is the new volume?",
-    "options": [
-      { "letter": "a", "text": "1100 L" },
-      { "letter": "b", "text": "1200 L" },
-      { "letter": "c", "text": "1300 L" },
-      { "letter": "d", "text": "1400 L" }
-    ],
-    "answer": "b",
-    "explanation": "Charles's Law: 1000 / 300 = V2 / 360. V2 = (1000 * 360) / 300 = 1200 L."
-  },
-  {
-    "prompt": "Jennie uses a hair dryer that takes in 2.0 L of air at 300 K and heats it to 450 K before blowing it out. What is the volume of the hot air?",
-    "options": [
-      { "letter": "a", "text": "1.33 L" },
-      { "letter": "b", "text": "2.5 L" },
-      { "letter": "c", "text": "3.0 L" },
-      { "letter": "d", "text": "4.0 L" }
-    ],
-    "answer": "c",
-    "explanation": "Charles's Law: 2.0 / 300 = V2 / 450. V2 = (2.0 * 450) / 300 = 3.0 L."
-  },
-  {
-    "prompt": "Jisoo notices the stage fog shrinking rapidly. It was 20.0 L at 250 K, but dropped to 10.0 L as it hit the cold stage floor. What is the temperature of the floor?",
-    "options": [
-      { "letter": "a", "text": "100 K" },
-      { "letter": "b", "text": "125 K" },
-      { "letter": "c", "text": "150 K" },
-      { "letter": "d", "text": "200 K" }
-    ],
-    "answer": "b",
-    "explanation": "Charles's Law: Volume halved (20.0 to 10.0 L), so Kelvin temperature halves (250 K to 125 K)."
-  },
-  {
-    "prompt": "Why is it mathematically necessary to use the Kelvin scale for Charles's Law?",
-    "options": [
-      { "letter": "a", "text": "Celsius is too difficult to calculate" },
-      { "letter": "b", "text": "Kelvin is the only scale used by scientists" },
-      { "letter": "c", "text": "To prevent dividing by zero or calculating negative volumes" },
-      { "letter": "d", "text": "Fahrenheit is the standard unit for gases" }
-    ],
-    "answer": "c",
-    "explanation": "Celsius can be zero or negative, which would mathematically result in zero or negative volume. Kelvin starts at absolute zero, keeping ratios positive."
-  },
-  {
-    "prompt": "If you graph Volume vs. Temperature (in Kelvin) for a gas obeying Charles's Law, what does the line look like?",
-    "options": [
-      { "letter": "a", "text": "A downward curve" },
-      { "letter": "b", "text": "A straight horizontal line" },
-      { "letter": "c", "text": "A straight line passing through the origin" },
-      { "letter": "d", "text": "A U-shaped parabola" }
-    ],
-    "answer": "c",
-    "explanation": "Volume and Temperature are directly proportional. The graph is a straight line that would theoretically intersect the origin (0 K, 0 L)."
-  },
-  {
-    "prompt": "Lisa leaves a rigid can of hairspray in the sun. Initially at 2.0 atm and 300 K, the can heats up to 450 K. What is the new pressure?",
-    "options": [
-      { "letter": "a", "text": "1.33 atm" },
-      { "letter": "b", "text": "2.5 atm" },
-      { "letter": "c", "text": "3.0 atm" },
-      { "letter": "d", "text": "4.5 atm" }
-    ],
-    "answer": "c",
-    "explanation": "Gay-Lussac's Law (P1/T1 = P2/T2): 2.0 / 300 = P2 / 450. P2 = (2.0 * 450) / 300 = 3.0 atm."
-  },
-  {
-    "prompt": "Jennie's car tire reads 3.0 atm at 300 K. After driving fast to a BLACKPINK concert, the pressure rises to 4.0 atm. What is the tire's new temperature?",
-    "options": [
-      { "letter": "a", "text": "225 K" },
-      { "letter": "b", "text": "350 K" },
-      { "letter": "c", "text": "400 K" },
-      { "letter": "d", "text": "500 K" }
-    ],
-    "answer": "c",
-    "explanation": "Gay-Lussac's Law: 3.0 / 300 = 4.0 / T2. T2 = (4.0 * 300) / 3.0 = 400 K."
-  },
-  {
-    "prompt": "Rosé's sealed spray paint can for a music video is at 1.5 atm at 200 K. The prop master heats it to 400 K. What is the pressure now?",
-    "options": [
-      { "letter": "a", "text": "0.75 atm" },
-      { "letter": "b", "text": "2.0 atm" },
-      { "letter": "c", "text": "3.0 atm" },
-      { "letter": "d", "text": "4.5 atm" }
-    ],
-    "answer": "c",
-    "explanation": "Gay-Lussac's Law: Temperature doubled (200 K to 400 K), so pressure doubles (1.5 to 3.0 atm)."
-  },
-  {
-    "prompt": "Jisoo's rigid metal prop holds gas at 5.0 atm and 500 K. It is left in a cold storage room until the temperature drops to 250 K. What is the new pressure?",
-    "options": [
-      { "letter": "a", "text": "2.5 atm" },
-      { "letter": "b", "text": "5.0 atm" },
-      { "letter": "c", "text": "7.5 atm" },
-      { "letter": "d", "text": "10.0 atm" }
+      { "letter": "a", "text": "The dropping water pressure would cause the air in her lungs to expand rapidly" },
+      { "letter": "b", "text": "The rising water pressure would crush her lungs" },
+      { "letter": "c", "text": "The temperature change would freeze the gas in her lungs" },
+      { "letter": "d", "text": "The oxygen would turn into a liquid" }
     ],
     "answer": "a",
-    "explanation": "Gay-Lussac's Law: Temperature halved (500 to 250 K), so pressure halves (5.0 to 2.5 atm)."
+    "explanation": "This is a real-world application of Boyle's Law. As external pressure decreases on the way up, trapped air expands, which could rupture lung tissue."
   },
   {
-    "prompt": "Lisa's bicycle tire has a pressure of 2.0 atm at 280 K. She rides on hot pavement, raising the tire temperature to 350 K. What is the new pressure?",
+    "prompt": "At a molecular level, why does squeezing a flexible container increase the gas pressure inside?",
     "options": [
-      { "letter": "a", "text": "1.6 atm" },
-      { "letter": "b", "text": "2.5 atm" },
-      { "letter": "c", "text": "3.2 atm" },
-      { "letter": "d", "text": "4.0 atm" }
+      { "letter": "a", "text": "The molecules expand to become physically larger" },
+      { "letter": "b", "text": "The molecules get hotter and move faster" },
+      { "letter": "c", "text": "The molecules have less space, so they collide with the walls more frequently" },
+      { "letter": "d", "text": "The molecules become heavier" }
+    ],
+    "answer": "c",
+    "explanation": "Pressure is caused by molecular collisions. If you reduce the volume, the same number of particles will hit the walls more often, increasing pressure."
+  },
+  {
+    "prompt": "Jennie takes a deep breath before singing her high note. As her diaphragm contracts, her chest cavity expands. What happens to the air pressure inside her lungs?",
+    "options": [
+      { "letter": "a", "text": "The pressure increases, pushing air out" },
+      { "letter": "b", "text": "The pressure decreases, pulling air in" },
+      { "letter": "c", "text": "The pressure remains equal to the room" },
+      { "letter": "d", "text": "The volume of the air particles themselves shrinks" }
     ],
     "answer": "b",
-    "explanation": "Gay-Lussac's Law: 2.0 / 280 = P2 / 350. P2 = (2.0 * 350) / 280 = 2.5 atm."
+    "explanation": "By increasing the volume of her chest, the pressure inside drops below room pressure. Air naturally rushes in to balance it (Boyle's Law in action)."
   },
   {
-    "prompt": "Jennie notices the stage fire extinguisher has a pressure of 10.0 atm at 300 K. If it sits near the pyrotechnics and heats up to 600 K, what does the gauge read?",
+    "prompt": "Rosé squishes a prop foam stress ball filled with air. What happens to the density of the gas inside as she decreases the volume?",
     "options": [
-      { "letter": "a", "text": "5.0 atm" },
-      { "letter": "b", "text": "15.0 atm" },
-      { "letter": "c", "text": "20.0 atm" },
-      { "letter": "d", "text": "30.0 atm" }
+      { "letter": "a", "text": "The density decreases" },
+      { "letter": "b", "text": "The density stays the same" },
+      { "letter": "c", "text": "The density increases" },
+      { "letter": "d", "text": "Density is unrelated to volume" }
     ],
     "answer": "c",
-    "explanation": "Gay-Lussac's Law: Temperature doubled (300 K to 600 K), so pressure doubles (10.0 to 20.0 atm)."
+    "explanation": "Density is mass over volume. Because the mass of the gas is trapped but the volume is getting smaller, the gas particles are packed tighter, increasing density."
   },
   {
-    "prompt": "Rosé's sealed glass bottle contains air at 1.0 atm and 300 K. She accidentally leaves it in the sun until the pressure is 2.0 atm. What is the temperature of the bottle?",
+    "prompt": "Lisa leaves a helium balloon in BLACKPINK's tour van on a blazing hot summer day. What will happen to the balloon's volume?",
     "options": [
-      { "letter": "a", "text": "150 K" },
-      { "letter": "b", "text": "450 K" },
-      { "letter": "c", "text": "600 K" },
-      { "letter": "d", "text": "900 K" }
+      { "letter": "a", "text": "It will shrink" },
+      { "letter": "b", "text": "It will expand" },
+      { "letter": "c", "text": "It will stay exactly the same" },
+      { "letter": "d", "text": "The helium will turn into liquid" }
+    ],
+    "answer": "b",
+    "explanation": "Charles's Law states that as temperature increases, volume increases (assuming the pressure remains relatively constant). The hot gas pushes the balloon outward."
+  },
+  {
+    "prompt": "Jennie puts an inflated balloon into a freezer for a science experiment. When she takes it out an hour later, it looks deflated. Why?",
+    "options": [
+      { "letter": "a", "text": "The cold air leaked out of the knot" },
+      { "letter": "b", "text": "Cold gas particles move slower and push less forcefully against the balloon walls, reducing volume" },
+      { "letter": "c", "text": "The pressure inside the freezer crushed the balloon" },
+      { "letter": "d", "text": "Cold makes rubber dissolve" }
+    ],
+    "answer": "b",
+    "explanation": "Charles's Law: when temperature drops, molecular kinetic energy drops. The particles don't push out as hard, so the balloon shrinks."
+  },
+  {
+    "prompt": "Which statement best defines the relationship in Charles's Law?",
+    "options": [
+      { "letter": "a", "text": "Volume and Temperature are inversely proportional" },
+      { "letter": "b", "text": "Volume and Temperature are directly proportional" },
+      { "letter": "c", "text": "Pressure and Volume are directly proportional" },
+      { "letter": "d", "text": "Volume and Amount of gas are inversely proportional" }
+    ],
+    "answer": "b",
+    "explanation": "In Charles's Law, Volume and Temperature (in Kelvin) rise and fall together. This is a direct proportion."
+  },
+  {
+    "prompt": "For Charles's Law to be observed correctly, which variables must remain constant?",
+    "options": [
+      { "letter": "a", "text": "Pressure and the amount of gas" },
+      { "letter": "b", "text": "Volume and Temperature" },
+      { "letter": "c", "text": "Pressure and Volume" },
+      { "letter": "d", "text": "Temperature and the amount of gas" }
+    ],
+    "answer": "a",
+    "explanation": "Charles's Law focuses only on Volume and Temperature. Therefore, the Pressure of the environment and the number of gas moles must be kept constant."
+  },
+  {
+    "prompt": "Rosé graphs Volume vs. Temperature (in Kelvin) for a gas. What does the resulting line look like?",
+    "options": [
+      { "letter": "a", "text": "A downward curve" },
+      { "letter": "b", "text": "A horizontal flat line" },
+      { "letter": "c", "text": "A straight, upward-sloping line passing through the origin" },
+      { "letter": "d", "text": "A circle" }
     ],
     "answer": "c",
-    "explanation": "Gay-Lussac's Law: Pressure doubled (1.0 to 2.0 atm), so temperature must double (300 K to 600 K)."
+    "explanation": "Directly proportional relationships create a straight line. Extending it to 0 Kelvin would theoretically intersect at 0 Volume."
   },
   {
-    "prompt": "Jisoo cooks rice in a rigid pressure cooker. At 300 K, the pressure is 1.0 atm. When it reaches 2.5 atm, what is the temperature inside?",
+    "prompt": "Why is a hot air balloon able to lift Jisoo into the sky?",
     "options": [
-      { "letter": "a", "text": "120 K" },
-      { "letter": "b", "text": "450 K" },
-      { "letter": "c", "text": "600 K" },
-      { "letter": "d", "text": "750 K" }
+      { "letter": "a", "text": "Heating the air increases its density, making it heavier" },
+      { "letter": "b", "text": "Heating the air causes it to expand, making it less dense than the cooler air outside" },
+      { "letter": "c", "text": "The burner creates a chemical reaction that defies gravity" },
+      { "letter": "d", "text": "The balloon changes the outside atmospheric pressure" }
     ],
-    "answer": "d",
-    "explanation": "Gay-Lussac's Law: 1.0 / 300 = 2.5 / T2. T2 = (2.5 * 300) / 1.0 = 750 K."
+    "answer": "b",
+    "explanation": "Due to Charles's Law, the heated air expands. Because the same mass of air now occupies a larger volume, its density drops, allowing it to float."
   },
   {
-    "prompt": "For Gay-Lussac's Law to be accurate, what condition must be met regarding the container?",
+    "prompt": "Why MUST gas temperature be converted to Kelvin when working with Charles's Law?",
     "options": [
-      { "letter": "a", "text": "It must be able to expand" },
-      { "letter": "b", "text": "It must be perfectly insulated" },
-      { "letter": "c", "text": "It must be rigid (constant volume)" },
-      { "letter": "d", "text": "It must allow gas to escape" }
+      { "letter": "a", "text": "Because Celsius is only used for liquids" },
+      { "letter": "b", "text": "Because Celsius has negative numbers, which would imply an impossible negative volume" },
+      { "letter": "c", "text": "Because Kelvin is a larger unit of measurement" },
+      { "letter": "d", "text": "It is just a suggestion, Celsius works fine" }
+    ],
+    "answer": "b",
+    "explanation": "Proportional gas laws fail if you plug in zero or negative temperatures. Kelvin starts at absolute zero, so all temperatures are positive."
+  },
+  {
+    "prompt": "What theoretical event occurs at Absolute Zero (0 Kelvin) according to the extrapolation of Charles's Law?",
+    "options": [
+      { "letter": "a", "text": "The gas becomes infinitely large" },
+      { "letter": "b", "text": "The gas volume theoretically becomes zero" },
+      { "letter": "c", "text": "The gas turns into a plasma" },
+      { "letter": "d", "text": "The pressure becomes infinite" }
+    ],
+    "answer": "b",
+    "explanation": "If Volume and Temperature decrease together linearly, hitting 0 Kelvin implies the gas particles would stop moving entirely and occupy zero volume (though in reality, they liquify first)."
+  },
+  {
+    "prompt": "Rosé is baking a cake. As the batter heats up in the oven, the tiny carbon dioxide bubbles inside the dough expand. Which law explains this?",
+    "options": [
+      { "letter": "a", "text": "Boyle's Law" },
+      { "letter": "b", "text": "Pascal's Principle" },
+      { "letter": "c", "text": "Charles's Law" },
+      { "letter": "d", "text": "Avogadro's Law" }
     ],
     "answer": "c",
-    "explanation": "Gay-Lussac's Law examines Pressure and Temperature. For this relationship to hold, Volume and Moles must remain constant, requiring a rigid container."
+    "explanation": "The expansion of gas bubbles inside the dough as the temperature increases is a classic real-world example of Charles's Law."
+  },
+  {
+    "prompt": "Jennie brings a fully inflated balloon from the warm indoors to the freezing outdoors. What happens to the kinetic energy of the gas particles?",
+    "options": [
+      { "letter": "a", "text": "It increases, making the balloon expand" },
+      { "letter": "b", "text": "It decreases, making the balloon shrink" },
+      { "letter": "c", "text": "It remains constant" },
+      { "letter": "d", "text": "Kinetic energy does not affect gases" }
+    ],
+    "answer": "b",
+    "explanation": "Temperature is a measure of average kinetic energy. When temperature drops, kinetic energy drops, particles slow down, and the volume shrinks."
+  },
+  {
+    "prompt": "Lisa accidentally leaves an aerosol can of hairspray sitting in direct sunlight. Why does the warning label say 'Do Not Store Near Heat'?",
+    "options": [
+      { "letter": "a", "text": "The heat will cause the volume of the metal can to shrink" },
+      { "letter": "b", "text": "The heat will increase the internal gas pressure, which could cause the rigid can to explode" },
+      { "letter": "c", "text": "The heat will turn the gas into a solid" },
+      { "letter": "d", "text": "The heat will decrease the internal pressure" }
+    ],
+    "answer": "b",
+    "explanation": "Gay-Lussac's Law states that for a rigid container (constant volume), increasing temperature increases pressure dramatically."
+  },
+  {
+    "prompt": "Jisoo checks the tire pressure on her car on a freezing winter morning. The tires look a bit flat, and the pressure gauge reads low. Why?",
+    "options": [
+      { "letter": "a", "text": "Air leaked out of the tires overnight" },
+      { "letter": "b", "text": "Cold temperatures cause the gas particles to slow down, hitting the tire walls with less force and lowering pressure" },
+      { "letter": "c", "text": "The cold rubber absorbed the air particles" },
+      { "letter": "d", "text": "The atmospheric pressure crushed the tires" }
+    ],
+    "answer": "b",
+    "explanation": "According to Gay-Lussac's Law, when temperature drops, the pressure of a confined gas also drops because the particles exert less force on the walls."
   },
   {
     "prompt": "What kind of relationship exists between Pressure and Temperature in Gay-Lussac's Law?",
     "options": [
-      { "letter": "a", "text": "Inverse proportion" },
-      { "letter": "b", "text": "Direct proportion" },
-      { "letter": "c", "text": "Exponential growth" },
-      { "letter": "d", "text": "No relationship" }
-    ],
-    "answer": "b",
-    "explanation": "Pressure and Temperature (in Kelvin) are directly proportional. When one increases, the other increases by the same factor."
-  },
-  {
-    "prompt": "Jennie is blowing up balloons. 2.0 moles of gas occupy 10.0 L. If she adds gas until there are 4.0 moles, what is the new volume? (Constant T and P)",
-    "options": [
-      { "letter": "a", "text": "5.0 L" },
-      { "letter": "b", "text": "10.0 L" },
-      { "letter": "c", "text": "20.0 L" },
-      { "letter": "d", "text": "40.0 L" }
-    ],
-    "answer": "c",
-    "explanation": "Avogadro's Law (V1/n1 = V2/n2): 10.0 / 2.0 = V2 / 4.0. V2 = (10.0 * 4.0) / 2.0 = 20.0 L."
-  },
-  {
-    "prompt": "Lisa's giant stage prop initially has 5.0 moles of air and a volume of 25.0 L. If it deflates until only 1.0 mole is left, what is the new volume?",
-    "options": [
-      { "letter": "a", "text": "1.0 L" },
-      { "letter": "b", "text": "5.0 L" },
-      { "letter": "c", "text": "10.0 L" },
-      { "letter": "d", "text": "125.0 L" }
-    ],
-    "answer": "b",
-    "explanation": "Avogadro's Law: Moles decreased by a factor of 5 (5.0 to 1.0), so volume decreases by a factor of 5 (25.0 to 5.0 L)."
-  },
-  {
-    "prompt": "Rosé is blowing bubbles. A bubble contains 0.5 moles of gas and takes up 2.0 L. She blows more air in until it contains 1.5 moles. What is the new volume?",
-    "options": [
-      { "letter": "a", "text": "4.0 L" },
-      { "letter": "b", "text": "6.0 L" },
-      { "letter": "c", "text": "8.0 L" },
-      { "letter": "d", "text": "10.0 L" }
-    ],
-    "answer": "b",
-    "explanation": "Avogadro's Law: 2.0 / 0.5 = V2 / 1.5. V2 = (2.0 * 1.5) / 0.5 = 6.0 L."
-  },
-  {
-    "prompt": "Jisoo's flamingo pool float has 3.0 moles of air taking up 15.0 L. She wants it fully inflated to 30.0 L. How many total moles of air must be inside?",
-    "options": [
-      { "letter": "a", "text": "1.5 moles" },
-      { "letter": "b", "text": "4.5 moles" },
-      { "letter": "c", "text": "6.0 moles" },
-      { "letter": "d", "text": "9.0 moles" }
-    ],
-    "answer": "c",
-    "explanation": "Avogadro's Law: Volume doubled (15.0 to 30.0 L), so moles must double (3.0 to 6.0 moles)."
-  },
-  {
-    "prompt": "Jennie measures her lung capacity. 0.1 moles of air take up 2.5 L. If she takes a deeper breath holding 0.2 moles, what is the volume in her lungs?",
-    "options": [
-      { "letter": "a", "text": "1.25 L" },
-      { "letter": "b", "text": "2.5 L" },
-      { "letter": "c", "text": "5.0 L" },
-      { "letter": "d", "text": "10.0 L" }
-    ],
-    "answer": "c",
-    "explanation": "Avogadro's Law: Moles doubled (0.1 to 0.2), so volume doubles (2.5 to 5.0 L)."
-  },
-  {
-    "prompt": "According to Avogadro's Law, what is the standard molar volume of any ideal gas at STP?",
-    "options": [
-      { "letter": "a", "text": "1.0 L" },
-      { "letter": "b", "text": "11.2 L" },
-      { "letter": "c", "text": "22.4 L" },
-      { "letter": "d", "text": "44.8 L" }
-    ],
-    "answer": "c",
-    "explanation": "At Standard Temperature and Pressure (STP), 1 mole of any ideal gas occupies 22.4 Liters."
-  },
-  {
-    "prompt": "Lisa's neon stage sign requires neon gas. 2.0 moles of neon occupy 40.0 L. The backup sign is only 10.0 L. How many moles of neon are in the backup sign?",
-    "options": [
-      { "letter": "a", "text": "0.5 moles" },
-      { "letter": "b", "text": "1.0 moles" },
-      { "letter": "c", "text": "4.0 moles" },
-      { "letter": "d", "text": "8.0 moles" }
+      { "letter": "a", "text": "Directly proportional" },
+      { "letter": "b", "text": "Inversely proportional" },
+      { "letter": "c", "text": "Exponential" },
+      { "letter": "d", "text": "Unrelated" }
     ],
     "answer": "a",
-    "explanation": "Avogadro's Law: 40.0 / 2.0 = 10.0 / n2. n2 = (10.0 * 2.0) / 40.0 = 0.5 moles."
+    "explanation": "As Temperature (in Kelvin) goes up, Pressure goes up. Because they move in the same direction by the same factor, it is a direct proportion."
   },
   {
-    "prompt": "Rosé's backup helium tank has 10.0 moles of helium occupying 50.0 L. She uses half the gas (leaving 5.0 moles) at constant P and T. What is the new volume of the gas remaining in the tank system?",
+    "prompt": "In order to demonstrate Gay-Lussac's Law, what must be true about the gas's container?",
     "options": [
-      { "letter": "a", "text": "10.0 L" },
-      { "letter": "b", "text": "25.0 L" },
-      { "letter": "c", "text": "50.0 L" },
-      { "letter": "d", "text": "100.0 L" }
+      { "letter": "a", "text": "It must be completely flexible, like a balloon" },
+      { "letter": "b", "text": "It must be open to the air" },
+      { "letter": "c", "text": "It must be rigid so the volume remains constant" },
+      { "letter": "d", "text": "It must be placed in a vacuum" }
+    ],
+    "answer": "c",
+    "explanation": "Gay-Lussac's Law studies Pressure and Temperature. For this to work, the Volume must be held constant, which requires a rigid, unyielding container."
+  },
+  {
+    "prompt": "Rosé is cooking stew in a sealed pressure cooker. As the stove heats the trapped air and steam, what happens to the pressure inside?",
+    "options": [
+      { "letter": "a", "text": "It stays the same" },
+      { "letter": "b", "text": "It drops to a vacuum" },
+      { "letter": "c", "text": "It increases rapidly" },
+      { "letter": "d", "text": "It fluctuates randomly" }
+    ],
+    "answer": "c",
+    "explanation": "Because the pot is rigid and sealed, heating the contents causes the gas molecules to strike the walls harder and faster, increasing pressure (Gay-Lussac's Law)."
+  },
+  {
+    "prompt": "At a molecular level, why does an increase in temperature cause an increase in pressure in a rigid tank?",
+    "options": [
+      { "letter": "a", "text": "The particles multiply and create more gas" },
+      { "letter": "b", "text": "The particles move faster and hit the walls more frequently and with greater force" },
+      { "letter": "c", "text": "The particles expand and take up more physical space" },
+      { "letter": "d", "text": "The particles become magnetic and repel each other" }
     ],
     "answer": "b",
-    "explanation": "Avogadro's Law: Moles halved (10.0 to 5.0), so the volume the gas occupies halves (50.0 to 25.0 L)."
+    "explanation": "Temperature increases kinetic energy. Faster-moving particles collide with the rigid walls more often and harder, which defines an increase in pressure."
   },
   {
-    "prompt": "Jisoo breathes from an oxygen mask on an airplane. 1.0 mole of O2 occupies 20.0 L. If the mask fills with 3.0 moles of O2, what is the volume?",
+    "prompt": "Jennie's backup dancers notice their basketball feels slightly flat after being left in a cold garage. Has the amount of gas inside the ball changed?",
     "options": [
-      { "letter": "a", "text": "6.67 L" },
-      { "letter": "b", "text": "20.0 L" },
-      { "letter": "c", "text": "40.0 L" },
-      { "letter": "d", "text": "60.0 L" }
+      { "letter": "a", "text": "Yes, the cold destroyed some of the gas particles" },
+      { "letter": "b", "text": "Yes, some gas turned into a solid" },
+      { "letter": "c", "text": "No, the number of particles is the same, but they are exerting less pressure due to the cold" },
+      { "letter": "d", "text": "No, but the volume of the ball increased" }
+    ],
+    "answer": "c",
+    "explanation": "The amount of gas (moles) is constant. The ball feels 'flat' because the internal pressure dropped as the temperature dropped (Gay-Lussac's Law)."
+  },
+  {
+    "prompt": "If Lisa graphs Pressure vs. Temperature (in Kelvin) for a rigid container of gas, what does the line look like?",
+    "options": [
+      { "letter": "a", "text": "A downward curve" },
+      { "letter": "b", "text": "A straight, upward-sloping line" },
+      { "letter": "c", "text": "A horizontal flat line" },
+      { "letter": "d", "text": "A sine wave" }
+    ],
+    "answer": "b",
+    "explanation": "Because Pressure and Temperature are directly proportional, graphing them yields a straight line with a positive slope."
+  },
+  {
+    "prompt": "After driving on the highway for an hour, Jisoo checks her car's tire pressure again. It is now higher than it was in the morning. Why?",
+    "options": [
+      { "letter": "a", "text": "Friction from the road heated the tires, which increased the gas pressure inside" },
+      { "letter": "b", "text": "The tires absorbed air from the highway" },
+      { "letter": "c", "text": "The rubber shrunk, compressing the air" },
+      { "letter": "d", "text": "The altitude changed" }
+    ],
+    "answer": "a",
+    "explanation": "Driving creates friction, which creates heat. As the temperature of the trapped air increases, its pressure increases (Gay-Lussac's Law)."
+  },
+  {
+    "prompt": "Which variables are held constant when applying Gay-Lussac's Law?",
+    "options": [
+      { "letter": "a", "text": "Pressure and Temperature" },
+      { "letter": "b", "text": "Pressure and Volume" },
+      { "letter": "c", "text": "Volume and Amount of gas (moles)" },
+      { "letter": "d", "text": "Temperature and Amount of gas (moles)" }
+    ],
+    "answer": "c",
+    "explanation": "Gay-Lussac's Law examines the P and T relationship, meaning the container's Volume and the number of gas particles must not change."
+  },
+  {
+    "prompt": "Lisa blows a puff of air into a flat balloon. Then she takes a deep breath and blows three more puffs of air into it. What happens to the volume?",
+    "options": [
+      { "letter": "a", "text": "It decreases" },
+      { "letter": "b", "text": "It stays the same" },
+      { "letter": "c", "text": "It increases" },
+      { "letter": "d", "text": "It becomes a rigid container" }
+    ],
+    "answer": "c",
+    "explanation": "Avogadro's Law states that increasing the number of gas particles (moles) will increase the volume, assuming pressure and temperature are constant."
+  },
+  {
+    "prompt": "What is the relationship described by Avogadro's Law?",
+    "options": [
+      { "letter": "a", "text": "Volume is inversely proportional to Temperature" },
+      { "letter": "b", "text": "Volume is directly proportional to the Amount of gas (moles)" },
+      { "letter": "c", "text": "Pressure is directly proportional to Volume" },
+      { "letter": "d", "text": "Moles are inversely proportional to Pressure" }
+    ],
+    "answer": "b",
+    "explanation": "Avogadro's Law is a direct proportion: more gas means more volume; less gas means less volume."
+  },
+  {
+    "prompt": "Rosé has a balloon that springs a tiny leak. As gas particles escape the balloon, what happens to the balloon's overall volume?",
+    "options": [
+      { "letter": "a", "text": "It increases" },
+      { "letter": "b", "text": "It stays the same" },
+      { "letter": "c", "text": "It decreases" },
+      { "letter": "d", "text": "The balloon gets hotter" }
+    ],
+    "answer": "c",
+    "explanation": "As the number of gas moles decreases, the volume of the balloon must decrease to maintain the same pressure with the outside air."
+  },
+  {
+    "prompt": "According to Avogadro's hypothesis, if a 1 Liter balloon of Helium and a 1 Liter balloon of Oxygen are at the exact same temperature and pressure, what else must be true?",
+    "options": [
+      { "letter": "a", "text": "They must have the exact same mass" },
+      { "letter": "b", "text": "They must contain the exact same number of gas particles" },
+      { "letter": "c", "text": "They must be the same color" },
+      { "letter": "d", "text": "They must be traveling at the same speed" }
+    ],
+    "answer": "b",
+    "explanation": "Avogadro's core hypothesis is that equal volumes of any ideal gases at the same Temperature and Pressure contain equal numbers of particles."
+  },
+  {
+    "prompt": "For Avogadro's Law to hold true, which two environmental variables must be kept constant?",
+    "options": [
+      { "letter": "a", "text": "Volume and Moles" },
+      { "letter": "b", "text": "Pressure and Temperature" },
+      { "letter": "c", "text": "Volume and Temperature" },
+      { "letter": "d", "text": "Pressure and Moles" }
+    ],
+    "answer": "b",
+    "explanation": "Because Avogadro's Law looks at how Moles affect Volume, the ambient Pressure and Temperature must not interfere."
+  },
+  {
+    "prompt": "Jennie uses a mechanical pump to inflate a stage prop. As she adds more moles of gas, why does the prop expand?",
+    "options": [
+      { "letter": "a", "text": "The added particles need more space to maintain a constant pressure with the outside air" },
+      { "letter": "b", "text": "The new gas particles are physically larger than the old ones" },
+      { "letter": "c", "text": "The pump is heating the air dramatically" },
+      { "letter": "d", "text": "The pump decreases the atmospheric pressure" }
+    ],
+    "answer": "a",
+    "explanation": "If you add more particles, they will hit the walls more often. To keep the internal pressure equal to the external room pressure, the walls must expand."
+  },
+  {
+    "prompt": "If Jisoo doubles the amount of gas (moles) inside a flexible container while keeping temperature and pressure constant, what will happen to the volume?",
+    "options": [
+      { "letter": "a", "text": "It will be cut in half" },
+      { "letter": "b", "text": "It will remain the same" },
+      { "letter": "c", "text": "It will double exactly" },
+      { "letter": "d", "text": "It will quadruple" }
+    ],
+    "answer": "c",
+    "explanation": "Because Volume and Moles are directly proportional, doubling the moles directly doubles the volume."
+  },
+  {
+    "prompt": "What does 'STP' stand for in chemistry when discussing Avogadro's Law?",
+    "options": [
+      { "letter": "a", "text": "Standard Time and Place" },
+      { "letter": "b", "text": "Standard Temperature and Pressure" },
+      { "letter": "c", "text": "Scientific Temperature Protocol" },
+      { "letter": "d", "text": "Specific Thermal Properties" }
+    ],
+    "answer": "b",
+    "explanation": "STP stands for Standard Temperature (0 degrees Celsius or 273 K) and Pressure (1 atmosphere), providing a baseline to compare gas volumes."
+  },
+  {
+    "prompt": "At Standard Temperature and Pressure (STP), 1 mole of any ideal gas occupies approximately how much space?",
+    "options": [
+      { "letter": "a", "text": "1.0 Liter" },
+      { "letter": "b", "text": "10.0 Liters" },
+      { "letter": "c", "text": "22.4 Liters" },
+      { "letter": "d", "text": "100 Liters" }
+    ],
+    "answer": "c",
+    "explanation": "Avogadro's Law helps establish that at STP, the molar volume of an ideal gas is a constant 22.4 L, regardless of what the gas is made of."
+  },
+  {
+    "prompt": "Lisa deflates her pool float after the 'Ice Cream' music video. As the volume of the float shrinks, what is happening to the number of moles of gas inside?",
+    "options": [
+      { "letter": "a", "text": "They are increasing" },
+      { "letter": "b", "text": "They are decreasing as gas escapes" },
+      { "letter": "c", "text": "They are staying constant" },
+      { "letter": "d", "text": "They are turning into plastic" }
+    ],
+    "answer": "b",
+    "explanation": "As the gas leaves the float (moles decrease), the volume of the float drops proportionately (Avogadro's Law)."
+  },
+  {
+    "prompt": "In basic physics, how is Pressure defined conceptually?",
+    "options": [
+      { "letter": "a", "text": "Mass multiplied by acceleration" },
+      { "letter": "b", "text": "Force applied over a specific Area" },
+      { "letter": "c", "text": "Volume divided by Temperature" },
+      { "letter": "d", "text": "Energy consumed over Time" }
+    ],
+    "answer": "b",
+    "explanation": "Pressure is the amount of force pushing on a surface, spread out over the area of that surface (P = F/A)."
+  },
+  {
+    "prompt": "Jennie is walking across a soft lawn. Why does she sink into the grass in high heels, but not when wearing flat sneakers?",
+    "options": [
+      { "letter": "a", "text": "The heels make her weigh more" },
+      { "letter": "b", "text": "The heels concentrate her weight (force) into a tiny area, creating massive pressure" },
+      { "letter": "c", "text": "The sneakers reduce the force of gravity" },
+      { "letter": "d", "text": "Sneakers are filled with helium" }
+    ],
+    "answer": "b",
+    "explanation": "Her weight (Force) is the same. But the heel has a tiny Area, so P = F/A means the Pressure on the ground is huge."
+  },
+  {
+    "prompt": "What does Pascal's Principle state about fluids trapped in a closed container?",
+    "options": [
+      { "letter": "a", "text": "Fluids compress easily when pushed" },
+      { "letter": "b", "text": "Any pressure applied is transmitted equally and undiminished to all parts of the fluid" },
+      { "letter": "c", "text": "Pressure only travels downwards due to gravity" },
+      { "letter": "d", "text": "Fluids lose pressure the further they travel in a tube" }
+    ],
+    "answer": "b",
+    "explanation": "Pascal discovered that if you squeeze a confined fluid, that exact pressure pushes evenly against every single wall of the container."
+  },
+  {
+    "prompt": "Rosé squeezes the bottom of her toothpaste tube. The toothpaste perfectly shoots out of the open top. Which principle explains this?",
+    "options": [
+      { "letter": "a", "text": "Archimedes' Principle" },
+      { "letter": "b", "text": "Bernoulli's Principle" },
+      { "letter": "c", "text": "Pascal's Principle" },
+      { "letter": "d", "text": "Newton's Third Law" }
+    ],
+    "answer": "c",
+    "explanation": "Because the toothpaste paste acts like an incompressible fluid, squeezing the bottom transmits the pressure perfectly through the tube, forcing it out the top (Pascal's Principle)."
+  },
+  {
+    "prompt": "Lisa stands on a hydraulic lift for her stage entrance. A small motor pushes a small piston, which perfectly lifts Lisa on a huge piston. How does a hydraulic lift use Pascal's Principle?",
+    "options": [
+      { "letter": "a", "text": "By moving a small force over a small area to create an equally small force over a large area" },
+      { "letter": "b", "text": "By maintaining equal pressure everywhere, a small force on a small area translates to a massive lifting force on a large area" },
+      { "letter": "c", "text": "By compressing the hydraulic fluid until it explodes upward" },
+      { "letter": "d", "text": "By lowering the temperature of the fluid to freeze it" }
+    ],
+    "answer": "b",
+    "explanation": "Because Pressure is identical on both sides, and P = F/A, multiplying the identical Pressure by a massive Area on Lisa's side results in a massive lifting Force."
+  },
+  {
+    "prompt": "Why is Pascal's Principle heavily applied to liquids (like brake fluid or water) but NOT to gases (like air in a balloon)?",
+    "options": [
+      { "letter": "a", "text": "Gases are too cold" },
+      { "letter": "b", "text": "Liquids are highly compressible, gases are not" },
+      { "letter": "c", "text": "Gases are highly compressible, meaning they just squish instead of transmitting the force evenly" },
+      { "letter": "d", "text": "Liquids have zero mass" }
+    ],
+    "answer": "c",
+    "explanation": "If you push on a gas, the empty space between molecules just compresses (Boyle's Law). Liquids are incompressible, so they have no choice but to push back instantly."
+  },
+  {
+    "prompt": "If Jisoo wants to combine Boyle's, Charles's, and Gay-Lussac's laws into one single equation for a gas that has a changing P, V, and T, what is it called?",
+    "options": [
+      { "letter": "a", "text": "The Ultimate Gas Law" },
+      { "letter": "b", "text": "The Combined Gas Law" },
+      { "letter": "c", "text": "The Ideal Gas Law" },
+      { "letter": "d", "text": "Dalton's Law" }
+    ],
+    "answer": "b",
+    "explanation": "The Combined Gas Law allows you to track a gas when pressure, volume, and temperature are all shifting at once, as long as the amount of gas is constant."
+  },
+  {
+    "prompt": "What does the Ideal Gas Law account for that the Combined Gas Law does not?",
+    "options": [
+      { "letter": "a", "text": "Temperature" },
+      { "letter": "b", "text": "Pressure" },
+      { "letter": "c", "text": "Volume" },
+      { "letter": "d", "text": "The amount of gas (moles)" }
     ],
     "answer": "d",
-    "explanation": "Avogadro's Law: Moles tripled (1.0 to 3.0), so volume triples (20.0 to 60.0 L)."
+    "explanation": "The Ideal Gas Law (PV=nRT) includes 'n' for moles, allowing you to calculate properties of a gas without needing a 'before and after' scenario."
   },
   {
-    "prompt": "Avogadro's hypothesis states that equal volumes of different gases at the same Temperature and Pressure contain:",
+    "prompt": "Why do scientists use the concept of an 'Ideal' Gas when doing calculations?",
     "options": [
-      { "letter": "a", "text": "Different numbers of particles based on mass" },
-      { "letter": "b", "text": "Equal numbers of particles (moles)" },
-      { "letter": "c", "text": "Zero particles" },
-      { "letter": "d", "text": "Equal masses" }
-    ],
-    "answer": "b",
-    "explanation": "Avogadro's Law states that if V, P, and T are the same, the number of moles (particles) must be exactly the same, regardless of the type of gas."
-  },
-  {
-    "prompt": "Pascal's Principle states that pressure applied to a confined fluid is:",
-    "options": [
-      { "letter": "a", "text": "Absorbed by the fluid entirely" },
-      { "letter": "b", "text": "Transmitted equally and undiminished in all directions" },
-      { "letter": "c", "text": "Decreased as it travels further away" },
-      { "letter": "d", "text": "Only directed towards the bottom" }
-    ],
-    "answer": "b",
-    "explanation": "Pascal's Principle explains that incompressible fluids transmit applied pressure perfectly equally to every part of the fluid and the walls of the container."
-  },
-  {
-    "prompt": "Lisa stands on a hydraulic stage lift. A small force pushes down on a small fluid piston. According to Pascal's Principle, how does this affect the large piston lifting the stage?",
-    "options": [
-      { "letter": "a", "text": "It creates a smaller lifting force" },
-      { "letter": "b", "text": "It creates an equal lifting force" },
-      { "letter": "c", "text": "It creates a much larger lifting force" },
-      { "letter": "d", "text": "It creates zero force" }
+      { "letter": "a", "text": "Real gases behave perfectly at all times" },
+      { "letter": "b", "text": "Real gases don't exist" },
+      { "letter": "c", "text": "It assumes gas particles don't interact or take up volume themselves, simplifying the math" },
+      { "letter": "d", "text": "Ideal gases only exist at Absolute Zero" }
     ],
     "answer": "c",
-    "explanation": "Since Pressure = Force / Area, and Pressure is equal everywhere, a small Force on a small Area translates to a huge Force pushing up on a large Area."
+    "explanation": "In reality, gas molecules have a tiny volume and slight attractions to each other. Ignoring these makes the math of gas laws infinitely easier and is usually very accurate at normal temperatures."
   },
   {
-    "prompt": "What is the formula for the Combined Gas Law?",
+    "prompt": "During a concert, the stage crew uses a massive CO2 tank. As they spray the gas out rapidly, the metal tank becomes freezing cold. Which concept explains this?",
     "options": [
-      { "letter": "a", "text": "P1V1 = P2V2" },
-      { "letter": "b", "text": "PV = nRT" },
-      { "letter": "c", "text": "(P1V1)/T1 = (P2V2)/T2" },
-      { "letter": "d", "text": "V1/n1 = V2/n2" }
-    ],
-    "answer": "c",
-    "explanation": "The Combined Gas Law combines Boyle's, Charles's, and Gay-Lussac's laws into one: (P1V1)/T1 = (P2V2)/T2."
-  },
-  {
-    "prompt": "Jennie's balloon is 2.0 L at 1.0 atm and 300 K. If the pressure changes to 2.0 atm and the temperature heats to 600 K, what is the new volume? (Use the Combined Gas Law)",
-    "options": [
-      { "letter": "a", "text": "1.0 L" },
-      { "letter": "b", "text": "2.0 L" },
-      { "letter": "c", "text": "4.0 L" },
-      { "letter": "d", "text": "8.0 L" }
-    ],
-    "answer": "b",
-    "explanation": "(1.0 * 2.0) / 300 = (2.0 * V2) / 600. 2.0 / 300 = 2V2 / 600. Cross multiplying: 1200 = 600 * V2. V2 = 2.0 L."
-  },
-  {
-    "prompt": "What is the formula for the Ideal Gas Law?",
-    "options": [
-      { "letter": "a", "text": "P1V1 = P2V2" },
-      { "letter": "b", "text": "PV = nRT" },
-      { "letter": "c", "text": "P = F / A" },
-      { "letter": "d", "text": "V = nRT / P2" }
-    ],
-    "answer": "b",
-    "explanation": "The Ideal Gas Law relates Pressure, Volume, moles, the Gas Constant, and Temperature together: PV = nRT."
-  },
-  {
-    "prompt": "Rosé is calculating an Ideal Gas Law problem using atmospheres for pressure and liters for volume. Which value of the ideal gas constant (R) should she use?",
-    "options": [
-      { "letter": "a", "text": "8.314 J/(mol K)" },
-      { "letter": "b", "text": "0.0821 (L atm)/(mol K)" },
-      { "letter": "c", "text": "62.36 (L mmHg)/(mol K)" },
-      { "letter": "d", "text": "1.00 (L atm)/(mol K)" }
-    ],
-    "answer": "b",
-    "explanation": "When pressure is in atm and volume is in L, the standard gas constant R is 0.0821."
-  },
-  {
-    "prompt": "Jisoo needs to set a gas to Standard Temperature. What is Standard Temperature?",
-    "options": [
-      { "letter": "a", "text": "0 Kelvin" },
-      { "letter": "b", "text": "273 Kelvin (0°C)" },
-      { "letter": "c", "text": "298 Kelvin (25°C)" },
-      { "letter": "d", "text": "100 Kelvin" }
-    ],
-    "answer": "b",
-    "explanation": "Standard Temperature for gas laws (STP) is defined as exactly 0°C, which is 273.15 K (often rounded to 273 K)."
-  },
-  {
-    "prompt": "Which of the following values represents Standard Pressure (the 'P' in STP)?",
-    "options": [
-      { "letter": "a", "text": "1.0 atm (760 mmHg)" },
-      { "letter": "b", "text": "0.0 atm" },
-      { "letter": "c", "text": "100 atm" },
-      { "letter": "d", "text": "273 atm" }
-    ],
-    "answer": "a",
-    "explanation": "Standard Pressure is defined as 1 atmosphere (atm), which is equivalent to 760 mmHg or 101.325 kPa."
-  },
-  {
-    "prompt": "Pascal's Principle relies on the definition of pressure. What is the standard SI unit of pressure (the Pascal)?",
-    "options": [
-      { "letter": "a", "text": "1 Newton per square meter (N/m²)" },
-      { "letter": "b", "text": "1 Kilogram per square meter (kg/m²)" },
-      { "letter": "c", "text": "1 Joule per second (J/s)" },
-      { "letter": "d", "text": "1 Newton-meter (Nm)" }
-    ],
-    "answer": "a",
-    "explanation": "A Pascal is defined as one Newton of force applied perfectly evenly over one square meter of area (1 N/m²)."
-  },
-  {
-    "prompt": "At the finale of the BLACKPINK concert, a balloon's Pressure, Volume, and Temperature all change at once. Which law must the girls use to solve for the new volume?",
-    "options": [
-      { "letter": "a", "text": "Boyle's Law" },
+      { "letter": "a", "text": "Avogadro's Law" },
       { "letter": "b", "text": "Charles's Law" },
       { "letter": "c", "text": "Gay-Lussac's Law" },
-      { "letter": "d", "text": "The Combined Gas Law" }
+      { "letter": "d", "text": "Gas expanding rapidly does work on the environment, losing internal energy (cooling)" }
     ],
     "answer": "d",
-    "explanation": "Because all three variables (P, V, and T) are changing simultaneously, the Combined Gas Law ((P1V1)/T1 = (P2V2)/T2) is required."
+    "explanation": "When the highly pressurized CO2 is allowed to expand into the large room, it rapidly absorbs heat energy to do so, leaving the tank feeling freezing cold to the touch."
   }
 ]
