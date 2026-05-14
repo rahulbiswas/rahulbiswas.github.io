@@ -88,6 +88,8 @@
     position: absolute;
     width: 130px;
     height: 130px;
+    left: 0;
+    will-change: transform;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -110,13 +112,21 @@
   .c6 { top: 35%; animation: runLeft  14s linear infinite; animation-delay: -6s; }
   .c7 { top: 85%; animation: runRight 16s linear infinite; animation-delay: -3s; }
 
+  /* Animate via transform (GPU-accelerated) instead of `left` (triggers layout
+     reflow every frame and is the main cause of mobile jitter). */
   @keyframes runRight {
-    0%   { left: -160px;  transform: scaleX(1); }
-    100% { left: 100vw;   transform: scaleX(1); }
+    0%   { transform: translateX(-160px); }
+    100% { transform: translateX(100vw); }
   }
   @keyframes runLeft {
-    0%   { left: 100vw;   transform: scaleX(-1); }
-    100% { left: -160px;  transform: scaleX(-1); }
+    0%   { transform: translateX(100vw)  scaleX(-1); }
+    100% { transform: translateX(-160px) scaleX(-1); }
+  }
+
+  /* Cut visual noise on small screens so mobile isn't trying to animate 50+ things. */
+  @media (max-width: 768px) {
+    .c5, .c6, .c7 { display: none; }
+    .character { width: 100px; height: 100px; }
   }
 
   /* Cake in the middle bottom */
@@ -516,9 +526,11 @@
 <audio id="bgMusic" src="Music.mp3" preload="auto" loop></audio>
 
 <script>
-  // Confetti
+  // Confetti — fewer dots on mobile to keep frame rate up
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
   const colors = ['#ff5fa2', '#ffb3d1', '#a685e2', '#7ed6df', '#ffd166', '#ff8ec1'];
-  for (let i = 0; i < 40; i++) {
+  const confettiCount = isMobile ? 15 : 40;
+  for (let i = 0; i < confettiCount; i++) {
     const c = document.createElement('div');
     c.className = 'confetti';
     c.style.left = Math.random() * 100 + 'vw';
@@ -544,8 +556,8 @@
     setTimeout(() => f.remove(), 8000);
   }
 
-  // Auto spawn floaties (until montage takes over)
-  const floatyInterval = setInterval(spawnFloaty, 600);
+  // Auto spawn floaties — slower cadence on mobile (until montage takes over)
+  const floatyInterval = setInterval(spawnFloaty, isMobile ? 1500 : 600);
 
   // Click to spawn extras (and prime audio playback)
   document.addEventListener('click', (e) => {
