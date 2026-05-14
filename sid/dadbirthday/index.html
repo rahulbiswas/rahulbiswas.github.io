@@ -565,20 +565,34 @@
   const audioEl = document.getElementById('bgMusic');
   const caption = document.getElementById('caption');
 
-  // Pre-create slide elements with img tags so we can wait for decode before showing
+  // Pre-create slide elements with img tags. Set src lazily so we don't load all
+  // 19 photos at once (would blow mobile memory and crash the tab).
   const slides = photos.map((name, i) => {
     const s = document.createElement('div');
     s.className = 'slide';
     const img = document.createElement('img');
-    img.src = `Photos/${encodeURIComponent(name)}`;
     img.alt = '';
     img.decoding = 'async';
+    img.dataset.src = `Photos/${encodeURIComponent(name)}`;
     s.appendChild(img);
     montage.appendChild(s);
-    // Kick off decode early so images are ready before being shown
-    img.decode().catch(() => {});
     return { div: s, img };
   });
+
+  // Load + decode the image for a given slide index (no-op if already loaded)
+  function loadSlide(i) {
+    if (i < 0 || i >= slides.length) return Promise.resolve();
+    const { img } = slides[i];
+    if (!img.src && img.dataset.src) img.src = img.dataset.src;
+    return img.decode().catch(() => {});
+  }
+
+  // Free an old slide's image to reclaim memory on mobile
+  function unloadSlide(i) {
+    if (i < 0 || i >= slides.length) return;
+    const { img } = slides[i];
+    img.removeAttribute('src');
+  }
 
   const SLIDE_MS = 4500;     // time each slide stays
   const CROSSFADE_MS = 1600; // matches CSS transition
@@ -591,16 +605,22 @@
       return;
     }
 
-    const { div: cur, img } = slides[slideIdx];
+    const { div: cur } = slides[slideIdx];
     const prev = slideIdx === 0 ? null : slides[slideIdx - 1].div;
 
-    // Wait for the image to be fully decoded before activating, so it doesn't render in chunks
-    try { await img.decode(); } catch {}
+    // Load + decode the current slide before showing so it doesn't render in chunks
+    await loadSlide(slideIdx);
 
     cur.classList.add('active');
 
     if (prev && prev !== cur) {
       prev.classList.remove('active');
+    }
+    // Pre-load the next slide so it's ready by the time we show it
+    loadSlide(slideIdx + 1);
+    // Free the slide that's two back — it's already faded out and not needed
+    if (slideIdx >= 2) {
+      setTimeout(() => unloadSlide(slideIdx - 2), CROSSFADE_MS);
     }
     slideIdx++;
     setTimeout(showNextSlide, SLIDE_MS);
