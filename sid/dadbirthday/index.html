@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Dad!</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8 0%, #fff0f5 40%, #d9f0ff 100%);
+  }
+
+  /* Confetti dots in the background */
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall linear infinite;
+  }
+  @keyframes fall {
+    0%   { transform: translateY(-50px) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(720deg); }
+  }
+
+  /* Main title */
+  .title-wrap {
+    position: absolute;
+    top: 14%;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    color: #ff5fa2;
+    text-shadow:
+      3px 3px 0 #fff,
+      6px 6px 0 #ffb3d1,
+      9px 9px 12px rgba(0,0,0,0.15);
+    animation: bounce 1.6s ease-in-out infinite;
+  }
+  h2 {
+    margin: 10px 0 0;
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
+    color: #6a4fb6;
+    text-shadow: 2px 2px 0 #fff;
+    animation: wiggle 2s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-18px) rotate(2deg); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50%      { transform: rotate(2deg); }
+  }
+
+  /* Floating hearts and stars */
+  .floaty {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+  }
+  @keyframes floatUp {
+    0%   { transform: translateY(0) scale(0.8); opacity: 0; }
+    20%  { opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+  }
+
+  /* Character running track */
+  .character {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .character svg {
+    width: 100%;
+    height: 100%;
+    animation: hop 0.5s ease-in-out infinite;
+  }
+  @keyframes hop {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50%      { transform: translateY(-12px) rotate(3deg); }
+  }
+
+  /* Each character runs across at a different speed and Y */
+  .c1 { top: 60%; animation: runRight 12s linear infinite; }
+  .c2 { top: 72%; animation: runLeft  15s linear infinite; }
+  .c3 { top: 45%; animation: runRight 18s linear infinite; animation-delay: -4s; }
+  .c4 { top: 80%; animation: runLeft  10s linear infinite; animation-delay: -2s; }
+  .c5 { top: 55%; animation: runRight 20s linear infinite; animation-delay: -8s; }
+  .c6 { top: 35%; animation: runLeft  14s linear infinite; animation-delay: -6s; }
+  .c7 { top: 85%; animation: runRight 16s linear infinite; animation-delay: -3s; }
+
+  @keyframes runRight {
+    0%   { left: -160px;  transform: scaleX(1); }
+    100% { left: 100vw;   transform: scaleX(1); }
+  }
+  @keyframes runLeft {
+    0%   { left: 100vw;   transform: scaleX(-1); }
+    100% { left: -160px;  transform: scaleX(-1); }
+  }
+
+  /* Cake in the middle bottom */
+  .cake {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+    animation: cakeBounce 2s ease-in-out infinite;
+  }
+  @keyframes cakeBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(-10px); }
+  }
+  .flame {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: flicker 0.45s ease-in-out infinite alternate;
+  }
+  @keyframes flicker {
+    0%   { transform: scale(0.92, 0.95) translateY(0); }
+    50%  { transform: scale(1.05, 1.0)  translateY(-1px); }
+    100% { transform: scale(0.98, 1.08) translateY(-2px); }
+  }
+  .glow {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: glowPulse 1.2s ease-in-out infinite alternate;
+  }
+  @keyframes glowPulse {
+    0%   { opacity: 0.35; transform: scale(1); }
+    100% { opacity: 0.6;  transform: scale(1.15); }
+  }
+
+  /* ---------- Montage screen ---------- */
+  .montage-screen {
+    position: fixed;
+    inset: 0;
+    background: #0a0014;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.6s ease;
+    z-index: 100;
+    overflow: hidden;
+  }
+  .montage-screen.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0a0014;
+    opacity: 0;
+    transition: opacity 1.6s ease-in-out;
+  }
+  .slide.active {
+    opacity: 1;
+  }
+  .slide.active.kb1 { animation: kb1 6s ease-out forwards; }
+  .slide.active.kb2 { animation: kb2 6s ease-out forwards; }
+  .slide.active.kb3 { animation: kb3 6s ease-out forwards; }
+  .slide.active.kb4 { animation: kb4 6s ease-out forwards; }
+  @keyframes kb1 {
+    0%   { transform: scale(1.0)  translate(0, 0); }
+    100% { transform: scale(1.12) translate(-2%, -2%); }
+  }
+  @keyframes kb2 {
+    0%   { transform: scale(1.12) translate(-2%, 2%); }
+    100% { transform: scale(1.0)  translate(0, 0); }
+  }
+  @keyframes kb3 {
+    0%   { transform: scale(1.0)  translate(2%, -1%); }
+    100% { transform: scale(1.14) translate(-1%, 2%); }
+  }
+  @keyframes kb4 {
+    0%   { transform: scale(1.14) translate(2%, 2%); }
+    100% { transform: scale(1.02) translate(-2%, -1%); }
+  }
+  .montage-caption {
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    text-align: center;
+    color: #ffd6e8;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8), 0 0 30px rgba(255,95,162,0.5);
+    z-index: 110;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    pointer-events: none;
+  }
+  .montage-caption.show { opacity: 1; }
+
+  .audio-prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 120;
+    display: none;
+    border: 2px solid #ff8ec1;
+  }
+  .audio-prompt.show { display: block; }
+
+  /* Click message */
+  .hint {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    color: #b06aa8;
+    font-size: 1rem;
+    z-index: 20;
+  }
+</style>
+</head>
+<body>
+
+<div class="title-wrap">
+  <h1>Happy Birthday Dad! </h1>
+  <h2>~ lots of love - your favorite oldest son ~</h2>
+</div>
+
+<!-- Cake -->
+<div class="cake">
+  <svg viewBox="0 0 200 200">
+    <defs>
+      <radialGradient id="flameGrad" cx="50%" cy="75%" r="60%">
+        <stop offset="0%"   stop-color="#fff8b0"/>
+        <stop offset="35%"  stop-color="#ffd166"/>
+        <stop offset="75%"  stop-color="#ff8a00"/>
+        <stop offset="100%" stop-color="#ff4500" stop-opacity="0.9"/>
+      </radialGradient>
+      <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#ffd166" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <!-- glow halo behind flame -->
+    <circle class="glow" cx="100" cy="28" r="22" fill="url(#glowGrad)"/>
+    <!-- flame teardrop (group so it animates together) -->
+    <g class="flame">
+      <!-- outer flame -->
+      <path d="M100 8 C 86 22, 84 36, 92 44 C 96 48, 104 48, 108 44 C 116 36, 114 22, 100 8 Z" fill="url(#flameGrad)"/>
+      <!-- inner hot core -->
+      <path d="M100 24 C 94 30, 94 40, 100 44 C 106 40, 106 30, 100 24 Z" fill="#fff2a8" opacity="0.95"/>
+    </g>
+    <!-- wick -->
+    <rect x="99" y="44" width="2" height="6" fill="#3a2a1a"/>
+    <!-- candle -->
+    <rect x="93" y="50" width="14" height="30" rx="2" fill="#ff6fae"/>
+    <rect x="93" y="57" width="14" height="4" fill="#fff"/>
+    <rect x="93" y="69" width="14" height="4" fill="#fff"/>
+    <!-- top layer -->
+    <rect x="55" y="80" width="90" height="40" rx="8" fill="#ffb6d9"/>
+    <path d="M55 90 q10 10 20 0 t20 0 t20 0 t20 0 t20 0 V120 H55 Z" fill="#ff8ec1"/>
+    <!-- middle layer -->
+    <rect x="40" y="120" width="120" height="40" rx="8" fill="#fff0f6"/>
+    <circle cx="60" cy="135" r="4" fill="#ff5fa2"/>
+    <circle cx="80" cy="145" r="4" fill="#a685e2"/>
+    <circle cx="105" cy="135" r="4" fill="#ffd166"/>
+    <circle cx="130" cy="145" r="4" fill="#7ed6df"/>
+    <circle cx="150" cy="135" r="4" fill="#ff5fa2"/>
+    <!-- bottom layer -->
+    <rect x="25" y="160" width="150" height="30" rx="8" fill="#c9b1ff"/>
+    <path d="M25 165 q12 10 25 0 t25 0 t25 0 t25 0 t25 0 V190 H25 Z" fill="#a685e2"/>
+    <!-- plate -->
+    <ellipse cx="100" cy="195" rx="90" ry="6" fill="#ffffffaa"/>
+  </svg>
+</div>
+
+<!-- Characters -->
+<!-- Pusheen-style cat -->
+<div class="character c1">
+  <svg viewBox="0 0 200 160">
+    <ellipse cx="190" cy="135" rx="10" ry="4" fill="#aaa" opacity="0.3"/>
+    <!-- body -->
+    <ellipse cx="100" cy="90" rx="80" ry="55" fill="#bcbcbc"/>
+    <!-- stripes -->
+    <path d="M40 70 q-5 5 -10 0" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M40 85 q-5 5 -10 0" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M40 100 q-5 5 -10 0" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M150 70 q5 5 10 0" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M150 85 q5 5 10 0" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- ears -->
+    <path d="M55 50 L65 30 L80 50 Z" fill="#bcbcbc"/>
+    <path d="M120 50 L135 30 L145 50 Z" fill="#bcbcbc"/>
+    <path d="M60 45 L65 35 L75 45 Z" fill="#f8a5c2"/>
+    <path d="M125 45 L135 35 L140 45 Z" fill="#f8a5c2"/>
+    <!-- eyes -->
+    <ellipse cx="80" cy="80" rx="5" ry="6" fill="#222"/>
+    <ellipse cx="120" cy="80" rx="5" ry="6" fill="#222"/>
+    <circle cx="82" cy="78" r="1.5" fill="#fff"/>
+    <circle cx="122" cy="78" r="1.5" fill="#fff"/>
+    <!-- cheeks -->
+    <circle cx="65" cy="95" r="6" fill="#ffb3d1" opacity="0.7"/>
+    <circle cx="135" cy="95" r="6" fill="#ffb3d1" opacity="0.7"/>
+    <!-- mouth -->
+    <path d="M95 95 q5 5 10 0" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- legs -->
+    <ellipse cx="65" cy="140" rx="12" ry="8" fill="#bcbcbc"/>
+    <ellipse cx="135" cy="140" rx="12" ry="8" fill="#bcbcbc"/>
+    <!-- tail -->
+    <path d="M180 90 q20 -10 15 -30" stroke="#bcbcbc" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- Hello Kitty style -->
+<div class="character c2">
+  <svg viewBox="0 0 200 200">
+    <!-- body -->
+    <ellipse cx="100" cy="150" rx="50" ry="35" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <!-- arms -->
+    <ellipse cx="55" cy="150" rx="12" ry="8" fill="#fff" stroke="#222" stroke-width="2"/>
+    <ellipse cx="145" cy="150" rx="12" ry="8" fill="#fff" stroke="#222" stroke-width="2"/>
+    <!-- legs -->
+    <ellipse cx="80" cy="185" rx="10" ry="6" fill="#fff" stroke="#222" stroke-width="2"/>
+    <ellipse cx="120" cy="185" rx="10" ry="6" fill="#fff" stroke="#222" stroke-width="2"/>
+    <!-- head -->
+    <ellipse cx="100" cy="80" rx="60" ry="55" fill="#ffffff" stroke="#222" stroke-width="2"/>
+    <!-- ears -->
+    <path d="M55 40 L45 15 L80 35 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+    <path d="M145 40 L155 15 L120 35 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+    <!-- bow -->
+    <path d="M140 35 L165 25 L160 50 Z" fill="#ff5fa2"/>
+    <path d="M140 35 L165 45 L155 25 Z" fill="#ff8ec1"/>
+    <circle cx="148" cy="38" r="4" fill="#ff5fa2"/>
+    <!-- eyes -->
+    <ellipse cx="75" cy="80" rx="5" ry="7" fill="#222"/>
+    <ellipse cx="125" cy="80" rx="5" ry="7" fill="#222"/>
+    <!-- nose -->
+    <ellipse cx="100" cy="92" rx="6" ry="4" fill="#ffd166"/>
+    <!-- whiskers -->
+    <line x1="50" y1="85" x2="30" y2="80" stroke="#222" stroke-width="1.5"/>
+    <line x1="50" y1="92" x2="28" y2="92" stroke="#222" stroke-width="1.5"/>
+    <line x1="50" y1="99" x2="30" y2="105" stroke="#222" stroke-width="1.5"/>
+    <line x1="150" y1="85" x2="170" y2="80" stroke="#222" stroke-width="1.5"/>
+    <line x1="150" y1="92" x2="172" y2="92" stroke="#222" stroke-width="1.5"/>
+    <line x1="150" y1="99" x2="170" y2="105" stroke="#222" stroke-width="1.5"/>
+  </svg>
+</div>
+
+<!-- Cinnamoroll-style puppy -->
+<div class="character c3">
+  <svg viewBox="0 0 200 200">
+    <!-- long ears flopping -->
+    <ellipse cx="55" cy="50" rx="15" ry="35" fill="#fff" stroke="#a8c5e8" stroke-width="2" transform="rotate(-20 55 50)"/>
+    <ellipse cx="145" cy="50" rx="15" ry="35" fill="#fff" stroke="#a8c5e8" stroke-width="2" transform="rotate(20 145 50)"/>
+    <!-- body -->
+    <ellipse cx="100" cy="140" rx="45" ry="35" fill="#fff" stroke="#a8c5e8" stroke-width="2"/>
+    <!-- legs -->
+    <ellipse cx="80" cy="175" rx="8" ry="6" fill="#fff" stroke="#a8c5e8" stroke-width="2"/>
+    <ellipse cx="120" cy="175" rx="8" ry="6" fill="#fff" stroke="#a8c5e8" stroke-width="2"/>
+    <!-- head -->
+    <circle cx="100" cy="90" r="50" fill="#fff" stroke="#a8c5e8" stroke-width="2"/>
+    <!-- cheeks -->
+    <circle cx="70" cy="100" r="7" fill="#ffb3d1"/>
+    <circle cx="130" cy="100" r="7" fill="#ffb3d1"/>
+    <!-- eyes -->
+    <ellipse cx="85" cy="85" rx="4" ry="6" fill="#222"/>
+    <ellipse cx="115" cy="85" rx="4" ry="6" fill="#222"/>
+    <circle cx="86" cy="83" r="1.2" fill="#fff"/>
+    <circle cx="116" cy="83" r="1.2" fill="#fff"/>
+    <!-- mouth -->
+    <path d="M95 100 q5 6 10 0" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- tail (swirl) -->
+    <path d="M140 145 q15 -5 10 -20 q-5 -10 5 -15" stroke="#a8c5e8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- Kuromi-style -->
+<div class="character c4">
+  <svg viewBox="0 0 200 200">
+    <!-- body -->
+    <ellipse cx="100" cy="150" rx="45" ry="32" fill="#1a1a1a"/>
+    <ellipse cx="100" cy="150" rx="35" ry="22" fill="#fff"/>
+    <!-- head -->
+    <circle cx="100" cy="85" r="55" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+    <!-- jester hood -->
+    <path d="M45 80 Q30 20 70 35 Q100 10 130 35 Q170 20 155 80 Z" fill="#1a1a1a"/>
+    <!-- skull bow -->
+    <circle cx="65" cy="40" r="10" fill="#ff5fa2"/>
+    <circle cx="62" cy="38" r="2" fill="#1a1a1a"/>
+    <circle cx="68" cy="38" r="2" fill="#1a1a1a"/>
+    <!-- pointy ears -->
+    <path d="M55 50 L40 15 L80 40 Z" fill="#1a1a1a"/>
+    <path d="M145 50 L160 15 L120 40 Z" fill="#1a1a1a"/>
+    <!-- eyes -->
+    <ellipse cx="80" cy="90" rx="5" ry="7" fill="#1a1a1a"/>
+    <ellipse cx="120" cy="90" rx="5" ry="7" fill="#1a1a1a"/>
+    <!-- evil grin -->
+    <path d="M85 110 Q100 125 115 110" stroke="#1a1a1a" stroke-width="3" fill="#ffb3d1"/>
+    <!-- cheeks -->
+    <circle cx="70" cy="105" r="5" fill="#ffb3d1" opacity="0.7"/>
+    <circle cx="130" cy="105" r="5" fill="#ffb3d1" opacity="0.7"/>
+  </svg>
+</div>
+
+<!-- My Melody style bunny -->
+<div class="character c5">
+  <svg viewBox="0 0 200 200">
+    <!-- long ears -->
+    <ellipse cx="65" cy="40" rx="14" ry="32" fill="#fff" stroke="#ff8ec1" stroke-width="2"/>
+    <ellipse cx="135" cy="40" rx="14" ry="32" fill="#fff" stroke="#ff8ec1" stroke-width="2"/>
+    <ellipse cx="65" cy="45" rx="6" ry="20" fill="#ffd1e6"/>
+    <ellipse cx="135" cy="45" rx="6" ry="20" fill="#ffd1e6"/>
+    <!-- body -->
+    <ellipse cx="100" cy="155" rx="45" ry="30" fill="#fff" stroke="#ff8ec1" stroke-width="2"/>
+    <!-- pink hood -->
+    <path d="M40 90 Q50 50 100 50 Q150 50 160 90 Q160 110 100 110 Q40 110 40 90 Z" fill="#ff8ec1"/>
+    <!-- head -->
+    <circle cx="100" cy="100" r="45" fill="#fff" stroke="#ff8ec1" stroke-width="2"/>
+    <!-- hood front -->
+    <path d="M55 95 Q100 60 145 95" stroke="#ff5fa2" stroke-width="3" fill="none"/>
+    <!-- flower -->
+    <g transform="translate(58 78)">
+      <circle r="4" fill="#ffd166"/>
+      <circle cx="-6" cy="0" r="3" fill="#ff5fa2"/>
+      <circle cx="6" cy="0" r="3" fill="#ff5fa2"/>
+      <circle cx="0" cy="-6" r="3" fill="#ff5fa2"/>
+      <circle cx="0" cy="6" r="3" fill="#ff5fa2"/>
+    </g>
+    <!-- eyes -->
+    <ellipse cx="85" cy="105" rx="4" ry="6" fill="#222"/>
+    <ellipse cx="115" cy="105" rx="4" ry="6" fill="#222"/>
+    <!-- nose -->
+    <ellipse cx="100" cy="115" rx="3" ry="2" fill="#ffae00"/>
+    <!-- mouth -->
+    <path d="M95 122 q5 4 10 0" stroke="#222" stroke-width="1.5" fill="none"/>
+    <!-- cheeks -->
+    <circle cx="75" cy="120" r="5" fill="#ffb3d1" opacity="0.8"/>
+    <circle cx="125" cy="120" r="5" fill="#ffb3d1" opacity="0.8"/>
+  </svg>
+</div>
+
+<!-- Gudetama-style egg -->
+<div class="character c6">
+  <svg viewBox="0 0 200 200">
+    <!-- egg white -->
+    <path d="M40 120 Q20 140 30 160 Q50 175 70 165 Q90 180 120 170 Q160 180 175 155 Q185 130 165 125 Q170 100 145 95 Q155 70 120 75 Z" fill="#fff8e0"/>
+    <!-- yolk body -->
+    <ellipse cx="110" cy="120" rx="50" ry="40" fill="#ffd166"/>
+    <!-- face -->
+    <ellipse cx="95" cy="115" rx="3" ry="4" fill="#222"/>
+    <ellipse cx="125" cy="115" rx="3" ry="4" fill="#222"/>
+    <path d="M105 130 q5 3 10 0" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- arms/butt -->
+    <ellipse cx="155" cy="135" rx="8" ry="6" fill="#ffd166"/>
+    <ellipse cx="80" cy="145" rx="8" ry="6" fill="#ffd166"/>
+    <!-- blush -->
+    <circle cx="85" cy="128" r="4" fill="#ff8ec1" opacity="0.6"/>
+    <circle cx="135" cy="128" r="4" fill="#ff8ec1" opacity="0.6"/>
+  </svg>
+</div>
+
+<!-- Pompompurin-style -->
+<div class="character c7">
+  <svg viewBox="0 0 200 200">
+    <!-- body -->
+    <ellipse cx="100" cy="135" rx="55" ry="45" fill="#ffd9a0"/>
+    <!-- legs -->
+    <ellipse cx="75" cy="175" rx="10" ry="7" fill="#ffd9a0"/>
+    <ellipse cx="125" cy="175" rx="10" ry="7" fill="#ffd9a0"/>
+    <!-- head -->
+    <ellipse cx="100" cy="85" rx="55" ry="50" fill="#ffd9a0"/>
+    <!-- brown beret -->
+    <ellipse cx="100" cy="45" rx="55" ry="18" fill="#8b5a2b"/>
+    <ellipse cx="100" cy="40" rx="40" ry="14" fill="#a86b3a"/>
+    <circle cx="100" cy="32" r="6" fill="#8b5a2b"/>
+    <!-- ears (floppy) -->
+    <ellipse cx="55" cy="80" rx="15" ry="25" fill="#ffd9a0" transform="rotate(-15 55 80)"/>
+    <ellipse cx="145" cy="80" rx="15" ry="25" fill="#ffd9a0" transform="rotate(15 145 80)"/>
+    <!-- eyes -->
+    <ellipse cx="85" cy="90" rx="4" ry="6" fill="#222"/>
+    <ellipse cx="115" cy="90" rx="4" ry="6" fill="#222"/>
+    <!-- nose/mouth -->
+    <ellipse cx="100" cy="105" rx="4" ry="3" fill="#222"/>
+    <path d="M95 110 q5 5 10 0" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- cheeks -->
+    <circle cx="72" cy="105" r="5" fill="#ffb3d1" opacity="0.7"/>
+    <circle cx="128" cy="105" r="5" fill="#ffb3d1" opacity="0.7"/>
+  </svg>
+</div>
+
+<div class="hint">click anywhere for a surprise</div>
+
+<!-- Birthday montage screen -->
+<div class="montage-screen" id="montage">
+  <div class="montage-caption" id="caption">Happy Birthday, Dad </div>
+  <div class="audio-prompt" id="audioPrompt">click to start the music</div>
+</div>
+
+<audio id="bgMusic" src="Music.mp3" preload="auto" loop></audio>
+
+<script>
+  // Confetti
+  const colors = ['#ff5fa2', '#ffb3d1', '#a685e2', '#7ed6df', '#ffd166', '#ff8ec1'];
+  for (let i = 0; i < 40; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+    c.style.animationDuration = (4 + Math.random() * 6) + 's';
+    c.style.animationDelay = -Math.random() * 6 + 's';
+    c.style.width = c.style.height = (6 + Math.random() * 10) + 'px';
+    document.body.appendChild(c);
+  }
+
+  // Floating hearts and stars
+  const floaties = ['❤️', '⭐', '✨', '💖', '🎀', '🎉', '🎂'];
+  function spawnFloaty(x, y) {
+    const f = document.createElement('div');
+    f.className = 'floaty';
+    f.textContent = floaties[Math.floor(Math.random() * floaties.length)];
+    f.style.left = (x ?? Math.random() * 100 + 'vw');
+    if (typeof x === 'number') f.style.left = x + 'px';
+    f.style.top = (typeof y === 'number' ? y + 'px' : (60 + Math.random() * 30) + 'vh');
+    f.style.animationDuration = (4 + Math.random() * 4) + 's';
+    f.style.fontSize = (1.2 + Math.random() * 2) + 'rem';
+    document.body.appendChild(f);
+    setTimeout(() => f.remove(), 8000);
+  }
+
+  // Auto spawn floaties
+  setInterval(spawnFloaty, 600);
+
+  // Click to spawn extras (and prime audio playback)
+  document.addEventListener('click', (e) => {
+    for (let i = 0; i < 8; i++) {
+      setTimeout(() => spawnFloaty(e.clientX + (Math.random() * 80 - 40), e.clientY + (Math.random() * 40 - 20)), i * 50);
+    }
+    // Try to start music on any click (helps with autoplay restrictions)
+    const audio = document.getElementById('bgMusic');
+    if (audio && audio.paused && audioWanted) {
+      audio.play().then(() => {
+        document.getElementById('audioPrompt').classList.remove('show');
+      }).catch(() => {});
+    }
+  });
+
+  // ---------- Slideshow / Montage ----------
+  const photos = [
+    'IMG_0244.jpg','IMG_0245.jpg','IMG_0922.jpg','IMG_0983.jpg',
+    'IMG_1346.jpg','IMG_1421.jpg','IMG_1444.JPG','IMG_1454.jpg',
+    'IMG_2280.jpg','IMG_2669.jpg','IMG_2930.jpg','IMG_4268.jpg',
+    'IMG_4394.jpg','IMG_4408.jpg','IMG_4432.jpg','IMG_5391.jpg',
+    'IMG_5395.jpg','IMG_5436.jpg','IMG_5446.jpg'
+  ];
+
+  let audioWanted = false;
+  const montage = document.getElementById('montage');
+  const audioEl = document.getElementById('bgMusic');
+  const audioPrompt = document.getElementById('audioPrompt');
+  const caption = document.getElementById('caption');
+
+  // Pre-create slide elements and preload images
+  const slides = photos.map((name, i) => {
+    const s = document.createElement('div');
+    s.className = 'slide';
+    s.style.backgroundImage = `url("Photos/${encodeURIComponent(name)}")`;
+    montage.appendChild(s);
+    // preload
+    const img = new Image();
+    img.src = `Photos/${encodeURIComponent(name)}`;
+    return s;
+  });
+
+  const SLIDE_MS = 4500;     // time each slide stays
+  const CROSSFADE_MS = 1600; // matches CSS transition
+  let slideIdx = 0;
+
+  function showNextSlide() {
+    // After the last slide has had its full display time, return to birthday screen
+    if (slideIdx >= slides.length) {
+      endMontage();
+      return;
+    }
+
+    const cur = slides[slideIdx];
+    const prev = slideIdx === 0 ? null : slides[slideIdx - 1];
+
+    // Pick a Ken Burns variant per slide
+    cur.classList.remove('kb1', 'kb2', 'kb3', 'kb4');
+    // Force reflow to restart animation
+    void cur.offsetWidth;
+    const kb = 'kb' + ((slideIdx % 4) + 1);
+    cur.classList.add('active', kb);
+
+    if (prev && prev !== cur) {
+      prev.classList.remove('active');
+      // Clear kb after fadeout
+      setTimeout(() => prev.classList.remove('kb1','kb2','kb3','kb4'), CROSSFADE_MS);
+    }
+    slideIdx++;
+    setTimeout(showNextSlide, SLIDE_MS);
+  }
+
+  function endMontage() {
+    // Fade the last slide out and the montage screen along with it
+    const last = slides[slides.length - 1];
+    if (last) last.classList.remove('active');
+    montage.classList.remove('active');
+    // After the fade completes, clear any remaining slide state so nothing flashes if re-shown
+    setTimeout(() => {
+      slides.forEach(s => s.classList.remove('active', 'kb1', 'kb2', 'kb3', 'kb4'));
+    }, CROSSFADE_MS + 100);
+    // Music keeps playing in the background on the birthday screen
+  }
+
+  function startMontage() {
+    audioWanted = true;
+    montage.classList.add('active');
+
+    // Show caption briefly at start, fade out after a few seconds
+    setTimeout(() => caption.classList.add('show'), 400);
+    setTimeout(() => caption.classList.remove('show'), 4500);
+
+    // Try to play audio
+    audioEl.play().then(() => {
+      audioPrompt.classList.remove('show');
+    }).catch(() => {
+      // Autoplay blocked — show a click-to-start prompt
+      audioPrompt.classList.add('show');
+    });
+
+    // Begin slideshow
+    showNextSlide();
+  }
+
+  // Kick off transition 10 seconds after page load
+  setTimeout(startMontage, 10000);
+</script>
+</body>
+</html>
