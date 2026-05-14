@@ -167,8 +167,7 @@
     background-color: #0a0014;
     opacity: 0;
     transition: opacity 1.6s ease-in-out;
-    will-change: opacity, transform;
-    backface-visibility: hidden;
+    will-change: opacity;
   }
   .slide img {
     position: absolute;
@@ -181,41 +180,6 @@
   }
   .slide.active {
     opacity: 1;
-  }
-  /* Freeze Ken Burns on outgoing slides so they don't keep resizing during fade-out */
-  .slide:not(.active) {
-    animation-play-state: paused !important;
-  }
-  .slide.active.kb1 { animation: kb1 4.5s ease-out forwards; }
-  .slide.active.kb2 { animation: kb2 4.5s ease-out forwards; }
-  .slide.active.kb3 { animation: kb3 4.5s ease-out forwards; }
-  .slide.active.kb4 { animation: kb4 4.5s ease-out forwards; }
-  @keyframes kb1 {
-    0%   { transform: scale(1.0)  translate(0, 0); }
-    100% { transform: scale(1.10) translate(-2%, -2%); }
-  }
-  @keyframes kb2 {
-    0%   { transform: scale(1.0)  translate(2%, -2%); }
-    100% { transform: scale(1.10) translate(-1%, 1%); }
-  }
-  @keyframes kb3 {
-    0%   { transform: scale(1.0)  translate(2%, -1%); }
-    100% { transform: scale(1.10) translate(-1%, 2%); }
-  }
-  @keyframes kb4 {
-    0%   { transform: scale(1.0)  translate(-2%, 2%); }
-    100% { transform: scale(1.10) translate(1%, -1%); }
-  }
-
-  /* On mobile/touch devices, disable Ken Burns to avoid jitter — crossfade only */
-  @media (max-width: 768px), (hover: none) and (pointer: coarse) {
-    .slide.active.kb1,
-    .slide.active.kb2,
-    .slide.active.kb3,
-    .slide.active.kb4 {
-      animation: none;
-      transform: translateZ(0);
-    }
   }
   .montage-caption {
     position: absolute;
@@ -633,17 +597,10 @@
     // Wait for the image to be fully decoded before activating, so it doesn't render in chunks
     try { await img.decode(); } catch {}
 
-    // Pick a Ken Burns variant per slide
-    cur.classList.remove('kb1', 'kb2', 'kb3', 'kb4');
-    // Force reflow to restart animation
-    void cur.offsetWidth;
-    const kb = 'kb' + ((slideIdx % 4) + 1);
-    cur.classList.add('active', kb);
+    cur.classList.add('active');
 
     if (prev && prev !== cur) {
       prev.classList.remove('active');
-      // Clear kb after fadeout
-      setTimeout(() => prev.classList.remove('kb1','kb2','kb3','kb4'), CROSSFADE_MS);
     }
     slideIdx++;
     setTimeout(showNextSlide, SLIDE_MS);
@@ -656,7 +613,7 @@
     montage.classList.remove('active');
     // After the fade completes, clear any remaining slide state and resume background animations
     setTimeout(() => {
-      slides.forEach(s => s.div.classList.remove('active', 'kb1', 'kb2', 'kb3', 'kb4'));
+      slides.forEach(s => s.div.classList.remove('active'));
       document.body.classList.remove('montage-mode');
     }, CROSSFADE_MS + 100);
     // Music keeps playing in the background on the birthday screen
