@@ -12,6 +12,14 @@
     font-family: 'Comic Sans MS', 'Marker Felt', sans-serif;
     background: linear-gradient(135deg, #ffd6e8 0%, #fff0f5 40%, #d9f0ff 100%);
   }
+  /* Lock the body to the small viewport so the iOS Safari URL bar showing/hiding
+     doesn't make the title, cake, and characters jump around on initial load. */
+  body {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    height: 100svh;
+  }
 
   /* Confetti dots in the background */
   .confetti {
