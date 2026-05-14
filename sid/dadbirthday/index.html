@@ -164,23 +164,32 @@
   .slide {
     position: absolute;
     inset: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: #0a0014;
     opacity: 0;
     transition: opacity 1.6s ease-in-out;
     will-change: opacity, transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
+  }
+  .slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
   }
   .slide.active {
     opacity: 1;
   }
-  .slide.active.kb1 { animation: kb1 6s ease-out forwards; }
-  .slide.active.kb2 { animation: kb2 6s ease-out forwards; }
-  .slide.active.kb3 { animation: kb3 6s ease-out forwards; }
-  .slide.active.kb4 { animation: kb4 6s ease-out forwards; }
+  /* Freeze Ken Burns on outgoing slides so they don't keep resizing during fade-out */
+  .slide:not(.active) {
+    animation-play-state: paused !important;
+  }
+  .slide.active.kb1 { animation: kb1 4.5s ease-out forwards; }
+  .slide.active.kb2 { animation: kb2 4.5s ease-out forwards; }
+  .slide.active.kb3 { animation: kb3 4.5s ease-out forwards; }
+  .slide.active.kb4 { animation: kb4 4.5s ease-out forwards; }
   @keyframes kb1 {
     0%   { transform: scale(1.0)  translate(0, 0); }
     100% { transform: scale(1.10) translate(-2%, -2%); }
@@ -222,6 +231,28 @@
     pointer-events: none;
   }
   .montage-caption.show { opacity: 1; }
+
+  /* When montage is running, pause everything underneath so the GPU/CPU can focus
+     on the slideshow — otherwise the confetti, characters, floaties etc. cause
+     jitter on mobile devices even though they're hidden behind the montage. */
+  body.montage-mode .confetti,
+  body.montage-mode .floaty,
+  body.montage-mode .character,
+  body.montage-mode .character svg,
+  body.montage-mode .cake,
+  body.montage-mode .flame,
+  body.montage-mode .glow,
+  body.montage-mode h1,
+  body.montage-mode h2 {
+    animation-play-state: paused !important;
+  }
+  body.montage-mode .confetti,
+  body.montage-mode .floaty,
+  body.montage-mode .character,
+  body.montage-mode .cake,
+  body.montage-mode .hint {
+    visibility: hidden;
+  }
 
   /* Click message */
   .hint {
@@ -541,8 +572,8 @@
     setTimeout(() => f.remove(), 8000);
   }
 
-  // Auto spawn floaties
-  setInterval(spawnFloaty, 600);
+  // Auto spawn floaties (until montage takes over)
+  const floatyInterval = setInterval(spawnFloaty, 600);
 
   // Click to spawn extras (and prime audio playback)
   document.addEventListener('click', (e) => {
@@ -570,31 +601,37 @@
   const audioEl = document.getElementById('bgMusic');
   const caption = document.getElementById('caption');
 
-  // Pre-create slide elements and preload images
+  // Pre-create slide elements with img tags so we can wait for decode before showing
   const slides = photos.map((name, i) => {
     const s = document.createElement('div');
     s.className = 'slide';
-    s.style.backgroundImage = `url("Photos/${encodeURIComponent(name)}")`;
-    montage.appendChild(s);
-    // preload
-    const img = new Image();
+    const img = document.createElement('img');
     img.src = `Photos/${encodeURIComponent(name)}`;
-    return s;
+    img.alt = '';
+    img.decoding = 'async';
+    s.appendChild(img);
+    montage.appendChild(s);
+    // Kick off decode early so images are ready before being shown
+    img.decode().catch(() => {});
+    return { div: s, img };
   });
 
   const SLIDE_MS = 4500;     // time each slide stays
   const CROSSFADE_MS = 1600; // matches CSS transition
   let slideIdx = 0;
 
-  function showNextSlide() {
+  async function showNextSlide() {
     // After the last slide has had its full display time, return to birthday screen
     if (slideIdx >= slides.length) {
       endMontage();
       return;
     }
 
-    const cur = slides[slideIdx];
-    const prev = slideIdx === 0 ? null : slides[slideIdx - 1];
+    const { div: cur, img } = slides[slideIdx];
+    const prev = slideIdx === 0 ? null : slides[slideIdx - 1].div;
+
+    // Wait for the image to be fully decoded before activating, so it doesn't render in chunks
+    try { await img.decode(); } catch {}
 
     // Pick a Ken Burns variant per slide
     cur.classList.remove('kb1', 'kb2', 'kb3', 'kb4');
@@ -615,17 +652,21 @@
   function endMontage() {
     // Fade the last slide out and the montage screen along with it
     const last = slides[slides.length - 1];
-    if (last) last.classList.remove('active');
+    if (last) last.div.classList.remove('active');
     montage.classList.remove('active');
-    // After the fade completes, clear any remaining slide state so nothing flashes if re-shown
+    // After the fade completes, clear any remaining slide state and resume background animations
     setTimeout(() => {
-      slides.forEach(s => s.classList.remove('active', 'kb1', 'kb2', 'kb3', 'kb4'));
+      slides.forEach(s => s.div.classList.remove('active', 'kb1', 'kb2', 'kb3', 'kb4'));
+      document.body.classList.remove('montage-mode');
     }, CROSSFADE_MS + 100);
     // Music keeps playing in the background on the birthday screen
   }
 
   function startMontage() {
     audioWanted = true;
+    // Pause all background animations to free the GPU/CPU for the slideshow
+    document.body.classList.add('montage-mode');
+    clearInterval(floatyInterval);
     montage.classList.add('active');
 
     // Show caption briefly at start, fade out after a few seconds
