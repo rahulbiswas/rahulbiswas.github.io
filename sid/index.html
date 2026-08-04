@@ -47,10 +47,91 @@
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
+
+        .about {
+            max-width: 760px;
+            margin: 0 auto 3rem;
+            padding: 1.75rem 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            color: #34495e;
+            line-height: 1.65;
+        }
+
+        .about h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin: 0 0 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .about p { margin: 0 0 0.9rem; }
+        .about p:last-of-type { margin-bottom: 1.2rem; }
+
+        /* The generic `a` rule above centres every link as a block for the
+           project grid; links inside prose need to stay inline. */
+        .about a {
+            display: inline;
+            text-align: left;
+            color: #2c3e50;
+        }
+
+        .links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            background: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .links a:hover {
+            background: #1a252f;
+            transform: translateY(-1px);
+        }
+
+        .links svg { width: 18px; height: 18px; fill: currentColor; }
     </style>
 </head>
 <body>
     <h1>Sid's Projects</h1>
+
+    <section class="about">
+        <h2>About me</h2>
+        <p>
+            I'm Siddhartha Biswas, and I build things that answer a question I actually have.
+            Most of what's below started that way: a game I wanted to play against a computer,
+            a dataset I wanted to see plotted, or a claim I wanted to check for myself.
+        </p>
+        <p>
+            The projects here span game AI (Dou Shou Qi, Mancala, Xiangqi), environmental data
+            visualization with NOAA and ECOSTRESS satellite records, and most recently
+            <a href="stocktest/">StockTest</a>, a backtesting simulator that asks whether a
+            stock strategy would really have beaten the market once taxes and trading costs are
+            taken out. It runs entirely in your browser — no server, no data leaving your
+            machine. I mostly work in Python, TypeScript and React.
+        </p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/siddhartha-j-biswas/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <h2 style="text-align:center; font-family:'Montserrat',sans-serif; color:#2c3e50; margin-bottom:1.5rem;">Projects</h2>
     <div class="grid-container">
         <a href="ecostress/">
             <img src="ecostress.png" alt="Ecostress Project">
