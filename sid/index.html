@@ -148,6 +148,87 @@
         }
 
         .links svg { width: 18px; height: 18px; fill: currentColor; }
+
+        /* ---- Projects ---------------------------------------------------- */
+
+        h2.section {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            font-size: 1.25rem;
+            margin: 0 0 1.25rem;
+        }
+
+        /* StockTest gets a wide row of its own; the rest share the grid. */
+        .featured {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .featured > a { flex: 0 0 280px; }
+
+        .featured-body { flex: 1 1 auto; min-width: 0; }
+
+        .proj-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            font-size: 1.05rem;
+            margin: 0 0 0.4rem;
+        }
+
+        .featured .proj-title { font-size: 1.4rem; }
+
+        .proj-desc {
+            font-family: 'Lora', Georgia, serif;
+            color: #34495e;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin: 0 0 0.6rem;
+        }
+
+        .featured .proj-desc { font-size: 1rem; }
+
+        .stack {
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #7f8c9b;
+            margin: 0 0 0.75rem;
+        }
+
+        .proj-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .proj-links a {
+            display: inline-block;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid #cfd6dd;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .proj-links a:hover { background: #eef2f6; border-color: #9fb0c0; }
+
+        /* Caption block under each grid tile. */
+        .tile { margin: 0; }
+        .tile figcaption { padding: 0.85rem 0.15rem 0; text-align: left; }
+
+        @media (max-width: 780px) {
+            .featured { flex-direction: column; align-items: stretch; }
+            .featured > a { flex: 0 0 auto; }
+        }
     </style>
 </head>
 <body>
@@ -185,25 +266,94 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
                         LinkedIn
                     </a>
+                    <a href="Siddhartha_Biswas_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5zM8 9.5h4V11H8V9.5z"/></svg>
+                        Résumé
+                    </a>
+                    <a href="mailto:siddharthabiswas2026@gmail.com">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.76-8-4.76V6l8 4.76L20 6v2.24z"/></svg>
+                        Email
+                    </a>
                 </div>
             </div>
         </section>
         <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="300" height="300">
     </div>
 
-    <div class="grid-container">
+    <h2 class="section">Projects</h2>
+
+    <div class="featured">
         <a href="stocktest/">
             <img src="stocktest.png" alt="StockTest Project">
         </a>
-        <a href="doushouqi/">
-            <img src="doushouqi.png" alt="Dou Shou Qi Project">
-        </a>
-        <a href="ecostress/">
-            <img src="ecostress.png" alt="Ecostress Project">
-        </a>
-        <a href="noaa/">
-            <img src="noaa.png" alt="NOAA Project">
-        </a>
+        <div class="featured-body">
+            <h3 class="proj-title">StockTest</h3>
+            <p class="proj-desc">
+                Backtest a stock-picking strategy against buying and holding the S&amp;P 500 &mdash;
+                scored net of capital-gains tax, commissions and slippage, because that is where most
+                strategies quietly stop beating the market. Pair any of ten pickers with any of ten
+                timers for 100 strategies, each benchmarked against SPY. The engine runs entirely in
+                your browser, so there is no server and no account.
+            </p>
+            <p class="stack">TypeScript &middot; React &middot; Web Worker &middot; Python</p>
+            <div class="proj-links">
+                <a href="stocktest/">Open the app</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <figure class="tile">
+            <a href="doushouqi/">
+                <img src="doushouqi.png" alt="Dou Shou Qi Project">
+            </a>
+            <figcaption>
+                <h3 class="proj-title">Dou Shou Qi</h3>
+                <p class="proj-desc">
+                    The classic Chinese animal chess game, playable in the browser against a minimax
+                    AI with its own position evaluator.
+                </p>
+                <p class="stack">JavaScript &middot; Minimax</p>
+                <div class="proj-links">
+                    <a href="doushouqi/">Play</a>
+                    <a href="https://github.com/rahulbiswas/rahulbiswas.github.io/tree/main/sid/doushouqi" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="tile">
+            <a href="ecostress/">
+                <img src="ecostress.png" alt="Ecostress Project">
+            </a>
+            <figcaption>
+                <h3 class="proj-title">ECOSTRESS</h3>
+                <p class="proj-desc">
+                    Interactive maps of California&rsquo;s 2024 environmental events, built from
+                    ECOSTRESS satellite thermal and evapotranspiration data.
+                </p>
+                <p class="stack">JavaScript &middot; Leaflet &middot; Remote sensing</p>
+                <div class="proj-links">
+                    <a href="ecostress/">Explore</a>
+                    <a href="https://github.com/rahulbiswas/rahulbiswas.github.io/tree/main/sid/ecostress" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </figcaption>
+        </figure>
+        <figure class="tile">
+            <a href="noaa/">
+                <img src="noaa.png" alt="NOAA Project">
+            </a>
+            <figcaption>
+                <h3 class="proj-title">NOAA Climate Trends</h3>
+                <p class="proj-desc">
+                    Decades of records from fifteen Santa Clara County weather stations, charted on
+                    hand-drawn canvas plots to test whether the county is really warming.
+                </p>
+                <p class="stack">JavaScript &middot; Canvas &middot; NOAA GHCN-D</p>
+                <div class="proj-links">
+                    <a href="noaa/">View</a>
+                    <a href="https://github.com/rahulbiswas/rahulbiswas.github.io/tree/main/sid/noaa" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </figcaption>
+        </figure>
     </div>
 </body>
 </html>
