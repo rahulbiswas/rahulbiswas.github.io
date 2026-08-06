@@ -19,7 +19,7 @@
         
         h1 {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-family: 'Montserrat', sans-serif;
             color: #2c3e50;
         }
@@ -55,7 +55,7 @@
             display: flex;
             align-items: flex-start;
             gap: 2.5rem;
-            margin: 0 0 3rem;
+            margin: 0 0 2.25rem;
         }
 
         .about {
@@ -79,14 +79,6 @@
             font-size: 1.25rem;
         }
 
-        .about h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #2c3e50;
-            font-size: 0.95rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            margin: 1.6rem 0 0.6rem;
-        }
 
         .about p { margin: 0 0 0.85rem; }
         .about p:last-of-type { margin-bottom: 1.2rem; }
@@ -160,7 +152,44 @@
 <body>
     <h1>Sid's Projects</h1>
 
-    <!-- Grid first so the project tiles are visible without scrolling. -->
+    <div class="about-row">
+        <section class="about">
+            <h2>About me</h2>
+            <div>
+                <p class="lead">
+                    Hi, welcome to my page. I&rsquo;m Sid, an incoming freshman at NYU studying
+                    Computer Science, and below this text are the projects I&rsquo;ve worked on until
+                    now. Each one started as some thought I had in the spur of the moment that later
+                    became a fleshed out goal that I was determined to reach.
+                </p>
+                <p>
+                    Most recently I&rsquo;ve been working on <a href="stocktest/">Stock Test</a>. Ever
+                    since I was young, my grandpa would give me some money on my birthday every year to
+                    invest in stocks, slowly teaching me how I could make or lose money. I became
+                    fascinated as I grew older, wanting to solve the mystery of the market and figure
+                    out a way to always win &mdash; so I built this stock backtesting simulator, to put
+                    all of my crazy ideas into a machine that could show me how effective each one was.
+                </p>
+                <p>
+                    My first ever project, <a href="doushouqi/">Dou Shou Qi</a>, came from watching
+                    AlphaGo beat the world champion of Go and deciding I wanted to build my own AI. I
+                    came across the game in my Mandarin class, one of China&rsquo;s oldest games that
+                    still attracted people today, and worked for years learning AI algorithms and new
+                    programming languages to bring it to life. <a href="noaa/">NOAA</a> and
+                    <a href="ecostress/">ECOSTRESS</a> came from wanting to know whether Santa Clara
+                    County is really getting hotter or whether it just feels that way every August.
+                </p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/siddhartha-j-biswas/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+        <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="300" height="300">
+    </div>
+
     <div class="grid-container">
         <a href="stocktest/">
             <img src="stocktest.png" alt="StockTest Project">
@@ -174,68 +203,6 @@
         <a href="noaa/">
             <img src="noaa.png" alt="NOAA Project">
         </a>
-    </div>
-
-    <div class="about-row">
-        <section class="about">
-            <h2>About me</h2>
-            <div>
-                <p class="lead">
-                    Hi, welcome to my page. I&rsquo;m Sid, an incoming freshman at NYU studying
-                    Computer Science, and below this text are the projects that I&rsquo;ve worked on
-                    until now. All of my projects represent some kind of thought that I would have in
-                    the spur of the moment that later became a fleshed out goal that I was determined
-                    to reach.
-                </p>
-                <p>
-                    Most recently, I&rsquo;ve been working on my <a href="stocktest/">Stock Test</a>
-                    project, which originated from my interest in the stock market. Ever since I was
-                    young, my grandpa would give me some money on my birthday every year to invest in
-                    stocks, slowly teaching me about what stocks were, the companies I would invest
-                    in, and how I could make or lose money. I became fascinated as I grew older,
-                    wanting to solve the mystery of the market, trying to figure out a way to always
-                    win, beat the market, and build something myself that could change my life
-                    forever. And so I built this stock backtesting simulator, to put all of my crazy
-                    ideas into a machine that could show me how effective each method I thought up
-                    was.
-                </p>
-                <p>
-                    My first ever project, <a href="doushouqi/">Dou Shou Qi</a>, came from my interest
-                    in artificial intelligence, especially in the area involving games. After watching
-                    AlphaGo beat the world champion of Go, I decided that I wanted to build my own AI,
-                    for a game that I had recently discovered. I came across Dou Shou Qi in my
-                    Mandarin class, where my teacher introduced it to me as one of China&rsquo;s
-                    oldest games that still attracted people today. I worked for years, learning about
-                    AI algorithms, about building websites, and learned new programming languages to
-                    bring my project to life.
-                </p>
-
-                <h3>Other Projects</h3>
-                <p>
-                    <a href="noaa/">The NOAA Project</a>: I wanted to know whether Santa Clara County
-                    is really getting hotter or whether it just feels that way every August, so I
-                    pulled decades of NOAA records and plotted them.
-                </p>
-                <p>
-                    <a href="ecostress/">The ECOSTRESS Project</a>: Then California had a brutal 2024,
-                    and it turns out ECOSTRESS thermal imaging is a remarkably direct way to watch a
-                    heatwave happen from orbit.
-                </p>
-                <p>
-                    Through a whole host of languages has come these projects, each one telling a
-                    story of some random thought in my head that I wanted to see play out. My favorite
-                    part is always the moment when I finish the project, runs with no bugs of course,
-                    and shows me something I could have never imagined.
-                </p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/siddhartha-j-biswas/" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-        </section>
-        <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="300" height="300">
     </div>
 </body>
 </html>
