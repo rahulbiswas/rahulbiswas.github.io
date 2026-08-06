@@ -6,7 +6,7 @@
     <title>Sid's Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -49,14 +49,18 @@
         }
 
         .about {
-            max-width: 760px;
+            max-width: 1000px;
             margin: 0 auto 3rem;
-            padding: 1.75rem 2rem;
+            padding: 2rem 2.25rem;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
             color: #34495e;
-            line-height: 1.65;
+            /* Serif prose against the Montserrat headings; larger and airier
+               than the old sans body copy. */
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+            font-size: 1.08rem;
+            line-height: 1.8;
         }
 
         .about h2 {
@@ -66,38 +70,53 @@
             font-size: 1.25rem;
         }
 
-        .about p { margin: 0 0 0.9rem; }
-        .about p:last-of-type { margin-bottom: 1.2rem; }
+        .about h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin: 1.6rem 0 0.6rem;
+        }
 
-        /* Photo sits beside the prose on desktop, above it on narrow screens. */
-        .about-inner {
-            display: flex;
-            gap: 1.75rem;
-            align-items: flex-start;
+        .about p { margin: 0 0 1rem; }
+        .about p:last-of-type { margin-bottom: 1.4rem; }
+
+        /* Lead line gets a little extra presence. */
+        .about .lead { font-size: 1.2rem; line-height: 1.7; }
+
+        /* The photo floats right and the prose wraps around it. A two-column
+           flex row left a tall empty gutter once the text ran past the photo. */
+        .about-inner::after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
         .portrait {
-            flex: 0 0 auto;
-            width: 150px;
-            height: 150px;
+            float: right;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             /* Override the grid's generic img styling. */
-            box-shadow: 0 0 0 4px #fff, 0 4px 14px rgba(0,0,0,0.18);
-            margin-top: 0.35rem;
+            box-shadow: 0 0 0 5px #fff, 0 6px 18px rgba(0,0,0,0.2);
+            margin: 0.4rem 0 1.5rem 2.25rem;
         }
 
         .portrait:hover {
             transform: none;
-            box-shadow: 0 0 0 4px #fff, 0 4px 14px rgba(0,0,0,0.18);
+            box-shadow: 0 0 0 5px #fff, 0 6px 18px rgba(0,0,0,0.2);
         }
 
-        @media (max-width: 620px) {
-            .about-inner {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+        @media (max-width: 780px) {
+            /* Too narrow to wrap text beside it — centre it above instead. */
+            .portrait {
+                float: none;
+                display: block;
+                width: 190px;
+                height: 190px;
+                margin: 0 auto 1.5rem;
             }
-            .links { justify-content: center; }
         }
 
         /* The generic `a` rule above centres every link as a block for the
@@ -123,6 +142,8 @@
             background: #2c3e50;
             color: #fff;
             text-decoration: none;
+            /* The pill stays sans, against the serif prose around it. */
+            font-family: 'Segoe UI', Roboto, sans-serif;
             font-weight: 600;
             font-size: 0.95rem;
             transition: background 0.2s, transform 0.2s;
@@ -142,30 +163,54 @@
     <section class="about">
         <h2>About me</h2>
         <div class="about-inner">
-            <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="150" height="150">
+            <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="240" height="240">
             <div>
-                <p>
-                    I'm Sid. I build things when a question gets stuck in my head and won't leave.
+                <p class="lead">
+                    Hi, welcome to my page. I&rsquo;m Sid, an incoming freshman at NYU studying
+                    Computer Science, and below this text are the projects that I&rsquo;ve worked on
+                    until now. All of my projects represent some kind of thought that I would have in
+                    the spur of the moment that later became a fleshed out goal that I was determined
+                    to reach.
                 </p>
                 <p>
-                    It usually starts small and gets out of hand. I wanted to know whether a computer
-                    could beat me at <a href="doushouqi/">Dou Shou Qi</a>, so I wrote one that does. I
-                    wanted to know whether Santa Clara County is really getting hotter or whether it
-                    just feels that way every August, so I pulled decades of
-                    <a href="noaa/">NOAA records</a> and plotted them. Then California had a brutal
-                    2024, and it turns out <a href="ecostress/">ECOSTRESS</a> thermal imaging is a
-                    remarkably direct way to watch a heatwave happen from orbit.
+                    Most recently, I&rsquo;ve been working on my <a href="stocktest/">Stock Test</a>
+                    project, which originated from my interest in the stock market. Ever since I was
+                    young, my grandpa would give me some money on my birthday every year to invest in
+                    stocks, slowly teaching me about what stocks were, the companies I would invest
+                    in, and how I could make or lose money. I became fascinated as I grew older,
+                    wanting to solve the mystery of the market, trying to figure out a way to always
+                    win, beat the market, and build something myself that could change my life
+                    forever. And so I built this stock backtesting simulator, to put all of my crazy
+                    ideas into a machine that could show me how effective each method I thought up
+                    was.
                 </p>
                 <p>
-                    The newest one is <a href="stocktest/">StockTest</a>. Everybody has a strategy that
-                    would have beaten the market. I wanted to check mine honestly — with taxes, with
-                    trading costs, against a benchmark that doesn't get to cheat. It runs entirely in
-                    your browser: I ship the price history with the page, so there's no server, no
-                    account, and nothing you do ever leaves your laptop.
+                    My first ever project, <a href="doushouqi/">Dou Shou Qi</a>, came from my interest
+                    in artificial intelligence, especially in the area involving games. After watching
+                    AlphaGo beat the world champion of Go, I decided that I wanted to build my own AI,
+                    for a game that I had recently discovered. I came across Dou Shou Qi in my
+                    Mandarin class, where my teacher introduced it to me as one of China&rsquo;s
+                    oldest games that still attracted people today. I worked for years, learning about
+                    AI algorithms, about building websites, and learned new programming languages to
+                    bring my project to life.
+                </p>
+
+                <h3>Other Projects</h3>
+                <p>
+                    <a href="noaa/">The NOAA Project</a>: I wanted to know whether Santa Clara County
+                    is really getting hotter or whether it just feels that way every August, so I
+                    pulled decades of NOAA records and plotted them.
                 </p>
                 <p>
-                    Mostly Python, TypeScript and React. My favorite part is always the moment the
-                    thing finally runs and immediately tells me something I didn't expect.
+                    <a href="ecostress/">The ECOSTRESS Project</a>: Then California had a brutal 2024,
+                    and it turns out ECOSTRESS thermal imaging is a remarkably direct way to watch a
+                    heatwave happen from orbit.
+                </p>
+                <p>
+                    Through a whole host of languages has come these projects, each one telling a
+                    story of some random thought in my head that I wanted to see play out. My favorite
+                    part is always the moment when I finish the project, runs with no bugs of course,
+                    and shows me something I could have never imagined.
                 </p>
                 <div class="links">
                     <a href="https://www.linkedin.com/in/siddhartha-j-biswas/" target="_blank" rel="noopener noreferrer">
