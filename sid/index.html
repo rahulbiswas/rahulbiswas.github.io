@@ -87,12 +87,13 @@
 
         .portrait {
             flex: 0 0 auto;
+            /* Sits level with the middle of the card, not its top corner. */
+            align-self: center;
             width: 300px;
             height: 300px;
             border-radius: 50%;
             /* Override the grid's generic img styling. */
             box-shadow: 0 0 0 6px #fff, 0 8px 22px rgba(0,0,0,0.18);
-            margin-top: 0.5rem;
         }
 
         .portrait:hover {
@@ -108,7 +109,7 @@
                 gap: 1.5rem;
             }
             .about { width: 100%; }
-            .portrait { width: 200px; height: 200px; margin-top: 0; }
+            .portrait { width: 200px; height: 200px; }
         }
 
         /* The generic `a` rule above centres every link as a block for the
