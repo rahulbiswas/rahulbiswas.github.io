@@ -28,6 +28,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
         
         a {
@@ -48,19 +49,27 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
+        /* Card and portrait sit side by side; the photo is its own element
+           outside the white box. */
+        .about-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin: 0 0 3rem;
+        }
+
         .about {
-            max-width: 1000px;
-            margin: 0 auto 3rem;
-            padding: 2rem 2.25rem;
+            flex: 1 1 auto;
+            min-width: 0;
+            padding: 1.75rem 2rem;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
             color: #34495e;
-            /* Serif prose against the Montserrat headings; larger and airier
-               than the old sans body copy. */
+            /* Serif prose against the Montserrat headings. */
             font-family: 'Lora', Georgia, 'Times New Roman', serif;
-            font-size: 1.08rem;
-            line-height: 1.8;
+            font-size: 0.97rem;
+            line-height: 1.7;
         }
 
         .about h2 {
@@ -79,44 +88,35 @@
             margin: 1.6rem 0 0.6rem;
         }
 
-        .about p { margin: 0 0 1rem; }
-        .about p:last-of-type { margin-bottom: 1.4rem; }
+        .about p { margin: 0 0 0.85rem; }
+        .about p:last-of-type { margin-bottom: 1.2rem; }
 
-        /* Lead line gets a little extra presence. */
-        .about .lead { font-size: 1.2rem; line-height: 1.7; }
-
-        /* The photo floats right and the prose wraps around it. A two-column
-           flex row left a tall empty gutter once the text ran past the photo. */
-        .about-inner::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+        .about .lead { font-size: 1.02rem; }
 
         .portrait {
-            float: right;
-            width: 240px;
-            height: 240px;
+            flex: 0 0 auto;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             /* Override the grid's generic img styling. */
-            box-shadow: 0 0 0 5px #fff, 0 6px 18px rgba(0,0,0,0.2);
-            margin: 0.4rem 0 1.5rem 2.25rem;
+            box-shadow: 0 0 0 6px #fff, 0 8px 22px rgba(0,0,0,0.18);
+            margin-top: 0.5rem;
         }
 
         .portrait:hover {
             transform: none;
-            box-shadow: 0 0 0 5px #fff, 0 6px 18px rgba(0,0,0,0.2);
+            box-shadow: 0 0 0 6px #fff, 0 8px 22px rgba(0,0,0,0.18);
         }
 
-        @media (max-width: 780px) {
-            /* Too narrow to wrap text beside it — centre it above instead. */
-            .portrait {
-                float: none;
-                display: block;
-                width: 190px;
-                height: 190px;
-                margin: 0 auto 1.5rem;
+        @media (max-width: 860px) {
+            /* Too narrow for two columns — photo above the card. */
+            .about-row {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 1.5rem;
             }
+            .about { width: 100%; }
+            .portrait { width: 200px; height: 200px; margin-top: 0; }
         }
 
         /* The generic `a` rule above centres every link as a block for the
@@ -160,10 +160,25 @@
 <body>
     <h1>Sid's Projects</h1>
 
-    <section class="about">
-        <h2>About me</h2>
-        <div class="about-inner">
-            <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="240" height="240">
+    <!-- Grid first so the project tiles are visible without scrolling. -->
+    <div class="grid-container">
+        <a href="stocktest/">
+            <img src="stocktest.png" alt="StockTest Project">
+        </a>
+        <a href="doushouqi/">
+            <img src="doushouqi.png" alt="Dou Shou Qi Project">
+        </a>
+        <a href="ecostress/">
+            <img src="ecostress.png" alt="Ecostress Project">
+        </a>
+        <a href="noaa/">
+            <img src="noaa.png" alt="NOAA Project">
+        </a>
+    </div>
+
+    <div class="about-row">
+        <section class="about">
+            <h2>About me</h2>
             <div>
                 <p class="lead">
                     Hi, welcome to my page. I&rsquo;m Sid, an incoming freshman at NYU studying
@@ -219,23 +234,8 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <h2 style="text-align:center; font-family:'Montserrat',sans-serif; color:#2c3e50; margin-bottom:1.5rem;">Projects</h2>
-    <div class="grid-container">
-        <a href="stocktest/">
-            <img src="stocktest.png" alt="StockTest Project">
-        </a>
-        <a href="doushouqi/">
-            <img src="doushouqi.png" alt="Dou Shou Qi Project">
-        </a>
-        <a href="ecostress/">
-            <img src="ecostress.png" alt="Ecostress Project">
-        </a>
-        <a href="noaa/">
-            <img src="noaa.png" alt="NOAA Project">
-        </a>
+        </section>
+        <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="300" height="300">
     </div>
 </body>
 </html>
