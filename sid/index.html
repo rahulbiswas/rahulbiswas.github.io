@@ -69,6 +69,37 @@
         .about p { margin: 0 0 0.9rem; }
         .about p:last-of-type { margin-bottom: 1.2rem; }
 
+        /* Photo sits beside the prose on desktop, above it on narrow screens. */
+        .about-inner {
+            display: flex;
+            gap: 1.75rem;
+            align-items: flex-start;
+        }
+
+        .portrait {
+            flex: 0 0 auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Override the grid's generic img styling. */
+            box-shadow: 0 0 0 4px #fff, 0 4px 14px rgba(0,0,0,0.18);
+            margin-top: 0.35rem;
+        }
+
+        .portrait:hover {
+            transform: none;
+            box-shadow: 0 0 0 4px #fff, 0 4px 14px rgba(0,0,0,0.18);
+        }
+
+        @media (max-width: 620px) {
+            .about-inner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .links { justify-content: center; }
+        }
+
         /* The generic `a` rule above centres every link as a block for the
            project grid; links inside prose need to stay inline. */
         .about a {
@@ -110,43 +141,55 @@
 
     <section class="about">
         <h2>About me</h2>
-        <p>
-            I'm Siddhartha Biswas, and I build things that answer a question I actually have.
-            Most of what's below started that way: a game I wanted to play against a computer,
-            a dataset I wanted to see plotted, or a claim I wanted to check for myself.
-        </p>
-        <p>
-            The projects here span game AI (Dou Shou Qi, Mancala), environmental data
-            visualization with NOAA and ECOSTRESS satellite records, and most recently
-            <a href="stocktest/">StockTest</a>, a backtesting simulator that asks whether a
-            stock strategy would really have beaten the market once taxes and trading costs are
-            taken out. It runs entirely in your browser — no server, no data leaving your
-            machine. I mostly work in Python, TypeScript and React.
-        </p>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/siddhartha-j-biswas/" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-                LinkedIn
-            </a>
+        <div class="about-inner">
+            <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="150" height="150">
+            <div>
+                <p>
+                    I'm Sid. I build things when a question gets stuck in my head and won't leave.
+                </p>
+                <p>
+                    It usually starts small and gets out of hand. I wanted to know whether a computer
+                    could beat me at <a href="doushouqi/">Dou Shou Qi</a>, so I wrote one that does. I
+                    wanted to know whether Santa Clara County is really getting hotter or whether it
+                    just feels that way every August, so I pulled decades of
+                    <a href="noaa/">NOAA records</a> and plotted them. Then California had a brutal
+                    2024, and it turns out <a href="ecostress/">ECOSTRESS</a> thermal imaging is a
+                    remarkably direct way to watch a heatwave happen from orbit.
+                </p>
+                <p>
+                    The newest one is <a href="stocktest/">StockTest</a>. Everybody has a strategy that
+                    would have beaten the market. I wanted to check mine honestly — with taxes, with
+                    trading costs, against a benchmark that doesn't get to cheat. It runs entirely in
+                    your browser: I ship the price history with the page, so there's no server, no
+                    account, and nothing you do ever leaves your laptop.
+                </p>
+                <p>
+                    Mostly Python, TypeScript and React. My favorite part is always the moment the
+                    thing finally runs and immediately tells me something I didn't expect.
+                </p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/siddhartha-j-biswas/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <h2 style="text-align:center; font-family:'Montserrat',sans-serif; color:#2c3e50; margin-bottom:1.5rem;">Projects</h2>
     <div class="grid-container">
-        <a href="ecostress/">
-            <img src="ecostress.png" alt="Ecostress Project">
+        <a href="stocktest/">
+            <img src="stocktest.png" alt="StockTest Project">
         </a>
         <a href="doushouqi/">
             <img src="doushouqi.png" alt="Dou Shou Qi Project">
         </a>
-        <a href="mancala/">
-            <img src="mancala.png" alt="Mancala Project">
+        <a href="ecostress/">
+            <img src="ecostress.png" alt="Ecostress Project">
         </a>
         <a href="noaa/">
             <img src="noaa.png" alt="NOAA Project">
-        </a>
-        <a href="stocktest/">
-            <img src="stocktest.png" alt="StockTest Project">
         </a>
     </div>
 </body>
