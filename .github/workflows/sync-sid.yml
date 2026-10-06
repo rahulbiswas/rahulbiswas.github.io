@@ -1,0 +1,48 @@
+# Keep biswas.net/sid/ in step with Sid's GitHub repos.
+#
+# Every hour (and on demand from the Actions tab) this mirrors each public repo
+# of github.com/siddharthajbiswas whose homepage is https://biswas.net/sid/<name>/
+# into sid/<name>/ and commits the result if anything changed. See
+# .github/scripts/sync_sid.py for exactly what is copied. Nothing outside those
+# sid/<name>/ folders is ever modified.
+name: Sync Sid's projects
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-sid
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Mirror opted-in repos into sid/
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/sync_sid.py
+
+      - name: Commit and publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add -A sid
+          if git diff --cached --quiet; then
+            echo "Already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync Sid's projects from github.com/siddharthajbiswas"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null \
+            || echo "Pages will rebuild on its own schedule."
