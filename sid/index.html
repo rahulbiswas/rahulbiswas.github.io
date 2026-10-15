@@ -202,6 +202,52 @@
 
         .featured .proj-desc { font-size: 1rem; }
 
+        /* The one line that tells an engineer why the project is worth a click. */
+        .proof {
+            font-family: 'Lora', Georgia, serif;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 0.7rem;
+            padding-left: 0.8rem;
+            border-left: 3px solid #2c3e50;
+        }
+
+        /* ---- Experience -------------------------------------------------- */
+
+        .experience {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .job-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .job-head .proj-title { margin: 0; }
+
+        .job-dates { font-size: 0.85rem; color: #7f8c9b; }
+
+        .job-org { font-size: 0.9rem; color: #5b6b7c; margin: 0.15rem 0 0.6rem; }
+
+        .experience ul {
+            font-family: 'Lora', Georgia, serif;
+            color: #34495e;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin: 0 0 0.6rem;
+            padding-left: 1.2rem;
+        }
+
+        .experience ul a { display: inline; text-align: left; color: #2c3e50; }
+
         .stack {
             font-size: 0.72rem;
             letter-spacing: 0.06em;
@@ -242,8 +288,8 @@
             <h2>About me</h2>
             <div>
                 <p class="lead">
-                    Hi, welcome to my page. I&rsquo;m Sid, an incoming freshman at NYU studying
-                    Computer Science, and below this text are the projects I&rsquo;ve worked on until
+                    Hi, welcome to my page. I&rsquo;m Sid, a CS freshman at NYU, looking for a
+                    software engineering internship for Summer 2027. Below this text are the projects I&rsquo;ve worked on until
                     now. Each one started as some thought I had in the spur of the moment that later
                     became a fleshed out goal that I was determined to reach.
                 </p>
@@ -283,6 +329,26 @@
         <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="300" height="300">
     </div>
 
+    <h2 class="section">Experience</h2>
+
+    <section class="experience">
+        <div class="job-head">
+            <h3 class="proj-title">Student Researcher, Environmental Data Science</h3>
+            <span class="job-dates">Jul 2025 &ndash; present</span>
+        </div>
+        <p class="job-org">University of California, Los Angeles &middot; Remote</p>
+        <ul>
+            <li>Compared satellite remote-sensing data against ground-based field measurements of
+                water use and plant water stress, and presented the results as a
+                <a href="poster_website_compressed.pdf" target="_blank" rel="noopener noreferrer">research
+                poster</a> to a UCLA faculty and PhD research group.</li>
+            <li>Processed remote-sensing datasets in Python and QGIS into interactive maps of
+                California&rsquo;s 2024 environmental events, published as
+                <a href="ecostress/">ECOSTRESS</a> below.</li>
+        </ul>
+        <p class="stack">Python &middot; QGIS &middot; Remote sensing</p>
+    </section>
+
     <h2 class="section">Projects</h2>
 
     <div class="featured">
@@ -298,7 +364,12 @@
                 timers for 100 strategies, each benchmarked against SPY. The engine runs entirely in
                 your browser, so there is no server and no account.
             </p>
-            <p class="stack">TypeScript &middot; React &middot; Web Worker &middot; Python</p>
+            <p class="proof">
+                Implemented twice and kept honest by a parity suite: the browser engine reruns 25
+                golden cases from the Python original and matches 300,508 values to 1e-9, down to a
+                JavaScript port of Python&rsquo;s MT19937 random number generator.
+            </p>
+            <p class="stack">JavaScript &middot; React &middot; Web Worker &middot; Python</p>
             <a class="code-link" href="https://github.com/siddharthajbiswas/StockTest" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
                 Code
@@ -349,7 +420,9 @@
                 <h3 class="proj-title"><a href="noaa/">NOAA Climate Trends</a></h3>
                 <p class="proj-desc">
                     Decades of records from fifteen Santa Clara County weather stations, charted on
-                    hand-drawn canvas plots to test whether the county is really warming.
+                    hand-drawn canvas plots. The answer is yes, inland: San Jose&rsquo;s 90&deg;F days
+                    doubled from about 10 a year in the 1890s to 20 by the 2000s, while Palo Alto, nearer
+                    the bay, shows no rise.
                 </p>
                 <p class="stack">JavaScript &middot; Canvas &middot; NOAA GHCN-D</p>
                 <a class="code-link" href="https://github.com/siddharthajbiswas/noaa-climate-trends" target="_blank" rel="noopener noreferrer">
