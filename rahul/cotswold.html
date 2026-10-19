@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotswolds Guide &amp; Private Manor Houses — June 14–17, 2027</title>
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --card: #ffffff;
+      --stone: #efe9de;
+      --ink: #24211d;
+      --muted: #615b52;
+      --accent: #7c5832;
+      --accent-dark: #5b3e1f;
+      --green: #2c5e3b;
+      --green-bg: #e7f3eb;
+      --amber: #8a5300;
+      --amber-bg: #fdf2dc;
+      --border: #e5dec9;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 40px 24px 72px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #3b3024 0%, #5c4934 100%);
+      color: #fff;
+      padding: 36px 40px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px rgba(36, 33, 29, 0.12);
+    }
+    header .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: #e6d3b3;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    header p {
+      margin: 0;
+      color: #f3ece0;
+      font-size: 16px;
+      max-width: 740px;
+    }
+    .pill-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .pill {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 23px;
+      margin: 36px 0 16px;
+      color: var(--ink);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: var(--accent-dark);
+    }
+    .info-card p, .info-card ul {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .info-card ul {
+      padding-left: 18px;
+    }
+    .info-card li {
+      margin-bottom: 6px;
+    }
+    .manor-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .manor-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(36, 33, 29, 0.05);
+    }
+    @media (max-width: 720px) {
+      .manor-card {
+        grid-template-columns: 1fr;
+      }
+    }
+    .manor-img {
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      background: var(--stone);
+    }
+    .manor-body {
+      padding: 22px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .manor-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .manor-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .manor-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .manor-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      background: var(--stone);
+      color: var(--accent-dark);
+    }
+    .badge.green {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+    .badge.amber {
+      background: var(--amber-bg);
+      color: var(--amber);
+    }
+    .specs {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .price-line {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      background: #f8f5ee;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .price-sub {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: background 0.15s ease;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+    .btn.secondary {
+      background: var(--stone);
+      color: var(--accent-dark);
+    }
+    .btn.secondary:hover {
+      background: #e3dac8;
+    }
+    .tip-box {
+      margin-top: 32px;
+      background: #f5efe4;
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 10px;
+    }
+    .tip-box h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      color: var(--accent-dark);
+    }
+    .tip-box p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="eyebrow">Summer 2027 &bull; England Leg &bull; Live Airbnb Quotes</div>
+      <h1>The Cotswolds &amp; Private Manor Houses</h1>
+      <p>
+        All 5 historic manor houses below are <strong>confirmed available for Monday June 14 – Thursday June 17, 2027</strong>. Two fit right inside your <strong>$2,700 ($900/night)</strong> budget, and two more sit in the $3.1K–$3.8K range if you book on Airbnb.
+      </p>
+      <div class="pill-bar">
+        <span class="pill">Dates: Mon Jun 14 – Thu Jun 17, 2027 (3 Nights)</span>
+        <span class="pill">Guests: 2 Adults, 2 Children</span>
+        <span class="pill">Target Budget: $2,700 ($900/night)</span>
+      </div>
+    </header>
+
+    <h2>1. What the Cotswolds Is &amp; Why It Looks Like a Storybook</h2>
+    <div class="intro-grid">
+      <div class="info-card">
+        <h3>Honey-Gold Jurassic Stone</h3>
+        <p>
+          An 800-square-mile Area of Outstanding Natural Beauty 1.5 hours west of London. Everything sits on a vein of Jurassic oolitic limestone—every cottage, church, pub, and dry-stone wall is built from the same local stone that weathers to a warm honey-gold.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Frozen in Time by Wool</h3>
+        <p>
+          In the Middle Ages, sheep on these rolling hills ("wolds") produced Europe's finest wool, funding grand limestone manors and "wool churches." When the Industrial Revolution shifted north to coal country, the Cotswolds was bypassed—preserving its 16th- and 17th-century villages intact.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Highlights for the Four of You</h3>
+        <ul>
+          <li><strong>Bourton-on-the-Water Model Village:</strong> A 1930s 1:9 scale replica of the village carved out of real Cotswold stone (with a miniature model village inside the model village).</li>
+          <li><strong>Lower &amp; Upper Slaughter:</strong> A quiet 1-mile footpath along the tiny River Eye with stone footbridges and zero tour buses.</li>
+          <li><strong>Cotswold Wildlife Park:</strong> Walk at eye level with giraffes and past rhinos on the lawns of a Victorian manor near Burford.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>2. Live Airbnb Prices for Jun 14–17, 2027 (Sorted by Price)</h2>
+    <div class="manor-list">
+
+      <!-- 1. Manor Farm Grafton -->
+      <div class="manor-card">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-41771902/original/78078ced-aaa2-47e1-af50-eca0b1e7ed4f.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="Manor Farm Grafton" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  1. Manor Farm — Grafton (Foot of Bredon Hill)
+                </a>
+              </h3>
+              <span class="badge green">Under Budget ($845/night)</span>
+            </div>
+            <div class="specs">Entire 17th-Century Grade II Manor Farmhouse &bull; 5 Bedrooms &bull; 4 Bathrooms &bull; ★ 4.98 (122 reviews)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,534 for 3 nights ($845/night)
+              <span class="price-sub">$0 due today on Airbnb &bull; Free cancellation before May 15, 2027</span>
+            </div>
+            <p class="desc">
+              Tucked into a tiny, peaceful hamlet with panoramic views across the Cotswold hills. Combines original 17th-century stonework, timber beams, multiple wood-burning stoves, and an AGA kitchen with underfloor heating, enclosed gardens, and a private hot tub.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,534) &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Sedgeberrow Manor House -->
+      <div class="manor-card">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-883078279051755742/original/21ad933c-f4e9-4fa1-8d0c-1573e2614f62.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Manor House Sedgeberrow" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/883078279051755742?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  2. The Manor House — Sedgeberrow (near Broadway)
+                </a>
+              </h3>
+              <span class="badge green">Under Budget Direct (~$843/night)</span>
+            </div>
+            <div class="specs">Entire 1572 Manor &bull; 5 Bedrooms &bull; 5 Bathrooms &bull; ★ 4.70 (20 reviews)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,138 for 3 nights ($1,046/night)
+              <span class="price-sub">Direct via StayCotswold: £1,945 (~$2,530 total / ~$843/night — saves ~$608 in Airbnb markup)</span>
+            </div>
+            <p class="desc">
+              Dates back to 1572 (on a Domesday Book site) right beside a medieval village church and 10 minutes from Broadway, one of the grandest high streets in the Cotswolds. Features massive inglenook fireplaces, exposed honey-stone walls, heavy oak beams, a bright glass orangery, expansive private lawns, and an outdoor hot tub.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/883078279051755742?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,138) &rarr;</a>
+            <a class="btn secondary" href="https://www.staycotswold.com/property/manor-house-large-5-bed-holiday-home-with-hot-tub/" target="_blank" rel="noopener">Direct Agency Page (£1,945 / ~$2,530)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. The Court House / Chocolate Box Manor -->
+      <div class="manor-card">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-650502655470642363/original/92af8439-4511-46ff-92d6-0cd7f3cb084f.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Court House Manor" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/650502655470642363?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  3. The Court House ("Chocolate Box Manor") — France Lynch
+                </a>
+              </h3>
+              <span class="badge amber">+$1,141 Over Budget ($1,280/night)</span>
+            </div>
+            <div class="specs">Entire Jacobean Grade II Manor on 3 Acres &bull; 6 Bedrooms &bull; 6 Bathrooms &bull; ★ 4.90 (59 reviews)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,841 for 3 nights ($1,280/night)
+              <span class="price-sub">$0 due today on Airbnb &bull; Free cancellation before May 15, 2027</span>
+            </div>
+            <p class="desc">
+              A 17th-century Jacobean stone manor set on 3 acres of private grounds in the Golden Valley (South Cotswolds). Features mullioned stone windows, solid oak beams, a full-size vintage slate-bed pool table (great for Rohan), and a 7-seater hot tub overlooking the valley.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/650502655470642363?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,841) &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Buscot Manor -->
+      <div class="manor-card">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/40162a54-c4f2-4d95-8249-fbdadb6cae88.jpg?im_w=720&width=720&quality=70&auto=webp" alt="Buscot Manor" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1927155?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  4. Buscot Manor — Buscot (National Trust Village on the Thames)
+                </a>
+              </h3>
+              <span class="badge">Grand Estate ($1,895/night)</span>
+            </div>
+            <div class="specs">Entire 1692 Queen Anne Manor &bull; ★ 4.92 (86 reviews)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $5,685 for 3 nights ($1,895/night)
+              <span class="price-sub">Available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            <p class="desc">
+              Grand 1692 Queen Anne architecture with crystal chandeliers, four-poster bedrooms, a private walled garden, and expansive lawns right on the River Thames in a National Trust-preserved stone village (10 minutes from Kelmscott Manor and Burford).
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1927155?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($5,685) &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Mollington Manor -->
+      <div class="manor-card">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526230843613002219/original/9c80be4c-32d9-4167-9ec5-125f245efd37.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="Mollington Manor" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1526230843613002219?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  5. Mollington Manor — Mollington (North Oxfordshire Cotswolds)
+                </a>
+              </h3>
+              <span class="badge">Grand Estate ($2,289/night)</span>
+            </div>
+            <div class="specs">Entire Stone Manor &bull; 6 Bedrooms &bull; 4.5 Bathrooms &bull; ★ 5.0 (6 reviews)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $6,868 for 3 nights ($2,289/night)
+              <span class="price-sub">Available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            <p class="desc">
+              An authentic oak-panelled Cotswold stone manor house in a quiet hilltop village. Includes three separate living rooms (with a full oak-panelled drawing room and log fire), a classic English AGA kitchen, a contemporary glass-walled dining room opening onto a walled terrace, and a private hot tub.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1526230843613002219?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($6,868) &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      <h3>One Practical Note to Pair With a Private Manor</h3>
+      <p>
+        If you rent a whole manor house instead of a hotel, swap the <strong>Paddington train + driver ($600 total in <code>summer2027.txt</code>)</strong> for a <strong>3-day car rental</strong> (pick up at Heathrow Monday morning Jun 14, drop off at Gatwick Thursday morning Jun 17 — roughly <strong>$350–$450 total</strong> for an SUV). That gives you your own wheels for village pubs, farm shops, and Bourton-on-the-Water while saving ~$200 on transport.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
