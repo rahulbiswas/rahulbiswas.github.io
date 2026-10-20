@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cotswolds Guide &amp; 30 Private Manors — June 14–17, 2027</title>
+  <title>Cotswolds — 3 Historic Manors, Rectories &amp; Country Estates (June 14–17, 2027)</title>
   <style>
     :root {
       --bg: #faf7f2;
@@ -304,39 +304,465 @@
       font-size: 14.5px;
       color: var(--ink);
     }
+    .dossier {
+      background: #fffdf9;
+      border: 2px solid var(--gold-border);
+      border-radius: 16px;
+      padding: 0;
+      margin: -10px 0 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: 0 8px 28px rgba(122, 82, 0, 0.08);
+      overflow: hidden;
+    }
+    .dossier-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 24px;
+      background: var(--gold-bg);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      transition: background 0.15s ease;
+    }
+    .dossier-summary::-webkit-details-marker {
+      display: none;
+    }
+    .dossier-summary:hover {
+      background: #fce89c;
+    }
+    .dossier-summary .toggle-hint {
+      font-size: 13px;
+      font-weight: 600;
+      background: #fff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--gold-border);
+    }
+    details.dossier[open] .dossier-summary {
+      border-bottom: 1px solid var(--gold-border);
+    }
+    .dossier-content {
+      padding: 26px 30px;
+    }
+    .dossier-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 22px;
+    }
+    .dossier-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .dossier-title {
+      margin: 0 0 8px;
+      font-size: 26px;
+      color: var(--ink);
+    }
+    .dossier-sub {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .dossier-h3 {
+      font-size: 18px;
+      color: var(--accent-dark);
+      margin: 26px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    .dossier-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .dossier-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .dossier-box h4 {
+      margin: 0 0 8px;
+      font-size: 15.5px;
+      color: var(--ink);
+    }
+    .dossier-box ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .dossier-box li {
+      margin-bottom: 6px;
+    }
+    .photo-tour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+      gap: 14px;
+      margin: 14px 0 22px;
+    }
+    .photo-tour-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .photo-tour-item img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      background: var(--stone);
+    }
+    .photo-tour-cap {
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .photo-tour-cap strong {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .caveat-box {
+      background: #fff6e8;
+      border-left: 4px solid #c97a10;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #4a3208;
+    }
+    .caveat-box strong {
+      color: #2e1e03;
+    }
+    .reviews-summary-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .score-pill {
+      background: var(--stone);
+      color: var(--ink);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .review-list-details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 12px;
+    }
+    .review-list-details summary {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--accent-dark);
+      cursor: pointer;
+    }
+    .review-item {
+      border-top: 1px solid var(--border);
+      padding: 10px 0;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .review-item:first-of-type {
+      margin-top: 10px;
+    }
+    .review-meta {
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .compare-wrap {
+      margin-top: 36px;
+      background: var(--card);
+      border: 2px solid var(--gold-border);
+      border-radius: 14px;
+      overflow-x: auto;
+      box-shadow: 0 6px 20px rgba(122, 82, 0, 0.08);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.8px;
+      min-width: 760px;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: 13px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table thead th {
+      background: linear-gradient(135deg, #3b3024 0%, #5c4934 100%);
+      color: #fff;
+      font-size: 14.5px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold-border);
+    }
+    .compare-table thead th a {
+      color: #fff3c4;
+      text-decoration: none;
+    }
+    .compare-table thead th a:hover {
+      text-decoration: underline;
+    }
+    .compare-table thead .th-sub {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #e6d3b3;
+      margin-top: 3px;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #fcfaf5;
+    }
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-table td.row-label {
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: #f6f1e6;
+      width: 185px;
+      border-right: 1px solid var(--border);
+    }
+    .compare-table td + td {
+      border-left: 1px solid var(--border);
+    }
+    .winner-pill {
+      display: inline-block;
+      background: var(--green-bg);
+      color: var(--green);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 720px) {
+      html, body {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        padding: 16px 12px 48px;
+      }
+      header {
+        padding: 22px 18px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      header .eyebrow {
+        font-size: 11px;
+      }
+      header h1 {
+        font-size: 22px;
+        line-height: 1.28;
+      }
+      header p {
+        font-size: 14.5px;
+      }
+      .pill-bar {
+        gap: 6px;
+        margin-top: 14px;
+      }
+      .pill {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+      h2 {
+        font-size: 19px;
+        margin: 26px 0 12px;
+      }
+      .intro-grid,
+      .dossier-grid-2,
+      .photo-tour-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .info-card {
+        padding: 16px;
+      }
+      .manor-img {
+        height: 210px;
+        min-height: 180px;
+      }
+      .manor-body {
+        padding: 16px;
+      }
+      .manor-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .manor-title {
+        font-size: 18px;
+        line-height: 1.35;
+      }
+      .badge {
+        white-space: normal;
+      }
+      .price-line {
+        font-size: 14.5px;
+        padding: 8px 10px;
+      }
+      .btn-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 11px 14px;
+      }
+      .dossier-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .dossier-summary .toggle-hint {
+        align-self: flex-start;
+        font-size: 12px;
+      }
+      .dossier-content {
+        padding: 16px 14px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      .dossier-title {
+        font-size: 20px !important;
+        line-height: 1.3;
+      }
+      .dossier-sub {
+        font-size: 13.5px;
+      }
+      .dossier-h3 {
+        font-size: 16.5px;
+        margin: 20px 0 10px;
+      }
+      .dossier-box {
+        padding: 14px;
+      }
+      .photo-tour-item img {
+        height: 180px;
+      }
+      .caveat-box {
+        padding: 12px 14px;
+        font-size: 13.5px;
+      }
+      .reviews-summary-bar {
+        gap: 6px;
+      }
+      .score-pill {
+        font-size: 12px;
+        padding: 4px 10px;
+      }
+      .review-list-details {
+        padding: 12px 14px;
+      }
+      .tip-box {
+        padding: 16px;
+        margin-top: 24px;
+      }
+      .compare-wrap {
+        margin-top: 20px;
+        overflow-x: visible;
+      }
+      .compare-table {
+        min-width: 0;
+        display: block;
+      }
+      .compare-table thead {
+        display: none;
+      }
+      .compare-table tbody,
+      .compare-table tr,
+      .compare-table td {
+        display: block;
+        width: 100%;
+      }
+      .compare-table tr {
+        border-bottom: 2px solid var(--gold-border);
+      }
+      .compare-table tr:last-child {
+        border-bottom: none;
+      }
+      .compare-table td.row-label {
+        width: 100%;
+        background: linear-gradient(135deg, #3b3024 0%, #5c4934 100%);
+        color: #fff;
+        font-size: 14.5px;
+        padding: 10px 14px;
+        border-right: none;
+        border-bottom: 1px solid var(--gold-border);
+      }
+      .compare-table td.row-label span {
+        color: #e6d3b3 !important;
+      }
+      .compare-table td + td {
+        border-left: none;
+        padding: 12px 14px;
+      }
+      .compare-table td[data-prop]::before {
+        content: attr(data-prop);
+        display: block;
+        font-weight: 700;
+        font-size: 12.5px;
+        color: var(--accent-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 5px;
+        padding-bottom: 4px;
+        border-bottom: 1px dashed var(--border);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="eyebrow">Summer 2027 &bull; England Leg &bull; Visual Curation</div>
-      <h1>The Cotswolds: Top 5 Most Beautiful &amp; Full 30-Manor Field</h1>
+      <div class="eyebrow">Summer 2027 &bull; England Leg &bull; Final Shortlist (#1–#3)</div>
+      <h1>The Cotswolds: 3 Detached Historic Homes With Significant Grounds (All ★ 5.0)</h1>
       <p>
-        After inspecting the exterior, garden, and interior photographs across all 30 available historic properties for <strong>Monday June 14 – Thursday June 17, 2027</strong>, the <strong>5 most visually stunning manors</strong> are highlighted first below, followed by the complete 30-property list.
+        The final 3 shortlisted historic manors, Grade II-listed residences, rectories, and country estates with <strong>significant private grounds/acreage, ★ 5.0 ratings, 10+ reviews, and reasonable Gatwick drive times</strong> for <strong>Monday June 14 – Thursday June 17, 2027 (3 nights)</strong>, sorted strictly from lowest to highest total price (<strong>$2,584 to $4,240 total</strong>), with expandable inline deep dives for all three: <strong>#1 The Old Rectory ($861/nt)</strong>, <strong>#2 Spring House ($995/nt)</strong>, and <strong>#3 Batheaston House ($1,413/nt)</strong>.
       </p>
       <div class="pill-bar">
         <span class="pill">Dates: Mon Jun 14 – Thu Jun 17, 2027 (3 Nights)</span>
         <span class="pill">Guests: 2 Adults, 2 Children</span>
-        <span class="pill">Cap: &le; $1,500/night ($4,500 Total)</span>
+        <span class="pill">Filter: Detached &bull; Significant Grounds &bull; ★ 5.0 &bull; &ge; 10 Reviews</span>
+        <span class="pill">Range: $861/nt – $1,413/nt ($2,584 – $4,240 Total)</span>
       </div>
     </header>
 
-    <h2>1. How to Choose &amp; The Top 5 Most Beautiful</h2>
     <div class="intro-grid">
       <div class="info-card">
-        <h3>Filter 1: True Manor Architecture vs. Farm Conversions</h3>
-        <p>
-          Many large Cotswolds listings look grand from the outside (or have big acreage) but have dated carpets or plain drywall inside. Only about 6 of the 30 have <strong>both</strong> a storybook honey-stone facade <em>and</em> magazine-level period interiors.
-        </p>
-      </div>
-      <div class="info-card">
-        <h3>Filter 2: Pick Your Setting Archetype</h3>
+        <h3>Quick Jump to Inline Deep-Dive Reviews</h3>
         <ul>
-          <li><strong>Sheep-Pasture Country Manor:</strong> #16 Spring House ($995/nt)</li>
-          <li><strong>Swans &amp; Mirror Mill Pond:</strong> #17 Grindstone Mill ($995/nt)</li>
-          <li><strong>Central Golden-Triangle Village:</strong> #22 Shipton ($1,149/nt)</li>
-          <li><strong>Bridgerton Stately Mansion:</strong> #29 Queen Anne ($1,413/nt)</li>
-          <li><strong>Hilltop Manor Above Medieval Village:</strong> #30 Stanton ($1,491/nt)</li>
+          <li><a href="#prop-1" onclick="document.getElementById('deep-dive-1').open = true;"><strong>#1. The Old Rectory ($861/nt):</strong></a> Detached Grade II Georgian house on 1 acre near Bath.</li>
+          <li><a href="#prop-2" onclick="document.getElementById('deep-dive-2').open = true;"><strong>#2. Spring House ($995/nt):</strong></a> 6-bedroom Cotswold stone manor &amp; tennis court at Stockwell Farm near Cowley.</li>
+          <li><a href="#prop-3" onclick="document.getElementById('deep-dive-3').open = true;"><strong>#3. Batheaston House ($1,413/nt):</strong></a> 1712 Grade II* Queen Anne mansion on 1.15 riverfront acres.</li>
+          <li><a href="#comparison-table"><strong>&darr; Jump to Bottom Head-to-Head Comparison Table</strong></a></li>
         </ul>
       </div>
       <div class="info-card">
@@ -349,906 +775,1090 @@
       </div>
     </div>
 
-    <div class="top5-list">
-      <div class="top5-card">
-        <div class="top5-gallery">
-          <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/dbbed4d1-2542-4441-9da5-bfead15ab298.jpeg?im_w=720" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor) exterior" />
-          <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/169efa71-9180-4b97-bc1d-18483114c28c.jpeg?im_w=720" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor) interior 1" />
-          <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/259faa28-c48c-443d-8e81-6d19058506be.jpeg?im_w=720" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor) interior 2" />
-        </div>
-        <div class="top5-content">
-          <div class="manor-top">
-            <h3 class="manor-title">
-              <a href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                #16. Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor)
-              </a>
-            </h3>
-            <span class="badge gold">★ Top 5 Most Beautiful — Best Overall Under $1,000/nt</span>
-          </div>
-          <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (11) &bull; <strong>$2,985 total ($995/night)</strong></div>
-          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> Architectural Digest-level interiors (sage-green Georgian drawing room with tall sash windows + terracotta library snug with floor-to-ceiling bookshelves) inside a detached stone manor surrounded by grazing sheep.</p>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
-            <a class="btn secondary" href="#prop-16">Jump to Entry #16 Below</a>
-          </div>
-        </div>
-      </div>
-      <div class="top5-card">
-        <div class="top5-gallery">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/6c012731-a76f-4297-9d62-475f5672cd6b.jpeg?im_w=720" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley exterior" />
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/80ea905b-3042-46fa-b97d-903bd5ca6610.jpeg?im_w=720" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley interior 1" />
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/30436eb3-3e31-40a2-b669-a4b7150d15ef.jpeg?im_w=720" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley interior 2" />
-        </div>
-        <div class="top5-content">
-          <div class="manor-top">
-            <h3 class="manor-title">
-              <a href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                #17. Grindstone Mill (Historic Cotswold Watermill) — Alderley
-              </a>
-            </h3>
-            <span class="badge gold">★ Top 5 Most Beautiful — Most Magical Water Setting</span>
-          </div>
-          <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 4.83 (72) &bull; <strong>$2,985 total ($995/night)</strong></div>
-          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> A multi-gabled honey-stone watermill manor sitting directly on the edge of a mirror-calm mill pond with swans, clipped boxwood hedges, and a sun-drenched shaker kitchen with an AGA.</p>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
-            <a class="btn secondary" href="#prop-17">Jump to Entry #17 Below</a>
-          </div>
-        </div>
-      </div>
-      <div class="top5-card">
-        <div class="top5-gallery">
-          <img src="https://a0.muscache.com/im/pictures/c44978b3-bd42-4eb0-aa11-e4febf56b114.jpg?im_w=720" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood exterior" />
-          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46445950/original/81673c31-c531-4b94-8dd7-a84d30660a85.jpeg?im_w=720" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood interior 1" />
-          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46445950/original/e3ea6a61-2ba9-454f-b187-b9fd102fe445.jpeg?im_w=720" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood interior 2" />
-        </div>
-        <div class="top5-content">
-          <div class="manor-top">
-            <h3 class="manor-title">
-              <a href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                #22. 16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood
-              </a>
-            </h3>
-            <span class="badge gold">★ Top 5 Most Beautiful — Best Central Cotswolds Gem</span>
-          </div>
-          <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 2 baths &bull; ★ 5.0 (79) &bull; <strong>$3,446 total ($1,149/night)</strong></div>
-          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> Symmetrical 16th-century honey-stone facade with a formal clipped boxwood parterre path, moody forest-green beamed interiors, and dead-center location between Burford and Kingham.</p>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,446) &rarr;</a>
-            <a class="btn secondary" href="#prop-22">Jump to Entry #22 Below</a>
-          </div>
-        </div>
-      </div>
-      <div class="top5-card">
-        <div class="top5-gallery">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/dbbc9074-6e32-4e88-b394-d5862c4b8aaf.jpeg?im_w=720" alt="Queen Anne Period Stately Home on the River — Batheaston exterior" />
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/5a825da5-92fc-4937-afc8-2963b0631611.jpeg?im_w=720" alt="Queen Anne Period Stately Home on the River — Batheaston interior 1" />
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/c1bbdc6e-b3d8-4503-ad0f-022978b1040c.jpeg?im_w=720" alt="Queen Anne Period Stately Home on the River — Batheaston interior 2" />
-        </div>
-        <div class="top5-content">
-          <div class="manor-top">
-            <h3 class="manor-title">
-              <a href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                #29. Queen Anne Period Stately Home on the River — Batheaston
-              </a>
-            </h3>
-            <span class="badge gold">★ Top 5 Most Beautiful — Grandest Stately Architecture</span>
-          </div>
-          <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (18) &bull; <strong>$4,240 total ($1,413/night)</strong></div>
-          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> Looks straight out of Bridgerton: a symmetrical 3-story golden-stone Queen Anne mansion framed by white hydrangeas, formal yew topiary gardens, and a bay-tree flagstone terrace above the river.</p>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,240) &rarr;</a>
-            <a class="btn secondary" href="#prop-29">Jump to Entry #29 Below</a>
-          </div>
-        </div>
-      </div>
-      <div class="top5-card">
-        <div class="top5-gallery">
-          <img src="https://a0.muscache.com/im/pictures/637a4c4f-3eb8-406b-b81b-aa02cd19eaa5.jpg?im_w=720" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton exterior" />
-          <img src="https://a0.muscache.com/im/pictures/68aabb66-4a0e-44b1-a4ac-e511dbf0ba5b.jpg?im_w=720" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton interior 1" />
-          <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-7662096/original/34fe2d95-c57a-46be-93d9-b12de57656cc.jpg?im_w=720" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton interior 2" />
-        </div>
-        <div class="top5-content">
-          <div class="manor-top">
-            <h3 class="manor-title">
-              <a href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                #30. The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton
-              </a>
-            </h3>
-            <span class="badge gold">★ Top 5 Most Beautiful — Most Dramatic Hilltop Manor</span>
-          </div>
-          <div class="specs">Entire Historic Property &bull; 8 bedrooms · 12 beds · 5 baths &bull; ★ 4.94 (107) &bull; <strong>$4,473 total ($1,491/night)</strong></div>
-          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> An 8-bedroom Grade II-listed Arts & Crafts manor perched high on the hillside above Stanton (the best-preserved 16th-century village in the Cotswolds) with 30-mile views across the valley.</p>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,473) &rarr;</a>
-            <a class="btn secondary" href="#prop-30">Jump to Entry #30 Below</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h2>2. All 30 Available Manors &amp; Historic Homes (&le; $1,500/Night, Sorted by Price)</h2>
+    <h2>All 3 Finalist Historic Homes (Sorted Cheapest to Costliest)</h2>
     <div class="manor-list">
-      <div class="manor-card" id="prop-1">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-30884057/original/1adf4f12-f4d7-4fc7-8414-a08519c509c3.jpeg" alt="Orchard House — Chipping Campden" loading="lazy" />
+      <div class="manor-card top5-highlight" id="prop-1" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1413775630538613039/original/2552f242-486f-4c19-b6ec-0203f3decf82.jpeg?im_w=720" alt="The Old Rectory (Early 18th-Century Grade II Georgian House on 1 Acre) — Near Bath" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/30884057?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #1. Orchard House — Chipping Campden
+                <a href="https://www.airbnb.com/rooms/1413775630538613039?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #1. The Old Rectory (Early 18th-Century Grade II Georgian House on 1 Acre) — Near Bath
                 </a>
               </h3>
-              <span class="badge green">Under $900/nt ($738/night)</span>
+              <span class="badge gold">★ Deep-Dive Available · $861/nt</span>
             </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 4 baths &bull; ★ 4.89 (28)</div>
+            <div class="specs">Entire Grade II Georgian Rectory &bull; 6 bedrooms · 7 beds · 2 baths &bull; ★ 5.0 (37)</div>
             <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,214 for 3 nights ($738/night)
+              Airbnb Live Total (Jun 14–17): $2,584 for 3 nights ($861/night)
               <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
             </div>
-            
-            <p class="desc">Cotswold stone house with a wood-burning fireplace, sun room, and views of Dover's Hill in historic Chipping Campden.</p>
+            <p class="desc">A standalone early-18th-century Grade II-listed Georgian stone Old Rectory encircled by 1 full acre of level lawns and woodland hill views, 10 minutes from Bath—delivering the symmetrical Georgian stone facade and sweeping lawn of #3 for $552/night less.</p>
           </div>
           <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/30884057?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,214) &rarr;</a>
-            
+            <a class="btn" href="https://www.airbnb.com/rooms/1413775630538613039?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,584) &rarr;</a>
+            <a class="btn secondary" href="#deep-dive-1" onclick="var d=document.getElementById('deep-dive-1'); d.open=!d.open; return false;">Toggle Deep-Dive Review &darr;</a>
           </div>
         </div>
       </div>
-      <div class="manor-card" id="prop-2">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-16199172/original/a2944cf6-fd3d-40dc-a363-baa12060ed4f.jpeg" alt="Groves Barn on a 120-Acre Estate — Chipping Campden" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/16199172?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #2. Groves Barn on a 120-Acre Estate — Chipping Campden
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($772/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 4 baths &bull; ★ 5.0 (106)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,316 for 3 nights ($772/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Exclusive-use Cotswold stone residence set on a 120-acre private country estate with sweeping hill views and a private courtyard.</p>
+      <details class="dossier" id="deep-dive-1">
+        <summary class="dossier-summary">
+          <span>&#128269; Deep-Dive Dossier: #1 The Old Rectory (All 52 Photos, Floorplans &amp; 37 Reviews Inspected)</span>
+          <span class="toggle-hint">Click to Expand / Collapse &darr;</span>
+        </summary>
+        <div class="dossier-content">
+      <div class="dossier-header">
+        <div class="dossier-eyebrow">Property Deep-Dive Dossier &bull; All 52 Photos, Floorplans &amp; 37 Reviews Inspected</div>
+        <h2 class="dossier-title" style="border:none; margin:0 0 6px; padding:0;">#1. The Old Rectory — Grade II Listed Georgian Country House on 1 Secluded Acre</h2>
+        <p class="dossier-sub">
+          <strong>Historic Name &amp; Exact Location:</strong> The Old Rectory, Lower Writhlington (off Church Hill), near Bath BA3 3NF (<a href="https://www.google.com/maps?q=51.2947,-2.4265" target="_blank" rel="noopener">51.2947, -2.4265 on Google Maps &nearr;</a>) &bull; <strong>Grade II Listed (1700s + 1821 Georgian)</strong> &bull; <strong>★ 5.00 (37 Reviews)</strong> &bull; <strong>$2,584 total ($861/night)</strong> for Jun 14–17, 2027
+        </p>
+      </div>
+
+      <h3 class="dossier-h3">1. Historic Identity, Grade II Architecture &amp; True Seclusion</h3>
+      <div class="dossier-grid-2">
+        <div class="dossier-box">
+          <h4>1700s Parsonage Core + 1821 Golden Bath-Stone Facade</h4>
+          <ul>
+            <li><strong>Grade II Listed Heritage:</strong> Protected by Historic England; the rear flagstone and beamed wing dates to <strong>1700–1750</strong>, while the symmetrical front section was built in <strong>1821</strong> in fine golden Bath stone (recorded in the <em>Journal of a Somerset Rector, 1803–1834</em>).</li>
+            <li><strong>Jane Austen Proportions:</strong> Features floor-to-ceiling 12-pane Georgian sash windows with working wooden shutters, high corniced ceilings, three period stone fireplaces, a baby grand piano in the drawing room, and both a 4-oven red AGA and a modern skylit range kitchen.</li>
+          </ul>
+        </div>
+        <div class="dossier-box">
+          <h4>100% Detached on 1 Full Acre of Private Grounds</h4>
+          <ul>
+            <li><strong>Zero Attached Neighbors or Street Crowds:</strong> Unlike village-center houses, aerial drone photos (Photos 39–41) confirm The Old Rectory stands completely detached in the middle of <strong>1 full acre of private lawns, mature woodland trees, and a sweeping gravel carriage drive</strong> next to a tiny medieval country church.</li>
+            <li><strong>Kid-Friendly Grounds:</strong> Includes a children's wooden treehouse with swings and a slide tucked in the garden trees, a bell tent on the lawn (Photo 42), and a woodland footpath across the lane leading down to a shallow stream.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="dossier-h3">2. Visual Tour Across All 52 Listing Photographs &amp; Floorplans</h3>
+      <p style="font-size:14px; color:var(--muted); margin:0 0 10px;">
+        All 52 photographs (including aerial drone shots of the 1-acre grounds and the full 4-level architectural floorplan) were inspected. Below are 12 key photographs showing the Georgian facade, aerial grounds, reception rooms, skylit kitchen, bedrooms, bathrooms, and floorplan:
+      </p>
+
+      <div class="photo-tour-grid">
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1413775630538613039/original/2552f242-486f-4c19-b6ec-0203f3decf82.jpeg?im_w=720" alt="The Old Rectory 1821 Georgian Bath Stone Facade" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 38 — Symmetrical 1821 Georgian Bath-Stone Facade</strong>
+            Tall 12-pane sash windows, climbing wisteria and roses, clipped boxwood hedges, gravel carriage drive, and level front lawn.
           </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/16199172?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,316) &rarr;</a>
-            
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1413775630538613039/original/a5207616-1af3-40a9-b918-a10310779445.jpeg?im_w=720" alt="Aerial Drone View of 1-Acre Grounds" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 40 — Aerial Drone View of the Detached House &amp; Drive</strong>
+            Confirms complete detachment: encircled by private lawns, mature trees, gravel drive, and stone outbuildings.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1413775630538613039/original/555f66dd-da2b-463f-8333-b4c82a716ce7.jpeg?im_w=720" alt="1 Acre Lawn Overlooking Wooded Valley Hills" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 42 — 1-Acre South Lawn &amp; Wooded Valley Views</strong>
+            Sweeping level lawn framed by hedgerows and woodland hills, with zero neighboring houses in view.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/600e86a5-2b54-486a-8d07-fe991d918de9.jpeg?im_w=720" alt="Georgian Drawing Room with Fireplace" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 2 — Georgian Drawing Room (15'10" &times; 14'3")</strong>
+            Floor-to-ceiling sash windows with working shutters (Photo 5), log-burning stove in a classic fireplace, and a baby grand piano (Photo 3).
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/70a8a9af-7610-4e87-9adb-bb413dd050c2.jpeg?im_w=720" alt="1700s Flagstone Family Snug" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 7 — 1700s Rear Wing Family Room / Snug (14'3" &times; 13'8")</strong>
+            Original blue lias flagstone floors, exposed oak ceiling beams, deep mullioned window seats, and carved stone hearth (Photo 6).
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/c481c558-afbc-4488-b404-6623aa826bd9.jpeg?im_w=720" alt="Formal Georgian Dining Room" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 18 — Formal Georgian Dining Room (16'0" &times; 14'3")</strong>
+            Carved period mantelpiece, tall sash window overlooking the lawn (Photo 16), and formal dining table.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1413775630538613039/original/68f57ab8-c50a-499b-bfb6-57917dc0ff30.jpeg?im_w=720" alt="Skylit Country Kitchen" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 9 — Skylit Country Kitchen (19'2" &times; 13'8")</strong>
+            Flagstone floors, overhead glass roof lantern, modern double range oven, plus an adjoining Breakfast Room with a red 4-oven AGA (Photo 11).
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/b33f43cb-0495-400c-843a-171697587b49.jpeg?im_w=720" alt="Georgian Arched Staircase Hall" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 44 — Grand Georgian Arched Staircase Hall</strong>
+            Wide carpeted staircase rising beneath a classical Georgian plaster arch with a hanging glass lantern.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/968d1f79-d6eb-4f3f-9c43-d42981a78f3c.jpeg?im_w=720" alt="Principal Georgian Bedroom 1" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 20 — Bedroom 1: Georgian Principal Room (13'4" &times; 14'2")</strong>
+            Tall 12-pane sash window framing the front lawn and hills, antique armoire, and sleigh bed (plus 14'5"&times;14'3" Bedroom 2 in Photo 24).
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/d560b515-091a-482e-823d-cfa22acf0f4f.jpeg?im_w=720" alt="Attic Loft Bedroom 5" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 28 — Top-Floor Attic Cabin Room (Bedroom 5)</strong>
+            One of two characterful 2nd-floor attic rooms reached by its own staircase, with a raised cabin bed under the beams that kids love.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/1c85e31b-4e55-40be-accf-3a2fa90140a1.jpeg?im_w=720" alt="Bathroom 1 with Twin Sinks, Bath and Walk-in Shower" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 32 — Bathroom 1 (Plus Clawfoot Tub Bathroom 2 in Photo 35)</strong>
+            Both huge 1st-floor bathrooms have a soaking bathtub, a separate walk-in glass rainfall shower, and Neal's Yard organic toiletries.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1413775630538613039/original/0eea2cc2-35b6-414d-8b33-2114d42ebcdc.png?im_w=720" alt="Full 4-Level Architectural Floorplan" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 43 — Complete 4-Level Architectural Floorplan</strong>
+            Shows exact room dimensions across the Ground Floor, First Floor (4 bedrooms, 2 baths), Attic Floor (2 bedrooms), and Cellar.
           </div>
         </div>
       </div>
-      <div class="manor-card" id="prop-3">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/9263b758-bc1e-40ed-ab20-92160f9caf1b.jpg" alt="17th-Century Georgian Stone House — Tetbury" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/31684188?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #3. 17th-Century Georgian Stone House — Tetbury
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($773/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 3.5 baths &bull; ★ 4.99 (140)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,318 for 3 nights ($773/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Built in the 1600s in classic Georgian stone right in the heart of Tetbury (minutes from Highgrove Gardens and Westonbirt Arboretum), with a walled garden and log burner.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/31684188?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,318) &rarr;</a>
-            
-          </div>
-        </div>
+
+      <h3 class="dossier-h3">3. Synthesis of All 37 Guest Reviews (★ 5.00 Overall — 37 of 37 are 5★!)</h3>
+      <div class="reviews-summary-bar">
+        <span class="score-pill">Overall: ★ 5.00 (37 of 37 are 5★)</span>
+        <span class="score-pill">Cleanliness: 5.0</span>
+        <span class="score-pill">Accuracy: 5.0</span>
+        <span class="score-pill">Check-in: 5.0</span>
+        <span class="score-pill">Communication: 5.0</span>
+        <span class="score-pill">Superhost: Tom</span>
       </div>
-      <div class="manor-card" id="prop-4">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1404561190383925498/original/dfee45b2-b229-4670-b76a-7293630b8633.jpeg" alt="Historic 1700s Cotswold Stone House — Perrotts Brook (near Cirencester)" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1404561190383925498?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #4. Historic 1700s Cotswold Stone House — Perrotts Brook (near Cirencester)
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($787/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (19)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,362 for 3 nights ($787/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">18th-century stone country house in the Churn Valley with 5 bedrooms, 4 bathrooms, and direct access to river and countryside walks.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1404561190383925498?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,362) &rarr;</a>
-            
-          </div>
-        </div>
+      <div class="dossier-box" style="margin-bottom:14px;">
+        <h4>What Guests Rave About Across All 37 Reviews (Aug 2025 – Oct 2026)</h4>
+        <ul>
+          <li><strong>"Inside a Jane Austen Novel with Mod-Cons":</strong> Guests repeatedly praise the tall Georgian sash windows, flagstones, open fires, and grand piano (<em>"It's not too difficult to imagine yourself inside a Jane Austen novel with mod-cons: the light from the floor-to-ceiling windows, the spacious rooms, the beautiful flagstones in the kitchen"</em> — Alison, Jan 2026).</li>
+          <li><strong>Bucolic Countryside Seclusion &amp; Birdsong:</strong> Reviewers highlight the complete peace and privacy of the 1-acre grounds (<em>"A brook burbles in the near distance, the verdant fields rise on the opposite hillside and the old village church sits next door"</em> — David, Apr 2026; <em>"The songs of birds and sightings of pheasants added pleasure to our mornings"</em> — Stacey, Apr 2026).</li>
+          <li><strong>Kids Love the Treehouse, Swings, Attic Loft &amp; Stream:</strong> Families specifically call out the children's treehouse with swings and slide in the garden (Reviews #14, #21, #22, #32), the raised cabin bed in the attic room (#10), and racing sticks in the stream down the woodland path opposite the house (#32).</li>
+          <li><strong>Superhost Tom's Welcome Touches:</strong> Tom leaves breakfast essentials and a welcome gift in the fridge on arrival, stocks the bathrooms with <em>Neal's Yard Remedies</em> soaps and lotions, and is flexible with check-out times.</li>
+        </ul>
       </div>
-      <div class="manor-card" id="prop-5">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-677369915168382257/original/ca86d9ba-74c4-484b-851a-399d6841f078.jpeg" alt="The Secret Hideaway — Moreton-in-Marsh High Street" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/677369915168382257?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #5. The Secret Hideaway — Moreton-in-Marsh High Street
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($797/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 3 baths &bull; ★ 4.9 (97)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,390 for 3 nights ($797/night)
-              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
-            </div>
-            
-            <p class="desc">Tucked behind a private gate directly off Moreton-in-Marsh's high street (with direct Paddington train service). Features designer living spaces and an enormous walled orchard garden.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/677369915168382257?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,390) &rarr;</a>
-            
-          </div>
+
+      <details class="review-list-details">
+        <summary>Click to Read Top Highlighted Verbatim Reviews (Out of All 37 5-Star Reviews Inspected)</summary>
+        <div class="review-item">
+          <div class="review-meta">Helen &bull; October 2026 &bull; ★ 5.0</div>
+          "I chose to stay at The Old Rectory because of its location near to Babington House (only a couple of miles)... The Old Rectory has plenty of parking, lovely flagstone floors, a beautiful grand piano which we enjoyed and spotless, modern bathrooms. I really loved the view of the hills and fields from the bedroom window."
         </div>
-      </div>
-      <div class="manor-card" id="prop-6">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1379584533656658694/original/4512b8a9-90e7-4481-9e9b-42149f44e399.jpeg" alt="Manor Farmhouse (1750s) — Holt (Southern Cotswolds / near Bath)" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1379584533656658694?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #6. Manor Farmhouse (1750s) — Holt (Southern Cotswolds / near Bath)
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($819/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 3.5 baths &bull; ★ 4.99 (74)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,457 for 3 nights ($819/night)
-              <span class="price-sub">Free cancellation</span>
-            </div>
-            
-            <p class="desc">Restored 1750s stone manor farmhouse sleeping 10 across 5 bedrooms, complete with a private hot tub and enclosed stone-walled garden.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1379584533656658694?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,457) &rarr;</a>
-            
-          </div>
+        <div class="review-item">
+          <div class="review-meta">Anita &bull; June 2026 &bull; ★ 5.0</div>
+          "Tom was extremely approachable and helpful right from point of booking... he even allowed us a later checkout. The 2 grandkids loved the space and enjoyed exploring the whole house. The attic rooms specially the one with the raised bed was fascinating. We had most of our dinners out in the front where the views were amazing."
         </div>
-      </div>
-      <div class="manor-card" id="prop-7">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-41771902/original/78078ced-aaa2-47e1-af50-eca0b1e7ed4f.jpeg" alt="Manor Farm (17th-Century Grade II Listed) — Grafton" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #7. Manor Farm (17th-Century Grade II Listed) — Grafton
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($843/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 5 king beds · 4.5 baths &bull; ★ 4.98 (122)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,529 for 3 nights ($843/night)
-              <span class="price-sub">Free cancellation</span>
-            </div>
-            
-            <p class="desc">17th-century Grade II listed manor farmhouse with 5 king bedrooms, original stonework, timber beams, 3 wood-burning stoves, an AGA kitchen, and a private hot tub.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,529) &rarr;</a>
-            
-          </div>
+        <div class="review-item">
+          <div class="review-meta">Stacey (Stuttgart, Germany) &bull; April 2026 &bull; ★ 5.0</div>
+          "The Old Rectory met every expectation for our Cotswold visit. Tom is a gracious host and his home was just what our family needed and then some. We were pleasantly surprised by the provisions awaiting our arrival. Each room is tastefully apportioned. The view from our room was stunning. The songs of birds and sightings of pheasants added pleasure to our mornings."
         </div>
-      </div>
-      <div class="manor-card" id="prop-8">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-548230397221914427/original/cba960c7-2c60-46d9-809d-59296379b43e.jpeg" alt="Yew Tree House (16th-Century) — Longborough (near Stow-on-the-Wold)" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/548230397221914427?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #8. Yew Tree House (16th-Century) — Longborough (near Stow-on-the-Wold)
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($851/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 2 baths &bull; ★ 4.98 (47)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,553 for 3 nights ($851/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Dating back to the 16th century on the peaceful high street of Longborough, steps from the village pub and country opera house, with an inglenook fireplace and vaulted kitchen-diner.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/548230397221914427?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,553) &rarr;</a>
-            
-          </div>
+        <div class="review-item">
+          <div class="review-meta">David &bull; April 2026 &bull; ★ 5.0</div>
+          "Tom’s place is an architectural gem nestled in some bucolic English countryside. A brook burbles in the near distance, the verdant fields rise on the opposite hillside and the old village church sits next door. Inside the house has some beautiful old features (fireplaces and flagstones are of particular note), but is really spacious and comfortable too."
         </div>
-      </div>
-      <div class="manor-card" id="prop-9">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-51778720/original/e93956c8-910a-4ed2-b8ca-b03096a6826d.jpeg" alt="18th-Century Stone Farmhouse on a 1.5-Acre Private Estate — Chipping Campden" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/51778720?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #9. 18th-Century Stone Farmhouse on a 1.5-Acre Private Estate — Chipping Campden
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($876/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 7 beds · 3 baths &bull; ★ 4.91 (200)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,629 for 3 nights ($876/night)
-              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
-            </div>
-            
-            <p class="desc">Classic 18th-century 5-bedroom Cotswold farmhouse set on 1.5 acres of private grounds outside Chipping Campden with wood-burning stoves.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/51778720?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,629) &rarr;</a>
-            
-          </div>
+        <div class="review-item">
+          <div class="review-meta">Kirsty &bull; February 2026 &bull; ★ 5.0</div>
+          "The house is beautiful; very well preserved but homely too; my kids loved the big garden and the swings and tree house, and I thought the decor was fab; understated but elegant and very comfortable."
         </div>
-      </div>
-      <div class="manor-card" id="prop-10">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-45391847/original/eef2e7c9-eb2c-4ed7-a84a-d54f7c3b8121.jpeg" alt="Darly House (Grade II Listed) — Bourton-on-the-Water" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/45391847?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #10. Darly House (Grade II Listed) — Bourton-on-the-Water
-                </a>
-              </h3>
-              <span class="badge green">Under $900/nt ($879/night)</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 1 bath &bull; ★ 4.91 (140)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,636 for 3 nights ($879/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Grade II listed period stone home with a log burner, dining conservatory, and private parking tucked away right in the heart of Bourton-on-the-Water.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/45391847?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,636) &rarr;</a>
-            
-          </div>
+        <div class="review-item">
+          <div class="review-meta">Alison &bull; January 2026 &bull; ★ 5.0</div>
+          "This was a really special stay - the house is absolutely magnificent. It's not too difficult to imagine yourself inside a Jane Austen novel with mod-cons: the light from the floor-to-ceiling windows, the spacious rooms, the beautiful flagstones in the kitchen. We really appreciated the high quality toiletries in the spotless bathrooms and the really comfy beds with gorgeous linen."
         </div>
-      </div>
-      <div class="manor-card" id="prop-11">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-789664859913771636/original/bc9f9ac3-4d3a-45ce-8219-e88250cf8ac2.jpeg" alt="18th-Century Stone Residence with Wood-Fired Hot Tub — Stow-on-the-Wold" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/789664859913771636?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #11. 18th-Century Stone Residence with Wood-Fired Hot Tub — Stow-on-the-Wold
-                </a>
-              </h3>
-              <span class="badge">$935/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 3 baths &bull; ★ 4.96 (83)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,805 for 3 nights ($935/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Restored 18th-century Cotswold stone home in Stow-on-the-Wold featuring a wood-fired hot tub, two wood-burning stoves, and underfloor heating.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/789664859913771636?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,805) &rarr;</a>
-            
-          </div>
+        <div class="review-item">
+          <div class="review-meta">Afra (Los Angeles, California) &bull; December 2025 &bull; ★ 5.0</div>
+          "The home was immaculate, well presented, and clearly very well cared for... The Neal’s Yard hand soaps and shower gels were a lovely touch. I especially loved the art books and the piano, which added character and made the house feel like a true home... The food essentials left in the fridge and the welcome note meant so much after several hours of driving. The children loved the garden, swings, and little house. We also enjoyed the walkway opposite the property where they ran through the woods and raced sticks in the river."
         </div>
+      </details>
+
+      <h3 class="dossier-h3">4. Map Location &amp; Two Important Caveats to Weigh</h3>
+      <div class="caveat-box">
+        <strong>Caveat 1 — Geography: It Sits 20–25 Minutes South of Bath (90 Minutes South of the North Cotswolds Villages):</strong>
+        The Old Rectory is in <strong>Lower Writhlington</strong> (<code>51.2947, -2.4265</code>) in the Cam/Wellow Valley of Somerset—<strong>3 miles (7 mins) from Soho House's Babington House</strong>, <strong>12 mins from artisan Frome</strong>, and <strong>7.5 miles (20–25 mins) south of central Bath</strong> (note: the listing description says "10 minutes from Bath", which is to Bath's southern park-and-ride edge; Review #17 confirms central Bath is a 20–25 minute drive).
+        <br /><br />
+        <strong>What this means for driving:</strong> It is fantastic for <strong>Bath (20–25 mins)</strong>, <strong>Frome &amp; Mells (10–12 mins)</strong>, <strong>Wells Cathedral &amp; Cheddar Gorge (30 mins)</strong>, and <strong>Castle Combe / Lacock Abbey (40–45 mins)</strong>. However, the northern Cotswolds villages (<strong>Bourton-on-the-Water, Lower Slaughter, Stow-on-the-Wold</strong>) are <strong>1 hr 30 mins north</strong>.
       </div>
-      <div class="manor-card" id="prop-12">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-52543201/original/3f040e70-ff9c-4858-8b1a-10148a155daf.jpeg" alt="Laurel Tree House (6-Bedroom Country Home) — Guiting Power" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/52543201?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #12. Laurel Tree House (6-Bedroom Country Home) — Guiting Power
-                </a>
-              </h3>
-              <span class="badge">$968/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 2 baths &bull; ★ 4.82 (67)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,905 for 3 nights ($968/night)
-              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
-            </div>
-            
-            <p class="desc">Magazine-featured 6-bedroom Cotswold stone country house set in extensive private grounds in the quintessential village of Guiting Power.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/52543201?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,905) &rarr;</a>
-            
-          </div>
+      <div class="caveat-box" style="margin-bottom:18px;">
+        <strong>Caveat 2 — 2 Full Bathrooms (+ Ground-Floor WC) Shared Across the House:</strong>
+        Because it is an authentic Grade II-listed 1821 Rectory, there are no en-suite bathrooms attached to individual bedrooms; instead, there are <strong>two very large, newly renovated family bathrooms on the first floor</strong> (each with both a bathtub and a separate walk-in shower, Photos 32–36) plus a ground-floor cloakroom WC—which is plenty of bathroom space for the four of you!
+      </div>
+
+      <div class="btn-row">
+        <a class="btn" href="https://www.airbnb.com/rooms/1413775630538613039?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open #1 The Old Rectory on Airbnb ($2,584 / $861 per night) &rarr;</a>
+        <a class="btn secondary" href="https://www.google.com/maps?q=51.2947,-2.4265" target="_blank" rel="noopener">View Exact Location on Google Maps &nearr;</a>
+      </div>
         </div>
-      </div>
-      <div class="manor-card" id="prop-13">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MjM1MDIyMTM=/original/6130e860-5a6e-4280-bdf0-24fc73099c73.jpeg" alt="16th-Century Cotswolds Farmhouse on 200 Acres — Gloucestershire" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/23502213?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #13. 16th-Century Cotswolds Farmhouse on 200 Acres — Gloucestershire
-                </a>
-              </h3>
-              <span class="badge">$972/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 9 beds · 4 baths &bull; ★ 4.91 (233)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,915 for 3 nights ($972/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Authentic 16th-century 6-bedroom stone farmhouse set across 200 acres of private Cotswold farmland.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/23502213?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,915) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-14">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/55c3fc7e-6919-4f30-bb77-81f3b8920034.jpg" alt="Grade II Listed Georgian Period House — Tewkesbury" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/52486654?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #14. Grade II Listed Georgian Period House — Tewkesbury
-                </a>
-              </h3>
-              <span class="badge">$973/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 6 baths &bull; ★ 5.0 (197)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,919 for 3 nights ($973/night)
-              <span class="price-sub">Free cancellation</span>
-            </div>
-            
-            <p class="desc">5-bedroom, 6-bathroom Grade II listed Georgian residence featuring river views, open fireplaces, and a private jacuzzi.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/52486654?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,919) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-15">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-656359844342700140/original/9537bec2-df41-416e-a737-d87683142b4a.jpeg" alt="Stow House (18th-Century Residence) — Stow-on-the-Wold" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/656359844342700140?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #15. Stow House (18th-Century Residence) — Stow-on-the-Wold
-                </a>
-              </h3>
-              <span class="badge">$995/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 5 beds · 4 baths &bull; ★ 4.8 (40)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Restored 18th-century 5-bedroom residence in Stow-on-the-Wold with a private walled garden, ornamental pond, and wood-burning stove.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/656359844342700140?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card top5-highlight" id="prop-16">
+      </details>
+
+      <div class="manor-card top5-highlight" id="prop-2" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
         <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/1c10273f-b726-46f6-9e3d-869c1daafb1d.jpeg" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor)" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
                 <a href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #16. Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor)
+                  #2. Spring House (6-Bedroom Country Manor) — Birdlip / Cowley (Stockwell Farm)
                 </a>
               </h3>
-              <span class="badge gold">★ Top 5 Most Beautiful · $995/nt</span>
+              <span class="badge gold">★ Deep-Dive Available · $995/nt</span>
             </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (11)</div>
+            <div class="specs">Entire Historic Country Manor &bull; 6 bedrooms · 6 beds · 4 baths (+ 2 WCs) &bull; ★ 5.0 (11)</div>
             <div class="price-line">
               Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
               <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
             </div>
-            <div class="why-box"><strong>★ Top 5 Most Beautiful — Best Overall Under $1,000/nt:</strong> Architectural Digest-level interiors (sage-green Georgian drawing room with tall sash windows + terracotta library snug with floor-to-ceiling bookshelves) inside a detached stone manor surrounded by grazing sheep.</div>
-            <p class="desc">6-bedroom country manor house with sweeping parkland views, open fireplaces, and private gardens near Cowley.</p>
+            <p class="desc">Detached 6-bedroom Cotswold stone farmhouse-manor on the historic Stockwell Farm estate near Cowley Manor, with sweeping south-facing parkland lawns, a private tennis court, AGA + electric range kitchen, two dining rooms, and two fireplace reception rooms.</p>
           </div>
           <div class="btn-row">
             <a class="btn" href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
-            
+            <a class="btn secondary" href="#deep-dive-2" onclick="var d=document.getElementById('deep-dive-2'); d.open=!d.open; return false;">Toggle Deep-Dive Review &darr;</a>
           </div>
         </div>
       </div>
-      <div class="manor-card top5-highlight" id="prop-17">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/6c012731-a76f-4297-9d62-475f5672cd6b.jpeg" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #17. Grindstone Mill (Historic Cotswold Watermill) — Alderley
-                </a>
-              </h3>
-              <span class="badge gold">★ Top 5 Most Beautiful · $995/nt</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 4.83 (72)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
-              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
-            </div>
-            <div class="why-box"><strong>★ Top 5 Most Beautiful — Most Magical Water Setting:</strong> A multi-gabled honey-stone watermill manor sitting directly on the edge of a mirror-calm mill pond with swans, clipped boxwood hedges, and a sun-drenched shaker kitchen with an AGA.</div>
-            <p class="desc">Historic 6-bedroom Cotswold stone watermill set directly over the mill stream in the quiet village of Alderley.</p>
+      <details class="dossier" id="deep-dive-2">
+        <summary class="dossier-summary">
+          <span>&#128269; Deep-Dive Dossier: #2 Spring House at Stockwell Farm (All 30 Photos &amp; 29 Combined Reviews Inspected)</span>
+          <span class="toggle-hint">Click to Expand / Collapse &darr;</span>
+        </summary>
+        <div class="dossier-content">
+          <div class="dossier-header">
+            <div class="dossier-eyebrow">Property Deep-Dive Dossier &bull; All 30 Photos, 11 Airbnb Reviews (★ 5.0) &amp; 18 Bolthole Retreats Reviews Inspected</div>
+            <h2 class="dossier-title" style="border:none; margin:0 0 6px; padding:0;">#2. Spring House — 6-Bedroom Cotswold Stone Manor at Stockwell Farm (Cowley / Birdlip)</h2>
+            <p class="dossier-sub">
+              <strong>Historic Estate &amp; Exact Location:</strong> Spring House, Stockwell Farm (Stockwell), Birdlip / Cowley, Gloucestershire GL4 8JZ (<a href="https://www.google.com/maps?q=51.8275,-2.0884" target="_blank" rel="noopener">51.8275, -2.0884 on Google Maps &nearr;</a>) &bull; <strong>18th/19th-Century Stone Farmhouse-Manor</strong> &bull; <strong>★ 5.00 on Airbnb (11 Reviews) / ★ 4.80 on UpfrontReviews (18 Reviews)</strong> &bull; <strong>$2,985 total ($995/night)</strong> for Jun 14–17, 2027
+            </p>
           </div>
+
+          <h3 class="dossier-h3">1. Historic Identity, Stockwell Farm Estate &amp; Parkland Grounds</h3>
+          <div class="dossier-grid-2">
+            <div class="dossier-box">
+              <h4>From 13th-Century Cowley Manor Hamlet to Period Stone Farmhouse</h4>
+              <ul>
+                <li><strong>Recorded in the Victoria County History (Glos. Vol. 7):</strong> The hamlet of <strong>Stockwell</strong> (named for the natural spring rising on the escarpment) was recorded from the <strong>early 13th century</strong> as part of the historic <strong>Cowley Manor estate</strong>. After the late-1780s enclosure of the open fields, the settlement consolidated into a single stone farmstead (<strong>Stockwell Farm</strong>).</li>
+                <li><strong>Two-Era Cotswold Stone Architecture:</strong> As documented by historians and visible in Photos 27–28, the symmetrical 3-bay front house with tall 12-pane sash windows and a gabled stone porch was built in the <strong>late 19th century</strong>, while the lower stone side/rear wing (housing the skylit kitchen-diner and terrace in Photos 26–27) incorporates the <strong>earlier pre-1800 farmhouse structure</strong>.</li>
+              </ul>
+            </div>
+            <div class="dossier-box">
+              <h4>South-Facing Parkland, Sheep Pastures &amp; Private Tennis Court</h4>
+              <ul>
+                <li><strong>Detached Rural Seclusion:</strong> Surrounded by expansive south-facing lawns, mature specimen trees, and rolling Cotswold pastures where sheep and spring lambs graze right beyond the garden boundary (Photo 27; Reviews #1, #4, #13).</li>
+                <li><strong>Functioning Private Tennis Court &amp; Working Farm Setting:</strong> In addition to the flagstone BBQ dining terrace (Photos 25–26) and wide level lawns for family games, the grounds include a <strong>private tennis court</strong> (confirmed by Bolthole Retreats and Fiona's May 2026 review). Guests with kids also love watching the sheepdogs and farm machinery on the surrounding Stockwell Farm estate (Trevor, July 2026).</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">2. Visual Tour Across All 30 Listing Photographs</h3>
+          <p style="font-size:14px; color:var(--muted); margin:0 0 10px;">
+            All 30 photographs on the listing were inspected room by room. Below are 12 key photographs showing the symmetrical Cotswold stone facade, the sheep-pasture parkland setting, the flagstone terrace, both fireplace reception rooms, the AGA kitchen &amp; two dining rooms, the floral-named bedrooms, and the newly renovated bathrooms:
+          </p>
+
+          <div class="photo-tour-grid">
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/1c10273f-b726-46f6-9e3d-869c1daafb1d.jpeg?im_w=720" alt="Spring House South Facade and Lawn" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 28 — Symmetrical Cotswold Stone South Facade &amp; Lawn</strong>
+                3-bay stone main elevation with 12-pane sash windows, central gabled porch, gravel terrace, and sweeping south-facing lawn.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/dbbed4d1-2542-4441-9da5-bfead15ab298.jpeg?im_w=720" alt="Spring House Across Sheep Pastures" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 27 — Full Estate View Across Stockwell Sheep Pastures</strong>
+                Shows both the 3-bay 19th-century main house and the older stone side/rear wing framed by parkland trees and grazing sheep.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/2997cd29-0ff7-4873-8f1c-db3c0f747958.jpeg?im_w=720" alt="Outdoor Alfresco Dining Terrace Overlooking Parkland" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 25 — South-Facing Flagstone Terrace &amp; Parkland View</strong>
+                Teak outdoor dining table for 11–12 with charcoal BBQ (Photo 8) looking straight out over the lawns and mature parkland trees.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/169efa71-9180-4b97-bc1d-18483114c28c.jpeg?im_w=720" alt="Drawing Room with Open Fire" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 1 — Main Drawing Room with Open Fireplace</strong>
+                Sage-green reception room with tall garden-view sash windows, working open fire, linen sofas, and Chinoiserie screen (Photo 2).
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/259faa28-c48c-443d-8e81-6d19058506be.jpeg?im_w=720" alt="Sitting Room with Woodburner and TV" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 23 — 2nd Living Room (Sitting Room / TV Snug)</strong>
+                Warm terracotta-peach walls, built-in bookshelves, TV, gallery wall, model sailboat, and a cast-iron wood-burning stove.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/7528a439-9075-4ebd-8306-c496ddcb3a03.jpeg?im_w=720" alt="Spacious Country Kitchen with AGA and Island" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 4 — Country Kitchen with Both AGA &amp; Electric Range</strong>
+                Flagstone floors, duck-egg Shaker cabinetry, Belfast sink (Photo 5), central island, AGA range, plus separate electric oven/hob.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/0ecf54dc-2b65-4077-a696-48b351c50b78.jpeg?im_w=720" alt="Sunlit Garden-View Kitchen Dining Area" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 7 — Skylit Garden-View Breakfast / Dining Room</strong>
+                Adjoins the kitchen with wrap-around picture windows, vaulted skylights, 11-seat timber table, and French doors to the terrace.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/c6fc7152-2e28-4c5a-ac65-290e4f452bfe.jpeg?im_w=720" alt="Formal Dining Room for 11" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 9 — Separate Formal Dining Room (2nd Dining Room)</strong>
+                Seats 11–12 in velvet chairs beneath a brass chandelier, with antique sideboards and mullioned window seats.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/a22053e5-c0ce-4c21-9e85-6d162c98eb91.jpeg?im_w=720" alt="Allium Principal Bedroom Suite" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 11 — "Allium" Principal Suite (Super-King + En-Suite)</strong>
+                First-floor master bedroom with scalloped pink headboard, twin parkland-view sash windows, and arched doorway to en-suite (Photo 12).
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/d7573377-987e-42e7-b6c3-335ef0d812f6.jpeg?im_w=720" alt="Clematis Super-King Bedroom" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 14 — "Clematis" Super-King Room (Plus 3 More King Rooms)</strong>
+                Dual-aspect first-floor room with Super-King bed and far-reaching views (plus King bedrooms <em>Delphinium</em>, <em>Robinia</em>, and ground-floor <em>Iris</em>).
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/a032bd20-7582-4afa-94e7-cb19bd57be45.jpeg?im_w=720" alt="Main Family Bathroom with Tub and Rainfall Shower" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 20 — Family Bathroom (Plus 3 Walk-In Shower Rooms)</strong>
+                Newly renovated bath + overhead rainfall shower, alongside 3 separate walk-in shower rooms (Photos 17, 19, 21) and 2 cloakroom WCs.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/e55a6af5-69c7-463b-9fe4-56bf8aae3906.jpeg?im_w=720" alt="Turned Baluster Oak Landing Staircase" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Photo 29 — Period Turned-Baluster Oak Staircase &amp; Landing</strong>
+                Wide first-floor gallery landing with botanical prints (plus a second rear staircase equipped with a fixed child safety gate).
+              </div>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">3. Complete Floor-by-Floor Layout (6 Floral-Named Bedrooms, 4 Bathrooms + 2 Cloakroom WCs)</h3>
+          <div class="dossier-grid-2">
+            <div class="dossier-box">
+              <h4>Ground Floor (2 Lounges, 2 Dining Rooms + 1 En-Suite Bedroom)</h4>
+              <ul>
+                <li><strong>Reception Rooms:</strong> <strong>Drawing Room</strong> with open fireplace &amp; parkland views (Photos 1–3) + <strong>Sitting Room / TV Snug</strong> with wood-burning stove &amp; bookcases (Photos 22–24).</li>
+                <li><strong>Kitchen &amp; Dual Dining Spaces:</strong> Huge flagstone <strong>Country Kitchen</strong> (both an AGA and electric oven/hob + island, Photos 4–6) opening into the <strong>Skylit Garden-View Dining Room</strong> (seats 11, French doors to terrace, Photos 7–8), plus a separate <strong>Formal Dining Room</strong> (seats 11, Photos 9–10), separate <strong>Utility Room</strong> (washer, dryer, 2nd sink, microwave), and <strong>Ground-Floor Cloakroom WC</strong>.</li>
+                <li><strong>Bedroom 1 — "Iris" (Ground Floor, Photo 17):</strong> King-size bed with its own private <strong>en-suite walk-in shower room, WC, and basin</strong>.</li>
+              </ul>
+            </div>
+            <div class="dossier-box">
+              <h4>First Floor (5 Bedrooms + 3 Bathrooms + Cloakroom WC)</h4>
+              <ul>
+                <li><strong>Bedroom 2 — "Allium" Master Suite (Photos 11–12, 19):</strong> Super-King bed, twin parkland sash windows, built-in wardrobes, and arched doorway into its private <strong>en-suite walk-in shower room</strong>.</li>
+                <li><strong>Bedroom 3 — "Clematis" (Photos 13–14):</strong> Super-King bed with dual-aspect sash windows and far-reaching countryside views.</li>
+                <li><strong>Bedroom 4 — "Delphinium" (Photo 15):</strong> King-size bed with antique furniture and courtyard views.</li>
+                <li><strong>Bedroom 5 — "Robinia" (Photo 16):</strong> King-size bed with blush walls, tartan throw, and reading chair.</li>
+                <li><strong>Bedroom 6 — "Peony" (Photo 18):</strong> Wood-panelled Single bedroom next to the rear staircase (which has a fixed stairgate at the top).</li>
+                <li><strong>Shared First-Floor Bathrooms:</strong> <strong>Main Family Bathroom</strong> with bathtub + rainfall shower, WC &amp; basin (Photo 20) + <strong>Rear Hallway Walk-In Shower Room</strong> (Photo 21) + separate dark-teal <strong>First-Floor Cloakroom WC</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">4. Central Cotswolds Location &amp; Exact Drive-Time Analysis</h3>
+          <div class="dossier-grid-2">
+            <div class="dossier-box">
+              <h4>Why This Location Beats Bath-Area Houses for Cotswold Villages</h4>
+              <ul>
+                <li><strong>Exact Coordinates:</strong> <code>51.8275, -2.0884</code> (Stockwell Farm, between Cowley and Birdlip, Gloucestershire GL4 8JZ).</li>
+                <li><strong>Right in the Heart of the Cotswolds AONB:</strong> Unlike <em>#1 The Old Rectory</em> and <em>#3 Batheaston House</em> (which sit 75–90 minutes south of the North Cotswolds), Spring House sits on the central Cotswold plateau between <strong>Regency Cheltenham</strong> and <strong>Roman Cirencester</strong>—cutting the drive to Bourton-on-the-Water, Bibury, and Lower Slaughter down to <strong>25 minutes</strong>!</li>
+                <li><strong>Doorstep Walks &amp; Farm Shops:</strong> You can walk from the front door to <strong>Cooper's Hill</strong>, the <strong>Cotswold Way</strong>, or the <strong>Green Dragon Inn</strong> in Cockleford (Review #6), and <strong>Elkstone Studios</strong> (artisan bakery, coffee shop, farm shop, padel courts) is a 5-minute drive down the lane.</li>
+              </ul>
+            </div>
+            <div class="dossier-box">
+              <h4>Exact Drive Times from Spring House</h4>
+              <ul>
+                <li><strong>Cowley Manor Experimental (Spa) &amp; Green Dragon Inn:</strong> 5 mins (1.5 miles)</li>
+                <li><strong>Elkstone Studios (Bakery, Coffee, Farm Shop):</strong> 6 mins (2.5 miles)</li>
+                <li><strong>Regency Cheltenham (Promenade, Restaurants):</strong> 18 mins (7.5 miles)</li>
+                <li><strong>Cirencester (Roman Amphitheatre &amp; Market Town):</strong> 18 mins (10 miles)</li>
+                <li><strong>Bibury (Arlington Row) / Painswick Rococo Garden:</strong> 22–25 mins (14 miles)</li>
+                <li><strong>Bourton-on-the-Water &amp; Lower Slaughter:</strong> 25–28 mins (16 miles)</li>
+                <li><strong>Stow-on-the-Wold / Burford &amp; Cotswold Wildlife Park:</strong> 30–34 mins (20–22 miles)</li>
+                <li><strong>London Heathrow (LHR) / Gatwick (LGW):</strong> ~1 hr 45 mins to LHR; ~2 hrs 21 mins (123 mi) to LGW</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">5. Synthesis of All 29 Combined Guest Reviews (11 Airbnb ★ 5.00 + 18 Bolthole Retreats ★ 4.80)</h3>
+          <div class="reviews-summary-bar">
+            <span class="score-pill">Airbnb: ★ 5.00 (11 of 11 are 5★)</span>
+            <span class="score-pill">Bolthole / UpfrontReviews: ★ 4.80 (18 Reviews, 100% Recommend)</span>
+            <span class="score-pill">Cleanliness: 5.0</span>
+            <span class="score-pill">Accuracy: 5.0</span>
+            <span class="score-pill">Value: 5.0</span>
+            <span class="score-pill">Host: Bolthole Retreats (Superhost)</span>
+          </div>
+          <div class="dossier-box" style="margin-bottom:14px;">
+            <h4>What Guests Rave About Across All 29 Reviews (May 2025 – Sept 2026)</h4>
+            <ul>
+              <li><strong>Grand Proportions That "Swallow Up" Families Effortlessly:</strong> Guests repeatedly highlight how enormous and comfortable the house feels—with two separate fireplace lounges, two 11-seat dining rooms, and 5 King/Super-King bedrooms plus a single room (<em>"Upon arrival we checked the amount we had paid twice because we couldn't believe it could actually have been so cheap"</em> — Worcester Park guest, Oct 2025).</li>
+              <li><strong>Spotless Renovated Bathrooms, Fast Wi-Fi &amp; Fully Stocked Kitchen:</strong> Reviewers praise the newly renovated bathrooms with toiletries in every room, huge comfy beds, fast rural broadband (Guildford guest, Aug 2026), and a kitchen stocked with abundant crockery, AGA + electric oven, and BBQ.</li>
+              <li><strong>Peaceful Sheep-Pasture Views &amp; Tennis Court:</strong> Guests love watching sheep, lambs, pheasants, and birds of prey from the south-facing lawn and playing on the private tennis court (Fiona, May 2026; Trevor, July 2026; Catherine, April 2026).</li>
+            </ul>
+          </div>
+
+          <details class="review-list-details" style="margin-bottom:18px;">
+            <summary>Click to Read All 11 Verbatim Airbnb Reviews (★ 5.0) + Key Verified Bolthole Retreats Reviews</summary>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #1 &bull; Ramani &bull; September 2026 &bull; ★ 5.0</div>
+              "A delightful place with beautiful rooms, great bannister and very nice art. Very cosy yet big. The TV room with its fireplace to rest with my wife and dogs - special. The lawns and the fields nearby with the woods were wonderful to walk around in with the dogs chasing squirrels that they could never catch."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #2 &bull; Julie &bull; August 2026 &bull; ★ 5.0</div>
+              "Our group of 9 adults had a lovely few days at Spring House near Birdlip. The house was spacious and comfortable. It was conveniently located as a home base to visit other Cotswolds locations. The kitchen was equipped with everything we needed to cook meals there. It was quiet, peaceful, and cozy."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Bolthole Verified &bull; H from Guildford &bull; August 2026 &bull; ★ 5.0</div>
+              "Spring House is a truly lovely cottage for a relaxing family stay. The home is spotless and thoughtfully prepared, with everything you might need — from toiletries to laundry essentials — so you can simply arrive with your luggage and start enjoying the house and its peaceful surroundings. The location is excellent: all everyday necessities are within a 10-minute drive, and many of the best spots in the Cotswolds are around 30 minutes away, making it a perfect base for exploring. I also want to highlight the impressively fast and reliable internet connection, which exceeded expectations given the rural setting and size of the property."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Bolthole Verified &bull; Trevor from Sevenoaks &bull; July 2026 &bull; ★ 4.2</div>
+              "Spring House is a very spacious and rather elegant 6 bedroom house which was ideal for our family holiday which included a wedding. The kitchen is well-equipped with masses of crockery, cutlery and glassware (although no beer glasses!). All the bathrooms appear to have been recently renovated and are in excellent condition. The decor and furniture is fairly grand and the beds are all either super-king or king sized (apart from the single bedroom). The exterior of the house has yet to be fully renovated, with rather tatty window frames, but all sash windows worked fine. The outside grounds provide plenty of space, but the lawn is rather uneven with many animal scrapings/diggings. An umbrella or awning for the outside table would be a useful addition. The house sits within Stockwell Farm, which appears to be a combination of sheep and arable. This provided huge entertainment for our grandson with working machinery and dogs working the sheep... We spent a most enjoyable 6 days at Spring House and would be happy to go there again."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #3 &bull; Dharmisha &bull; June 2026 &bull; ★ 5.0</div>
+              "We really enjoyed our stay with a large family. A very large house with peaceful and beautiful surroundings. Kitchen fully equipped with lots of space. Bedrooms very comfortable and clean. Lots of parking and easy to find. We'd recommend to family and friends."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Bolthole Verified &bull; Fiona from Salisbury &bull; May 2026 &bull; ★ 4.8</div>
+              "Spring House is impressive and has plenty of bedrooms and bathrooms for a large family gathering. The dining kitchen was spacious and very well equipped. There is a functioning tennis court and large flat grassy areas for outdoor games. There are also plenty of spaces to sit outside. There are some roadworks close by which did not detract from our stay at a weekend... We thoroughly enjoyed our stay and would love to come back again."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #4 &bull; Catherine &bull; April 2026 &bull; ★ 5.0</div>
+              "The Spring house was very beautiful and every room was nicely decorated with matching colours. It was in a very quiet environment and we enjoyed seeing the sheep behind the garden. We had an amazing week staying there."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #5 &bull; Ellie &bull; November 2025 &bull; ★ 5.0</div>
+              "Stunning home which was perfect for meeting with friends. Very responsive and helpful hosts. We can’t wait to come back again."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #6 &bull; Jenny &bull; November 2025 &bull; ★ 5.0</div>
+              "The perfect place for a family celebration weekend. The house is clean, beautifully decorated and provides plenty of space for everyone. A fabulous dining room for family suppers followed by cosy evenings in front of the fire. Great country walks from the front door - we loved climbing Coopers Hill and enjoyed a top meal at the Green Dragon. Cirencester well worth a visit. We highly recommend Spring House and would love to return."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #7 &bull; Abigail &bull; October 2025 &bull; ★ 5.0</div>
+              "Beautiful house for a family get together! Everyone absolutely loved the house. Lovely kitchen, sitting rooms and garden! Would highly recommend and would definitely stay here again! Thank you."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #8 &bull; Stine &bull; September 2025 &bull; ★ 5.0</div>
+              "Veldig flott hjem!! Kommer gjerne tilbake hit :)" ("Very great home!! Would love to come back here :)")
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #9 &bull; Rebekah (San Clemente, California) &bull; June 2025 &bull; ★ 5.0</div>
+              "We absolutely loved our stay! This was a beautiful home and exactly what we were looking for. It was clean and the furnishing beautiful. The bedrooms were very pretty. We would highly recommend staying Spring House."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #10 &bull; Jatinder &bull; May 2025 &bull; ★ 5.0</div>
+              "Spring House was perfect for what we wanted. We were a group of 6 friends staying for our annual get together. Spring House is set in quiet countryside, has huge gardens and is conveniently located for a short drive to local supermarkets. It was so quiet and inside it had everything we needed and everything was so clean. All bedrooms were spacious and the 2 living rooms were a perfect setting. We all agreed that we wouldn't hesitate in staying there again."
+            </div>
+            <div class="review-item">
+              <div class="review-meta">Airbnb #11 &bull; Jennifer &bull; May 2025 &bull; ★ 5.0</div>
+              "A beautiful rural retreat, perfect for families. Quiet location and plenty of space!"
+            </div>
+          </details>
+
+          <h3 class="dossier-h3">6. Four Fine-Print Caveats Discovered in Our Cross-Platform Audit</h3>
+          <div class="caveat-box">
+            <strong>Caveat 1 — Nearby A417 "Missing Link" Roadworks (Scheduled to Complete in Spring 2027):</strong>
+            While none of the 11 Airbnb reviews mention roadworks, two May–July 2026 reviews on Bolthole Retreats' independent review feed (Fiona, May 2026; Trevor, July 2026) noted major roadworks on the nearby A417 corridor toward Cheltenham. Our check of National Highways records confirms this is the £460m <strong>A417 Missing Link</strong> project (including the new Stockwell and Cowley overbridges), which is scheduled for completion in <strong>Spring 2027</strong>—just before your June 2027 trip, though final landscaping could still be wrapping up nearby.
+          </div>
+          <div class="caveat-box">
+            <strong>Caveat 2 — Rustic Country-Farmhouse Exterior Details &amp; Lawn (Trevor, July 2026):</strong>
+            Unlike the museum-grade exterior restoration of <em>#3 Batheaston House</em>, Spring House is a working-estate country farmhouse that has not been "over-renovated" on the outside: Trevor (July 2026) noted that while the interiors and all 4 bathrooms are freshly renovated, the exterior wooden window frames are weathered (though all sash windows work smoothly), the huge country lawn has some uneven rabbit/animal diggings, and the outdoor dining table lacked a sun parasol.
+          </div>
+          <div class="caveat-box">
+            <strong>Caveat 3 — Open Parkland Culvert &amp; Surrounding Sheep Fields (House Rules Note):</strong>
+            Because the grounds sit within Stockwell Farm surrounded by sheep pastures, the listing rules advise: <em>"Due to the size of the garden and parkland, children and pets should be supervised especially around the culvert and when there is livestock in the surrounding fields."</em>
+          </div>
+          <div class="caveat-box" style="margin-bottom:18px;">
+            <strong>Caveat 4 — Remote Farm-Lane Setting (Car Essential for Everything):</strong>
+            As Jane (Feb 2026) noted, Stockwell is a quiet farm hamlet in the middle of the countryside—there are no shops in walking distance (Elkstone Studios bakery/farm shop is a 6-minute drive, and the Green Dragon pub is a 5-minute drive or country field walk). Also note check-in is at <strong>4:00 PM</strong> and check-out is at <strong>10:00 AM</strong>.
+          </div>
+
           <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
-            
+            <a class="btn" href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open #2 Spring House on Airbnb ($2,985 / $995 per night) &rarr;</a>
+            <a class="btn secondary" href="https://www.google.com/maps?q=51.8275,-2.0884" target="_blank" rel="noopener">View Exact Location (Stockwell Farm, GL4 8JZ) on Google Maps &nearr;</a>
           </div>
         </div>
-      </div>
-      <div class="manor-card" id="prop-18">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1644794769389421601/original/bd1f4fc9-cff4-48d3-92ab-dc44584316aa.jpeg" alt="Mount Pleasant (Grade II Listed Residence) — Stow-on-the-Wold" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1644794769389421601?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #18. Mount Pleasant (Grade II Listed Residence) — Stow-on-the-Wold
-                </a>
-              </h3>
-              <span class="badge">$995/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 2 baths &bull; ★ 5.0 (17)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Exquisitely restored Grade II listed residence in the center of Stow-on-the-Wold with two private gardens, a fireplace, and private parking.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1644794769389421601?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-19">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-883078279051755742/original/21ad933c-f4e9-4fa1-8d0c-1573e2614f62.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Manor House (c. 1572) — Sedgeberrow (near Broadway)" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/883078279051755742?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #19. The Manor House (c. 1572) — Sedgeberrow (near Broadway)
-                </a>
-              </h3>
-              <span class="badge">$1,046/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 5 beds · 5 baths &bull; ★ 4.70 (20)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,138 for 3 nights ($1,046/night)
-              <span class="price-sub">Direct via StayCotswold: £1,945 (~$2,530 total / ~$843/night)</span>
-            </div>
-            
-            <p class="desc">Dates back to 1572 on a Domesday Book site beside a medieval church, 10 minutes from Broadway. Inglenook fireplaces, exposed honey-stone walls, glass orangery, and outdoor hot tub.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/883078279051755742?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,138) &rarr;</a>
-            <a class="btn secondary" href="https://www.staycotswold.com/property/manor-house-large-5-bed-holiday-home-with-hot-tub/" target="_blank" rel="noopener">Direct Agency Page (£1,945 / ~$2,530)</a>
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-20">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3ODczNTMzNjAyNDIzNTc1OA%3D%3D/original/bb38ded9-162f-4402-97b2-a8cb60ecb34f.jpeg" alt="17th-Century 6-Bedroom Cotswold Farmhouse — Brokenborough (near Tetbury)" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1178735336024235758?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #20. 17th-Century 6-Bedroom Cotswold Farmhouse — Brokenborough (near Tetbury)
-                </a>
-              </h3>
-              <span class="badge">$1,134/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 8 beds · 4.5 baths &bull; ★ 4.92 (36)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,402 for 3 nights ($1,134/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">5-star rated 17th-century 6-bedroom stone farmhouse near Tetbury and Highgrove, complete with a private outdoor hot tub.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1178735336024235758?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,402) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-21">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1784907894808934409/original/37349908-9cfc-4a0e-bef1-834d167553ae.jpeg" alt="18th-Century Cotswolds Home with Pool & Walled Garden — Wyck Rissington" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1784907894808934409?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #21. 18th-Century Cotswolds Home with Pool & Walled Garden — Wyck Rissington
-                </a>
-              </h3>
-              <span class="badge">$1,136/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 2 baths &bull; ★ New</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,408 for 3 nights ($1,136/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Super-central 18th-century stone residence right between Bourton-on-the-Water and Lower Slaughter, featuring an outdoor swimming pool, inglenook fireplace, and walled garden.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1784907894808934409?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,408) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card top5-highlight" id="prop-22">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/c44978b3-bd42-4eb0-aa11-e4febf56b114.jpg" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #22. 16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood
-                </a>
-              </h3>
-              <span class="badge gold">★ Top 5 Most Beautiful · $1,149/nt</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 2 baths &bull; ★ 5.0 (79)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,446 for 3 nights ($1,149/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            <div class="why-box"><strong>★ Top 5 Most Beautiful — Best Central Cotswolds Gem:</strong> Symmetrical 16th-century honey-stone facade with a formal clipped boxwood parterre path, moody forest-green beamed interiors, and dead-center location between Burford and Kingham.</div>
-            <p class="desc">Located between Burford and Kingham, featuring 16th-century exposed stonework, ancient beams, two wood-burning fireplaces, an AGA range, and front and back gardens.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,446) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-23">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1022779575980202433/original/5251f9ff-d151-4ad3-8fe1-b53b57fab918.jpeg" alt="Ewen Mill (18th-Century 6-Bedroom Riverside Mill on 17 Acres) — Cirencester" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1022779575980202433?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #23. Ewen Mill (18th-Century 6-Bedroom Riverside Mill on 17 Acres) — Cirencester
-                </a>
-              </h3>
-              <span class="badge">$1,162/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 4.82 (65)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,486 for 3 nights ($1,162/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Historic 18th-century 6-bedroom stone mill house set on 17 acres of private riverside grounds along the infant River Thames.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1022779575980202433?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,486) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-24">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-838927043691309267/original/6db6bbb2-7c5f-4809-8384-ed5dd3555a6e.jpeg" alt="Grade II Listed 5-Bedroom Farmhouse on 2 Acres — Burford" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/838927043691309267?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #24. Grade II Listed 5-Bedroom Farmhouse on 2 Acres — Burford
-                </a>
-              </h3>
-              <span class="badge">$1,237/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 3.5 baths &bull; ★ 5.0 (27)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,710 for 3 nights ($1,237/night)
-              <span class="price-sub">Free cancellation</span>
-            </div>
-            
-            <p class="desc">Grade II listed Cotswold stone farmhouse just outside Burford with a 2-acre private garden, exposed beams, and log fires.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/838927043691309267?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,710) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-25">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ4NzU3MjQwMzE2NjgxMzYwMA==/original/c5820bf5-6eb7-4eda-8d28-9fa2a9702621.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="Stained-Glass Country Estate Home — West Oxfordshire" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1487572403166813600?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #25. Stained-Glass Country Estate Home — West Oxfordshire
-                </a>
-              </h3>
-              <span class="badge">$1,246/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; All en-suite bedrooms · Double-height great hall &bull; ★ 4.98 (58)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,739 for 3 nights ($1,246/night)
-              <span class="price-sub">Pay $0 today · Free cancellation before May 15, 2027</span>
-            </div>
-            
-            <p class="desc">Set in peaceful West Oxfordshire countryside near Estelle Manor and Blenheim Palace, with original stained-glass windows, a double-height beamed hall, and all en-suite bedrooms.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1487572403166813600?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,739) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-26">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/5aaccdfb-82ef-41d4-898f-73c7144cdb46.jpg" alt="Historic 6-Bedroom Royal Hunting Lodge — Langley (near Winchcombe)" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/45602460?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #26. Historic 6-Bedroom Royal Hunting Lodge — Langley (near Winchcombe)
-                </a>
-              </h3>
-              <span class="badge">$1,276/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 5.5 baths &bull; ★ 4.98 (60)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,827 for 3 nights ($1,276/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Former Tudor royal hunting lodge (linked to Henry VIII) set high in the hills near Winchcombe with 6 bedrooms, 5.5 baths, panoramic views, and a private sauna.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/45602460?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,827) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-27">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-650502655470642363/original/92af8439-4511-46ff-92d6-0cd7f3cb084f.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Court House ("Chocolate Box Manor") — France Lynch" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/650502655470642363?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #27. The Court House ("Chocolate Box Manor") — France Lynch
-                </a>
-              </h3>
-              <span class="badge">$1,280/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 11 beds · 6 baths &bull; ★ 4.90 (59)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $3,841 for 3 nights ($1,280/night)
-              <span class="price-sub">Pay $0 today · Free cancellation before May 15, 2027</span>
-            </div>
-            
-            <p class="desc">17th-century Jacobean Grade II listed stone manor set on 3 private acres in the Golden Valley, with mullioned windows, oak beams, a vintage pool table, and a 7-seater hot tub.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/650502655470642363?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,841) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card" id="prop-28">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1262344370951090578/original/6a8bcc5c-91b3-4bd8-b83a-bd0ea42f63b0.jpeg" alt="400-Year-Old 6-Bedroom Cotswold Stone Country House — Charlbury" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1262344370951090578?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #28. 400-Year-Old 6-Bedroom Cotswold Stone Country House — Charlbury
-                </a>
-              </h3>
-              <span class="badge">$1,387/night</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 5.0 (25)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $4,162 for 3 nights ($1,387/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            
-            <p class="desc">Grand 400-year-old 6-bedroom stone house in Charlbury (direct train from Paddington, 10 mins from Daylesford), with wood fires, a 12-seat dining room, and 4 roll-top bath bathrooms.</p>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1262344370951090578?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,162) &rarr;</a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="manor-card top5-highlight" id="prop-29">
+      </details>
+      <div class="manor-card top5-highlight" id="prop-3" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
         <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/dbbc9074-6e32-4e88-b394-d5862c4b8aaf.jpeg" alt="Queen Anne Period Stately Home on the River — Batheaston" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
                 <a href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #29. Queen Anne Period Stately Home on the River — Batheaston
+                  #3. Queen Anne Period Stately Home on the River — Batheaston
                 </a>
               </h3>
-              <span class="badge gold">★ Top 5 Most Beautiful · $1,413/nt</span>
+              <span class="badge gold">★ Deep-Dive Available · $1,413/nt</span>
             </div>
             <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (18)</div>
             <div class="price-line">
               Airbnb Live Total (Jun 14–17): $4,240 for 3 nights ($1,413/night)
               <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
             </div>
-            <div class="why-box"><strong>★ Top 5 Most Beautiful — Grandest Stately Architecture:</strong> Looks straight out of Bridgerton: a symmetrical 3-story golden-stone Queen Anne mansion framed by white hydrangeas, formal yew topiary gardens, and a bay-tree flagstone terrace above the river.</div>
             <p class="desc">6-bedroom riverfront Queen Anne period stately home on the southern edge of the Cotswolds with classical architecture, landscaped gardens, and a hot tub.</p>
           </div>
           <div class="btn-row">
             <a class="btn" href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,240) &rarr;</a>
-            
+            <a class="btn secondary" href="#deep-dive-3" onclick="var d=document.getElementById('deep-dive-3'); d.open=!d.open; return false;">Toggle Deep-Dive Review &darr;</a>
           </div>
         </div>
       </div>
-      <div class="manor-card top5-highlight" id="prop-30">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/637a4c4f-3eb8-406b-b81b-aa02cd19eaa5.jpg" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton" loading="lazy" />
-        <div class="manor-body">
-          <div>
-            <div class="manor-top">
-              <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  #30. The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton
-                </a>
-              </h3>
-              <span class="badge gold">★ Top 5 Most Beautiful · $1,491/nt</span>
-            </div>
-            <div class="specs">Entire Historic Property &bull; 8 bedrooms · 12 beds · 5 baths &bull; ★ 4.94 (107)</div>
-            <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $4,473 for 3 nights ($1,491/night)
-              <span class="price-sub">Pay $0 today · Free cancellation</span>
-            </div>
-            <div class="why-box"><strong>★ Top 5 Most Beautiful — Most Dramatic Hilltop Manor:</strong> An 8-bedroom Grade II-listed Arts & Crafts manor perched high on the hillside above Stanton (the best-preserved 16th-century village in the Cotswolds) with 30-mile views across the valley.</div>
-            <p class="desc">Iconic Grade II listed stone manor house perched on the hillside above Stanton (the best-preserved 16th-century village in the North Cotswolds), with 8 bedrooms and sweeping views.</p>
+      <details class="dossier" id="deep-dive-3">
+        <summary class="dossier-summary">
+          <span>&#128269; Deep-Dive Dossier: #3 Batheaston House (All 47 Photos &amp; 18 Reviews Inspected)</span>
+          <span class="toggle-hint">Click to Expand / Collapse &darr;</span>
+        </summary>
+        <div class="dossier-content">
+      <div class="dossier-header">
+        <div class="dossier-eyebrow">Property Deep-Dive Dossier &bull; All 47 Photos &amp; 18 Reviews Inspected</div>
+        <h2 class="dossier-title" style="border:none; margin:0 0 6px; padding:0;">#3. Batheaston House — Queen Anne Period Stately Home on the River</h2>
+        <p class="dossier-sub">
+          <strong>Historic Name &amp; Exact Address:</strong> Batheaston House, 290 High Street, Batheaston, Bath BA1 7RA (<a href="https://www.google.com/maps?q=51.4057,-2.3196" target="_blank" rel="noopener">51.4057, -2.3196 on Google Maps &nearr;</a>) &bull; <strong>Grade II* Listed</strong> &bull; <strong>Airbnb Luxe</strong> &bull; <strong>$4,240 total ($1,413/night)</strong> for Jun 14–17, 2027
+        </p>
+      </div>
+
+      <h3 class="dossier-h3">1. Historic Identity &amp; Architectural Pedigree</h3>
+      <div class="dossier-grid-2">
+        <div class="dossier-box">
+          <h4>Tudor Foundation &amp; 1712 Queen Anne Rebuild</h4>
+          <ul>
+            <li><strong>Grade II* Listed Status:</strong> Placed in the top 5.8% of all protected historic buildings in England (a higher architectural tier than standard Grade II).</li>
+            <li><strong>Sir John Harington Connection (16th Century):</strong> Built over the 16th-century vaulted stone basement of a Tudor manor owned by <strong>Sir John Harington</strong>—godson to Queen Elizabeth I and inventor of the flushing water closet.</li>
+            <li><strong>1712 Golden Bath-Stone Facade:</strong> Rebuilt in 1712 in symmetrical Queen Anne style for High Sheriff <strong>Henry Walters</strong>, featuring segment-headed sash windows, Corinthian pilasters, and a pedimented Ionic doorcase.</li>
+          </ul>
+        </div>
+        <div class="dossier-box">
+          <h4>Royal History &amp; Museum-Grade Restoration</h4>
+          <ul>
+            <li><strong>Princess Beatrice's Music Room:</strong> Later home to noted pianist Francesca Ferrari, who taught Queen Victoria's youngest daughter, <strong>Princess Beatrice</strong>, to play the piano in the drawing room.</li>
+            <li><strong>Watson, Bertram &amp; Fell Restoration:</strong> Meticulously restored by the acclaimed Bath classical architecture firm across four stories, combining period wall panelling, working fireplaces, and antique chandeliers with underfloor-heated flagstones, high-speed Wi-Fi, and Sonos audio.</li>
+            <li><strong>6 Named Historic Bedrooms:</strong> Every bedroom is named after a historical figure tied to the estate (<em>Harington, Walters, Blanchard, Pagden, Trevenan, Marsh</em>).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="dossier-h3">2. Visual Tour Across All 47 Listing Photographs (Floor by Floor)</h3>
+      <p style="font-size:14px; color:var(--muted); margin:0 0 10px;">
+        All 47 high-resolution photographs on the listing were inspected room by room. Below are 15 distinct photographs spanning the 1.15-acre riverfront grounds, the ground-floor reception rooms, the hidden bookcase kitchen, the 16th-century Tudor cellar cinema, and the upper bedroom suites:
+      </p>
+
+      <div class="photo-tour-grid">
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/dbbc9074-6e32-4e88-b394-d5862c4b8aaf.jpeg?im_w=720" alt="Batheaston House 1712 South Facade" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 40 — The 1712 Queen Anne South Facade</strong>
+            Symmetrical 3-story + dormered golden Bath-stone elevation framed by banks of white hydrangeas and clipped yew topiary cones.
           </div>
-          <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,473) &rarr;</a>
-            
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/c1bbdc6e-b3d8-4503-ad0f-022978b1040c.jpeg?im_w=720" alt="Flagstone Dining Terrace" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 1 — Upper Flagstone Dining Terrace</strong>
+            Outdoor dining table for 12 with parasol, flanked by clipped bay trees and lavender overlooking the formal lawn.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/4c22aa14-a437-4f21-bda9-e0477c9749e9.jpeg?im_w=720" alt="Classical Stone Orangery" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 2 — Classical Stone Orangery &amp; Topiary</strong>
+            Detached Georgian stone orangery/summerhouse framing the east side of the lawn and outdoor lounge terrace.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/5a825da5-92fc-4937-afc8-2963b0631611.jpeg?im_w=720" alt="1.15 Acre Gardens to the River Avon" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 41 — 1.15-Acre Lawn Down to the River Avon</strong>
+            Sweeping formal gardens bordered by mature trees leading down to the bank of the River Avon.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/85134ee9-5c89-48ae-ac77-71817d64c630.jpeg?im_w=720" alt="North Courtyard and Fountain" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 34 — Walled Courtyard &amp; Stone Fountain</strong>
+            Tranquil inner stone courtyard with an ornamental water basin, central fountain jet, and spiral boxwood topiary.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/c3dba266-0a08-402a-ac1e-c877067c5b99.jpeg?im_w=720" alt="Cedar Hot Tub in Yew Hedge Enclosure" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 37 — Yew-Hedged Cedar Barrel Hot Tub</strong>
+            Private wood-clad hot tub tucked inside a tall clipped yew hedge "garden room" with festoon lighting.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/256c91df-362b-4576-94a0-57cd74001191.jpeg?im_w=720" alt="Georgian Panelled Entrance Hall" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 44 — Grand Panelled Entrance Hall &amp; Staircase</strong>
+            Original 18th-century oak-step staircase with turned balusters, stone-flagged hall, and tall arched sash window.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/d6b4ca72-6e96-42ad-bed3-366a8099c7ff.jpeg?im_w=720" alt="Main Drawing Room" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 7 — Blush-Pink Queen Anne Drawing Room</strong>
+            Ground-floor formal lounge with triple south-facing sash windows, arched alcoves, marble fireplace, and velvet sofas.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/6ebb201c-4638-4149-92e7-82eede361d8c.jpeg?im_w=720" alt="Olive Panelled Morning Room" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 32 — Olive-Panelled Morning Room (2nd Living Room)</strong>
+            Full-height Georgian timber panelling, working fireplace, and floor-to-ceiling sash windows opening toward the terrace.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/8b0b12bf-9ede-42e7-82dc-5b91ec7a7bcd.jpeg?im_w=720" alt="Formal Dining Room for 12" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 16 — Formal Georgian Dining Room (Seats 12)</strong>
+            Banquet table under a crystal chandelier with garden views and a hidden doorway connecting to the Courtyard Room.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/85f21851-e8cb-4c8d-905a-325b1911aa49.jpeg?im_w=720" alt="Secret Bookcase Kitchen" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 11 — The "Secret Bookcase Kitchen" (Ground Floor)</strong>
+            In the Courtyard Room (Photo 10), what looks like a wall of glazed bookcases slides open to reveal a full marble kitchen-bar (oven, hob, fridge, dishwasher) right next to the dining room!
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/22ccde8b-5658-42b0-886e-aff2e7497580.jpeg?im_w=720" alt="16th Century Tudor Basement AGA Kitchen" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 13 — 16th-Century Tudor Basement Kitchen &amp; AGA</strong>
+            Heated blue lias flagstones, medieval stone hearth, cream electric-converted AGA range, plus a separate butler's pantry (Photo 15) with a 2nd oven and 2nd dishwasher.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/576ae61c-00d1-402c-a0b6-8af43e5b2e04.jpeg?im_w=720" alt="Vaulted Tudor Cellar Cinema Room" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 35 — Groin-Vaulted Tudor Cellar Cinema Room</strong>
+            Original 1500s stone-vaulted undercroft converted into a private movie theater with a drop-down projector screen and 12 leather beanbag loungers.
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/a0022dce-0d0b-41f6-9c37-af5b431f41e2.jpeg?im_w=720" alt="Harington Principal Bedroom Suite" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 20 — The "Harington" Principal Suite (1st Floor)</strong>
+            Panelled Georgian master suite with twin sash windows overlooking the river lawn and a marble en-suite shower room (Photo 29).
+          </div>
+        </div>
+        <div class="photo-tour-item">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/c85d8956-7876-4260-bb3f-8727120c9817.jpeg?im_w=720" alt="Panelled Main Bathroom with Fireplace" loading="lazy" />
+          <div class="photo-tour-cap">
+            <strong>Photo 27 — Panelled Main Bath with Fireplace</strong>
+            One of 4.5 bathrooms across the 1st and 2nd floors, featuring a panelled soaking tub, period fireplace, and garden views (plus a top-floor valley-view tub in Photo 30).
           </div>
         </div>
       </div>
+
+      <h3 class="dossier-h3">3. Complete Floor-by-Floor Layout (4 Stories, 6 Bedrooms, 4.5 Baths)</h3>
+      <div class="dossier-grid-2">
+        <div class="dossier-box">
+          <h4>Lower Ground (16th-C. Tudor) &amp; Ground Floor (1712)</h4>
+          <ul>
+            <li><strong>Tudor Basement:</strong> Main country kitchen with electric AGA &amp; breakfast table (Photos 13–14, 18), separate Butler's Pantry with 2nd conventional oven &amp; 2nd dishwasher (Photo 15), utility/laundry room, and the <strong>Vaulted Stone Cinema Cellar</strong> (Photos 35–36).</li>
+            <li><strong>Ground Floor:</strong> Grand Entrance Hall (Photos 44–47), Blush Drawing Room (Photos 7–9), Olive-Panelled Morning Room (Photos 32–33), 12-Seat Formal Dining Room (Photos 16–17), Courtyard Room with the <strong>Secret Bookcase Kitchen</strong> (Photos 10–12), and cloakroom WC.</li>
+          </ul>
+        </div>
+        <div class="dossier-box">
+          <h4>First Floor &amp; Second Floor (6 Historic Bedrooms)</h4>
+          <ul>
+            <li><strong>First Floor (3 Bedrooms):</strong>
+              <strong>1. Harington</strong> (King bed + en-suite marble shower room, Photos 20–21, 29);
+              <strong>2. Blanchard</strong> (Four-poster double bed + en-suite WC, Photo 19);
+              <strong>3. Walters</strong> (Olive-panelled double room with concealed vanity sink, Photo 24); plus the grand <strong>Panelled Family Bathroom</strong> with soaking bath &amp; walk-in shower (Photos 27–28).</li>
+            <li><strong>Second Floor (3 Vaulted Timber-Beam Bedrooms):</strong>
+              <strong>4. Trevenan</strong> (King bed + en-suite bath/shower, Photos 25, 31);
+              <strong>5. Pagden</strong> (Vaulted A-frame king room, Photos 22–23);
+              <strong>6. Marsh</strong> (Vaulted king room, Photo 26); plus the <strong>Top-Floor Valley-View Bathroom</strong> with tub right under the window (Photos 30, 43).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="dossier-h3">4. Map Location, Surroundings &amp; Drive-Time Analysis</h3>
+      <div class="dossier-grid-2">
+        <div class="dossier-box">
+          <h4>Where Batheaston Sits Geographically</h4>
+          <ul>
+            <li><strong>Coordinates:</strong> <code>51.4057, -2.3196</code> (290 High Street, Batheaston, Bath BA1 7RA).</li>
+            <li><strong>Southern Tip of the Cotswolds AONB:</strong> Batheaston is a leafy riverside village on the eastern edge of <strong>Bath</strong> (Somerset), right where the Southern Cotswolds hills meet the Avon Valley.</li>
+            <li><strong>Micro-Setting on Satellite View:</strong> The house sits behind a high stone wall along Batheaston High Street (with gated off-street parking for 4+ cars). Its 1.15-acre south lawn slopes down toward the <strong>River Avon</strong>. <em>Note on the map:</em> The Great Western mainline railway runs through the wooded strip between the bottom of the lawn and the riverbank, though it is heavily screened by mature trees and not a single one of the 18 guest reviews mentions train noise.</li>
+          </ul>
+        </div>
+        <div class="dossier-box">
+          <h4>Exact Drive Times from Batheaston House</h4>
+          <ul>
+            <li><strong>Central Bath (Roman Baths, Royal Crescent):</strong> 10–15 mins (3 miles)</li>
+            <li><strong>Castle Combe (quintessential South Cotswolds village):</strong> 20 mins (11 miles)</li>
+            <li><strong>Lacock Abbey &amp; Village (Harry Potter filming site):</strong> 22 mins (11 miles)</li>
+            <li><strong>Tetbury &amp; Highgrove Gardens:</strong> 35 mins (22 miles)</li>
+            <li><strong>Cirencester / Bibury:</strong> 50–55 mins (34 miles)</li>
+            <li><strong>Bourton-on-the-Water / Lower Slaughter / Stow-on-the-Wold:</strong> 1 hr 10 mins – 1 hr 20 mins north up the Fosse Way (46–50 miles)</li>
+            <li><strong>London Heathrow (LHR) / Gatwick (LGW):</strong> ~1 hr 45 mins to LHR; ~2 hrs 15 mins to LGW</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="dossier-h3">5. Synthesis of All 18 Guest Reviews (★ 5.00 Overall)</h3>
+      <div class="reviews-summary-bar">
+        <span class="score-pill">Overall: ★ 5.00 (18 of 18 are 5★)</span>
+        <span class="score-pill">Cleanliness: 5.0</span>
+        <span class="score-pill">Accuracy: 5.0</span>
+        <span class="score-pill">Check-in: 5.0</span>
+        <span class="score-pill">Communication: 5.0</span>
+        <span class="score-pill">Value: 4.94</span>
+        <span class="score-pill">Location: 4.89</span>
+      </div>
+      <div class="dossier-box" style="margin-bottom:14px;">
+        <h4>Key Takeaways Across All 18 Reviews (Aug 2025 – Oct 2026)</h4>
+        <ul>
+          <li><strong>Superhost Paul's Hospitality:</strong> Mentioned by name in 15 of the 18 reviews. Guests highlight that Paul greets guests personally to give a warm tour of the historic house (Sanaa, Apr 2026), leaves homemade jam (Ashley, Mar 2026), responds almost instantly to questions, and welcomes private chefs for special dinners (Athina, Dec 2025).</li>
+          <li><strong>Scale &amp; Beauty Exceed the Listing Photos:</strong> Multiple guests write that the photographs cannot capture the true scale of the 4-story mansion and 1.15-acre river gardens (<em>"Hard to believe homes like this exist, you can't understand the true scale of it until you're there"</em> — Elle; <em>"The photos don't do justice to how beautiful this place is"</em> — Vishal).</li>
+          <li><strong>Kid &amp; Family Approval:</strong> Guests rave about the vaulted cellar cinema room and 12-seat dining room (Keri, Oct 2025), and Yolanda (Jan 2026) confirms: <em>"Six couples stayed at Paul's property over New Year with our toddlers and it was the perfect place for a group stay."</em></li>
+        </ul>
+      </div>
+
+      <details class="review-list-details">
+        <summary>Click to Read All 18 Verbatim Airbnb Reviews for #3 (Batheaston House)</summary>
+        <div class="review-item">
+          <div class="review-meta">1. Sarah &bull; 3 weeks ago &bull; ★ 5.0</div>
+          "We had a fabulous stay. The sun shone, the house was beautiful and we would love to come back again!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">2. Lizzie &bull; August 2026 &bull; ★ 5.0</div>
+          "We had such a fantastic weekend at Paul’s property for my sister’s hen do. The house is utterly beautiful and Paul was such an amazing host. Thank you!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">3. Evan &bull; August 2026 &bull; ★ 5.0</div>
+          "Paul is an incredible host and his place is absolutely stunning. We could not recommend staying here more!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">4. Nick &bull; June 2026 &bull; ★ 5.0</div>
+          "We stayed at this property while visiting the area for a friend’s wedding, and it was absolutely fantastic. Paul was incredibly helpful and responsive throughout our stay, always on hand to answer any questions we had. The house itself is breathtaking and equipped with everything you could possibly need. We were fortunate enough to have great weather, which meant we could make the most of the beautiful garden and enjoy a barbecue outside. We couldn’t recommend Paul as a host or this property highly enough. A truly wonderful stay."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">5. Kathryn &bull; April 2026 &bull; ★ 5.0</div>
+          "House &amp; grounds were beautiful, perfect for our photo shoot. Great amenities, close to Bath, helpful host. No one wanted to leave when it came to check out."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">6. Jessica (Atlanta, Georgia) &bull; April 2026 &bull; ★ 5.0</div>
+          "This was the most delightful home base for our trip to the Cotswolds. The home was so beautiful and the garden and surroundings were peaceful and serene. All the charm of an historic home with the comforts of modern living."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">7. Sanaa &bull; April 2026 &bull; ★ 5.0</div>
+          "We loved our stay at Batheaston House. Beautiful property with stunning views. Paul was very friendly, checked us in promptly and showed us around. He was responsive if we needed anything. The house was gorgeous, clean and had all the amenities we needed. Short drive to Bath and some lovely walks in the area. Thank you!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">8. Ashley (Mesa, Arizona) &bull; March 2026 &bull; ★ 5.0</div>
+          "An incredible estate with plenty of space for everyone. Paul was an outstanding host he even made us homemade jam, which was such a thoughtful touch. His communication was thorough, and the check-in process was seamless. The house itself is beautiful, perfectly blending modern decor with the charm and character of its historical roots."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">9. Andrew &bull; January 2026 &bull; ★ 5.0</div>
+          "Truly a stunning building, which formed the backdrop for a wonderful weekend. I wouldn’t hesitate to book again!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">10. Yolanda Melanie &bull; January 2026 &bull; ★ 5.0</div>
+          "Six couples stayed at Paul’s property over New Year with our toddlers and it was the perfect place for a group stay. The house was spacious, comfortable, and very well laid out, giving everyone plenty of room while still feeling cosy. Paul was an excellent host — friendly, attentive, and always quick to respond to any questions before and during our stay. The property was clean, the beds were comfortable, and the kitchen was well equipped, which made cooking and hosting for a large group easy and enjoyable. We made some lovely memories here and wouldn’t hesitate to recommend the house to anyone looking for a group getaway."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">11. Elle &bull; December 2025 &bull; ★ 5.0</div>
+          "Absolutely stunning house. We had a beautiful weekend. Paul was a great host, responding quickly to any questions we had. Hard to believe homes like this exist, you can’t understand the true scale of it until you’re there. 100% recommend!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">12. Athina &bull; December 2025 &bull; ★ 5.0</div>
+          "A truly special treat to stay in this amazing house. Beautifully decorated and felt right at home. Paul was super flexible with our booking, and allowed us to have a private chef for a special dinner which was an amazing experience. We’d love to come back in the future."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">13. Til &bull; October 2025 &bull; ★ 5.0</div>
+          "This place is magical, we will come back for sure! :)"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">14. Keri &bull; October 2025 &bull; ★ 5.0</div>
+          "We stayed here for my mums 60th birthday and had the best time! It’s an experience staying in the house itself, let alone exploring Bath as well! Everything is beautiful in the house and the grounds. We all had some of the best times in the huge dining room and cinema room! The location is only a 10-20 minute (depending on traffic) drive into the centre of Bath and has off road parking with enough room for our 4 cars. I definitely recommend staying here and would come again. It will be one of our favourite memories as a family. Thanks Paul for being a great host!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">15. Louis &bull; October 2025 &bull; ★ 5.0</div>
+          "Beste, het verblijf in dit prachtig huis was een genot van begin tot einde. Van de ligging tot het interieur tot de charme van de tuin die prachtig aangelegd is. Waan jezelf in de wondere wereld van Bath met al zijn destijdse Glorie." (Translation: "The stay in this beautiful house was a pleasure from start to finish. From the location to the interior to the charm of the beautifully landscaped garden. Imagine yourself in the wonderful world of Bath in all its former glory.")
+        </div>
+        <div class="review-item">
+          <div class="review-meta">16. Bernadette &bull; September 2025 &bull; ★ 5.0</div>
+          "An exquisite stay in the English countryside! We could not have had a more exceptional time. Paul was incredibly responsive and friendly. We wish we could have stayed for a month!"
+        </div>
+        <div class="review-item">
+          <div class="review-meta">17. Eve &bull; September 2025 &bull; ★ 5.0</div>
+          "We celebrated a significant birthday and were a family party of 10 people. None of us will ever forget the amazing experience. Paul was a friendly and responsive host. His home is incredible and the reality exceeds the expectations by far. Breathtaking surroundings. Lots of space. We had a fantastic stay. We cannot wait to return. Absolutely stunning place."
+        </div>
+        <div class="review-item">
+          <div class="review-meta">18. Vishal &bull; August 2025 &bull; ★ 5.0</div>
+          "This is a really magical home with a wonderful host. The photos don’t do justice to how beautiful this place is. Paul was a wonderful host and very responsive. We will definitely come back."
+        </div>
+      </details>
+
+      <h3 class="dossier-h3">6. Three Fine-Print Caveats to Weigh Before Booking</h3>
+      <div class="caveat-box">
+        <strong>Caveat 1 — Southern Cotswolds / Bath Edge vs. North Cotswolds Villages:</strong>
+        Batheaston House is a 10–15 minute drive from historic <strong>Bath</strong> and 20 minutes from <strong>Castle Combe</strong> and <strong>Lacock</strong>, making it unbeatable if you want to pair Georgian Bath with the southern Cotswolds. However, the famous North/Central Cotswolds villages (<strong>Bourton-on-the-Water, Lower Slaughter, Stow-on-the-Wold</strong>) are <strong>1 hr 10 mins to 1 hr 20 mins north</strong> by car. (By comparison, <em>#2 Spring House</em> is 25 minutes from Bourton-on-the-Water.)
+      </div>
+      <div class="caveat-box">
+        <strong>Caveat 2 — Separate Annexe &amp; Gardener Disclosure in the Listing Rules:</strong>
+        In the "Other things to note" section, host Paul discloses: <em>"There is also an annexe in a separate building, with its own entrance that can be booked in addition to the main house, or separately by other guests. The owner may occasionally be staying in the annexe from time to time. The gardener may also be working in the grounds during your stay."</em>
+      </div>
+      <div class="caveat-box" style="margin-bottom:18px;">
+        <strong>Caveat 3 — Children Setting on Airbnb (Quick Host Message Needed):</strong>
+        Because the 1.15-acre grounds include an ornamental courtyard pond, stone terrace steps, and direct River Avon bank access at the foot of the garden, Airbnb's automated guest selector flags the listing with: <em>"The host indicated their place has features that aren’t kid-friendly. You can message the host for more details if you’re traveling with kids."</em> As Review #10 (Yolanda, Jan 2026) confirms, Paul happily hosts families with children once you message him on Airbnb.
+      </div>
+
+      <div class="btn-row">
+        <a class="btn" href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17" target="_blank" rel="noopener">Open #3 Batheaston House on Airbnb ($4,240) &rarr;</a>
+        <a class="btn secondary" href="https://www.google.com/maps?q=51.4057,-2.3196" target="_blank" rel="noopener">View Exact Location on Google Maps &nearr;</a>
+      </div>
+        </div>
+      </details>
+
+    </div>
+
+    <h2 id="comparison-table">Head-to-Head Comparison: The Final 3 Shortlist (#1 vs. #2 vs. #3)</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature / Criterion</th>
+            <th>
+              <a href="#prop-1" onclick="document.getElementById('deep-dive-1').open = true;">#1. The Old Rectory</a>
+              <span class="th-sub">Lower Writhlington, nr. Bath (BA3 3NF)</span>
+            </th>
+            <th>
+              <a href="#prop-2" onclick="document.getElementById('deep-dive-2').open = true;">#2. Spring House</a>
+              <span class="th-sub">Stockwell Farm, Birdlip / Cowley (GL4 8JZ)</span>
+            </th>
+            <th>
+              <a href="#prop-3" onclick="document.getElementById('deep-dive-3').open = true;">#3. Batheaston House</a>
+              <span class="th-sub">Batheaston, Bath (BA1 7RA)</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">3-Night Total<br /><span style="font-weight:400; font-size:12px;">(Jun 14–17, 2027)</span></td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <span class="winner-pill">Best Value</span><br />
+              <strong>$2,584 total ($861/nt)</strong><br />
+              Saves $401 vs. #2 and $1,656 vs. #3
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">Sweet-Spot Price</span><br />
+              <strong>$2,985 total ($995/nt)</strong><br />
+              Saves $1,255 vs. #3
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>$4,240 total ($1,413/nt)</strong><br />
+              Airbnb Luxe tier
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Architectural Pedigree</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>Grade II Listed</strong> Georgian Old Rectory (rebuilt 1821 on earlier 18th-c. core); symmetrical 3-bay Ashlar stone facade, floor-to-ceiling sash windows &amp; flagstones
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <strong>18th/19th-Century Stone Farmhouse-Manor</strong> on the historic Stockwell Farm estate (recorded in VCH Glos. Vol. 7 from the 13th century); 3-bay sash facade + older stone wing
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <span class="winner-pill">Highest Heritage Tier</span><br />
+              <strong>Grade II* Listed</strong> (top 5.8% in England); 16th-c. Tudor vaulted undercroft (Sir John Harington) + <strong>1712 Queen Anne</strong> golden Bath-stone mansion
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Bedrooms &amp; Beds</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>6 Bedrooms (7 Beds across 3 floors):</strong><br />
+              4 first-floor double/king rooms + 2 top-floor attic rooms (including twin room &amp; raised cabin bed)
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">Largest Beds</span><br />
+              <strong>6 Floral-Named Bedrooms (6 Beds):</strong><br />
+              2 Super-Kings (<em>Allium, Clematis</em>), 3 Kings (<em>Delphinium, Robinia, Iris</em>), 1 Single (<em>Peony</em>)
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>6 Historic-Named Bedrooms (6 Beds across 2 upper floors):</strong><br />
+              4 King/Super-King rooms, 1 Four-Poster double (<em>Blanchard</em>), 1 panelled double (<em>Walters</em>)
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Bathrooms &amp; En-Suites</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>2 Full Baths + 1 Ground-Floor WC (2.5 BA):</strong><br />
+              No en-suites; 2 very spacious renovated first-floor family bathrooms (each with both tub &amp; walk-in shower)
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">4 Full Baths + 2 WCs</span><br />
+              <strong>4 Full Bathrooms + 2 Cloakroom WCs:</strong><br />
+              2 private en-suite shower rooms (<em>Allium</em> &amp; ground-floor <em>Iris</em>) + 2 shared first-floor bathrooms
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <span class="winner-pill">4.5 Luxury Baths</span><br />
+              <strong>4 Full Bathrooms + 1 Cloakroom WC:</strong><br />
+              2 en-suites (<em>Harington, Trevenan</em>) + en-suite WC (<em>Blanchard</em>) + panelled fireplace bath + valley-view tub
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Living, Kitchen &amp; Dining Spaces</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              Drawing room with open fire &amp; <strong>Yamaha grand piano</strong> + cosy TV snug + flagstone Shaker kitchen-diner + vaulted stone garden room
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <strong>2 Fireplace Lounges</strong> (Drawing Room + Terracotta TV Snug) + <strong>2 Dining Rooms</strong> (skylit breakfast room + formal dining room, each seating 11) + <strong>AGA &amp; electric range kitchen</strong>
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>4 Stories:</strong> Blush Drawing Room + Olive-Panelled Morning Room + 12-seat Formal Dining Room + <strong>Secret Bookcase Kitchen</strong> + <strong>16th-c. Tudor AGA Kitchen</strong> + Butler's Pantry
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Grounds &amp; Outdoor Setting</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>1 Full Acre</strong> of private lawns, mature trees, valley &amp; hillside views, front dining terrace, Weber BBQ, and woodland stream footpath opposite
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">True Country Parkland</span><br />
+              <strong>Sweeping South-Facing Lawns &amp; Sheep Pastures</strong> on working Stockwell Farm estate, flagstone BBQ terrace, and <strong>private tennis court</strong>
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <span class="winner-pill">Formal Riverfront Estate</span><br />
+              <strong>1.15 Acres Running Down to the River Avon</strong>, classical stone orangery, walled fountain courtyard, topiary cones, and yew-hedged hot tub
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Standout Perks for Kids &amp; Family</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>Children's Treehouse with Swings &amp; Slide</strong>, Yamaha grand piano, raised attic cabin bed, and racing sticks in the woodland brook
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <strong>Private Tennis Court</strong>, grazing sheep &amp; working sheepdogs right outside the garden, vast flat lawns for games, and 2 separate lounges
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>16th-Century Vaulted Tudor Cellar Cinema Room</strong> (projector + 12 beanbags), <strong>secret sliding-bookcase kitchen</strong>, and <strong>cedar barrel hot tub</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Guest Reviews &amp; Track Record</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <span class="winner-pill">Most 5★ Airbnb Reviews</span><br />
+              <strong>★ 5.00 on Airbnb (37 of 37 are 5★)</strong><br />
+              Superhost Tom (leaves welcome provisions &amp; Neal's Yard toiletries)
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <strong>★ 5.00 on Airbnb (11 of 11 are 5★)</strong><br />
+              + <strong>★ 4.80 on Bolthole Retreats (18 verified reviews, 100% recommend)</strong> = 29 total reviews
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>★ 5.00 on Airbnb (18 of 18 are 5★)</strong><br />
+              Superhost Paul (mentioned by name in 15/18 reviews; personal tour &amp; homemade jam)
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Geography &amp; Cotswolds Position</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>Somerset / South of Bath Edge:</strong><br />
+              Quiet hamlet next to old village church; 7 mins from Babington House &amp; 12 mins from artisan Frome
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">Best Central Cotswolds Base</span><br />
+              <strong>Heart of the Central Cotswolds AONB:</strong><br />
+              Hilltop farm hamlet between Cheltenham &amp; Cirencester; walk to Cooper's Hill &amp; Green Dragon Inn
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>Southern Tip of Cotswolds AONB / Bath Edge:</strong><br />
+              Leafy riverside village on the eastern edge of Bath where the Cotswold hills meet the River Avon
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Drive to Iconic Cotswold Villages<br /><span style="font-weight:400; font-size:12px;">(Bourton, Lower Slaughter, Bibury)</span></td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>1 hr 15 mins – 1 hr 30 mins north</strong><br />
+              (40–45 mins to southern villages Castle Combe &amp; Lacock)
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">22–28 Mins!</span><br />
+              <strong>22 mins to Bibury</strong> &bull; <strong>25–28 mins to Bourton-on-the-Water &amp; Lower Slaughter</strong> &bull; <strong>30 mins to Stow &amp; Wildlife Park</strong>
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>50–55 mins to Bibury / Cirencester</strong> &bull; <strong>1 hr 10 mins – 1 hr 20 mins to Bourton &amp; Lower Slaughter</strong><br />
+              (20 mins to Castle Combe &amp; Lacock)
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Drive to Historic Bath</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>20–25 mins</strong> to central Bath (10 mins to southern edge)
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <strong>50–55 mins</strong> south to Bath (18 mins to Regency Cheltenham &amp; Roman Cirencester)
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <span class="winner-pill">10–15 Mins to Bath</span><br />
+              <strong>10–15 mins (3 miles)</strong> to central Bath (Roman Baths, Royal Crescent)
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Airport Drive<br /><span style="font-weight:400; font-size:12px;">(LHR Arrival / LGW Departure)</span></td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              ~2h 00m from LHR &bull; <strong>~2h 37m (131 mi) to LGW</strong>
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <span class="winner-pill">Fastest Airport Run</span><br />
+              ~1h 45m from LHR &bull; <strong>~2h 21m (123 mi) to LGW</strong>
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              ~1h 45m from LHR &bull; <strong>~2h 15m – 2h 30m (126 mi) to LGW</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Key Caveats to Weigh</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              &bull; 90 mins south of North Cotswolds villages<br />
+              &bull; 2 shared full bathrooms upstairs (no individual bedroom en-suites)
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              &bull; Weathered exterior window frames &amp; natural country lawn with rabbit diggings (interiors/baths newly renovated)<br />
+              &bull; Nearby A417 roadworks wrapping up Spring 2027<br />
+              &bull; Car required for all shops/dining
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              &bull; $1,255–$1,656 more expensive than #1 &amp; #2<br />
+              &bull; 70–80 mins south of North Cotswolds villages<br />
+              &bull; Separate annexe/gardener note in rules; quick host message needed for children toggle
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Bottom-Line Verdict</td>
+            <td data-prop="#1. The Old Rectory ($2,584)">
+              <strong>Pick #1</strong> if you want a warm, soulful Jane-Austen-style Georgian Rectory with a treehouse, grand piano, 37 flawless 5★ reviews, and the lowest price ($2,584), focusing your sightseeing around Bath, Babington, Wells, and Castle Combe.
+            </td>
+            <td data-prop="#2. Spring House ($2,985)">
+              <strong>Pick #2</strong> if your priority is exploring the <strong>heart of the Cotswolds</strong> (Bourton-on-the-Water, Lower Slaughter, Bibury, Cirencester all within 18–28 mins) from a huge 6-BR / 4-bath stone farmhouse-manor surrounded by sheep pastures and a private tennis court ($2,985).
+            </td>
+            <td data-prop="#3. Batheaston House ($4,240)">
+              <strong>Pick #3</strong> if you want a once-in-a-lifetime <strong>museum-grade 1712 Grade II* stately home</strong> with a Tudor cellar cinema, secret bookcase kitchen, hot tub, and formal riverfront gardens right outside Bath ($4,240).
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="tip-box">
