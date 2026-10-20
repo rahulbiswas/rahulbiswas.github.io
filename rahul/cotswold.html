@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cotswolds Guide &amp; Private Manor Houses — June 14–17, 2027</title>
+  <title>Cotswolds Guide &amp; 30 Private Manors — June 14–17, 2027</title>
   <style>
     :root {
       --bg: #faf7f2;
@@ -15,8 +15,9 @@
       --accent-dark: #5b3e1f;
       --green: #2c5e3b;
       --green-bg: #e7f3eb;
-      --amber: #8a5300;
-      --amber-bg: #fdf2dc;
+      --gold: #7a5200;
+      --gold-bg: #fff3c4;
+      --gold-border: #d4a72c;
       --border: #e5dec9;
     }
     * {
@@ -31,7 +32,7 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
     }
     header {
@@ -60,7 +61,7 @@
       margin: 0;
       color: #f3ece0;
       font-size: 16px;
-      max-width: 740px;
+      max-width: 760px;
     }
     .pill-bar {
       display: flex;
@@ -113,6 +114,34 @@
     .info-card li {
       margin-bottom: 6px;
     }
+    .top5-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .top5-card {
+      background: #fffdf8;
+      border: 2px solid var(--gold-border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(122, 82, 0, 0.09);
+    }
+    .top5-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      background: var(--stone);
+      height: 210px;
+    }
+    .top5-gallery img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+    .top5-content {
+      padding: 20px 24px;
+    }
     .manor-list {
       display: flex;
       flex-direction: column;
@@ -127,9 +156,18 @@
       overflow: hidden;
       box-shadow: 0 4px 14px rgba(36, 33, 29, 0.05);
     }
+    .manor-card.top5-highlight {
+      border: 2px solid var(--gold-border);
+      background: #fffdf8;
+      box-shadow: 0 6px 20px rgba(122, 82, 0, 0.09);
+    }
     @media (max-width: 720px) {
       .manor-card {
         grid-template-columns: 1fr;
+      }
+      .top5-gallery {
+        grid-template-columns: 1fr;
+        height: auto;
       }
     }
     .manor-img {
@@ -180,9 +218,19 @@
       background: var(--green-bg);
       color: var(--green);
     }
-    .badge.amber {
-      background: var(--amber-bg);
-      color: var(--amber);
+    .badge.gold {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+    }
+    .why-box {
+      background: var(--gold-bg);
+      color: #4f3500;
+      border-left: 3px solid var(--gold-border);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      margin-bottom: 10px;
     }
     .specs {
       font-size: 13.5px;
@@ -261,94 +309,653 @@
 <body>
   <div class="container">
     <header>
-      <div class="eyebrow">Summer 2027 &bull; England Leg &bull; Live Airbnb Quotes</div>
-      <h1>The Cotswolds &amp; Private Manor Houses</h1>
+      <div class="eyebrow">Summer 2027 &bull; England Leg &bull; Visual Curation</div>
+      <h1>The Cotswolds: Top 5 Most Beautiful &amp; Full 30-Manor Field</h1>
       <p>
-        All 5 historic manor houses below are <strong>confirmed available for Monday June 14 – Thursday June 17, 2027</strong>. Two fit right inside your <strong>$2,700 ($900/night)</strong> budget, and two more sit in the $3.1K–$3.8K range if you book on Airbnb.
+        After inspecting the exterior, garden, and interior photographs across all 30 available historic properties for <strong>Monday June 14 – Thursday June 17, 2027</strong>, the <strong>5 most visually stunning manors</strong> are highlighted first below, followed by the complete 30-property list.
       </p>
       <div class="pill-bar">
         <span class="pill">Dates: Mon Jun 14 – Thu Jun 17, 2027 (3 Nights)</span>
         <span class="pill">Guests: 2 Adults, 2 Children</span>
-        <span class="pill">Target Budget: $2,700 ($900/night)</span>
+        <span class="pill">Cap: &le; $1,500/night ($4,500 Total)</span>
       </div>
     </header>
 
-    <h2>1. What the Cotswolds Is &amp; Why It Looks Like a Storybook</h2>
+    <h2>1. How to Choose &amp; The Top 5 Most Beautiful</h2>
     <div class="intro-grid">
       <div class="info-card">
-        <h3>Honey-Gold Jurassic Stone</h3>
+        <h3>Filter 1: True Manor Architecture vs. Farm Conversions</h3>
         <p>
-          An 800-square-mile Area of Outstanding Natural Beauty 1.5 hours west of London. Everything sits on a vein of Jurassic oolitic limestone—every cottage, church, pub, and dry-stone wall is built from the same local stone that weathers to a warm honey-gold.
+          Many large Cotswolds listings look grand from the outside (or have big acreage) but have dated carpets or plain drywall inside. Only about 6 of the 30 have <strong>both</strong> a storybook honey-stone facade <em>and</em> magazine-level period interiors.
         </p>
       </div>
       <div class="info-card">
-        <h3>Frozen in Time by Wool</h3>
-        <p>
-          In the Middle Ages, sheep on these rolling hills ("wolds") produced Europe's finest wool, funding grand limestone manors and "wool churches." When the Industrial Revolution shifted north to coal country, the Cotswolds was bypassed—preserving its 16th- and 17th-century villages intact.
-        </p>
+        <h3>Filter 2: Pick Your Setting Archetype</h3>
+        <ul>
+          <li><strong>Sheep-Pasture Country Manor:</strong> #16 Spring House ($995/nt)</li>
+          <li><strong>Swans &amp; Mirror Mill Pond:</strong> #17 Grindstone Mill ($995/nt)</li>
+          <li><strong>Central Golden-Triangle Village:</strong> #22 Shipton ($1,149/nt)</li>
+          <li><strong>Bridgerton Stately Mansion:</strong> #29 Queen Anne ($1,413/nt)</li>
+          <li><strong>Hilltop Manor Above Medieval Village:</strong> #30 Stanton ($1,491/nt)</li>
+        </ul>
       </div>
       <div class="info-card">
         <h3>Highlights for the Four of You</h3>
         <ul>
-          <li><strong>Bourton-on-the-Water Model Village:</strong> A 1930s 1:9 scale replica of the village carved out of real Cotswold stone (with a miniature model village inside the model village).</li>
-          <li><strong>Lower &amp; Upper Slaughter:</strong> A quiet 1-mile footpath along the tiny River Eye with stone footbridges and zero tour buses.</li>
-          <li><strong>Cotswold Wildlife Park:</strong> Walk at eye level with giraffes and past rhinos on the lawns of a Victorian manor near Burford.</li>
+          <li><strong>Bourton-on-the-Water Model Village:</strong> 1930s 1:9 scale stone replica of the village.</li>
+          <li><strong>Lower &amp; Upper Slaughter:</strong> Quiet 1-mile footpath along the River Eye.</li>
+          <li><strong>Cotswold Wildlife Park:</strong> Eye-level giraffe walk on Victorian manor grounds near Burford.</li>
         </ul>
       </div>
     </div>
 
-    <h2>2. Live Airbnb Prices for Jun 14–17, 2027 (Sorted by Price)</h2>
-    <div class="manor-list">
+    <div class="top5-list">
+      <div class="top5-card">
+        <div class="top5-gallery">
+          <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/dbbed4d1-2542-4441-9da5-bfead15ab298.jpeg?im_w=720" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor) exterior" />
+          <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/169efa71-9180-4b97-bc1d-18483114c28c.jpeg?im_w=720" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor) interior 1" />
+          <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/259faa28-c48c-443d-8e81-6d19058506be.jpeg?im_w=720" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor) interior 2" />
+        </div>
+        <div class="top5-content">
+          <div class="manor-top">
+            <h3 class="manor-title">
+              <a href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                #16. Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor)
+              </a>
+            </h3>
+            <span class="badge gold">★ Top 5 Most Beautiful — Best Overall Under $1,000/nt</span>
+          </div>
+          <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (11) &bull; <strong>$2,985 total ($995/night)</strong></div>
+          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> Architectural Digest-level interiors (sage-green Georgian drawing room with tall sash windows + terracotta library snug with floor-to-ceiling bookshelves) inside a detached stone manor surrounded by grazing sheep.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
+            <a class="btn secondary" href="#prop-16">Jump to Entry #16 Below</a>
+          </div>
+        </div>
+      </div>
+      <div class="top5-card">
+        <div class="top5-gallery">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/6c012731-a76f-4297-9d62-475f5672cd6b.jpeg?im_w=720" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley exterior" />
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/80ea905b-3042-46fa-b97d-903bd5ca6610.jpeg?im_w=720" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley interior 1" />
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/30436eb3-3e31-40a2-b669-a4b7150d15ef.jpeg?im_w=720" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley interior 2" />
+        </div>
+        <div class="top5-content">
+          <div class="manor-top">
+            <h3 class="manor-title">
+              <a href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                #17. Grindstone Mill (Historic Cotswold Watermill) — Alderley
+              </a>
+            </h3>
+            <span class="badge gold">★ Top 5 Most Beautiful — Most Magical Water Setting</span>
+          </div>
+          <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 4.83 (72) &bull; <strong>$2,985 total ($995/night)</strong></div>
+          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> A multi-gabled honey-stone watermill manor sitting directly on the edge of a mirror-calm mill pond with swans, clipped boxwood hedges, and a sun-drenched shaker kitchen with an AGA.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
+            <a class="btn secondary" href="#prop-17">Jump to Entry #17 Below</a>
+          </div>
+        </div>
+      </div>
+      <div class="top5-card">
+        <div class="top5-gallery">
+          <img src="https://a0.muscache.com/im/pictures/c44978b3-bd42-4eb0-aa11-e4febf56b114.jpg?im_w=720" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood exterior" />
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46445950/original/81673c31-c531-4b94-8dd7-a84d30660a85.jpeg?im_w=720" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood interior 1" />
+          <img src="https://a0.muscache.com/im/pictures/miso/Hosting-46445950/original/e3ea6a61-2ba9-454f-b187-b9fd102fe445.jpeg?im_w=720" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood interior 2" />
+        </div>
+        <div class="top5-content">
+          <div class="manor-top">
+            <h3 class="manor-title">
+              <a href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                #22. 16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood
+              </a>
+            </h3>
+            <span class="badge gold">★ Top 5 Most Beautiful — Best Central Cotswolds Gem</span>
+          </div>
+          <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 2 baths &bull; ★ 5.0 (79) &bull; <strong>$3,446 total ($1,149/night)</strong></div>
+          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> Symmetrical 16th-century honey-stone facade with a formal clipped boxwood parterre path, moody forest-green beamed interiors, and dead-center location between Burford and Kingham.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,446) &rarr;</a>
+            <a class="btn secondary" href="#prop-22">Jump to Entry #22 Below</a>
+          </div>
+        </div>
+      </div>
+      <div class="top5-card">
+        <div class="top5-gallery">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/dbbc9074-6e32-4e88-b394-d5862c4b8aaf.jpeg?im_w=720" alt="Queen Anne Period Stately Home on the River — Batheaston exterior" />
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/5a825da5-92fc-4937-afc8-2963b0631611.jpeg?im_w=720" alt="Queen Anne Period Stately Home on the River — Batheaston interior 1" />
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/c1bbdc6e-b3d8-4503-ad0f-022978b1040c.jpeg?im_w=720" alt="Queen Anne Period Stately Home on the River — Batheaston interior 2" />
+        </div>
+        <div class="top5-content">
+          <div class="manor-top">
+            <h3 class="manor-title">
+              <a href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                #29. Queen Anne Period Stately Home on the River — Batheaston
+              </a>
+            </h3>
+            <span class="badge gold">★ Top 5 Most Beautiful — Grandest Stately Architecture</span>
+          </div>
+          <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (18) &bull; <strong>$4,240 total ($1,413/night)</strong></div>
+          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> Looks straight out of Bridgerton: a symmetrical 3-story golden-stone Queen Anne mansion framed by white hydrangeas, formal yew topiary gardens, and a bay-tree flagstone terrace above the river.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,240) &rarr;</a>
+            <a class="btn secondary" href="#prop-29">Jump to Entry #29 Below</a>
+          </div>
+        </div>
+      </div>
+      <div class="top5-card">
+        <div class="top5-gallery">
+          <img src="https://a0.muscache.com/im/pictures/637a4c4f-3eb8-406b-b81b-aa02cd19eaa5.jpg?im_w=720" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton exterior" />
+          <img src="https://a0.muscache.com/im/pictures/68aabb66-4a0e-44b1-a4ac-e511dbf0ba5b.jpg?im_w=720" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton interior 1" />
+          <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-7662096/original/34fe2d95-c57a-46be-93d9-b12de57656cc.jpg?im_w=720" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton interior 2" />
+        </div>
+        <div class="top5-content">
+          <div class="manor-top">
+            <h3 class="manor-title">
+              <a href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                #30. The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton
+              </a>
+            </h3>
+            <span class="badge gold">★ Top 5 Most Beautiful — Most Dramatic Hilltop Manor</span>
+          </div>
+          <div class="specs">Entire Historic Property &bull; 8 bedrooms · 12 beds · 5 baths &bull; ★ 4.94 (107) &bull; <strong>$4,473 total ($1,491/night)</strong></div>
+          <p class="desc" style="margin-bottom:12px;"><strong>Why it stands out visually:</strong> An 8-bedroom Grade II-listed Arts & Crafts manor perched high on the hillside above Stanton (the best-preserved 16th-century village in the Cotswolds) with 30-mile views across the valley.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,473) &rarr;</a>
+            <a class="btn secondary" href="#prop-30">Jump to Entry #30 Below</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <!-- 1. Manor Farm Grafton -->
-      <div class="manor-card">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-41771902/original/78078ced-aaa2-47e1-af50-eca0b1e7ed4f.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="Manor Farm Grafton" />
+    <h2>2. All 30 Available Manors &amp; Historic Homes (&le; $1,500/Night, Sorted by Price)</h2>
+    <div class="manor-list">
+      <div class="manor-card" id="prop-1">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-30884057/original/1adf4f12-f4d7-4fc7-8414-a08519c509c3.jpeg" alt="Orchard House — Chipping Campden" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/30884057?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #1. Orchard House — Chipping Campden
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($738/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 4 baths &bull; ★ 4.89 (28)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,214 for 3 nights ($738/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            
+            <p class="desc">Cotswold stone house with a wood-burning fireplace, sun room, and views of Dover's Hill in historic Chipping Campden.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/30884057?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,214) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-2">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-16199172/original/a2944cf6-fd3d-40dc-a363-baa12060ed4f.jpeg" alt="Groves Barn on a 120-Acre Estate — Chipping Campden" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/16199172?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #2. Groves Barn on a 120-Acre Estate — Chipping Campden
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($772/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 4 baths &bull; ★ 5.0 (106)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,316 for 3 nights ($772/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Exclusive-use Cotswold stone residence set on a 120-acre private country estate with sweeping hill views and a private courtyard.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/16199172?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,316) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-3">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/9263b758-bc1e-40ed-ab20-92160f9caf1b.jpg" alt="17th-Century Georgian Stone House — Tetbury" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/31684188?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #3. 17th-Century Georgian Stone House — Tetbury
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($773/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 3.5 baths &bull; ★ 4.99 (140)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,318 for 3 nights ($773/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Built in the 1600s in classic Georgian stone right in the heart of Tetbury (minutes from Highgrove Gardens and Westonbirt Arboretum), with a walled garden and log burner.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/31684188?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,318) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-4">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1404561190383925498/original/dfee45b2-b229-4670-b76a-7293630b8633.jpeg" alt="Historic 1700s Cotswold Stone House — Perrotts Brook (near Cirencester)" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1404561190383925498?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #4. Historic 1700s Cotswold Stone House — Perrotts Brook (near Cirencester)
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($787/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (19)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,362 for 3 nights ($787/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">18th-century stone country house in the Churn Valley with 5 bedrooms, 4 bathrooms, and direct access to river and countryside walks.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1404561190383925498?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,362) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-5">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-677369915168382257/original/ca86d9ba-74c4-484b-851a-399d6841f078.jpeg" alt="The Secret Hideaway — Moreton-in-Marsh High Street" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/677369915168382257?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #5. The Secret Hideaway — Moreton-in-Marsh High Street
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($797/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 3 baths &bull; ★ 4.9 (97)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,390 for 3 nights ($797/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            
+            <p class="desc">Tucked behind a private gate directly off Moreton-in-Marsh's high street (with direct Paddington train service). Features designer living spaces and an enormous walled orchard garden.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/677369915168382257?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,390) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-6">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1379584533656658694/original/4512b8a9-90e7-4481-9e9b-42149f44e399.jpeg" alt="Manor Farmhouse (1750s) — Holt (Southern Cotswolds / near Bath)" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1379584533656658694?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #6. Manor Farmhouse (1750s) — Holt (Southern Cotswolds / near Bath)
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($819/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 3.5 baths &bull; ★ 4.99 (74)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,457 for 3 nights ($819/night)
+              <span class="price-sub">Free cancellation</span>
+            </div>
+            
+            <p class="desc">Restored 1750s stone manor farmhouse sleeping 10 across 5 bedrooms, complete with a private hot tub and enclosed stone-walled garden.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1379584533656658694?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,457) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-7">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-41771902/original/78078ced-aaa2-47e1-af50-eca0b1e7ed4f.jpeg" alt="Manor Farm (17th-Century Grade II Listed) — Grafton" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
                 <a href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  1. Manor Farm — Grafton (Foot of Bredon Hill)
+                  #7. Manor Farm (17th-Century Grade II Listed) — Grafton
                 </a>
               </h3>
-              <span class="badge green">Under Budget ($845/night)</span>
+              <span class="badge green">Under $900/nt ($843/night)</span>
             </div>
-            <div class="specs">Entire 17th-Century Grade II Manor Farmhouse &bull; 5 Bedrooms &bull; 4 Bathrooms &bull; ★ 4.98 (122 reviews)</div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 5 king beds · 4.5 baths &bull; ★ 4.98 (122)</div>
             <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $2,534 for 3 nights ($845/night)
-              <span class="price-sub">$0 due today on Airbnb &bull; Free cancellation before May 15, 2027</span>
+              Airbnb Live Total (Jun 14–17): $2,529 for 3 nights ($843/night)
+              <span class="price-sub">Free cancellation</span>
             </div>
-            <p class="desc">
-              Tucked into a tiny, peaceful hamlet with panoramic views across the Cotswold hills. Combines original 17th-century stonework, timber beams, multiple wood-burning stoves, and an AGA kitchen with underfloor heating, enclosed gardens, and a private hot tub.
-            </p>
+            
+            <p class="desc">17th-century Grade II listed manor farmhouse with 5 king bedrooms, original stonework, timber beams, 3 wood-burning stoves, an AGA kitchen, and a private hot tub.</p>
           </div>
           <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,534) &rarr;</a>
+            <a class="btn" href="https://www.airbnb.com/rooms/41771902?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,529) &rarr;</a>
+            
           </div>
         </div>
       </div>
-
-      <!-- 2. Sedgeberrow Manor House -->
-      <div class="manor-card">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-883078279051755742/original/21ad933c-f4e9-4fa1-8d0c-1573e2614f62.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Manor House Sedgeberrow" />
+      <div class="manor-card" id="prop-8">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-548230397221914427/original/cba960c7-2c60-46d9-809d-59296379b43e.jpeg" alt="Yew Tree House (16th-Century) — Longborough (near Stow-on-the-Wold)" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/548230397221914427?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #8. Yew Tree House (16th-Century) — Longborough (near Stow-on-the-Wold)
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($851/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 2 baths &bull; ★ 4.98 (47)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,553 for 3 nights ($851/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Dating back to the 16th century on the peaceful high street of Longborough, steps from the village pub and country opera house, with an inglenook fireplace and vaulted kitchen-diner.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/548230397221914427?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,553) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-9">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-51778720/original/e93956c8-910a-4ed2-b8ca-b03096a6826d.jpeg" alt="18th-Century Stone Farmhouse on a 1.5-Acre Private Estate — Chipping Campden" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/51778720?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #9. 18th-Century Stone Farmhouse on a 1.5-Acre Private Estate — Chipping Campden
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($876/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 7 beds · 3 baths &bull; ★ 4.91 (200)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,629 for 3 nights ($876/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            
+            <p class="desc">Classic 18th-century 5-bedroom Cotswold farmhouse set on 1.5 acres of private grounds outside Chipping Campden with wood-burning stoves.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/51778720?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,629) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-10">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-45391847/original/eef2e7c9-eb2c-4ed7-a84a-d54f7c3b8121.jpeg" alt="Darly House (Grade II Listed) — Bourton-on-the-Water" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/45391847?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #10. Darly House (Grade II Listed) — Bourton-on-the-Water
+                </a>
+              </h3>
+              <span class="badge green">Under $900/nt ($879/night)</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 1 bath &bull; ★ 4.91 (140)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,636 for 3 nights ($879/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Grade II listed period stone home with a log burner, dining conservatory, and private parking tucked away right in the heart of Bourton-on-the-Water.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/45391847?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,636) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-11">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-789664859913771636/original/bc9f9ac3-4d3a-45ce-8219-e88250cf8ac2.jpeg" alt="18th-Century Stone Residence with Wood-Fired Hot Tub — Stow-on-the-Wold" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/789664859913771636?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #11. 18th-Century Stone Residence with Wood-Fired Hot Tub — Stow-on-the-Wold
+                </a>
+              </h3>
+              <span class="badge">$935/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 3 baths &bull; ★ 4.96 (83)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,805 for 3 nights ($935/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Restored 18th-century Cotswold stone home in Stow-on-the-Wold featuring a wood-fired hot tub, two wood-burning stoves, and underfloor heating.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/789664859913771636?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,805) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-12">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-52543201/original/3f040e70-ff9c-4858-8b1a-10148a155daf.jpeg" alt="Laurel Tree House (6-Bedroom Country Home) — Guiting Power" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/52543201?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #12. Laurel Tree House (6-Bedroom Country Home) — Guiting Power
+                </a>
+              </h3>
+              <span class="badge">$968/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 2 baths &bull; ★ 4.82 (67)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,905 for 3 nights ($968/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            
+            <p class="desc">Magazine-featured 6-bedroom Cotswold stone country house set in extensive private grounds in the quintessential village of Guiting Power.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/52543201?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,905) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-13">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MjM1MDIyMTM=/original/6130e860-5a6e-4280-bdf0-24fc73099c73.jpeg" alt="16th-Century Cotswolds Farmhouse on 200 Acres — Gloucestershire" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/23502213?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #13. 16th-Century Cotswolds Farmhouse on 200 Acres — Gloucestershire
+                </a>
+              </h3>
+              <span class="badge">$972/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 9 beds · 4 baths &bull; ★ 4.91 (233)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,915 for 3 nights ($972/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Authentic 16th-century 6-bedroom stone farmhouse set across 200 acres of private Cotswold farmland.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/23502213?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,915) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-14">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/55c3fc7e-6919-4f30-bb77-81f3b8920034.jpg" alt="Grade II Listed Georgian Period House — Tewkesbury" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/52486654?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #14. Grade II Listed Georgian Period House — Tewkesbury
+                </a>
+              </h3>
+              <span class="badge">$973/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 6 baths &bull; ★ 5.0 (197)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,919 for 3 nights ($973/night)
+              <span class="price-sub">Free cancellation</span>
+            </div>
+            
+            <p class="desc">5-bedroom, 6-bathroom Grade II listed Georgian residence featuring river views, open fireplaces, and a private jacuzzi.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/52486654?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,919) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-15">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-656359844342700140/original/9537bec2-df41-416e-a737-d87683142b4a.jpeg" alt="Stow House (18th-Century Residence) — Stow-on-the-Wold" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/656359844342700140?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #15. Stow House (18th-Century Residence) — Stow-on-the-Wold
+                </a>
+              </h3>
+              <span class="badge">$995/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 5 beds · 4 baths &bull; ★ 4.8 (40)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Restored 18th-century 5-bedroom residence in Stow-on-the-Wold with a private walled garden, ornamental pond, and wood-burning stove.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/656359844342700140?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card top5-highlight" id="prop-16">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/1c10273f-b726-46f6-9e3d-869c1daafb1d.jpeg" alt="Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor)" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #16. Spring House (6-Bedroom Country Manor) — Birdlip (near Cowley Manor)
+                </a>
+              </h3>
+              <span class="badge gold">★ Top 5 Most Beautiful · $995/nt</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (11)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            <div class="why-box"><strong>★ Top 5 Most Beautiful — Best Overall Under $1,000/nt:</strong> Architectural Digest-level interiors (sage-green Georgian drawing room with tall sash windows + terracotta library snug with floor-to-ceiling bookshelves) inside a detached stone manor surrounded by grazing sheep.</div>
+            <p class="desc">6-bedroom country manor house with sweeping parkland views, open fireplaces, and private gardens near Cowley.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1400653272576793320?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card top5-highlight" id="prop-17">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-43138159/original/6c012731-a76f-4297-9d62-475f5672cd6b.jpeg" alt="Grindstone Mill (Historic Cotswold Watermill) — Alderley" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #17. Grindstone Mill (Historic Cotswold Watermill) — Alderley
+                </a>
+              </h3>
+              <span class="badge gold">★ Top 5 Most Beautiful · $995/nt</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 4.83 (72)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
+            </div>
+            <div class="why-box"><strong>★ Top 5 Most Beautiful — Most Magical Water Setting:</strong> A multi-gabled honey-stone watermill manor sitting directly on the edge of a mirror-calm mill pond with swans, clipped boxwood hedges, and a sun-drenched shaker kitchen with an AGA.</div>
+            <p class="desc">Historic 6-bedroom Cotswold stone watermill set directly over the mill stream in the quiet village of Alderley.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/43138159?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-18">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1644794769389421601/original/bd1f4fc9-cff4-48d3-92ab-dc44584316aa.jpeg" alt="Mount Pleasant (Grade II Listed Residence) — Stow-on-the-Wold" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1644794769389421601?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #18. Mount Pleasant (Grade II Listed Residence) — Stow-on-the-Wold
+                </a>
+              </h3>
+              <span class="badge">$995/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 2 baths &bull; ★ 5.0 (17)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $2,985 for 3 nights ($995/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Exquisitely restored Grade II listed residence in the center of Stow-on-the-Wold with two private gardens, a fireplace, and private parking.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1644794769389421601?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($2,985) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-19">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-883078279051755742/original/21ad933c-f4e9-4fa1-8d0c-1573e2614f62.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Manor House (c. 1572) — Sedgeberrow (near Broadway)" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
                 <a href="https://www.airbnb.com/rooms/883078279051755742?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  2. The Manor House — Sedgeberrow (near Broadway)
+                  #19. The Manor House (c. 1572) — Sedgeberrow (near Broadway)
                 </a>
               </h3>
-              <span class="badge green">Under Budget Direct (~$843/night)</span>
+              <span class="badge">$1,046/night</span>
             </div>
-            <div class="specs">Entire 1572 Manor &bull; 5 Bedrooms &bull; 5 Bathrooms &bull; ★ 4.70 (20 reviews)</div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 5 beds · 5 baths &bull; ★ 4.70 (20)</div>
             <div class="price-line">
               Airbnb Live Total (Jun 14–17): $3,138 for 3 nights ($1,046/night)
-              <span class="price-sub">Direct via StayCotswold: £1,945 (~$2,530 total / ~$843/night — saves ~$608 in Airbnb markup)</span>
+              <span class="price-sub">Direct via StayCotswold: £1,945 (~$2,530 total / ~$843/night)</span>
             </div>
-            <p class="desc">
-              Dates back to 1572 (on a Domesday Book site) right beside a medieval village church and 10 minutes from Broadway, one of the grandest high streets in the Cotswolds. Features massive inglenook fireplaces, exposed honey-stone walls, heavy oak beams, a bright glass orangery, expansive private lawns, and an outdoor hot tub.
-            </p>
+            
+            <p class="desc">Dates back to 1572 on a Domesday Book site beside a medieval church, 10 minutes from Broadway. Inglenook fireplaces, exposed honey-stone walls, glass orangery, and outdoor hot tub.</p>
           </div>
           <div class="btn-row">
             <a class="btn" href="https://www.airbnb.com/rooms/883078279051755742?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,138) &rarr;</a>
@@ -356,91 +963,292 @@
           </div>
         </div>
       </div>
-
-      <!-- 3. The Court House / Chocolate Box Manor -->
-      <div class="manor-card">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-650502655470642363/original/92af8439-4511-46ff-92d6-0cd7f3cb084f.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Court House Manor" />
+      <div class="manor-card" id="prop-20">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3ODczNTMzNjAyNDIzNTc1OA%3D%3D/original/bb38ded9-162f-4402-97b2-a8cb60ecb34f.jpeg" alt="17th-Century 6-Bedroom Cotswold Farmhouse — Brokenborough (near Tetbury)" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1178735336024235758?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #20. 17th-Century 6-Bedroom Cotswold Farmhouse — Brokenborough (near Tetbury)
+                </a>
+              </h3>
+              <span class="badge">$1,134/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 8 beds · 4.5 baths &bull; ★ 4.92 (36)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,402 for 3 nights ($1,134/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">5-star rated 17th-century 6-bedroom stone farmhouse near Tetbury and Highgrove, complete with a private outdoor hot tub.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1178735336024235758?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,402) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-21">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1784907894808934409/original/37349908-9cfc-4a0e-bef1-834d167553ae.jpeg" alt="18th-Century Cotswolds Home with Pool & Walled Garden — Wyck Rissington" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1784907894808934409?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #21. 18th-Century Cotswolds Home with Pool & Walled Garden — Wyck Rissington
+                </a>
+              </h3>
+              <span class="badge">$1,136/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 4 beds · 2 baths &bull; ★ New</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,408 for 3 nights ($1,136/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Super-central 18th-century stone residence right between Bourton-on-the-Water and Lower Slaughter, featuring an outdoor swimming pool, inglenook fireplace, and walled garden.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1784907894808934409?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,408) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card top5-highlight" id="prop-22">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/c44978b3-bd42-4eb0-aa11-e4febf56b114.jpg" alt="16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #22. 16th-Century Grade II Listed Cotswold House — Shipton-under-Wychwood
+                </a>
+              </h3>
+              <span class="badge gold">★ Top 5 Most Beautiful · $1,149/nt</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 4 bedrooms · 5 beds · 2 baths &bull; ★ 5.0 (79)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,446 for 3 nights ($1,149/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            <div class="why-box"><strong>★ Top 5 Most Beautiful — Best Central Cotswolds Gem:</strong> Symmetrical 16th-century honey-stone facade with a formal clipped boxwood parterre path, moody forest-green beamed interiors, and dead-center location between Burford and Kingham.</div>
+            <p class="desc">Located between Burford and Kingham, featuring 16th-century exposed stonework, ancient beams, two wood-burning fireplaces, an AGA range, and front and back gardens.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/46445950?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,446) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-23">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1022779575980202433/original/5251f9ff-d151-4ad3-8fe1-b53b57fab918.jpeg" alt="Ewen Mill (18th-Century 6-Bedroom Riverside Mill on 17 Acres) — Cirencester" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1022779575980202433?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #23. Ewen Mill (18th-Century 6-Bedroom Riverside Mill on 17 Acres) — Cirencester
+                </a>
+              </h3>
+              <span class="badge">$1,162/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 4.82 (65)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,486 for 3 nights ($1,162/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Historic 18th-century 6-bedroom stone mill house set on 17 acres of private riverside grounds along the infant River Thames.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1022779575980202433?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,486) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-24">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-838927043691309267/original/6db6bbb2-7c5f-4809-8384-ed5dd3555a6e.jpeg" alt="Grade II Listed 5-Bedroom Farmhouse on 2 Acres — Burford" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/838927043691309267?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #24. Grade II Listed 5-Bedroom Farmhouse on 2 Acres — Burford
+                </a>
+              </h3>
+              <span class="badge">$1,237/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 5 bedrooms · 6 beds · 3.5 baths &bull; ★ 5.0 (27)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,710 for 3 nights ($1,237/night)
+              <span class="price-sub">Free cancellation</span>
+            </div>
+            
+            <p class="desc">Grade II listed Cotswold stone farmhouse just outside Burford with a 2-acre private garden, exposed beams, and log fires.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/838927043691309267?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,710) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-25">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ4NzU3MjQwMzE2NjgxMzYwMA==/original/c5820bf5-6eb7-4eda-8d28-9fa2a9702621.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="Stained-Glass Country Estate Home — West Oxfordshire" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/1487572403166813600?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #25. Stained-Glass Country Estate Home — West Oxfordshire
+                </a>
+              </h3>
+              <span class="badge">$1,246/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; All en-suite bedrooms · Double-height great hall &bull; ★ 4.98 (58)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,739 for 3 nights ($1,246/night)
+              <span class="price-sub">Pay $0 today · Free cancellation before May 15, 2027</span>
+            </div>
+            
+            <p class="desc">Set in peaceful West Oxfordshire countryside near Estelle Manor and Blenheim Palace, with original stained-glass windows, a double-height beamed hall, and all en-suite bedrooms.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/1487572403166813600?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,739) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-26">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/5aaccdfb-82ef-41d4-898f-73c7144cdb46.jpg" alt="Historic 6-Bedroom Royal Hunting Lodge — Langley (near Winchcombe)" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/45602460?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #26. Historic 6-Bedroom Royal Hunting Lodge — Langley (near Winchcombe)
+                </a>
+              </h3>
+              <span class="badge">$1,276/night</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 5.5 baths &bull; ★ 4.98 (60)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $3,827 for 3 nights ($1,276/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            
+            <p class="desc">Former Tudor royal hunting lodge (linked to Henry VIII) set high in the hills near Winchcombe with 6 bedrooms, 5.5 baths, panoramic views, and a private sauna.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/45602460?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,827) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="manor-card" id="prop-27">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-650502655470642363/original/92af8439-4511-46ff-92d6-0cd7f3cb084f.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="The Court House ("Chocolate Box Manor") — France Lynch" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
                 <a href="https://www.airbnb.com/rooms/650502655470642363?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  3. The Court House ("Chocolate Box Manor") — France Lynch
+                  #27. The Court House ("Chocolate Box Manor") — France Lynch
                 </a>
               </h3>
-              <span class="badge amber">+$1,141 Over Budget ($1,280/night)</span>
+              <span class="badge">$1,280/night</span>
             </div>
-            <div class="specs">Entire Jacobean Grade II Manor on 3 Acres &bull; 6 Bedrooms &bull; 6 Bathrooms &bull; ★ 4.90 (59 reviews)</div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 11 beds · 6 baths &bull; ★ 4.90 (59)</div>
             <div class="price-line">
               Airbnb Live Total (Jun 14–17): $3,841 for 3 nights ($1,280/night)
-              <span class="price-sub">$0 due today on Airbnb &bull; Free cancellation before May 15, 2027</span>
+              <span class="price-sub">Pay $0 today · Free cancellation before May 15, 2027</span>
             </div>
-            <p class="desc">
-              A 17th-century Jacobean stone manor set on 3 acres of private grounds in the Golden Valley (South Cotswolds). Features mullioned stone windows, solid oak beams, a full-size vintage slate-bed pool table (great for Rohan), and a 7-seater hot tub overlooking the valley.
-            </p>
+            
+            <p class="desc">17th-century Jacobean Grade II listed stone manor set on 3 private acres in the Golden Valley, with mullioned windows, oak beams, a vintage pool table, and a 7-seater hot tub.</p>
           </div>
           <div class="btn-row">
             <a class="btn" href="https://www.airbnb.com/rooms/650502655470642363?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($3,841) &rarr;</a>
+            
           </div>
         </div>
       </div>
-
-      <!-- 4. Buscot Manor -->
-      <div class="manor-card">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/40162a54-c4f2-4d95-8249-fbdadb6cae88.jpg?im_w=720&width=720&quality=70&auto=webp" alt="Buscot Manor" />
+      <div class="manor-card" id="prop-28">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-1262344370951090578/original/6a8bcc5c-91b3-4bd8-b83a-bd0ea42f63b0.jpeg" alt="400-Year-Old 6-Bedroom Cotswold Stone Country House — Charlbury" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1927155?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  4. Buscot Manor — Buscot (National Trust Village on the Thames)
+                <a href="https://www.airbnb.com/rooms/1262344370951090578?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #28. 400-Year-Old 6-Bedroom Cotswold Stone Country House — Charlbury
                 </a>
               </h3>
-              <span class="badge">Grand Estate ($1,895/night)</span>
+              <span class="badge">$1,387/night</span>
             </div>
-            <div class="specs">Entire 1692 Queen Anne Manor &bull; ★ 4.92 (86 reviews)</div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 7 beds · 4 baths &bull; ★ 5.0 (25)</div>
             <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $5,685 for 3 nights ($1,895/night)
-              <span class="price-sub">Available for Jun 14–17, 2027 on Airbnb</span>
+              Airbnb Live Total (Jun 14–17): $4,162 for 3 nights ($1,387/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
             </div>
-            <p class="desc">
-              Grand 1692 Queen Anne architecture with crystal chandeliers, four-poster bedrooms, a private walled garden, and expansive lawns right on the River Thames in a National Trust-preserved stone village (10 minutes from Kelmscott Manor and Burford).
-            </p>
+            
+            <p class="desc">Grand 400-year-old 6-bedroom stone house in Charlbury (direct train from Paddington, 10 mins from Daylesford), with wood fires, a 12-seat dining room, and 4 roll-top bath bathrooms.</p>
           </div>
           <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1927155?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($5,685) &rarr;</a>
+            <a class="btn" href="https://www.airbnb.com/rooms/1262344370951090578?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,162) &rarr;</a>
+            
           </div>
         </div>
       </div>
-
-      <!-- 5. Mollington Manor -->
-      <div class="manor-card">
-        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1526230843613002219/original/9c80be4c-32d9-4167-9ec5-125f245efd37.jpeg?im_w=720&width=720&quality=70&auto=webp" alt="Mollington Manor" />
+      <div class="manor-card top5-highlight" id="prop-29">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ1MTQ0NjkyMzcxOTc5MTI1Mg==/original/dbbc9074-6e32-4e88-b394-d5862c4b8aaf.jpeg" alt="Queen Anne Period Stately Home on the River — Batheaston" loading="lazy" />
         <div class="manor-body">
           <div>
             <div class="manor-top">
               <h3 class="manor-title">
-                <a href="https://www.airbnb.com/rooms/1526230843613002219?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
-                  5. Mollington Manor — Mollington (North Oxfordshire Cotswolds)
+                <a href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #29. Queen Anne Period Stately Home on the River — Batheaston
                 </a>
               </h3>
-              <span class="badge">Grand Estate ($2,289/night)</span>
+              <span class="badge gold">★ Top 5 Most Beautiful · $1,413/nt</span>
             </div>
-            <div class="specs">Entire Stone Manor &bull; 6 Bedrooms &bull; 4.5 Bathrooms &bull; ★ 5.0 (6 reviews)</div>
+            <div class="specs">Entire Historic Property &bull; 6 bedrooms · 6 beds · 4 baths &bull; ★ 5.0 (18)</div>
             <div class="price-line">
-              Airbnb Live Total (Jun 14–17): $6,868 for 3 nights ($2,289/night)
-              <span class="price-sub">Available for Jun 14–17, 2027 on Airbnb</span>
+              Airbnb Live Total (Jun 14–17): $4,240 for 3 nights ($1,413/night)
+              <span class="price-sub">Confirmed available for Jun 14–17, 2027 on Airbnb</span>
             </div>
-            <p class="desc">
-              An authentic oak-panelled Cotswold stone manor house in a quiet hilltop village. Includes three separate living rooms (with a full oak-panelled drawing room and log fire), a classic English AGA kitchen, a contemporary glass-walled dining room opening onto a walled terrace, and a private hot tub.
-            </p>
+            <div class="why-box"><strong>★ Top 5 Most Beautiful — Grandest Stately Architecture:</strong> Looks straight out of Bridgerton: a symmetrical 3-story golden-stone Queen Anne mansion framed by white hydrangeas, formal yew topiary gardens, and a bay-tree flagstone terrace above the river.</div>
+            <p class="desc">6-bedroom riverfront Queen Anne period stately home on the southern edge of the Cotswolds with classical architecture, landscaped gardens, and a hot tub.</p>
           </div>
           <div class="btn-row">
-            <a class="btn" href="https://www.airbnb.com/rooms/1526230843613002219?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($6,868) &rarr;</a>
+            <a class="btn" href="https://www.airbnb.com/rooms/1451446923719791252?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,240) &rarr;</a>
+            
           </div>
         </div>
       </div>
-
+      <div class="manor-card top5-highlight" id="prop-30">
+        <img class="manor-img" src="https://a0.muscache.com/im/pictures/637a4c4f-3eb8-406b-b81b-aa02cd19eaa5.jpg" alt="The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">
+                  #30. The Stanton Guildhouse (Grade II Listed 8-Bedroom Manor) — Stanton
+                </a>
+              </h3>
+              <span class="badge gold">★ Top 5 Most Beautiful · $1,491/nt</span>
+            </div>
+            <div class="specs">Entire Historic Property &bull; 8 bedrooms · 12 beds · 5 baths &bull; ★ 4.94 (107)</div>
+            <div class="price-line">
+              Airbnb Live Total (Jun 14–17): $4,473 for 3 nights ($1,491/night)
+              <span class="price-sub">Pay $0 today · Free cancellation</span>
+            </div>
+            <div class="why-box"><strong>★ Top 5 Most Beautiful — Most Dramatic Hilltop Manor:</strong> An 8-bedroom Grade II-listed Arts & Crafts manor perched high on the hillside above Stanton (the best-preserved 16th-century village in the Cotswolds) with 30-mile views across the valley.</div>
+            <p class="desc">Iconic Grade II listed stone manor house perched on the hillside above Stanton (the best-preserved 16th-century village in the North Cotswolds), with 8 bedrooms and sweeping views.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.airbnb.com/rooms/7662096?check_in=2027-06-14&check_out=2027-06-17&adults=2&children=2" target="_blank" rel="noopener">Open on Airbnb ($4,473) &rarr;</a>
+            
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="tip-box">
