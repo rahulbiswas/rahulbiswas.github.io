@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer 2027 — Europe &amp; Morocco Family Trip Hub (June 12 – July 7, 2027)</title>
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --card: #ffffff;
+      --stone: #efe9de;
+      --ink: #24211d;
+      --muted: #615b52;
+      --accent: #7c5832;
+      --accent-dark: #5b3e1f;
+      --green: #2c5e3b;
+      --green-bg: #e7f3eb;
+      --gold: #7a5200;
+      --gold-bg: #fff3c4;
+      --gold-border: #d4a72c;
+      --border: #e5dec9;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 40px 24px 72px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #2d261e 0%, #524231 100%);
+      color: #fff;
+      padding: 36px 40px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px rgba(36, 33, 29, 0.14);
+    }
+    header .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: #e6d3b3;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    header p {
+      margin: 0;
+      color: #f3ece0;
+      font-size: 16px;
+      max-width: 780px;
+    }
+    .pill-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .pill {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 23px;
+      margin: 34px 0 16px;
+      color: var(--ink);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+    .guide-card {
+      background: #fffdf8;
+      border: 2px solid var(--gold-border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(122, 82, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .guide-img {
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+      background: var(--stone);
+      display: block;
+    }
+    .guide-body {
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+    .guide-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .guide-title {
+      margin: 0 0 8px;
+      font-size: 21px;
+      color: var(--ink);
+    }
+    .guide-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .guide-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .guide-desc {
+      margin: 0 0 14px;
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .guide-meta {
+      background: #f8f5ee;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 13.5px;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.15s ease;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+    .itin-wrap {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow-x: auto;
+      box-shadow: 0 4px 14px rgba(36, 33, 29, 0.05);
+    }
+    .itin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 680px;
+    }
+    .itin-table th,
+    .itin-table td {
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    .itin-table thead th {
+      background: var(--stone);
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 13.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .itin-table tbody tr:nth-child(even) {
+      background: #fcfaf5;
+    }
+    .itin-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .status-pill {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .status-pill.booked {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+    .status-pill.guide {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .summary-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+    .summary-card .label {
+      font-size: 12.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+    .summary-card .val {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+    @media (max-width: 720px) {
+      html, body {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        padding: 16px 12px 48px;
+      }
+      header {
+        padding: 22px 18px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      header h1 {
+        font-size: 22px;
+        line-height: 1.28;
+      }
+      header p {
+        font-size: 14.5px;
+      }
+      .pill-bar {
+        gap: 6px;
+        margin-top: 14px;
+      }
+      .pill {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+      h2 {
+        font-size: 19px;
+        margin: 26px 0 12px;
+      }
+      .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .guide-body {
+        padding: 16px;
+      }
+      .btn {
+        width: 100%;
+      }
+      .itin-wrap {
+        overflow-x: visible;
+      }
+      .itin-table {
+        min-width: 0;
+        display: block;
+      }
+      .itin-table thead {
+        display: none;
+      }
+      .itin-table tbody,
+      .itin-table tr,
+      .itin-table td {
+        display: block;
+        width: 100%;
+      }
+      .itin-table tr {
+        border-bottom: 2px solid var(--border);
+        padding: 8px 0;
+      }
+      .itin-table td {
+        border-bottom: none;
+        padding: 5px 14px;
+      }
+      .itin-table td:first-child {
+        font-weight: 700;
+        color: var(--accent-dark);
+        background: #f6f1e6;
+        padding: 8px 14px;
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="eyebrow">Summer 2027 &bull; Family Trip Hub &bull; June 12 – July 7, 2027</div>
+      <h1>Summer 2027: England, Morocco, Spain, Sicily &amp; Poland</h1>
+      <p>
+        <strong>25 nights &bull; 8 bases &bull; 5 countries &bull; Carry-on only.</strong> All six flights are booked (Oct 4, 2026). Below are the interactive lodging deep-dive guides for the England leg alongside the full 25-night schedule.
+      </p>
+      <div class="pill-bar">
+        <span class="pill">Dates: Sat Jun 12 – Wed Jul 7, 2027 (25 Nights)</span>
+        <span class="pill">Travelers: Rahul, Priyanka, Rohan &amp; Ellie</span>
+        <span class="pill">6 Flights Booked: $9,616</span>
+        <span class="pill">Target Total Budget: $30,800</span>
+      </div>
+    </header>
+
+    <h2>Interactive Lodging Shortlists &amp; Deep-Dive Guides</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <a href="london.html">
+          <img class="guide-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/453150473.jpg?k=af2b803c6c7ec968294f630af37d64bfbf36ee5d570ca0979c50333388ed7919&o=" alt="London Luxury Family Suites and Hotels" loading="lazy" />
+        </a>
+        <div class="guide-body">
+          <div>
+            <div class="guide-eyebrow">Base 1 &bull; Sun Jun 13 – Mon Jun 14, 2027 (1 Night)</div>
+            <h3 class="guide-title"><a href="london.html">London: Top 3 5-Star Family Suites &amp; Rooms</a></h3>
+            <p class="guide-desc">
+              Curated for your 23rd Wedding Anniversary (June 13) after landing on VS20 at 12:50 PM: large rooms &amp; 2-bedroom apartments (484 to 1,001 sq ft) with live Hotels.com &amp; Booking.com rates.
+            </p>
+            <div class="guide-meta">
+              <strong>Top 3:</strong> #1 Cheval Three Quays (1,001 sq ft 2-BR, $631–$742) &bull; #2 Pan Pacific London (2 Queens, $661–$805) &bull; #3 The Landmark London (560 sq ft + Breakfast, $830–$1,034)
+            </div>
+          </div>
+          <a class="btn" href="london.html">Open London Hotel Guide &rarr;</a>
+        </div>
+      </div>
+
+      <div class="guide-card">
+        <a href="cotswold.html">
+          <img class="guide-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1400653272576793320/original/1c10273f-b726-46f6-9e3d-869c1daafb1d.jpeg?im_w=720" alt="Spring House in the Cotswolds" loading="lazy" />
+        </a>
+        <div class="guide-body">
+          <div>
+            <div class="guide-eyebrow">Base 2 &bull; Mon Jun 14 – Thu Jun 17, 2027 (3 Nights)</div>
+            <h3 class="guide-title"><a href="cotswold.html">The Cotswolds: 3 Detached Historic Estates (All ★ 5.0)</a></h3>
+            <p class="guide-desc">
+              Full photo-by-photo and review-by-review dossiers for the Final 3 historic country homes with private grounds, led by our winner <strong>#2 Spring House at Stockwell Farm ($2,985)</strong>.
+            </p>
+            <div class="guide-meta">
+              <strong>Final 3:</strong> #1 The Old Rectory ($2,584) &bull; <strong>#2 Spring House ($2,985 — Winner)</strong> &bull; #3 Batheaston House ($4,240)
+            </div>
+          </div>
+          <a class="btn" href="cotswold.html">Open Cotswolds Manor Guide &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Complete 25-Night Master Itinerary (June 12 – July 7, 2027)</h2>
+    <div class="itin-wrap">
+      <table class="itin-table">
+        <thead>
+          <tr>
+            <th>Dates</th>
+            <th>Base / Transit</th>
+            <th>Details, Flight Refs &amp; Lodging Plan</th>
+            <th>Budget / Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Sat Jun 12 – Sun Jun 13</strong></td>
+            <td><strong>Flight: SFO &rarr; LHR</strong><br /><span class="status-pill booked">BOOKED</span></td>
+            <td>Virgin Atlantic <strong>VS20</strong> &bull; Departs SFO 18:00 &rarr; Lands LHR 12:50 (Jun 13) &bull; Economy Delight (54C, 54A, 55C, 55A) &bull; Ref: <code>DLTJV7</code></td>
+            <td><strong>$3,230</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Sun Jun 13 – Mon Jun 14</strong><br /><em>(1 Night)</em></td>
+            <td><strong>1. London, England</strong><br /><a href="london.html"><span class="status-pill guide">View 3 Options &rarr;</span></a></td>
+            <td><strong>23rd Wedding Anniversary (Jun 13).</strong> Top 3 shortlist in <a href="london.html"><strong>london.html</strong></a>: #1 Cheval Three Quays ($631–$742), #2 Pan Pacific ($661–$805), #3 The Landmark ($830–$1,034).</td>
+            <td><strong>$900</strong><br /><em>($900/nt)</em></td>
+          </tr>
+          <tr>
+            <td><strong>Mon Jun 14 – Thu Jun 17</strong><br /><em>(3 Nights)</em></td>
+            <td><strong>2. The Cotswolds, England</strong><br /><a href="cotswold.html"><span class="status-pill guide">View 3 Estates &rarr;</span></a></td>
+            <td>Shortlist in <a href="cotswold.html"><strong>cotswold.html</strong></a> — Top pick: <strong>#2 Spring House at Stockwell Farm ($2,985 / $995 per night)</strong> + 3-day rental car from London/LHR to Gatwick.</td>
+            <td><strong>$2,700</strong> Lodging<br /><strong>+$600</strong> Ground</td>
+          </tr>
+          <tr>
+            <td><strong>Thu Jun 17</strong></td>
+            <td><strong>Flight: LGW &rarr; RAK</strong><br /><span class="status-pill booked">BOOKED</span></td>
+            <td>British Airways <strong>BA 2812</strong> (Gatwick South, A320) &bull; Departs LGW 15:30 &rarr; Lands Marrakesh 18:15 (13C, 14A, 14B, 14C) &bull; Ref: <code>XWFRR9</code></td>
+            <td><strong>$643</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Thu Jun 17 – Sun Jun 20</strong><br /><em>(3 Nights)</em></td>
+            <td><strong>3. Marrakesh, Morocco</strong></td>
+            <td>Whole private riad with courtyard pool and staff (arrive ~20:00).</td>
+            <td><strong>$2,700</strong><br /><em>($900/nt)</em></td>
+          </tr>
+          <tr>
+            <td><strong>Sun Jun 20</strong></td>
+            <td><strong>Train: Marrakesh &rarr; Fès</strong></td>
+            <td>ONCF 08:35 to Fès 15:33 (7h) &bull; Six first-class seats (book via Omio ~Mar 22).</td>
+            <td><strong>$200</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Sun Jun 20 – Tue Jun 22</strong><br /><em>(2 Nights)</em></td>
+            <td><strong>4. Fès, Morocco</strong></td>
+            <td>Palais Faraj Suites &amp; Spa.</td>
+            <td><strong>$800</strong><br /><em>($400/nt)</em></td>
+          </tr>
+          <tr>
+            <td><strong>Tue Jun 22</strong></td>
+            <td><strong>Flight: FEZ &rarr; BCN</strong><br /><span class="status-pill booked">BOOKED</span></td>
+            <td>Ryanair <strong>FR3188</strong> &bull; Departs FEZ 18:15 &rarr; Lands Barcelona 22:05 &bull; Regular (1C, 2D, 2E, 2F) &bull; Ref: <code>VT2JHR</code></td>
+            <td><strong>$453</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Tue Jun 22 – Sat Jun 26</strong><br /><em>(4 Nights)</em></td>
+            <td><strong>5. Barcelona, Spain</strong></td>
+            <td>Mandarin Oriental or Hotel Arts, family suite.</td>
+            <td><strong>$2,800</strong><br /><em>($700/nt)</em></td>
+          </tr>
+          <tr>
+            <td><strong>Sat Jun 26</strong></td>
+            <td><strong>Flight: BCN &rarr; PMO</strong><br /><span class="status-pill booked">BOOKED</span></td>
+            <td>Vueling <strong>VY6150</strong> &bull; Departs BCN 12:25 &rarr; Lands Palermo 14:20 &bull; Space One (1C, 1D, 1E, 1F) &bull; Ref: <code>JRFB5B</code></td>
+            <td><strong>$542</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Sat Jun 26 – Tue Jun 29</strong><br /><em>(3 Nights)</em></td>
+            <td><strong>6. Palermo, Sicily</strong></td>
+            <td>Villa Igiea (Rocco Forte Hotels).</td>
+            <td><strong>$3,000</strong><br /><em>($1,000/nt)</em></td>
+          </tr>
+          <tr>
+            <td><strong>Tue Jun 29 – Sat Jul 3</strong><br /><em>(4 Nights)</em></td>
+            <td><strong>7. Val di Noto, Sicily</strong></td>
+            <td><strong>Car:</strong> Sixt Audi Q3 GFAR (pick up PMO Jun 29 ~12:00, drop CTA Jul 3 ~10:30, 4 days all-inclusive).<br /><strong>Stay:</strong> Exceptional masseria with private pool (whole house).</td>
+            <td><strong>$4,800</strong> Lodging<br /><strong>+$1,100</strong> Car</td>
+          </tr>
+          <tr>
+            <td><strong>Sat Jul 3</strong></td>
+            <td><strong>Flight: CTA &rarr; WMI</strong><br /><span class="status-pill booked">BOOKED</span></td>
+            <td>Ryanair <strong>FR5441</strong> (operated by Buzz) &bull; Departs Catania 13:20 &rarr; Lands Warsaw Modlin 16:05 (1C, 2D, 2E, 2F) &bull; Ref: <code>WTB18B</code> &bull; Taxi 45m to city.</td>
+            <td><strong>$683</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Sat Jul 3 – Wed Jul 7</strong><br /><em>(4 Nights)</em></td>
+            <td><strong>8. Warsaw (&amp; Kraków), Poland</strong></td>
+            <td>Hotel Bristol or Raffles Europejski, family suite (with Kraków by train 2h20 as a day trip or 2+2 split).</td>
+            <td><strong>$1,600</strong><br /><em>($400/nt)</em></td>
+          </tr>
+          <tr>
+            <td><strong>Wed Jul 7</strong></td>
+            <td><strong>Flight: WAW &rarr; SFO</strong><br /><span class="status-pill booked">BOOKED</span></td>
+            <td>LOT Polish Airlines <strong>LO037</strong> (787-8 Nonstop) &bull; Departs WAW 17:40 &rarr; Lands SFO 20:40 (7A, 7B, 7C, 7D) &bull; Ref: <code>XYS3BV</code></td>
+            <td><strong>$4,065</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="label">6 Flights Booked</div>
+        <div class="val">$9,616</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">Train, Car &amp; Drivers</div>
+        <div class="val">$1,900</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">Lodging Budget (25 Nights)</div>
+        <div class="val">$19,300</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">Planned Trip Total</div>
+        <div class="val">$30,800</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
