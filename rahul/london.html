@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>London — Top 3 Luxury Family Suites &amp; Rooms (Sunday June 13 – Monday June 14, 2027)</title>
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --card: #ffffff;
+      --stone: #efe9de;
+      --ink: #24211d;
+      --muted: #615b52;
+      --accent: #7c5832;
+      --accent-dark: #5b3e1f;
+      --green: #2c5e3b;
+      --green-bg: #e7f3eb;
+      --gold: #7a5200;
+      --gold-bg: #fff3c4;
+      --gold-border: #d4a72c;
+      --border: #e5dec9;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 40px 24px 72px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #232b38 0%, #3d4a5d 100%);
+      color: #fff;
+      padding: 36px 40px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px rgba(36, 33, 29, 0.14);
+    }
+    header .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: #e6d3b3;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 31px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    header p {
+      margin: 0;
+      color: #f3ece0;
+      font-size: 16px;
+      max-width: 780px;
+    }
+    .pill-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .pill {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 23px;
+      margin: 36px 0 16px;
+      color: var(--ink);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: var(--accent-dark);
+    }
+    .info-card p, .info-card ul {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .info-card ul {
+      padding-left: 18px;
+    }
+    .info-card li {
+      margin-bottom: 6px;
+    }
+    .manor-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .manor-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(36, 33, 29, 0.05);
+    }
+    .manor-card.top5-highlight {
+      border: 2px solid var(--gold-border);
+      background: #fffdf8;
+      box-shadow: 0 6px 20px rgba(122, 82, 0, 0.09);
+    }
+    .manor-img {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      object-fit: cover;
+      background: var(--stone);
+    }
+    .manor-body {
+      padding: 22px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .manor-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .manor-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .manor-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .manor-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      background: var(--stone);
+      color: var(--accent-dark);
+    }
+    .badge.green {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+    .badge.gold {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+    }
+    .specs {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .price-line {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      background: #f8f5ee;
+      padding: 9px 13px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .price-sub {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: background 0.15s ease;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+    .btn.secondary {
+      background: var(--stone);
+      color: var(--accent-dark);
+    }
+    .btn.secondary:hover {
+      background: #e3dac8;
+    }
+    .tip-box {
+      margin-top: 32px;
+      background: #f5efe4;
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 10px;
+    }
+    .tip-box h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      color: var(--accent-dark);
+    }
+    .tip-box p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+    .dossier {
+      background: #fffdf9;
+      border: 2px solid var(--gold-border);
+      border-radius: 16px;
+      padding: 0;
+      margin: -10px 0 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: 0 8px 28px rgba(122, 82, 0, 0.08);
+      overflow: hidden;
+    }
+    .dossier-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px 24px;
+      background: var(--gold-bg);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      transition: background 0.15s ease;
+    }
+    .dossier-summary::-webkit-details-marker {
+      display: none;
+    }
+    .dossier-summary:hover {
+      background: #fce89c;
+    }
+    .dossier-summary .toggle-hint {
+      font-size: 13px;
+      font-weight: 600;
+      background: #fff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--gold-border);
+    }
+    details.dossier[open] .dossier-summary {
+      border-bottom: 1px solid var(--gold-border);
+    }
+    .dossier-content {
+      padding: 26px 30px;
+    }
+    .dossier-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 22px;
+    }
+    .dossier-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .dossier-title {
+      margin: 0 0 8px;
+      font-size: 25px;
+      color: var(--ink);
+    }
+    .dossier-sub {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .dossier-h3 {
+      font-size: 18px;
+      color: var(--accent-dark);
+      margin: 26px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    .dossier-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .dossier-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .dossier-box h4 {
+      margin: 0 0 8px;
+      font-size: 15.5px;
+      color: var(--ink);
+    }
+    .dossier-box ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .dossier-box li {
+      margin-bottom: 6px;
+    }
+    .photo-tour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+      gap: 14px;
+      margin: 14px 0 22px;
+    }
+    .photo-tour-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .photo-tour-item img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      background: var(--stone);
+    }
+    .photo-tour-cap {
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .photo-tour-cap strong {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .caveat-box {
+      background: #fff6e8;
+      border-left: 4px solid #c97a10;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #4a3208;
+    }
+    .caveat-box strong {
+      color: #2e1e03;
+    }
+    .compare-wrap {
+      margin-top: 36px;
+      background: var(--card);
+      border: 2px solid var(--gold-border);
+      border-radius: 14px;
+      overflow-x: auto;
+      box-shadow: 0 6px 20px rgba(122, 82, 0, 0.08);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.8px;
+      min-width: 760px;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: 13px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table thead th {
+      background: linear-gradient(135deg, #232b38 0%, #3d4a5d 100%);
+      color: #fff;
+      font-size: 14.5px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold-border);
+    }
+    .compare-table thead th a {
+      color: #fff3c4;
+      text-decoration: none;
+    }
+    .compare-table thead th a:hover {
+      text-decoration: underline;
+    }
+    .compare-table thead .th-sub {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #e6d3b3;
+      margin-top: 3px;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #fcfaf5;
+    }
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-table td.row-label {
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: #f6f1e6;
+      width: 185px;
+      border-right: 1px solid var(--border);
+    }
+    .compare-table td + td {
+      border-left: 1px solid var(--border);
+    }
+    .winner-pill {
+      display: inline-block;
+      background: var(--green-bg);
+      color: var(--green);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 720px) {
+      html, body {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        padding: 16px 12px 48px;
+      }
+      header {
+        padding: 22px 18px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      header .eyebrow {
+        font-size: 11px;
+      }
+      header h1 {
+        font-size: 22px;
+        line-height: 1.28;
+      }
+      header p {
+        font-size: 14.5px;
+      }
+      .pill-bar {
+        gap: 6px;
+        margin-top: 14px;
+      }
+      .pill {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+      h2 {
+        font-size: 19px;
+        margin: 26px 0 12px;
+      }
+      .intro-grid,
+      .dossier-grid-2,
+      .photo-tour-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .info-card {
+        padding: 16px;
+      }
+      .manor-card {
+        grid-template-columns: 1fr;
+      }
+      .manor-img {
+        height: 210px;
+        min-height: 180px;
+      }
+      .manor-body {
+        padding: 16px;
+      }
+      .manor-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .manor-title {
+        font-size: 18px;
+        line-height: 1.35;
+      }
+      .badge {
+        white-space: normal;
+      }
+      .price-line {
+        font-size: 14.5px;
+        padding: 8px 10px;
+      }
+      .btn-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 11px 14px;
+      }
+      .dossier-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .dossier-summary .toggle-hint {
+        align-self: flex-start;
+        font-size: 12px;
+      }
+      .dossier-content {
+        padding: 16px 14px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      .dossier-title {
+        font-size: 20px !important;
+        line-height: 1.3;
+      }
+      .dossier-sub {
+        font-size: 13.5px;
+      }
+      .dossier-h3 {
+        font-size: 16.5px;
+        margin: 20px 0 10px;
+      }
+      .dossier-box {
+        padding: 14px;
+      }
+      .photo-tour-item img {
+        height: 180px;
+      }
+      .caveat-box {
+        padding: 12px 14px;
+        font-size: 13.5px;
+      }
+      .tip-box {
+        padding: 16px;
+        margin-top: 24px;
+      }
+      .compare-wrap {
+        margin-top: 20px;
+        overflow-x: visible;
+      }
+      .compare-table {
+        min-width: 0;
+        display: block;
+      }
+      .compare-table thead {
+        display: none;
+      }
+      .compare-table tbody,
+      .compare-table tr,
+      .compare-table td {
+        display: block;
+        width: 100%;
+      }
+      .compare-table tr {
+        border-bottom: 2px solid var(--gold-border);
+      }
+      .compare-table tr:last-child {
+        border-bottom: none;
+      }
+      .compare-table td.row-label {
+        width: 100%;
+        background: linear-gradient(135deg, #232b38 0%, #3d4a5d 100%);
+        color: #fff;
+        font-size: 14.5px;
+        padding: 10px 14px;
+        border-right: none;
+        border-bottom: 1px solid var(--gold-border);
+      }
+      .compare-table td.row-label span {
+        color: #e6d3b3 !important;
+      }
+      .compare-table td + td {
+        border-left: none;
+        padding: 12px 14px;
+      }
+      .compare-table td[data-prop]::before {
+        content: attr(data-prop);
+        display: block;
+        font-weight: 700;
+        font-size: 12.5px;
+        color: var(--accent-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 5px;
+        padding-bottom: 4px;
+        border-bottom: 1px dashed var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="eyebrow">Summer 2027 &bull; Opening Night &bull; 23rd Wedding Anniversary (Sunday June 13)</div>
+      <h1>London: Top 3 5-Star Family Suites &amp; Rooms (Sunday June 13 – Monday June 14, 2027)</h1>
+      <p>
+        Live-verified 5-star London accommodations that comfortably sleep <strong>2 adults + 2 children (ages 13 and 6)</strong> in a genuinely spacious footprint (<strong>484 to 1,001 sq ft</strong>) for <strong>Sunday June 13 – Monday June 14, 2027 (1 night)</strong> around your <strong>$900 budget</strong>, sorted strictly from lowest to highest rate: <strong>#1 Cheval Three Quays ($631 non-ref / $742 free cancel)</strong>, <strong>#2 Pan Pacific London ($661 non-ref / $805 free cancel)</strong>, and <strong>#3 The Landmark London ($875–$1,034 member rate with breakfast included)</strong>.
+      </p>
+      <div class="pill-bar">
+        <span class="pill">Dates: Sun Jun 13 – Mon Jun 14, 2027 (1 Night)</span>
+        <span class="pill">Arrival: VS20 Lands LHR 12:50 PM Sun</span>
+        <span class="pill">Occasion: 23rd Anniversary (Jun 13)</span>
+        <span class="pill">Guests: 2 Adults + 2 Kids (13 &amp; 6)</span>
+        <span class="pill">Target Budget: ~$900 (All 20% UK VAT Included)</span>
+      </div>
+    </header>
+
+    <div class="intro-grid">
+      <div class="info-card">
+        <h3>Quick Jump to Inline Deep-Dive Dossiers</h3>
+        <ul>
+          <li><a href="#prop-1" onclick="document.getElementById('deep-dive-1').open = true;"><strong>#1. Cheval Three Quays ($631–$742):</strong></a> 1,001 sq ft 2-BR / 2-BA apartment right next to the Tower of London.</li>
+          <li><a href="#prop-2" onclick="document.getElementById('deep-dive-2').open = true;"><strong>#2. Pan Pacific London ($661–$805):</strong></a> 484 sq ft Forbes 5-Star room (2 Queen beds), 9.5/10 rating, direct train from LHR.</li>
+          <li><a href="#prop-3" onclick="document.getElementById('deep-dive-3').open = true;"><strong>#3. The Landmark London ($875–$1,034):</strong></a> 560 sq ft Executive Family Room + full Winter Garden breakfast in Marylebone.</li>
+          <li><a href="#comparison-table"><strong>&darr; Jump to Bottom Head-to-Head Comparison Table</strong></a></li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Why Hotels.com &amp; Booking.com Rates Match</h3>
+        <ul>
+          <li><strong>UK Channel-Manager Rate Parity:</strong> All 3 properties distribute identical live GBP inventory to <strong>Hotels.com</strong> and <strong>Booking.com</strong> with <strong>20% UK VAT already included</strong> in the displayed USD total.</li>
+          <li><strong>Direct Pre-Filled Links Below:</strong> Every card includes a one-click pre-filled link to <strong>Hotels.com</strong> (<code>Jun 13–14, 2027 · 2 adults + ages 13 &amp; 6</code>) alongside Booking.com.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Top 3 Confirmed-Available 5-Star Options (Sorted Lowest to Highest Rate)</h2>
+    <div class="manor-list">
+
+      <!-- #1 CHEVAL THREE QUAYS -->
+      <div class="manor-card top5-highlight" id="prop-1" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
+        <img class="manor-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/29465472.jpg?k=7c0133d14c54156613fb89d3baa5bf95ca41241d9805dd2da83092387dd75edc&o=" alt="Cheval Three Quays Living Room Overlooking Tower Bridge" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.hotels.com/ho445953/cheval-three-quays-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">
+                  #1. Cheval Three Quays at The Tower of London — Superior Two-Bedroom Apartment (1,001 sq ft)
+                </a>
+              </h3>
+              <span class="badge gold">★ 1,001 sq ft · $631–$742</span>
+            </div>
+            <div class="specs">5★ Luxury Serviced Residence &bull; 1,001 sq ft (93 m²) &bull; 2 Bedrooms · 2 Bathrooms · Living/Dining Room &bull; ★ 9.4/10 (883)</div>
+            <div class="price-line">
+              Live Rate (Sun Jun 13–14, 2027): $631 Non-Refundable &bull; $742 Free Cancellation (Taxes/VAT Included)
+              <span class="price-sub">Upgrade to 2-BR Thames River View (872 sq ft): $757 non-ref / $891 free cancel &bull; 2-BR Tower of London View (990 sq ft): $805 non-ref / $947 free cancel</span>
+            </div>
+            <p class="desc">Directly on the Thames riverbank beside the Tower of London and Tower Bridge, this 1,001 sq ft 5-star residence gives you nearly double the space of a hotel room—with a private Queen master bedroom and en-suite bath for your anniversary, a separate Twin bedroom and second bathroom for the kids, and a full living/dining room.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.hotels.com/ho445953/cheval-three-quays-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">Open on Hotels.com ($631–$742) &rarr;</a>
+            <a class="btn secondary" href="https://www.booking.com/hotel/gb/cheval-three-quays.html?checkin=2027-06-13&checkout=2027-06-14&group_adults=2&no_rooms=1&group_children=2&age=13&age=6&selected_currency=USD" target="_blank" rel="noopener">Open on Booking.com &nearr;</a>
+            <a class="btn secondary" href="#deep-dive-1" onclick="var d=document.getElementById('deep-dive-1'); d.open=!d.open; return false;">Toggle Deep-Dive Dossier &darr;</a>
+          </div>
+        </div>
+      </div>
+      <details class="dossier" id="deep-dive-1">
+        <summary class="dossier-summary">
+          <span>&#128269; Deep-Dive Dossier: #1 Cheval Three Quays (1,001 sq ft 2-Bedroom / 2-Bathroom Layout, Photos &amp; Logistics)</span>
+          <span class="toggle-hint">Click to Expand / Collapse &darr;</span>
+        </summary>
+        <div class="dossier-content">
+          <div class="dossier-header">
+            <div class="dossier-eyebrow">Option #1 Deep-Dive &bull; Largest Footprint (1,001 sq ft) &bull; Lowest Price ($158–$269 Under Budget)</div>
+            <h2 class="dossier-title" style="border:none; margin:0 0 6px; padding:0;">#1. Cheval Three Quays at The Tower of London — 2-Bedroom / 2-Bathroom Luxury Apartment</h2>
+            <p class="dossier-sub">
+              <strong>Exact Address:</strong> 40 Lower Thames Street, City of London, EC3R 6AG (<a href="https://www.google.com/maps?q=51.5080,-0.0789" target="_blank" rel="noopener">51.5080, -0.0789 on Google Maps &nearr;</a>) &bull; <strong>Guest Score: 9.4/10 (Location 9.6/10)</strong> &bull; <strong>$631 (Non-Ref) / $742 (Free Cancel)</strong>
+            </p>
+          </div>
+
+          <h3 class="dossier-h3">1. Why This Solves the "Big Room + Under $900" Challenge Better Than Any Standard Hotel</h3>
+          <div class="dossier-grid-2">
+            <div class="dossier-box">
+              <h4>True 2-Bedroom, 2-Bathroom Privacy on Your Anniversary</h4>
+              <ul>
+                <li><strong>1,001 sq ft (93 m²) Floorplan:</strong> Instead of sharing one hotel bedroom with the kids on your 23rd wedding anniversary, you get an entire 5-star modern apartment with a <strong>private Master Bedroom (Queen/King bed + en-suite walk-in rainfall shower room)</strong>, a <strong>separate 2nd Bedroom (2 Twin beds)</strong>, a <strong>2nd full hallway bathroom (bathtub + overhead shower)</strong>, and an expansive open-plan living/dining room.</li>
+                <li><strong>River View Upgrade Still Fits Your $900 Budget:</strong> Even if you upgrade from the <em>Superior Two-Bedroom Apartment</em> ($631 non-ref / $742 free cancel) to the <strong>Two-Bedroom Apartment with Thames River View</strong> (872 sq ft / 81 m² looking straight across the Thames toward Tower Bridge and HMS Belfast), it is <strong>$757 non-refundable / $891 with free cancellation</strong>.</li>
+              </ul>
+            </div>
+            <div class="dossier-box">
+              <h4>Iconic London Postcard Setting &amp; Anniversary Dining</h4>
+              <ul>
+                <li><strong>Next Door to the Tower of London:</strong> Sits directly on the pedestrianized North Bank walkway between the <strong>Tower of London</strong> (1-minute walk) and <strong>Tower Bridge</strong> (4-minute walk). Stepping outside after landing at Heathrow immediately puts the kids in front of London's most famous medieval fortress and bridge.</li>
+                <li><strong>Anniversary Dinner Options:</strong> Walk 5 minutes across or along the river to <strong>Coppa Club Tower Bridge</strong> ( riverside terrace overlooking the illuminated bridge), <strong>The Ivy Tower Bridge</strong>, or take a 6-minute taxi up to <strong>Duck &amp; Waffle / Sushisamba</strong> or <strong>City Social</strong> (Jason Atherton's Michelin-starred sky restaurant).</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">2. Visual Tour of the Apartment &amp; Riverfront Views</h3>
+          <div class="photo-tour-grid">
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/29465472.jpg?k=7c0133d14c54156613fb89d3baa5bf95ca41241d9805dd2da83092387dd75edc&o=" alt="Cheval Three Quays Living Room and Tower Bridge View" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Open-Plan Living &amp; Dining Room (River View Category)</strong>
+                Floor-to-ceiling glass framing Tower Bridge, HMS Belfast, and City Hall across the Thames.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/29472516.webp?k=683059430db36fed3d0223d72b1d622ab9b599465f77aeb6ee90983c6e89447b&o=" alt="Superior Two-Bedroom Apartment Living Area" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Superior Two-Bedroom Apartment (1,001 sq ft / 93 m²)</strong>
+                Spacious lounge with sofa, armchairs, flat-screen TV, and dining table for 4–6.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/29472517.webp?k=0a38953105c70d45d79d40c7d9ba6a54006f340eebcc556dbeb03e5f947c6788&o=" alt="Master Bedroom at Cheval Three Quays" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Bedroom 1 — Principal Queen/King Suite</strong>
+                Quiet master bedroom with floor-to-ceiling curtains, dressing table, and private en-suite shower room.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/29472518.webp?k=fb68bb9fd5255b433ff22ac6e314fb509526c56a177e9f07da771d7abf694c8f&o=" alt="Second Twin Bedroom for Kids" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Bedroom 2 — Separate Twin Bedroom for the Kids</strong>
+                Two twin beds (convertible to King) with dedicated wardrobe space and adjacent 2nd full bathroom.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/263240718.jpg?k=bb08ea170b9eb07f54b6acc967f69acc02a596c76b44a55c8f9f41837cbd3668&o=" alt="Full Kitchen and Dining Area" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Full Miele Kitchen, Nespresso &amp; Washer/Dryer</strong>
+                Handy for effortless Monday morning coffee/breakfast before departing for the Cotswolds.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/29470810.webp?k=9e7d4bb1e32197ef7201f557fa13f69d7e77937a0bc8d403442be047a99e19eb&o=" alt="En-Suite Bathroom at Cheval Three Quays" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>2 Full Bathrooms (En-Suite Walk-in Shower + Hallway Bath/Shower)</strong>
+                Stocked with Arran Aromatics toiletries, plush robes, and heated towel rails.
+              </div>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">3. Sunday LHR Arrival &amp; Monday Morning Cotswolds Logistics</h3>
+          <div class="caveat-box">
+            <strong>Logistics Trade-Off — East Side of Central London (Tower Hill):</strong>
+            From Heathrow on Sunday afternoon, take the <strong>Elizabeth Line to Whitechapel or Liverpool Street (~42 mins)</strong> + a 5-minute black cab (or Circle Line to Tower Hill). On Monday morning, instead of picking up a rental car in the City of London and driving across central London traffic, take the quick 15–20 min tube/cab to <strong>Paddington / Marble Arch</strong> (or hop back on the Elizabeth Line to LHR) to pick up your Cotswolds SUV on the western edge of town. Also note that as a 5-star serviced residence, there is 24-hour concierge/front desk and a gym, but no in-house restaurant (dozens of cafés and restaurants are within a 3-minute walk).
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="https://www.hotels.com/ho445953/cheval-three-quays-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">View #1 Cheval Three Quays on Hotels.com ($631–$742) &rarr;</a>
+            <a class="btn secondary" href="https://www.booking.com/hotel/gb/cheval-three-quays.html?checkin=2027-06-13&checkout=2027-06-14&group_adults=2&no_rooms=1&group_children=2&age=13&age=6&selected_currency=USD" target="_blank" rel="noopener">View on Booking.com &nearr;</a>
+          </div>
+        </div>
+      </details>
+
+      <!-- #2 PAN PACIFIC LONDON -->
+      <div class="manor-card top5-highlight" id="prop-2" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
+        <img class="manor-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/930482125.webp?k=b6df86d8c172f20e7243e26f617c88a96b19e0a02500d3bb20c18cf43b0e1bc4&o=" alt="Pan Pacific London Premier Double Double Room" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.hotels.com/ho2162317984/pan-pacific-london-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">
+                  #2. Pan Pacific London — Premier Double Double (484 sq ft · 2 Queen Beds)
+                </a>
+              </h3>
+              <span class="badge gold">★ 9.5/10 Forbes 5-Star · $661–$805</span>
+            </div>
+            <div class="specs">Forbes 5-Star Luxury Hotel &bull; 484 sq ft (45 m²) &bull; 2 Queen Beds + Sofa Seating Area &bull; ★ 9.5/10 (1,617)</div>
+            <div class="price-line">
+              Live Rate (Sun Jun 13–14, 2027): $661 Non-Refundable &bull; $805 Free Cancellation (Taxes/VAT Included)
+              <span class="price-sub">2-Adult Baseline Rate on Hotels.com / Google Travel: $549 &bull; 4-Guest Family Occupancy (2 Adults + Ages 13 &amp; 6): $661–$805</span>
+            </div>
+            <p class="desc">One of London's highest-rated Forbes Five-Star hotels (9.5/10 across 1,617 reviews), steps from the Liverpool Street Elizabeth Line exit (one direct 40-minute train from Heathrow Terminal). Its 484 sq ft Premier Double Double features two real Queen beds, floor-to-ceiling windows, and a marble bath with soaking tub and rainfall shower.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.hotels.com/ho2162317984/pan-pacific-london-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">Open on Hotels.com ($661–$805) &rarr;</a>
+            <a class="btn secondary" href="https://www.booking.com/hotel/gb/pan-pacific-london.html?checkin=2027-06-13&checkout=2027-06-14&group_adults=2&no_rooms=1&group_children=2&age=13&age=6&selected_currency=USD" target="_blank" rel="noopener">Open on Booking.com &nearr;</a>
+            <a class="btn secondary" href="#deep-dive-2" onclick="var d=document.getElementById('deep-dive-2'); d.open=!d.open; return false;">Toggle Deep-Dive Dossier &darr;</a>
+          </div>
+        </div>
+      </div>
+      <details class="dossier" id="deep-dive-2">
+        <summary class="dossier-summary">
+          <span>&#128269; Deep-Dive Dossier: #2 Pan Pacific London (484 sq ft 2-Queen Layout, Photos, Dining &amp; Direct LHR Train)</span>
+          <span class="toggle-hint">Click to Expand / Collapse &darr;</span>
+        </summary>
+        <div class="dossier-content">
+          <div class="dossier-header">
+            <div class="dossier-eyebrow">Option #2 Deep-Dive &bull; Highest Guest Score (9.5/10) &bull; Direct 40-Min Train From Heathrow</div>
+            <h2 class="dossier-title" style="border:none; margin:0 0 6px; padding:0;">#2. Pan Pacific London — Premier Double Double Room (484 sq ft / 45 m²)</h2>
+            <p class="dossier-sub">
+              <strong>Exact Address:</strong> One Bishopsgate Plaza, 80 Houndsditch, London EC3A 7AB (<a href="https://www.google.com/maps?q=51.5165,-0.0798" target="_blank" rel="noopener">51.5165, -0.0798 on Google Maps &nearr;</a>) &bull; <strong>Forbes 5-Star</strong> &bull; <strong>$661 (Non-Ref) / $805 (Free Cancel)</strong>
+            </p>
+          </div>
+
+          <h3 class="dossier-h3">1. Why Pan Pacific Wins for Modern 5-Star Polish &amp; Effortless Heathrow Arrival</h3>
+          <div class="dossier-grid-2">
+            <div class="dossier-box">
+              <h4>Two Proper Queen Beds in 484 sq ft (No Sofa Bed Required)</h4>
+              <ul>
+                <li><strong>Designed by Yabu Pushelberg:</strong> Unlike historic London hotels where rooms can feel dark or cramped, the <strong>484 sq ft (45 m²) Premier Double Double</strong> has soaring floor-to-ceiling soundproofed glass windows, warm oak panelling, a windowside lounge sofa and desk, and <strong>two true Queen-size beds</strong> with 400-thread-count linens.</li>
+                <li><strong>Oversized Marble Bathroom:</strong> Includes a freestanding-style soaking bathtub, a separate walk-in rainfall shower, double vanity, heated marble floors, Diptyque Paris toiletries, and Dyson Supersonic hairdryer.</li>
+              </ul>
+            </div>
+            <div class="dossier-box">
+              <h4>Zero-Transfer Train from LHR + Anniversary Dining</h4>
+              <ul>
+                <li><strong>Direct 40-Minute Elizabeth Line from Heathrow:</strong> When VS20 lands at 12:50 PM with carry-on bags only, you board the air-conditioned Elizabeth Line at Heathrow and step off at <strong>Liverpool Street Station</strong> 40 minutes later—literally across the plaza (a 1-minute walk) from Pan Pacific's front door.</li>
+                <li><strong>Anniversary Evening Options:</strong> Dine right inside the hotel at <strong>Straits Kitchen</strong> (celebrated Southeast Asian restaurant overlooking Bishopsgate Plaza) with cocktails at <strong>Ginger Lily</strong> or <strong>The Orchid Lounge</strong>, or stroll 4 minutes to <strong>Eataly London</strong>, <strong>Spitalfields Market</strong>, or sky-high restaurants in the Heron Tower / Gherkin / Walkie-Talkie.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">2. Visual Tour of the Premier Double Double Room &amp; Hotel Spaces</h3>
+          <div class="photo-tour-grid">
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/930482125.webp?k=b6df86d8c172f20e7243e26f617c88a96b19e0a02500d3bb20c18cf43b0e1bc4&o=" alt="Premier Double Double Room with Two Queen Beds" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Premier Double Double (484 sq ft / 45 m²) — 2 Queen Beds</strong>
+                Two proper Queen beds plus a windowside lounge sofa and floor-to-ceiling views.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/315873650.webp?k=e5940de98f7dfd8d4f93d546dbf9dd470bef3a25c16f05fbd119e8073bbe419f&o=" alt="Premier Double Double Alternate Angle" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Warm Yabu Pushelberg Residential Interior</strong>
+                Custom millwork, Nespresso machine, complimentary soft-drink minibar, and 55-inch smart TV.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/930482134.webp?k=dc27104dcf732fa84f40842816b86ee27d42feb431cd5a21e021d2c41636fa0e&o=" alt="Premier Double Double Seating Area" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Windowside Lounge &amp; Desk Area</strong>
+                Generous circulation space around both Queen beds so 4 carry-on bags fit effortlessly.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/316894504.webp?k=de3d77987c779a275e8e7a816c2ffcb06f425bbd68ed6111b93adb438c3f8ebc&o=" alt="Marble Bathroom with Soaking Tub and Walk-In Shower" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Marble Bathroom with Tub &amp; Rainfall Shower</strong>
+                Heated stone floors, deep soaking bath, glass walk-in shower, and Diptyque toiletries.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/614573423.jpg?k=4aec5a54fc7bcfeb74cdf04729e273952a4fe323e7ebf1f92edaae9eeafb0a80&o=" alt="Straits Kitchen and Lounge at Pan Pacific London" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Straits Kitchen &amp; Orchid Lounge</strong>
+                Destination dining and patisserie lounge right downstairs for your Sunday evening anniversary meal.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/930449596.jpg?k=4686e6de8667f51cc2350ef35174ee72a0a359fff1f4a738a66591315af997d8&o=" alt="Pan Pacific London Conservatory Lobby" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>One Bishopsgate Plaza Lobby &amp; Conservatory</strong>
+                1-minute walk from Liverpool Street Station (Elizabeth Line, Central, Circle, and Metropolitan lines).
+              </div>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">3. Key Caveat to Weigh</h3>
+          <div class="caveat-box">
+            <strong>Single Open-Plan Hotel Room (1 Bathroom) + Financial District Setting:</strong>
+            While the service, beds, and finishes are top-of-class (9.5/10), all four of you share one (very large) 484 sq ft bedroom and one marble bathroom (whereas <em>#1 Cheval Three Quays</em> gives you 1,001 sq ft with 2 separate bedrooms and 2 bathrooms for $63 less). Also, Bishopsgate/Liverpool Street is in the modern City of London skyscraper district rather than historic West End parkland—though on Monday morning you can hop right back on the Elizabeth Line at Liverpool Street (10 mins to Paddington, or 40 mins back to Heathrow) to pick up your Cotswolds rental car without touching central London traffic.
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="https://www.hotels.com/ho2162317984/pan-pacific-london-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">View #2 Pan Pacific London on Hotels.com ($661–$805) &rarr;</a>
+            <a class="btn secondary" href="https://www.booking.com/hotel/gb/pan-pacific-london.html?checkin=2027-06-13&checkout=2027-06-14&group_adults=2&no_rooms=1&group_children=2&age=13&age=6&selected_currency=USD" target="_blank" rel="noopener">View on Booking.com &nearr;</a>
+          </div>
+        </div>
+      </details>
+
+      <!-- #3 THE LANDMARK LONDON -->
+      <div class="manor-card top5-highlight" id="prop-3" style="border-bottom-left-radius:0; border-bottom-right-radius:0;">
+        <img class="manor-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/453150473.jpg?k=af2b803c6c7ec968294f630af37d64bfbf36ee5d570ca0979c50333388ed7919&o=" alt="The Landmark London 8-Story Winter Garden Palm Court Atrium" loading="lazy" />
+        <div class="manor-body">
+          <div>
+            <div class="manor-top">
+              <h3 class="manor-title">
+                <a href="https://www.hotels.com/ho438653/the-landmark-london-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">
+                  #3. The Landmark London (5★ LHW, Marylebone) — Executive Family Room (560 sq ft)
+                </a>
+              </h3>
+              <span class="badge gold">★ Breakfast Option · $830–$1,034</span>
+            </div>
+            <div class="specs">5★ Leading Hotels of the World &bull; 560 sq ft (52 m²) &bull; 2 Double Beds + Sofa Lounge Area &bull; ★ 8.9/10 (4,133)</div>
+            <div class="price-line">
+              Live Rate (Sun Jun 13–14, 2027): $830 Member ($922 Reg.) Non-Ref &bull; $875 Member w/ Breakfast &bull; $1,034 Member ($1,149 Reg.) Free Cancel + Breakfast Included
+              <span class="price-sub">2-Adult Baseline Rate on Hotels.com / Google Travel: $685 &bull; Full Winter Garden breakfast for the family is worth ~$175!</span>
+            </div>
+            <p class="desc">An 1899 Victorian "Grand Dame" hotel in Marylebone built around a soaring 8-story glass-roofed palm court atrium (the Winter Garden)—offering a huge 560 sq ft Executive Family Room, romantic anniversary dining under the palms, and the easiest Monday morning exit straight west on the A40 to Spring House in the Cotswolds.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.hotels.com/ho438653/the-landmark-london-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">Open on Hotels.com ($830–$1,034) &rarr;</a>
+            <a class="btn secondary" href="https://www.booking.com/hotel/gb/landmark-london-ld.html?checkin=2027-06-13&checkout=2027-06-14&group_adults=2&no_rooms=1&group_children=2&age=13&age=6&selected_currency=USD" target="_blank" rel="noopener">Open on Booking.com &nearr;</a>
+            <a class="btn secondary" href="#deep-dive-3" onclick="var d=document.getElementById('deep-dive-3'); d.open=!d.open; return false;">Toggle Deep-Dive Dossier &darr;</a>
+          </div>
+        </div>
+      </div>
+      <details class="dossier" id="deep-dive-3">
+        <summary class="dossier-summary">
+          <span>&#128269; Deep-Dive Dossier: #3 The Landmark London (560 sq ft Family Room, Winter Garden Atrium &amp; A40 Cotswolds Exit)</span>
+          <span class="toggle-hint">Click to Expand / Collapse &darr;</span>
+        </summary>
+        <div class="dossier-content">
+          <div class="dossier-header">
+            <div class="dossier-eyebrow">Option #3 Deep-Dive &bull; Best Anniversary Atmosphere &bull; Easiest Westward Exit to the Cotswolds</div>
+            <h2 class="dossier-title" style="border:none; margin:0 0 6px; padding:0;">#3. The Landmark London — 560 sq ft Executive Family Room in Marylebone</h2>
+            <p class="dossier-sub">
+              <strong>Exact Address:</strong> 222 Marylebone Road, London NW1 6JQ (<a href="https://www.google.com/maps?q=51.5219,-0.1630" target="_blank" rel="noopener">51.5219, -0.1630 on Google Maps &nearr;</a>) &bull; <strong>Leading Hotels of the World</strong> &bull; <strong>$830–$875 (Non-Ref Member) / $1,034 (Free Cancel Member + Breakfast)</strong>
+            </p>
+          </div>
+
+          <h3 class="dossier-h3">1. Why The Landmark Feels Like a True "Anniversary Occasion" Hotel</h3>
+          <div class="dossier-grid-2">
+            <div class="dossier-box">
+              <h4>The 8-Story Glass Winter Garden Atrium + Included Breakfast</h4>
+              <ul>
+                <li><strong>Unforgettable June 13 Setting:</strong> Opened in 1899 as The Great Central Hotel, the building wraps around a breathtaking 8-story glass-roofed courtyard filled with towering palm trees, piano music, and chandeliers. Having your 23rd anniversary dinner or champagne in the <strong>Winter Garden Restaurant</strong> (or drinks at the Mirror Bar) feels effortlessly celebratory even after a long flight.</li>
+                <li><strong>Breakfast Included Math:</strong> At $53/person ($160–$180+ for the family), having breakfast under the palms included in the <strong>$875 (non-ref member)</strong> or <strong>$1,034 (free-cancel member)</strong> rate makes the effective room cost <strong>~$700–$860</strong>—right inside your $900 target!</li>
+              </ul>
+            </div>
+            <div class="dossier-box">
+              <h4>560 sq ft Executive Family Room + Best Cotswolds Logistics</h4>
+              <ul>
+                <li><strong>One of London's Largest Single Hotel Rooms (560 sq ft / 52 m²):</strong> Explicitly designed for 2 adults + 2 children, featuring high Victorian ceilings, <strong>two full/double beds</strong>, a separate sofa &amp; armchair sitting area, and a marble bathroom with deep bathtub and walk-in shower.</li>
+                <li><strong>4 Mins from Paddington &amp; Right on the A40 to Spring House:</strong> Take the 15-minute <strong>Heathrow Express to Paddington</strong> on Sunday (+ a 4-minute cab to the hotel), stroll <strong>Regent's Park</strong> (5 mins walk) or <strong>Marylebone High Street</strong> in the afternoon, and on Monday morning pick up your rental car at Paddington / Marble Arch and drive straight west out the A40/M40 to the Cotswolds without crossing Central London!</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">2. Visual Tour of the Winter Garden Atrium &amp; 560 sq ft Executive Family Room</h3>
+          <div class="photo-tour-grid">
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/453150473.jpg?k=af2b803c6c7ec968294f630af37d64bfbf36ee5d570ca0979c50333388ed7919&o=" alt="The Landmark London Winter Garden Palm Court Atrium" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>The 8-Story Glass-Roofed Winter Garden Atrium</strong>
+                Soaring Victorian glass roof over towering palms—where your included Monday morning breakfast is served.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/900549702.webp?k=afa040109e76c33d9ed9c204a46a67baa74a326669ff852cd8a91084ae534dbb&o=" alt="Executive Family Room with Two Beds and Lounge Area" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Executive Family Room (560 sq ft / 52 m²) — Bedroom View</strong>
+                Two comfortable double beds with classical panelling, crystal chandelier, and generous floor space.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/826581341.webp?k=da0a08d2e5363f25168b9ac1aaef7c55285ab936a4bd5f978f9036b272e7ad75&o=" alt="Executive Family Room Sitting Area" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Executive Family Room — Separate Sofa &amp; Armchair Lounge</strong>
+                Full sitting area, writing desk, minibar, and tall windows within the 560 sq ft footprint.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/826581156.webp?k=a84ba9f258fcf74c6b3a0c47599776dca66e9849bf430489a6b8538abe4ad537&o=" alt="Executive Family Room Full Layout" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Wide-Angle View Showing Both Beds &amp; Lounge Zone</strong>
+                Plenty of room for the four of you to unwind after the overnight flight from SFO.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/905615429.webp?k=f1889865bba7eb2066a55ff77cf3a20a5bea78b1151836817db8f91e4421c9b9&o=" alt="Executive Family Room Marble Bathroom" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Marble Bathroom with Deep Tub &amp; Walk-In Shower</strong>
+                White marble bathroom stocked with plush robes and luxury toiletries.
+              </div>
+            </div>
+            <div class="photo-tour-item">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/453150714.jpg?k=21807a611355aa1cc6b11fcb3ad65448865efa2ef813219633672f034bfdb991&o=" alt="Great Central Bar and Dining at The Landmark London" loading="lazy" />
+              <div class="photo-tour-cap">
+                <strong>Historic Dining &amp; Bars (Plus 5-Min Walk to Regent's Park)</strong>
+                Right between Regent's Park, Baker Street, and Marylebone Village.
+              </div>
+            </div>
+          </div>
+
+          <h3 class="dossier-h3">3. Key Caveat to Weigh</h3>
+          <div class="caveat-box">
+            <strong>UK "Double" Bed Width (135–150 cm) vs. Pan Pacific's Queen Beds &amp; Cheval's 2 Bedrooms:</strong>
+            While the room itself is larger than Pan Pacific's (560 sq ft vs. 484 sq ft), the two beds in The Landmark's Executive Family Room are standard UK Full/Double beds rather than wider US Queen beds, and all four of you share one bedroom and one bathroom.
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="https://www.hotels.com/ho438653/the-landmark-london-london-united-kingdom/?chkin=2027-06-13&chkout=2027-06-14&rm1=a2%3Ac13%3Ac6" target="_blank" rel="noopener">View #3 The Landmark London on Hotels.com ($830–$1,034) &rarr;</a>
+            <a class="btn secondary" href="https://www.booking.com/hotel/gb/landmark-london-ld.html?checkin=2027-06-13&checkout=2027-06-14&group_adults=2&no_rooms=1&group_children=2&age=13&age=6&selected_currency=USD" target="_blank" rel="noopener">View on Booking.com &nearr;</a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+
+    <h2 id="comparison-table">Head-to-Head Comparison: The Top 3 London Options (#1 vs. #2 vs. #3)</h2>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature / Criterion</th>
+            <th>
+              <a href="#prop-1" onclick="document.getElementById('deep-dive-1').open = true;">#1. Cheval Three Quays</a>
+              <span class="th-sub">Tower of London / Thames Riverfront (EC3R)</span>
+            </th>
+            <th>
+              <a href="#prop-2" onclick="document.getElementById('deep-dive-2').open = true;">#2. Pan Pacific London</a>
+              <span class="th-sub">Bishopsgate / Liverpool Street (EC3A)</span>
+            </th>
+            <th>
+              <a href="#prop-3" onclick="document.getElementById('deep-dive-3').open = true;">#3. The Landmark London</a>
+              <span class="th-sub">Marylebone / Regent's Park (NW1)</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Live Rate (Jun 13–14, 2027)<br /><span style="font-weight:400; font-size:12px;">(4 Guests, 20% VAT Included)</span></td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              <span class="winner-pill">Lowest Price ($158–$269 Under Budget)</span><br />
+              <strong>$631</strong> *(Non-refundable)*<br />
+              <strong>$742</strong> *(Free cancel until Jun 12)*<br />
+              <span style="font-size:12.5px; color:var(--muted);">River View 2-BR upgrade: $757 / $891</span>
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <span class="winner-pill">$95–$239 Under Budget</span><br />
+              <strong>$661</strong> *(Non-refundable)*<br />
+              <strong>$805</strong> *(Free cancel until Jun 12)*<br />
+              <span style="font-size:12.5px; color:var(--muted);">2-adult Hotels.com base rate: $549</span>
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <strong>$830 member / $922 reg.</strong> *(Room-only, non-ref)*<br />
+              <strong>$875 member / $972 reg.</strong> *(w/ Breakfast, non-ref)*<br />
+              <strong>$1,034 member / $1,149 reg.</strong> *(Free cancel + Breakfast Included)*
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Confirmed Room / Suite Category</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              <strong>Superior Two-Bedroom Apartment</strong><br />
+              (or <em>Two-Bedroom Apartment with River View</em>)
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <strong>Premier Double Double Room</strong>
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <strong>Executive Family Room</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Exact Square Footage</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              <span class="winner-pill">Nearly 2&times; Larger!</span><br />
+              <strong>1,001 sq ft (93 m²)</strong><br />
+              *(River View 2-BR is 872 sq ft / 81 m²)*
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <strong>484 sq ft (45 m²)</strong>
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <strong>560 sq ft (52 m²)</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Bedrooms, Beds &amp; Bathrooms</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              <span class="winner-pill">2 Bedrooms + 2 Bathrooms</span><br />
+              <strong>2 Separate Bedrooms + Living Room + 2 Full Baths:</strong><br />
+              Master Queen/King w/ en-suite shower + Kids' Twin bedroom + 2nd bath w/ tub
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <span class="winner-pill">2 True Queen Beds</span><br />
+              <strong>1 Open-Plan Room + 1 Marble Bath:</strong><br />
+              2 Queen beds + sofa seating area + bath w/ separate soaking tub &amp; walk-in shower
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <strong>1 Grand Victorian Room + 1 Marble Bath:</strong><br />
+              2 Full/Double beds + separate sofa/armchair lounge area + bath w/ tub &amp; shower
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Guest Rating &amp; Pedigree</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              <strong>9.4 / 10 Wonderful</strong> (883 reviews)<br />
+              Location Score: <strong>9.6 / 10</strong><br />
+              5-Star Luxury Serviced Residence
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <span class="winner-pill">Highest Rated (9.5 / 10)</span><br />
+              <strong>9.5 / 10 Exceptional</strong> (1,617 reviews)<br />
+              Location Score: <strong>9.5 / 10</strong><br />
+              <strong>Forbes Five-Star</strong> Hotel
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <strong>8.9 / 10 Excellent</strong> (4,133 reviews)<br />
+              Location Score: <strong>9.2 / 10</strong><br />
+              <strong>Leading Hotels of the World (LHW)</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">June 13 Anniversary Vibe &amp; Dining</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              Private master suite for the two of you + sunset stroll along the Thames beside the <strong>Tower of London &amp; Tower Bridge</strong>; dine at <em>Coppa Club</em> or <em>The Ivy Tower Bridge</em>
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              Sleek, ultra-modern luxury by Yabu Pushelberg; Southeast Asian anniversary dinner at <strong>Straits Kitchen</strong> &amp; cocktails at <strong>Ginger Lily / Orchid Lounge</strong>
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <span class="winner-pill">Most Romantic Grand Hotel</span><br />
+              Soaring <strong>8-story glass-roofed Winter Garden palm court atrium</strong> with live piano + <strong>full Monday breakfast included</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Sunday Arrival from Heathrow<br /><span style="font-weight:400; font-size:12px;">(VS20 lands 12:50 PM)</span></td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              ~42 mins on Elizabeth Line to Liverpool St / Whitechapel + 5-min cab (or Circle Line to Tower Hill)
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <span class="winner-pill">Direct 1-Seat Train</span><br />
+              <strong>40 mins direct on the Elizabeth Line</strong> from LHR to Liverpool Street Station (1-min walk across the plaza to lobby)
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <span class="winner-pill">15-Min Heathrow Express</span><br />
+              <strong>15 mins on Heathrow Express to Paddington</strong> + 4-min cab (or 1 Bakerloo stop to Marylebone)
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Monday Morning Exit to Spring House (Cotswolds)</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              Take a 15–20 min cab/tube to Paddington (or Elizabeth Line back to LHR) to pick up your rental SUV on the west side of London
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              Hop on the Elizabeth Line right outside the lobby: <strong>10 mins to Paddington</strong> (or 40 mins back to LHR) to pick up your rental car
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <span class="winner-pill">Best Cotswolds Exit</span><br />
+              Pick up your rental SUV right at <strong>Paddington / Marble Arch (4 mins away)</strong> and drive straight west out the <strong>A40 / M40</strong> to Spring House!
+            </td>
+          </tr>
+          <tr>
+            <td class="row-label">Bottom-Line Verdict</td>
+            <td data-prop="#1. Cheval Three Quays ($631–$742)">
+              <strong>Pick #1</strong> if you want <strong>1,001 sq ft, 2 separate bedrooms, and 2 bathrooms</strong> (so you get a private bedroom on your anniversary) right next to the Tower of London &amp; Tower Bridge for the lowest price ($631–$742).
+            </td>
+            <td data-prop="#2. Pan Pacific London ($661–$805)">
+              <strong>Pick #2</strong> if you want a <strong>9.5-rated Forbes Five-Star hotel</strong> with <strong>two proper Queen beds</strong>, a zero-transfer 40-minute train ride from Heathrow, and a price comfortably under $900 ($661–$805).
+            </td>
+            <td data-prop="#3. The Landmark London ($830–$1,034)">
+              <strong>Pick #3</strong> if you want <strong>classic 1899 Victorian palm-court romance</strong> for your anniversary, a 560 sq ft room, <strong>full breakfast included</strong>, and the easiest West End / Paddington departure to the Cotswolds.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box">
+      <h3>Monday Morning Rental Car Tip for Spring House (Cotswolds)</h3>
+      <p>
+        Whichever of the three you pick, avoid picking up a rental car inside the City of London Congestion Charge zone. Either pick up your SUV on Monday morning at <strong>Paddington / Marble Arch</strong> (4 mins from <em>The Landmark</em>, or 10 mins on the Elizabeth Line from <em>Pan Pacific</em>) and drive straight west onto the A40/M40, or take the Elizabeth Line / Heathrow Express back to <strong>LHR</strong> so you have a single-airport LHR-to-LGW rental contract and zero central-London driving.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
