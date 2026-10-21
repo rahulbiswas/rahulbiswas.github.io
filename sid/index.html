@@ -89,8 +89,8 @@
             flex: 0 0 auto;
             /* Sits level with the middle of the card, not its top corner. */
             align-self: center;
-            width: 300px;
-            height: 300px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             /* Override the grid's generic img styling. */
             box-shadow: 0 0 0 6px #fff, 0 8px 22px rgba(0,0,0,0.18);
@@ -272,6 +272,9 @@
 
         /* Caption block under each grid tile. */
         .tile { margin: 0; }
+        /* Smaller than the featured posters so StockTest and Remake lead. */
+        .tile > a { text-align: left; }
+        .tile > a img { width: 210px; }
         .tile figcaption { padding: 0.85rem 0.15rem 0; text-align: left; }
 
         @media (max-width: 780px) {
@@ -318,7 +321,7 @@
                 </div>
             </div>
         </section>
-        <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="300" height="300">
+        <img class="portrait" src="portrait.png" alt="Siddhartha Biswas" width="240" height="240">
     </div>
 
     <h2 class="section">Experience</h2>
@@ -371,7 +374,7 @@
 
     <div class="featured">
         <a href="remake/">
-            <img src="remake.png" alt="Remake iPhone app screens">
+            <img src="remake.png" alt="Remake project poster">
         </a>
         <div class="featured-body">
             <h3 class="proj-title"><a href="remake/">Remake: Level Up Habits</a></h3>
@@ -435,10 +438,8 @@
             <figcaption>
                 <h3 class="proj-title"><a href="noaa/">NOAA Climate Trends</a></h3>
                 <p class="proj-desc">
-                    Decades of records from fifteen Santa Clara County weather stations, charted on
-                    hand-drawn canvas plots. The answer is yes, inland: San Jose&rsquo;s 90&deg;F days
-                    doubled from about 10 a year in the 1890s to 20 by the 2000s, while Palo Alto, nearer
-                    the bay, shows no rise.
+                    Fifteen Santa Clara County weather stations, charted by hand: inland San Jose&rsquo;s
+                    90&deg;F days doubled since the 1890s, while Palo Alto, by the bay, shows no rise.
                 </p>
                 <p class="stack">JavaScript &middot; Canvas &middot; NOAA GHCN-D</p>
                 <a class="code-link" href="https://github.com/siddharthajbiswas/noaa-climate-trends" target="_blank" rel="noopener noreferrer">
