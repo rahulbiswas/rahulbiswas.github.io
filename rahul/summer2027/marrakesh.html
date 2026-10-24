@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marrakesh — 9 Saved Riads (Thu June 17 – Sun June 20, 2027)</title>
+  <style>
+    :root { --bg:#faf6f1; --card:#fff; --stone:#f1e8dc; --ink:#2a211b; --muted:#6a5d52; --accent:#a4502a; --accent-dark:#7a3618;
+      --green:#2c5e3b; --green-bg:#e7f3eb; --gold:#7a5200; --gold-bg:#fff3c4; --gold-border:#d4a72c; --border:#eadfce; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:40px 24px 72px; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Georgia,serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    .container { max-width:1000px; margin:0 auto; }
+    header { background:linear-gradient(135deg,#5a2412 0%,#a4502a 100%); color:#fff; padding:34px 38px; border-radius:16px; margin-bottom:28px; box-shadow:0 8px 24px rgba(42,33,27,.15); }
+    header .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:12px; color:#f6d9c2; font-weight:600; margin-bottom:8px; }
+    header .eyebrow a { color:#fff3c4; text-decoration:none; }
+    header h1 { margin:0 0 10px; font-size:30px; }
+    header p { margin:0; color:#fbeee3; font-size:16px; max-width:800px; }
+    .pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .pill { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); padding:5px 12px; border-radius:999px; font-size:13px; }
+    h2 { font-size:22px; margin:34px 0 14px; border-bottom:2px solid var(--border); padding-bottom:8px; }
+    .grid2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px; }
+    .box { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px 20px; font-size:14.5px; color:var(--muted); }
+    .box.picks { border:2px solid var(--gold-border); background:#fffdf8; }
+    .box h3 { margin:0 0 8px; font-size:17px; color:var(--accent-dark); }
+    .box ul { margin:0; padding-left:18px; } .box li { margin-bottom:6px; }
+    .box strong { color:var(--ink); }
+    .cards { display:flex; flex-direction:column; gap:22px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:0 4px 14px rgba(42,33,27,.05); }
+    .card.top { border:2px solid var(--gold-border); background:#fffdf8; }
+    .gallery { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3px; background:var(--stone); }
+    .gallery img { width:100%; height:220px; object-fit:cover; display:block; }
+    .body { padding:20px 24px; }
+    .top-row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+    .top-row h3 { margin:0; font-size:21px; } .top-row h3 a { color:inherit; text-decoration:none; } .top-row h3 a:hover { color:var(--accent); text-decoration:underline; }
+    .badge { display:inline-block; font-size:12px; font-weight:700; padding:3px 10px; border-radius:999px; background:var(--stone); color:var(--muted); white-space:nowrap; }
+    .badge.green { background:var(--green-bg); color:var(--green); } .badge.gold { background:var(--gold-bg); color:var(--gold); border:1px solid var(--gold-border); }
+    .sub { font-size:13.5px; color:var(--muted); margin:4px 0 10px; }
+    .price { font-weight:700; font-size:16px; background:#f9f3eb; border:1px solid var(--border); border-radius:8px; padding:8px 12px; margin-bottom:12px; }
+    .price span { font-weight:500; font-size:13px; color:var(--muted); }
+    table.facts { width:100%; border-collapse:collapse; font-size:14px; margin-bottom:12px; }
+    table.facts th { text-align:left; width:92px; color:var(--accent-dark); font-weight:700; padding:5px 8px 5px 0; vertical-align:top; }
+    table.facts td { padding:5px 0; border-bottom:1px dashed var(--border); }
+    .pc { display:grid; grid-template-columns:1fr 1fr; gap:14px; font-size:14px; }
+    .pc h4 { margin:4px 0 6px; font-size:14.5px; } .pc ul { margin:0; padding-left:18px; color:var(--muted); } .pc li { margin-bottom:4px; }
+    blockquote { margin:14px 0; padding:10px 14px; background:#f9f3eb; border-left:3px solid var(--accent); border-radius:6px; font-size:14px; color:var(--ink); }
+    cite { color:var(--muted); font-style:normal; font-weight:600; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:9px 16px; border-radius:8px; font-size:14px; font-weight:600; }
+    .btn:hover { background:var(--accent-dark); }
+    .cmp { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow-x:auto; }
+    .cmp table { width:100%; border-collapse:collapse; font-size:14px; min-width:760px; }
+    .cmp th, .cmp td { padding:10px 12px; text-align:left; border-bottom:1px solid var(--border); }
+    .cmp th { background:var(--stone); color:var(--accent-dark); font-size:13px; text-transform:uppercase; letter-spacing:.04em; }
+    .cmp tr.hl td { background:#fffaeb; } .cmp a { color:var(--ink); font-weight:600; }
+    @media (max-width:720px) {
+      body { padding:16px 12px 48px; } header { padding:22px 18px; } header h1 { font-size:22px; }
+      .gallery { grid-template-columns:1fr; } .gallery img:nth-child(n+2) { display:none; }
+      .body { padding:16px; } .top-row { flex-direction:column; gap:6px; } .pc { grid-template-columns:1fr; }
+      .btn { display:block; text-align:center; }
+      .cmp table { min-width:0; } .cmp thead { display:none; } .cmp tr, .cmp td { display:block; width:100%; }
+      .cmp tr { border-bottom:2px solid var(--border); padding:6px 0; } .cmp td { border:none; padding:3px 12px; }
+      .cmp td::before { content:attr(data-l) ": "; font-weight:700; color:var(--accent-dark); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="eyebrow"><a href="index.html">&larr; Summer 2027 Trip Hub</a> &nbsp;&bull;&nbsp; Base 3 &bull; Morocco</div>
+      <h1>Marrakesh: The 9 Saved Riads (Thu June 17 – Sun June 20, 2027)</h1>
+      <p>All 9 places from the wishlist, checked against their live Airbnb listings for <strong>3 nights, 2 adults + 2 kids (13 &amp; 6)</strong>. Sorted from lowest to highest price. <strong>All 9 come in under the $2,700 budget</strong>, and every price includes all fees.</p>
+      <div class="pills">
+        <span class="pill">Arrive: BA 2812 lands RAK 6:15 PM Thu</span>
+        <span class="pill">Budget: $2,700 ($900/night)</span>
+        <span class="pill">Range: $884 – $2,188</span>
+        <span class="pill">Next: ONCF train to Fès, Sun 8:35 AM</span>
+      </div>
+    </header>
+
+    <div class="grid2">
+      <div class="box picks">
+        <h3>Top 3 for the four of you</h3>
+        <ul>
+          <li><a href="#r8"><strong>Dar Num ($2,135)</strong></a>: the best riad here. 320 m², 4 big en-suite rooms, 128 reviews at 4.99, staff 8–5, parking nearby. $565 under budget.</li>
+          <li><a href="#r7"><strong>Dar Madjoul ($1,517)</strong></a>: 4 bedrooms and 4.5 baths by Bahia Palace for about $600 less. Ask the host about arriving after 8 PM.</li>
+          <li><a href="#r3"><strong>Boutique Riad Medina ($1,160)</strong></a>: best value. 268 reviews at 4.96, 3 en-suite queens, and the concierge walks you in.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>What applies to all 9</h3>
+        <ul>
+          <li><strong>AC:</strong> all 9 list air conditioning. That matters in mid-June, when it's 35–38°C (95–100°F).</li>
+          <li><strong>Pools:</strong> riad pools are small plunge pools with no fence or gate. Keep an eye on Ellie.</li>
+          <li><strong>Medina access:</strong> cars stop at the nearest lane. Staff meet you there, which is easy with carry-ons. Only Dar Louma lets the car pull up to the door.</li>
+          <li><strong>Arrival:</strong> you land at 6:15 PM, so expect to reach the riad around 7:30–8 PM. Book the airport transfer through the riad.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>All 9, Side by Side</h2>
+    <div class="cmp">
+      <table>
+        <thead><tr><th>Riad</th><th>3 nights</th><th>Bedrooms</th><th>Baths</th><th>To Jemaa el-Fna</th><th>Rating</th><th>Verdict</th></tr></thead>
+        <tbody><tr><td data-l="Riad"><a href="#r1">#1. Private Riad with Pool &amp; Rooftop</a></td><td data-l="Price">$884</td><td data-l="Bedrooms">3 BR</td><td data-l="Baths">2</td><td data-l="To the square">~12-min walk (host)</td><td data-l="Rating">★ 5.0 (39)</td><td data-l="Verdict"><span class="badge">Probably not</span></td></tr><tr><td data-l="Riad"><a href="#r2">#2. Refined, cozy riad (Dar Limouni)</a></td><td data-l="Price">$996</td><td data-l="Bedrooms">2 BR</td><td data-l="Baths">2</td><td data-l="To the square">~20-min walk (host)</td><td data-l="Rating">★ 5.0 (48)</td><td data-l="Verdict"><span class="badge">Probably not</span></td></tr><tr class="hl"><td data-l="Riad"><a href="#r3">#3. Boutique Riad Medina</a></td><td data-l="Price">$1,160</td><td data-l="Bedrooms">3 BR</td><td data-l="Baths">3.5</td><td data-l="To the square">~12–15-min walk</td><td data-l="Rating">★ 4.96 (268)</td><td data-l="Verdict"><span class="badge green">Top 3</span></td></tr><tr><td data-l="Riad"><a href="#r4">#4. Riad Josephine</a></td><td data-l="Price">$1,219</td><td data-l="Bedrooms">3 suites</td><td data-l="Baths">3</td><td data-l="To the square">~10-min walk (host)</td><td data-l="Rating">★ 5.0 (44)</td><td data-l="Verdict"><span class="badge gold">Worth a look</span></td></tr><tr><td data-l="Riad"><a href="#r5">#5. Riad Keltoum</a></td><td data-l="Price">$1,254</td><td data-l="Bedrooms">2 AC suites (twins or king) + living room with 2 sofa beds</td><td data-l="Baths">2.5</td><td data-l="To the square">~5-min walk (host)</td><td data-l="Rating">★ 5.0 (205)</td><td data-l="Verdict"><span class="badge gold">Worth a look</span></td></tr><tr><td data-l="Riad"><a href="#r6">#6. Riad Kaolane</a></td><td data-l="Price">$1,270</td><td data-l="Bedrooms">4 BR</td><td data-l="Baths">4</td><td data-l="To the square">~5 min to the square; ~7 min from the car park</td><td data-l="Rating">★ 5.0 (11)</td><td data-l="Verdict"><span class="badge gold">Worth a look</span></td></tr><tr class="hl"><td data-l="Riad"><a href="#r7">#7. Dar Madjoul</a></td><td data-l="Price">$1,517</td><td data-l="Bedrooms">4 BR</td><td data-l="Baths">4.5</td><td data-l="To the square">~10-min walk</td><td data-l="Rating">★ 4.97 (75)</td><td data-l="Verdict"><span class="badge green">Top 3</span></td></tr><tr class="hl"><td data-l="Riad"><a href="#r8">#8. Dar Num</a></td><td data-l="Price">$2,135</td><td data-l="Bedrooms">4 en-suite BR</td><td data-l="Baths">4</td><td data-l="To the square">~8-min walk (host)</td><td data-l="Rating">★ 4.99 (128)</td><td data-l="Verdict"><span class="badge green">Top 3</span></td></tr><tr><td data-l="Riad"><a href="#r9">#9. Villa Dar Louma (Luxe)</a></td><td data-l="Price">$2,188</td><td data-l="Bedrooms">4 en-suite BR</td><td data-l="Baths">4</td><td data-l="To the square">10–15 min drive to the Medina</td><td data-l="Rating">★ 5.0 (69)</td><td data-l="Verdict"><span class="badge">Probably not</span></td></tr></tbody>
+      </table>
+    </div>
+
+    <h2>Each Listing (Lowest to Highest Price)</h2>
+    <div class="cards">
+      <div class="card" id="r1">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1620858073707426969/original/ae642832-fda5-40b4-98dd-4266bb087801.jpeg?im_w=720" alt="Private Riad with Pool &amp; Rooftop photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1620858073707426969/original/f4f99dd3-d30b-4129-accf-49c3cd780bda.jpeg?im_w=720" alt="Private Riad with Pool &amp; Rooftop photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1620858073707426969/original/0efe69c8-2cf0-4cb3-8101-bc6e47e8ffdd.jpeg?im_w=720" alt="Private Riad with Pool &amp; Rooftop photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/1620858073707426969?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#1. Private Riad with Pool &amp; Rooftop</a></h3>
+            <span class="badge">Probably not</span>
+          </div>
+          <div class="sub">“Private Riad with Pool &amp; Rooftop – Medina” &bull; ★ 5.0 (39 reviews) &bull; Location 4.69</div>
+          <div class="price">$884 for 3 nights <span>($295/night &bull; $1,816 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>East Medina (near a secure car park) &bull; ~12-min walk (host) to Jemaa el-Fna (1.3 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>3 BR: double · double · 2 singles</td></tr>
+            <tr><th>Baths</th><td>2 (1 en-suite + 1 shared double bathroom)</td></tr>
+            <tr><th>AC</th><td>Yes, reversible AC in bedrooms</td></tr>
+            <tr><th>Pool</th><td>Patio pool (unfenced)</td></tr>
+            <tr><th>Staff</th><td>Housekeeper Meriem: breakfast + daily cleaning; dinners on request</td></tr>
+            <tr><th>Airport</th><td>€25 day / €35 night (1–6 people)</td></tr>
+            <tr><th>Check-in</th><td>After 3 PM &bull; Free before May 18</td></tr>
+            <tr><th>Host</th><td>Wafae &amp; Richard · Superhost · 7 months hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Cheapest of the 9 by far ($295/night)</li><li>Perfect 5.0 from 39 reviews</li><li>Steps from a secure car park with taxi drop-off</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Two of the three bedrooms share one bathroom</li><li>Lowest location score of the Medina riads (4.69); about 12 min from the main square</li><li>UK double beds, not queens; host is fairly new</li></ul></div>
+          </div>
+          <blockquote>“Wafae and Richard were very friendly and helpful, they went over and above to help us and make us feel welcome. Miriam made the most delicious breakfasts for us too.” <cite>— Jane</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/1620858073707426969?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($884) &rarr;</a>
+        </div>
+      </div>
+      <div class="card" id="r2">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1457245259776559272/original/8c0b2c8e-4b62-49ad-82ad-ee39167427aa.jpeg?im_w=720" alt="Refined, cozy riad (Dar Limouni) photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1457245259776559272/original/7b4abde5-09f6-4b56-90cc-a00c6edb2e02.jpeg?im_w=720" alt="Refined, cozy riad (Dar Limouni) photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1457245259776559272/original/db734ec3-5518-4deb-87bd-c0fd2c110662.jpeg?im_w=720" alt="Refined, cozy riad (Dar Limouni) photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/1457245259776559272?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#2. Refined, cozy riad (Dar Limouni)</a></h3>
+            <span class="badge">Probably not</span>
+          </div>
+          <div class="sub">“Refined, cozy and authentic riad, heated pool” &bull; ★ 5.0 (48 reviews) &bull; Location 4.88</div>
+          <div class="price">$996 for 3 nights <span>($332/night &bull; $1,704 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>North Medina, quiet residential street &bull; ~20-min walk (host) to Jemaa el-Fna (1.5 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>2 BR: queen · queen</td></tr>
+            <tr><th>Baths</th><td>2 (both en-suite)</td></tr>
+            <tr><th>AC</th><td>Yes, reversible AC</td></tr>
+            <tr><th>Pool</th><td>Small patio cooling pool (&quot;not for jumping or diving&quot;)</td></tr>
+            <tr><th>Staff</th><td>Nawal: breakfast 8:30–10:30 + daily cleaning; dinners on request</td></tr>
+            <tr><th>Airport</th><td>From 200 MAD (~$20)</td></tr>
+            <tr><th>Check-in</th><td>After 3 PM &bull; Free before June 12</td></tr>
+            <tr><th>Host</th><td>Wafa · Superhost · 1 year hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Parking right in front of the riad (easiest 8 PM arrival)</li><li>Quiet; guests love sleeping in</li><li>Perfect 5.0 from 48 reviews</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Only 2 bedrooms, so Rohan and Ellie would share a queen bed</li><li>Farthest Medina option: ~20 min walk to Jemaa el-Fna</li><li>No smoke alarm reported</li></ul></div>
+          </div>
+          <blockquote>“Naoual, who made us an incredible breakfast, even customized for the children. Her kindness and concern for doing things well are rarely seen these days!” <cite>— Andrea</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/1457245259776559272?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($996) &rarr;</a>
+        </div>
+      </div>
+      <div class="card top" id="r3">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-699287118127949181/original/4285e00e-ed83-4689-9bff-8a2b731b5013.jpeg?im_w=720" alt="Boutique Riad Medina photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/miso/Hosting-699287118127949181/original/35d2002c-0520-417a-ab71-22bce9063a69.jpeg?im_w=720" alt="Boutique Riad Medina photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/miso/Hosting-699287118127949181/original/e6fd8a1f-72d1-4e0d-bae0-8e60f77fb4da.jpeg?im_w=720" alt="Boutique Riad Medina photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/699287118127949181?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#3. Boutique Riad Medina</a></h3>
+            <span class="badge green">Top 3</span>
+          </div>
+          <div class="sub">“Boutique Riad Medina / Moroccan Breakfast included” &bull; ★ 4.96 (268 reviews) &bull; Location 4.84</div>
+          <div class="price">$1,160 for 3 nights <span>($387/night &bull; $1,540 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Riad Laarous, a block from Ben Youssef Madrasa &bull; ~12–15-min walk to Jemaa el-Fna (0.9 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>3 BR: queen · queen · queen (cribs available)</td></tr>
+            <tr><th>Baths</th><td>3.5 (all en-suite)</td></tr>
+            <tr><th>AC</th><td>Yes, AC (cooling + heating) in every suite</td></tr>
+            <tr><th>Pool</th><td>Heated courtyard pool (unfenced)</td></tr>
+            <tr><th>Staff</th><td>Myriam: breakfast 8:30–11:30 + daily cleaning; concierge Chaouki meets you</td></tr>
+            <tr><th>Airport</th><td>€25 (driver with a spacious car)</td></tr>
+            <tr><th>Check-in</th><td>After 3 PM · checkout noon &bull; Free before June 12</td></tr>
+            <tr><th>Host</th><td>Laila · Superhost · 4 years hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Most-reviewed of the 9: 268 reviews at 4.96</li><li>Car/taxi can get close; concierge walks you in</li><li>Each kid gets their own queen room; noon checkout</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Airbnb flags rooftop heights without rails (watch Ellie up there)</li><li>3 bedrooms, not 4</li></ul></div>
+          </div>
+          <blockquote>“Fabulous breakfast prepared by Miriam. Great variety and high quality. Chaokie the concierge was very helpful. He met us and walked with us to the property and helped us connect with our return airport transfer.” <cite>— Shirley</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/699287118127949181?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($1,160) &rarr;</a>
+        </div>
+      </div>
+      <div class="card" id="r4">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1566664421337778653/original/e0c936f8-2c95-4bd7-9d85-77f9e6b739a9.jpeg?im_w=720" alt="Riad Josephine photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1566664421337778653/original/bdb21301-b6e9-45af-b6d6-6fee9a0015c0.jpeg?im_w=720" alt="Riad Josephine photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1566664421337778653/original/7f96cd84-2e4a-4979-8ec6-021fde44a5dc.png?im_w=720" alt="Riad Josephine photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/1566664421337778653?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#4. Riad Josephine</a></h3>
+            <span class="badge gold">Worth a look</span>
+          </div>
+          <div class="sub">“Josephine - Riad with heated pool and rooftop” &bull; ★ 5.0 (44 reviews) &bull; Location 5.0</div>
+          <div class="price">$1,219 for 3 nights <span>($406/night &bull; $1,481 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Bab Doukkala, near Dar El Bacha &bull; ~10-min walk (host) to Jemaa el-Fna (1.0 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>3 suites: king · king · king (180 cm beds)</td></tr>
+            <tr><th>Baths</th><td>3 (all en-suite)</td></tr>
+            <tr><th>AC</th><td>Yes, reversible AC in all suites</td></tr>
+            <tr><th>Pool</th><td>Heated courtyard plunge pool / hot tub</td></tr>
+            <tr><th>Staff</th><td>Laila: breakfast 8–10 + daily cleaning; dinner €25 (half price under 12)</td></tr>
+            <tr><th>Airport</th><td>Included (Mustapha meets you at the airport)</td></tr>
+            <tr><th>Check-in</th><td>After 4 PM &bull; Free before June 16</td></tr>
+            <tr><th>Host</th><td>Josephine (Yvan &amp; Catherine) · Superhost · 10 months hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Airport pickup included, which is a big help for the 8 PM arrival</li><li>Airbnb Top 1%; perfect 5.0 location score</li><li>Taxi stand 1 min away; rooftop views of Koutoubia &amp; Atlas</li><li>Smoke and CO alarms reported</li></ul></div>
+            <div><h4>Cons</h4><ul><li>The &quot;pool&quot; is a heated hot-tub-style tub, less refreshing at 38°C</li><li>3 bedrooms, not 4</li></ul></div>
+          </div>
+          <blockquote>“Catherine and Laila were there to welcome us when we arrived and Mustapha was waiting for us at the airport which made the whole arrival feel effortless.” <cite>— Tara</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/1566664421337778653?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($1,219) &rarr;</a>
+        </div>
+      </div>
+      <div class="card" id="r5">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1061061709989971406/original/2c7212d0-003c-474d-8a97-3ae5d4fe21e6.jpeg?im_w=720" alt="Riad Keltoum photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1061061709989971406/original/1fc9d213-b2e2-4600-9c6d-988a92b26a75.jpeg?im_w=720" alt="Riad Keltoum photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1061061709989971406/original/ff7c9b75-7700-4a80-b0ab-e1cb12b3c0a7.jpeg?im_w=720" alt="Riad Keltoum photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/1061061709989971406?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#5. Riad Keltoum</a></h3>
+            <span class="badge gold">Worth a look</span>
+          </div>
+          <div class="sub">“Riad Keltoum Private Pool” &bull; ★ 5.0 (205 reviews) &bull; Location 4.94</div>
+          <div class="price">$1,254 for 3 nights <span>($418/night &bull; $1,446 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Mouassine, right by Dar El Bacha &bull; ~5-min walk (host) to Jemaa el-Fna (0.5 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>2 AC suites (twins or king) + living room with 2 sofa beds</td></tr>
+            <tr><th>Baths</th><td>2.5</td></tr>
+            <tr><th>AC</th><td>Yes in the 2 suites</td></tr>
+            <tr><th>Pool</th><td>Small patio plunge pool (unfenced)</td></tr>
+            <tr><th>Staff</th><td>Amina: breakfast + daily housekeeping 9–5; dinners €20/person</td></tr>
+            <tr><th>Airport</th><td>Via their trusted driver (price on request)</td></tr>
+            <tr><th>Check-in</th><td>After 3 PM &bull; Free before May 18</td></tr>
+            <tr><th>Host</th><td>Sébastien &amp; Maud · Superhost · 3 years hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Perfect 5.0 from 205 reviews</li><li>Great location in Mouassine, 5 min from the square</li><li>Crib, high chair, fireplace guards</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Really 2 bedrooms; the &quot;third&quot; is the living room with sofa beds</li><li>Price has gone up: now $1,254 (the wishlist showed $1,124)</li></ul></div>
+          </div>
+          <blockquote>“The small pool on the ground floor is an absolute eye-catcher and contributes to the riad&#x27;s pleasant atmosphere. Breakfast or just winding down the evening on the rooftop terrace are highly recommended.” <cite>— Sandro</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/1061061709989971406?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($1,254) &rarr;</a>
+        </div>
+      </div>
+      <div class="card" id="r6">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1652019167001099392/original/8fe77e24-9351-4384-8dd5-fc3010da429e.png?im_w=720" alt="Riad Kaolane photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1652019167001099392/original/98e5a6ba-a1a8-4b6b-b5d8-b5d90ba7a4be.png?im_w=720" alt="Riad Kaolane photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1652019167001099392/original/bad292c2-4b47-4c98-bc6e-329bbc1d6144.png?im_w=720" alt="Riad Kaolane photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/1652019167001099392?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#6. Riad Kaolane</a></h3>
+            <span class="badge gold">Worth a look</span>
+          </div>
+          <div class="sub">“Private Riad•Pool• Breakfast•5min Jemaa el-Fna” &bull; ★ 5.0 (11 reviews) &bull; Location 5.0</div>
+          <div class="price">$1,270 for 3 nights <span>($423/night &bull; $1,430 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Central Medina, just north of the square &bull; ~5 min to the square; ~7 min from the car park to Jemaa el-Fna (0.4 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>4 BR: queen · queen · queen · queen</td></tr>
+            <tr><th>Baths</th><td>4</td></tr>
+            <tr><th>AC</th><td>Yes, AC in all rooms</td></tr>
+            <tr><th>Pool</th><td>Private patio pool (unfenced)</td></tr>
+            <tr><th>Staff</th><td>Breakfast daily; bed-making and dinners by staff; concierge company (Nomat)</td></tr>
+            <tr><th>Airport</th><td>Private transfers, drivers &amp; excursions arranged</td></tr>
+            <tr><th>Check-in</th><td>3–10 PM &bull; Free before June 3</td></tr>
+            <tr><th>Host</th><td>Nomat Collection · Superhost · 6 months hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Closest to Jemaa el-Fna of all 9</li><li>4 equal queen bedrooms, 4 baths; travel crib</li><li>Discounted from $1,436; latest free cancellation (June 3)</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Only 11 reviews; newly renovated and run by a management company</li><li>No guest kitchen</li><li>A guest calls the approach street &quot;a little quiet and run-down&quot;</li></ul></div>
+          </div>
+          <blockquote>“A concierge was waiting for us at the car park and helped carry our luggage to the riad, which was about a seven-minute walk away. The street leading to the riad is a little quiet and run-down, but once you step inside, it&#x27;s absolutely lovely.” <cite>— Roopesh</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/1652019167001099392?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($1,270) &rarr;</a>
+        </div>
+      </div>
+      <div class="card top" id="r7">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1428943167703832479/original/9f551f4c-27e1-476b-befd-f1032cb7b6b4.jpeg?im_w=720" alt="Dar Madjoul photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1428943167703832479/original/97c90189-7760-4308-99ab-05d726020a89.jpeg?im_w=720" alt="Dar Madjoul photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1428943167703832479/original/c9715502-ee62-4729-b628-6314112fe639.jpeg?im_w=720" alt="Dar Madjoul photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/1428943167703832479?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#7. Dar Madjoul</a></h3>
+            <span class="badge green">Top 3</span>
+          </div>
+          <div class="sub">“Dar Madjoul - New! Special Opening rates!” &bull; ★ 4.97 (75 reviews) &bull; Location 4.96</div>
+          <div class="price">$1,517 for 3 nights <span>($506/night &bull; $1,183 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Rue de la Bahia, steps from Bahia Palace &bull; ~10-min walk to Jemaa el-Fna (0.6 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>4 BR: king · queen · queen · queen</td></tr>
+            <tr><th>Baths</th><td>4.5</td></tr>
+            <tr><th>AC</th><td>Yes, its own Hitachi AC unit in every bedroom</td></tr>
+            <tr><th>Pool</th><td>Courtyard plunge pool + rooftop terrace</td></tr>
+            <tr><th>Staff</th><td>Amina: breakfast 8:30–11 + cleaning 8–3; dinners &amp; cooking classes</td></tr>
+            <tr><th>Airport</th><td>Ask host (taxis 2 min away)</td></tr>
+            <tr><th>Check-in</th><td>3–8 PM ⚠️ &bull; Free before June 12</td></tr>
+            <tr><th>Host</th><td>Joanna · Superhost · 1 year hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>4 real bedrooms, 4.5 baths, for $1,183 under budget</li><li>Airbnb Top 5%; 75 reviews at 4.97</li><li>Taxis and parking 2 min away; smoke alarm reported</li><li>Washer, dishwasher, filtered water</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Check-in window ends at 8 PM, about when you&#x27;ll land. Ask the host about late arrival</li><li>&quot;New!&quot; in the title is stale; the host is now 1 year in</li></ul></div>
+          </div>
+          <blockquote>“Amina was fantastic. So helpful giving us restaurant recommendations, taking us shopping for argan oil and spices. The location is perfect. I have stayed in 23 Airbnb properties and this was the best.” <cite>— Karen</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/1428943167703832479?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($1,517) &rarr;</a>
+        </div>
+      </div>
+      <div class="card top" id="r8">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-734016384586290594/original/08e0edbe-71be-4629-98c8-08b8fe330f7b.jpeg?im_w=720" alt="Dar Num photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/miso/Hosting-734016384586290594/original/2fb69bf0-e52e-4157-8d95-9c7b45983746.jpeg?im_w=720" alt="Dar Num photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/miso/Hosting-734016384586290594/original/0040169f-ed18-4480-b301-3e96be90c2cb.jpeg?im_w=720" alt="Dar Num photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/734016384586290594?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#8. Dar Num</a></h3>
+            <span class="badge green">Top 3</span>
+          </div>
+          <div class="sub">“Dar Num, luxury private Riad heated pool breakfast” &bull; ★ 4.99 (128 reviews) &bull; Location 4.93</div>
+          <div class="price">$2,135 for 3 nights <span>($712/night &bull; $565 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Derb Dabachi, central Medina &bull; ~8-min walk (host) to Jemaa el-Fna (0.7 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>4 en-suite BR: king + single · queen · queen · king (20–33 m² each)</td></tr>
+            <tr><th>Baths</th><td>4</td></tr>
+            <tr><th>AC</th><td>Yes, reversible AC in all 4 rooms</td></tr>
+            <tr><th>Pool</th><td>Heated patio pool, 2.5 × 3 m, 1.2 m deep</td></tr>
+            <tr><th>Staff</th><td>Najib&#x27;s team on site 8 AM–5 PM: breakfast, daily cleaning, bookings</td></tr>
+            <tr><th>Airport</th><td>Najib arranges taxis &amp; transfers</td></tr>
+            <tr><th>Check-in</th><td>After 3 PM &bull; Free before May 18</td></tr>
+            <tr><th>Host</th><td>Corinne · Superhost · 3 years hosting</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Biggest and most polished riad: 320 m², 3 terraces, Atlas views</li><li>Huge rooms (20–33 m²); 128 reviews at 4.99</li><li>Car parking close by (rare in the Medina)</li><li>Kid kit on request: high chair, cribs, toys</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Most expensive riad, though still $565 under budget</li><li>No smoke alarm reported; no TV</li><li>Only staff may use the kitchens</li></ul></div>
+          </div>
+          <blockquote>“My family and I spent an amazing four days and nights at Riad Dar Num. Corinne is an excellent host and we were beautifully looked after by Najib and his team. The riad is beautiful and provided a welcome, cool relief from the heat.” <cite>— Charlotte</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/734016384586290594?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($2,135) &rarr;</a>
+        </div>
+      </div>
+      <div class="card" id="r9">
+        <div class="gallery"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-817948123271952580/original/b0692930-7301-4e48-acdd-418449d221d5.jpeg?im_w=720" alt="Villa Dar Louma (Luxe) photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-817948123271952580/original/7a33d624-93b1-44d4-b2d3-dbc13f70e813.jpeg?im_w=720" alt="Villa Dar Louma (Luxe) photo" loading="lazy" /><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-817948123271952580/original/a0f27b4d-1923-41a6-8632-2ee41e20151e.jpeg?im_w=720" alt="Villa Dar Louma (Luxe) photo" loading="lazy" /></div>
+        <div class="body">
+          <div class="top-row">
+            <h3><a href="https://www.airbnb.com/rooms/817948123271952580?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">#9. Villa Dar Louma (Luxe)</a></h3>
+            <span class="badge">Probably not</span>
+          </div>
+          <div class="sub">“Villa Luxury DAR LOUMA in Marrakesh” &bull; ★ 5.0 (69 reviews) &bull; Location 4.64</div>
+          <div class="price">$2,188 for 3 nights <span>($729/night &bull; $512 under budget &bull; all fees included)</span></div>
+          <table class="facts">
+            <tr><th>Where</th><td>Gated estate near Amelkis Golf, ~5 km east of the Medina &bull; 10–15 min drive to the Medina to Jemaa el-Fna (5.2 km straight-line)</td></tr>
+            <tr><th>Beds</th><td>4 en-suite BR: queen · queen · queen · king</td></tr>
+            <tr><th>Baths</th><td>4</td></tr>
+            <tr><th>AC</th><td>Yes, central AC throughout</td></tr>
+            <tr><th>Pool</th><td>Large Balinese pool with a shallow end, heated on request; garden</td></tr>
+            <tr><th>Staff</th><td>Khamissa: breakfast + housekeeping 8 hrs/day; Saïd manages; lunch €25 / dinner €30</td></tr>
+            <tr><th>Airport</th><td>Driver &amp; transfers available; 20 min from airport</td></tr>
+            <tr><th>Check-in</th><td>After 3 PM &bull; Free before May 18</td></tr>
+            <tr><th>Host</th><td>Nathalie · Superhost · 6 years hosting · Airbnb Luxe</td></tr>
+          </table>
+          <div class="pc">
+            <div><h4>Pros</h4><ul><li>Real swimming pool with a shallow end, good for Ellie</li><li>Car pulls up to the door; free parking; 20 min from the airport</li><li>Big garden, TV, dishwasher; childcare on request</li></ul></div>
+            <div><h4>Cons</h4><ul><li>Not in the Medina, so every outing is a drive</li><li>Host notes &quot;residential works nearby&quot; (construction)</li><li>Most expensive of the 9; lowest location score (4.64)</li></ul></div>
+          </div>
+          <blockquote>“Had one of the best family holidays and it was entirely because of the Airbnb. The pool was clean and very child friendly with a shallow part for the younger kids to enjoy.” <cite>— Zena</cite></blockquote>
+          <a class="btn" href="https://www.airbnb.com/rooms/817948123271952580?adults=2&amp;children=2&amp;check_in=2027-06-17&amp;check_out=2027-06-20" target="_blank" rel="noopener">Open on Airbnb ($2,188) &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
