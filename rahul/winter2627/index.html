@@ -317,10 +317,42 @@
         margin-bottom: 4px;
       }
     }
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .subnav a {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      transition: all 0.15s ease;
+    }
+    .subnav a:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+    .subnav a.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <nav class="subnav">
+      <a href="index.html" class="active">Main Winter 2026–2027 Hub</a>
+      <a href="pv.html">Puerto Vallarta 2BR/3BR Airbnbs (12) &rarr;</a>
+    </nav>
+
     <header>
       <div class="eyebrow">Winter 2026–2027 &bull; Family Trip Hub &bull; Dec 23 – Dec 28, 2026</div>
       <h1>Winter 2026–2027: 5-Night Oceanfront Getaway</h1>
@@ -425,6 +457,26 @@
 
     <h2>3. Live-Priced Featured Options (Dec 23 – Dec 28, 2026)</h2>
     <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-body">
+          <div>
+            <div class="guide-eyebrow">Puerto Vallarta, Mexico (PVR) &bull; Live Pricing &bull; $3,907 Total</div>
+            <h3 class="guide-title">
+              <a href="https://www.airbnb.com/rooms/623895318911460765?adults=3&amp;children=2&amp;check_in=2026-12-23&amp;check_out=2026-12-28" target="_blank" rel="noopener">Top Guest Favorite Home w/ Private Pool (★ 4.95)</a>
+            </h3>
+            <p class="guide-desc">
+              <strong>3 BR / 2.5 BA Home w/ Private Pool, 4 Blocks from Beach (Airbnb #623895318911460765)</strong> with ★ 4.95 rating (57 reviews), 3 beds, and free cancellation.
+            </p>
+            <div class="guide-meta">
+              <strong>Flights (4 tickets, SJC &harr; PVR nonstop, Alaska, 3h45m):</strong> $2,624 ($656/pp)<br />
+              <strong>Lodging (5 nights, 3BR/2.5BA, all fees included):</strong> $1,283 ($257/nt)<br />
+              <strong>Total Trip Cost:</strong> <strong>$3,907</strong>
+            </div>
+          </div>
+          <a class="btn" href="pv.html">Explore All 12 Puerto Vallarta Airbnbs &rarr;</a>
+        </div>
+      </div>
+
       <div class="guide-card">
         <div class="guide-body">
           <div>
@@ -667,37 +719,31 @@
             <td><strong>$5,396</strong><br /><em>(estimated)</em></td>
           </tr>
           <tr>
-            <td><strong>2. Puerto Vallarta / Riviera Nayarit (PVR)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
-            <td><strong>$2,624</strong> ($656/pp)<br /><em>SJC &harr; PVR nonstop, Alaska</em></td>
-            <td><strong>$2,800</strong><br /><em>(estimated)</em></td>
-            <td><strong>$5,424</strong><br /><em>(estimated)</em></td>
-          </tr>
-          <tr>
-            <td><strong>3. Baja: Todos Santos / La Paz (SJD)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
+            <td><strong>2. Baja: Todos Santos / La Paz (SJD)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
             <td><strong>$2,744</strong> ($686/pp)<br /><em>SFO &harr; SJD nonstop, Alaska</em></td>
             <td><strong>$2,900</strong><br /><em>(estimated)</em></td>
             <td><strong>$5,644</strong><br /><em>(estimated)</em></td>
           </tr>
           <tr>
-            <td><strong>4. Oahu, Hawaii (HNL)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
+            <td><strong>3. Oahu, Hawaii (HNL)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
             <td><strong>$2,748</strong> ($687/pp)<br /><em>SFO &harr; HNL nonstop, Alaska</em></td>
             <td><strong>$3,800</strong><br /><em>(estimated)</em></td>
             <td><strong>$6,548</strong><br /><em>(estimated)</em></td>
           </tr>
           <tr>
-            <td><strong>5. Kauai, Hawaii (LIH)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
+            <td><strong>4. Kauai, Hawaii (LIH)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
             <td><strong>$2,516</strong> ($629/pp)<br /><em>SFO &harr; LIH nonstop, United</em></td>
             <td><strong>$4,600</strong><br /><em>(estimated)</em></td>
             <td><strong>$7,116</strong><br /><em>(estimated)</em></td>
           </tr>
           <tr>
-            <td><strong>6. Big Island, Hawaii (KOA)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
+            <td><strong>5. Big Island, Hawaii (KOA)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
             <td><strong>$3,428</strong> ($857/pp)<br /><em>SFO &harr; KOA nonstop, United</em></td>
             <td><strong>$4,400</strong><br /><em>(estimated)</em></td>
             <td><strong>$7,828</strong><br /><em>(estimated)</em></td>
           </tr>
           <tr>
-            <td><strong>7. Riviera Maya / Cancún (CUN)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
+            <td><strong>6. Riviera Maya / Cancún (CUN)</strong><br /><span class="status-pill est">ESTIMATED LODGING</span></td>
             <td><strong>$4,664</strong> ($1,166/pp)<br /><em>SFO &harr; CUN nonstop, United</em></td>
             <td><strong>$3,400</strong><br /><em>(estimated)</em></td>
             <td><strong>$8,064</strong><br /><em>(estimated)</em></td>
