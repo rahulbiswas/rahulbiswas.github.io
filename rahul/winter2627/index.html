@@ -243,6 +243,54 @@
       color: var(--ink);
       margin-top: 2px;
     }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .photo-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(36, 33, 29, 0.05);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .photo-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(36, 33, 29, 0.1);
+    }
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      background: #f6f1e6;
+    }
+    .photo-card img.contain-img {
+      object-fit: contain;
+      background: #fff;
+      padding: 6px;
+    }
+    .photo-caption {
+      padding: 10px 14px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--ink);
+      border-top: 1px solid var(--border);
+      background: #fcfaf5;
+      flex: 1;
+    }
+    .photo-caption strong {
+      color: var(--accent-dark);
+      display: block;
+      margin-bottom: 2px;
+    }
     @media (max-width: 720px) {
       html, body {
         overflow-x: hidden;
@@ -554,6 +602,50 @@
     </div>
 
     <h2>5. Deep Dive: Grand Miramar All Luxury Suites &amp; Residences (~$8,080 Total)</h2>
+    <div class="photo-grid">
+      <a class="photo-card" href="img/miramar-hero.webp" target="_blank" rel="noopener">
+        <img src="img/miramar-hero.webp" alt="Grand Miramar heated infinity pool and submerged loungers overlooking Banderas Bay" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Heated Infinity Pool &amp; Panorama</strong>
+          180°–270° Upper Conchas Chinas hillside views over Banderas Bay with submerged mosaic loungers (whale-watching in Dec/Jan).
+        </div>
+      </a>
+      <a class="photo-card" href="img/miramar-2br-1.webp" target="_blank" rel="noopener">
+        <img src="img/miramar-2br-1.webp" alt="Grand Miramar 2-Bedroom Residence living room, 6-seat dining table, and ocean-view terrace" loading="lazy" />
+        <div class="photo-caption">
+          <strong>2BR Residence Living &amp; 6-Seat Dining (1,720 sq ft)</strong>
+          Central open-concept living room, 6-person indoor dining table, and wide sliding glass doors to the ocean-view terrace.
+        </div>
+      </a>
+      <a class="photo-card" href="img/miramar-2br-3.webp" target="_blank" rel="noopener">
+        <img src="img/miramar-2br-3.webp" alt="Grand Miramar 2-Bedroom Residence Master Bedroom with King bed and terrace access" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Master Bedroom Suite (1 King Bed)</strong>
+          Private master suite wing with 1 King bed, sitting area, marble en-suite bath, and direct walk-out access to the ocean-view balcony.
+        </div>
+      </a>
+      <a class="photo-card" href="img/miramar-2br-2.webp" target="_blank" rel="noopener">
+        <img src="img/miramar-2br-2.webp" alt="Grand Miramar 2-Bedroom Residence Second Bedroom with 2 Double beds" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Second Bedroom (2 Double Beds)</strong>
+          Positioned on the opposite side of the residence for family privacy, featuring 2 Double beds, 2nd full marble bath, and balcony access.
+        </div>
+      </a>
+      <a class="photo-card" href="img/miramar-2br-4.jpg" target="_blank" rel="noopener">
+        <img src="img/miramar-2br-4.jpg" alt="Grand Miramar 2-Bedroom Residence full kitchen with refrigerator, stove, dishwasher, and microwave" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Full Residence Kitchen</strong>
+          Granite countertops, full-size refrigerator, cooktop &amp; oven, dishwasher, microwave, toaster, blender, and coffee maker.
+        </div>
+      </a>
+      <a class="photo-card" href="img/miramar-eugenia.webp" target="_blank" rel="noopener">
+        <img src="img/miramar-eugenia.webp" alt="Grand Miramar open-air sunset dining overlooking Banderas Bay" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Open-Air Sunset Bay Dining</strong>
+          On-site breakfast and sunset dining at <em>Cielito Lindo</em> &amp; <em>Eugenia</em> overlooking the bay (plus 5–8 mins to Zona Romántica).
+        </div>
+      </a>
+    </div>
     <div class="itin-wrap">
       <table class="itin-table">
         <thead>
@@ -611,6 +703,71 @@
     </div>
 
     <h2>6. Deep Dive: Garza Blanca Preserve Resort &amp; Spa Puerto Vallarta (~$11,580 Total)</h2>
+    <div class="photo-grid">
+      <a class="photo-card" href="img/garza-aerial.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-aerial.jpg" alt="Aerial view of Garza Blanca Preserve white-sand beach cove, beachfront towers, and hillside panoramic towers" loading="lazy" />
+        <div class="photo-caption">
+          <strong>85-Acre Beach-to-Jungle Preserve</strong>
+          Reef-protected Blue Flag white-sand cove &amp; Beachfront Towers (bottom) connected by open-air trolley to the Hillside Panoramic Towers (top).
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-floorplan.jpg" target="_blank" rel="noopener">
+        <img class="contain-img" src="img/garza-2br-floorplan.jpg" alt="Official floor plan of Garza Blanca Two-Bedroom Panoramic Suite (3,229 sq ft, 2BR/3BA)" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Official 2BR Panoramic Suite Floor Plan (3,229 sq ft)</strong>
+          1 King Master + 2 Queens BR + 3 full bathrooms, laundry room, chef's kitchen, dining/living room &amp; wraparound terrace w/ hammock + hot tub.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-07.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-2br-07.jpg" alt="Garza Blanca Two-Bedroom Panoramic Suite wraparound terrace with dining table, hammock, and sunset bay view" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Wraparound Ocean-View Terrace &amp; Hammock</strong>
+          Expansive private terrace with alfresco dining, handmade hammock, and sunset views over Banderas Bay and Los Arcos rocks.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-08.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-2br-08.jpg" alt="Private heated Jacuzzi on the terrace of the Garza Blanca Two-Bedroom Panoramic Suite" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Private Terrace Heated Jacuzzi</strong>
+          Soak in your suite's private outdoor hot tub overlooking the South Shore coastline and Sierra Madre mountains at sunset.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-05.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-2br-05.jpg" alt="Garza Blanca Two-Bedroom Panoramic Suite open-concept living room and 8-seat dining table" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Open-Concept Living &amp; Dining Room</strong>
+          Spacious indoor dining table, breakfast bar, and living room with floor-to-ceiling sliding glass walls that disappear onto the terrace.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-06.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-2br-06.jpg" alt="Garza Blanca Two-Bedroom Panoramic Suite gourmet kitchen with granite island and stainless steel appliances" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Gourmet Chef's Kitchen &amp; Island</strong>
+          Full-size stainless refrigerator, gas stove/oven, microwave, dishwasher, Nespresso machine, granite island &amp; adjacent laundry room.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-03.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-2br-03.jpg" alt="Garza Blanca Two-Bedroom Panoramic Suite Master Bedroom with King canopy bed and en-suite soaking tub" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Master Suite (1 King Bed + Soaking Tub)</strong>
+          King canopy bed, walk-in closet, dual-vanity marble bathroom with freestanding soaking tub &amp; rain shower, and direct terrace access.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-2br-02.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-2br-02.jpg" alt="Garza Blanca Two-Bedroom Panoramic Suite Second Bedroom with 2 Queen beds" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Second Bedroom (2 Queen Beds)</strong>
+          Generous second bedroom with two true Queen beds (vs. Doubles), full dual-vanity marble en-suite bathroom, and private balcony.
+        </div>
+      </a>
+      <a class="photo-card" href="img/garza-pool.jpg" target="_blank" rel="noopener">
+        <img src="img/garza-pool.jpg" alt="Garza Blanca beachfront infinity pool overlooking the Pacific Ocean" loading="lazy" />
+        <div class="photo-caption">
+          <strong>Beachfront Infinity Pool &amp; Cove</strong>
+          One of 3 heated resort pools—situated right above the calm white-sand beach cove with complimentary kayaks, paddleboards &amp; snorkel gear.
+        </div>
+      </a>
+    </div>
     <div class="itin-wrap">
       <table class="itin-table">
         <thead>
