@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Cabos (SJD) Options — Winter 2026–2027 (Dec 29 – Jan 3)</title>
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --card: #ffffff;
+      --stone: #efe9de;
+      --ink: #24211d;
+      --muted: #615b52;
+      --accent: #7c5832;
+      --accent-dark: #5b3e1f;
+      --green: #2c5e3b;
+      --green-bg: #e7f3eb;
+      --gold: #7a5200;
+      --gold-bg: #fff3c4;
+      --gold-border: #d4a72c;
+      --border: #e5dec9;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 40px 24px 72px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .subnav a {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      transition: all 0.15s ease;
+    }
+    .subnav a:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+    .subnav a.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(135deg, #2d261e 0%, #524231 100%);
+      color: #fff;
+      padding: 36px 40px;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px rgba(36, 33, 29, 0.14);
+    }
+    header .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: #e6d3b3;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    header p {
+      margin: 0;
+      color: #f3ece0;
+      font-size: 16px;
+      max-width: 780px;
+    }
+    .pill-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .pill {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 23px;
+      margin: 34px 0 16px;
+      color: var(--ink);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .guide-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(36, 33, 29, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .guide-body {
+      padding: 22px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+    .guide-eyebrow {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .guide-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: var(--ink);
+    }
+    .guide-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .guide-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .guide-desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .guide-meta {
+      font-size: 13px;
+      color: var(--ink);
+      background: var(--stone);
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+      transition: background 0.15s ease;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+    @media (max-width: 720px) {
+      html, body {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        padding: 16px 12px 48px;
+      }
+      header {
+        padding: 22px 18px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      header h1 {
+        font-size: 22px;
+        line-height: 1.28;
+      }
+      header p {
+        font-size: 14.5px;
+      }
+      .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="subnav">
+      <a href="index.html">&larr; Main Hub (Puerto Vallarta)</a>
+      <a href="cdmx.html">Mexico City</a>
+      <a href="cabo.html" class="active">Los Cabos</a>
+      <a href="hawaii.html">Hawaii (Maui &amp; Islands)</a>
+      <a href="tahoe.html">Lake Tahoe</a>
+    </nav>
+
+    <header>
+      <div class="eyebrow">Los Cabos, Mexico (SJD) &bull; Tue Dec 29, 2026 – Sun Jan 3, 2027 (5 Nights)</div>
+      <h1>Los Cabos: Nobu Hotel &amp; Baja Options</h1>
+      <p>
+        <strong>5 nights (Tue Dec 29, 2026 – Sun Jan 3, 2027, returning 1/3).</strong> Over New Year's week, 5 nonstop <strong>SFO &harr; SJD</strong> Alaska Airlines tickets are <strong>$7,025</strong> ($1,405/pp, 3h 12m), and Cabo's 34% combined taxes &amp; resort service charges push 2 entry-level Deluxe Rooms at Nobu Hotel Los Cabos to <strong>$17,563 total</strong>.
+      </p>
+      <div class="pill-bar">
+        <span class="pill">Dates: Tue Dec 29, 2026 – Sun Jan 3, 2027 (5 Nights)</span>
+        <span class="pill">Nonstop SFO &harr; SJD (5 Tickets): $7,025 ($1,405/pp)</span>
+      </div>
+    </header>
+
+    <h2>1. Los Cabos Options (Tue Dec 29, 2026 – Sun Jan 3, 2027 &bull; 5 Tickets)</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-body">
+          <div>
+            <div class="guide-eyebrow">Los Cabos, Mexico (SJD) &bull; 5★ Beachfront &bull; $17,563 Total</div>
+            <h3 class="guide-title">
+              <a href="https://www.nobuhotels.com/loscabos/" target="_blank" rel="noopener">Nobu Hotel Los Cabos (2 Deluxe Rooms)</a>
+            </h3>
+            <p class="guide-desc">
+              <strong>2 Entry-Level Deluxe Rooms (Garden/Resort View, 624 sq ft each, 5 nights, 34% taxes &amp; resort service fees included)</strong> at Nobu Hotel Los Cabos on the Cabo San Lucas Pacific beachfront. Welcomes children of all ages with family infinity pools, kids' club, and signature Nobu dining.
+            </p>
+            <div class="guide-meta">
+              <strong>Flights (5 tickets, SFO &harr; SJD nonstop, Alaska, 3h12m):</strong> $7,025 ($1,405/pp)<br />
+              <strong>Hotel (2 rooms, 5 nights, $782/nt base + 34% tax/fees):</strong> $10,538 ($5,269/room)<br />
+              <strong>Total Trip Cost (Dec 29 – Jan 3):</strong> <strong>$17,563</strong>
+            </div>
+          </div>
+          <a class="btn" href="https://www.nobuhotels.com/loscabos/" target="_blank" rel="noopener">View Nobu Hotel Los Cabos &rarr;</a>
+        </div>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-body">
+          <div>
+            <div class="guide-eyebrow">Baja California Sur (SJD) &bull; Estimated Lodging &bull; ~$10,225 Total</div>
+            <h3 class="guide-title">
+              Todos Santos / La Paz Boutique Base
+            </h3>
+            <p class="guide-desc">
+              <strong>5 nights in Todos Santos or La Paz</strong> (~1–2 hrs north of SJD airport), pairing the same 5 nonstop SFO &harr; SJD flights with boutique Baja lodging outside the Cabo Resort Corridor.
+            </p>
+            <div class="guide-meta">
+              <strong>Flights (5 tickets, SFO &harr; SJD nonstop, Alaska, 3h12m):</strong> $7,025 ($1,405/pp)<br />
+              <strong>Lodging (5 nights, estimated):</strong> ~$3,200<br />
+              <strong>Estimated Total (Dec 29 – Jan 3):</strong> <strong>~$10,225</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
