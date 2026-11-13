@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>7th Grade Science — Momentum, Impulse &amp; Collisions Study Guide</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --card: #ffffff;
+      --cream: #faf8f3;
+      --ink: #1e232d;
+      --muted: #5c6470;
+      --accent: #2454c5;
+      --accent-soft: #e9f0ff;
+      --accent-border: #bfd2fc;
+      --green: #16794b;
+      --green-bg: #e7f6ee;
+      --green-border: #b3e2c8;
+      --amber: #8a5300;
+      --amber-bg: #fff5db;
+      --amber-border: #f0d080;
+      --red: #b92b2b;
+      --red-bg: #fdeaea;
+      --red-border: #f5bcbc;
+      --purple: #5b32a8;
+      --purple-bg: #f1ebff;
+      --border: #dedad0;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0 0 calc(40px + env(safe-area-inset-bottom)) 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.58;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* Sticky iOS-friendly Top Navigation */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      max-width: 100vw;
+      background: rgba(246, 244, 239, 0.94);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 12px;
+    }
+
+    .nav-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2px 0;
+    }
+    .nav-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-pill {
+      flex: 0 0 auto;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 7px 13px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .nav-pill:active,
+    .nav-pill.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 16px 14px;
+    }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(135deg, #1b2c52 0%, #2454c5 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 22px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 20px rgba(27, 44, 82, 0.15);
+    }
+    .hero .eyebrow {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #bfd4ff;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero h1 {
+      margin: 0 0 8px 0;
+      font-size: 1.55rem;
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+    }
+    .hero p {
+      margin: 0;
+      color: #eef4ff;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    /* Section Headings */
+    section {
+      scroll-margin-top: 64px;
+      margin-bottom: 26px;
+    }
+    .sec-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 24px 0 12px;
+    }
+    .sec-num {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .sec-header h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    /* Cards & Callouts */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.06rem;
+      color: var(--ink);
+    }
+    .card p {
+      margin: 0 0 10px 0;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .callout {
+      border-radius: 12px;
+      padding: 13px 15px;
+      margin: 10px 0;
+      font-size: 0.95rem;
+    }
+    .callout.blue {
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: #15357a;
+    }
+    .callout.green {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: #0f5333;
+    }
+    .callout.amber {
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border);
+      color: #5c3700;
+    }
+    .callout.red {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      color: #7d1818;
+    }
+    .callout-title {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.96rem;
+    }
+
+    /* Formula Display Boxes */
+    .formula-box {
+      background: var(--cream);
+      border: 1.5px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      font-family: ui-monospace, "SF Mono", Menlo, Monaco, monospace;
+      font-size: 0.96rem;
+      overflow-x: auto;
+    }
+    .formula-big {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 10px 10px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 10px;
+      margin: 10px 0;
+      color: #163885;
+      line-height: 1.45;
+    }
+    @media (min-width: 560px) {
+      .formula-big {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Native Fraction Helper */
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.9em;
+      margin: 0 3px;
+    }
+    .frac > .num {
+      border-bottom: 1.4px solid currentColor;
+      padding: 0 4px 1px;
+      line-height: 1.15;
+    }
+    .frac > .den {
+      padding: 1px 4px 0;
+      line-height: 1.15;
+    }
+
+    /* Comparison Table */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: var(--cream);
+      font-weight: 700;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Worked Problems & Collapsible Accordions */
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .toggle-btn {
+      appearance: none;
+      border: 1.5px solid var(--accent);
+      background: #fff;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      min-height: 40px;
+    }
+    .toggle-btn:active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    details.prob {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    details.prob summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 13px 15px;
+      font-weight: 600;
+      font-size: 0.97rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      user-select: none;
+    }
+    details.prob summary::-webkit-details-marker {
+      display: none;
+    }
+    .prob-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 7px;
+      border-radius: 6px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .tag-calc { background: var(--accent-soft); color: var(--accent); }
+    .tag-col { background: var(--purple-bg); color: var(--purple); }
+    .tag-imp { background: var(--amber-bg); color: var(--amber); }
+    .tag-tf { background: var(--green-bg); color: var(--green); }
+
+    .chev {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+    details.prob[open] .chev::after {
+      content: "Hide ▲";
+    }
+    details.prob:not([open]) .chev::after {
+      content: "Answer ▼";
+    }
+
+    .prob-sol {
+      padding: 12px 15px 14px;
+      border-top: 1px dashed var(--border);
+      background: var(--cream);
+      font-size: 0.94rem;
+    }
+    .ans-pill {
+      display: inline-block;
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: var(--green);
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 8px;
+      margin-top: 6px;
+    }
+
+    /* SVG Diagram Wrapper */
+    .svg-diagram {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px;
+    }
+
+    /* Interactive Quiz Styles */
+    .quiz-box {
+      background: #fff;
+      border: 2px solid var(--accent-border);
+      border-radius: 16px;
+      padding: 18px 16px;
+      box-shadow: 0 4px 14px rgba(36, 84, 197, 0.08);
+    }
+    .quiz-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .quiz-bar {
+      width: 100%;
+      height: 8px;
+      background: #e6e3da;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .quiz-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+    .quiz-q {
+      font-size: 1.12rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 0 0 14px;
+    }
+    .quiz-choices {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+    }
+    .quiz-choice {
+      appearance: none;
+      border: 2px solid var(--border);
+      background: #fff;
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.35;
+      padding: 13px 14px;
+      border-radius: 12px;
+      text-align: left;
+      cursor: pointer;
+      min-height: 48px;
+      font-family: inherit;
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .quiz-choice:active {
+      transform: scale(0.99);
+    }
+    .quiz-choice.correct {
+      border-color: var(--green);
+      background: var(--green-bg);
+      color: #0e4f30;
+      font-weight: 700;
+    }
+    .quiz-choice.wrong {
+      border-color: var(--red);
+      background: var(--red-bg);
+      color: #7d1818;
+    }
+    .quiz-feedback {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 0.93rem;
+      display: none;
+    }
+    .quiz-feedback.show {
+      display: block;
+    }
+    .quiz-feedback.ok {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: #0f5333;
+    }
+    .quiz-feedback.bad {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      color: #7d1818;
+    }
+    .quiz-actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .btn-primary {
+      appearance: none;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.96rem;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      min-height: 44px;
+    }
+    ul.clean-list {
+      margin: 6px 0 0 0;
+      padding-left: 20px;
+    }
+    ul.clean-list li {
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky iOS-friendly Top Bar -->
+  <nav class="sticky-nav" aria-label="Study Guide Sections">
+    <div class="nav-scroll">
+      <a class="nav-pill" href="#sec-intuition">1. Big Picture</a>
+      <a class="nav-pill" href="#sec-impulse">2. Impulse &amp; 3 Cases</a>
+      <a class="nav-pill" href="#sec-bouncing">3. Bouncing &amp; Pelton</a>
+      <a class="nav-pill" href="#sec-collisions">4. Collisions &amp; Recoil</a>
+      <a class="nav-pill" href="#sec-math">5. Worked Math (22)</a>
+      <a class="nav-pill" href="#sec-tf">6. T/F &amp; Conceptual</a>
+      <a class="nav-pill" href="#sec-quiz">7. Quick Quiz</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Hero Header -->
+    <header class="hero">
+      <div class="eyebrow">Rohan's 7th Grade Science · Complete Parent &amp; Student Guide</div>
+      <h1>Momentum, Impulse &amp; Conservation of Momentum</h1>
+      <p>
+        A self-contained, first-principles guide to everything in Mrs. Swaminathan's lecture notes, HW9, and Test Study Guide—designed for quick reading on iPhone/iPad.
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">p = m · v</span>
+        <span class="hero-badge">F · t = Δ(mv)</span>
+        <span class="hero-badge">Bouncing = 2× Impulse</span>
+        <span class="hero-badge">p_before = p_after</span>
+      </div>
+    </header>
+
+    <!-- ==================== SECTION 1: BIG PICTURE ==================== -->
+    <section id="sec-intuition">
+      <div class="sec-header">
+        <span class="sec-num">1</span>
+        <h2>The Big Picture: Momentum vs. Impulse</h2>
+      </div>
+
+      <div class="card">
+        <h3>What is Momentum (<i>p</i>)? — "Inertia in Motion"</h3>
+        <p>
+          In the previous unit, <b>inertia</b> (mass <i>m</i>) measured how hard it is to start or stop an object in general. <b>Momentum</b> (symbol <b><i>p</i></b>) measures <b>how hard it is to stop a <i>moving</i> object</b>. It depends on two factors: how much <i>stuff</i> is moving (<b>mass <i>m</i></b>) and how fast it is moving (<b>velocity <i>v</i></b>).
+        </p>
+        <div class="formula-big">
+          <span style="white-space:nowrap;">Momentum = mass × velocity</span> &nbsp;⟹&nbsp; <span style="white-space:nowrap;"><i>p</i> = <i>m</i> · <i>v</i></span>
+        </div>
+
+        <div class="grid-2">
+          <div class="formula-box">
+            <b>The 3 Formula Rearrangements:</b><br>
+            • Find momentum: <b>p = m · v</b><br>
+            • Find velocity: <b>v = <span class="frac"><span class="num">p</span><span class="den">m</span></span></b><br>
+            • Find mass: &nbsp;&nbsp;&nbsp;&nbsp;<b>m = <span class="frac"><span class="num">p</span><span class="den">v</span></span></b>
+          </div>
+          <div class="formula-box">
+            <b>Units &amp; Vector Rule:</b><br>
+            • Mass <i>m</i> in <b>kg</b> (1 kg = 1,000 g)<br>
+            • Velocity <i>v</i> in <b>m/s</b><br>
+            • Momentum <i>p</i> in <b>kg·m/s</b><br>
+            • <b>Vector:</b> Always include direction if given (e.g. <i>6 kg·m/s west</i>)!
+          </div>
+        </div>
+
+        <div class="callout amber">
+          <span class="callout-title">5 Classic Momentum Traps on the Test:</span>
+          <ul class="clean-list">
+            <li><b>At Rest = Zero Momentum:</b> A huge 10,000 kg truck parked on the side of the road has <b><i>p</i> = 0 kg·m/s</b> because <i>v</i> = 0. A child on rollerblades moving at 1 m/s has more momentum than a parked truck!</li>
+            <li><b>Supertanker vs. Bullet:</b> An object can have huge momentum either from a <b>huge mass</b> moving slowly (supertanker) OR a tiny mass moving at <b>huge velocity</b> (bullet).</li>
+            <li><b>Equal Momentum Condition:</b> When can a <b>1,000 kg car</b> and a <b>2,000 kg truck</b> have the same momentum? When the lighter 1,000 kg car travels at <b>twice the velocity</b> of the 2,000 kg truck (e.g., 1000 × 20 = 2000 × 10).</li>
+            <li><b>Moon vs. Earth Trap (HW9 #5):</b> A lunar vehicle tested at 10 km/h on Earth and 10 km/h on the Moon has the <b>EXACT SAME momentum</b>! Mass <i>m</i> and velocity <i>v</i> do not depend on gravity <i>g</i>.</li>
+            <li><b>Scaling Trap (Study Guide #22):</b> If you double velocity, momentum doubles (2×). If you <b>triple BOTH mass and velocity</b> (3<i>m</i> × 3<i>v</i>), momentum becomes <b>3 × 3 = 9 times greater</b>!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>What is Impulse? And How Does It Come from Newton's 2nd Law?</h3>
+        <p>
+          To change an object's momentum, you have to push or pull on it with a <b>Force (<i>F</i>)</b> over a <b>Time interval (<i>t</i>)</b>. The product <b><i>F · t</i></b> is called <b>Impulse</b>.
+        </p>
+        <p>
+          Mrs. Swaminathan tests how the <b>Impulse–Momentum Theorem</b> is derived directly from <b>Newton's 2nd Law (<i>F = ma</i>)</b>:
+        </p>
+        <div class="formula-big">
+          <i>F</i> = <i>m · a</i> = <i>m</i> · <span class="frac"><span class="num">Δ<i>v</i></span><span class="den"><i>t</i></span></span>
+          &nbsp;&nbsp;⟹&nbsp;&nbsp;
+          <b><i>F · t</i> = Δ(<i>mv</i>)</b> &nbsp;(Impulse = Change in Momentum)
+        </div>
+
+        <div class="callout red">
+          <span class="callout-title">Crucial Exam Distinction — Don't Mix These Up!</span>
+          <ul class="clean-list">
+            <li><b>Does a moving object possess impulse? NO!</b> A moving object possesses <b>momentum</b> (<i>mv</i>). It does <i>not</i> possess impulse; impulse only happens while a force acts over time to <i>change</i> momentum.</li>
+            <li><b>Impulse = Change in Momentum (Δ<i>mv</i>)</b>, NEVER momentum itself!</li>
+            <li><b>Impulse (<i>F · t</i>) vs. Impact Force (<i>F</i>):</b> Impulse is force multiplied by time (in N·s or kg·m/s); impact force is just the push <i>F</i> (in Newtons).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: 3 IMPULSE CASES ==================== -->
+    <section id="sec-impulse">
+      <div class="sec-header">
+        <span class="sec-num">2</span>
+        <h2>The 3 Impulse–Momentum Cases (<i>F · t = Δmv</i>)</h2>
+      </div>
+
+      <div class="card">
+        <h3>Case 1: Increasing Momentum (Want Maximum Δ<i>mv</i> ⟹ Big <i>F</i> × Big <i>t</i>)</h3>
+        <p>
+          To give a ball or cannonball the largest possible velocity boost, you apply the <b>largest force possible</b> for the <b>longest time possible</b>:
+        </p>
+        <ul class="clean-list">
+          <li><b>Following through in baseball, tennis, or golf:</b> Extending contact time <i>t</i> while swinging hard (big <i>F</i> × big <i>t</i>) maximizes impulse and gives the ball a huge change in momentum.</li>
+          <li><b>Long Cannon vs. Short Cannon (HW9 #8):</b> For the same explosive gas force <i>F</i>, a <b>long-barreled cannon</b> imparts a greater speed to the cannonball than a short cannon because the force acts on the ball for a <b>longer time <i>t</i></b> inside the longer barrel!</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Case 2: Decreasing Momentum Over a Long Time (Small <i>F</i> × Big <i>t</i>)</h3>
+        <p>
+          Suppose your car is out of control and you must stop by hitting either a <b>haystack</b> or a <b>concrete brick wall</b>.
+        </p>
+
+        <!-- SVG Diagram comparing Haystack vs Wall -->
+        <svg class="svg-diagram" viewBox="0 0 520 145" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="244" height="129" rx="10" fill="#e7f6ee" stroke="#16794b" stroke-width="1.5"/>
+          <text x="130" y="28" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f5333">Hitting a Haystack (SAFE)</text>
+          <text x="130" y="50" font-family="-apple-system, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e232d">Car goes from mv → 0 (Same Δmv)</text>
+          <text x="130" y="80" font-family="Georgia, serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#0f5333">Impulse = f</text>
+          <text x="195" y="82" font-family="Georgia, serif" font-size="23" font-weight="bold" fill="#0f5333">× T</text>
+          <text x="130" y="106" font-family="-apple-system, sans-serif" font-size="11.5" text-anchor="middle" fill="#0f5333">Long impact time (T) ⟹</text>
+          <text x="130" y="123" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f5333">SMALL impact force (f)!</text>
+
+          <rect x="268" y="8" width="244" height="129" rx="10" fill="#fdeaea" stroke="#b92b2b" stroke-width="1.5"/>
+          <text x="390" y="28" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#7d1818">Hitting a Brick Wall (DANGER)</text>
+          <text x="390" y="50" font-family="-apple-system, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e232d">Car goes from mv → 0 (Same Δmv)</text>
+          <text x="372" y="82" font-family="Georgia, serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#7d1818">Impulse =</text>
+          <text x="424" y="84" font-family="Georgia, serif" font-size="23" font-weight="bold" fill="#7d1818">F</text>
+          <text x="450" y="80" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#7d1818">× t</text>
+          <text x="390" y="106" font-family="-apple-system, sans-serif" font-size="11.5" text-anchor="middle" fill="#7d1818">Tiny impact time (t) ⟹</text>
+          <text x="390" y="123" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#7d1818">HUGE impact force (F)!</text>
+        </svg>
+
+        <div class="callout green">
+          <span class="callout-title">The Haystack vs. Wall Rule (Memorize This Template!):</span>
+          Whether you hit a haystack or a brick wall, your momentum drops from <i>mv</i> to 0, so the <b>change in momentum (Δ<i>mv</i>) is the SAME</b> and the <b>impulse (<i>F · t</i>) is the SAME</b>! Hitting the haystack is safer because it <b>lengthens the time of impact (<i>t</i>)</b>, which <b>reduces the impact force (<i>F</i>)</b>. (If time <i>t</i> increases by 100×, force <i>F</i> decreases by 100×!)
+        </div>
+
+        <p><b>All 10 "Cushioning / Long Time <i>t</i>" Questions on the Study Guide &amp; HW9 Use This Exact Same Answer:</b></p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Scenario on Test / HW9</th>
+                <th>How It Increases Time (<i>t</i>) to Reduce Force (<i>F</i>)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>1. Catching a fast baseball</b></td>
+                <td>Moving your hand backward with the ball extends stopping time <i>t</i>, reducing the sting/force <i>F</i> on your hand.</td>
+              </tr>
+              <tr>
+                <td><b>2. Bending knees when jumping</b></td>
+                <td>Bending your knees extends stopping time 10–20× compared to a stiff-legged landing, slashing the force on your bones.</td>
+              </tr>
+              <tr>
+                <td><b>3. Car crumple zones, airbags &amp; padded dashboards</b></td>
+                <td>Crumpling metal and inflating airbags lengthen the time Δ<i>t</i> over which the car/passenger stops, greatly reducing collision force <i>F</i>.</td>
+              </tr>
+              <tr>
+                <td><b>4. Boxer "rolling/riding with the punch"</b></td>
+                <td>Moving the head back with the glove increases contact time <i>t</i>. <b>If a boxer triples contact time (3<i>t</i>), the force is reduced to 1/3!</b></td>
+              </tr>
+              <tr>
+                <td><b>5. Gym mats, carpets, wooden dance floors &amp; safety nets</b></td>
+                <td>Mats, carpets, wooden floors, and nets "give" (yield), increasing impact time <i>t</i> so the stopping force <i>F</i> is much smaller than on concrete/hardwood.</td>
+              </tr>
+              <tr>
+                <td><b>6. Nylon climbing ropes &amp; bungee cords</b></td>
+                <td>Stretching under tension increases stopping time <i>t</i> so the climber/jumper is brought to a halt by a small, safe average force <i>F</i>.</td>
+              </tr>
+              <tr>
+                <td><b>7. Egg tossed into a sagging sheet vs. wall</b></td>
+                <td>Both stop the egg (same Δ<i>mv</i> and impulse), but the sheet stretches out stopping time <i>t</i> so the force <i>F</i> stays too small to crack the shell.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Case 3: Decreasing Momentum Over a Short Time (Big <i>F</i> × Small <i>t</i>)</h3>
+        <p>
+          Sometimes you <i>want</i> a huge force—or a short stopping time causes a dangerous force:
+        </p>
+        <ul class="clean-list">
+          <li><b>Taekwondo / Karate brick break:</b> The expert strikes the bricks at high speed and stops her hand in a <b>tiny fraction of a second (small <i>t</i>)</b>. Because <i>t</i> is very small, the <b>impact force <i>F</i> on the bricks is enormous</b>, snapping the bricks!</li>
+          <li><b>Boxer moving <i>into</i> a punch:</b> If a boxer leans forward into a punch and <b>cuts contact time in half (½<i>t</i>)</b>, the impact force is <b>doubled (2<i>F</i>)</b>!</li>
+          <li><b>Bare fist &amp; 6-oz gloves vs. 16-oz boxing gloves (HW9 MT2 #5–6):</b> A bare fist (or thinner 6-oz glove) has much less padding than a 16-oz glove, so the punch stops in a <b>shorter time <i>t</i></b>, delivering a <b>larger impact force <i>F</i></b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: BOUNCING & PELTON WHEEL ==================== -->
+    <section id="sec-bouncing">
+      <div class="sec-header">
+        <span class="sec-num">3</span>
+        <h2>Bouncing &amp; The Pelton Water Wheel</h2>
+      </div>
+
+      <div class="card">
+        <h3>Why Bouncing Requires Roughly TWICE the Impulse of Stopping</h3>
+        <p>
+          Because momentum is a <b>vector</b> (direction matters!), reversing an object's direction requires <b>two steps</b>:
+        </p>
+        <ol class="clean-list">
+          <li>Impulse #1 to bring the moving object from <b>+<i>mv</i> to a dead stop (0)</b>: magnitude = <b><i>mv</i></b>.</li>
+          <li>Impulse #2 to throw it back in the opposite direction from <b>0 to −<i>mv</i></b>: another <b><i>mv</i></b>!</li>
+        </ol>
+        <div class="formula-big">
+          Dead Stop: |Δ<i>p</i>| = <i>mv</i> &nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp; Stop + Bounce Back: |Δ<i>p</i>| = 2<i>mv</i> (Twice the Impulse!)
+        </div>
+
+        <svg class="svg-diagram" viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#2454c5"/>
+            </marker>
+            <marker id="arr-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#b92b2b"/>
+            </marker>
+          </defs>
+          <!-- Left: Flat paddle (stops water) -->
+          <rect x="10" y="8" width="238" height="104" rx="8" fill="#faf8f3" stroke="#dedad0"/>
+          <text x="129" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">1. Dead Stop (Flat Paddle): Δp = mv</text>
+          <line x1="40" y1="62" x2="150" y2="62" stroke="#2454c5" stroke-width="3" marker-end="url(#arr-b)"/>
+          <text x="95" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#2454c5" text-anchor="middle">In: +mv</text>
+          <rect x="158" y="38" width="12" height="48" fill="#555" rx="2"/>
+          <text x="205" y="66" font-family="-apple-system, sans-serif" font-size="11" fill="#555" text-anchor="middle">Stops (v = 0)</text>
+
+          <!-- Right: Curved Pelton paddle (bounces water) -->
+          <rect x="272" y="8" width="238" height="104" rx="8" fill="#e9f0ff" stroke="#bfd2fc"/>
+          <text x="391" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#163885">2. Bounce / Pelton Cup: Δp = 2mv</text>
+          <line x1="300" y1="50" x2="412" y2="50" stroke="#2454c5" stroke-width="3" marker-end="url(#arr-b)"/>
+          <text x="355" y="42" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#2454c5" text-anchor="middle">In: +mv</text>
+          <path d="M 412 36 Q 452 62 412 88" fill="none" stroke="#1b2c52" stroke-width="5" stroke-linecap="round"/>
+          <line x1="412" y1="76" x2="300" y2="76" stroke="#b92b2b" stroke-width="3" marker-end="url(#arr-r)"/>
+          <text x="355" y="94" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#b92b2b" text-anchor="middle">Bounces Back: −mv</text>
+        </svg>
+
+        <ul class="clean-list">
+          <li><b>The 3-Way Baseball Question (HW9 MT2 #7):</b> Between (1) catching a ball, (2) throwing a ball from rest, and (3) <b>catching a ball and throwing it back at the same speed</b>, choice <b>(3) catching AND throwing it back</b> has the greatest change in momentum (2<i>mv</i> vs. <i>mv</i>)!</li>
+          <li><b>Flowerpot on Your Head:</b> A flowerpot that bounces off your head delivers <b>twice the impulse</b> (and hurts much more) than one that breaks/stops without bouncing.</li>
+          <li><b>Pelton Wheel (Gold Rush Application):</b> Old water wheels had flat paddles that merely stopped the water (impulse = <i>mv</i>). Lester Pelton designed <b>curved cup-shaped paddles</b> so the water stream made a <b>U-turn and bounced off</b> in the opposite direction—doubling the impulse (2<i>mv</i>) transferred to the wheel!</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: COLLISIONS & CONSERVATION ==================== -->
+    <section id="sec-collisions">
+      <div class="sec-header">
+        <span class="sec-num">4</span>
+        <h2>Conservation of Momentum, Collisions &amp; Recoil</h2>
+      </div>
+
+      <div class="card">
+        <h3>Why Momentum Is Conserved (Connection to Newton's 3rd Law)</h3>
+        <p>
+          The <b>Law of Conservation of Momentum</b> states: <b>In the absence of an external force, the total momentum of a system remains unchanged</b> (<i>p</i><sub>total, before</sub> = <i>p</i><sub>total, after</sub>).
+        </p>
+        <p>
+          Why? It comes directly from <b>Newton's 3rd Law (Action–Reaction)</b>! Whenever two objects collide (whether a <b>small car &amp; heavy truck</b>, a <b>taekwondo hand &amp; wooden block</b>, or your <b>hand hitting a wall with 100 N for 2 s</b>):
+        </p>
+        <div class="callout blue">
+          <span class="callout-title">The 4 "Equal &amp; Opposite" Collision Rules (Tested Repeatedly!):</span>
+          1. <b>Force (<i>F</i>):</b> Equal in magnitude and opposite in direction on both objects.<br>
+          2. <b>Time of impact (<i>t</i>):</b> Exact same contact duration for both objects.<br>
+          3. <b>Impulse (<i>F · t</i>):</b> Equal in magnitude and opposite in direction on both objects.<br>
+          4. <b>Change in Momentum (Δ<i>mv</i>):</b> Equal in magnitude and opposite in direction! What Object 1 loses (−75 kg·m/s), Object 2 gains (+75 kg·m/s), so the sum <b><i>p</i><sub>1</sub> + <i>p</i><sub>2</sub> never changes</b>!
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Three Types of Collision &amp; Recoil Problems</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Collision Type</th>
+                <th>Definition &amp; Formula</th>
+                <th>Classic Test Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>1. Elastic Collision</b></td>
+                <td>
+                  Objects <b>rebound without lasting deformation or generation of heat</b>.<br>
+                  <code>m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</code>
+                </td>
+                <td>
+                  • <b>Billiard balls:</b> A 1 kg ball at 2 m/s hits a resting 1 kg ball; Ball 1 stops (0 m/s) and Ball 2 rolls away at <b>2 m/s</b>.<br>
+                  • Gas molecule collisions.
+                </td>
+              </tr>
+              <tr>
+                <td><b>2. Inelastic (Coupled) Collision</b></td>
+                <td>
+                  Objects <b>do not rebound</b> (characterized by deformation and/or heat) and <b>stick/lock together</b> as one combined mass (<i>m</i><sub>1</sub> + <i>m</i><sub>2</sub>):<br>
+                  <code>m₁v₁ + m₂v₂ = (m₁ + m₂) · v_f</code>
+                </td>
+                <td>
+                  • Two railroad boxcars locking couplers<br>
+                  • Moving car locking bumpers with parked car<br>
+                  • Bullet embedding in a wooden block<br>
+                  • 10 kg snake swallowing a 1 kg frog
+                </td>
+              </tr>
+              <tr>
+                <td><b>3. Explosion / Gun &amp; Cannon Recoil</b></td>
+                <td>
+                  Both start <b>at rest</b>, so <b>total momentum before = 0</b> and <b>total momentum after = 0</b>!<br>
+                  <code>m_bullet · v_bullet = M_gun · V_gun</code>
+                </td>
+                <td>
+                  • 0.025 kg bullet fired at 230 m/s from a 0.9 kg gun.<br>
+                  • <b>Why is the rifle's recoil speed so small?</b> Equal &amp; opposite momentum change (<i>m·v</i> = <i>M·V</i>), but the rifle's mass <i>M</i> is much larger!<br>
+                  • <b>Equal recoil speed?</b> Make cannon &amp; ball <b>equal mass</b>.<br>
+                  • <b>Bullet heavier than gun?</b> The <b>gun recoils faster</b> than the bullet!
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout red">
+          <span class="callout-title">Head-On Vector Trap (Study Guide Conceptual #29):</span>
+          "What is the combined momentum of two objects, each having a momentum of <b>3 kg·m/s</b>, moving <b>toward each other</b>?"<br>
+          Because momentum is a <b>vector</b>, one has <b>+3 kg·m/s</b> and the other has <b>−3 kg·m/s</b>. Their combined net momentum is <b>(+3) + (−3) = 0 kg·m/s</b>!
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: ALL WORKED MATH PROBLEMS ==================== -->
+    <section id="sec-math">
+      <div class="sec-header">
+        <span class="sec-num">5</span>
+        <h2>All 22 Worked Calculation Problems (Study Guide, Notes &amp; HW9)</h2>
+      </div>
+
+      <div class="toolbar">
+        <span style="font-size: 0.9rem; color: var(--muted);">Tap any problem to toggle its step-by-step solution:</span>
+        <div>
+          <button class="toggle-btn" type="button" onclick="toggleAllProbs('sec-math', true)">Expand All</button>
+          <button class="toggle-btn" type="button" onclick="toggleAllProbs('sec-math', false)">Collapse All</button>
+        </div>
+      </div>
+
+      <!-- Study Guide #1 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-calc">SG #1</span>Calculate the momentum of a 1,200 kg car with a velocity of 25 m/s.</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          Use <i>p = m · v</i>:<br>
+          <i>p</i> = 1,200 kg × 25 m/s = 30,000 kg·m/s.<br>
+          <span class="ans-pill">p = 30,000 kg·m/s</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #2 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-calc">SG #2</span>What is the momentum of a child and wagon if their total mass is 22 kg and velocity is 1.5 m/s?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <i>p = m · v</i> = 22 kg × 1.5 m/s = 33 kg·m/s.<br>
+          <span class="ans-pill">p = 33 kg·m/s</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #3 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-calc">SG #3</span>A 1,200 kg automobile has reached a momentum of 7,800 kg·m/s. What is its velocity?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          Use <i>v = p / m</i>:<br>
+          <i>v</i> = <span class="frac"><span class="num">7,800 kg·m/s</span><span class="den">1,200 kg</span></span> = 6.5 m/s.<br>
+          <span class="ans-pill">v = 6.5 m/s</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #4 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-calc">SG #4 · Unit Trap</span>A toy dart gun generates a dart with 0.140 kg·m/s momentum and a velocity of 4 m/s. What is the mass of the dart in GRAMS? (1 kg = 1,000 g)</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <b>Step 1 (Mass in kg):</b> <i>m = p / v</i> = <span class="frac"><span class="num">0.140 kg·m/s</span><span class="den">4 m/s</span></span> = 0.035 kg.<br>
+          <b>Step 2 (Convert kg → g):</b> 0.035 kg × 1,000 g/kg = 35 g.<br>
+          <span class="ans-pill">m = 35 g (or 0.035 kg)</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #5 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-calc">SG #5</span>A bowling ball of 35.2 kg generates 218 kg·m/s of momentum. What is its velocity?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <i>v = p / m</i> = <span class="frac"><span class="num">218 kg·m/s</span><span class="den">35.2 kg</span></span> ≈ 6.19 m/s.<br>
+          <span class="ans-pill">v ≈ 6.19 m/s (or 6.2 m/s)</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #6 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-calc">SG #6</span>A school bus traveling at 40 km/h (11.1 m/s) has a momentum of 152,625 kg·m/s. What is the mass of the bus?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          Always use the velocity in <b>m/s</b> (11.1 m/s):<br>
+          <i>m = p / v</i> = <span class="frac"><span class="num">152,625 kg·m/s</span><span class="den">11.1 m/s</span></span> = 13,750 kg.<br>
+          <span class="ans-pill">m = 13,750 kg</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #7 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-col">SG #7 · Inelastic</span>A 12,000 kg railroad car traveling at 2 m/s strikes a 10,000 kg railroad car at rest. If the cars lock together, what is their final speed?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <b>Step 1 (Total momentum before):</b> <i>p</i><sub>before</sub> = (12,000 × 2) + (10,000 × 0) = 24,000 kg·m/s.<br>
+          <b>Step 2 (Combined mass after):</b> <i>m</i><sub>total</sub> = 12,000 + 10,000 = 22,000 kg.<br>
+          <b>Step 3 (Final speed):</b> <i>v<sub>f</sub></i> = <span class="frac"><span class="num">24,000 kg·m/s</span><span class="den">22,000 kg</span></span> = <span class="frac"><span class="num">12</span><span class="den">11</span></span> m/s ≈ 1.09 m/s.<br>
+          <span class="ans-pill">v_f ≈ 1.09 m/s</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #8 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-col">SG #8 · Unknown Mass</span>A 9,300 kg railroad car traveling at 15 m/s strikes a second boxcar at rest. They stick together and move off at 6 m/s. What is the mass of the second car?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <b>Step 1 (Total momentum before):</b> <i>p</i><sub>before</sub> = 9,300 kg × 15 m/s = 139,500 kg·m/s.<br>
+          <b>Step 2 (Total combined mass after):</b> Since <i>p</i><sub>after</sub> = (<i>m</i><sub>1</sub> + <i>m</i><sub>2</sub>) · <i>v<sub>f</sub></i>:<br>
+          <i>m</i><sub>1</sub> + <i>m</i><sub>2</sub> = <span class="frac"><span class="num">139,500 kg·m/s</span><span class="den">6 m/s</span></span> = 23,250 kg.<br>
+          <b>Step 3 (Subtract first car's mass):</b> <i>m</i><sub>2</sub> = 23,250 kg − 9,300 kg = 13,950 kg.<br>
+          <span class="ans-pill">m₂ = 13,950 kg</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #9 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-col">SG #9 · Recoil</span>A 25 g (0.025 kg) bullet is fired from a gun with a speed of 230 m/s. If the gun has a mass of 0.9 kg, what is the recoil speed of the gun?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          Before firing, total momentum = 0, so <i>m</i><sub>bullet</sub> · <i>v</i><sub>bullet</sub> = <i>m</i><sub>gun</sub> · <i>v</i><sub>gun</sub>:<br>
+          <i>p</i><sub>bullet</sub> = 0.025 kg × 230 m/s = 5.75 kg·m/s.<br>
+          <i>v</i><sub>gun</sub> = <span class="frac"><span class="num">5.75 kg·m/s</span><span class="den">0.9 kg</span></span> ≈ 6.39 m/s.<br>
+          <span class="ans-pill">v_gun ≈ 6.39 m/s</span>
+        </div>
+      </details>
+
+      <!-- Study Guide #10 -->
+      <details class="prob" open>
+        <summary>
+          <span><span class="prob-tag tag-col">SG #10 · Bullet &amp; Block</span>A 20 g (0.02 kg) bullet traveling at 250 m/s strikes and embeds in a 2 kg block of wood at rest. With what velocity do the block and bullet move after the collision?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <b>Step 1 (Momentum before):</b> <i>p</i><sub>before</sub> = (0.02 kg × 250 m/s) + 0 = 5 kg·m/s.<br>
+          <b>Step 2 (Combined mass):</b> <i>m</i><sub>total</sub> = 2 kg + 0.02 kg = 2.02 kg.<br>
+          <b>Step 3 (Final velocity):</b> <i>v<sub>f</sub></i> = <span class="frac"><span class="num">5 kg·m/s</span><span class="den">2.02 kg</span></span> ≈ 2.48 m/s <i>(Note: if the teacher approximates <i>m</i><sub>total</sub> ≈ 2 kg, 5 / 2 = 2.5 m/s; write both 2.48 m/s and ≈ 2.5 m/s on the test!)</i><br>
+          <span class="ans-pill">v_f ≈ 2.48 m/s (or ≈ 2.5 m/s)</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #11 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-imp">SG Conceptual #11</span>You apply a force of 10 N on a 2 kg object for 30 s. How much impulse did you exert?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <i> Trap:</i> The 2 kg mass is extra information! Impulse is simply <b><i>F · t</i></b>:<br>
+          Impulse = 10 N × 30 s = 300 N·s (or 300 kg·m/s).<br>
+          <span class="ans-pill">Impulse = 300 N·s</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #12 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-imp">SG Conceptual #12</span>How much force must you apply to stop a 5 kg skateboard moving at 2 m/s in 2 s?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          Use <i>F · t = Δ(mv)</i>:<br>
+          |Δ<i>p</i>| = 5 kg × 2 m/s = 10 kg·m/s.<br>
+          <i>F</i> = <span class="frac"><span class="num">Δ<i>p</i></span><span class="den"><i>t</i></span></span> = <span class="frac"><span class="num">10 kg·m/s</span><span class="den">2 s</span></span> = 5 N.<br>
+          <span class="ans-pill">F = 5 N (opposing motion)</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #13, 14, 15, 20 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-calc">SG Conceptual #13–15 &amp; #20</span>Quick p = mv Drills: (13) 2 kg at 3 m/s west; (14) 3 kg with p = 21 kg·m/s; (15) v = 5 m/s with p = 10 kg·m/s; (20) 2 kg toy car at 3 m/s north.</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          • <b>#13:</b> <i>p</i> = 2 kg × 3 m/s = <b>6 kg·m/s west</b> (include direction!).<br>
+          • <b>#14:</b> <i>v = p / m</i> = 21 / 3 = <b>7 m/s</b>.<br>
+          • <b>#15:</b> <i>m = p / v</i> = 10 / 5 = <b>2 kg</b>.<br>
+          • <b>#20:</b> <i>p</i> = 2 kg × 3 m/s = <b>6 kg·m/s north</b>.
+        </div>
+      </details>
+
+      <!-- Conceptual #17 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-col">SG Conceptual #17</span>A 2 kg object A (speed 1 m/s) collides and sticks with a 4 kg object B at rest. What is the total momentum (a) before collision and (b) after collision?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          • <b>(a) Before collision:</b> <i>p</i><sub>before</sub> = (2 kg × 1 m/s) + (4 kg × 0) = <b>2 kg·m/s</b>.<br>
+          • <b>(b) After collision:</b> By Conservation of Momentum, <i>p</i><sub>after</sub> = <i>p</i><sub>before</sub> = <b>2 kg·m/s</b>! (And their combined speed is 2 / 6 = 0.33 m/s.)<br>
+          <span class="ans-pill">(a) 2 kg·m/s &nbsp;·&nbsp; (b) 2 kg·m/s</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #18 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-col">SG Conceptual #18 &amp; Notes p.5</span>A 10 kg snake moving at 1 m/s swallows a 1 kg frog at rest. What is the speed of the snake after its meal?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <i>p</i><sub>before</sub> = (10 kg × 1 m/s) + 0 = 10 kg·m/s.<br>
+          Combined mass after swallowing = 10 kg + 1 kg = 11 kg.<br>
+          <i>v<sub>f</sub></i> = <span class="frac"><span class="num">10 kg·m/s</span><span class="den">11 kg</span></span> ≈ 0.91 m/s.<br>
+          <span class="ans-pill">v_f = 10/11 m/s ≈ 0.91 m/s</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #19 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-calc">SG Conceptual #19 · Two-Step</span>Calculate the momentum of a 60 kg athlete who runs 200 m in 20 s.</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <b>Step 1 (Find speed <i>v = d / t</i>):</b> <i>v</i> = <span class="frac"><span class="num">200 m</span><span class="den">20 s</span></span> = 10 m/s.<br>
+          <b>Step 2 (Find momentum <i>p = mv</i>):</b> <i>p</i> = 60 kg × 10 m/s = 600 kg·m/s.<br>
+          <span class="ans-pill">p = 600 kg·m/s</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #30 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-imp">SG Conceptual #30</span>A baseball bat strikes a baseball with a force of 35 N for 0.12 s. What is the magnitude of the change in momentum of the ball?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          Change in momentum equals impulse: Δ<i>p</i> = <i>F · t</i> = 35 N × 0.12 s = 4.2 kg·m/s (or 4.2 N·s).<br>
+          <span class="ans-pill">Δp = 4.2 kg·m/s</span>
+        </div>
+      </details>
+
+      <!-- Conceptual #31 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-col">SG Conceptual #31</span>A 500 kg car traveling at 9 m/s hits a parked 300 kg car. Their bumpers lock. With what velocity do they roll forward?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <i>p</i><sub>before</sub> = 500 kg × 9 m/s = 4,500 kg·m/s.<br>
+          Combined mass = 500 + 300 = 800 kg.<br>
+          <i>v<sub>f</sub></i> = <span class="frac"><span class="num">4,500 kg·m/s</span><span class="den">800 kg</span></span> = 5.625 m/s.<br>
+          <span class="ans-pill">v_f = 5.625 m/s</span>
+        </div>
+      </details>
+
+      <!-- Notes p.5 Gliding Carts -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-col">Class Notes p.5</span>A 0.5 kg gliding cart moving at 4 m/s bumps into and sticks to a stationary 1.5 kg cart. How fast do the coupled carts glide after collision?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          <i>p</i><sub>before</sub> = 0.5 kg × 4 m/s = 2.0 kg·m/s.<br>
+          Combined mass = 0.5 kg + 1.5 kg = 2.0 kg.<br>
+          <i>v<sub>f</sub></i> = <span class="frac"><span class="num">2.0 kg·m/s</span><span class="den">2.0 kg</span></span> = 1 m/s.<br>
+          <span class="ans-pill">v_f = 1 m/s</span>
+        </div>
+      </details>
+
+      <!-- HW9 MT2 #9 & #10 -->
+      <details class="prob">
+        <summary>
+          <span><span class="prob-tag tag-imp">HW9 MT2 #9 &amp; #10</span>(9) What impulse is needed to stop a 10 kg bowling ball moving at 6 m/s? (10) A 1,000 kg car moves at 20 m/s; what braking force brings it to a halt in 10 s?</span>
+          <span class="chev"></span>
+        </summary>
+        <div class="prob-sol">
+          • <b>HW9 MT2 #9:</b> Impulse = Δ<i>p</i> = 10 kg × (0 − 6 m/s) = <b>−60 N·s</b> (magnitude <b>60 N·s</b> or <b>60 kg·m/s</b> opposing motion).<br>
+          • <b>HW9 MT2 #10:</b> |Δ<i>p</i>| = 1,000 kg × 20 m/s = 20,000 kg·m/s. Braking force <i>F</i> = <span class="frac"><span class="num">20,000 kg·m/s</span><span class="den">10 s</span></span> = <b>2,000 N</b>.<br>
+          <span class="ans-pill">#9: 60 N·s &nbsp;·&nbsp; #10: 2,000 N</span>
+        </div>
+      </details>
+    </section>
+
+    <!-- ==================== SECTION 6: TRUE/FALSE & CONCEPTUAL ==================== -->
+    <section id="sec-tf">
+      <div class="sec-header">
+        <span class="sec-num">6</span>
+        <h2>HW9 True/False (All 10) &amp; Key Fill-in-the-Blanks</h2>
+      </div>
+
+      <div class="card">
+        <h3>HW9 Question 7 — All 10 True/False Statements Explained</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Statement</th>
+                <th>T / F</th>
+                <th>Why?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Momentum is not equal to the mass of an object divided by its velocity.</td>
+                <td><b style="color:var(--green)">TRUE</b></td>
+                <td>Correct—momentum is mass <i>multiplied</i> by velocity (<i>p = mv</i>), not divided!</td>
+              </tr>
+              <tr>
+                <td>2. The momentum of an object can change.</td>
+                <td><b style="color:var(--green)">TRUE</b></td>
+                <td>Whenever a net force acts over time (impulse), velocity changes, so momentum changes.</td>
+              </tr>
+              <tr>
+                <td>3. Two objects with the same mass will always have the same momentum.</td>
+                <td><b style="color:var(--red)">FALSE</b></td>
+                <td>Only if they also have the exact same velocity (speed and direction)!</td>
+              </tr>
+              <tr>
+                <td>4. All moving objects don't have momentum.</td>
+                <td><b style="color:var(--red)">FALSE</b></td>
+                <td><i>Every</i> moving object has mass and velocity, so every moving object has momentum.</td>
+              </tr>
+              <tr>
+                <td>5. When an object speeds up, it gains momentum.</td>
+                <td><b style="color:var(--green)">TRUE</b></td>
+                <td>Since <i>p = mv</i>, increasing speed <i>v</i> increases the magnitude of momentum.</td>
+              </tr>
+              <tr>
+                <td>6. Objects with different masses can't have the same momentum.</td>
+                <td><b style="color:var(--red)">FALSE</b></td>
+                <td>They can! A 1,000 kg car at 20 m/s has the same momentum as a 2,000 kg truck at 10 m/s.</td>
+              </tr>
+              <tr>
+                <td>7. Direction does not matter when you are measuring momentum.</td>
+                <td><b style="color:var(--red)">FALSE</b></td>
+                <td>Momentum is a <b>vector</b> quantity—direction always matters!</td>
+              </tr>
+              <tr>
+                <td>8. Momentum can be transferred from one object to another.</td>
+                <td><b style="color:var(--green)">TRUE</b></td>
+                <td>In collisions (like billiard balls), momentum transfers from the first ball to the second.</td>
+              </tr>
+              <tr>
+                <td>9. When objects collide, some momentum is lost.</td>
+                <td><b style="color:var(--red)">FALSE</b></td>
+                <td>Total momentum is <b>conserved</b> in all collisions (elastic and inelastic) when no external forces interfere!</td>
+              </tr>
+              <tr>
+                <td>10. A tiny bullet can have more momentum than a huge truck.</td>
+                <td><b style="color:var(--green)">TRUE</b></td>
+                <td>Yes—if the huge truck is at rest (<i>p = 0</i>) or creeping ultra-slowly while the bullet moves very fast!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Rapid-Fire Study Guide Conceptual Answers (#6, #7, #10, #16, #21, #28)</h3>
+        <ul class="clean-list">
+          <li><b>SG #6:</b> <i>Ft = Δmv</i> is derived from <b>Newton's 2nd Law</b>.</li>
+          <li><b>SG #7:</b> The Law of Momentum Conservation is very close to <b>Newton's 3rd Law</b> (action and reaction).</li>
+          <li><b>SG #10 (Wall Punch):</b> If you hit a wall with <b>100 N</b> for <b>2 s</b>, the wall hits you back with <b>100 N</b> for <b>2 s</b>. The impulse you exert on the wall (200 N·s) and the impulse the wall exerts on your hand (200 N·s) are <b>equal in magnitude and opposite in direction</b>.</li>
+          <li><b>SG #16 (Taekwondo Hand vs. Wooden Block) &amp; #21 (Small Car vs. Heavy Truck Crash):</b>
+            <br>• Force (<i>F</i>): <b>Equal in magnitude, opposite in direction</b>
+            <br>• Time of impact (<i>t</i>): <b>Equal (same time)</b>
+            <br>• Impulse (<i>F·t</i>): <b>Equal in magnitude, opposite in direction</b>
+            <br>• Change in momentum (Δ<i>mv</i>): <b>Equal in magnitude, opposite in direction</b>
+          </li>
+          <li><b>SG #28:</b> Object A has momentum <b>2 kg·m/s</b> and collides with Object B initially at rest. After collision, both move with a combined momentum of <b>2 kg·m/s</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 7: INTERACTIVE QUICK QUIZ ==================== -->
+    <section id="sec-quiz">
+      <div class="sec-header">
+        <span class="sec-num">7</span>
+        <h2>Interactive Self-Check Quiz (20 Test-Style Questions)</h2>
+      </div>
+
+      <div class="quiz-box">
+        <div id="quiz-active">
+          <div class="quiz-meta">
+            <span id="q-counter">Question 1 of 20</span>
+            <span id="q-score">✓ 0 · ✗ 0</span>
+          </div>
+          <div class="quiz-bar"><div class="quiz-bar-fill" id="q-bar"></div></div>
+          <p class="quiz-q" id="q-text"></p>
+          <div class="quiz-choices" id="q-choices"></div>
+          <div class="quiz-feedback" id="q-feedback"></div>
+          <div class="quiz-actions">
+            <button class="btn-primary" id="q-next" type="button" style="display:none;">Next Question →</button>
+          </div>
+        </div>
+
+        <div id="quiz-done" style="display:none; text-align:center; padding: 14px 0;">
+          <h3 style="font-size: 1.5rem; margin: 0 0 6px;" id="q-final-title"></h3>
+          <p style="color: var(--muted); margin: 0 0 16px;" id="q-final-sub"></p>
+          <button class="btn-primary" type="button" onclick="startQuiz()">Play Again (Reshuffle)</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Prepared by Alia Biswas for Rahul-da &amp; Rohan · 7th Grade Science (Momentum, Impulse &amp; Collisions)
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleAllProbs(sectionId, openState) {
+      var sec = document.getElementById(sectionId);
+      if (!sec) return;
+      var details = sec.querySelectorAll('details.prob');
+      for (var i = 0; i < details.length; i++) {
+        details[i].open = openState;
+      }
+    }
+
+    var QUIZ_QUESTIONS = [
+      {
+        q: "Which has greater momentum: a 10,000 kg truck parked on the street, or a 30 kg child rolling on a skateboard at 2 m/s?",
+        choices: [
+          "The 30 kg child on the skateboard",
+          "The 10,000 kg parked truck",
+          "Both have the exact same momentum",
+          "Neither has any momentum"
+        ],
+        answer: "The 30 kg child on the skateboard",
+        rule: "A parked truck has velocity v = 0, so its momentum is p = 0! The child has p = 30 × 2 = 60 kg·m/s."
+      },
+      {
+        q: "Does a moving object possess impulse?",
+        choices: [
+          "No — it possesses momentum; impulse is the change in momentum (F·t = Δmv)",
+          "Yes — impulse is just another word for momentum",
+          "Yes — if it is moving faster than 10 m/s",
+          "Only during an elastic collision"
+        ],
+        answer: "No — it possesses momentum; impulse is the change in momentum (F·t = Δmv)",
+        rule: "A moving object possesses momentum (mv). Impulse (F·t) is exerted to CHANGE momentum (Impulse = Δmv)."
+      },
+      {
+        q: "Your out-of-control car can stop by hitting either a haystack or a concrete wall. How do the impulses compare?",
+        choices: [
+          "The impulse is the SAME in both cases because Δmv is the same",
+          "Hitting the brick wall gives a much greater impulse",
+          "Hitting the haystack gives a much greater impulse",
+          "There is zero impulse when hitting a haystack"
+        ],
+        answer: "The impulse is the SAME in both cases because Δmv is the same",
+        rule: "In both cases your car goes from mv to 0, so Δmv and Impulse are identical! The haystack increases time (t), which reduces impact force (F)."
+      },
+      {
+        q: "If a boxer 'rides with the punch' so that the contact time is 3 times as long, what happens to the force of impact?",
+        choices: [
+          "The force is reduced to 1/3 as much",
+          "The force is 3 times larger",
+          "The impulse becomes 3 times larger",
+          "The force stays the same"
+        ],
+        answer: "The force is reduced to 1/3 as much",
+        rule: "For the same impulse (F·t), tripling the contact time (3t) cuts the impact force to one-third (F/3)."
+      },
+      {
+        q: "Why did Lester Pelton design curved paddles on his Gold Rush water wheel so the water bounced off in a U-turn?",
+        choices: [
+          "Bouncing reverses the water's momentum (Δp = 2mv), doubling the impulse on the wheel",
+          "Curved paddles reduce the impulse to zero so the wheel doesn't break",
+          "Bouncing water has less mass than stopped water",
+          "Curved paddles eliminate Newton's 3rd Law"
+        ],
+        answer: "Bouncing reverses the water's momentum (Δp = 2mv), doubling the impulse on the wheel",
+        rule: "Stopping water gives an impulse of mv, and throwing it back again adds another mv—so bouncing gives roughly twice the impulse!"
+      },
+      {
+        q: "The Impulse–Momentum relationship (F·t = Δmv) is derived directly from which law?",
+        choices: [
+          "Newton's 2nd Law (F = ma)",
+          "Newton's 1st Law (Inertia)",
+          "Law of Universal Gravitation",
+          "Archimedes' Principle"
+        ],
+        answer: "Newton's 2nd Law (F = ma)",
+        rule: "Substituting a = Δv / t into Newton's 2nd Law (F = ma) gives F = m(Δv/t), or F·t = Δ(mv)."
+      },
+      {
+        q: "The Law of Conservation of Momentum is most closely related to which of Newton's laws?",
+        choices: [
+          "Newton's 3rd Law (Action and Reaction)",
+          "Newton's 1st Law",
+          "Kepler's 2nd Law",
+          "Ohm's Law"
+        ],
+        answer: "Newton's 3rd Law (Action and Reaction)",
+        rule: "Because action and reaction forces in a collision are equal and opposite for the exact same time t, the impulses (+Ft and −Ft) cancel out!"
+      },
+      {
+        q: "A small compact car and a heavy dump truck collide head-on. Which experiences the greater magnitude of impulse and change in momentum?",
+        choices: [
+          "Both experience the exact same magnitude of impulse and change in momentum",
+          "The small compact car",
+          "The heavy dump truck",
+          "Neither experiences an impulse"
+        ],
+        answer: "Both experience the exact same magnitude of impulse and change in momentum",
+        rule: "Equal and opposite forces act for the exact same contact time t, so Ft (impulse) and Δmv have the exact same magnitude on both!"
+      },
+      {
+        q: "If both the mass AND velocity of a moving object are tripled (3m and 3v), how much greater is its momentum?",
+        choices: [
+          "9 times greater",
+          "3 times greater",
+          "6 times greater",
+          "unchanged"
+        ],
+        answer: "9 times greater",
+        rule: "p_new = (3m)(3v) = 9mv — nine times greater!"
+      },
+      {
+        q: "Two objects, each with a momentum magnitude of 3 kg·m/s, travel directly toward each other. What is the combined net momentum of the system?",
+        choices: [
+          "0 kg·m/s",
+          "6 kg·m/s",
+          "3 kg·m/s",
+          "9 kg·m/s"
+        ],
+        answer: "0 kg·m/s",
+        rule: "Momentum is a vector! (+3 kg·m/s) + (−3 kg·m/s) = 0 kg·m/s."
+      },
+      {
+        q: "A toy dart has a momentum of 0.140 kg·m/s and a speed of 4 m/s. What is its mass in GRAMS?",
+        choices: [
+          "35 g",
+          "0.035 g",
+          "560 g",
+          "3.5 g"
+        ],
+        answer: "35 g",
+        rule: "m = p / v = 0.140 / 4 = 0.035 kg = 35 grams."
+      },
+      {
+        q: "You apply a 10 N force to a 2 kg block for 30 seconds. How much impulse did you exert on the block?",
+        choices: [
+          "300 N·s",
+          "600 N·s",
+          "20 N·s",
+          "150 N·s"
+        ],
+        answer: "300 N·s",
+        rule: "Impulse = F × t = 10 N × 30 s = 300 N·s (the 2 kg mass is extra info!)."
+      },
+      {
+        q: "A 9,300 kg railroad car moving at 15 m/s couples with a resting boxcar, and together they roll off at 6 m/s. What is the mass of the second boxcar?",
+        choices: [
+          "13,950 kg",
+          "23,250 kg",
+          "9,300 kg",
+          "6,200 kg"
+        ],
+        answer: "13,950 kg",
+        rule: "p_before = 9,300 × 15 = 139,500 kg·m/s. Combined mass = 139,500 / 6 = 23,250 kg. Subtract 9,300 kg to get m₂ = 13,950 kg!"
+      },
+      {
+        q: "A 10 kg snake slithering at 1 m/s swallows a stationary 1 kg frog. What is the snake's speed right after lunch?",
+        choices: [
+          "10/11 m/s (≈ 0.91 m/s)",
+          "1.0 m/s",
+          "1.1 m/s",
+          "0.5 m/s"
+        ],
+        answer: "10/11 m/s (≈ 0.91 m/s)",
+        rule: "p_before = 10 × 1 = 10 kg·m/s. New mass = 10 + 1 = 11 kg, so v_f = 10 / 11 ≈ 0.91 m/s."
+      },
+      {
+        q: "A 60 kg sprinter runs 200 meters in 20 seconds. What is the sprinter's momentum?",
+        choices: [
+          "600 kg·m/s",
+          "1,200 kg·m/s",
+          "12,000 kg·m/s",
+          "60 kg·m/s"
+        ],
+        answer: "600 kg·m/s",
+        rule: "First find velocity: v = 200 m / 20 s = 10 m/s. Then p = m·v = 60 kg × 10 m/s = 600 kg·m/s."
+      },
+      {
+        q: "A 500 kg car moving at 9 m/s hits a parked 300 kg car and their bumpers lock. What is their speed right after impact?",
+        choices: [
+          "5.625 m/s",
+          "4.5 m/s",
+          "15 m/s",
+          "9 m/s"
+        ],
+        answer: "5.625 m/s",
+        rule: "p_before = 500 × 9 = 4,500 kg·m/s. Combined mass = 500 + 300 = 800 kg. v_f = 4,500 / 800 = 5.625 m/s."
+      },
+      {
+        q: "For the same explosive gas force, why does a long-barreled cannon shoot a cannonball faster than a short-barreled cannon?",
+        choices: [
+          "The force acts on the cannonball for a longer time t inside the longer barrel (greater impulse)",
+          "The cannonball has less mass in a long barrel",
+          "Short barrels have zero impulse",
+          "Gravity is weaker inside a long barrel"
+        ],
+        answer: "The force acts on the cannonball for a longer time t inside the longer barrel (greater impulse)",
+        rule: "Case 1 (Increasing Momentum): Same force F over a longer time t inside the barrel creates a larger impulse F·t = Δ(mv)."
+      },
+      {
+        q: "What characterizes an ELASTIC collision?",
+        choices: [
+          "Objects rebound without lasting deformation or generation of heat",
+          "Objects stick together and generate heat",
+          "Momentum is destroyed during impact",
+          "Only one object feels a force"
+        ],
+        answer: "Objects rebound without lasting deformation or generation of heat",
+        rule: "Elastic collisions (like billiard balls or gas molecules) rebound without lasting deformation or heat; inelastic collisions deform, generate heat, or couple together."
+      },
+      {
+        q: "What would happen if a bullet were more massive than the gun from which it is fired?",
+        choices: [
+          "The gun would recoil with a greater speed than the bullet's forward speed",
+          "The gun would not recoil at all",
+          "Both would move in the same direction",
+          "The bullet would move faster than the gun"
+        ],
+        answer: "The gun would recoil with a greater speed than the bullet's forward speed",
+        rule: "Since m_bullet · v_bullet = m_gun · v_gun, whichever object has the smaller mass gets the larger speed!"
+      },
+      {
+        q: "A lunar rover is tested at 10 km/h on Earth. When it drives at 10 km/h on the Moon, its momentum is:",
+        choices: [
+          "The exact same as on Earth",
+          "1/6 as much as on Earth",
+          "6 times greater than on Earth",
+          "Zero because there is no air on the Moon"
+        ],
+        answer: "The exact same as on Earth",
+        rule: "Momentum p = m·v depends only on mass and velocity (not weight or gravity g!), so it is identical on the Moon."
+      }
+    ];
+
+    var qOrder = [];
+    var qIdx = 0;
+    var qRight = 0;
+    var qWrong = 0;
+    var qAnswered = false;
+
+    function shuffleArr(a) {
+      var copy = a.slice();
+      for (var i = copy.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = copy[i]; copy[i] = copy[j]; copy[j] = t;
+      }
+      return copy;
+    }
+
+    function startQuiz() {
+      qOrder = shuffleArr(QUIZ_QUESTIONS);
+      qIdx = 0;
+      qRight = 0;
+      qWrong = 0;
+      document.getElementById('quiz-done').style.display = 'none';
+      document.getElementById('quiz-active').style.display = 'block';
+      renderQuizQuestion();
+    }
+
+    function renderQuizQuestion() {
+      var item = qOrder[qIdx];
+      qAnswered = false;
+      document.getElementById('q-counter').textContent = 'Question ' + (qIdx + 1) + ' of ' + qOrder.length;
+      document.getElementById('q-score').textContent = '✓ ' + qRight + ' · ✗ ' + qWrong;
+      document.getElementById('q-bar').style.width = ((qIdx / qOrder.length) * 100) + '%';
+      document.getElementById('q-text').textContent = item.q;
+
+      var fb = document.getElementById('q-feedback');
+      fb.className = 'quiz-feedback';
+      fb.textContent = '';
+
+      var nextBtn = document.getElementById('q-next');
+      nextBtn.style.display = 'none';
+      nextBtn.textContent = (qIdx === qOrder.length - 1) ? 'See Final Score →' : 'Next Question →';
+
+      var choicesWrap = document.getElementById('q-choices');
+      choicesWrap.innerHTML = '';
+      var shuffledChoices = shuffleArr(item.choices);
+      shuffledChoices.forEach(function(choiceText) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'quiz-choice';
+        btn.textContent = choiceText;
+        btn.onclick = function() { selectQuizChoice(btn, choiceText, item); };
+        choicesWrap.appendChild(btn);
+      });
+    }
+
+    function selectQuizChoice(btn, chosen, item) {
+      if (qAnswered) return;
+      qAnswered = true;
+      var allBtns = document.getElementById('q-choices').querySelectorAll('.quiz-choice');
+      for (var i = 0; i < allBtns.length; i++) {
+        allBtns[i].disabled = true;
+        if (allBtns[i].textContent === item.answer) {
+          allBtns[i].classList.add('correct');
+        } else if (allBtns[i] === btn) {
+          allBtns[i].classList.add('wrong');
+        }
+      }
+
+      var fb = document.getElementById('q-feedback');
+      if (chosen === item.answer) {
+        qRight++;
+        fb.className = 'quiz-feedback show ok';
+        fb.innerHTML = '<b>Correct!</b> ' + item.rule;
+      } else {
+        qWrong++;
+        fb.className = 'quiz-feedback show bad';
+        fb.innerHTML = '<b>Not quite.</b> ' + item.rule;
+      }
+      document.getElementById('q-score').textContent = '✓ ' + qRight + ' · ✗ ' + qWrong;
+      document.getElementById('q-next').style.display = 'inline-block';
+    }
+
+    document.getElementById('q-next').onclick = function() {
+      qIdx++;
+      if (qIdx >= qOrder.length) {
+        document.getElementById('quiz-active').style.display = 'none';
+        document.getElementById('quiz-done').style.display = 'block';
+        var pct = Math.round((qRight / qOrder.length) * 100);
+        document.getElementById('q-final-title').textContent = qRight + ' / ' + qOrder.length + ' (' + pct + '%)';
+        document.getElementById('q-final-sub').textContent = (pct === 100)
+          ? 'Perfect score! You know every single concept and trap on the Momentum test.'
+          : 'Great run! Tap below to reshuffle and play again.';
+      } else {
+        renderQuizQuestion();
+      }
+    };
+
+    startQuiz();
+  </script>
+</body>
+</html>
