@@ -13,7 +13,7 @@ class ColorBoard {
     ];
     
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('#puzzle-container') && !e.target.closest('#controls')) {
+      if (!e.target.closest('#controls')) {
         this.toggleControls();
       }
     });
