@@ -46,77 +46,586 @@
     html {
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
-      overflow-x: hidden;
+      overflow-x: clip;
       width: 100%;
     }
 
     body {
       margin: 0;
-      padding: 0 0 calc(44px + env(safe-area-inset-bottom)) 0;
+      padding: 0 0 env(safe-area-inset-bottom) 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--ink);
       line-height: 1.6;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+      overflow-x: clip;
       width: 100%;
     }
 
-    /* Sticky iOS-friendly Top Navigation */
-    .sticky-nav {
+
+    /* ==================== 8-PAGE TEXTBOOK READER & LEFT SIDEBAR ==================== */
+    .app-shell {
+      display: flex;
+      min-height: 100vh;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    /* Left Sidebar (Desktop Sticky, Mobile Slide-Over Drawer) */
+    .sidebar {
+      width: 272px;
+      flex: 0 0 272px;
+      height: 100vh;
       position: sticky;
       top: 0;
-      z-index: 100;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #ffffff;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      z-index: 120;
+    }
+    .sidebar-header {
+      padding: 14px 14px 12px;
+      border-bottom: 1px solid #ece8de;
+      background: linear-gradient(180deg, #fbfaf6 0%, #ffffff 100%);
+      flex-shrink: 0;
+    }
+    .sidebar-brand-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .sidebar-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .sidebar-title {
+      font-size: 1.03rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+    }
+    .sidebar-test-pill {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.71rem;
+      font-weight: 700;
+      color: #5c3700;
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .sidebar-close-btn {
+      display: none;
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .sidebar-close-btn:active {
+      background: var(--border);
+      color: var(--ink);
+    }
+    .sidebar-listen-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      margin-top: 10px;
       width: 100%;
-      max-width: 100vw;
-      background: rgba(246, 244, 239, 0.94);
-      -webkit-backdrop-filter: saturate(180%) blur(12px);
-      backdrop-filter: saturate(180%) blur(12px);
-      border-bottom: 1px solid var(--border);
+      border: none;
+      background: linear-gradient(135deg, #1b2c52 0%, #2454c5 100%);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.83rem;
+      font-weight: 700;
       padding: 8px 12px;
+      min-height: 38px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 3px 10px rgba(36, 84, 197, 0.22);
+      transition: transform 0.1s ease, filter 0.15s ease;
+    }
+    .sidebar-listen-btn:hover {
+      filter: brightness(1.06);
+    }
+    .sidebar-listen-btn:active {
+      transform: scale(0.98);
     }
 
-    .nav-scroll {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      width: 100%;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 2px 0;
+    .sidebar-nav {
+      padding: 10px 10px 12px;
+      flex: 1 1 auto;
     }
-    .nav-scroll::-webkit-scrollbar {
+    .sidebar-group {
+      margin-bottom: 10px;
+    }
+    .sidebar-group:last-child {
+      margin-bottom: 0;
+    }
+    .sidebar-group-label {
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 3px 10px 4px;
+    }
+
+    .nav-page-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      text-decoration: none;
+      color: var(--ink);
+      padding: 7px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      margin-bottom: 2px;
+      cursor: pointer;
+      transition: background 0.14s ease, border-color 0.14s ease, color 0.14s ease;
+    }
+    .nav-page-item:hover {
+      background: #f5f3ed;
+    }
+    .nav-page-item.is-active {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      color: #15357a;
+    }
+    .nav-page-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: #f0eee8;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+    .nav-page-item.is-active .nav-page-num {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .nav-page-body {
+      flex: 1 1 auto;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .nav-page-title-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      min-width: 0;
+    }
+    .nav-page-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.28;
+      color: var(--ink);
+    }
+    .nav-page-item.is-active .nav-page-title {
+      font-weight: 700;
+      color: #15357a;
+    }
+    .nav-practice-pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--green);
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      padding: 1px 6px;
+      border-radius: 999px;
+      white-space: nowrap;
+      line-height: 1.35;
+    }
+    .nav-page-meta {
+      font-size: 0.73rem;
+      color: var(--muted);
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.25;
+    }
+    .nav-page-item.is-active .nav-page-meta {
+      color: #36579e;
+    }
+    .nav-page-status {
+      flex: 0 0 auto;
+      min-width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+    .nav-page-item.is-audio-playing .nav-page-status {
+      color: var(--accent);
+      animation: navAudioPulse 1.35s ease-in-out infinite;
+    }
+    .nav-page-item.is-audio-done .nav-page-status {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: var(--green);
+      font-size: 0.72rem;
+    }
+    @keyframes navAudioPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.16); opacity: 0.72; }
+    }
+
+    .sidebar-footer {
+      padding: 8px 14px 10px;
+      border-top: 1px solid #ece8de;
+      font-size: 0.74rem;
+      color: var(--muted);
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* Main Content Pane */
+    .main-pane {
+      flex: 1 1 auto;
+      min-width: 0;
+      width: 100%;
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 20px 24px 96px;
+    }
+
+    /* Book Pages (SPA single active page) */
+    .book-page {
+      display: none;
+      scroll-margin-top: 84px;
+    }
+    .book-page.is-active {
+      display: block;
+      animation: pageFadeIn 0.18s ease-out;
+    }
+    @keyframes pageFadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .book-page > section:first-child .sec-header,
+    .page-top-meta + section .sec-header {
+      margin-top: 6px;
+    }
+
+    /* Compact Top Page Breadcrumb / Quick Answers Row (Pages 2-8) */
+    .page-top-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #e7e3d9;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .page-top-kicker {
+      font-weight: 700;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .page-top-badge {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+      font-size: 0.73rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .page-top-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mini-text-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+    .mini-text-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+    }
+
+    /* Per-Page Bottom Answer Controls Bar */
+    .page-ans-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 14px;
+      margin-top: 22px;
+    }
+    .page-ans-note {
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Bottom Page Navigation Bar (.page-pager) */
+    .page-pager {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .pager-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      border-radius: 13px;
+      padding: 12px 15px;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-height: 62px;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    }
+    .pager-btn:hover {
+      border-color: var(--accent-border);
+      background: #f9fbff;
+      box-shadow: 0 4px 12px rgba(36, 84, 197, 0.09);
+    }
+    .pager-btn:active {
+      transform: scale(0.99);
+    }
+    .pager-prev {
+      text-align: left;
+      align-items: flex-start;
+    }
+    .pager-next {
+      text-align: right;
+      align-items: flex-end;
+      border-color: var(--accent-border);
+      background: linear-gradient(135deg, #f4f8ff 0%, #ffffff 100%);
+    }
+    .pager-next:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .pager-dir {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+    }
+    .pager-title {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+    .pager-spacer {
+      display: block;
+    }
+    @media (max-width: 560px) {
+      .page-pager {
+        grid-template-columns: 1fr;
+      }
+      .pager-spacer {
+        display: none;
+      }
+      .pager-next {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+
+    /* Mobile & Narrow Tablet Top Bar (< 880px) */
+    .mobile-topbar {
+      display: none;
+    }
+    .sidebar-backdrop {
       display: none;
     }
 
-    .nav-pill {
-      flex: 0 0 auto;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--ink);
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 7px 13px;
-      border-radius: 999px;
-      white-space: nowrap;
-      transition: background 0.15s, color 0.15s, border-color 0.15s;
-    }
-    .nav-pill:active,
-    .nav-pill.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
+    @media (max-width: 879px) {
+      .mobile-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        position: sticky;
+        top: 0;
+        z-index: 150;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: saturate(180%) blur(14px);
+        backdrop-filter: saturate(180%) blur(14px);
+        border-bottom: 1px solid var(--border);
+        padding: 8px 12px;
+      }
+      .mobile-menu-btn {
+        appearance: none;
+        -webkit-appearance: none;
+        border: 1px solid var(--border);
+        background: var(--cream);
+        color: var(--ink);
+        font-family: inherit;
+        font-size: 0.84rem;
+        font-weight: 700;
+        padding: 7px 11px;
+        min-height: 38px;
+        border-radius: 10px;
+        cursor: pointer;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .mobile-menu-btn:active {
+        background: var(--accent-soft);
+        border-color: var(--accent-border);
+        color: var(--accent);
+      }
+      .mobile-page-indicator {
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: center;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--ink);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .mobile-arrows {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        flex-shrink: 0;
+      }
+      .mobile-arrow-btn {
+        appearance: none;
+        -webkit-appearance: none;
+        border: 1px solid var(--border);
+        background: #ffffff;
+        color: var(--ink);
+        font-family: inherit;
+        font-size: 1.15rem;
+        font-weight: 700;
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+      .mobile-arrow-btn:active:not(:disabled) {
+        background: var(--accent);
+        color: #ffffff;
+        border-color: var(--accent);
+      }
+      .mobile-arrow-btn:disabled {
+        opacity: 0.35;
+        cursor: default;
+      }
+
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 292px;
+        max-width: 85vw;
+        z-index: 260;
+        transform: translateX(-105%);
+        transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 6px 0 28px rgba(27, 44, 82, 0.22);
+      }
+      .sidebar.is-open {
+        transform: translateX(0);
+      }
+      .sidebar-close-btn {
+        display: inline-flex;
+      }
+      .sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 250;
+        background: rgba(20, 28, 46, 0.45);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.22s ease;
+      }
+      .sidebar-backdrop.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .container {
+        padding: 14px 14px 72px;
+      }
     }
 
-    .container {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 16px 14px;
-    }
 
     /* Hero Header */
     .hero {
@@ -124,7 +633,7 @@
       color: #fff;
       border-radius: 18px;
       padding: 22px 20px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       box-shadow: 0 6px 20px rgba(27, 44, 82, 0.16);
     }
     .hero .eyebrow {
@@ -163,24 +672,6 @@
       border-radius: 999px;
     }
 
-    /* Global Control Bar */
-    .global-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 14px;
-      margin-bottom: 18px;
-    }
-    .global-bar-note {
-      font-size: 0.88rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
     .btn-group {
       display: flex;
       gap: 8px;
@@ -227,14 +718,14 @@
     /* Section Headings */
     section {
       scroll-margin-top: 66px;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
     .sec-header {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 24px 0 12px;
+      margin: 22px 0 12px;
     }
     .sec-num {
       background: var(--accent);
@@ -547,7 +1038,7 @@
       background: #fff;
       color: var(--accent);
       font-weight: 600;
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       padding: 7px 13px;
       border-radius: 10px;
       cursor: pointer;
@@ -677,10 +1168,10 @@
 
     footer {
       text-align: center;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       color: var(--muted);
-      margin-top: 36px;
-      padding-top: 16px;
+      margin-top: 28px;
+      padding-top: 14px;
       border-top: 1px solid var(--border);
     }
 
@@ -1100,8 +1591,16 @@
         padding-bottom: calc(96px + env(safe-area-inset-bottom));
       }
     }
+    @media (min-width: 880px) {
+      .mini-player {
+        left: 272px;
+      }
+      body.has-mini-player .main-pane {
+        padding-bottom: 84px;
+      }
+    }
 
-    /* Clean Print Layout */
+    /* Clean Print Layout — prints all 8 pages cleanly */
     @media print {
       body,
       body.has-mini-player {
@@ -1110,8 +1609,15 @@
         padding: 0;
         font-size: 11pt;
       }
-      .sticky-nav,
-      .global-bar,
+      .app-shell {
+        display: block;
+      }
+      .sidebar,
+      .sidebar-backdrop,
+      .mobile-topbar,
+      .page-top-meta,
+      .page-ans-bar,
+      .page-pager,
       .toolbar,
       .toggle-btn,
       .chev,
@@ -1119,6 +1625,17 @@
       .audio-card,
       .mini-player {
         display: none !important;
+      }
+      .book-page {
+        display: block !important;
+        animation: none !important;
+      }
+      .book-page + .book-page {
+        break-before: page;
+        page-break-before: always;
+      }
+      .main-pane {
+        padding-bottom: 0 !important;
       }
       .container {
         max-width: 100%;
@@ -1151,56 +1668,142 @@
 </head>
 <body>
 
-  <!-- Sticky iOS-friendly Top Navigation -->
-  <nav class="sticky-nav" aria-label="Chapter 4 Study Guide Sections">
-    <div class="nav-scroll" id="nav-scroll">
-      <a class="nav-pill active" href="#cheat-sheet">Quick Reference</a>
-      <a class="nav-pill" href="#s43-slope-intercept">4.3 Slope-Intercept</a>
-      <a class="nav-pill" href="#s43-parallel">4.3 Parallel Lines</a>
-      <a class="nav-pill" href="#s43-point-slope">4.3 Point &amp; Parallel</a>
-      <a class="nav-pill" href="#s43-two-points">4.3 Two Points</a>
-      <a class="nav-pill" href="#s43-practice">Practice 4.3</a>
-      <a class="nav-pill" href="#s44-table">4.4 Table</a>
-      <a class="nav-pill" href="#s44-mb">4.4 m &amp; b</a>
-      <a class="nav-pill" href="#s44-mpoint">4.4 m &amp; Point</a>
-      <a class="nav-pill" href="#s44-practice">Practice 4.4</a>
+  <!-- Mobile Slide-Over Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Top Navigation Bar (< 880px) -->
+  <header class="mobile-topbar" id="mobile-topbar">
+    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open chapters menu" aria-controls="sidebar" aria-expanded="false">☰ Chapters</button>
+    <div class="mobile-page-indicator" id="mobile-page-indicator">Page 1 of 8 · Quick Reference</div>
+    <div class="mobile-arrows">
+      <button type="button" class="mobile-arrow-btn" id="mobile-prev-btn" aria-label="Previous page" disabled>‹</button>
+      <button type="button" class="mobile-arrow-btn" id="mobile-next-btn" aria-label="Next page">›</button>
     </div>
-  </nav>
+  </header>
 
-  <div class="container">
-
-    <!-- Hero Header -->
-    <header class="hero">
-      <div class="eyebrow">Rohan's 7th Grade Math · Readable Textbook &amp; Study Guide · Test: Dec 3, 2026</div>
-      <h1>Chapter 4 (Lessons 4.3 &amp; 4.4): Writing &amp; Graphing Linear Equations</h1>
-      <p>
-        A crystal-clear, iPhone- and iPad-friendly edition of <i>Math in Focus Course 3</i> (pp. 154–170), prepared by Alia Biswas—with every Example, Think Math, Math Note, Guided Practice, and Practice problem plus step-by-step tap-to-reveal solutions and exact coordinate graphs.
-      </p>
-      <div class="hero-badges">
-        <span class="hero-badge">Lesson 4.3 · Writing Equations</span>
-        <span class="hero-badge">Lesson 4.4 · Graphing Lines</span>
-        <span class="hero-badge">50+ Tap-to-Reveal Solutions</span>
-        <span class="hero-badge">Crisp Coordinate Graphs</span>
-      </div>
-      <div class="hero-cta-row">
-        <button type="button" class="hero-listen-btn" id="hero-listen-btn" onclick="startFromBeginning()">
-          🎧 Listen from the Beginning
+  <div class="app-shell">
+    <!-- Left Textbook Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Chapter 4 Textbook Pages">
+      <div class="sidebar-header">
+        <div class="sidebar-brand-row">
+          <div class="sidebar-brand">
+            <div class="sidebar-eyebrow">Chapter 4 · 4.3 &amp; 4.4</div>
+            <div class="sidebar-title">Rohan's Math Textbook</div>
+            <span class="sidebar-test-pill">Test: Dec 3, 2026</span>
+          </div>
+          <button type="button" class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close chapters menu">✕</button>
+        </div>
+        <button type="button" class="sidebar-listen-btn" id="sidebar-listen-btn" onclick="startFromBeginning()">
+          🎧 Listen from Page 1
         </button>
-        <span class="hero-listen-hint">8 mini-lessons · Auto-plays straight through</span>
       </div>
-    </header>
 
-    <!-- Global Answer Controls -->
-    <div class="global-bar">
-      <span class="global-bar-note">Tap any problem below to reveal its step-by-step worked solution.</span>
-      <div class="btn-group">
-        <button type="button" class="toggle-btn" onclick="toggleAllProbs(null, true)">Show All Answers</button>
-        <button type="button" class="toggle-btn" onclick="toggleAllProbs(null, false)">Hide All Answers</button>
-      </div>
-    </div>
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">START HERE</div>
+          <a href="#page-1" class="nav-page-item is-active" data-page="1" data-track-idx="0" aria-current="page">
+            <span class="nav-page-num">1</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Quick Reference</span></span>
+              <span class="nav-page-meta">Ch. 4 Overview · 2:11</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">LESSON 4.3 · WRITING EQUATIONS</div>
+          <a href="#page-2" class="nav-page-item" data-page="2" data-track-idx="1">
+            <span class="nav-page-num">2</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Slope-Intercept Form</span></span>
+              <span class="nav-page-meta">pp. 154–156 · 2:16</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+          <a href="#page-3" class="nav-page-item" data-page="3" data-track-idx="2">
+            <span class="nav-page-num">3</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Parallel Lines</span></span>
+              <span class="nav-page-meta">pp. 157–158 · 2:19</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+          <a href="#page-4" class="nav-page-item" data-page="4" data-track-idx="3">
+            <span class="nav-page-num">4</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Slope, Point &amp; Parallel</span></span>
+              <span class="nav-page-meta">pp. 158–162 · 2:46</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+          <a href="#page-5" class="nav-page-item" data-page="5" data-track-idx="4">
+            <span class="nav-page-num">5</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Two Points</span><span class="nav-practice-pill">+ Practice 4.3</span></span>
+              <span class="nav-page-meta">pp. 162–164 · 1:55</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="sidebar-group">
+          <div class="sidebar-group-label">LESSON 4.4 · GRAPHING LINES</div>
+          <a href="#page-6" class="nav-page-item" data-page="6" data-track-idx="5">
+            <span class="nav-page-num">6</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Graphing with a Table</span></span>
+              <span class="nav-page-meta">pp. 165–166 · 2:10</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+          <a href="#page-7" class="nav-page-item" data-page="7" data-track-idx="6">
+            <span class="nav-page-num">7</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Sketching with m &amp; b</span></span>
+              <span class="nav-page-meta">pp. 166–168 · 2:07</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+          <a href="#page-8" class="nav-page-item" data-page="8" data-track-idx="7">
+            <span class="nav-page-num">8</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Sketching with m &amp; Point</span><span class="nav-practice-pill">+ Practice 4.4</span></span>
+              <span class="nav-page-meta">pp. 169–170 · 2:10</span>
+            </span>
+            <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
+          </a>
+        </div>
+      </nav>
 
-    <!-- ==================== AT-A-GLANCE QUICK REFERENCE SHEET ==================== -->
-    <section id="cheat-sheet">
+      <div class="sidebar-footer">8 pages · 8 audio mini-lessons</div>
+    </aside>
+
+    <!-- Main Content Pane -->
+    <main class="main-pane" id="main-pane">
+      <div class="container">
+
+      <article class="book-page is-active" id="page-1" data-page="1">
+        <!-- Hero Header -->
+        <header class="hero">
+          <div class="eyebrow">Rohan's 7th Grade Math · Readable Textbook &amp; Study Guide · Test: Dec 3, 2026</div>
+          <h1>Chapter 4 (Lessons 4.3 &amp; 4.4): Writing &amp; Graphing Linear Equations</h1>
+          <p>
+            A crystal-clear, iPhone- and iPad-friendly edition of <i>Math in Focus Course 3</i> (pp. 154–170), prepared by Alia Biswas—with every Example, Think Math, Math Note, Guided Practice, and Practice problem plus step-by-step tap-to-reveal solutions and exact coordinate graphs.
+          </p>
+          <div class="hero-badges">
+            <span class="hero-badge">Lesson 4.3 · Writing Equations</span>
+            <span class="hero-badge">Lesson 4.4 · Graphing Lines</span>
+            <span class="hero-badge">50+ Tap-to-Reveal Solutions</span>
+            <span class="hero-badge">Crisp Coordinate Graphs</span>
+          </div>
+          <div class="hero-cta-row">
+            <button type="button" class="hero-listen-btn" id="hero-listen-btn" onclick="startFromBeginning()">
+              🎧 Listen from the Beginning
+            </button>
+            <span class="hero-listen-hint">8 mini-lessons · Auto-plays straight through</span>
+          </div>
+        </header>
+
+<section id="cheat-sheet">
       <div class="sec-header">
         <span class="sec-num">★</span>
         <h2>At-a-Glance Quick Reference Sheet</h2>
@@ -1309,11 +1912,23 @@
       </div>
     </section>
 
+        <nav class="page-pager" aria-label="Page 1 navigation">
+          <div class="pager-spacer" aria-hidden="true"></div>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(2)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.3 Slope-Intercept Form</span>
+          </button>
+        </nav>
+      </article>
 
-    <!-- ==================== LESSON 4.3 ==================== -->
-<!-- ====================================================================== -->
-<!-- LESSON 4.3: WRITING LINEAR EQUATIONS (pp. 154–164)                     -->
-<!-- ====================================================================== -->
+      <article class="book-page" id="page-2" data-page="2">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 2 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-2', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-2', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s43-slope-intercept">
   <div class="sec-header">
@@ -1601,9 +2216,34 @@
   </div>
 </section>
 
-<!-- ====================================================================== -->
-<!-- SECTION 2: PARALLEL LINES (pp. 157–158)                                -->
-<!-- ====================================================================== -->
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (10 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-2', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-2', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
+
+        <nav class="page-pager" aria-label="Page 2 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(1)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">Quick Reference</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(3)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.3 Parallel Lines</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page" id="page-3" data-page="3">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 3 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-3', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-3', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s43-parallel">
   <div class="sec-header">
@@ -1815,9 +2455,34 @@
   </div>
 </section>
 
-<!-- ====================================================================== -->
-<!-- SECTION 3: GIVEN SLOPE & A POINT / POINT & PARALLEL LINE (pp. 158–162) -->
-<!-- ====================================================================== -->
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (2 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-3', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-3', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
+
+        <nav class="page-pager" aria-label="Page 3 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(2)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">4.3 Slope-Intercept Form</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(4)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.3 Slope, Point &amp; Parallel</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page" id="page-4" data-page="4">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 4 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-4', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-4', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s43-point-slope">
   <div class="sec-header">
@@ -2284,9 +2949,34 @@
   </div>
 </section>
 
-<!-- ====================================================================== -->
-<!-- SECTION 4: GIVEN TWO POINTS (pp. 162–163)                              -->
-<!-- ====================================================================== -->
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (5 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-4', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-4', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
+
+        <nav class="page-pager" aria-label="Page 4 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(3)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">4.3 Parallel Lines</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(5)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.3 Two Points &amp; Practice 4.3</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page" id="page-5" data-page="5">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 5 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-5', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-5', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s43-two-points">
   <div class="sec-header">
@@ -2495,10 +3185,6 @@
     </details>
   </div>
 </section>
-
-<!-- ====================================================================== -->
-<!-- SECTION 5: PRACTICE 4.3 (p. 164) — ALL 16 PROBLEMS                     -->
-<!-- ====================================================================== -->
 
 <section id="s43-practice">
   <div class="sec-header">
@@ -2791,9 +3477,34 @@
   </div>
 </section>
 
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (17 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-5', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-5', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
 
-    <!-- ==================== LESSON 4.4 ==================== -->
-<!-- ==================== LESSON 4.4: SKETCHING GRAPHS OF LINEAR EQUATIONS ==================== -->
+        <nav class="page-pager" aria-label="Page 5 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(4)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">4.3 Slope, Point &amp; Parallel</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(6)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.4 Graphing with a Table</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page" id="page-6" data-page="6">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 6 of 8</span> Lesson 4.4 · Sketching Graphs of Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-6', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-6', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s44-table">
   <div class="sec-header">
@@ -3258,7 +3969,34 @@
   </div>
 </section>
 
-<!-- ==================== METHOD 2: USING m AND b ==================== -->
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (2 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-6', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-6', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
+
+        <nav class="page-pager" aria-label="Page 6 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(5)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">4.3 Two Points &amp; Practice 4.3</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(7)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.4 Sketching with m &amp; b</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page" id="page-7" data-page="7">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 7 of 8</span> Lesson 4.4 · Sketching Graphs of Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-7', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-7', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s44-mb">
   <div class="sec-header">
@@ -3768,7 +4506,34 @@
   </div>
 </section>
 
-<!-- ==================== METHOD 3: USING m AND A POINT ==================== -->
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (3 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-7', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-7', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
+
+        <nav class="page-pager" aria-label="Page 7 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(6)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">4.4 Graphing with a Table</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(8)">
+            <span class="pager-dir">Next →</span>
+            <span class="pager-title">4.4 Sketching with m &amp; Point + Practice 4.4</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page" id="page-8" data-page="8">
+        <div class="page-top-meta">
+          <span class="page-top-kicker"><span class="page-top-badge">Page 8 of 8</span> Lesson 4.4 · Sketching Graphs of Linear Equations</span>
+          <div class="page-top-actions">
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-8', true)">Show Answers</button>
+            <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-8', false)">Hide Answers</button>
+          </div>
+        </div>
 
 <section id="s44-mpoint">
   <div class="sec-header">
@@ -4170,8 +4935,6 @@
     </details>
   </div>
 </section>
-
-<!-- ==================== PRACTICE 4.4 ==================== -->
 
 <section id="s44-practice">
   <div class="sec-header">
@@ -6327,11 +7090,32 @@
   </div>
 </section>
 
+        <div class="page-ans-bar">
+          <span class="page-ans-note">Tap any problem above to check your work (17 problems on this page)</span>
+          <div class="btn-group">
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-8', true)">Show Answers on This Page</button>
+            <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-8', false)">Hide Answers on This Page</button>
+          </div>
+        </div>
 
-    <footer>
-      Prepared by Alia Biswas for Rahul-da &amp; Rohan · 7th Grade Math — Chapter 4 (Lessons 4.3 &amp; 4.4, pp. 154–170) · Test: Dec 3, 2026
-    </footer>
+        <nav class="page-pager" aria-label="Page 8 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage(7)">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">4.4 Sketching with m &amp; b</span>
+          </button>
+          <button type="button" class="pager-btn pager-next" onclick="goToPage(1)">
+            <span class="pager-dir">Back to Start ↺</span>
+            <span class="pager-title">Page 1 · Quick Reference</span>
+          </button>
+        </nav>
+      </article>
 
+        <footer>
+          Prepared by Alia Biswas for Rahul-da &amp; Rohan · 7th Grade Math — Chapter 4 (Lessons 4.3 &amp; 4.4, pp. 154–170) · Test: Dec 3, 2026
+        </footer>
+
+      </div>
+    </main>
   </div>
 
   <!-- Single iOS Safari-friendly shared audio element -->
@@ -6344,7 +7128,7 @@
     </div>
     <div class="mini-inner">
       <div class="mini-top-row">
-        <button type="button" class="mini-title-btn" id="mini-title-btn" title="Jump to current section">
+        <button type="button" class="mini-title-btn" id="mini-title-btn" title="Jump to page currently playing">
           <span class="mini-title-text" id="mini-title">🎧 Intro &amp; Quick Reference</span>
           <span class="mini-time" id="mini-time">0:00 / --:--</span>
         </button>
@@ -6361,8 +7145,8 @@
   </div>
 
   <script>
-    function toggleAllProbs(sectionId, openState) {
-      var root = sectionId ? document.getElementById(sectionId) : document;
+    function toggleAllProbs(containerId, openState) {
+      var root = containerId ? document.getElementById(containerId) : document;
       if (!root) return;
       var details = root.querySelectorAll('details.prob');
       for (var i = 0; i < details.length; i++) {
@@ -6381,62 +7165,183 @@
           throwOnError: false
         });
       }
+    });
 
-      // Active sticky-nav pill highlighting on scroll
-      var navScroll = document.getElementById('nav-scroll');
-      var navLinks = Array.prototype.slice.call(document.querySelectorAll('.sticky-nav .nav-pill'));
-      var linkById = {};
-      var sections = [];
-      navLinks.forEach(function(link) {
-        var href = link.getAttribute('href') || '';
-        if (href.charAt(0) === '#') {
-          var id = href.slice(1);
-          var el = document.getElementById(id);
-          if (el) {
-            linkById[id] = link;
-            sections.push(el);
+    // ==================== 8-PAGE TEXTBOOK SPA ROUTER & SIDEBAR ====================
+    (function() {
+      var PAGES = [{"page": 1, "mobileTitle": "Quick Reference", "fullTitle": "Quick Reference", "sectionIds": ["cheat-sheet"]}, {"page": 2, "mobileTitle": "4.3 Slope-Intercept", "fullTitle": "4.3 Slope-Intercept Form", "sectionIds": ["s43-slope-intercept"]}, {"page": 3, "mobileTitle": "4.3 Parallel Lines", "fullTitle": "4.3 Parallel Lines", "sectionIds": ["s43-parallel"]}, {"page": 4, "mobileTitle": "4.3 Point & Parallel", "fullTitle": "4.3 Slope, Point & Parallel", "sectionIds": ["s43-point-slope"]}, {"page": 5, "mobileTitle": "4.3 Two Points + Practice", "fullTitle": "4.3 Two Points & Practice 4.3", "sectionIds": ["s43-two-points", "s43-practice"]}, {"page": 6, "mobileTitle": "4.4 Graphing Table", "fullTitle": "4.4 Graphing with a Table", "sectionIds": ["s44-table"]}, {"page": 7, "mobileTitle": "4.4 Sketching m & b", "fullTitle": "4.4 Sketching with m & b", "sectionIds": ["s44-mb"]}, {"page": 8, "mobileTitle": "4.4 m & Point + Practice", "fullTitle": "4.4 Sketching with m & Point + Practice 4.4", "sectionIds": ["s44-mpoint", "s44-practice"]}];
+      var SECTION_TO_PAGE = {"cheat-sheet": 1, "s43-slope-intercept": 2, "s43-parallel": 3, "s43-point-slope": 4, "s43-two-points": 5, "s43-practice": 5, "s44-table": 6, "s44-mb": 7, "s44-mpoint": 8, "s44-practice": 8};
+      var TOTAL_PAGES = PAGES.length;
+      var currentPage = 1;
+
+      var sidebar = document.getElementById('sidebar');
+      var backdrop = document.getElementById('sidebar-backdrop');
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      var closeBtn = document.getElementById('sidebar-close-btn');
+      var mobileIndicator = document.getElementById('mobile-page-indicator');
+      var mobilePrevBtn = document.getElementById('mobile-prev-btn');
+      var mobileNextBtn = document.getElementById('mobile-next-btn');
+
+      function openDrawer() {
+        if (!sidebar) return;
+        sidebar.classList.add('is-open');
+        if (backdrop) backdrop.classList.add('is-open');
+        if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        if (!sidebar) return;
+        sidebar.classList.remove('is-open');
+        if (backdrop) backdrop.classList.remove('is-open');
+        if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      function goToPage(pageNum, opts) {
+        opts = opts || {};
+        var n = parseInt(pageNum, 10);
+        if (!isFinite(n) || n < 1) n = 1;
+        if (n > TOTAL_PAGES) n = TOTAL_PAGES;
+        currentPage = n;
+
+        var pageEls = document.querySelectorAll('.book-page[data-page]');
+        for (var i = 0; i < pageEls.length; i++) {
+          var pVal = parseInt(pageEls[i].getAttribute('data-page'), 10);
+          pageEls[i].classList.toggle('is-active', pVal === n);
+        }
+
+        var navItems = document.querySelectorAll('.nav-page-item[data-page]');
+        for (var j = 0; j < navItems.length; j++) {
+          var nVal = parseInt(navItems[j].getAttribute('data-page'), 10);
+          var isAct = (nVal === n);
+          navItems[j].classList.toggle('is-active', isAct);
+          if (isAct) {
+            navItems[j].setAttribute('aria-current', 'page');
+          } else {
+            navItems[j].removeAttribute('aria-current');
           }
+        }
+
+        var pageObj = PAGES[n - 1];
+        if (mobileIndicator && pageObj) {
+          mobileIndicator.textContent = 'Page ' + n + ' of ' + TOTAL_PAGES + ' · ' + pageObj.mobileTitle;
+        }
+        if (mobilePrevBtn) mobilePrevBtn.disabled = (n <= 1);
+        if (mobileNextBtn) mobileNextBtn.disabled = (n >= TOTAL_PAGES);
+
+        closeDrawer();
+
+        if (opts.updateHash !== false) {
+          var targetHash = '#page-' + n;
+          if (window.location.hash !== targetHash) {
+            if (window.history && typeof window.history.pushState === 'function') {
+              try {
+                window.history.pushState({ page: n }, '', targetHash);
+              } catch (e) {
+                window.location.hash = targetHash;
+              }
+            } else {
+              window.location.hash = targetHash;
+            }
+          }
+        }
+
+        if (opts.scrollToId) {
+          var secEl = document.getElementById(opts.scrollToId);
+          if (secEl && typeof secEl.scrollIntoView === 'function') {
+            secEl.scrollIntoView({ behavior: opts.instant ? 'instant' : 'smooth', block: 'start' });
+            return;
+          }
+        }
+        if (opts.scroll !== false) {
+          try {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          } catch (e) {
+            window.scrollTo(0, 0);
+          }
+        }
+      }
+
+      window.goToPage = goToPage;
+      window.closeTextbookDrawer = closeDrawer;
+
+      // Sidebar page links
+      var sidebarLinks = document.querySelectorAll('.nav-page-item[data-page]');
+      for (var k = 0; k < sidebarLinks.length; k++) {
+        (function(linkEl) {
+          linkEl.addEventListener('click', function(e) {
+            e.preventDefault();
+            var targetPage = parseInt(linkEl.getAttribute('data-page'), 10);
+            goToPage(targetPage);
+          });
+        })(sidebarLinks[k]);
+      }
+
+      // Mobile drawer & topbar controls
+      if (menuBtn) {
+        menuBtn.addEventListener('click', function() {
+          if (sidebar && sidebar.classList.contains('is-open')) {
+            closeDrawer();
+          } else {
+            openDrawer();
+          }
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (backdrop) backdrop.addEventListener('click', closeDrawer);
+      if (mobilePrevBtn) {
+        mobilePrevBtn.addEventListener('click', function() {
+          if (currentPage > 1) goToPage(currentPage - 1);
+        });
+      }
+      if (mobileNextBtn) {
+        mobileNextBtn.addEventListener('click', function() {
+          if (currentPage < TOTAL_PAGES) goToPage(currentPage + 1);
+        });
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && sidebar && sidebar.classList.contains('is-open')) {
+          closeDrawer();
         }
       });
 
-      function setActivePill(id) {
-        var activeLink = linkById[id];
-        if (!activeLink) return;
-        navLinks.forEach(function(l) { l.classList.remove('active'); });
-        activeLink.classList.add('active');
-        if (navScroll) {
-          var targetLeft = activeLink.offsetLeft - (navScroll.clientWidth / 2) + (activeLink.clientWidth / 2);
-          navScroll.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+      // URL hash routing (supports #page-1..#page-8 and legacy section IDs)
+      function applyHash(isInit) {
+        var raw = (window.location.hash || '').replace(/^#/, '').trim();
+        if (!raw) {
+          goToPage(1, { updateHash: false, instant: isInit, scroll: !isInit });
+          return;
         }
+        var m = /^page-(\d+)$/.exec(raw);
+        if (m) {
+          var pNum = parseInt(m[1], 10);
+          goToPage(pNum, { updateHash: false, instant: isInit });
+          return;
+        }
+        if (Object.prototype.hasOwnProperty.call(SECTION_TO_PAGE, raw)) {
+          goToPage(SECTION_TO_PAGE[raw], { updateHash: false, scrollToId: raw, instant: isInit });
+          return;
+        }
+        goToPage(1, { updateHash: false, instant: isInit, scroll: !isInit });
       }
 
-      if ('IntersectionObserver' in window && sections.length > 0) {
-        var visible = {};
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            visible[entry.target.id] = entry.isIntersecting ? entry.boundingClientRect.top : null;
-          });
-          // Pick the topmost currently intersecting section
-          var bestId = null;
-          var bestTop = Infinity;
-          sections.forEach(function(sec) {
-            var top = visible[sec.id];
-            if (top !== null && top !== undefined && Math.abs(top) < bestTop) {
-              bestTop = Math.abs(top);
-              bestId = sec.id;
-            }
-          });
-          if (bestId) {
-            setActivePill(bestId);
-          }
-        }, {
-          rootMargin: '-64px 0px -65% 0px',
-          threshold: [0, 0.05, 0.2]
-        });
+      window.addEventListener('hashchange', function() {
+        applyHash(false);
+      });
+      window.addEventListener('popstate', function() {
+        applyHash(false);
+      });
+      window.addEventListener('load', function() {
+        var raw = (window.location.hash || '').replace(/^#/, '').trim();
+        if (!raw || /^page-\d+$/.test(raw)) {
+          window.scrollTo(0, 0);
+        }
+      });
 
-        sections.forEach(function(sec) { observer.observe(sec); });
-      }
-    });
+      applyHash(true);
+    })();
+
 
     // ==================== "LISTEN TO ALIA TEACH" AUDIO PLAYER ====================
     (function() {
@@ -6464,6 +7369,55 @@
       var autoNext = true;
       var isSeeking = false;
       var pendingSeekFrac = null;
+      var STORAGE_KEY = 'rohan_ch4_audio_done_v1';
+      var completedTracks = {};
+
+      function loadCompletedTracks() {
+        try {
+          var raw = window.localStorage && window.localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed && typeof parsed === 'object') {
+              completedTracks = parsed;
+            }
+          }
+        } catch (e) {}
+      }
+
+      function markTrackDone(idx) {
+        if (idx < 0 || idx >= TRACKS.length) return;
+        completedTracks[String(idx)] = true;
+        try {
+          if (window.localStorage) {
+            window.localStorage.setItem(STORAGE_KEY, JSON.stringify(completedTracks));
+          }
+        } catch (e) {}
+      }
+
+      function syncSidebarAudioStates(playing) {
+        var navItems = document.querySelectorAll('.nav-page-item[data-track-idx]');
+        for (var i = 0; i < navItems.length; i++) {
+          var item = navItems[i];
+          var tIdx = parseInt(item.getAttribute('data-track-idx'), 10);
+          var statusEl = item.querySelector('[data-role="nav-status"]');
+          var isPlayingThis = (tIdx === currentIdx && playing);
+          var isDoneThis = !!completedTracks[String(tIdx)] && !isPlayingThis;
+          item.classList.toggle('is-audio-playing', isPlayingThis);
+          item.classList.toggle('is-audio-done', isDoneThis);
+          if (statusEl) {
+            if (isPlayingThis) {
+              statusEl.textContent = '🔊';
+              statusEl.setAttribute('title', 'Playing audio');
+            } else if (isDoneThis) {
+              statusEl.textContent = '✓';
+              statusEl.setAttribute('title', 'Audio finished');
+            } else {
+              statusEl.textContent = '';
+              statusEl.removeAttribute('title');
+            }
+          }
+        }
+      }
 
       function fmtTime(sec) {
         if (!isFinite(sec) || sec < 0) return '--:--';
@@ -6551,8 +7505,9 @@
           miniNextBtn.disabled = (currentIdx < 0 || currentIdx >= TRACKS.length - 1);
         }
         if (currentIdx >= 0 && TRACKS[currentIdx] && miniTitleEl) {
-          miniTitleEl.textContent = '🎧 ' + TRACKS[currentIdx].title;
+          miniTitleEl.textContent = '🎧 Page ' + (currentIdx + 1) + ' · ' + TRACKS[currentIdx].title;
         }
+        syncSidebarAudioStates(playing);
       }
 
       function updateTimeUI() {
@@ -6583,12 +7538,10 @@
         document.body.classList.remove('has-mini-player');
       }
 
-      function scrollToSection(idx) {
-        var t = TRACKS[idx];
-        if (!t) return;
-        var sec = document.getElementById(t.sectionId);
-        if (sec && typeof sec.scrollIntoView === 'function') {
-          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      function jumpToTrackPage(idx) {
+        if (idx < 0 || idx >= TRACKS.length) return;
+        if (typeof window.goToPage === 'function') {
+          window.goToPage(idx + 1);
         }
       }
 
@@ -6602,6 +7555,10 @@
         currentIdx = idx;
         pendingSeekFrac = (typeof opts.seekFrac === 'number') ? opts.seekFrac : null;
 
+        if (opts.navigate) {
+          jumpToTrackPage(idx);
+        }
+
         var track = TRACKS[idx];
         if (prevIdx !== idx || !audio.getAttribute('src')) {
           audio.src = track.src;
@@ -6614,10 +7571,6 @@
         showMiniPlayer();
         syncAllStates();
         updateTimeUI();
-
-        if (opts.scroll) {
-          scrollToSection(idx);
-        }
 
         var playPromise = audio.play();
         if (playPromise && typeof playPromise.catch === 'function') {
@@ -6647,7 +7600,7 @@
           }
           syncAllStates();
         } else {
-          playTrack(idx, { scroll: false });
+          playTrack(idx, { navigate: false });
         }
       }
 
@@ -6671,11 +7624,11 @@
         syncAllStates();
       }
 
-      // Expose Hero CTA entry point globally
+      // Expose Hero & Sidebar CTA entry point globally
       window.startFromBeginning = function() {
         autoNext = true;
         syncAutoNextButton();
-        playTrack(0, { scroll: true });
+        playTrack(0, { navigate: true });
       };
 
       // Bind inline card controls
@@ -6721,7 +7674,7 @@
                 updateTimeUI();
               } else {
                 isSeeking = false;
-                playTrack(trackIdx, { seekFrac: frac, scroll: false });
+                playTrack(trackIdx, { seekFrac: frac, navigate: false });
               }
             });
           }
@@ -6732,7 +7685,7 @@
       if (miniPlayBtn) {
         miniPlayBtn.addEventListener('click', function() {
           if (currentIdx < 0) {
-            playTrack(0, { scroll: false });
+            playTrack(0, { navigate: true });
           } else {
             toggleTrack(currentIdx);
           }
@@ -6750,7 +7703,7 @@
       if (miniNextBtn) {
         miniNextBtn.addEventListener('click', function() {
           if (currentIdx >= 0 && currentIdx < TRACKS.length - 1) {
-            playTrack(currentIdx + 1, { scroll: true });
+            playTrack(currentIdx + 1, { navigate: true });
           }
         });
       }
@@ -6765,7 +7718,7 @@
       }
       if (miniTitleBtn) {
         miniTitleBtn.addEventListener('click', function() {
-          if (currentIdx >= 0) scrollToSection(currentIdx);
+          if (currentIdx >= 0) jumpToTrackPage(currentIdx);
         });
       }
       if (miniCloseBtn) {
@@ -6807,8 +7760,9 @@
       audio.addEventListener('ended', function() {
         if (currentIdx < 0) return;
         var finishedIdx = currentIdx;
+        markTrackDone(finishedIdx);
         if (autoNext && finishedIdx < TRACKS.length - 1) {
-          playTrack(finishedIdx + 1, { scroll: true });
+          playTrack(finishedIdx + 1, { navigate: true });
         } else {
           updateCardIdleDisplay(finishedIdx);
           if (miniProgressFill) miniProgressFill.style.width = '0%';
@@ -6827,8 +7781,10 @@
         syncAllStates();
       });
 
+      loadCompletedTracks();
       syncSpeedButtons();
       syncAutoNextButton();
+      syncAllStates();
     })();
 
   </script>
