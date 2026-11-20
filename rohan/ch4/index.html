@@ -427,6 +427,10 @@
     .callout p:last-child {
       margin-bottom: 0;
     }
+    .callout li {
+      margin-bottom: 6px;
+      line-height: 1.65;
+    }
 
     /* Formula Display Boxes */
     .formula-big {
@@ -680,9 +684,427 @@
       border-top: 1px solid var(--border);
     }
 
+
+    /* Hero Audio CTA */
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .hero-listen-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      background: #ffffff;
+      color: #1b2c52;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      min-height: 44px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 4px 14px rgba(13, 27, 62, 0.24);
+      transition: transform 0.12s ease, background 0.15s ease, box-shadow 0.15s ease;
+    }
+    .hero-listen-btn:hover {
+      background: #f0f5ff;
+      box-shadow: 0 6px 18px rgba(13, 27, 62, 0.3);
+    }
+    .hero-listen-btn:active {
+      transform: scale(0.98);
+      background: #e3edff;
+    }
+    .hero-listen-hint {
+      font-size: 0.82rem;
+      color: #d6e4ff;
+      font-weight: 500;
+    }
+
+    /* Inline Section Audio Player Card */
+    .audio-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f1f6ff 0%, #faf8f3 100%);
+      border: 1.5px solid #cbd9f6;
+      border-radius: 13px;
+      padding: 10px 13px;
+      margin: 0 0 14px 0;
+      box-shadow: 0 2px 8px rgba(36, 84, 197, 0.05);
+      max-width: 100%;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .audio-card.is-active {
+      border-color: #8eb0f5;
+    }
+    .audio-card.is-playing {
+      background: linear-gradient(135deg, #e7f0ff 0%, #f6f9ff 100%);
+      border-color: var(--accent);
+      box-shadow: 0 4px 14px rgba(36, 84, 197, 0.15);
+    }
+    .audio-play-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 8px 15px;
+      min-height: 40px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+      flex: 0 0 auto;
+      box-shadow: 0 2px 6px rgba(36, 84, 197, 0.22);
+      transition: background 0.14s ease, transform 0.1s ease;
+    }
+    .audio-play-btn:hover {
+      background: #1d46ab;
+    }
+    .audio-play-btn:active {
+      transform: scale(0.97);
+    }
+    .audio-card.is-playing .audio-play-btn {
+      background: #1b2c52;
+    }
+    .audio-meta {
+      flex: 1 1 200px;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .audio-title-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      min-width: 0;
+    }
+    .audio-title {
+      font-size: 0.87rem;
+      font-weight: 700;
+      color: #1b2c52;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+    .audio-time {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .audio-seek {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 22px;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+    .audio-seek:focus {
+      outline: none;
+    }
+    .audio-seek::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(
+        to right,
+        var(--accent) 0%,
+        var(--accent) var(--seek-pct, 0%),
+        #d4dff5 var(--seek-pct, 0%),
+        #d4dff5 100%
+      );
+    }
+    .audio-seek::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 1px 4px rgba(27, 44, 82, 0.35);
+      margin-top: -5px;
+    }
+    .audio-seek::-moz-range-track {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: #d4dff5;
+    }
+    .audio-seek::-moz-range-progress {
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+    .audio-seek::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 1px 4px rgba(27, 44, 82, 0.35);
+    }
+    .audio-speed-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1.5px solid #bfd2fc;
+      background: #ffffff;
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 10px;
+      min-width: 48px;
+      min-height: 36px;
+      border-radius: 999px;
+      cursor: pointer;
+      flex: 0 0 auto;
+      font-variant-numeric: tabular-nums;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+    .audio-speed-btn:hover {
+      background: var(--accent-soft);
+    }
+    .audio-speed-btn:active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    @media (max-width: 540px) {
+      .audio-play-btn {
+        order: 1;
+      }
+      .audio-speed-btn {
+        order: 2;
+        margin-left: auto;
+      }
+      .audio-meta {
+        order: 3;
+        flex: 1 0 100%;
+      }
+    }
+
+    /* Floating "Now Playing" Bottom Mini-Bar */
+    body.has-mini-player {
+      padding-bottom: calc(148px + env(safe-area-inset-bottom));
+    }
+    .mini-player {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      background: rgba(255, 255, 255, 0.93);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      backdrop-filter: saturate(180%) blur(16px);
+      border-top: 1px solid #cbd9f6;
+      box-shadow: 0 -6px 24px rgba(27, 44, 82, 0.13);
+      padding: 0 12px calc(10px + env(safe-area-inset-bottom));
+      transform: translateY(115%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.24s ease, opacity 0.2s ease;
+    }
+    .mini-player.visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mini-progress-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #e1e9fb;
+      overflow: hidden;
+    }
+    .mini-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width 0.15s linear;
+    }
+    .mini-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding-top: 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .mini-top-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .mini-title-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      background: transparent;
+      padding: 2px 0;
+      margin: 0;
+      font-family: inherit;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex: 1 1 auto;
+      min-width: 0;
+      text-align: left;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    .mini-title-text {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1b2c52;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+    .mini-title-btn:hover .mini-title-text {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .mini-time {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .mini-close-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.86rem;
+      font-weight: 700;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mini-close-btn:active {
+      background: var(--border);
+      color: var(--ink);
+    }
+    .mini-controls-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .mini-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid #cbd9f6;
+      background: #ffffff;
+      color: #1b2c52;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 10px;
+      min-height: 34px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+    }
+    .mini-btn:hover:not(:disabled) {
+      background: var(--accent-soft);
+    }
+    .mini-btn:active:not(:disabled) {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .mini-btn:disabled {
+      opacity: 0.42;
+      cursor: default;
+    }
+    .mini-btn.mini-play-btn {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      min-width: 44px;
+      padding: 6px 14px;
+      font-size: 0.84rem;
+    }
+    .mini-btn.mini-play-btn:hover {
+      background: #1d46ab;
+    }
+    .mini-btn.mini-autonext-btn {
+      margin-left: auto;
+    }
+    .mini-btn.mini-autonext-btn.is-on {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      color: var(--green);
+    }
+    @media (min-width: 720px) {
+      .mini-inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+      }
+      .mini-top-row {
+        flex: 1 1 auto;
+        order: 2;
+      }
+      .mini-controls-row {
+        order: 1;
+        flex-wrap: nowrap;
+        flex: 0 0 auto;
+      }
+      .mini-btn.mini-autonext-btn {
+        margin-left: 0;
+      }
+      body.has-mini-player {
+        padding-bottom: calc(96px + env(safe-area-inset-bottom));
+      }
+    }
+
     /* Clean Print Layout */
     @media print {
-      body {
+      body,
+      body.has-mini-player {
         background: #ffffff;
         color: #111111;
         padding: 0;
@@ -692,7 +1114,10 @@
       .global-bar,
       .toolbar,
       .toggle-btn,
-      .chev {
+      .chev,
+      .hero-cta-row,
+      .audio-card,
+      .mini-player {
         display: none !important;
       }
       .container {
@@ -757,6 +1182,12 @@
         <span class="hero-badge">50+ Tap-to-Reveal Solutions</span>
         <span class="hero-badge">Crisp Coordinate Graphs</span>
       </div>
+      <div class="hero-cta-row">
+        <button type="button" class="hero-listen-btn" id="hero-listen-btn" onclick="startFromBeginning()">
+          🎧 Listen from the Beginning
+        </button>
+        <span class="hero-listen-hint">8 mini-lessons · Auto-plays straight through</span>
+      </div>
     </header>
 
     <!-- Global Answer Controls -->
@@ -774,6 +1205,20 @@
         <span class="sec-num">★</span>
         <h2>At-a-Glance Quick Reference Sheet</h2>
         <span class="page-ref">Ch. 4 · 4.3 &amp; 4.4</span>
+      </div>
+      <div class="audio-card" id="audio-card-0" data-track-idx="0" role="region" aria-label="Audio lesson: Intro &amp; Quick Reference">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: Intro &amp; Quick Reference">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 Intro &amp; Quick Reference</span>
+            <span class="audio-time" data-role="time">0:00 / 2:17</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek Intro &amp; Quick Reference" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
       </div>
 
       <div class="card">
@@ -876,6 +1321,20 @@
     <h2>Slope-Intercept Form: Writing &amp; Reading Equations</h2>
     <span class="page-ref">pp. 154–156</span>
   </div>
+      <div class="audio-card" id="audio-card-1" data-track-idx="1" role="region" aria-label="Audio lesson: 4.3 Slope-Intercept Form">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.3 Slope-Intercept Form">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.3 Slope-Intercept Form</span>
+            <span class="audio-time" data-role="time">0:00 / 2:32</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.3 Slope-Intercept Form" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <div class="callout blue">
     <span class="callout-title">Lesson 4.3 Objectives</span>
@@ -1152,6 +1611,20 @@
     <h2>Identify and Write Equations of Parallel Lines</h2>
     <span class="page-ref">pp. 157–158</span>
   </div>
+      <div class="audio-card" id="audio-card-2" data-track-idx="2" role="region" aria-label="Audio lesson: 4.3 Parallel Lines">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.3 Parallel Lines">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.3 Parallel Lines</span>
+            <span class="audio-time" data-role="time">0:00 / 2:16</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.3 Parallel Lines" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <div class="card">
     <h3>Parallel Lines Have Equal Slopes</h3>
@@ -1236,27 +1709,36 @@
   </g>
   <g>
     <polyline points="173.00,201.75 277.25,201.75 277.25,132.25" fill="none" stroke="#2454c5" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="216.88" y="205.95" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#2454c5" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="225.12" y="217.75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#2454c5">3</text>
-    <rect x="281.25" y="159.20" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#2454c5" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="286.25" y="171.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#2454c5">2</text>
     <polyline points="68.75,167.00 173.00,167.00 173.00,97.50" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="112.62" y="171.20" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="120.88" y="183.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">3</text>
-    <rect x="177.00" y="124.45" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="182.00" y="136.25" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">2</text>
-  </g>
-  <g>
-    <text x="193.85" y="55.80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#16794b" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (2/3)x + 5</text>
-    <text x="200.80" y="205.22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (2/3)x + 2</text>
   </g>
   <g>
     <circle cx="173.00" cy="97.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="135.00" y="91.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 5)</text>
     <circle cx="173.00" cy="201.75" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="135.00" y="195.75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 2)</text>
     <circle cx="68.75" cy="271.25" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="64.75" y="286.25" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−3, 0)</text>
+  </g>
+  <g>
+    <rect x="215.12" y="205.50" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#2454c5" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="225.12" y="216.93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#2454c5">3</text>
+    <rect x="282.25" y="159.25" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#2454c5" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="292.25" y="170.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#2454c5">2</text>
+    <rect x="110.88" y="170.75" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="120.88" y="182.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">3</text>
+    <rect x="178.00" y="124.50" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="188.00" y="135.93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">2</text>
+  </g>
+  <g>
+    <rect x="121.76" y="72.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="142.38" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 5)</text>
+    <rect x="109.76" y="193.75" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="130.38" y="205.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 2)</text>
+    <rect x="43.85" y="233.25" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="68.75" y="245.10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−3, 0)</text>
+  </g>
+  <g>
+    <rect x="185.32" y="98.18" width="100.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#16794b" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="235.45" y="111.10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#16794b">y = (2/3)x + 5</text>
+    <rect x="192.07" y="224.37" width="100.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="242.21" y="237.29" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (2/3)x + 2</text>
   </g>
 </svg>
   <figcaption>Parallel lines y = (2/3)x + 2 and y = (2/3)x + 5 (p. 157)</figcaption>
@@ -1343,6 +1825,20 @@
     <h2>Given Slope &amp; a Point — or a Point &amp; a Parallel Line</h2>
     <span class="page-ref">pp. 158–162</span>
   </div>
+      <div class="audio-card" id="audio-card-3" data-track-idx="3" role="region" aria-label="Audio lesson: 4.3 Slope, Point &amp; Parallel Lines">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.3 Slope, Point &amp; Parallel Lines">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.3 Slope, Point &amp; Parallel Lines</span>
+            <span class="audio-time" data-role="time">0:00 / 2:37</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.3 Slope, Point &amp; Parallel Lines" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <!-- WALKTHROUGH 1: Slope 2/5 through (2, 3) (pp. 158-159) -->
   <div class="card">
@@ -1418,21 +1914,29 @@
   </g>
   <g>
     <polyline points="89.60,136.00 228.60,136.00 228.60,64.00" fill="none" stroke="#2454c5" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="150.85" y="140.20" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#2454c5" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="159.10" y="152.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#2454c5">5</text>
-    <rect x="232.60" y="92.20" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#2454c5" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="237.60" y="104.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#2454c5">2</text>
-  </g>
-  <g>
-    <text x="89.60" y="100.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">m = 2/5</text>
   </g>
   <g>
     <circle cx="228.60" cy="64.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="236.60" y="56.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 3)</text>
     <circle cx="173.00" cy="92.80" r="4.6" fill="#d97706" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="117.00" y="84.80" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 11/5)</text>
     <circle cx="89.60" cy="136.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="60.69" y="150.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−3, 1)</text>
+  </g>
+  <g>
+    <rect x="128.25" y="139.75" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#2454c5" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="138.25" y="151.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#2454c5">5</text>
+    <rect x="233.60" y="92.25" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#2454c5" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="243.60" y="103.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#2454c5">2</text>
+  </g>
+  <g>
+    <rect x="238.60" y="73.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="259.22" y="84.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 3)</text>
+    <rect x="98.83" y="73.32" width="55.97" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="126.82" y="85.17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 11/5)</text>
+    <rect x="32.42" y="111.00" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="56.01" y="122.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−3, 1)</text>
+  </g>
+  <g>
+    <rect x="191.96" y="26.31" width="58.42" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="221.17" y="39.23" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">m = 2/5</text>
   </g>
 </svg>
   <figcaption>Line with slope m = 2/5 passing through (2, 3) (p. 158)</figcaption>
@@ -1672,16 +2176,23 @@
     <line x1="37.00" y1="278.74" x2="309.00" y2="43.92" stroke="#2454c5" stroke-width="2.6" stroke-linecap="round" marker-start="url(#g3-arr-2454c5-start)" marker-end="url(#g3-arr-2454c5-end)"/>
   </g>
   <g>
-    <text x="182.27" y="214.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#c82829" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (3/4)x + 1</text>
-    <text x="112.77" y="150.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (3/4)x + 1.5</text>
+    <circle cx="173.00" cy="161.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="80.33" cy="241.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="80.33" cy="268.00" r="4.6" fill="#c82829" stroke="#ffffff" stroke-width="1.8"/>
   </g>
   <g>
-    <circle cx="173.00" cy="161.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="175.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 3)</text>
-    <circle cx="80.33" cy="241.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="67.36" y="235.33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 1.5)</text>
-    <circle cx="80.33" cy="268.00" r="4.6" fill="#c82829" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="54.02" y="280.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 1)</text>
+    <rect x="121.76" y="136.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="142.38" y="148.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 3)</text>
+    <rect x="95.33" y="253.33" width="50.74" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="120.70" y="265.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 1.5)</text>
+    <rect x="90.33" y="277.00" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="109.65" y="288.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 1)</text>
+  </g>
+  <g>
+    <rect x="154.30" y="214.59" width="97.61" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#c82829" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="203.11" y="227.51" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#c82829">y = (3/4)x + 1</text>
+    <rect x="109.20" y="93.26" width="109.95" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="164.17" y="106.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (3/4)x + 1.5</text>
   </g>
 </svg>
   <figcaption>Blue line through (2, 3) parallel to red line y = (3/4)x + 1 (p. 160)</figcaption>
@@ -1783,6 +2294,20 @@
     <h2>Write an Equation of a Line Given Two Points</h2>
     <span class="page-ref">pp. 162–163</span>
   </div>
+      <div class="audio-card" id="audio-card-4" data-track-idx="4" role="region" aria-label="Audio lesson: 4.3 Given Two Points">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.3 Given Two Points">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.3 Given Two Points</span>
+            <span class="audio-time" data-role="time">0:00 / 2:01</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.3 Given Two Points" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <div class="card">
     <h3>Two-Step Recipe from Two Points</h3>
@@ -1911,21 +2436,29 @@
   </g>
   <g>
     <polyline points="145.20,188.00 200.80,188.00 200.80,312.44" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="164.75" y="165.20" width="16.50" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#d97706" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="173.00" y="177.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#d97706">1</text>
-    <rect x="204.80" y="242.42" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#d97706" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="209.80" y="254.22" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#d97706">−7</text>
-  </g>
-  <g>
-    <text x="161.88" y="134.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −7x + 10</text>
   </g>
   <g>
     <circle cx="89.60" cy="63.56" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="97.60" y="59.56" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 10)</text>
     <circle cx="145.20" cy="188.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="153.20" y="184.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(1, 3)</text>
     <circle cx="200.80" cy="312.44" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="208.80" y="308.44" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, −4)</text>
+  </g>
+  <g>
+    <rect x="163.00" y="168.75" width="20.00" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#d97706" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="173.00" y="180.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#d97706">1</text>
+    <rect x="205.80" y="223.81" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#d97706" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="217.40" y="235.23" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#d97706">−7</text>
+  </g>
+  <g>
+    <rect x="99.60" y="38.56" width="45.99" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="122.60" y="50.41" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 10)</text>
+    <rect x="95.57" y="180.00" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="114.89" y="191.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(1, 3)</text>
+    <rect x="210.80" y="287.44" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="235.70" y="299.29" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, −4)</text>
+  </g>
+  <g>
+    <rect x="129.92" y="109.67" width="91.32" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="175.58" y="122.59" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −7x + 10</text>
   </g>
 </svg>
   <figcaption>Example 12: Line y = -7x + 10 through (1, 3) and (2, -4)</figcaption>
@@ -2268,6 +2801,20 @@
     <h2>Sketching Graphs of Linear Equations — Method 1: Table of Values</h2>
     <span class="page-ref">pp. 165–166</span>
   </div>
+      <div class="audio-card" id="audio-card-5" data-track-idx="5" role="region" aria-label="Audio lesson: 4.4 Graphing with a Table">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.4 Graphing with a Table">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.4 Graphing with a Table</span>
+            <span class="audio-time" data-role="time">0:00 / 2:09</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.4 Graphing with a Table" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <div class="card">
     <h3>Lesson 4.4 Objectives</h3>
@@ -2414,15 +2961,21 @@
     <line x1="37.00" y1="182.50" x2="309.00" y2="46.83" stroke="#2454c5" stroke-width="2.6" stroke-linecap="round" marker-start="url(#g5-arr-2454c5-start)" marker-end="url(#g5-arr-2454c5-end)"/>
   </g>
   <g>
-    <text x="82.65" y="121.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (1/2)x + 1</text>
+    <circle cx="138.25" cy="132.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="207.75" cy="97.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="277.25" cy="62.67" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
   </g>
   <g>
-    <circle cx="138.25" cy="132.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="146.25" y="146.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 2)</text>
-    <circle cx="207.75" cy="97.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="215.75" y="111.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, 3)</text>
-    <circle cx="277.25" cy="62.67" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="235.25" y="52.67" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(6, 4)</text>
+    <rect x="148.25" y="141.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="168.87" y="152.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 2)</text>
+    <rect x="217.75" y="106.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="238.37" y="118.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, 3)</text>
+    <rect x="226.01" y="37.67" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="246.63" y="49.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(6, 4)</text>
+  </g>
+  <g>
+    <rect x="72.81" y="91.35" width="94.95" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="120.28" y="104.27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (1/2)x + 1</text>
   </g>
 </svg>
   <figcaption>Graph of y = (1/2)x + 1 using a table of values (p. 165)</figcaption>
@@ -2559,15 +3112,21 @@
     <line x1="37.00" y1="240.82" x2="309.00" y2="37.18" stroke="#2454c5" stroke-width="2.6" stroke-linecap="round" marker-start="url(#g6-arr-2454c5-start)" marker-end="url(#g6-arr-2454c5-end)"/>
   </g>
   <g>
-    <text x="72.92" y="94.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (3/4)x + 2</text>
+    <circle cx="61.80" cy="222.25" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="173.00" cy="139.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="284.20" cy="55.75" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
   </g>
   <g>
-    <circle cx="61.80" cy="222.25" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="69.80" y="236.25" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−4, −1)</text>
-    <circle cx="173.00" cy="139.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="131.00" y="131.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 2)</text>
-    <circle cx="284.20" cy="55.75" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="238.20" y="45.75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, 5)</text>
+    <rect x="71.80" y="231.25" width="55.73" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="99.67" y="243.10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−4, −1)</text>
+    <rect x="183.00" y="148.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="159.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 2)</text>
+    <rect x="232.96" y="30.75" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="253.58" y="42.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, 5)</text>
+  </g>
+  <g>
+    <rect x="37.95" y="137.56" width="100.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="88.08" y="150.48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (3/4)x + 2</text>
   </g>
 </svg>
   <figcaption>Example 13: Graph of y = (3/4)x + 2</figcaption>
@@ -2675,15 +3234,21 @@
     <line x1="51.76" y1="345.00" x2="294.24" y2="31.00" stroke="#2454c5" stroke-width="2.6" stroke-linecap="round" marker-start="url(#g7-arr-2454c5-start)" marker-end="url(#g7-arr-2454c5-end)"/>
   </g>
   <g>
-    <text x="59.72" y="100.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (3/2)x + 1</text>
+    <circle cx="80.33" cy="308.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="173.00" cy="188.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="265.67" cy="68.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
   </g>
   <g>
-    <circle cx="80.33" cy="308.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="320.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−2, −2)</text>
-    <circle cx="173.00" cy="188.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="198.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 1)</text>
-    <circle cx="265.67" cy="68.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="217.67" y="60.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 4)</text>
+    <rect x="90.33" y="317.00" width="58.35" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="119.51" y="328.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−2, −2)</text>
+    <rect x="183.00" y="197.00" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="202.31" y="208.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 1)</text>
+    <rect x="214.43" y="43.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="235.05" y="54.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 4)</text>
+  </g>
+  <g>
+    <rect x="40.43" y="200.62" width="97.61" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="89.24" y="213.54" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (3/2)x + 1</text>
   </g>
 </svg>
   <figcaption>Guided Practice #1: y = (3/2)x + 1</figcaption>
@@ -2701,6 +3266,20 @@
     <h2>Method 2: Sketch a Linear Graph Using \(m\) and \(b\)</h2>
     <span class="page-ref">pp. 166–168</span>
   </div>
+      <div class="audio-card" id="audio-card-6" data-track-idx="6" role="region" aria-label="Audio lesson: 4.4 Sketching with m &amp; b">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.4 Sketching with m &amp; b">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.4 Sketching with m &amp; b</span>
+            <span class="audio-time" data-role="time">0:00 / 2:09</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.4 Sketching with m &amp; b" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <div class="card">
     <h3>Graphing Directly from Slope-Intercept Form</h3>
@@ -2808,19 +3387,26 @@
   </g>
   <g>
     <polyline points="80.33,228.00 80.33,68.00 265.67,68.00" fill="none" stroke="#c53030" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="161.50" y="45.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#c53030" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="173.00" y="57.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#c53030">+4</text>
-    <rect x="53.33" y="140.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#c53030" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="71.33" y="152.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#c53030">+4</text>
-  </g>
-  <g>
-    <text x="182.27" y="180.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = x + 2</text>
   </g>
   <g>
     <circle cx="80.33" cy="228.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="242.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 2)</text>
     <circle cx="265.67" cy="68.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="247.67" y="56.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, 6)</text>
+  </g>
+  <g>
+    <rect x="161.40" y="48.75" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#c53030" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="173.00" y="60.17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#c53030">+4</text>
+    <rect x="52.14" y="116.25" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#c53030" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="63.74" y="127.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#c53030">+4</text>
+  </g>
+  <g>
+    <rect x="90.33" y="237.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="110.95" y="248.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 2)</text>
+    <rect x="214.43" y="43.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="235.05" y="54.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, 6)</text>
+  </g>
+  <g>
+    <rect x="154.66" y="174.76" width="70.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="189.80" y="187.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = x + 2</text>
   </g>
 </svg>
   <figcaption>Example 14(a): Graph of y = x + 2 using m = 1 and b = 2</figcaption>
@@ -2912,19 +3498,26 @@
   </g>
   <g>
     <polyline points="80.33,210.86 80.33,302.29 265.67,302.29" fill="none" stroke="#c53030" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="161.50" y="306.49" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#c53030" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="173.00" y="318.29" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#c53030">+4</text>
-    <rect x="53.33" y="248.77" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#c53030" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="71.33" y="260.57" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#c53030">−2</text>
-  </g>
-  <g>
-    <text x="149.83" y="188.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −(1/2)x − 3</text>
   </g>
   <g>
     <circle cx="80.33" cy="210.86" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="202.86" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −3)</text>
     <circle cx="265.67" cy="302.29" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="251.67" y="290.29" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, −5)</text>
+  </g>
+  <g>
+    <rect x="161.40" y="306.04" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#c53030" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="173.00" y="317.46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#c53030">+4</text>
+    <rect x="52.14" y="221.39" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#c53030" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="63.74" y="232.82" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#c53030">−2</text>
+  </g>
+  <g>
+    <rect x="90.33" y="185.86" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="115.23" y="197.71" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −3)</text>
+    <rect x="205.87" y="311.29" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="230.77" y="323.14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, −5)</text>
+  </g>
+  <g>
+    <rect x="123.55" y="206.39" width="106.32" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="176.71" y="219.31" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −(1/2)x − 3</text>
   </g>
 </svg>
   <figcaption>Example 14(b): Graph of y = -(1/2)x - 3 using m = -1/2 and b = -3</figcaption>
@@ -3035,21 +3628,29 @@
   </g>
   <g>
     <polyline points="89.60,231.64 89.60,173.45 145.20,173.45" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="105.90" y="150.65" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="117.40" y="162.45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-    <rect x="62.60" y="194.75" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="80.60" y="206.55" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+2</text>
-  </g>
-  <g>
-    <text x="173.00" y="196.73" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = 2x + 1</text>
   </g>
   <g>
     <circle cx="89.60" cy="231.64" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="97.60" y="245.64" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 1)</text>
     <circle cx="145.20" cy="173.45" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="153.20" y="181.45" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(1, 3)</text>
     <circle cx="256.40" cy="57.09" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="212.40" y="49.09" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 7)</text>
+  </g>
+  <g>
+    <rect x="107.05" y="154.20" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="117.40" y="165.63" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+    <rect x="44.40" y="194.80" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="56.00" y="206.22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+2</text>
+  </g>
+  <g>
+    <rect x="99.60" y="240.64" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="118.91" y="252.49" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 1)</text>
+    <rect x="155.20" y="182.45" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="174.51" y="194.30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(1, 3)</text>
+    <rect x="205.16" y="32.09" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="225.78" y="43.94" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 7)</text>
+  </g>
+  <g>
+    <rect x="120.37" y="212.03" width="75.11" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="157.92" y="224.95" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = 2x + 1</text>
   </g>
 </svg>
   <figcaption>Guided Practice #2: y = 2x + 1</figcaption>
@@ -3138,19 +3739,26 @@
   </g>
   <g>
     <polyline points="89.60,289.82 89.60,318.91 256.40,318.91" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="161.50" y="323.11" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="173.00" y="334.91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+3</text>
-    <rect x="62.60" y="296.56" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="80.60" y="308.36" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−1</text>
-  </g>
-  <g>
-    <text x="134.08" y="254.91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −(1/3)x − 2</text>
   </g>
   <g>
     <circle cx="89.60" cy="289.82" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="97.60" y="281.82" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −2)</text>
     <circle cx="256.40" cy="318.91" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="242.40" y="306.91" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, −3)</text>
+  </g>
+  <g>
+    <rect x="161.40" y="322.66" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="173.00" y="334.08" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+3</text>
+    <rect x="94.60" y="300.98" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="104.95" y="312.40" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−1</text>
+  </g>
+  <g>
+    <rect x="99.60" y="264.82" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="124.50" y="276.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −2)</text>
+    <rect x="231.50" y="291.91" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="256.40" y="303.76" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, −3)</text>
+  </g>
+  <g>
+    <rect x="192.22" y="330.32" width="106.32" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="245.38" y="343.24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −(1/3)x − 2</text>
   </g>
 </svg>
   <figcaption>Guided Practice #3: y = -(1/3)x - 2</figcaption>
@@ -3168,6 +3776,20 @@
     <h2>Method 3: Sketch a Linear Graph Using \(m\) and a Point</h2>
     <span class="page-ref">p. 169</span>
   </div>
+      <div class="audio-card" id="audio-card-7" data-track-idx="7" role="region" aria-label="Audio lesson: 4.4 Sketching with m &amp; a Point">
+        <button type="button" class="audio-play-btn" data-action="toggle" aria-label="Listen to Alia: 4.4 Sketching with m &amp; a Point">
+          <span class="audio-play-icon" aria-hidden="true">▶</span>
+          <span class="audio-play-label">Listen to Alia</span>
+        </button>
+        <div class="audio-meta">
+          <div class="audio-title-row">
+            <span class="audio-title">🎧 4.4 Sketching with m &amp; a Point</span>
+            <span class="audio-time" data-role="time">0:00 / 2:13</span>
+          </div>
+          <input type="range" class="audio-seek" data-role="seek" min="0" max="1000" value="0" step="1" aria-label="Seek 4.4 Sketching with m &amp; a Point" />
+        </div>
+        <button type="button" class="audio-speed-btn" data-action="speed" aria-label="Playback speed" title="Cycle playback speed">1×</button>
+      </div>
 
   <div class="card">
     <h3>Graphing from Any Point \((x_1, y_1)\) and Slope \(m\)</h3>
@@ -3268,19 +3890,26 @@
   </g>
   <g>
     <polyline points="173.00,201.75 173.00,62.75 207.75,62.75" fill="none" stroke="#c53030" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="178.88" y="39.95" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#c53030" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="190.38" y="51.75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#c53030">+1</text>
-    <rect x="146.00" y="124.45" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#c53030" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="136.25" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#c53030">+4</text>
-  </g>
-  <g>
-    <text x="218.17" y="132.25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">m = 4</text>
   </g>
   <g>
     <circle cx="173.00" cy="201.75" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="209.75" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 2)</text>
     <circle cx="207.75" cy="62.75" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="215.75" y="68.75" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, 6)</text>
+  </g>
+  <g>
+    <rect x="174.81" y="43.50" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#c53030" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="185.16" y="54.92" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#c53030">+1</text>
+    <rect x="144.80" y="124.50" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#c53030" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="156.40" y="135.93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#c53030">+4</text>
+  </g>
+  <g>
+    <rect x="183.00" y="210.75" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="222.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 2)</text>
+    <rect x="217.75" y="71.75" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="238.37" y="83.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, 6)</text>
+  </g>
+  <g>
+    <rect x="193.98" y="134.68" width="45.59" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="216.78" y="147.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">m = 4</text>
   </g>
 </svg>
   <figcaption>Example 15: Line with slope 4 through (3, 2)</figcaption>
@@ -3384,23 +4013,32 @@
   </g>
   <g>
     <polyline points="265.67,268.00 265.67,214.67 219.33,214.67" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="231.00" y="191.87" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="242.50" y="203.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−1</text>
-    <rect x="269.67" y="233.53" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="274.67" y="245.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+2</text>
-  </g>
-  <g>
-    <text x="49.28" y="241.33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −2x + 6</text>
   </g>
   <g>
     <circle cx="265.67" cy="268.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="221.67" y="282.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 2)</text>
     <circle cx="219.33" cy="214.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="175.33" y="224.67" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(1, 4)</text>
     <circle cx="173.00" cy="161.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="155.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 6)</text>
     <circle cx="80.33" cy="54.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="60.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−2, 10)</text>
+  </g>
+  <g>
+    <rect x="232.15" y="195.42" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="242.50" y="206.84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−1</text>
+    <rect x="270.67" y="233.58" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="282.26" y="245.01" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+2</text>
+  </g>
+  <g>
+    <rect x="214.43" y="277.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="235.05" y="288.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 2)</text>
+    <rect x="186.51" y="228.84" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="205.82" y="240.69" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(1, 4)</text>
+    <rect x="183.00" y="136.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="148.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 6)</text>
+    <rect x="90.33" y="29.67" width="54.54" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="117.61" y="41.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−2, 10)</text>
+  </g>
+  <g>
+    <rect x="62.64" y="147.25" width="86.48" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="105.88" y="160.17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −2x + 6</text>
   </g>
 </svg>
   <figcaption>Guided Practice #4: Slope -2 through (2, 2)  (y = -2x + 6)</figcaption>
@@ -3498,23 +4136,32 @@
   </g>
   <g>
     <polyline points="80.33,294.67 80.33,241.33 126.67,241.33" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="92.00" y="218.53" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="103.50" y="230.33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-    <rect x="53.33" y="260.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="71.33" y="272.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+2</text>
-  </g>
-  <g>
-    <text x="200.80" y="254.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = 2x + 5</text>
   </g>
   <g>
     <circle cx="80.33" cy="294.67" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="306.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−2, 1)</text>
     <circle cx="126.67" cy="241.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="134.67" y="251.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−1, 3)</text>
     <circle cx="173.00" cy="188.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="198.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 5)</text>
     <circle cx="265.67" cy="81.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="219.67" y="73.33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 9)</text>
+  </g>
+  <g>
+    <rect x="93.15" y="222.08" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="103.50" y="233.51" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+    <rect x="52.14" y="260.25" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="63.74" y="271.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+2</text>
+  </g>
+  <g>
+    <rect x="92.33" y="295.67" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="115.92" y="307.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−2, 1)</text>
+    <rect x="103.08" y="263.33" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="126.67" y="275.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−1, 3)</text>
+    <rect x="183.00" y="197.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="208.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 5)</text>
+    <rect x="214.43" y="56.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="235.05" y="68.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 9)</text>
+  </g>
+  <g>
+    <rect x="210.72" y="158.18" width="77.77" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="249.61" y="171.10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = 2x + 5</text>
   </g>
 </svg>
   <figcaption>Guided Practice #5: Slope 2 through (-2, 1)  (y = 2x + 5)</figcaption>
@@ -3649,23 +4296,32 @@
   </g>
   <g>
     <polyline points="173.00,143.83 173.00,120.67 242.50,120.67" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="196.25" y="97.87" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="207.75" y="109.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+3</text>
-    <rect x="146.00" y="124.45" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="136.25" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-  </g>
-  <g>
-    <text x="59.72" y="92.87" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (1/3)x + 1</text>
   </g>
   <g>
     <circle cx="103.50" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="85.50" y="183.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−3, 0)</text>
     <circle cx="173.00" cy="143.83" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="133.00" y="135.83" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 1)</text>
     <circle cx="242.50" cy="120.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="250.50" y="112.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 2)</text>
     <circle cx="312.00" cy="97.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="268.00" y="113.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(6, 3)</text>
+  </g>
+  <g>
+    <rect x="196.15" y="101.42" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="207.75" y="112.84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+3</text>
+    <rect x="130.30" y="124.50" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="140.65" y="135.93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+  </g>
+  <g>
+    <rect x="43.71" y="142.00" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="68.60" y="153.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−3, 0)</text>
+    <rect x="185.00" y="144.83" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="204.31" y="156.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 1)</text>
+    <rect x="221.88" y="93.67" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="242.50" y="105.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 2)</text>
+    <rect x="260.76" y="72.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="281.38" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(6, 3)</text>
+  </g>
+  <g>
+    <rect x="36.78" y="194.99" width="94.95" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="84.25" y="207.91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (1/3)x + 1</text>
   </g>
 </svg>
   <figcaption>Practice #1: y = (1/3)x + 1</figcaption>
@@ -3782,21 +4438,29 @@
   </g>
   <g>
     <polyline points="173.00,97.50 173.00,74.33 312.00,74.33" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="231.00" y="51.53" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="242.50" y="63.33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+6</text>
-    <rect x="146.00" y="78.12" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="89.92" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-  </g>
-  <g>
-    <text x="59.72" y="55.80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (1/6)x + 3</text>
   </g>
   <g>
     <circle cx="34.00" cy="120.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="42.00" y="136.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−6, 2)</text>
     <circle cx="173.00" cy="97.50" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="133.00" y="89.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 3)</text>
     <circle cx="312.00" cy="74.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="268.00" y="64.33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(6, 4)</text>
+  </g>
+  <g>
+    <rect x="230.90" y="55.08" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="242.50" y="66.51" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+6</text>
+    <rect x="130.30" y="78.17" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="140.65" y="89.59" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+  </g>
+  <g>
+    <rect x="44.00" y="129.67" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="68.90" y="141.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−6, 2)</text>
+    <rect x="183.00" y="106.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="118.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 3)</text>
+    <rect x="260.76" y="49.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="281.38" y="61.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(6, 4)</text>
+  </g>
+  <g>
+    <rect x="43.90" y="55.55" width="97.61" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="92.70" y="68.47" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (1/6)x + 3</text>
   </g>
 </svg>
   <figcaption>Practice #2: y = (1/6)x + 3</figcaption>
@@ -3912,23 +4576,32 @@
   </g>
   <g>
     <polyline points="173.00,120.67 173.00,97.50 219.33,97.50" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="184.67" y="74.70" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="196.17" y="86.50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+2</text>
-    <rect x="146.00" y="101.28" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="113.08" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-  </g>
-  <g>
-    <text x="59.72" y="78.97" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (1/2)x + 2</text>
   </g>
   <g>
     <circle cx="80.33" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="68.33" y="183.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−4, 0)</text>
     <circle cx="173.00" cy="120.67" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="133.00" y="112.67" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 2)</text>
     <circle cx="219.33" cy="97.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="227.33" y="111.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 3)</text>
     <circle cx="265.67" cy="74.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="273.67" y="84.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, 4)</text>
+  </g>
+  <g>
+    <rect x="184.57" y="78.25" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="196.17" y="89.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+2</text>
+    <rect x="130.30" y="101.33" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="140.65" y="112.76" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+  </g>
+  <g>
+    <rect x="39.79" y="136.83" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="64.68" y="148.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−4, 0)</text>
+    <rect x="183.00" y="129.67" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="141.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 2)</text>
+    <rect x="229.33" y="106.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="249.95" y="118.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 3)</text>
+    <rect x="271.67" y="86.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="292.29" y="98.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, 4)</text>
+  </g>
+  <g>
+    <rect x="184.95" y="43.03" width="97.61" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="233.75" y="55.95" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (1/2)x + 2</text>
   </g>
 </svg>
   <figcaption>Practice #3: y = (1/2)x + 2</figcaption>
@@ -4044,23 +4717,32 @@
   </g>
   <g>
     <polyline points="173.00,190.17 173.00,143.83 242.50,143.83" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="196.25" y="121.03" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="207.75" y="132.83" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+3</text>
-    <rect x="146.00" y="159.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="171.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+2</text>
-  </g>
-  <g>
-    <text x="207.75" y="224.92" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (2/3)x − 1</text>
   </g>
   <g>
     <circle cx="103.50" cy="236.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="111.50" y="250.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−3, −3)</text>
     <circle cx="173.00" cy="190.17" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="204.17" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −1)</text>
     <circle cx="242.50" cy="143.83" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="250.50" y="155.83" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 1)</text>
     <circle cx="312.00" cy="97.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="268.00" y="87.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(6, 3)</text>
+  </g>
+  <g>
+    <rect x="196.15" y="124.58" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="207.75" y="136.01" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+3</text>
+    <rect x="127.80" y="145.35" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="139.40" y="156.78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+2</text>
+  </g>
+  <g>
+    <rect x="35.15" y="211.50" width="58.35" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="64.33" y="223.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−3, −3)</text>
+    <rect x="183.00" y="199.17" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="206.59" y="211.02" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −1)</text>
+    <rect x="254.50" y="144.83" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="273.81" y="156.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 1)</text>
+    <rect x="260.76" y="72.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="281.38" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(6, 3)</text>
+  </g>
+  <g>
+    <rect x="41.27" y="185.99" width="97.61" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="90.07" y="198.91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (2/3)x − 1</text>
   </g>
 </svg>
   <figcaption>Practice #4: y = (2/3)x - 1</figcaption>
@@ -4176,21 +4858,29 @@
   </g>
   <g>
     <polyline points="173.00,51.17 173.00,120.67 242.50,120.67" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="196.25" y="124.87" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="207.75" y="136.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+3</text>
-    <rect x="146.00" y="78.12" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="89.92" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−3</text>
-  </g>
-  <g>
-    <text x="223.97" y="65.07" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −x + 5</text>
   </g>
   <g>
     <circle cx="173.00" cy="51.17" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="43.17" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 5)</text>
     <circle cx="242.50" cy="120.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="250.50" y="112.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 2)</text>
     <circle cx="288.83" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="270.83" y="183.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(5, 0)</text>
+  </g>
+  <g>
+    <rect x="196.15" y="124.42" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="207.75" y="135.84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+3</text>
+    <rect x="127.80" y="78.17" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="139.40" y="89.59" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−3</text>
+  </g>
+  <g>
+    <rect x="183.00" y="26.17" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="38.02" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 5)</text>
+    <rect x="252.50" y="95.67" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="273.12" y="107.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 2)</text>
+    <rect x="251.90" y="186.72" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="272.52" y="198.57" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(5, 0)</text>
+  </g>
+  <g>
+    <rect x="196.92" y="45.04" width="78.98" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="236.41" y="57.96" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −x + 5</text>
   </g>
 </svg>
   <figcaption>Practice #5: y = -x + 5</figcaption>
@@ -4307,21 +4997,29 @@
   </g>
   <g>
     <polyline points="173.00,97.50 173.00,120.67 265.67,120.67" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="207.83" y="124.87" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="219.33" y="136.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+4</text>
-    <rect x="146.00" y="101.28" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="113.08" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−1</text>
-  </g>
-  <g>
-    <text x="200.80" y="69.70" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = 3 − (1/4)x</text>
   </g>
   <g>
     <circle cx="80.33" cy="74.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="72.33" y="62.33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−4, 4)</text>
     <circle cx="173.00" cy="97.50" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="89.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 3)</text>
     <circle cx="265.67" cy="120.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="273.67" y="112.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, 2)</text>
+  </g>
+  <g>
+    <rect x="207.74" y="124.42" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="219.33" y="135.84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+4</text>
+    <rect x="130.30" y="101.33" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="140.65" y="112.76" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−1</text>
+  </g>
+  <g>
+    <rect x="55.44" y="47.33" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="80.33" y="59.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−4, 4)</text>
+    <rect x="183.00" y="72.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 3)</text>
+    <rect x="245.05" y="93.67" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="265.67" y="105.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, 2)</text>
+  </g>
+  <g>
+    <rect x="191.14" y="144.41" width="97.61" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="239.94" y="157.33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = 3 − (1/4)x</text>
   </g>
 </svg>
   <figcaption>Practice #6: y = 3 - (1/4)x</figcaption>
@@ -4438,23 +5136,32 @@
   </g>
   <g>
     <polyline points="173.00,143.83 173.00,167.00 219.33,167.00" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="184.67" y="171.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="196.17" y="183.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+2</text>
-    <rect x="146.00" y="147.62" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="159.42" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−1</text>
-  </g>
-  <g>
-    <text x="205.43" y="116.03" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = 1 − (1/2)x</text>
   </g>
   <g>
     <circle cx="80.33" cy="97.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="87.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−4, 3)</text>
     <circle cx="173.00" cy="143.83" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="135.83" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 1)</text>
     <circle cx="219.33" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="227.33" y="159.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, 0)</text>
     <circle cx="265.67" cy="190.17" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="273.67" y="182.17" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(4, −1)</text>
+  </g>
+  <g>
+    <rect x="197.54" y="138.25" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="209.14" y="149.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+2</text>
+    <rect x="130.30" y="147.67" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="140.65" y="159.09" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−1</text>
+  </g>
+  <g>
+    <rect x="90.33" y="72.50" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="115.23" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−4, 3)</text>
+    <rect x="183.00" y="118.83" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="202.31" y="130.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 1)</text>
+    <rect x="229.33" y="142.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="249.95" y="153.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, 0)</text>
+    <rect x="208.49" y="199.17" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="232.08" y="211.02" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(4, −1)</text>
+  </g>
+  <g>
+    <rect x="206.45" y="217.78" width="94.95" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="253.93" y="230.70" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = 1 − (1/2)x</text>
   </g>
 </svg>
   <figcaption>Practice #7: y = 1 - (1/2)x</figcaption>
@@ -4571,21 +5278,29 @@
   </g>
   <g>
     <polyline points="173.00,213.33 173.00,236.50 288.83,236.50" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="219.42" y="240.70" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="230.92" y="252.50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+5</text>
-    <rect x="146.00" y="217.12" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="228.92" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−1</text>
-  </g>
-  <g>
-    <text x="196.17" y="185.53" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −(1/5)x − 2</text>
   </g>
   <g>
     <circle cx="57.17" cy="190.17" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="63.17" y="180.17" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−5, −1)</text>
     <circle cx="173.00" cy="213.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="205.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −2)</text>
     <circle cx="288.83" cy="236.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="246.83" y="226.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(5, −3)</text>
+  </g>
+  <g>
+    <rect x="219.32" y="240.25" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="230.92" y="251.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+5</text>
+    <rect x="185.00" y="197.17" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="195.35" y="208.59" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−1</text>
+  </g>
+  <g>
+    <rect x="46.09" y="204.34" width="55.73" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="73.95" y="216.19" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−5, −1)</text>
+    <rect x="191.43" y="216.81" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="216.33" y="228.66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −2)</text>
+    <rect x="263.94" y="209.50" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="288.83" y="221.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(5, −3)</text>
+  </g>
+  <g>
+    <rect x="36.23" y="226.36" width="106.32" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="89.39" y="239.28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −(1/5)x − 2</text>
   </g>
 </svg>
   <figcaption>Practice #8: y = -(1/5)x - 2</figcaption>
@@ -4705,23 +5420,32 @@
   </g>
   <g>
     <polyline points="173.00,120.67 173.00,167.00 242.50,167.00" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="196.25" y="171.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="207.75" y="183.00" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+3</text>
-    <rect x="146.00" y="136.03" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="147.83" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−2</text>
-  </g>
-  <g>
-    <text x="207.75" y="97.50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = 2 − (2/3)x</text>
   </g>
   <g>
     <circle cx="103.50" cy="74.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="111.50" y="66.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−3, 4)</text>
     <circle cx="173.00" cy="120.67" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="112.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 2)</text>
     <circle cx="242.50" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="250.50" y="157.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 0)</text>
     <circle cx="312.00" cy="213.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="264.00" y="227.33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(6, −2)</text>
+  </g>
+  <g>
+    <rect x="176.69" y="147.75" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="188.29" y="159.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+3</text>
+    <rect x="127.80" y="136.08" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="139.40" y="147.51" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−2</text>
+  </g>
+  <g>
+    <rect x="43.71" y="83.33" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="68.60" y="95.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−3, 4)</text>
+    <rect x="183.00" y="95.67" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="107.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 2)</text>
+    <rect x="252.50" y="142.00" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="273.12" y="153.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 0)</text>
+    <rect x="252.21" y="222.33" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="277.10" y="234.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(6, −2)</text>
+  </g>
+  <g>
+    <rect x="207.67" y="116.89" width="100.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="257.80" y="129.81" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = 2 − (2/3)x</text>
   </g>
 </svg>
   <figcaption>Practice #9: y = 2 - (2/3)x</figcaption>
@@ -4863,21 +5587,29 @@
   </g>
   <g>
     <polyline points="288.83,74.33 288.83,120.67 173.00,120.67" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="219.42" y="124.87" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="230.92" y="136.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−5</text>
-    <rect x="292.83" y="89.70" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="297.83" y="101.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−2</text>
-  </g>
-  <g>
-    <text x="59.72" y="83.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (2/5)x + 2</text>
   </g>
   <g>
     <circle cx="57.17" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="60.69" y="183.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−5, 0)</text>
     <circle cx="173.00" cy="120.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="133.00" y="112.67" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 2)</text>
     <circle cx="288.83" cy="74.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="246.83" y="64.33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(5, 4)</text>
+  </g>
+  <g>
+    <rect x="219.32" y="124.42" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="230.92" y="135.84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−5</text>
+    <rect x="260.64" y="89.75" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="272.24" y="101.17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−2</text>
+  </g>
+  <g>
+    <rect x="32.27" y="135.00" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="57.17" y="146.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−5, 0)</text>
+    <rect x="113.01" y="101.19" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="133.62" y="113.04" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 2)</text>
+    <rect x="237.59" y="49.33" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="258.21" y="61.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(5, 4)</text>
+  </g>
+  <g>
+    <rect x="39.06" y="186.12" width="100.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="89.19" y="199.04" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (2/5)x + 2</text>
   </g>
 </svg>
   <figcaption>Practice #11: Slope 2/5 through (5, 4)  (y = (2/5)x + 2)</figcaption>
@@ -4994,23 +5726,32 @@
   </g>
   <g>
     <polyline points="312.00,143.83 312.00,190.17 242.50,190.17" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="265.75" y="194.37" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="277.25" y="206.17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−3</text>
-    <rect x="285.00" y="159.20" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="303.00" y="171.00" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−2</text>
-  </g>
-  <g>
-    <text x="59.72" y="204.07" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = (2/3)x − 3</text>
   </g>
   <g>
     <circle cx="103.50" cy="282.83" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="67.36" y="276.83" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−3, −5)</text>
     <circle cx="173.00" cy="236.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="129.00" y="228.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −3)</text>
     <circle cx="242.50" cy="190.17" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="198.50" y="182.17" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, −1)</text>
     <circle cx="312.00" cy="143.83" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="270.00" y="133.83" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(6, 1)</text>
+  </g>
+  <g>
+    <rect x="265.65" y="193.92" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="277.25" y="205.34" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−3</text>
+    <rect x="268.80" y="139.25" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="280.40" y="150.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−2</text>
+  </g>
+  <g>
+    <rect x="35.15" y="257.83" width="58.35" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="64.33" y="269.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−3, −5)</text>
+    <rect x="183.00" y="245.50" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="207.90" y="257.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −3)</text>
+    <rect x="218.91" y="212.17" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="242.50" y="224.02" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, −1)</text>
+    <rect x="263.37" y="118.83" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="282.69" y="130.68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(6, 1)</text>
+  </g>
+  <g>
+    <rect x="36.84" y="233.54" width="100.27" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="86.97" y="246.46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = (2/3)x − 3</text>
   </g>
 </svg>
   <figcaption>Practice #12: Slope 2/3 through (6, 1)  (y = (2/3)x - 3)</figcaption>
@@ -5127,23 +5868,32 @@
   </g>
   <g>
     <polyline points="196.17,167.00 196.17,236.50 219.33,236.50" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="196.25" y="240.70" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="207.75" y="252.50" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-    <rect x="169.17" y="193.95" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="187.17" y="205.75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−3</text>
-  </g>
-  <g>
-    <text x="214.70" y="83.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −3x + 3</text>
   </g>
   <g>
     <circle cx="149.83" cy="28.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="157.83" y="42.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−1, 6)</text>
     <circle cx="173.00" cy="97.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="91.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 3)</text>
     <circle cx="196.17" cy="167.00" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="204.17" y="159.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(1, 0)</text>
     <circle cx="219.33" cy="236.50" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="227.33" y="242.50" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, −3)</text>
+  </g>
+  <g>
+    <rect x="197.40" y="249.75" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="207.75" y="261.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+    <rect x="218.17" y="194.00" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="229.76" y="205.43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−3</text>
+  </g>
+  <g>
+    <rect x="92.65" y="37.00" width="47.18" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="116.24" y="48.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−1, 6)</text>
+    <rect x="183.00" y="72.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="203.62" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 3)</text>
+    <rect x="206.17" y="142.00" width="38.63" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="225.48" y="153.85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(1, 0)</text>
+    <rect x="230.33" y="228.50" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="255.23" y="240.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, −3)</text>
+  </g>
+  <g>
+    <rect x="191.48" y="98.54" width="86.48" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="234.72" y="111.46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −3x + 3</text>
   </g>
 </svg>
   <figcaption>Practice #13: Slope -3 through (1, 0)  (y = -3x + 3)</figcaption>
@@ -5260,23 +6010,32 @@
   </g>
   <g>
     <polyline points="149.83,213.33 149.83,259.67 173.00,259.67" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="149.92" y="263.87" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="161.42" y="275.67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-    <rect x="122.83" y="228.70" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="140.83" y="240.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−2</text>
-  </g>
-  <g>
-    <text x="196.17" y="213.33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#2454c5" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −2x − 4</text>
   </g>
   <g>
     <circle cx="80.33" cy="74.33" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="88.33" y="68.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−4, 4)</text>
     <circle cx="126.67" cy="167.00" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="134.67" y="159.00" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−2, 0)</text>
     <circle cx="149.83" cy="213.33" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="157.83" y="207.33" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−1, −2)</text>
     <circle cx="173.00" cy="259.67" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="265.67" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −4)</text>
+  </g>
+  <g>
+    <rect x="127.07" y="263.92" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="137.42" y="275.34" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+    <rect x="121.64" y="228.75" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="133.24" y="240.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−2</text>
+  </g>
+  <g>
+    <rect x="90.33" y="49.33" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="115.23" y="61.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−4, 4)</text>
+    <rect x="58.44" y="147.52" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="83.34" y="159.37" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−2, 0)</text>
+    <rect x="83.10" y="205.33" width="55.73" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="110.97" y="217.18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−1, −2)</text>
+    <rect x="184.00" y="251.67" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="208.90" y="263.52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −4)</text>
+  </g>
+  <g>
+    <rect x="177.33" y="227.00" width="86.48" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#2454c5" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="220.57" y="239.92" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#2454c5">y = −2x − 4</text>
   </g>
 </svg>
   <figcaption>Practice #14: Slope -2 through (-1, -2)  (y = -2x - 4)</figcaption>
@@ -5364,13 +6123,18 @@
     <line x1="37.00" y1="297.71" x2="309.00" y2="71.04" stroke="#c53030" stroke-width="2.6" stroke-linecap="round" marker-start="url(#g28-arr-c53030-start)" marker-end="url(#g28-arr-c53030-end)"/>
   </g>
   <g>
-    <text x="145.20" y="153.10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#c53030" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">Emily&#x27;s line</text>
+    <circle cx="68.75" cy="271.25" r="4.6" fill="#c53030" stroke="#ffffff" stroke-width="1.8"/>
+    <circle cx="277.25" cy="97.50" r="4.6" fill="#c53030" stroke="#ffffff" stroke-width="1.8"/>
   </g>
   <g>
-    <circle cx="68.75" cy="271.25" r="4.6" fill="#c53030" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="76.75" y="285.25" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, −2)</text>
-    <circle cx="277.25" cy="97.50" r="4.6" fill="#c53030" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="235.25" y="89.50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(3, 6)</text>
+    <rect x="78.75" y="280.25" width="49.79" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="103.65" y="292.10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, −2)</text>
+    <rect x="226.01" y="72.50" width="41.24" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="246.63" y="84.35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(3, 6)</text>
+  </g>
+  <g>
+    <rect x="105.44" y="140.42" width="86.24" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#c53030" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="148.56" y="153.34" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#c53030">Emily&#x27;s line</text>
   </g>
 </svg>
   <figcaption>Emily&#x27;s homework graph (inspect carefully for mistakes!)</figcaption>
@@ -5525,25 +6289,35 @@
   </g>
   <g>
     <polyline points="173.00,155.42 173.00,201.75 196.17,201.75" fill="none" stroke="#16794b" stroke-width="2" stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="173.08" y="205.95" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="184.58" y="217.75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">+1</text>
-    <rect x="146.00" y="170.78" width="23.00" height="16.00" rx="4" fill="#ffffff" fill-opacity="0.93" stroke="#16794b" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="164.00" y="182.58" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#16794b">−2</text>
-  </g>
-  <g>
-    <text x="205.43" y="102.13" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#16794b" paint-order="stroke" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">y = −2x + 1/2</text>
   </g>
   <g>
     <circle cx="126.67" cy="62.75" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="134.67" y="56.75" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−2, 4.5)</text>
     <circle cx="149.83" cy="109.08" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="157.83" y="103.08" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(−1, 2.5)</text>
     <circle cx="173.00" cy="155.42" r="4.6" fill="#2454c5" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="181.00" y="147.42" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(0, 0.5)</text>
     <circle cx="196.17" cy="201.75" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="204.17" y="207.75" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(1, −1.5)</text>
     <circle cx="219.33" cy="248.08" r="4.6" fill="#16794b" stroke="#ffffff" stroke-width="1.8"/>
-    <text x="227.33" y="254.08" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e232d" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">(2, −3.5)</text>
+  </g>
+  <g>
+    <rect x="177.71" y="215.00" width="20.70" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="188.06" y="226.43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">+1</text>
+    <rect x="129.80" y="150.83" width="23.20" height="15.50" rx="4" fill="#ffffff" fill-opacity="0.94" stroke="#16794b" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="141.40" y="162.26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#16794b">−2</text>
+  </g>
+  <g>
+    <rect x="53.76" y="54.75" width="61.91" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="84.71" y="66.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−2, 4.5)</text>
+    <rect x="79.54" y="101.08" width="59.30" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="109.18" y="112.93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(−1, 2.5)</text>
+    <rect x="183.00" y="130.42" width="53.36" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="209.68" y="142.27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(0, 0.5)</text>
+    <rect x="207.17" y="193.75" width="56.68" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="235.51" y="205.60" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(1, −1.5)</text>
+    <rect x="230.33" y="240.08" width="61.91" height="16.00" rx="3.5" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="261.29" y="251.93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1e232d">(2, −3.5)</text>
+  </g>
+  <g>
+    <rect x="175.60" y="90.63" width="96.64" height="18.00" rx="4.5" fill="#ffffff" fill-opacity="0.95" stroke="#16794b" stroke-opacity="0.65" stroke-width="1.15"/>
+    <text x="223.92" y="103.55" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="700" fill="#16794b">y = −2x + 1/2</text>
   </g>
 </svg>
   <figcaption>Practice #15 (CORRECT): y = -2x + 1/2</figcaption>
@@ -5558,6 +6332,32 @@
       Prepared by Alia Biswas for Rahul-da &amp; Rohan · 7th Grade Math — Chapter 4 (Lessons 4.3 &amp; 4.4, pp. 154–170) · Test: Dec 3, 2026
     </footer>
 
+  </div>
+
+  <!-- Single iOS Safari-friendly shared audio element -->
+  <audio id="alia-audio" preload="none" playsinline></audio>
+
+  <!-- Floating "Now Playing" Bottom Mini-Bar -->
+  <div class="mini-player" id="mini-player" role="region" aria-label="Now playing audio controls">
+    <div class="mini-progress-track" aria-hidden="true">
+      <div class="mini-progress-fill" id="mini-progress-fill"></div>
+    </div>
+    <div class="mini-inner">
+      <div class="mini-top-row">
+        <button type="button" class="mini-title-btn" id="mini-title-btn" title="Jump to current section">
+          <span class="mini-title-text" id="mini-title">🎧 Intro &amp; Quick Reference</span>
+          <span class="mini-time" id="mini-time">0:00 / --:--</span>
+        </button>
+        <button type="button" class="mini-close-btn" id="mini-close-btn" aria-label="Stop and close audio player" title="Stop &amp; close">✕</button>
+      </div>
+      <div class="mini-controls-row">
+        <button type="button" class="mini-btn mini-play-btn" id="mini-play-btn" aria-label="Play or pause">▶</button>
+        <button type="button" class="mini-btn" id="mini-rw-btn" aria-label="Rewind 10 seconds">↺ 10s</button>
+        <button type="button" class="mini-btn" id="mini-next-btn" aria-label="Next section audio">Next ⏭</button>
+        <button type="button" class="mini-btn" id="mini-speed-btn" aria-label="Cycle playback speed">1×</button>
+        <button type="button" class="mini-btn mini-autonext-btn is-on" id="mini-autonext-btn" aria-pressed="true" title="Automatically play next section">Auto-next: ON</button>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -5637,6 +6437,400 @@
         sections.forEach(function(sec) { observer.observe(sec); });
       }
     });
+
+    // ==================== "LISTEN TO ALIA TEACH" AUDIO PLAYER ====================
+    (function() {
+      var TRACKS = [{"index": 0, "sectionId": "cheat-sheet", "src": "audio/01_cheat_sheet.mp3", "title": "Intro & Quick Reference", "duration": 136.76}, {"index": 1, "sectionId": "s43-slope-intercept", "src": "audio/02_s43_slope_intercept.mp3", "title": "4.3 Slope-Intercept Form", "duration": 151.56}, {"index": 2, "sectionId": "s43-parallel", "src": "audio/03_s43_parallel.mp3", "title": "4.3 Parallel Lines", "duration": 135.96}, {"index": 3, "sectionId": "s43-point-slope", "src": "audio/04_s43_point_slope.mp3", "title": "4.3 Slope, Point & Parallel Lines", "duration": 157.0}, {"index": 4, "sectionId": "s43-two-points", "src": "audio/05_s43_two_points.mp3", "title": "4.3 Given Two Points", "duration": 121.0}, {"index": 5, "sectionId": "s44-table", "src": "audio/06_s44_table.mp3", "title": "4.4 Graphing with a Table", "duration": 128.96}, {"index": 6, "sectionId": "s44-mb", "src": "audio/07_s44_mb.mp3", "title": "4.4 Sketching with m & b", "duration": 129.04}, {"index": 7, "sectionId": "s44-mpoint", "src": "audio/08_s44_mpoint.mp3", "title": "4.4 Sketching with m & a Point", "duration": 133.0}];
+      var SPEEDS = [1, 1.15, 1.25, 0.85];
+      var SPEED_LABELS = ['1×', '1.15×', '1.25×', '0.85×'];
+
+      var audio = document.getElementById('alia-audio');
+      var miniPlayer = document.getElementById('mini-player');
+      var miniProgressFill = document.getElementById('mini-progress-fill');
+      var miniTitleBtn = document.getElementById('mini-title-btn');
+      var miniTitleEl = document.getElementById('mini-title');
+      var miniTimeEl = document.getElementById('mini-time');
+      var miniPlayBtn = document.getElementById('mini-play-btn');
+      var miniRwBtn = document.getElementById('mini-rw-btn');
+      var miniNextBtn = document.getElementById('mini-next-btn');
+      var miniSpeedBtn = document.getElementById('mini-speed-btn');
+      var miniAutoNextBtn = document.getElementById('mini-autonext-btn');
+      var miniCloseBtn = document.getElementById('mini-close-btn');
+
+      if (!audio || !miniPlayer) return;
+
+      var currentIdx = -1;
+      var speedIdx = 0;
+      var autoNext = true;
+      var isSeeking = false;
+      var pendingSeekFrac = null;
+
+      function fmtTime(sec) {
+        if (!isFinite(sec) || sec < 0) return '--:--';
+        var total = Math.floor(sec + 0.5);
+        var m = Math.floor(total / 60);
+        var s = total % 60;
+        return m + ':' + (s < 10 ? '0' : '') + s;
+      }
+
+      function getCardEls(idx) {
+        var card = document.getElementById('audio-card-' + idx);
+        if (!card) return null;
+        return {
+          card: card,
+          playBtn: card.querySelector('.audio-play-btn'),
+          playIcon: card.querySelector('.audio-play-icon'),
+          playLabel: card.querySelector('.audio-play-label'),
+          timeEl: card.querySelector('[data-role="time"]'),
+          seekEl: card.querySelector('[data-role="seek"]'),
+          speedBtn: card.querySelector('.audio-speed-btn')
+        };
+      }
+
+      function setSeekVisual(seekEl, frac) {
+        if (!seekEl) return;
+        var clamped = Math.max(0, Math.min(1, isFinite(frac) ? frac : 0));
+        seekEl.value = String(Math.round(clamped * 1000));
+        seekEl.style.setProperty('--seek-pct', (clamped * 100).toFixed(2) + '%');
+      }
+
+      function getKnownDuration(idx) {
+        if (idx === currentIdx && isFinite(audio.duration) && audio.duration > 0) {
+          return audio.duration;
+        }
+        var t = TRACKS[idx];
+        return (t && t.duration > 0) ? t.duration : 0;
+      }
+
+      function syncSpeedButtons() {
+        var label = SPEED_LABELS[speedIdx];
+        var btns = document.querySelectorAll('.audio-speed-btn');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].textContent = label;
+        }
+        if (miniSpeedBtn) miniSpeedBtn.textContent = label;
+        try {
+          audio.playbackRate = SPEEDS[speedIdx];
+        } catch (e) {}
+      }
+
+      function syncAutoNextButton() {
+        if (!miniAutoNextBtn) return;
+        miniAutoNextBtn.setAttribute('aria-pressed', autoNext ? 'true' : 'false');
+        miniAutoNextBtn.classList.toggle('is-on', autoNext);
+        miniAutoNextBtn.textContent = autoNext ? 'Auto-next: ON' : 'Auto-next: OFF';
+      }
+
+      function updateCardIdleDisplay(idx) {
+        var els = getCardEls(idx);
+        if (!els) return;
+        els.card.classList.remove('is-playing', 'is-active');
+        if (els.playIcon) els.playIcon.textContent = '▶';
+        if (els.playLabel) els.playLabel.textContent = 'Listen to Alia';
+        var dur = (TRACKS[idx] && TRACKS[idx].duration > 0) ? TRACKS[idx].duration : 0;
+        if (els.timeEl) els.timeEl.textContent = '0:00 / ' + (dur > 0 ? fmtTime(dur) : '--:--');
+        setSeekVisual(els.seekEl, 0);
+      }
+
+      function syncAllStates() {
+        var playing = currentIdx >= 0 && !audio.paused && !audio.ended;
+        for (var i = 0; i < TRACKS.length; i++) {
+          var els = getCardEls(i);
+          if (!els) continue;
+          var isCur = (i === currentIdx);
+          els.card.classList.toggle('is-active', isCur);
+          els.card.classList.toggle('is-playing', isCur && playing);
+          if (els.playIcon) els.playIcon.textContent = (isCur && playing) ? '⏸' : '▶';
+          if (els.playLabel) els.playLabel.textContent = (isCur && playing) ? 'Pause' : 'Listen to Alia';
+        }
+        if (miniPlayBtn) {
+          miniPlayBtn.textContent = playing ? '⏸' : '▶';
+          miniPlayBtn.setAttribute('aria-label', playing ? 'Pause audio' : 'Play audio');
+        }
+        if (miniNextBtn) {
+          miniNextBtn.disabled = (currentIdx < 0 || currentIdx >= TRACKS.length - 1);
+        }
+        if (currentIdx >= 0 && TRACKS[currentIdx] && miniTitleEl) {
+          miniTitleEl.textContent = '🎧 ' + TRACKS[currentIdx].title;
+        }
+      }
+
+      function updateTimeUI() {
+        if (currentIdx < 0) return;
+        var cur = isFinite(audio.currentTime) ? audio.currentTime : 0;
+        var dur = getKnownDuration(currentIdx);
+        var timeStr = fmtTime(cur) + ' / ' + (dur > 0 ? fmtTime(dur) : '--:--');
+        var frac = dur > 0 ? (cur / dur) : 0;
+
+        var els = getCardEls(currentIdx);
+        if (els) {
+          if (els.timeEl) els.timeEl.textContent = timeStr;
+          if (!isSeeking) setSeekVisual(els.seekEl, frac);
+        }
+        if (miniTimeEl) miniTimeEl.textContent = timeStr;
+        if (miniProgressFill) {
+          miniProgressFill.style.width = (Math.max(0, Math.min(1, frac)) * 100).toFixed(2) + '%';
+        }
+      }
+
+      function showMiniPlayer() {
+        miniPlayer.classList.add('visible');
+        document.body.classList.add('has-mini-player');
+      }
+
+      function hideMiniPlayer() {
+        miniPlayer.classList.remove('visible');
+        document.body.classList.remove('has-mini-player');
+      }
+
+      function scrollToSection(idx) {
+        var t = TRACKS[idx];
+        if (!t) return;
+        var sec = document.getElementById(t.sectionId);
+        if (sec && typeof sec.scrollIntoView === 'function') {
+          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      function playTrack(idx, opts) {
+        opts = opts || {};
+        if (idx < 0 || idx >= TRACKS.length) return;
+        var prevIdx = currentIdx;
+        if (prevIdx >= 0 && prevIdx !== idx) {
+          updateCardIdleDisplay(prevIdx);
+        }
+        currentIdx = idx;
+        pendingSeekFrac = (typeof opts.seekFrac === 'number') ? opts.seekFrac : null;
+
+        var track = TRACKS[idx];
+        if (prevIdx !== idx || !audio.getAttribute('src')) {
+          audio.src = track.src;
+          audio.load();
+        }
+        try {
+          audio.playbackRate = SPEEDS[speedIdx];
+        } catch (e) {}
+
+        showMiniPlayer();
+        syncAllStates();
+        updateTimeUI();
+
+        if (opts.scroll) {
+          scrollToSection(idx);
+        }
+
+        var playPromise = audio.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(function() {
+            syncAllStates();
+          });
+        }
+      }
+
+      function toggleTrack(idx) {
+        if (currentIdx === idx) {
+          if (!audio.paused && !audio.ended) {
+            audio.pause();
+          } else {
+            if (!audio.getAttribute('src')) {
+              audio.src = TRACKS[idx].src;
+              audio.load();
+            }
+            try {
+              audio.playbackRate = SPEEDS[speedIdx];
+            } catch (e) {}
+            showMiniPlayer();
+            var p = audio.play();
+            if (p && typeof p.catch === 'function') {
+              p.catch(function() { syncAllStates(); });
+            }
+          }
+          syncAllStates();
+        } else {
+          playTrack(idx, { scroll: false });
+        }
+      }
+
+      function cycleSpeed() {
+        speedIdx = (speedIdx + 1) % SPEEDS.length;
+        syncSpeedButtons();
+      }
+
+      function stopAndClose() {
+        audio.pause();
+        try {
+          audio.currentTime = 0;
+        } catch (e) {}
+        if (currentIdx >= 0) {
+          updateCardIdleDisplay(currentIdx);
+        }
+        currentIdx = -1;
+        pendingSeekFrac = null;
+        if (miniProgressFill) miniProgressFill.style.width = '0%';
+        hideMiniPlayer();
+        syncAllStates();
+      }
+
+      // Expose Hero CTA entry point globally
+      window.startFromBeginning = function() {
+        autoNext = true;
+        syncAutoNextButton();
+        playTrack(0, { scroll: true });
+      };
+
+      // Bind inline card controls
+      for (var i = 0; i < TRACKS.length; i++) {
+        (function(trackIdx) {
+          var els = getCardEls(trackIdx);
+          if (!els) return;
+
+          if (els.playBtn) {
+            els.playBtn.addEventListener('click', function() {
+              toggleTrack(trackIdx);
+            });
+          }
+          if (els.speedBtn) {
+            els.speedBtn.addEventListener('click', function() {
+              cycleSpeed();
+            });
+          }
+          if (els.seekEl) {
+            els.seekEl.addEventListener('input', function() {
+              var frac = Number(els.seekEl.value) / 1000;
+              setSeekVisual(els.seekEl, frac);
+              if (trackIdx === currentIdx) {
+                isSeeking = true;
+                var dur = getKnownDuration(trackIdx);
+                if (dur > 0 && els.timeEl) {
+                  var preview = fmtTime(frac * dur) + ' / ' + fmtTime(dur);
+                  els.timeEl.textContent = preview;
+                  if (miniTimeEl) miniTimeEl.textContent = preview;
+                }
+              }
+            });
+            els.seekEl.addEventListener('change', function() {
+              var frac = Number(els.seekEl.value) / 1000;
+              if (trackIdx === currentIdx) {
+                var dur = getKnownDuration(trackIdx);
+                if (dur > 0 && isFinite(audio.duration) && audio.duration > 0) {
+                  audio.currentTime = frac * audio.duration;
+                } else {
+                  pendingSeekFrac = frac;
+                }
+                isSeeking = false;
+                updateTimeUI();
+              } else {
+                isSeeking = false;
+                playTrack(trackIdx, { seekFrac: frac, scroll: false });
+              }
+            });
+          }
+        })(i);
+      }
+
+      // Bind mini-player controls
+      if (miniPlayBtn) {
+        miniPlayBtn.addEventListener('click', function() {
+          if (currentIdx < 0) {
+            playTrack(0, { scroll: false });
+          } else {
+            toggleTrack(currentIdx);
+          }
+        });
+      }
+      if (miniRwBtn) {
+        miniRwBtn.addEventListener('click', function() {
+          if (currentIdx < 0) return;
+          try {
+            audio.currentTime = Math.max(0, (audio.currentTime || 0) - 10);
+          } catch (e) {}
+          updateTimeUI();
+        });
+      }
+      if (miniNextBtn) {
+        miniNextBtn.addEventListener('click', function() {
+          if (currentIdx >= 0 && currentIdx < TRACKS.length - 1) {
+            playTrack(currentIdx + 1, { scroll: true });
+          }
+        });
+      }
+      if (miniSpeedBtn) {
+        miniSpeedBtn.addEventListener('click', cycleSpeed);
+      }
+      if (miniAutoNextBtn) {
+        miniAutoNextBtn.addEventListener('click', function() {
+          autoNext = !autoNext;
+          syncAutoNextButton();
+        });
+      }
+      if (miniTitleBtn) {
+        miniTitleBtn.addEventListener('click', function() {
+          if (currentIdx >= 0) scrollToSection(currentIdx);
+        });
+      }
+      if (miniCloseBtn) {
+        miniCloseBtn.addEventListener('click', stopAndClose);
+      }
+
+      // Audio element lifecycle events
+      audio.addEventListener('loadedmetadata', function() {
+        if (currentIdx >= 0 && isFinite(audio.duration) && audio.duration > 0) {
+          TRACKS[currentIdx].duration = audio.duration;
+          if (pendingSeekFrac !== null) {
+            try {
+              audio.currentTime = Math.max(0, Math.min(audio.duration - 0.1, pendingSeekFrac * audio.duration));
+            } catch (e) {}
+            pendingSeekFrac = null;
+          }
+        }
+        try {
+          audio.playbackRate = SPEEDS[speedIdx];
+        } catch (e) {}
+        updateTimeUI();
+      });
+
+      audio.addEventListener('playing', function() {
+        try {
+          audio.playbackRate = SPEEDS[speedIdx];
+        } catch (e) {}
+        syncAllStates();
+      });
+
+      audio.addEventListener('pause', function() {
+        syncAllStates();
+      });
+
+      audio.addEventListener('timeupdate', function() {
+        updateTimeUI();
+      });
+
+      audio.addEventListener('ended', function() {
+        if (currentIdx < 0) return;
+        var finishedIdx = currentIdx;
+        if (autoNext && finishedIdx < TRACKS.length - 1) {
+          playTrack(finishedIdx + 1, { scroll: true });
+        } else {
+          updateCardIdleDisplay(finishedIdx);
+          if (miniProgressFill) miniProgressFill.style.width = '0%';
+          syncAllStates();
+        }
+      });
+
+      audio.addEventListener('error', function() {
+        if (currentIdx >= 0) {
+          var els = getCardEls(currentIdx);
+          if (els && els.timeEl) {
+            els.timeEl.textContent = 'Audio unavailable';
+          }
+          if (miniTimeEl) miniTimeEl.textContent = 'Audio unavailable';
+        }
+        syncAllStates();
+      });
+
+      syncSpeedButtons();
+      syncAutoNextButton();
+    })();
+
   </script>
 </body>
 </html>
