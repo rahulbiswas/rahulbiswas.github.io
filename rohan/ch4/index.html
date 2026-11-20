@@ -1600,6 +1600,418 @@
       }
     }
 
+
+    /* ==================== INTERACTIVE QUIZ MODE (REUSABLE PER PAGE) ==================== */
+    .quiz-block {
+      background: linear-gradient(180deg, #faf8ff 0%, #ffffff 100%);
+      border: 1.5px solid var(--purple-border);
+      border-top: 3.5px solid var(--purple);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 16px 0;
+      box-shadow: 0 3px 12px rgba(91, 50, 168, 0.06);
+      min-width: 0;
+    }
+    .quiz-block-head {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .quiz-mode-badge {
+      display: inline-block;
+      background: var(--purple);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 7px;
+      flex-shrink: 0;
+    }
+    .quiz-block-head h3 {
+      margin: 0;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #2e1959;
+      line-height: 1.3;
+    }
+    .quiz-block-sub {
+      margin: 2px 0 12px 0;
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+    .quiz-card {
+      background: #ffffff;
+      border: 1px solid #e2dcf0;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 4px rgba(27, 44, 82, 0.03);
+      transition: border-color 0.16s ease;
+    }
+    .quiz-card:last-child {
+      margin-bottom: 0;
+    }
+    .quiz-card.is-right {
+      border-color: var(--green-border);
+    }
+    .quiz-card.is-wrong {
+      border-color: var(--red-border);
+    }
+    .quiz-q-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .quiz-q-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--purple-bg);
+      color: var(--purple);
+      border: 1px solid var(--purple-border);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .quiz-q-status {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .quiz-card.is-right .quiz-q-status {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      color: var(--green);
+    }
+    .quiz-card.is-wrong .quiz-q-status {
+      background: var(--red-bg);
+      border-color: var(--red-border);
+      color: var(--red);
+    }
+    .quiz-q-prompt {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 11px;
+      overflow-wrap: break-word;
+    }
+    .quiz-choices {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .quiz-opt {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-align: left;
+      padding: 10px 13px;
+      min-height: 46px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      background: #ffffff;
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      line-height: 1.45;
+      cursor: pointer;
+      transition: border-color 0.14s ease, background 0.14s ease, transform 0.08s ease, opacity 0.16s ease;
+    }
+    .quiz-opt:hover:not(:disabled) {
+      border-color: var(--purple);
+      background: #f9f6ff;
+    }
+    .quiz-opt:active:not(:disabled) {
+      transform: scale(0.992);
+    }
+    .quiz-opt:disabled {
+      cursor: default;
+    }
+    .quiz-card.is-answered .quiz-opt:not(.is-correct):not(.is-wrong) {
+      opacity: 0.6;
+      background: #faf9f6;
+    }
+    .quiz-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #f2f0ea;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+    .quiz-opt:hover:not(:disabled) .quiz-letter {
+      background: var(--purple-bg);
+      color: var(--purple);
+    }
+    .quiz-opt-text {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 2px 0;
+      overflow-wrap: break-word;
+    }
+    .quiz-mark {
+      flex-shrink: 0;
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-left: 4px;
+    }
+    .quiz-opt.is-correct {
+      opacity: 1 !important;
+      border-color: var(--green);
+      background: var(--green-bg);
+      color: #0f5333;
+      font-weight: 600;
+    }
+    .quiz-opt.is-correct .quiz-letter {
+      background: var(--green);
+      color: #ffffff;
+    }
+    .quiz-opt.is-correct .quiz-mark {
+      color: var(--green);
+    }
+    .quiz-opt.is-wrong {
+      opacity: 1 !important;
+      border-color: var(--red);
+      background: var(--red-bg);
+      color: #7d1818;
+      font-weight: 600;
+    }
+    .quiz-opt.is-wrong .quiz-letter {
+      background: var(--red);
+      color: #ffffff;
+    }
+    .quiz-opt.is-wrong .quiz-mark {
+      color: var(--red);
+    }
+    .quiz-feedback {
+      margin-top: 10px;
+      padding: 10px 13px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      overflow-wrap: break-word;
+      animation: pageFadeIn 0.16s ease-out;
+    }
+    .quiz-feedback[hidden] {
+      display: none;
+    }
+    .quiz-feedback.is-right {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: #0f5333;
+    }
+    .quiz-feedback.is-wrong {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      color: #7d1818;
+    }
+    .quiz-fb-prefix {
+      font-weight: 800;
+      margin-right: 4px;
+    }
+
+    /* Page Quiz Summary Card */
+    .quiz-summary {
+      background: linear-gradient(135deg, #f8f5ff 0%, #ffffff 100%);
+      border: 1.5px solid var(--purple-border);
+      border-radius: var(--radius);
+      padding: 15px 16px;
+      margin-top: 16px;
+      box-shadow: 0 3px 12px rgba(91, 50, 168, 0.06);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .quiz-summary.is-perfect {
+      background: linear-gradient(135deg, #e7f6ee 0%, #ffffff 100%);
+      border-color: var(--green-border);
+    }
+    .quiz-summary-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .quiz-summary-info {
+      min-width: 0;
+    }
+    .quiz-summary-kicker {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--purple);
+      margin-bottom: 2px;
+    }
+    .quiz-summary.is-perfect .quiz-summary-kicker {
+      color: var(--green);
+    }
+    .quiz-summary-score {
+      font-size: 1.06rem;
+      font-weight: 800;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.3;
+    }
+    .quiz-retake-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1.5px solid var(--purple);
+      background: #ffffff;
+      color: var(--purple);
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 8px 14px;
+      min-height: 40px;
+      border-radius: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.14s ease, color 0.14s ease, transform 0.1s ease;
+    }
+    .quiz-retake-btn:hover {
+      background: var(--purple-bg);
+    }
+    .quiz-retake-btn:active {
+      background: var(--purple);
+      color: #ffffff;
+      transform: scale(0.98);
+    }
+    .quiz-summary.is-perfect .quiz-retake-btn {
+      border-color: var(--green);
+      color: var(--green);
+    }
+    .quiz-summary.is-perfect .quiz-retake-btn:hover {
+      background: var(--green-bg);
+    }
+    .quiz-progress-track {
+      height: 8px;
+      background: #e9e4f5;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 11px 0 8px;
+    }
+    .quiz-summary.is-perfect .quiz-progress-track {
+      background: #cdebd9;
+    }
+    .quiz-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--purple);
+      border-radius: 999px;
+      transition: width 0.25s ease, background 0.25s ease;
+    }
+    .quiz-summary.is-perfect .quiz-progress-fill {
+      background: var(--green);
+    }
+    .quiz-summary-msg {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .quiz-summary.is-perfect .quiz-summary-msg {
+      color: #0f5333;
+      font-weight: 600;
+    }
+
+    /* Compact Live Quiz Pills (Top Breadcrumb & Left Sidebar) */
+    .page-quiz-pill {
+      appearance: none;
+      -webkit-appearance: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--purple-bg);
+      color: var(--purple);
+      border: 1px solid var(--purple-border);
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+    .page-quiz-pill:hover {
+      filter: brightness(0.96);
+    }
+    .page-quiz-pill.is-perfect {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      color: var(--green);
+    }
+    .page-quiz-pill.is-done {
+      background: var(--amber-bg);
+      border-color: var(--amber-border);
+      color: var(--amber);
+    }
+    .nav-quiz-pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--purple);
+      background: var(--purple-bg);
+      border: 1px solid var(--purple-border);
+      padding: 1px 6px;
+      border-radius: 999px;
+      white-space: nowrap;
+      line-height: 1.35;
+      font-variant-numeric: tabular-nums;
+    }
+    .nav-quiz-pill.is-in-progress {
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+    }
+    .nav-quiz-pill.is-done {
+      color: var(--amber);
+      background: var(--amber-bg);
+      border-color: var(--amber-border);
+    }
+    .nav-quiz-pill.is-perfect {
+      color: var(--green);
+      background: var(--green-bg);
+      border-color: var(--green-border);
+    }
+    @media (max-width: 540px) {
+      .quiz-block {
+        padding: 13px 12px;
+      }
+      .quiz-card {
+        padding: 12px;
+      }
+      .quiz-opt {
+        padding: 9px 11px;
+        gap: 9px;
+      }
+    }
+
     /* Clean Print Layout — prints all 8 pages cleanly */
     @media print {
       body,
@@ -1623,8 +2035,23 @@
       .chev,
       .hero-cta-row,
       .audio-card,
-      .mini-player {
+      .mini-player,
+      .quiz-summary,
+      .quiz-retake-btn,
+      .quiz-q-status,
+      .page-quiz-pill,
+      .nav-quiz-pill {
         display: none !important;
+      }
+      .quiz-block,
+      .quiz-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+      .quiz-opt {
+        background: #ffffff !important;
+        border-color: #cccccc !important;
+        opacity: 1 !important;
       }
       .book-page {
         display: block !important;
@@ -1715,7 +2142,7 @@
           <a href="#page-2" class="nav-page-item" data-page="2" data-track-idx="1">
             <span class="nav-page-num">2</span>
             <span class="nav-page-body">
-              <span class="nav-page-title-row"><span class="nav-page-title">Slope-Intercept Form</span></span>
+              <span class="nav-page-title-row"><span class="nav-page-title">Slope-Intercept Form</span><span class="nav-quiz-pill" data-nav-quiz-page="2">Quiz 0/5</span></span>
               <span class="nav-page-meta">pp. 154–156 · 2:16</span>
             </span>
             <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
@@ -1925,6 +2352,7 @@
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 2 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
           <div class="page-top-actions">
+            <button type="button" class="page-quiz-pill" data-quiz-pill-page="2" title="Jump to Page 2 Quiz Mode questions">Quiz: 0/5</button>
             <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-2', true)">Show Answers</button>
             <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-2', false)">Hide Answers</button>
           </div>
@@ -2006,6 +2434,96 @@
       <p>More generally, <strong>any</strong> ordered pair \((x, y)\) that solves \(y = -2x + 6\) also solves \(y + 2x - 6 = 0\). Adding \(6\) to both sides and subtracting \(2x\) from both sides produces <strong>equivalent equations</strong>, which always have the exact same solution set (and represent the exact same line).</p>
     </div>
   </details>
+
+  <!-- QUIZ MODE · BLOCK A (Page 2, Part 1: 3 Questions) -->
+  <div class="quiz-block" data-quiz-page="2" id="quiz-p2-part1">
+    <div class="quiz-block-head">
+      <span class="quiz-mode-badge">Quiz Mode</span>
+      <h3>Quick Check · Part 1 (Quiz Mode — 3 Questions)</h3>
+    </div>
+    <p class="quiz-block-sub">Test your algebra before Guided Practice — tap one choice per question for instant feedback.</p>
+
+    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q1">
+      <div class="quiz-q-head">
+        <span class="quiz-q-num">Q1</span>
+        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+      </div>
+      <div class="quiz-q-prompt">Rewrite \(y - 3x + 5 = 0\) in slope-intercept form. What are the slope \(m\) and \(y\)-intercept \(b\)?</div>
+      <div class="quiz-choices" role="group" aria-label="Question 1 choices">
+        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Adding \(3x\) and subtracting \(5\) from both sides gives \(y = 3x - 5\), so \(m = 3\) and \(b = -5\).">
+          <span class="quiz-letter">A</span>
+          <span class="quiz-opt-text">\(m = 3,\; b = -5\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Careful! Those are the signs before isolating \(y\). Move \(-3x\) and \(+5\) to the other side first: \(y = 3x - 5\).">
+          <span class="quiz-letter">B</span>
+          <span class="quiz-opt-text">\(m = -3,\; b = 5\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Close! You flipped \(-3x\) to \(+3x\), but remember to subtract \(5\) from both sides too: \(y = 3x - 5\).">
+          <span class="quiz-letter">C</span>
+          <span class="quiz-opt-text">\(m = 3,\; b = 5\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You moved \(+5\) to \(-5\) nicely, but adding \(3x\) to both sides makes the slope \(+3\), not \(-3\).">
+          <span class="quiz-letter">D</span>
+          <span class="quiz-opt-text">\(m = -3,\; b = -5\)</span>
+        </button>
+      </div>
+      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+    </div>
+
+    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q2">
+      <div class="quiz-q-head">
+        <span class="quiz-q-num">Q2</span>
+        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+      </div>
+      <div class="quiz-q-prompt">What are the slope \(m\) and \(y\)-intercept \(b\) of the line \(3x + 2y = 10\)?</div>
+      <div class="quiz-choices" role="group" aria-label="Question 2 choices">
+        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Subtract \(3x\) to get \(2y = -3x + 10\), then divide EVERY term by \(2\): \(y = -\dfrac{3}{2}x + 5\).">
+          <span class="quiz-letter">A</span>
+          <span class="quiz-opt-text">\(m = -\dfrac{3}{2},\; b = 5\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Classic trap! You divided \(-3x\) by \(2\), but you must also divide \(10\) by \(2\) to get \(b = 5\).">
+          <span class="quiz-letter">B</span>
+          <span class="quiz-opt-text">\(m = -\dfrac{3}{2},\; b = 10\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Watch the sign! Subtracting \(3x\) from both sides gives \(2y = -3x + 10\), so \(m = -\dfrac{3}{2}\).">
+          <span class="quiz-letter">C</span>
+          <span class="quiz-opt-text">\(m = \dfrac{3}{2},\; b = 5\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You subtracted \(3x\), which gives \(2y = -3x + 10\) — don't forget the final step of dividing both sides by \(2\)!">
+          <span class="quiz-letter">D</span>
+          <span class="quiz-opt-text">\(m = -3,\; b = 10\)</span>
+        </button>
+      </div>
+      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+    </div>
+
+    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q3">
+      <div class="quiz-q-head">
+        <span class="quiz-q-num">Q3</span>
+        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+      </div>
+      <div class="quiz-q-prompt">Which equation is equivalent to \(4x - 2y = 12\) in slope-intercept form?</div>
+      <div class="quiz-choices" role="group" aria-label="Question 3 choices">
+        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Subtract \(4x\) to get \(-2y = -4x + 12\), then divide every term by \(-2\): \(\dfrac{-4}{-2}x + \dfrac{12}{-2} = 2x - 6\).">
+          <span class="quiz-letter">A</span>
+          <span class="quiz-opt-text">\(y = 2x - 6\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Watch the negative! The left side is \(-2y\), so you must divide by \(-2\), not \(+2\).">
+          <span class="quiz-letter">B</span>
+          <span class="quiz-opt-text">\(y = -2x + 6\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Great catch on \(\dfrac{-4}{-2} = +2\), but remember \(\dfrac{+12}{-2} = -6\), not \(+6\)!">
+          <span class="quiz-letter">C</span>
+          <span class="quiz-opt-text">\(y = 2x + 6\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You divided \(12\) by \(-2\) to get \(-6\), and \(\dfrac{-4}{-2}\) also flips to \(+2x\), giving \(y = 2x - 6\).">
+          <span class="quiz-letter">D</span>
+          <span class="quiz-opt-text">\(y = -2x - 6\)</span>
+        </button>
+      </div>
+      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+    </div>
+  </div>
 
   <!-- GUIDED PRACTICE 1-6 (p. 155) -->
   <div class="card">
@@ -2176,6 +2694,69 @@
     </div>
   </details>
 
+  <!-- QUIZ MODE · BLOCK B (Page 2, Part 2: 2 Questions) -->
+  <div class="quiz-block" data-quiz-page="2" id="quiz-p2-part2">
+    <div class="quiz-block-head">
+      <span class="quiz-mode-badge">Quiz Mode</span>
+      <h3>Quick Check · Part 2 (Quiz Mode — 2 Questions)</h3>
+    </div>
+    <p class="quiz-block-sub">Check writing equations from \(m\) and \(b\) and comparing steepness — one try per question.</p>
+
+    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q4">
+      <div class="quiz-q-head">
+        <span class="quiz-q-num">Q4</span>
+        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+      </div>
+      <div class="quiz-q-prompt">A line has slope \(m = -\dfrac{3}{5}\) and \(y\)-intercept \(b = -4\). Which equation is in slope-intercept form?</div>
+      <div class="quiz-choices" role="group" aria-label="Question 4 choices">
+        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Substitute \(m = -\dfrac{3}{5}\) and \(b = -4\) into \(y = mx + b\): \(y = -\dfrac{3}{5}x + (-4) = -\dfrac{3}{5}x - 4\).">
+          <span class="quiz-letter">A</span>
+          <span class="quiz-opt-text">\(y = -\dfrac{3}{5}x - 4\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Swapped \(m\) and \(b\)! The slope \(m = -\dfrac{3}{5}\) multiplies \(x\), and \(b = -4\) is the constant.">
+          <span class="quiz-letter">B</span>
+          <span class="quiz-opt-text">\(y = -4x - \dfrac{3}{5}\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Watch the sign of \(b\)! Adding \(-4\) simplifies to \(-4\), not \(+4\).">
+          <span class="quiz-letter">C</span>
+          <span class="quiz-opt-text">\(y = -\dfrac{3}{5}x + 4\)</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="The \(y\)-intercept \(-4\) is right, but don't drop the negative sign on the slope \(m = -\dfrac{3}{5}\)!">
+          <span class="quiz-letter">D</span>
+          <span class="quiz-opt-text">\(y = \dfrac{3}{5}x - 4\)</span>
+        </button>
+      </div>
+      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+    </div>
+
+    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q5">
+      <div class="quiz-q-head">
+        <span class="quiz-q-num">Q5</span>
+        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+      </div>
+      <div class="quiz-q-prompt">Compare Line A: \(y = \dfrac{1}{3}x + 8\) and Line B: \(y = -4x + 1\). Which statement is true?</div>
+      <div class="quiz-choices" role="group" aria-label="Question 5 choices">
+        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Line B has negative slope \(-4\) (downward), and steepness uses absolute value: \(\lvert -4 \rvert = 4 &gt; \dfrac{1}{3}.\)">
+          <span class="quiz-letter">A</span>
+          <span class="quiz-opt-text">Line B goes downward from left to right and is steeper than Line A.</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="The \(y\)-intercept only tells where the line crosses the \(y\)-axis — steepness depends solely on \(\lvert m \rvert\).">
+          <span class="quiz-letter">B</span>
+          <span class="quiz-opt-text">Line A is steeper because its \(y\)-intercept (\(8\)) is greater than Line B's (\(1\)).</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Steepness compares absolute values of slope, not signed values! \(\lvert -4 \rvert = 4\) is much steeper than \(\dfrac{1}{3}\).">
+          <span class="quiz-letter">C</span>
+          <span class="quiz-opt-text">Line A is steeper because \(\dfrac{1}{3} &gt; -4\).</span>
+        </button>
+        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="Direction comes from the sign of the slope \(m\), not \(b\). Since \(m = -4 &lt; 0\), Line B goes downward.">
+          <span class="quiz-letter">D</span>
+          <span class="quiz-opt-text">Line B goes upward from left to right because its \(y\)-intercept \(+1\) is positive.</span>
+        </button>
+      </div>
+      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+    </div>
+  </div>
+
   <!-- GUIDED PRACTICE 7-8 (p. 156) -->
   <div class="card">
     <h3>Guided Practice <span class="page-pill">p. 156</span></h3>
@@ -2222,6 +2803,20 @@
             <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-2', true)">Show Answers on This Page</button>
             <button type="button" class="toggle-btn" onclick="toggleAllProbs('page-2', false)">Hide Answers on This Page</button>
           </div>
+        </div>
+
+        <div class="quiz-summary" data-quiz-page="2" id="quiz-summary-p2">
+          <div class="quiz-summary-top">
+            <div class="quiz-summary-info">
+              <span class="quiz-summary-kicker">Page 2 Quick Check · Quiz Mode</span>
+              <div class="quiz-summary-score" data-role="summary-score">Page 2 Quiz: 0 / 5 answered</div>
+            </div>
+            <button type="button" class="quiz-retake-btn" data-role="retake-btn" data-quiz-retake-page="2">🔄 Retake Page 2 Quiz</button>
+          </div>
+          <div class="quiz-progress-track" aria-hidden="true">
+            <div class="quiz-progress-fill" data-role="progress-fill" style="width:0%"></div>
+          </div>
+          <div class="quiz-summary-msg" data-role="summary-msg">Answer all 5 questions above to lock in your score — one try per question!</div>
         </div>
 
         <nav class="page-pager" aria-label="Page 2 navigation">
@@ -7154,16 +7749,23 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-      // Strictly render math ONLY with \(...\) and \[...\] (never $)
-      if (typeof renderMathInElement === 'function') {
-        renderMathInElement(document.body, {
+    window.renderMathSafe = function(el) {
+      if (typeof renderMathInElement === 'function' && el) {
+        renderMathInElement(el, {
           delimiters: [
             {left: '\\[', right: '\\]', display: true},
             {left: '\\(', right: '\\)', display: false}
           ],
           throwOnError: false
         });
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Strictly render math ONLY with \(...\) and \[...\] (never $)
+      window.renderMathSafe(document.body);
+      if (typeof window.initQuizMode === 'function') {
+        window.initQuizMode();
       }
     });
 
@@ -7785,6 +8387,365 @@
       syncSpeedButtons();
       syncAutoNextButton();
       syncAllStates();
+    })();
+
+
+    // ==================== INTERACTIVE QUIZ MODE (SINGLE-ATTEMPT, PERSISTENT) ====================
+    (function() {
+      var QUIZ_STORAGE_KEY = 'ch4_quiz_v1';
+      var LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+      function loadQuizStore() {
+        try {
+          var raw = window.localStorage && window.localStorage.getItem(QUIZ_STORAGE_KEY);
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed && typeof parsed === 'object' && parsed.pages && typeof parsed.pages === 'object') {
+              return parsed;
+            }
+          }
+        } catch (e) {}
+        return { pages: {} };
+      }
+
+      function saveQuizStore(store) {
+        try {
+          if (window.localStorage) {
+            window.localStorage.setItem(QUIZ_STORAGE_KEY, JSON.stringify(store));
+          }
+        } catch (e) {}
+      }
+
+      function shuffleArray(arr) {
+        var copy = arr.slice();
+        for (var i = copy.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = copy[i];
+          copy[i] = copy[j];
+          copy[j] = tmp;
+        }
+        return copy;
+      }
+
+      function ensurePageStore(store, pageKey) {
+        if (!store.pages[pageKey]) {
+          store.pages[pageKey] = { order: {}, answers: {} };
+        }
+        if (!store.pages[pageKey].order) store.pages[pageKey].order = {};
+        if (!store.pages[pageKey].answers) store.pages[pageKey].answers = {};
+        return store.pages[pageKey];
+      }
+
+      function applyCardOrder(card, optOrder) {
+        var choicesWrap = card.querySelector('.quiz-choices');
+        if (!choicesWrap) return;
+        var btnMap = {};
+        var btns = choicesWrap.querySelectorAll('.quiz-opt');
+        for (var i = 0; i < btns.length; i++) {
+          var oid = btns[i].getAttribute('data-opt-id') || String(i);
+          btnMap[oid] = btns[i];
+        }
+        for (var k = 0; k < optOrder.length; k++) {
+          var el = btnMap[optOrder[k]];
+          if (el) {
+            choicesWrap.appendChild(el);
+            var letterEl = el.querySelector('.quiz-letter');
+            if (letterEl) letterEl.textContent = LETTERS[k] || String(k + 1);
+          }
+        }
+      }
+
+      function setButtonMark(btn, symbol) {
+        var mark = btn.querySelector('.quiz-mark');
+        if (!symbol) {
+          if (mark && mark.parentNode) mark.parentNode.removeChild(mark);
+          return;
+        }
+        if (!mark) {
+          mark = document.createElement('span');
+          mark.className = 'quiz-mark';
+          mark.setAttribute('aria-hidden', 'true');
+          btn.appendChild(mark);
+        }
+        mark.textContent = symbol;
+      }
+
+      function lockCardWithChoice(card, pickedId) {
+        var btns = card.querySelectorAll('.quiz-opt');
+        var pickedBtn = null;
+        var correctBtn = null;
+        for (var i = 0; i < btns.length; i++) {
+          var oid = btns[i].getAttribute('data-opt-id');
+          if (oid === pickedId) pickedBtn = btns[i];
+          if (btns[i].getAttribute('data-correct') === 'true') correctBtn = btns[i];
+        }
+        if (!pickedBtn) return false;
+
+        var isRight = pickedBtn.getAttribute('data-correct') === 'true';
+        card.classList.add('is-answered');
+        card.classList.toggle('is-right', isRight);
+        card.classList.toggle('is-wrong', !isRight);
+
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].disabled = true;
+          btns[j].classList.remove('is-correct', 'is-wrong', 'is-picked');
+          setButtonMark(btns[j], '');
+        }
+
+        pickedBtn.classList.add('is-picked');
+        if (isRight) {
+          pickedBtn.classList.add('is-correct');
+          setButtonMark(pickedBtn, '✓');
+        } else {
+          pickedBtn.classList.add('is-wrong');
+          setButtonMark(pickedBtn, '✗');
+          if (correctBtn) {
+            correctBtn.classList.add('is-correct');
+            setButtonMark(correctBtn, '✓');
+          }
+        }
+
+        var statusEl = card.querySelector('[data-role="q-status"]');
+        if (statusEl) {
+          statusEl.textContent = isRight ? '✓ Correct' : '✗ Missed';
+        }
+
+        var fbEl = card.querySelector('[data-role="feedback"]');
+        if (fbEl) {
+          var fbText = pickedBtn.getAttribute('data-feedback') || '';
+          fbEl.innerHTML = '';
+          var prefix = document.createElement('span');
+          prefix.className = 'quiz-fb-prefix';
+          prefix.textContent = isRight ? '✓ Spot on!' : '✗ Not quite —';
+          var bodySpan = document.createElement('span');
+          bodySpan.textContent = fbText;
+          fbEl.appendChild(prefix);
+          fbEl.appendChild(bodySpan);
+          fbEl.classList.remove('is-right', 'is-wrong');
+          fbEl.classList.add(isRight ? 'is-right' : 'is-wrong');
+          fbEl.hidden = false;
+          if (typeof window.renderMathSafe === 'function') {
+            window.renderMathSafe(fbEl);
+          }
+        }
+        return isRight;
+      }
+
+      function unlockCard(card) {
+        card.classList.remove('is-answered', 'is-right', 'is-wrong');
+        var btns = card.querySelectorAll('.quiz-opt');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].disabled = false;
+          btns[i].classList.remove('is-correct', 'is-wrong', 'is-picked');
+          setButtonMark(btns[i], '');
+        }
+        var statusEl = card.querySelector('[data-role="q-status"]');
+        if (statusEl) statusEl.textContent = '1 attempt';
+        var fbEl = card.querySelector('[data-role="feedback"]');
+        if (fbEl) {
+          fbEl.innerHTML = '';
+          fbEl.classList.remove('is-right', 'is-wrong');
+          fbEl.hidden = true;
+        }
+      }
+
+      function updatePageQuizUI(pageKey, store) {
+        var cards = document.querySelectorAll('.quiz-card[data-quiz-page="' + pageKey + '"]');
+        var total = cards.length;
+        if (total === 0) return;
+        var pStore = ensurePageStore(store, pageKey);
+        var answered = 0;
+        var correct = 0;
+
+        for (var i = 0; i < cards.length; i++) {
+          var qid = cards[i].getAttribute('data-qid');
+          var picked = qid ? pStore.answers[qid] : null;
+          if (picked) {
+            answered++;
+            var pickedBtn = cards[i].querySelector('.quiz-opt[data-opt-id="' + picked + '"]');
+            if (pickedBtn && pickedBtn.getAttribute('data-correct') === 'true') {
+              correct++;
+            }
+          }
+        }
+
+        var isAllDone = (answered === total);
+        var isPerfect = (isAllDone && correct === total);
+        var pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+        var progPct = total > 0 ? Math.round((answered / total) * 100) : 0;
+
+        // 1. Page Quiz Summary Card
+        var summaryEl = document.querySelector('.quiz-summary[data-quiz-page="' + pageKey + '"]');
+        if (summaryEl) {
+          summaryEl.classList.toggle('is-perfect', isPerfect);
+          var scoreEl = summaryEl.querySelector('[data-role="summary-score"]');
+          var msgEl = summaryEl.querySelector('[data-role="summary-msg"]');
+          var fillEl = summaryEl.querySelector('[data-role="progress-fill"]');
+          if (scoreEl) {
+            if (answered === 0) {
+              scoreEl.textContent = 'Page ' + pageKey + ' Quiz: 0 / ' + total + ' answered';
+            } else if (!isAllDone) {
+              scoreEl.textContent = 'Score: ' + correct + ' / ' + answered + ' so far (' + answered + ' / ' + total + ' answered)';
+            } else {
+              scoreEl.textContent = 'Score: ' + correct + ' / ' + total + ' (' + pct + '%)';
+            }
+          }
+          if (fillEl) {
+            fillEl.style.width = progPct + '%';
+          }
+          if (msgEl) {
+            if (answered === 0) {
+              msgEl.textContent = 'Answer all ' + total + ' questions above to lock in your score — one try per question!';
+            } else if (!isAllDone) {
+              var left = total - answered;
+              msgEl.textContent = 'Keep going — ' + left + ' more ' + (left === 1 ? 'question' : 'questions') + ' to finish Page ' + pageKey + '!';
+            } else if (isPerfect) {
+              msgEl.textContent = '🎉 Perfect ' + total + ' / ' + total + '! You nailed every concept on Page ' + pageKey + '!';
+            } else if (pct >= 80) {
+              msgEl.textContent = '👏 Strong work! Check the explanation for the one you missed, or tap Retake to go for a perfect ' + total + '/' + total + '.';
+            } else {
+              msgEl.textContent = '💪 Good practice! Read each explanation above, then tap Retake to try again with freshly shuffled choices.';
+            }
+          }
+        }
+
+        // 2. Top Breadcrumb Live Pill
+        var topPill = document.querySelector('.page-quiz-pill[data-quiz-pill-page="' + pageKey + '"]');
+        if (topPill) {
+          topPill.classList.toggle('is-perfect', isPerfect);
+          topPill.classList.toggle('is-done', isAllDone && !isPerfect);
+          if (isPerfect) {
+            topPill.textContent = '✓ Quiz: ' + correct + '/' + total;
+          } else {
+            topPill.textContent = 'Quiz: ' + correct + '/' + total;
+          }
+        }
+
+        // 3. Left Sidebar Item Compact Pill
+        var navPill = document.querySelector('.nav-quiz-pill[data-nav-quiz-page="' + pageKey + '"]');
+        if (navPill) {
+          navPill.classList.toggle('is-perfect', isPerfect);
+          navPill.classList.toggle('is-done', isAllDone && !isPerfect);
+          navPill.classList.toggle('is-in-progress', answered > 0 && !isAllDone);
+          if (isPerfect) {
+            navPill.textContent = '✓ ' + correct + '/' + total;
+          } else {
+            navPill.textContent = 'Quiz ' + correct + '/' + total;
+          }
+        }
+      }
+
+      function initQuizMode() {
+        var allCards = document.querySelectorAll('.quiz-card[data-quiz-page]');
+        if (!allCards.length) return;
+
+        var store = loadQuizStore();
+        var pagesSeen = {};
+
+        for (var i = 0; i < allCards.length; i++) {
+          (function(card) {
+            var pageKey = card.getAttribute('data-quiz-page');
+            var qid = card.getAttribute('data-qid');
+            if (!pageKey || !qid) return;
+            pagesSeen[pageKey] = true;
+
+            var pStore = ensurePageStore(store, pageKey);
+            var btns = card.querySelectorAll('.quiz-opt');
+            var ids = [];
+            for (var b = 0; b < btns.length; b++) {
+              ids.push(btns[b].getAttribute('data-opt-id') || String(b));
+            }
+
+            var savedOrder = pStore.order[qid];
+            var validOrder = Array.isArray(savedOrder) && savedOrder.length === ids.length &&
+              ids.every(function(id) { return savedOrder.indexOf(id) !== -1; });
+            if (!validOrder) {
+              savedOrder = shuffleArray(ids);
+              pStore.order[qid] = savedOrder;
+            }
+            applyCardOrder(card, savedOrder);
+
+            var savedAns = pStore.answers[qid];
+            if (savedAns) {
+              lockCardWithChoice(card, savedAns);
+            }
+
+            for (var c = 0; c < btns.length; c++) {
+              (function(btn) {
+                btn.addEventListener('click', function() {
+                  if (card.classList.contains('is-answered')) return;
+                  var pickedId = btn.getAttribute('data-opt-id');
+                  if (!pickedId) return;
+                  var curStore = loadQuizStore();
+                  var curPage = ensurePageStore(curStore, pageKey);
+                  curPage.order[qid] = pStore.order[qid];
+                  curPage.answers[qid] = pickedId;
+                  saveQuizStore(curStore);
+                  store = curStore;
+                  lockCardWithChoice(card, pickedId);
+                  updatePageQuizUI(pageKey, store);
+                });
+              })(btns[c]);
+            }
+          })(allCards[i]);
+        }
+
+        saveQuizStore(store);
+
+        // Bind Retake buttons & Top Breadcrumb jump pills
+        var pageKeys = Object.keys(pagesSeen);
+        for (var p = 0; p < pageKeys.length; p++) {
+          (function(pageKey) {
+            updatePageQuizUI(pageKey, store);
+
+            var retakeBtn = document.querySelector('[data-quiz-retake-page="' + pageKey + '"]');
+            if (retakeBtn) {
+              retakeBtn.addEventListener('click', function() {
+                var curStore = loadQuizStore();
+                curStore.pages[pageKey] = { order: {}, answers: {} };
+                var pCards = document.querySelectorAll('.quiz-card[data-quiz-page="' + pageKey + '"]');
+                for (var idx = 0; idx < pCards.length; idx++) {
+                  var card = pCards[idx];
+                  var qid = card.getAttribute('data-qid');
+                  unlockCard(card);
+                  var btns = card.querySelectorAll('.quiz-opt');
+                  var ids = [];
+                  for (var b = 0; b < btns.length; b++) {
+                    ids.push(btns[b].getAttribute('data-opt-id') || String(b));
+                  }
+                  var freshOrder = shuffleArray(ids);
+                  curStore.pages[pageKey].order[qid] = freshOrder;
+                  applyCardOrder(card, freshOrder);
+                }
+                saveQuizStore(curStore);
+                store = curStore;
+                updatePageQuizUI(pageKey, store);
+                var pageEl = document.getElementById('page-' + pageKey);
+                if (pageEl && typeof window.renderMathSafe === 'function') {
+                  window.renderMathSafe(pageEl);
+                }
+                var firstBlock = document.querySelector('.quiz-block[data-quiz-page="' + pageKey + '"]');
+                if (firstBlock && typeof firstBlock.scrollIntoView === 'function') {
+                  firstBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              });
+            }
+
+            var topPill = document.querySelector('.page-quiz-pill[data-quiz-pill-page="' + pageKey + '"]');
+            if (topPill) {
+              topPill.addEventListener('click', function() {
+                var target = document.querySelector('.quiz-card[data-quiz-page="' + pageKey + '"]:not(.is-answered)') ||
+                  document.querySelector('.quiz-summary[data-quiz-page="' + pageKey + '"]');
+                if (target && typeof target.scrollIntoView === 'function') {
+                  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+              });
+            }
+          })(pageKeys[p]);
+        }
+      }
+
+      window.initQuizMode = initQuizMode;
     })();
 
   </script>
