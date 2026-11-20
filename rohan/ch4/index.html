@@ -235,6 +235,52 @@
       background: var(--accent);
       color: #ffffff;
     }
+    /* Dedicated Quiz Checkpoint Nav Item */
+    .nav-page-item.is-quiz-item {
+      margin-left: 10px;
+      padding: 6px 9px 7px 10px;
+      border-left: 2.5px solid var(--purple-border);
+      background: #fcfaff;
+    }
+    .nav-page-item.is-quiz-item:hover {
+      background: #f5effe;
+      border-color: var(--purple-border);
+      border-left-color: var(--purple);
+    }
+    .nav-page-item.is-quiz-item.is-active {
+      background: var(--purple-bg);
+      border-color: var(--purple-border);
+      border-left-color: var(--purple);
+      color: #361a6e;
+    }
+    .nav-num.is-quiz {
+      background: var(--purple-bg);
+      color: var(--purple);
+      border: 1px solid var(--purple-border);
+      font-weight: 800;
+    }
+    .nav-page-item.is-quiz-item.is-active .nav-num.is-quiz {
+      background: var(--purple);
+      color: #ffffff;
+      border-color: var(--purple);
+    }
+    .nav-page-item.is-quiz-item .nav-page-title {
+      color: #3a1f73;
+      font-weight: 700;
+    }
+    .nav-page-item.is-quiz-item.is-active .nav-page-title {
+      color: #2c145d;
+    }
+    .nav-page-item.is-quiz-item.is-active .nav-page-meta {
+      color: #5b3b96;
+    }
+    .nav-quiz-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 1px;
+    }
     .nav-page-body {
       flex: 1 1 auto;
       min-width: 0;
@@ -378,9 +424,15 @@
       padding: 2px 8px;
       border-radius: 999px;
     }
+    .page-top-badge.is-quiz {
+      background: var(--purple-bg);
+      color: var(--purple);
+      border-color: var(--purple-border);
+    }
     .page-top-actions {
       display: inline-flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 6px;
     }
     .mini-text-btn {
@@ -400,6 +452,15 @@
     .mini-text-btn:hover {
       background: var(--accent-soft);
       border-color: var(--accent-border);
+    }
+    .mini-text-btn.is-quiz-retake {
+      color: var(--purple);
+      border-color: var(--purple-border);
+      background: #ffffff;
+    }
+    .mini-text-btn.is-quiz-retake:hover {
+      background: var(--purple-bg);
+      border-color: var(--purple);
     }
 
     /* Per-Page Bottom Answer Controls Bar */
@@ -468,6 +529,18 @@
     .pager-next:hover {
       border-color: var(--accent);
       background: var(--accent-soft);
+    }
+    .pager-next.is-quiz-next {
+      border-color: var(--purple-border);
+      background: linear-gradient(135deg, #f7f3ff 0%, #ffffff 100%);
+    }
+    .pager-next.is-quiz-next .pager-dir {
+      color: var(--purple);
+    }
+    .pager-next.is-quiz-next:hover {
+      border-color: var(--purple);
+      background: var(--purple-bg);
+      box-shadow: 0 4px 12px rgba(91, 50, 168, 0.12);
     }
     .pager-dir {
       font-size: 0.74rem;
@@ -1601,7 +1674,55 @@
     }
 
 
-    /* ==================== INTERACTIVE QUIZ MODE (REUSABLE PER PAGE) ==================== */
+    /* ==================== INTERACTIVE QUIZ MODE (DEDICATED QUIZ PAGES) ==================== */
+    .quiz-hero-card {
+      background: linear-gradient(135deg, #f6f1ff 0%, #fcfaff 65%, #ffffff 100%);
+      border: 1.5px solid var(--purple-border);
+      border-top: 4px solid var(--purple);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin: 8px 0 16px;
+      box-shadow: 0 4px 16px rgba(91, 50, 168, 0.08);
+    }
+    .quiz-hero-top {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      margin-bottom: 8px;
+    }
+    .quiz-hero-meta {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #5b3b96;
+      letter-spacing: 0.01em;
+    }
+    .quiz-hero-title {
+      margin: 0 0 6px;
+      font-size: 1.38rem;
+      font-weight: 800;
+      color: #2b1457;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+    }
+    .quiz-hero-desc {
+      margin: 0;
+      font-size: 0.94rem;
+      color: #4b455b;
+      line-height: 1.5;
+    }
+    .quiz-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .quiz-stack .quiz-card {
+      margin-bottom: 0;
+      border-width: 1.25px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(27, 44, 82, 0.04);
+    }
     .quiz-block {
       background: linear-gradient(180deg, #faf8ff 0%, #ffffff 100%);
       border: 1.5px solid var(--purple-border);
@@ -2000,6 +2121,15 @@
       border-color: var(--green-border);
     }
     @media (max-width: 540px) {
+      .quiz-hero-card {
+        padding: 15px 14px;
+      }
+      .quiz-hero-title {
+        font-size: 1.2rem;
+      }
+      .quiz-stack .quiz-card {
+        padding: 13px 12px;
+      }
       .quiz-block {
         padding: 13px 12px;
       }
@@ -2038,11 +2168,13 @@
       .mini-player,
       .quiz-summary,
       .quiz-retake-btn,
+      .is-quiz-retake,
       .quiz-q-status,
       .page-quiz-pill,
       .nav-quiz-pill {
         display: none !important;
       }
+      .quiz-hero-card,
       .quiz-block,
       .quiz-card {
         box-shadow: none;
@@ -2128,7 +2260,7 @@
       <nav class="sidebar-nav" id="sidebar-nav">
         <div class="sidebar-group">
           <div class="sidebar-group-label">START HERE</div>
-          <a href="#page-1" class="nav-page-item is-active" data-page="1" data-track-idx="0" aria-current="page">
+          <a href="#page-1" class="nav-page-item is-active" data-page="page-1" data-track-idx="0" aria-current="page">
             <span class="nav-page-num">1</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Quick Reference</span></span>
@@ -2139,15 +2271,22 @@
         </div>
         <div class="sidebar-group">
           <div class="sidebar-group-label">LESSON 4.3 · WRITING EQUATIONS</div>
-          <a href="#page-2" class="nav-page-item" data-page="2" data-track-idx="1">
+          <a href="#page-2" class="nav-page-item" data-page="page-2" data-track-idx="1">
             <span class="nav-page-num">2</span>
             <span class="nav-page-body">
-              <span class="nav-page-title-row"><span class="nav-page-title">Slope-Intercept Form</span><span class="nav-quiz-pill" data-nav-quiz-page="2">Quiz 0/5</span></span>
+              <span class="nav-page-title-row"><span class="nav-page-title">Slope-Intercept Form</span></span>
               <span class="nav-page-meta">pp. 154–156 · 2:16</span>
             </span>
             <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
           </a>
-          <a href="#page-3" class="nav-page-item" data-page="3" data-track-idx="2">
+          <a href="#quiz-2" class="nav-page-item is-quiz-item" data-page="quiz-2">
+            <span class="nav-page-num nav-num is-quiz">Q</span>
+            <span class="nav-page-body">
+              <span class="nav-page-title-row"><span class="nav-page-title">Quiz: Slope-Intercept</span></span>
+              <span class="nav-page-meta nav-quiz-meta"><span>5 questions · Quiz Mode</span><span class="nav-quiz-pill" data-nav-quiz-page="quiz-2">Quiz 0/5</span></span>
+            </span>
+          </a>
+          <a href="#page-3" class="nav-page-item" data-page="page-3" data-track-idx="2">
             <span class="nav-page-num">3</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Parallel Lines</span></span>
@@ -2155,7 +2294,7 @@
             </span>
             <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
           </a>
-          <a href="#page-4" class="nav-page-item" data-page="4" data-track-idx="3">
+          <a href="#page-4" class="nav-page-item" data-page="page-4" data-track-idx="3">
             <span class="nav-page-num">4</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Slope, Point &amp; Parallel</span></span>
@@ -2163,7 +2302,7 @@
             </span>
             <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
           </a>
-          <a href="#page-5" class="nav-page-item" data-page="5" data-track-idx="4">
+          <a href="#page-5" class="nav-page-item" data-page="page-5" data-track-idx="4">
             <span class="nav-page-num">5</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Two Points</span><span class="nav-practice-pill">+ Practice 4.3</span></span>
@@ -2174,7 +2313,7 @@
         </div>
         <div class="sidebar-group">
           <div class="sidebar-group-label">LESSON 4.4 · GRAPHING LINES</div>
-          <a href="#page-6" class="nav-page-item" data-page="6" data-track-idx="5">
+          <a href="#page-6" class="nav-page-item" data-page="page-6" data-track-idx="5">
             <span class="nav-page-num">6</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Graphing with a Table</span></span>
@@ -2182,7 +2321,7 @@
             </span>
             <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
           </a>
-          <a href="#page-7" class="nav-page-item" data-page="7" data-track-idx="6">
+          <a href="#page-7" class="nav-page-item" data-page="page-7" data-track-idx="6">
             <span class="nav-page-num">7</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Sketching with m &amp; b</span></span>
@@ -2190,7 +2329,7 @@
             </span>
             <span class="nav-page-status" data-role="nav-status" aria-hidden="true"></span>
           </a>
-          <a href="#page-8" class="nav-page-item" data-page="8" data-track-idx="7">
+          <a href="#page-8" class="nav-page-item" data-page="page-8" data-track-idx="7">
             <span class="nav-page-num">8</span>
             <span class="nav-page-body">
               <span class="nav-page-title-row"><span class="nav-page-title">Sketching with m &amp; Point</span><span class="nav-practice-pill">+ Practice 4.4</span></span>
@@ -2201,14 +2340,14 @@
         </div>
       </nav>
 
-      <div class="sidebar-footer">8 pages · 8 audio mini-lessons</div>
+      <div class="sidebar-footer">8 lessons · 1 quiz</div>
     </aside>
 
     <!-- Main Content Pane -->
     <main class="main-pane" id="main-pane">
       <div class="container">
 
-      <article class="book-page is-active" id="page-1" data-page="1">
+      <article class="book-page is-active" id="page-1" data-page="page-1">
         <!-- Hero Header -->
         <header class="hero">
           <div class="eyebrow">Rohan's 7th Grade Math · Readable Textbook &amp; Study Guide · Test: Dec 3, 2026</div>
@@ -2341,18 +2480,17 @@
 
         <nav class="page-pager" aria-label="Page 1 navigation">
           <div class="pager-spacer" aria-hidden="true"></div>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(2)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-2')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.3 Slope-Intercept Form</span>
+            <span class="pager-title">2. Slope-Intercept Form</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-2" data-page="2">
+      <article class="book-page" id="page-2" data-page="page-2">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 2 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
           <div class="page-top-actions">
-            <button type="button" class="page-quiz-pill" data-quiz-pill-page="2" title="Jump to Page 2 Quiz Mode questions">Quiz: 0/5</button>
             <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-2', true)">Show Answers</button>
             <button type="button" class="mini-text-btn" onclick="toggleAllProbs('page-2', false)">Hide Answers</button>
           </div>
@@ -2434,96 +2572,6 @@
       <p>More generally, <strong>any</strong> ordered pair \((x, y)\) that solves \(y = -2x + 6\) also solves \(y + 2x - 6 = 0\). Adding \(6\) to both sides and subtracting \(2x\) from both sides produces <strong>equivalent equations</strong>, which always have the exact same solution set (and represent the exact same line).</p>
     </div>
   </details>
-
-  <!-- QUIZ MODE · BLOCK A (Page 2, Part 1: 3 Questions) -->
-  <div class="quiz-block" data-quiz-page="2" id="quiz-p2-part1">
-    <div class="quiz-block-head">
-      <span class="quiz-mode-badge">Quiz Mode</span>
-      <h3>Quick Check · Part 1 (Quiz Mode — 3 Questions)</h3>
-    </div>
-    <p class="quiz-block-sub">Test your algebra before Guided Practice — tap one choice per question for instant feedback.</p>
-
-    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q1">
-      <div class="quiz-q-head">
-        <span class="quiz-q-num">Q1</span>
-        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
-      </div>
-      <div class="quiz-q-prompt">Rewrite \(y - 3x + 5 = 0\) in slope-intercept form. What are the slope \(m\) and \(y\)-intercept \(b\)?</div>
-      <div class="quiz-choices" role="group" aria-label="Question 1 choices">
-        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Adding \(3x\) and subtracting \(5\) from both sides gives \(y = 3x - 5\), so \(m = 3\) and \(b = -5\).">
-          <span class="quiz-letter">A</span>
-          <span class="quiz-opt-text">\(m = 3,\; b = -5\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Careful! Those are the signs before isolating \(y\). Move \(-3x\) and \(+5\) to the other side first: \(y = 3x - 5\).">
-          <span class="quiz-letter">B</span>
-          <span class="quiz-opt-text">\(m = -3,\; b = 5\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Close! You flipped \(-3x\) to \(+3x\), but remember to subtract \(5\) from both sides too: \(y = 3x - 5\).">
-          <span class="quiz-letter">C</span>
-          <span class="quiz-opt-text">\(m = 3,\; b = 5\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You moved \(+5\) to \(-5\) nicely, but adding \(3x\) to both sides makes the slope \(+3\), not \(-3\).">
-          <span class="quiz-letter">D</span>
-          <span class="quiz-opt-text">\(m = -3,\; b = -5\)</span>
-        </button>
-      </div>
-      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
-    </div>
-
-    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q2">
-      <div class="quiz-q-head">
-        <span class="quiz-q-num">Q2</span>
-        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
-      </div>
-      <div class="quiz-q-prompt">What are the slope \(m\) and \(y\)-intercept \(b\) of the line \(3x + 2y = 10\)?</div>
-      <div class="quiz-choices" role="group" aria-label="Question 2 choices">
-        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Subtract \(3x\) to get \(2y = -3x + 10\), then divide EVERY term by \(2\): \(y = -\dfrac{3}{2}x + 5\).">
-          <span class="quiz-letter">A</span>
-          <span class="quiz-opt-text">\(m = -\dfrac{3}{2},\; b = 5\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Classic trap! You divided \(-3x\) by \(2\), but you must also divide \(10\) by \(2\) to get \(b = 5\).">
-          <span class="quiz-letter">B</span>
-          <span class="quiz-opt-text">\(m = -\dfrac{3}{2},\; b = 10\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Watch the sign! Subtracting \(3x\) from both sides gives \(2y = -3x + 10\), so \(m = -\dfrac{3}{2}\).">
-          <span class="quiz-letter">C</span>
-          <span class="quiz-opt-text">\(m = \dfrac{3}{2},\; b = 5\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You subtracted \(3x\), which gives \(2y = -3x + 10\) — don't forget the final step of dividing both sides by \(2\)!">
-          <span class="quiz-letter">D</span>
-          <span class="quiz-opt-text">\(m = -3,\; b = 10\)</span>
-        </button>
-      </div>
-      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
-    </div>
-
-    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q3">
-      <div class="quiz-q-head">
-        <span class="quiz-q-num">Q3</span>
-        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
-      </div>
-      <div class="quiz-q-prompt">Which equation is equivalent to \(4x - 2y = 12\) in slope-intercept form?</div>
-      <div class="quiz-choices" role="group" aria-label="Question 3 choices">
-        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Subtract \(4x\) to get \(-2y = -4x + 12\), then divide every term by \(-2\): \(\dfrac{-4}{-2}x + \dfrac{12}{-2} = 2x - 6\).">
-          <span class="quiz-letter">A</span>
-          <span class="quiz-opt-text">\(y = 2x - 6\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Watch the negative! The left side is \(-2y\), so you must divide by \(-2\), not \(+2\).">
-          <span class="quiz-letter">B</span>
-          <span class="quiz-opt-text">\(y = -2x + 6\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Great catch on \(\dfrac{-4}{-2} = +2\), but remember \(\dfrac{+12}{-2} = -6\), not \(+6\)!">
-          <span class="quiz-letter">C</span>
-          <span class="quiz-opt-text">\(y = 2x + 6\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You divided \(12\) by \(-2\) to get \(-6\), and \(\dfrac{-4}{-2}\) also flips to \(+2x\), giving \(y = 2x - 6\).">
-          <span class="quiz-letter">D</span>
-          <span class="quiz-opt-text">\(y = -2x - 6\)</span>
-        </button>
-      </div>
-      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
-    </div>
-  </div>
 
   <!-- GUIDED PRACTICE 1-6 (p. 155) -->
   <div class="card">
@@ -2694,69 +2742,6 @@
     </div>
   </details>
 
-  <!-- QUIZ MODE · BLOCK B (Page 2, Part 2: 2 Questions) -->
-  <div class="quiz-block" data-quiz-page="2" id="quiz-p2-part2">
-    <div class="quiz-block-head">
-      <span class="quiz-mode-badge">Quiz Mode</span>
-      <h3>Quick Check · Part 2 (Quiz Mode — 2 Questions)</h3>
-    </div>
-    <p class="quiz-block-sub">Check writing equations from \(m\) and \(b\) and comparing steepness — one try per question.</p>
-
-    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q4">
-      <div class="quiz-q-head">
-        <span class="quiz-q-num">Q4</span>
-        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
-      </div>
-      <div class="quiz-q-prompt">A line has slope \(m = -\dfrac{3}{5}\) and \(y\)-intercept \(b = -4\). Which equation is in slope-intercept form?</div>
-      <div class="quiz-choices" role="group" aria-label="Question 4 choices">
-        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Substitute \(m = -\dfrac{3}{5}\) and \(b = -4\) into \(y = mx + b\): \(y = -\dfrac{3}{5}x + (-4) = -\dfrac{3}{5}x - 4\).">
-          <span class="quiz-letter">A</span>
-          <span class="quiz-opt-text">\(y = -\dfrac{3}{5}x - 4\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Swapped \(m\) and \(b\)! The slope \(m = -\dfrac{3}{5}\) multiplies \(x\), and \(b = -4\) is the constant.">
-          <span class="quiz-letter">B</span>
-          <span class="quiz-opt-text">\(y = -4x - \dfrac{3}{5}\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Watch the sign of \(b\)! Adding \(-4\) simplifies to \(-4\), not \(+4\).">
-          <span class="quiz-letter">C</span>
-          <span class="quiz-opt-text">\(y = -\dfrac{3}{5}x + 4\)</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="The \(y\)-intercept \(-4\) is right, but don't drop the negative sign on the slope \(m = -\dfrac{3}{5}\)!">
-          <span class="quiz-letter">D</span>
-          <span class="quiz-opt-text">\(y = \dfrac{3}{5}x - 4\)</span>
-        </button>
-      </div>
-      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
-    </div>
-
-    <div class="quiz-card" data-quiz-page="2" data-qid="p2-q5">
-      <div class="quiz-q-head">
-        <span class="quiz-q-num">Q5</span>
-        <span class="quiz-q-status" data-role="q-status">1 attempt</span>
-      </div>
-      <div class="quiz-q-prompt">Compare Line A: \(y = \dfrac{1}{3}x + 8\) and Line B: \(y = -4x + 1\). Which statement is true?</div>
-      <div class="quiz-choices" role="group" aria-label="Question 5 choices">
-        <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Line B has negative slope \(-4\) (downward), and steepness uses absolute value: \(\lvert -4 \rvert = 4 &gt; \dfrac{1}{3}.\)">
-          <span class="quiz-letter">A</span>
-          <span class="quiz-opt-text">Line B goes downward from left to right and is steeper than Line A.</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="The \(y\)-intercept only tells where the line crosses the \(y\)-axis — steepness depends solely on \(\lvert m \rvert\).">
-          <span class="quiz-letter">B</span>
-          <span class="quiz-opt-text">Line A is steeper because its \(y\)-intercept (\(8\)) is greater than Line B's (\(1\)).</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Steepness compares absolute values of slope, not signed values! \(\lvert -4 \rvert = 4\) is much steeper than \(\dfrac{1}{3}\).">
-          <span class="quiz-letter">C</span>
-          <span class="quiz-opt-text">Line A is steeper because \(\dfrac{1}{3} &gt; -4\).</span>
-        </button>
-        <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="Direction comes from the sign of the slope \(m\), not \(b\). Since \(m = -4 &lt; 0\), Line B goes downward.">
-          <span class="quiz-letter">D</span>
-          <span class="quiz-opt-text">Line B goes upward from left to right because its \(y\)-intercept \(+1\) is positive.</span>
-        </button>
-      </div>
-      <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
-    </div>
-  </div>
-
   <!-- GUIDED PRACTICE 7-8 (p. 156) -->
   <div class="card">
     <h3>Guided Practice <span class="page-pill">p. 156</span></h3>
@@ -2805,13 +2790,180 @@
           </div>
         </div>
 
-        <div class="quiz-summary" data-quiz-page="2" id="quiz-summary-p2">
+        <nav class="page-pager" aria-label="Page 2 navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-1')">
+            <span class="pager-dir">← Previous</span>
+            <span class="pager-title">1. Quick Reference</span>
+          </button>
+          <button type="button" class="pager-btn pager-next is-quiz-next" onclick="goToPage('quiz-2')">
+            <span class="pager-dir">Next · Quiz →</span>
+            <span class="pager-title">Quiz — Slope-Intercept</span>
+          </button>
+        </nav>
+      </article>
+
+      <article class="book-page book-page-quiz" id="quiz-2" data-page="quiz-2">
+        <div class="page-top-meta is-quiz-meta">
+          <span class="page-top-kicker"><span class="page-top-badge is-quiz">Quiz · Lesson 4.3</span> Slope-Intercept Form</span>
+          <div class="page-top-actions">
+            <button type="button" class="page-quiz-pill" data-quiz-pill-page="quiz-2" title="Jump to next unanswered question">Quiz: 0/5</button>
+            <button type="button" class="mini-text-btn is-quiz-retake" data-quiz-retake-page="quiz-2">🔄 Retake Quiz</button>
+          </div>
+        </div>
+
+        <header class="quiz-hero-card">
+          <div class="quiz-hero-top">
+            <span class="quiz-mode-badge">Quiz Mode</span>
+            <span class="quiz-hero-meta">5 Multiple-Choice Questions · First-Try Scored</span>
+          </div>
+          <h2 class="quiz-hero-title">4.3 Quiz: Slope-Intercept Form</h2>
+          <p class="quiz-hero-desc">No peeking back at the examples! Pick one answer per question to test your speed and catch the classic traps.</p>
+        </header>
+
+        <div class="quiz-stack" data-quiz-page="quiz-2">
+          <div class="quiz-card" data-quiz-page="quiz-2" data-qid="p2-q1">
+            <div class="quiz-q-head">
+              <span class="quiz-q-num">Q1</span>
+              <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+            </div>
+            <div class="quiz-q-prompt">Rewrite \(y - 3x + 5 = 0\) in slope-intercept form. What are the slope \(m\) and \(y\)-intercept <span style="white-space:nowrap;">\(b\)?</span></div>
+            <div class="quiz-choices" role="group" aria-label="Question 1 choices">
+              <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Adding \(3x\) and subtracting \(5\) from both sides gives \(y = 3x - 5\), so \(m = 3\) and \(b = -5\).">
+                <span class="quiz-letter">A</span>
+                <span class="quiz-opt-text">\(m = 3,\; b = -5\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Careful! Those are the signs before isolating \(y\). Move \(-3x\) and \(+5\) to the other side first: \(y = 3x - 5\).">
+                <span class="quiz-letter">B</span>
+                <span class="quiz-opt-text">\(m = -3,\; b = 5\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Close! You flipped \(-3x\) to \(+3x\), but remember to subtract \(5\) from both sides too: \(y = 3x - 5\).">
+                <span class="quiz-letter">C</span>
+                <span class="quiz-opt-text">\(m = 3,\; b = 5\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You moved \(+5\) to \(-5\) nicely, but adding \(3x\) to both sides makes the slope \(+3\), not \(-3\).">
+                <span class="quiz-letter">D</span>
+                <span class="quiz-opt-text">\(m = -3,\; b = -5\)</span>
+              </button>
+            </div>
+            <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+          </div>
+
+          <div class="quiz-card" data-quiz-page="quiz-2" data-qid="p2-q2">
+            <div class="quiz-q-head">
+              <span class="quiz-q-num">Q2</span>
+              <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+            </div>
+            <div class="quiz-q-prompt">What are the slope \(m\) and \(y\)-intercept \(b\) of the line \(3x + 2y = 10\)?</div>
+            <div class="quiz-choices" role="group" aria-label="Question 2 choices">
+              <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Subtract \(3x\) to get \(2y = -3x + 10\), then divide EVERY term by \(2\): \(y = -\dfrac{3}{2}x + 5\).">
+                <span class="quiz-letter">A</span>
+                <span class="quiz-opt-text">\(m = -\dfrac{3}{2},\; b = 5\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Classic trap! You divided \(-3x\) by \(2\), but you must also divide \(10\) by \(2\) to get \(b = 5\).">
+                <span class="quiz-letter">B</span>
+                <span class="quiz-opt-text">\(m = -\dfrac{3}{2},\; b = 10\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Watch the sign! Subtracting \(3x\) from both sides gives \(2y = -3x + 10\), so \(m = -\dfrac{3}{2}\).">
+                <span class="quiz-letter">C</span>
+                <span class="quiz-opt-text">\(m = \dfrac{3}{2},\; b = 5\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You subtracted \(3x\), which gives \(2y = -3x + 10\) — don&#x27;t forget the final step of dividing both sides by \(2\)!">
+                <span class="quiz-letter">D</span>
+                <span class="quiz-opt-text">\(m = -3,\; b = 10\)</span>
+              </button>
+            </div>
+            <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+          </div>
+
+          <div class="quiz-card" data-quiz-page="quiz-2" data-qid="p2-q3">
+            <div class="quiz-q-head">
+              <span class="quiz-q-num">Q3</span>
+              <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+            </div>
+            <div class="quiz-q-prompt">Which equation is equivalent to \(4x - 2y = 12\) in slope-intercept form?</div>
+            <div class="quiz-choices" role="group" aria-label="Question 3 choices">
+              <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Subtract \(4x\) to get \(-2y = -4x + 12\), then divide every term by \(-2\): \(\dfrac{-4}{-2}x + \dfrac{12}{-2} = 2x - 6\).">
+                <span class="quiz-letter">A</span>
+                <span class="quiz-opt-text">\(y = 2x - 6\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Watch the negative! The left side is \(-2y\), so you must divide by \(-2\), not \(+2\).">
+                <span class="quiz-letter">B</span>
+                <span class="quiz-opt-text">\(y = -2x + 6\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Great catch on \(\dfrac{-4}{-2} = +2\), but remember \(\dfrac{+12}{-2} = -6\), not \(+6\)!">
+                <span class="quiz-letter">C</span>
+                <span class="quiz-opt-text">\(y = 2x + 6\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="You divided \(12\) by \(-2\) to get \(-6\), and \(\dfrac{-4}{-2}\) also flips to \(+2x\), giving \(y = 2x - 6\).">
+                <span class="quiz-letter">D</span>
+                <span class="quiz-opt-text">\(y = -2x - 6\)</span>
+              </button>
+            </div>
+            <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+          </div>
+
+          <div class="quiz-card" data-quiz-page="quiz-2" data-qid="p2-q4">
+            <div class="quiz-q-head">
+              <span class="quiz-q-num">Q4</span>
+              <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+            </div>
+            <div class="quiz-q-prompt">A line has slope \(m = -\dfrac{3}{5}\) and \(y\)-intercept \(b = -4\). Which equation is in slope-intercept form?</div>
+            <div class="quiz-choices" role="group" aria-label="Question 4 choices">
+              <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Substitute \(m = -\dfrac{3}{5}\) and \(b = -4\) into \(y = mx + b\): \(y = -\dfrac{3}{5}x + (-4) = -\dfrac{3}{5}x - 4\).">
+                <span class="quiz-letter">A</span>
+                <span class="quiz-opt-text">\(y = -\dfrac{3}{5}x - 4\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="Swapped \(m\) and \(b\)! The slope \(m = -\dfrac{3}{5}\) multiplies \(x\), and \(b = -4\) is the constant.">
+                <span class="quiz-letter">B</span>
+                <span class="quiz-opt-text">\(y = -4x - \dfrac{3}{5}\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Watch the sign of \(b\)! Adding \(-4\) simplifies to \(-4\), not \(+4\).">
+                <span class="quiz-letter">C</span>
+                <span class="quiz-opt-text">\(y = -\dfrac{3}{5}x + 4\)</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="The \(y\)-intercept \(-4\) is right, but don&#x27;t drop the negative sign on the slope \(m = -\dfrac{3}{5}\)!">
+                <span class="quiz-letter">D</span>
+                <span class="quiz-opt-text">\(y = \dfrac{3}{5}x - 4\)</span>
+              </button>
+            </div>
+            <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+          </div>
+
+          <div class="quiz-card" data-quiz-page="quiz-2" data-qid="p2-q5">
+            <div class="quiz-q-head">
+              <span class="quiz-q-num">Q5</span>
+              <span class="quiz-q-status" data-role="q-status">1 attempt</span>
+            </div>
+            <div class="quiz-q-prompt">Compare Line A: \(y = \dfrac{1}{3}x + 8\) and Line B: \(y = -4x + 1\). Which statement is true?</div>
+            <div class="quiz-choices" role="group" aria-label="Question 5 choices">
+              <button type="button" class="quiz-opt" data-opt-id="a" data-correct="true" data-feedback="Line B has negative slope \(-4\) (downward), and steepness uses absolute value: \(\lvert -4 \rvert = 4 &gt; \dfrac{1}{3}.\)">
+                <span class="quiz-letter">A</span>
+                <span class="quiz-opt-text">Line B goes downward from left to right and is steeper than Line A.</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="b" data-feedback="The \(y\)-intercept only tells where the line crosses the \(y\)-axis — steepness depends solely on \(\lvert m \rvert\).">
+                <span class="quiz-letter">B</span>
+                <span class="quiz-opt-text">Line A is steeper because its \(y\)-intercept (\(8\)) is greater than Line B's (\(1\)).</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="c" data-feedback="Steepness compares absolute values of slope, not signed values! \(\lvert -4 \rvert = 4\) is much steeper than \(\dfrac{1}{3}\).">
+                <span class="quiz-letter">C</span>
+                <span class="quiz-opt-text">Line A is steeper because \(\dfrac{1}{3} &gt; -4\).</span>
+              </button>
+              <button type="button" class="quiz-opt" data-opt-id="d" data-feedback="Direction comes from the sign of the slope \(m\), not \(b\). Since \(m = -4 &lt; 0\), Line B goes downward.">
+                <span class="quiz-letter">D</span>
+                <span class="quiz-opt-text">Line B goes upward from left to right because its \(y\)-intercept \(+1\) is positive.</span>
+              </button>
+            </div>
+            <div class="quiz-feedback" data-role="feedback" aria-live="polite" hidden></div>
+          </div>
+        </div>
+
+        <div class="quiz-summary" data-quiz-page="quiz-2" data-quiz-topic="Slope-Intercept Form" id="quiz-summary-quiz-2">
           <div class="quiz-summary-top">
             <div class="quiz-summary-info">
-              <span class="quiz-summary-kicker">Page 2 Quick Check · Quiz Mode</span>
-              <div class="quiz-summary-score" data-role="summary-score">Page 2 Quiz: 0 / 5 answered</div>
+              <span class="quiz-summary-kicker">4.3 Quiz: Slope-Intercept Form · Summary</span>
+              <div class="quiz-summary-score" data-role="summary-score">Quiz Score: 0 / 5 answered</div>
             </div>
-            <button type="button" class="quiz-retake-btn" data-role="retake-btn" data-quiz-retake-page="2">🔄 Retake Page 2 Quiz</button>
+            <button type="button" class="quiz-retake-btn" data-role="retake-btn" data-quiz-retake-page="quiz-2">🔄 Retake Quiz</button>
           </div>
           <div class="quiz-progress-track" aria-hidden="true">
             <div class="quiz-progress-fill" data-role="progress-fill" style="width:0%"></div>
@@ -2819,19 +2971,19 @@
           <div class="quiz-summary-msg" data-role="summary-msg">Answer all 5 questions above to lock in your score — one try per question!</div>
         </div>
 
-        <nav class="page-pager" aria-label="Page 2 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(1)">
-            <span class="pager-dir">← Previous</span>
-            <span class="pager-title">Quick Reference</span>
+        <nav class="page-pager" aria-label="4.3 Quiz: Slope-Intercept Form navigation">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-2')">
+            <span class="pager-dir">← Back to</span>
+            <span class="pager-title">2. Slope-Intercept Form</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(3)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-3')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.3 Parallel Lines</span>
+            <span class="pager-title">3. Parallel Lines</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-3" data-page="3">
+      <article class="book-page" id="page-3" data-page="page-3">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 3 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
           <div class="page-top-actions">
@@ -3059,18 +3211,18 @@
         </div>
 
         <nav class="page-pager" aria-label="Page 3 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(2)">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('quiz-2')">
             <span class="pager-dir">← Previous</span>
-            <span class="pager-title">4.3 Slope-Intercept Form</span>
+            <span class="pager-title">Quiz — Slope-Intercept</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(4)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-4')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.3 Slope, Point &amp; Parallel</span>
+            <span class="pager-title">4. Slope, Point &amp; Parallel</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-4" data-page="4">
+      <article class="book-page" id="page-4" data-page="page-4">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 4 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
           <div class="page-top-actions">
@@ -3553,18 +3705,18 @@
         </div>
 
         <nav class="page-pager" aria-label="Page 4 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(3)">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-3')">
             <span class="pager-dir">← Previous</span>
-            <span class="pager-title">4.3 Parallel Lines</span>
+            <span class="pager-title">3. Parallel Lines</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(5)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-5')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.3 Two Points &amp; Practice 4.3</span>
+            <span class="pager-title">5. Two Points</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-5" data-page="5">
+      <article class="book-page" id="page-5" data-page="page-5">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 5 of 8</span> Lesson 4.3 · Writing Linear Equations</span>
           <div class="page-top-actions">
@@ -4081,18 +4233,18 @@
         </div>
 
         <nav class="page-pager" aria-label="Page 5 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(4)">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-4')">
             <span class="pager-dir">← Previous</span>
-            <span class="pager-title">4.3 Slope, Point &amp; Parallel</span>
+            <span class="pager-title">4. Slope, Point &amp; Parallel</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(6)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-6')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.4 Graphing with a Table</span>
+            <span class="pager-title">6. Graphing with a Table</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-6" data-page="6">
+      <article class="book-page" id="page-6" data-page="page-6">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 6 of 8</span> Lesson 4.4 · Sketching Graphs of Linear Equations</span>
           <div class="page-top-actions">
@@ -4573,18 +4725,18 @@
         </div>
 
         <nav class="page-pager" aria-label="Page 6 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(5)">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-5')">
             <span class="pager-dir">← Previous</span>
-            <span class="pager-title">4.3 Two Points &amp; Practice 4.3</span>
+            <span class="pager-title">5. Two Points</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(7)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-7')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.4 Sketching with m &amp; b</span>
+            <span class="pager-title">7. Sketching with m &amp; b</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-7" data-page="7">
+      <article class="book-page" id="page-7" data-page="page-7">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 7 of 8</span> Lesson 4.4 · Sketching Graphs of Linear Equations</span>
           <div class="page-top-actions">
@@ -5110,18 +5262,18 @@
         </div>
 
         <nav class="page-pager" aria-label="Page 7 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(6)">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-6')">
             <span class="pager-dir">← Previous</span>
-            <span class="pager-title">4.4 Graphing with a Table</span>
+            <span class="pager-title">6. Graphing with a Table</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(8)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-8')">
             <span class="pager-dir">Next →</span>
-            <span class="pager-title">4.4 Sketching with m &amp; Point + Practice 4.4</span>
+            <span class="pager-title">8. Sketching with m &amp; Point</span>
           </button>
         </nav>
       </article>
 
-      <article class="book-page" id="page-8" data-page="8">
+      <article class="book-page" id="page-8" data-page="page-8">
         <div class="page-top-meta">
           <span class="page-top-kicker"><span class="page-top-badge">Page 8 of 8</span> Lesson 4.4 · Sketching Graphs of Linear Equations</span>
           <div class="page-top-actions">
@@ -7694,13 +7846,13 @@
         </div>
 
         <nav class="page-pager" aria-label="Page 8 navigation">
-          <button type="button" class="pager-btn pager-prev" onclick="goToPage(7)">
+          <button type="button" class="pager-btn pager-prev" onclick="goToPage('page-7')">
             <span class="pager-dir">← Previous</span>
-            <span class="pager-title">4.4 Sketching with m &amp; b</span>
+            <span class="pager-title">7. Sketching with m &amp; b</span>
           </button>
-          <button type="button" class="pager-btn pager-next" onclick="goToPage(1)">
+          <button type="button" class="pager-btn pager-next" onclick="goToPage('page-1')">
             <span class="pager-dir">Back to Start ↺</span>
-            <span class="pager-title">Page 1 · Quick Reference</span>
+            <span class="pager-title">1. Quick Reference</span>
           </button>
         </nav>
       </article>
@@ -7769,12 +7921,15 @@
       }
     });
 
-    // ==================== 8-PAGE TEXTBOOK SPA ROUTER & SIDEBAR ====================
+    // ==================== TEXTBOOK SPA ROUTER & SIDEBAR (LESSONS + DEDICATED QUIZ PAGES) ====================
     (function() {
-      var PAGES = [{"page": 1, "mobileTitle": "Quick Reference", "fullTitle": "Quick Reference", "sectionIds": ["cheat-sheet"]}, {"page": 2, "mobileTitle": "4.3 Slope-Intercept", "fullTitle": "4.3 Slope-Intercept Form", "sectionIds": ["s43-slope-intercept"]}, {"page": 3, "mobileTitle": "4.3 Parallel Lines", "fullTitle": "4.3 Parallel Lines", "sectionIds": ["s43-parallel"]}, {"page": 4, "mobileTitle": "4.3 Point & Parallel", "fullTitle": "4.3 Slope, Point & Parallel", "sectionIds": ["s43-point-slope"]}, {"page": 5, "mobileTitle": "4.3 Two Points + Practice", "fullTitle": "4.3 Two Points & Practice 4.3", "sectionIds": ["s43-two-points", "s43-practice"]}, {"page": 6, "mobileTitle": "4.4 Graphing Table", "fullTitle": "4.4 Graphing with a Table", "sectionIds": ["s44-table"]}, {"page": 7, "mobileTitle": "4.4 Sketching m & b", "fullTitle": "4.4 Sketching with m & b", "sectionIds": ["s44-mb"]}, {"page": 8, "mobileTitle": "4.4 m & Point + Practice", "fullTitle": "4.4 Sketching with m & Point + Practice 4.4", "sectionIds": ["s44-mpoint", "s44-practice"]}];
-      var SECTION_TO_PAGE = {"cheat-sheet": 1, "s43-slope-intercept": 2, "s43-parallel": 3, "s43-point-slope": 4, "s43-two-points": 5, "s43-practice": 5, "s44-table": 6, "s44-mb": 7, "s44-mpoint": 8, "s44-practice": 8};
-      var TOTAL_PAGES = PAGES.length;
-      var currentPage = 1;
+      var PAGES = [{"id": "page-1", "kind": "lesson", "page": 1, "mobileIndicator": "Page 1 of 8 · Quick Reference"}, {"id": "page-2", "kind": "lesson", "page": 2, "mobileIndicator": "Page 2 of 8 · 4.3 Slope-Intercept"}, {"id": "quiz-2", "kind": "quiz", "mobileIndicator": "Quiz · 4.3 Slope-Intercept"}, {"id": "page-3", "kind": "lesson", "page": 3, "mobileIndicator": "Page 3 of 8 · 4.3 Parallel Lines"}, {"id": "page-4", "kind": "lesson", "page": 4, "mobileIndicator": "Page 4 of 8 · 4.3 Point & Parallel"}, {"id": "page-5", "kind": "lesson", "page": 5, "mobileIndicator": "Page 5 of 8 · 4.3 Two Points + Practice"}, {"id": "page-6", "kind": "lesson", "page": 6, "mobileIndicator": "Page 6 of 8 · 4.4 Graphing Table"}, {"id": "page-7", "kind": "lesson", "page": 7, "mobileIndicator": "Page 7 of 8 · 4.4 Sketching m & b"}, {"id": "page-8", "kind": "lesson", "page": 8, "mobileIndicator": "Page 8 of 8 · 4.4 m & Point + Practice"}];
+      var SECTION_TO_PAGE = {"cheat-sheet": "page-1", "s43-slope-intercept": "page-2", "s43-parallel": "page-3", "s43-point-slope": "page-4", "s43-two-points": "page-5", "s43-practice": "page-5", "s44-table": "page-6", "s44-mb": "page-7", "s44-mpoint": "page-8", "s44-practice": "page-8"};
+      var PAGE_INDEX_BY_ID = {};
+      for (var pIdx = 0; pIdx < PAGES.length; pIdx++) {
+        PAGE_INDEX_BY_ID[PAGES[pIdx].id] = pIdx;
+      }
+      var currentIdx = 0;
 
       var sidebar = document.getElementById('sidebar');
       var backdrop = document.getElementById('sidebar-backdrop');
@@ -7800,23 +7955,42 @@
         document.body.style.overflow = '';
       }
 
-      function goToPage(pageNum, opts) {
+      function normalizePageId(pageInput) {
+        if (typeof pageInput === 'number' && isFinite(pageInput)) {
+          var numId = 'page-' + Math.floor(pageInput);
+          if (Object.prototype.hasOwnProperty.call(PAGE_INDEX_BY_ID, numId)) return numId;
+        }
+        if (typeof pageInput === 'string') {
+          var clean = pageInput.replace(/^#/, '').trim();
+          if (Object.prototype.hasOwnProperty.call(PAGE_INDEX_BY_ID, clean)) return clean;
+          if (/^\d+$/.test(clean)) {
+            var coerced = 'page-' + parseInt(clean, 10);
+            if (Object.prototype.hasOwnProperty.call(PAGE_INDEX_BY_ID, coerced)) return coerced;
+          }
+        }
+        return PAGES[0] ? PAGES[0].id : 'page-1';
+      }
+
+      function goToPage(pageId, opts) {
         opts = opts || {};
-        var n = parseInt(pageNum, 10);
-        if (!isFinite(n) || n < 1) n = 1;
-        if (n > TOTAL_PAGES) n = TOTAL_PAGES;
-        currentPage = n;
+        var targetId = normalizePageId(pageId);
+        var idx = PAGE_INDEX_BY_ID[targetId];
+        if (typeof idx !== 'number') {
+          idx = 0;
+          targetId = PAGES[0].id;
+        }
+        currentIdx = idx;
 
         var pageEls = document.querySelectorAll('.book-page[data-page]');
         for (var i = 0; i < pageEls.length; i++) {
-          var pVal = parseInt(pageEls[i].getAttribute('data-page'), 10);
-          pageEls[i].classList.toggle('is-active', pVal === n);
+          var pVal = pageEls[i].getAttribute('data-page');
+          pageEls[i].classList.toggle('is-active', pVal === targetId);
         }
 
         var navItems = document.querySelectorAll('.nav-page-item[data-page]');
         for (var j = 0; j < navItems.length; j++) {
-          var nVal = parseInt(navItems[j].getAttribute('data-page'), 10);
-          var isAct = (nVal === n);
+          var nVal = navItems[j].getAttribute('data-page');
+          var isAct = (nVal === targetId);
           navItems[j].classList.toggle('is-active', isAct);
           if (isAct) {
             navItems[j].setAttribute('aria-current', 'page');
@@ -7825,21 +7999,21 @@
           }
         }
 
-        var pageObj = PAGES[n - 1];
+        var pageObj = PAGES[currentIdx];
         if (mobileIndicator && pageObj) {
-          mobileIndicator.textContent = 'Page ' + n + ' of ' + TOTAL_PAGES + ' · ' + pageObj.mobileTitle;
+          mobileIndicator.textContent = pageObj.mobileIndicator;
         }
-        if (mobilePrevBtn) mobilePrevBtn.disabled = (n <= 1);
-        if (mobileNextBtn) mobileNextBtn.disabled = (n >= TOTAL_PAGES);
+        if (mobilePrevBtn) mobilePrevBtn.disabled = (currentIdx <= 0);
+        if (mobileNextBtn) mobileNextBtn.disabled = (currentIdx >= PAGES.length - 1);
 
         closeDrawer();
 
         if (opts.updateHash !== false) {
-          var targetHash = '#page-' + n;
+          var targetHash = '#' + targetId;
           if (window.location.hash !== targetHash) {
             if (window.history && typeof window.history.pushState === 'function') {
               try {
-                window.history.pushState({ page: n }, '', targetHash);
+                window.history.pushState({ pageId: targetId }, '', targetHash);
               } catch (e) {
                 window.location.hash = targetHash;
               }
@@ -7874,8 +8048,8 @@
         (function(linkEl) {
           linkEl.addEventListener('click', function(e) {
             e.preventDefault();
-            var targetPage = parseInt(linkEl.getAttribute('data-page'), 10);
-            goToPage(targetPage);
+            var targetId = linkEl.getAttribute('data-page');
+            goToPage(targetId);
           });
         })(sidebarLinks[k]);
       }
@@ -7894,12 +8068,12 @@
       if (backdrop) backdrop.addEventListener('click', closeDrawer);
       if (mobilePrevBtn) {
         mobilePrevBtn.addEventListener('click', function() {
-          if (currentPage > 1) goToPage(currentPage - 1);
+          if (currentIdx > 0) goToPage(PAGES[currentIdx - 1].id);
         });
       }
       if (mobileNextBtn) {
         mobileNextBtn.addEventListener('click', function() {
-          if (currentPage < TOTAL_PAGES) goToPage(currentPage + 1);
+          if (currentIdx < PAGES.length - 1) goToPage(PAGES[currentIdx + 1].id);
         });
       }
       document.addEventListener('keydown', function(e) {
@@ -7908,24 +8082,22 @@
         }
       });
 
-      // URL hash routing (supports #page-1..#page-8 and legacy section IDs)
+      // URL hash routing (supports #page-1..#page-8, #quiz-2, and legacy section IDs like #s43-practice)
       function applyHash(isInit) {
         var raw = (window.location.hash || '').replace(/^#/, '').trim();
         if (!raw) {
-          goToPage(1, { updateHash: false, instant: isInit, scroll: !isInit });
+          goToPage('page-1', { updateHash: false, instant: isInit, scroll: !isInit });
           return;
         }
-        var m = /^page-(\d+)$/.exec(raw);
-        if (m) {
-          var pNum = parseInt(m[1], 10);
-          goToPage(pNum, { updateHash: false, instant: isInit });
+        if (Object.prototype.hasOwnProperty.call(PAGE_INDEX_BY_ID, raw)) {
+          goToPage(raw, { updateHash: false, instant: isInit });
           return;
         }
         if (Object.prototype.hasOwnProperty.call(SECTION_TO_PAGE, raw)) {
           goToPage(SECTION_TO_PAGE[raw], { updateHash: false, scrollToId: raw, instant: isInit });
           return;
         }
-        goToPage(1, { updateHash: false, instant: isInit, scroll: !isInit });
+        goToPage('page-1', { updateHash: false, instant: isInit, scroll: !isInit });
       }
 
       window.addEventListener('hashchange', function() {
@@ -7936,7 +8108,7 @@
       });
       window.addEventListener('load', function() {
         var raw = (window.location.hash || '').replace(/^#/, '').trim();
-        if (!raw || /^page-\d+$/.test(raw)) {
+        if (!raw || Object.prototype.hasOwnProperty.call(PAGE_INDEX_BY_ID, raw)) {
           window.scrollTo(0, 0);
         }
       });
@@ -8143,7 +8315,7 @@
       function jumpToTrackPage(idx) {
         if (idx < 0 || idx >= TRACKS.length) return;
         if (typeof window.goToPage === 'function') {
-          window.goToPage(idx + 1);
+          window.goToPage('page-' + (idx + 1));
         }
       }
 
@@ -8578,16 +8750,17 @@
         var summaryEl = document.querySelector('.quiz-summary[data-quiz-page="' + pageKey + '"]');
         if (summaryEl) {
           summaryEl.classList.toggle('is-perfect', isPerfect);
+          var topic = summaryEl.getAttribute('data-quiz-topic') || 'this quiz';
           var scoreEl = summaryEl.querySelector('[data-role="summary-score"]');
           var msgEl = summaryEl.querySelector('[data-role="summary-msg"]');
           var fillEl = summaryEl.querySelector('[data-role="progress-fill"]');
           if (scoreEl) {
             if (answered === 0) {
-              scoreEl.textContent = 'Page ' + pageKey + ' Quiz: 0 / ' + total + ' answered';
+              scoreEl.textContent = 'Quiz Score: 0 / ' + total + ' answered';
             } else if (!isAllDone) {
               scoreEl.textContent = 'Score: ' + correct + ' / ' + answered + ' so far (' + answered + ' / ' + total + ' answered)';
             } else {
-              scoreEl.textContent = 'Score: ' + correct + ' / ' + total + ' (' + pct + '%)';
+              scoreEl.textContent = 'Final Score: ' + correct + ' / ' + total + ' (' + pct + '%)';
             }
           }
           if (fillEl) {
@@ -8598,13 +8771,13 @@
               msgEl.textContent = 'Answer all ' + total + ' questions above to lock in your score — one try per question!';
             } else if (!isAllDone) {
               var left = total - answered;
-              msgEl.textContent = 'Keep going — ' + left + ' more ' + (left === 1 ? 'question' : 'questions') + ' to finish Page ' + pageKey + '!';
+              msgEl.textContent = 'Keep going — ' + left + ' more ' + (left === 1 ? 'question' : 'questions') + ' to finish!';
             } else if (isPerfect) {
-              msgEl.textContent = '🎉 Perfect ' + total + ' / ' + total + '! You nailed every concept on Page ' + pageKey + '!';
+              msgEl.textContent = '🎉 Perfect ' + total + ' / ' + total + '! You nailed every concept in ' + topic + '!';
             } else if (pct >= 80) {
-              msgEl.textContent = '👏 Strong work! Check the explanation for the one you missed, or tap Retake to go for a perfect ' + total + '/' + total + '.';
+              msgEl.textContent = '👏 Strong work! Check the explanation for the one you missed, or tap Retake Quiz to go for a perfect ' + total + '/' + total + '.';
             } else {
-              msgEl.textContent = '💪 Good practice! Read each explanation above, then tap Retake to try again with freshly shuffled choices.';
+              msgEl.textContent = '💪 Good practice! Read each explanation above, then tap Retake Quiz to try again with freshly shuffled choices.';
             }
           }
         }
@@ -8678,7 +8851,9 @@
                   if (!pickedId) return;
                   var curStore = loadQuizStore();
                   var curPage = ensurePageStore(curStore, pageKey);
-                  curPage.order[qid] = pStore.order[qid];
+                  if (!curPage.order[qid]) {
+                    curPage.order[qid] = pStore.order[qid];
+                  }
                   curPage.answers[qid] = pickedId;
                   saveQuizStore(curStore);
                   store = curStore;
@@ -8692,43 +8867,48 @@
 
         saveQuizStore(store);
 
-        // Bind Retake buttons & Top Breadcrumb jump pills
+        // Bind Retake buttons (top breadcrumb + bottom summary) & Top Breadcrumb jump pills
         var pageKeys = Object.keys(pagesSeen);
         for (var p = 0; p < pageKeys.length; p++) {
           (function(pageKey) {
             updatePageQuizUI(pageKey, store);
 
-            var retakeBtn = document.querySelector('[data-quiz-retake-page="' + pageKey + '"]');
-            if (retakeBtn) {
-              retakeBtn.addEventListener('click', function() {
-                var curStore = loadQuizStore();
-                curStore.pages[pageKey] = { order: {}, answers: {} };
-                var pCards = document.querySelectorAll('.quiz-card[data-quiz-page="' + pageKey + '"]');
-                for (var idx = 0; idx < pCards.length; idx++) {
-                  var card = pCards[idx];
-                  var qid = card.getAttribute('data-qid');
-                  unlockCard(card);
-                  var btns = card.querySelectorAll('.quiz-opt');
-                  var ids = [];
-                  for (var b = 0; b < btns.length; b++) {
-                    ids.push(btns[b].getAttribute('data-opt-id') || String(b));
-                  }
-                  var freshOrder = shuffleArray(ids);
-                  curStore.pages[pageKey].order[qid] = freshOrder;
-                  applyCardOrder(card, freshOrder);
+            function handleRetake() {
+              var curStore = loadQuizStore();
+              curStore.pages[pageKey] = { order: {}, answers: {} };
+              var pCards = document.querySelectorAll('.quiz-card[data-quiz-page="' + pageKey + '"]');
+              for (var idx = 0; idx < pCards.length; idx++) {
+                var card = pCards[idx];
+                var qid = card.getAttribute('data-qid');
+                unlockCard(card);
+                var btns = card.querySelectorAll('.quiz-opt');
+                var ids = [];
+                for (var b = 0; b < btns.length; b++) {
+                  ids.push(btns[b].getAttribute('data-opt-id') || String(b));
                 }
-                saveQuizStore(curStore);
-                store = curStore;
-                updatePageQuizUI(pageKey, store);
-                var pageEl = document.getElementById('page-' + pageKey);
-                if (pageEl && typeof window.renderMathSafe === 'function') {
-                  window.renderMathSafe(pageEl);
-                }
-                var firstBlock = document.querySelector('.quiz-block[data-quiz-page="' + pageKey + '"]');
-                if (firstBlock && typeof firstBlock.scrollIntoView === 'function') {
-                  firstBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              });
+                var freshOrder = shuffleArray(ids);
+                curStore.pages[pageKey].order[qid] = freshOrder;
+                applyCardOrder(card, freshOrder);
+              }
+              saveQuizStore(curStore);
+              store = curStore;
+              updatePageQuizUI(pageKey, store);
+              var pageEl = document.getElementById(pageKey) || document.getElementById('page-' + pageKey);
+              if (pageEl && typeof window.renderMathSafe === 'function') {
+                window.renderMathSafe(pageEl);
+              }
+              var scrollTarget =
+                (pageEl && pageEl.querySelector('.quiz-hero-card')) ||
+                document.querySelector('.quiz-block[data-quiz-page="' + pageKey + '"]') ||
+                document.querySelector('.quiz-card[data-quiz-page="' + pageKey + '"]');
+              if (scrollTarget && typeof scrollTarget.scrollIntoView === 'function') {
+                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }
+
+            var retakeBtns = document.querySelectorAll('[data-quiz-retake-page="' + pageKey + '"]');
+            for (var r = 0; r < retakeBtns.length; r++) {
+              retakeBtns[r].addEventListener('click', handleRetake);
             }
 
             var topPill = document.querySelector('.page-quiz-pill[data-quiz-pill-page="' + pageKey + '"]');
